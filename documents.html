@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="light.css">
+    <script src="JavaScript.js"></script>
+    <noscript>Please Use JavaScript</noscript>
+</head>
+
+<body onload="onLoad()" onscroll="onScroll()">
+    <!--menu-->
+            <nav id = "nav">
+                <a id="1" href="index.html" style="top:10px" hidden="true" onmouseover="expand(1)" onmouseout="shrink(1)">Summary</a>
+                <br>
+                <a id="2" href="employment.html" style="top:60px" hidden="true" onmouseover="expand(2)" onmouseout="shrink(2)">Employment</a>
+                <br>
+                <a id="3" href="education.html" style="bottom:0px" hidden="true" onmouseover="expand(3)" onmouseout="shrink(3)">Education</a>
+            </nav>
+    <!--header-->
+    <header onmouseover="testToggle()">
+        <!--menu button-->
+        <img id="menuButton" onmouseover="revealButton()" onmouseup="toggleMenu()" onmouseout="hideButton()" src="Resources/menu.png">
+        <!--title-->
+        <h1 id="title">Documents</h1>
+        <!--theme button-->
+        <img src="Resources/theme.png" id="theme">
+    </header>
+    <!--main page-->
+    <section onmouseover="testToggle()">
+        <!--resume-->
+        <div>
+            <h2>R</h2>
+        </div>
+        <h3>esume</h3>
+        <hr>
+        <article>
+            <a href="Resources/Sabian-Colbert.pdf">Sabian-Colbert.pdf</a>
+            <ul>
+                <li>Everything in this website</li>
+            </ul>
+        </article>
+        <!--high school diploma-->
+        <div>
+            <h2>H</h2>
+        </div>
+        <h3>igh School Diploma</h3>
+        <hr>
+        <article>
+            <a href="Resources/Diploma.pdf">From Yukon High School</a>
+            <ul>
+                <li>Core classes</li>
+            </ul>
+        </article>
+        <!--national career readiness certificate-->
+        <div>
+            <h2>N</h2>
+        </div>
+        <h3>ational Career Readiness Certificate</h3>
+        <hr>
+        <article>
+            <a href="Resources/NCRC.pdf">From the state of Oklahoma</a>
+            <ul>
+                <li>Applied math</li>
+                <li>Graphic literacy</li>
+                <li>Workplace documents</li>
+            </ul>
+        </article>
+        <!--computer literacy certificate-->
+        <div>
+            <h2>C</h2>
+        </div>
+        <h3>omputer Literacy Certificate</h3>
+        <hr>
+        <article>
+            <a href="Resources/Computer-Literacy.pdf">From Canadian Valley Technology Center</a>
+            <ul>
+                <li>Computer literacy</li>
+            </ul>
+        </article>
+        <!--c# fundamentals certificate-->
+        <div>
+            <h2>C</h2>
+        </div>
+        <h3># Fundamentals Certificate</h3>
+        <hr>
+        <article>
+            <a href="Resources/C#-Fundamentals.pdf">From Canadian Valley Technology Center</a>
+            <ul>
+                <li>C# fundamentals</li>
+            </ul>
+        </article>
+        <!--learn to code-->
+        <div>
+            <h2>L</h2>
+        </div>
+        <h3>earn To Code</h3>
+        <hr>
+        <article>
+            <a href="Resources/Learn-To-Code.pdf">From Mimo</a>
+            <ul>
+                <li>An understanding of the core concepts of programming using JavaScript, the HTML knowledge required
+                    to
+                    create web pages, and the ability to style pages using CSS</li>
+                <li>The practical experience needed to combine these technologies and publish a website on the internet
+                </li>
+            </ul>
+        </article>
+    </section>
+</body>
+
+</html>

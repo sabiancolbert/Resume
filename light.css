@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+}
+
+div {
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 54px;
+    background-color: #5050ff;
+}
+
+section {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    top: 54px;
+}
+
+article {
+    position: relative;
+    left: 29px;
+}
+
+h1 {
+    position: relative;
+    top: -29px;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+h2 {
+    position: relative;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    margin: 4px;
+    width: 46px;
+    height: 46px;
+    border-radius: 100%;
+    background-color: #5050ff;
+}
+
+h3 {
+    position: relative;
+    left: 50px;
+    top: 7px;
+}
+
+hr {
+    position: relative;
+    left: 25px;
+    top: -16px;
+    border: none;
+    height: 1px;
+    background-color: #B4B4B4;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 17px;
+}
+
+img {
+    z-index: 4;
+    position: absolute;
+    margin: 4px;
+    width: 46px;
+    border-radius: 100%;
+    border: 10px white;
+}
+
+nav {
+    opacity: 0;
+    background-color: #b4b4b4;
+    border-radius: 23px;
+    z-index: 2;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    text-align: center;
+    top: 4px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    font-size: 25px;
+    height: 41px;
+    z-index: 3;
+    left:0;
+    right:0;
+}
+
+#tNav{
+    position: absolute;
+    right:4px;
+}
+
+#theme {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
