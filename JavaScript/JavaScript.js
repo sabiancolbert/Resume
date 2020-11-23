@@ -4,8 +4,17 @@ var buttonHidden = false;
 
 function onLoad() {
     console.log("ONLOAD {");
-//test for noscript
-    window.location.replace("https://sabiancolbert.github.io/Resume/HTML/Light/summary.html");
+//rebuild for noscript
+    if (false) {
+        document.getElementById("1").hidden = true;
+        document.getElementById("2").hidden = true;
+        document.getElementById("3").hidden = true;
+        document.getElementById("menuButton").hidden = false;
+        document.getElementById("theme").hidden = false;
+        section.style.top = "0";
+        nav.style.opacity = "0";
+        nav.style.position = "fixed";
+    }
 
     //run any tests first
     test();

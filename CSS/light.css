@@ -20,6 +20,7 @@ section {
     position: absolute;
     width: 100%;
     overflow: hidden;
+    top:50px;
     margin: 54px 0 29px;
 }
 
@@ -82,13 +83,12 @@ img {
 }
 
 nav {
-    opacity: 0;
     background-color: #b4b4b4;
     border-radius: 23px;
     z-index: 2;
     height: 50px;
     width: 50px;
-    position: fixed;
+    position: absolute;
     text-align: center;
     top: 4px;
 }
