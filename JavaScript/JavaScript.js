@@ -4,6 +4,9 @@ var buttonHidden = false;
 
 function onLoad() {
     console.log("ONLOAD {");
+//test for noscript
+    window.location.replace("https://sabiancolbert.github.io/Resume/HTML/Light/summary.html");
+
     //run any tests first
     test();
 
