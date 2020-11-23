@@ -20,12 +20,12 @@ section {
     position: absolute;
     width: 100%;
     overflow: hidden;
-    margin:54px 0 29px;
+    margin: 54px 0 29px;
 }
 
 article {
     position: relative;
-    margin:-10px 29px 0;
+    margin: -10px 29px 0;
 }
 
 h1 {
@@ -100,13 +100,13 @@ nav a {
     font-size: 25px;
     height: 41px;
     z-index: 3;
-    left:0;
-    right:0;
+    left: 0;
+    right: 0;
 }
 
-#tNav{
+#tNav {
     position: absolute;
-    right:4px;
+    right: 4px;
 }
 
 #theme {
