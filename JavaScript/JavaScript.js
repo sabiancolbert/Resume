@@ -22,8 +22,26 @@ function onLoad() {
 
     //set availability for summary page
     var date = new Date();
-    var availability = date.getDate();
+    var x = date.getDate() + 14;
     try {
+        if (x >= 29 && date.getMonth() == 1) {//if February
+            x = "March " + x - 29;
+        }
+        else if (x >= 30) {//if 30 month
+            if (true) {
+                x = 0;
+            }
+        }
+        else if (x >= 31) {//if 31  month
+            if (true) {
+                x = 0;
+            }
+        }
+        else {
+            if (true) {//if same month
+                x = 0;
+            }
+        }
         document.getElementById("availability").innerText = availability;
     }
     catch {
@@ -296,19 +314,4 @@ function t(x) {
 }
 
 function test() {
-    var date = new Date();
-    var x = date.getDate() + 14;
-    if (x >= 29 && date.getMonth() == 1) {
-        x = 0;
-    }
-    else if (x >= 30 && month) {
-        x = 0;
-    }
-    else if (x >= 31 && month) {
-        x = 0;
-    }
-    else {//here convert month tto stringon all these
-        x = date.getMonth() + " " + x;
-    }
-        t(x);
 }
