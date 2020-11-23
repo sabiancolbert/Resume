@@ -17,7 +17,17 @@ function onLoad() {
         document.getElementById("age").innerText = age;
     }
     catch {
-//incase page isn't summary page
+        //incase page isn't summary page
+    }
+
+    //set availability for summary page
+    var date = new Date();
+    var availability = date.getDate();
+    try {
+        document.getElementById("availability").innerText = availability;
+    }
+    catch {
+        //incase page isn't summary page
     }
 
     //set styles (other than css) so later code doesnt error from "undefined"
@@ -257,19 +267,6 @@ function toggleTheme() {
     tAvailable--;
 }
 
-//switch theme to selected option
-function changeTheme(x) {
-    console.log("CHANGETHEME { ");
-    if (x == 1) {
-        var oldlink = document.getElementsByTagName("link").item(0);
-        var newlink = document.createElement("link");
-        newlink.setAttribute("rel", "stylesheet");
-        newlink.setAttribute("type", "text/css");
-        newlink.setAttribute("href", "dark.css");
-        document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
-    }
-}
-
 //highlight and expand <a>
 function expand(x) {
     document.getElementById(x).style.fontSize = "27px";
@@ -299,4 +296,19 @@ function t(x) {
 }
 
 function test() {
+    var date = new Date();
+    var x = date.getDate() + 14;
+    if (x >= 29 && date.getMonth() == 1) {
+        x = 0;
+    }
+    else if (x >= 30 && month) {
+        x = 0;
+    }
+    else if (x >= 31 && month) {
+        x = 0;
+    }
+    else {//here convert month tto stringon all these
+        x = date.getMonth() + " " + x;
+    }
+        t(x);
 }

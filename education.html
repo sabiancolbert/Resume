@@ -4,28 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="light.css">
-    <script src="JavaScript.js"></script>
+    <link rel="stylesheet" href="CSS/light.css">
+    <script src="JavaScript/JavaScript.js"></script>
     <noscript>Please Use JavaScript</noscript>
 </head>
 
 <body onload="onLoad()" onscroll="onScroll()">
     <!--menu-->
-            <nav id = "nav">
-                <a id="1" href="index.html" style="top:10px" hidden="true" onmouseover="expand(1)" onmouseout="shrink(1)">Summary</a>
-                <br>
-                <a id="2" href="employment.html" style="top:60px" hidden="true" onmouseover="expand(2)" onmouseout="shrink(2)">Employment</a>
-                <br>
-                <a id="3" href="documents.html" style="bottom:0px" hidden="true" onmouseover="expand(3)" onmouseout="shrink(3)">Documents</a>
-            </nav>
+    <nav id="nav" style="left:4px">
+        <a id="1" href="index.html" style="top:10px" hidden="true" onmouseover="expand(1)"
+            onmouseout="shrink(1)">Summary</a>
+        <br>
+        <a id="2" href="employment.html" style="top:60px" hidden="true" onmouseover="expand(2)"
+            onmouseout="shrink(2)">Employment</a>
+        <br>
+        <a id="3" href="documents.html" style="bottom:0px" hidden="true" onmouseover="expand(3)"
+            onmouseout="shrink(3)">Documents</a>
+    </nav>
+    <nav id="tNav">
+        <a id="4" href="HTML/Dark/index.html" style="top:10px" hidden="false" onmouseover="expand(4)"
+            onmouseout="shrink(4)">Dark
+        </a>
+    </nav>
     <!--header-->
     <header onmouseover="testToggle()">
         <!--menu button-->
-        <img id="menuButton" onmouseover="revealButton()" onmouseup="toggleMenu()" onmouseout="hideButton()" src="Resources/menu.png">
+        <img id="menuButton" onmouseover="revealButton()" onmouseup="toggleMenu()" onmouseout="hideButton()"
+            src="Resources/menu.png">
         <!--title-->
         <h1 id="title">Education</h1>
         <!--theme button-->
-        <img src="Resources/theme.png" id="theme">
+        <img src="Resources/theme.png" id="theme" onmouseup="toggleTheme()">
     </header>
     <!--main page-->
     <section onmouseover="testToggle()">
@@ -47,7 +56,7 @@
         <hr>
         <article>
             <label><strong>Diploma: </strong></label>
-            <a href="Resources/Sabian-Colbert.pdf">August 2014 - May 2018</a>
+            <a href="Resources/Diploma.jpg">August 2014 - May 2018</a>
         </article>
     </section>
 </body>

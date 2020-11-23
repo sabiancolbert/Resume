@@ -4,32 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="light.css">
-    <script src="JavaScript.js"></script>
+    <link rel="stylesheet" href="CSS/light.css">
+    <script src="JavaScript/JavaScript.js"></script>
     <noscript>Please Use JavaScript</noscript>
 </head>
 
-
 <body onload="onLoad()" onscroll="onScroll()">
     <!--menu-->
-            <nav id = "nav">
-                <a id="1" href="index.html" style="top:10px" hidden="true" onmouseover="expand(1)" onmouseout="shrink(1)">Summary</a>
-                <br>
-                <a id="2" href="education.html" style="top:60px" hidden="true" onmouseover="expand(2)" onmouseout="shrink(2)">Education</a>
-                <br>
-                <a id="3" href="documents.html" style="bottom:0px" hidden="true" onmouseover="expand(3)" onmouseout="shrink(3)">Documents</a>
-            </nav>
+    <nav id="nav" style="left:4px">
+        <a id="1" href="index.html" style="top:10px" hidden="true" onmouseover="expand(1)"
+            onmouseout="shrink(1)">Summary</a>
+        <br>
+        <a id="2" href="education.html" style="top:60px" hidden="true" onmouseover="expand(2)"
+            onmouseout="shrink(2)">Education</a>
+        <br>
+        <a id="3" href="documents.html" style="bottom:0px" hidden="true" onmouseover="expand(3)"
+            onmouseout="shrink(3)">Documents</a>
+    </nav>
+    <nav id="tNav">
+        <a id="4" href="HTML/Dark/index.html" style="top:10px" hidden="false" onmouseover="expand(4)"
+            onmouseout="shrink(4)">Dark</a>
+    </nav>
     <!--header-->
     <header onmouseover="testToggle()">
         <!--menu button-->
-        <img id="menuButton" onmouseover="revealButton()" onmouseup="toggleMenu()" onmouseout="hideButton()" src="Resources/menu.png">
+        <img id="menuButton" onmouseover="revealButton()" onmouseup="toggleMenu()" onmouseout="hideButton()"
+            src="Resources/menu.png">
         <!--title-->
         <h1 id="title">Employment</h1>
         <!--theme button-->
-        <img src="Resources/theme.png" id="theme">
+        <img src="Resources/theme.png" id="theme" onmouseup="toggleTheme()">
     </header>
     <!--main page-->
     <section onmouseover="testToggle()">
+        <!--intel advisor-->
+        <div>
+            <h2>I</h2>
+        </div>
+        <h3>ntel Advisor</h3>
+        <hr>
+        <article>
+            <label><strong>Action Link:</strong> Since November 2020</label>
+            <label><strong>Phone:</strong> (888) 737-8757</label>
+            <br>
+            <label><strong>Address:</strong> 6421 W 3rd St, Oklahoma City, OK 73128</label>
+            <br>
+            <label><strong>Supervisor:</strong> Kayt Cogley (480) 352-6414</label>
+            <br>
+            <label><strong>Duties:</strong></label>
+            <ul>
+                <li>Sell Intel products </li>
+                <li>Train and inform peers about Intel and Intel products</li>
+                <li>Report store events and details to Intel</li>
+            </ul>
+        </article>
         <!--customer service-->
         <div>
             <h2>C</h2>
@@ -37,10 +65,10 @@
         <h3>ustomer Service</h3>
         <hr>
         <article>
-            <label><strong>Braum's:</strong> Since October 2020</label>
+            <label><strong>Braum's:</strong> October 2020 - November 2020</label>
             <label><strong>Phone:</strong> (405) 324-0772</label>
             <br>
-            <label><strong>Address:</strong> 111 South Mustang Road, Yukon, OK 73099</label>
+            <label><strong>Address:</strong> 111 S Mustang Rd, Yukon, OK 73099</label>
             <br>
             <label><strong>Supervisor:</strong> Wyatt Smith (405) 627-6118</label>
             <br>
@@ -63,7 +91,7 @@
             <label><strong>Braum's:</strong> August 2019 - October 2020</label>
             <label><strong>Phone:</strong> (405) 324-0772</label>
             <br>
-            <label><strong>Address:</strong> 111 South Mustang Road, Yukon, OK 73099</label>
+            <label><strong>Address:</strong> 111 S Mustang Rd, Yukon, OK 73099</label>
             <br>
             <label><strong>Supervisor:</strong> Wyatt Smith (405) 627-6118</label>
             <br>
@@ -89,7 +117,7 @@
             <label><strong>Conduent:</strong> January 2019 - August 2019</label>
             <label><strong>Phone:</strong> (844) 663-2638)</label>
             <br>
-            <label><strong>Address:</strong> 100 North Mustang Road, Yukon, OK 73099</label>
+            <label><strong>Address:</strong> 100 N Mustang Rd, Yukon, OK 73099</label>
             <br>
             <label><strong>Supervisor:</strong> Dennis Wouters (405) 650-2277</label>
             <br>
@@ -112,7 +140,7 @@
             <label><strong>Cactus Drilling:</strong> November 2018 - January 2019</label>
             <label><strong>Phone:</strong> (405) 577-5347</label>
             <br>
-            <label><strong>Address:</strong> 8300 South West 15th Street, Oklahoma City, OK 73128</label>
+            <label><strong>Address:</strong> 8300 SW 15th St, Oklahoma City, OK 73128</label>
             <br>
             <label><strong>Supervisor:</strong> Danny Phillips (405) 831-0070</label>
             <br>
@@ -134,7 +162,7 @@
             <label><strong>Braum's:</strong> August 2016 - November 2018</label>
             <label><strong>Phone:</strong> (405) 324-0772</label>
             <br>
-            <label><strong>Address:</strong> 111 South Mustang Road, Yukon, OK 73099</label>
+            <label><strong>Address:</strong> 111 S Mustang Rd, Yukon, OK 73099</label>
             <br>
             <label><strong>Supervisor:</strong> Dillon Harris (405) 476-4781</label>
             <br>
