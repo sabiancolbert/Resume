@@ -1,68 +1,74 @@
 body {
+    position : relative;
+    top : 256px;
     margin: 0;
 }
 
 div {
     position: absolute;
     width: 100%;
-    background-color: transparent;
 }
 
 header {
-    position: absolute;
+    position: relative;
     width: 100%;
-    top: 0;
-    height: 54px;
+    height: 108px;
     background-color: #5050ff;
 }
-
+label{
+    font-size: 40px;
+}
 section {
-    position: absolute;
+    position: relative;
     width: 100%;
     overflow: hidden;
-    top:50px;
-    margin: 54px 0 29px;
+    background-color: white;
 }
 
 article {
     position: relative;
-    margin: -10px 29px 0;
+    margin: -50px 58px 0;
+    padding:0 0 58px;
 }
 
 h1 {
     position: relative;
-    top: -29px;
     width: 100%;
     text-align: center;
-    font-size: 45px;
+    font-size: 90px;
     color: white;
 }
 
 h2 {
     position: relative;
-    font-size: 40px;
+    font-size: 80px;
     text-align: center;
     color: white;
     z-index: 1;
-    margin: 4px;
-    width: 46px;
-    height: 46px;
+    margin: 8px;
+    width: 92px;
+    height: 92px;
     border-radius: 100%;
     background-color: #5050ff;
 }
 
 h3 {
     position: relative;
-    left: 50px;
-    top: 7px;
+    font-size: 60px;
+    left: 100px;
+    top:-34px;
+}
+p{
+    font-size: 150px;
+    font-weight: bold;
 }
 
 hr {
     position: relative;
-    left: 25px;
-    top: -16px;
+    left: 50px;
+    top: -108px;
     border: none;
-    height: 1px;
+    height: 3px;
     background-color: #B4B4B4;
 }
 
@@ -70,35 +76,36 @@ ul {
     margin: 0;
     padding: 0;
     position: relative;
-    left: 17px;
+    left: 34px;
 }
 
 img {
     z-index: 4;
     position: absolute;
-    margin: 4px;
-    width: 46px;
+    margin: 8px;
+    width: 92px;
     border-radius: 100%;
-    border: 10px white;
+    border: 20px white;
 }
 
 nav {
     background-color: #b4b4b4;
-    border-radius: 23px;
+    border-radius: 46px;
     z-index: 2;
-    height: 50px;
-    width: 50px;
+    height: 300px;
+    width: 300px;
     position: absolute;
     text-align: center;
-    top: 4px;
+    margin:8px;
+    top:-316px;
 }
 
 nav a {
     color: black;
     text-decoration: none;
     position: absolute;
-    font-size: 25px;
-    height: 41px;
+    font-size: 50px;
+    height: 82px;
     z-index: 3;
     left: 0;
     right: 0;
@@ -106,11 +113,20 @@ nav a {
 
 #tNav {
     position: absolute;
-    right: 4px;
+    right: 0;
+    opacity: 0;
+    top:0;
 }
 
 #theme {
     position: absolute;
     top: 0;
     right: 0;
+}
+#js{
+    position: absolute;
+    text-align: right;
+    vertical-align: center;
+    top :-400px;
+
 }

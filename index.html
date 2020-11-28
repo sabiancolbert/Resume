@@ -10,29 +10,29 @@
 
 <body onload="onLoad()" onscroll="onScroll()">
     <!--menu-->
-    <nav id="nav" style="left:4px">
-        <a id="1" href="employment.html" style="top:10px" onmouseover="expand(1)"
-            onmouseout="shrink(1)">Employment</a>
+    <nav id="nav">
+        <a id="1" href="HTML/Light/employment.html" style="top:20px" onmouseover="expand(1)" onmouseout="shrink(1)">Employment</a>
         <br>
-        <a id="2" href="education.html" style="top:60px" onmouseover="expand(2)"
-            onmouseout="shrink(2)">Education</a>
+        <a id="2" href="HTML/Light/education.html" style="top:120px" onmouseover="expand(2)" onmouseout="shrink(2)">Education</a>
         <br>
-        <a id="3" href="documents.html" style="top:110px" onmouseover="expand(3)"
-            onmouseout="shrink(3)">Documents</a>
+        <a id="3" href="HTML/Light/documents.html" style="top:220px" onmouseover="expand(3)" onmouseout="shrink(3)">Documents</a>
     </nav>
-    <nav id="tNav">
-        <a id="4" href="HTML/Dark/index.html" hidden = "true" style="top:10px" onmouseover="expand(4)"
+    <div id="js">
+        <p>Enable JavaScript</p>
+    </div>
+    <nav id="tNav" onmouseover="testToggle()">
+        <a id="4" href="HTML/Dark/index.html" hidden="true" style="top:10px" onmouseover="expand(4)"
             onmouseout="shrink(4)">Dark</a>
     </nav>
     <!--header-->
     <header onmouseover="testToggle()">
         <!--menu button-->
-        <img id="menuButton" hidden="true" onmouseover="revealButton()" onmouseup="toggleMenu()" onmouseout="hideButton()"
-            src="Resources/menu.png">
+        <img id="menuButton" hidden="true" onmouseover="revealButton()" onmouseup="toggleMenu()"
+            onmouseout="hideButton()" src="Resources/menu.png">
         <!--title-->
-        <h1 id="title">Sabian Colbert</h1>
+        <h1 id="title" onmouseover="testToggle()">Sabian Colbert</h1>
         <!--theme button-->
-        <img src="Resources/theme.png" hidden="true" id="theme" onmouseup="toggleTheme()">
+        <img src="Resources/theme.png" onmouseover="testToggle()" hidden="true" id="theme" onmouseup="toggleTheme()">
     </header>
     <!--main page-->
     <section onmouseover="testToggle()">
@@ -42,7 +42,7 @@
         </div>
         <h3>nfo</h3>
         <hr>
-        <article>
+        <article onmouseover="testToggle()">
             <label><strong>Email: </strong>sabian.c.colbert@gmail.com</label>
             <br>
             <label><strong>Phone: </strong>(405) 439-6389</label>
@@ -55,7 +55,7 @@
         </div>
         <h3>vailability</h3>
         <hr>
-        <article>
+        <article onmouseover="testToggle()">
             <label><strong>Currently at Action Link </strong>Since Nov 2019</label>
             <br>
             <label>Available for employment on </label>
@@ -71,7 +71,7 @@
         </div>
         <h3>etails</h3>
         <hr>
-        <article>
+        <article onmouseover="testToggle()">
             <label>I am a </label>
             <label id="age">0</label>
             <label> year old with high functioning</label>
