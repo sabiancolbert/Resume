@@ -4,35 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="//CSS/light.css">
-    <script src="/JavaScript/JavaScript.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../CSS/light.css">
+    <script src="../../JavaScript/JavaScript.js"></script>
 </head>
 
 <body onload="onLoad()" onscroll="onScroll()">
     <!--menu-->
-    <nav id="nav" style="left:4px">
-        <a id="1" href="index.html" style="top:10px" hidden="true" onmouseover="expand(1)"
-            onmouseout="shrink(1)">Summary</a>
+    <nav id="nav">
+        <a id="1" href="../../index.html"  style="top:20px"onmouseover="expand(1)" onmouseout="shrink(1)">Summary</a>
         <br>
-        <a id="2" href="HTML/Light/education.html" style="top:60px" hidden="true" onmouseover="expand(2)"
-            onmouseout="shrink(2)">Education</a>
+        <a id="2" href="../../HTML/Light/education.html" style="top:120px" onmouseover="expand(2)" onmouseout="shrink(2)">Education</a>
         <br>
-        <a id="3" href="HTML/Light/documents.html" style="bottom:0px" hidden="true" onmouseover="expand(3)"
-            onmouseout="shrink(3)">Documents</a>
+        <a id="3" href="../../HTML/Light/documents.html" style="top:220px" onmouseover="expand(3)" onmouseout="shrink(3)">Documents</a>
     </nav>
-    <nav id="tNav">
-        <a id="4" href="HTML/Dark/index.html" style="top:10px" hidden="false" onmouseover="expand(4)"
+    <div id="js">
+        <p>Enable JavaScript</p>
+    </div>
+    <nav id="tNav" onmouseover="testToggle()">
+        <a id="4" href="../../HTML/Dark/index.html" style="top:10px" hidden="true" onmouseover="expand(4)"
             onmouseout="shrink(4)">Dark</a>
     </nav>
     <!--header-->
     <header onmouseover="testToggle()">
         <!--menu button-->
-        <img id="menuButton" onmouseover="revealButton()" onmouseup="toggleMenu()" onmouseout="hideButton()"
-            src="Resources/menu.png">
+        <img id="menuButton" hidden="true" onmouseover="revealButton()" onmouseup="toggleMenu()" onmouseout="hideButton()"
+            src="../../Resources/menu.png">
         <!--title-->
         <h1 id="title">Employment</h1>
         <!--theme button-->
-        <img src="Resources/theme.png" id="theme" onmouseup="toggleTheme()">
+        <img src="../../Resources/theme.png" id="theme" hidden="true" onmouseover="testToggle()" onmouseup="toggleTheme()">
     </header>
     <!--main page-->
     <section onmouseover="testToggle()">
@@ -42,7 +42,7 @@
         </div>
         <h3>ntel Advisor</h3>
         <hr>
-        <article>
+        <article onmouseover="testToggle()">
             <label><strong>Action Link: </strong>Since Nov 2020</label>
             <br>
             <label><strong>Phone: </strong>(888) 737-8757</label>
@@ -64,7 +64,7 @@
         </div>
         <h3>ustomer Service</h3>
         <hr>
-        <article>
+        <article onmouseover="testToggle()">
             <label><strong>Braum's: </strong>Oct 2020 - Nov 2020</label>
             <br>
             <label><strong>Phone: </strong>(405) 324-0772</label>
@@ -88,7 +88,7 @@
         </div>
         <h3>ustomer Service Manager</h3>
         <hr>
-        <article>
+        <article onmouseover="testToggle()">
             <label><strong>Braum's: </strong>Aug 2019 - Oct 2020</label>
             <br>
             <label><strong>Phone: </strong>(405) 324-0772</label>
@@ -115,7 +115,7 @@
         </div>
         <h3>echnicacl Support</h3>
         <hr>
-        <article>
+        <article onmouseover="testToggle()">
             <label><strong>Conduent: </strong>Jan 2019 - Aug 2019</label>
             <br>
             <label><strong>Phone: </strong>(844) 663-2638</label>
@@ -139,7 +139,7 @@
         </div>
         <h3>rilling Hand</h3>
         <hr>
-        <article>
+        <article onmouseover="testToggle()">
             <label><strong>Cactus Drilling: </strong>Nov 2018 - Jan 2019</label>
             <br>
             <label><strong>Phone: </strong>(405) 577-5347</label>
@@ -162,7 +162,7 @@
         </div>
         <h3>ustomer Service</h3>
         <hr>
-        <article>
+        <article onmouseover="testToggle()">
             <label><strong>Braum's: </strong>Aug 2016 - Nov 2018</label>
             <br>
             <label><strong>Phone: </strong>(405) 324-0772</label>

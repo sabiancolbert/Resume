@@ -11,17 +11,20 @@
 <body onload="onLoad()" onscroll="onScroll()">
     <!--menu-->
     <nav id="nav" style="left:4px">
-        <a id="1" href="index.html" style="top:10px" hidden="true" onmouseover="expand(1)"
+        <a id="1" href="../../index.html" style="top:10px" hidden="true" onmouseover="expand(1)"
             onmouseout="shrink(1)">Summary</a>
         <br>
-        <a id="2" href="HTML/Light/employment.html" style="top:60px" hidden="true" onmouseover="expand(2)"
+        <a id="2" href="../../HTML/Light/employment.html" style="top:60px" hidden="true" onmouseover="expand(2)"
             onmouseout="shrink(2)">Employment</a>
         <br>
-        <a id="3" href="HTML/Light/documents.html" style="bottom:0px" hidden="true" onmouseover="expand(3)"
+        <a id="3" href="../../HTML/Light/documents.html" style="bottom:0px" hidden="true" onmouseover="expand(3)"
             onmouseout="shrink(3)">Documents</a>
     </nav>
+    <div id="js">
+        <p>Enable JavaScript</p>
+    </div>
     <nav id="tNav">
-        <a id="4" href="HTML/Dark/index.html" style="top:10px" hidden="false" onmouseover="expand(4)"
+        <a id="4" href="../../HTML/Dark/index.html" style="top:10px" hidden="false" onmouseover="expand(4)"
             onmouseout="shrink(4)">Dark
         </a>
     </nav>
@@ -29,11 +32,11 @@
     <header onmouseover="testToggle()">
         <!--menu button-->
         <img id="menuButton" onmouseover="revealButton()" onmouseup="toggleMenu()" onmouseout="hideButton()"
-            src="Resources/menu.png">
+            src="../../Resources/menu.png">
         <!--title-->
         <h1 id="title">Education</h1>
         <!--theme button-->
-        <img src="Resources/theme.png" id="theme" onmouseup="toggleTheme()">
+        <img src="../../Resources/theme.png" id="theme" onmouseup="toggleTheme()">
     </header>
     <!--main page-->
     <section onmouseover="testToggle()">
@@ -43,9 +46,9 @@
         </div>
         <h3>anadian Valley Technology Center</h3>
         <hr>
-        <article>
+        <article onmouseover="testToggle()">
             <label><strong>Certifications: </strong></label>
-            <a href="documents.html">Aug 2017 - May 2018</a>
+            <a href="../../HTML/Light/documents.html">Aug 2017 - May 2018</a>
         </article>
         <!--yukon high school-->
         <div>
@@ -53,9 +56,9 @@
         </div>
         <h3>ukon High School</h3>
         <hr>
-        <article>
+        <article onmouseover="testToggle()">
             <label><strong>Diploma: </strong></label>
-            <a href="Resources/Diploma.jpg">Aug 2014 - May 2018</a>
+            <a href="../../Resources/Diploma.jpg">Aug 2014 - May 2018</a>
         </article>
     </section>
 </body>

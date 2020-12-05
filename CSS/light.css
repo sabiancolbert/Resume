@@ -77,9 +77,11 @@ ul {
     padding: 0;
     position: relative;
     left: 34px;
+    font-size: 30px;
 }
 
 img {
+    opacity: 0;
     z-index: 4;
     position: absolute;
     margin: 8px;
@@ -102,13 +104,15 @@ nav {
 
 nav a {
     color: black;
-    text-decoration: none;
     position: absolute;
     font-size: 50px;
     height: 82px;
     z-index: 3;
     left: 0;
     right: 0;
+}
+a{
+    font-size: 30px;
 }
 
 #tNav {
