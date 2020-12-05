@@ -57,6 +57,7 @@ h3 {
     font-size: 60px;
     left: 100px;
     top:-34px;
+    z-index: 1;
 }
 p{
     font-size: 150px;

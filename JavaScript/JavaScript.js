@@ -1,11 +1,11 @@
 function $($) {return document.getElementById($);}
 var available = 0;
-var tAvailable = 0;
+var tAvailable = 0;//z of jobs
 var buttonHidden = false;
 var javaScript = true;
 //here change images on hover
 function onLoad() {
-    if (javaScript) {
+    if (javaScript) {//here in html, add test toggle  to almost everything
         console.log("ONLOAD {");
         //available = 0;
         //tAvailable = 0;
