@@ -126,22 +126,7 @@ function onLoad() {
             //incase page isn't summary page
             console.log("ONLOAD availability did not work (likely not summary page)");
         }
-
-        //if mobile
-        $(document).ready(function () {
-            var is_mobile = false;
-
-            if ($("header").css("display") == "none") {
-                is_mobile = true;
-            }
-
-            // now I can use is_mobile to run javascript conditionally
-
-            if (is_mobile == true) {
-                //Conditional script here
-                document.getElementsByTagName("h1").style.fontSize("50px;");//here test.html
-            }
-        });
+        //proper scaling (no code here, just use correct css and such)
         console.log("ONLOAD }");
     }
 }
