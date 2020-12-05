@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--<html style="width:480px; height: 800;">-->
+    <html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/CSS/light.css">
+    <script src="JavaScript/JavaScript.js"></script>
+</head>
+
+<body onload="onLoad()" onscroll="onScroll()">
+    <!--menu-->
+    <nav id="nav">
+        <a id="1" href="HTML/Light/employment.html" style="top:20px" onmouseover="expand(1)" onmouseout="shrink(1)">Employment</a>
+        <br>
+        <a id="2" href="HTML/Light/education.html" style="top:120px" onmouseover="expand(2)" onmouseout="shrink(2)">Education</a>
+        <br>
+        <a id="3" href="HTML/Light/documents.html" style="top:220px" onmouseover="expand(3)" onmouseout="shrink(3)">Documents</a>
+    </nav>
+    <div id="js">
+        <p>Enable JavaScript</p>
+    </div>
+    <nav id="tNav" onmouseover="testToggle()">
+        <a id="4" href="HTML/Dark/index.html" style="top:10px" hidden="true" onmouseover="expand(4)"
+            onmouseout="shrink(4)">Dark</a>
+    </nav>
+    <!--header-->
+    <header id="header" onmouseover="testToggle()">
+        <!--menu button-->
+        <img id="menuButton" onmouseover="revealButton()" onmouseup="toggleMenu()"onmouseout="hideButton()" src="Resources/menu.png">
+        <!--title-->
+        <h1 id="title" onmouseover="testToggle()">Sabian Colbert</h1>
+        <!--theme button-->
+        <img id="theme" onmouseup="toggleTheme()" src="Resources/theme.png">
+    </header>
+    <!--main page-->
+    <section onmouseover="testToggle()">
+        <!--info-->
+        <div>
+            <h2>I</h2>
+        </div>
+        <h3>nfo</h3>
+        <hr>
+        <article onmouseover="testToggle()">
+            <label><strong>Email: </strong>sabian.c.colbert@gmail.com</label>
+            <br>
+            <label><strong>Phone: </strong>(405) 439-6389</label>
+            <br>
+            <label><strong>Address: </strong>633 W Vandament Ave, Yukon, OK 73099</label>
+        </article>
+        <!--availability-->
+        <div>
+            <h2>A</h2>
+        </div>
+        <h3>vailability</h3>
+        <hr>
+        <article onmouseover="testToggle()">
+            <label><strong>Currently at Action Link </strong>Since Nov 2019</label>
+            <br>
+            <label>Available for employment on </label>
+            <label id="availability">0</label>
+            <br>
+            <label>Monday-Sunday 5am-7pm</label>
+            <br>
+            <label>Not willing to relocate</label>
+        </article>
+        <!--details-->
+        <div>
+            <h2>D</h2>
+        </div>
+        <h3>etails</h3>
+        <hr>
+        <article onmouseover="testToggle()">
+            <label>I am a </label>
+            <label id="age">0</label>
+            <label> year old with high functioning</label>
+            <br>
+            <label>autism, two kids and a progress driven mind.</label>
+            <br>
+            <a href="https://drive.google.com/drive/folders/1qfcPBlXp8IiYMMFtdfbGFHq1I7-69YgF?usp=sharing">Programming
+                Portfolio</a>
+            <ul>
+                <li>Valid license</li>
+                <li>No felonies</li>
+                <li>No handicaps</li>
+                <li>US resident</li>
+                <li>Authorized to work in the US</li>
+            </ul>
+        </article>
+    </section>
+</body>
+
+</html>

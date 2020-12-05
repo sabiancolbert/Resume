@@ -1,8 +1,9 @@
+function $($) {return document.getElementById($);}
 var available = 0;
 var tAvailable = 0;
 var buttonHidden = false;
 var javaScript = true;
-//change images on hover
+//here change images on hover
 function onLoad() {
     if (javaScript) {
         console.log("ONLOAD {");
@@ -17,9 +18,6 @@ function onLoad() {
         nav.style.height = "300px";
         tNav.style.height = "300px";
         //here CSS: nav a {textdecoration="none"}
-        document.getElementById("1").hidden = true;
-        document.getElementById("2").hidden = true;
-        document.getElementById("3").hidden = true;
         toggleMenu();
         toggleTheme();
 
@@ -34,7 +32,7 @@ function onLoad() {
         }
         try {
             console.log("ONLOAD age = " + age);
-            document.getElementById("age").innerText = age;
+            $("age").innerText = age;
         }
         catch {
             //incase page isn't summary page
@@ -122,12 +120,28 @@ function onLoad() {
                 }
             }
             console.log("ONLOAD x = " + x);
-            document.getElementById("availability").innerText = x;
+            $("availability").innerText = x;
         }
         catch {
             //incase page isn't summary page
             console.log("ONLOAD availability did not work (likely not summary page)");
         }
+
+        //if mobile
+        $(document).ready(function () {
+            var is_mobile = false;
+
+            if ($("header").css("display") == "none") {
+                is_mobile = true;
+            }
+
+            // now I can use is_mobile to run javascript conditionally
+
+            if (is_mobile == true) {
+                //Conditional script here
+                document.getElementsByTagName("h1").style.fontSize("50px;");//here test.html
+            }
+        });
         console.log("ONLOAD }");
     }
 }
@@ -135,8 +149,8 @@ function onLoad() {
 function onScroll() {
     if (javaScript) {
         console.log("ONSCROLL {");
-        var nav = document.getElementById("nav");
-        var button = document.getElementById("menuButton");
+        var nav = $("nav");
+        var button = $("menuButton");
 
         //if scrolled >=27px down, and menu is closed, then allow menu button to hide (if scroll is < 50 it won't appear to change yet)
         if (document.documentElement.scrollTop >= 54 && nav.style.height == "100px") {
@@ -157,11 +171,11 @@ function onScroll() {
     }
 }
 
-    //reveal menu button
-    function revealButton() {
-        if(javaScript){
+//reveal menu button
+function revealButton() {
+    if (javaScript) {
         console.log("REVEALBUTTON {");
-        var button = document.getElementById("menuButton");
+        var button = $("menuButton");
         buttonHidden = false;
 
         //if button is hidden, then reveal button
@@ -179,17 +193,17 @@ function onScroll() {
         else {
             console.log("REVEAL BUTTON } button not hidden, button not changed")
         }
-}
+    }
 }
 
-    //hide menu button
-    function hideButton() {
-        if(javaScript){
+//hide menu button
+function hideButton() {
+    if (javaScript) {
         console.log("HIDEBUTTON {");
         buttonHidden = true;
         //if scroll is >= 54 and an animation isn't in progress, then hide button
         if (document.documentElement.scrollTop >= 54 && available == 0) {
-            var button = document.getElementById("menuButton");
+            var button = $("menuButton");
             var animation = setInterval(() => {
                 if (button.style.top == "-54px" || !buttonHidden) {
                     console.log("HIDEBUTTON } menu button hidden");
@@ -203,12 +217,12 @@ function onScroll() {
         else {
             console.log("HIDEBUTTON } scroll isnt >= 54, button not changed");
         }
-}
+    }
 }
 
-    //when mouse leaves a <nav>
-    function testToggle() {
-        if(javaScript){
+//when mouse leaves a <nav>
+function testToggle() {
+    if (javaScript) {
         //if nav is open and mouse has left nav area, toggle menu off (manual testing incase mouse goes over <a> tag)
         if (nav.style.height == "300px" || tNav.style.height == "300px") {
             var cX = event.clientX;
@@ -222,17 +236,17 @@ function onScroll() {
                 console.log("TESTTOGGLE { test failed, not changing menu }");
             }
         }
-}
+    }
 }
 
-    //toggle main menu open or closed
-    function toggleMenu() {
-        if(javaScript){
+//toggle main menu open or closed
+function toggleMenu() {
+    if (javaScript) {
         available++;
         console.log("TOGGLEMENU { available = " + available);
 
         if (available == 1) {
-            var button = document.getElementById("menuButton");
+            var button = $("menuButton");
             var x = 0;
             var y = 2;
             //if closed, then open menu
@@ -245,9 +259,9 @@ function onScroll() {
                     var animation = setInterval(() => {
                         //if done opening, then stop opening animation
                         if (nav.style.height == "300px" || available > 1) {
-                            document.getElementById("1").hidden = false;
-                            document.getElementById("2").hidden = false;
-                            document.getElementById("3").hidden = false;
+                            $("1").hidden = false;
+                            $("2").hidden = false;
+                            $("3").hidden = false;
                             console.log("TOGGLEMENU } menu opened");
                             clearInterval(animation);
                         }
@@ -273,9 +287,9 @@ function onScroll() {
                 var animation = setInterval(() => {
                     //if done closing, then stop closing animation
                     if (nav.style.height == "100px" || available > 1) {
-                        document.getElementById("1").hidden = true;
-                        document.getElementById("2").hidden = true;
-                        document.getElementById("3").hidden = true;
+                        $("1").hidden = true;
+                        $("2").hidden = true;
+                        $("3").hidden = true;
                         //reset button position if scroll is now at top
                         if (nav.style.height != "300px" && document.documentElement.scrollTop <= 54) {
                             button.style.top = "0";
@@ -301,21 +315,21 @@ function onScroll() {
             console.log("TOGGLEMENU } toggleMenu not available; menu not changed");
         }
         available--;
-}
-}
-
-    function testTheme() {
-        if(javaScript){
-}
+    }
 }
 
-    //toggle theme menu open or closed
+function testTheme() {
+    if (javaScript) {
+    }
+}
+
+//toggle theme menu open or closed
 function toggleTheme() {
     if (javaScript) {
         tAvailable++;
         console.log("TOGGLETHEME {  tAvailable = " + tAvailable)
         if (tAvailable == 1) {
-            var button = document.getElementById("theme");
+            var button = $("theme");
             var x = 0;
             var y = 2;
             //if closed, then open menu
@@ -327,7 +341,7 @@ function toggleTheme() {
                 var animation = setInterval(() => {
                     //if done opening, then stop opening animation
                     if (tNav.style.height == "300px") {
-                        document.getElementById("4").hidden = false;
+                        $("4").hidden = false;
                         console.log("TOGGLEMENU } theme opened");
                         clearInterval(animation);
                     }
@@ -349,7 +363,7 @@ function toggleTheme() {
                 var animation = setInterval(() => {
                     //if done closing, then stop closing animation
                     if (tNav.style.height == "100px") {
-                        document.getElementById("4").hidden = true;
+                        $("4").hidden = true;
                         console.log("TOGGLEMENU } theme closed");
                         clearInterval(animation);
                     }
@@ -374,37 +388,37 @@ function toggleTheme() {
     }
 }
 
-    //highlight and expand <a>
-    function expand(x) {
-        if(javaScript){
-        document.getElementById(x).style.fontSize = "54px";
-        document.getElementById(x).style.color = "white";
+//highlight and expand <a>
+function expand(x) {
+    if (javaScript) {
+        $(x).style.fontSize = "54px";
+        $(x).style.color = "white";
         console.log("EXPAND { expanded option \"" + x + "\" }");
-}
+    }
 }
 
-    //unhighlight and shrink <a>
-    function shrink(x) {
-        if(javaScript){
-        document.getElementById(x).style.fontSize = "50px";
-        document.getElementById(x).style.color = "black";
+//unhighlight and shrink <a>
+function shrink(x) {
+    if (javaScript) {
+        $(x).style.fontSize = "50px";
+        $(x).style.color = "black";
         console.log("SHRINK { shrank option \"" + x + "\" }");
-}
-}
-
-    //remove "px" and return as int
-    function trim(x) {
-        try {
-            return parseInt(x.substring(0, x.length - 2));
-        }
-        catch {
-            return 0;
-        }
-}
-
-    function t(x) {
-        console.log("--TEST--" + x);
     }
+}
 
-    function test() {
+//remove "px" and return as int
+function trim(x) {
+    try {
+        return parseInt(x.substring(0, x.length - 2));
     }
+    catch {
+        return 0;
+    }
+}
+
+function t(x) {
+    console.log("--TEST--" + x);
+}
+
+function test() {
+}
