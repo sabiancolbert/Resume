@@ -107,7 +107,7 @@ nav {
 nav a {
     color: black;
     position: absolute;
-    font-size: 50px;
+    font-size: 40px;
     height: 82px;
     z-index: 3;
     left: 0;

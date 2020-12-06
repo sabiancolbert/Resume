@@ -376,7 +376,7 @@ function toggleTheme() {
 //highlight and expand <a>
 function expand(x) {
     if (javaScript) {
-        $(x).style.fontSize = "54px";
+        $(x).style.fontSize = "48px";
         $(x).style.color = "#b4b4b4";
         console.log("EXPAND { expanded option \"" + x + "\" }");
     }
@@ -385,7 +385,7 @@ function expand(x) {
 //unhighlight and shrink <a>
 function shrink(x) {
     if (javaScript) {
-        $(x).style.fontSize = "50px";
+        $(x).style.fontSize = "40px";
         $(x).style.color = "black";
         console.log("SHRINK { shrank option \"" + x + "\" }");
     }
