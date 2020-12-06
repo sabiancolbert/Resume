@@ -1,4 +1,4 @@
-function $($) {return document.getElementById($);}
+function $($) { return document.getElementById($); }
 var available = 0;
 var tAvailable = 0;//z of jobs
 var buttonHidden = false;

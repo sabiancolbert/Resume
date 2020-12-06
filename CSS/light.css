@@ -1,6 +1,6 @@
 body {
-    position : relative;
-    top : 256px;
+    position: relative;
+    top: 256px;
     margin: 0;
 }
 
@@ -15,9 +15,11 @@ header {
     height: 108px;
     background-color: #5050ff;
 }
-label{
+
+label {
     font-size: 40px;
 }
+
 section {
     position: relative;
     width: 100%;
@@ -28,7 +30,7 @@ section {
 article {
     position: relative;
     margin: -50px 58px 0;
-    padding:0 0 58px;
+    padding: 0 0 58px;
 }
 
 h1 {
@@ -56,10 +58,11 @@ h3 {
     position: relative;
     font-size: 60px;
     left: 100px;
-    top:-34px;
+    top: -34px;
     z-index: 1;
 }
-p{
+
+p {
     font-size: 150px;
     font-weight: bold;
 }
@@ -93,15 +96,15 @@ img {
 
 nav {
     background-color: white;
-    border:5px solid #5050ff;
+    border: 5px solid #5050ff;
     border-radius: 46px;
     z-index: 2;
     height: 300px;
     width: 300px;
     position: absolute;
     text-align: center;
-    margin:8px;
-    top:-316px;
+    margin: 8px;
+    top: -316px;
 }
 
 nav a {
@@ -113,7 +116,8 @@ nav a {
     left: 0;
     right: 0;
 }
-a{
+
+a {
     font-size: 30px;
 }
 
@@ -121,7 +125,7 @@ a{
     position: absolute;
     right: 0;
     opacity: 0;
-    top:0;
+    top: 0;
 }
 
 #theme {
@@ -129,10 +133,10 @@ a{
     top: 0;
     right: 0;
 }
-#js{
+
+#js {
     position: absolute;
     text-align: right;
     vertical-align: center;
-    top :-400px;
-
+    top: -400px;
 }
