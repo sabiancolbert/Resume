@@ -126,7 +126,9 @@ function onLoad() {
             //incase page isn't summary page
             console.log("ONLOAD availability did not work (likely not summary page)");
         }
-        //proper scaling (no code here, just use correct css and such)
+
+        //proper scaling (maybe no code here, just use correct css and such)In jQuery/JavaScript file:
+
         console.log("ONLOAD }");
     }
 }
