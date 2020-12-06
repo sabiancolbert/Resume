@@ -92,7 +92,8 @@ img {
 }
 
 nav {
-    background-color: #b4b4b4;
+    background-color: white;
+    border:5px solid #5050ff;
     border-radius: 46px;
     z-index: 2;
     height: 300px;

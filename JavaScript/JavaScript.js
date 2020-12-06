@@ -377,7 +377,7 @@ function toggleTheme() {
 function expand(x) {
     if (javaScript) {
         $(x).style.fontSize = "54px";
-        $(x).style.color = "white";
+        $(x).style.color = "#b4b4b4";
         console.log("EXPAND { expanded option \"" + x + "\" }");
     }
 }
