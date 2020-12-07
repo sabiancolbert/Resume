@@ -5,10 +5,10 @@ var buttonHidden = false;
 var javaScript = true;
 //here change images on hover
 function onLoad() {
-    if (javaScript) {//here in html, add test toggle  to almost everything
+    if (javaScript) {
+        //run any tests first
+        test();
         console.log("ONLOAD {");
-        //available = 0;
-        //tAvailable = 0;
         buttonHidden = false;
 
         //rebuild for noscript
@@ -18,11 +18,9 @@ function onLoad() {
         nav.style.height = "300px";
         tNav.style.height = "300px";
         //here CSS: nav a {textdecoration="none"}
-        toggleMenu();
-        toggleTheme();
-
-        //run any tests first
-        test();
+        toggleMenu(1);
+        toggleTheme(1);
+        onScroll();
 
         //set age for summary page
         var date = new Date();
@@ -127,8 +125,6 @@ function onLoad() {
             console.log("ONLOAD availability did not work (likely not summary page)");
         }
 
-        //proper scaling (maybe no code here, just use correct css and such)In jQuery/JavaScript file:
-
         console.log("ONLOAD }");
     }
 }
@@ -227,7 +223,7 @@ function testToggle() {
 }
 
 //toggle main menu open or closed
-function toggleMenu() {
+function toggleMenu(intro=0) {
     if (javaScript) {
         available++;
         console.log("TOGGLEMENU { available = " + available);
@@ -260,7 +256,7 @@ function toggleMenu() {
                             nav.style.height = trim(nav.style.height) + 20 + "px";
                             button.style.opacity = y;
                             button.style.width = trim(button.style.width) + 20 + "px";
-                            x += .22;
+                            x += .22;//here - intro; also just fix the quantities for the x and y
                         }
                     }, 10);
                 }
