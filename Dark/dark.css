@@ -4,7 +4,8 @@ body{
 }
 
 section{
-    
+    margin-top:1%;
+    height:700px;
 }
 
 header{
@@ -20,6 +21,7 @@ width:33%;
 
 nav{
     margin: auto;
+    padding-bottom: 1%;
     width:90%;
     border-bottom: 1px solid purple;
 }
