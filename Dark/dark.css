@@ -1,46 +1,63 @@
-body{
+body {
     background-color: #101010;
     color: purple;
 }
 
-section{
-    margin-top:1%;
-    height:700px;
+section {
+    margin-top: 1%;
+    height: 700px;
 }
 
-header{
+header {
     text-align: center;
-    width:100%;
+    width: 100%;
 }
 
-div{
-margin:auto;
-font-size: x-large;
-width:33%;
+div {
+    margin: auto;
+    font-size: x-large;
+    width: 33%;
+    color: #888888;
 }
 
-nav{
+nav {
     margin: auto;
     padding-bottom: 1%;
-    width:90%;
+    width: 90%;
     border-bottom: 1px solid purple;
 }
 
-h1{
+h1 {
     font-size: xx-large;
+    color: #888888;
 }
 
-h2{
-    margin:0 33%;
-font-size: x-large;
+h2 {
+    margin: 0 33%;
+    color: #888888;
+    font-size: x-large;
 }
 
-h3{
+h3 {
     font-size: large;
+    color: #888888;
 }
 
-hr{
+hr {
     border-color: purple;
-    width:33%;
-    float:left;
+    width: 33%;
+    float: left;
+}
+
+a {
+    color: #cccccc;
+    text-decoration: solid solid;
+}
+
+li {
+    color: #888888;
+}
+
+label {
+    color: #888888;
 }
