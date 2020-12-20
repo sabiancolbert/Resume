@@ -15,9 +15,9 @@ header {
 
 div {
     margin: auto;
-    font-size: x-large;
+    font-size: 50px;
     width: 33%;
-    color: #888888;
+    color: #cccccc;
 }
 
 nav {
@@ -30,7 +30,7 @@ nav {
 
 h1 {
     font-size: xx-large;
-    color: white;
+    color: 888888;
 }
 
 h2 {
