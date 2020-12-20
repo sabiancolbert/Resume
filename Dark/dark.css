@@ -1,0 +1,29 @@
+body{
+    background-color: #101010;
+    color: purple;
+}
+
+section{
+    
+}
+
+header{
+    text-align: center;
+    width:100%;
+}
+
+div{
+margin:auto;
+font-size: x-large;
+width:33%;
+}
+
+nav{
+    margin: auto;
+    width:90%;
+    border-bottom: 1px solid purple;
+}
+
+h1{
+    font-size: xx-large;
+}
