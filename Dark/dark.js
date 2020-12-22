@@ -1,7 +1,7 @@
 function $($) { return document.getElementById($);}
 
 function over(x) {
-    $(x).style.fontSize = "37px";
+    $(x).style.fontSize = "40px";
     $(x).style.color = "#eeeeee";
 }
 
