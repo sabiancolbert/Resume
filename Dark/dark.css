@@ -17,8 +17,9 @@ header {
 div {
     margin: auto;
     font-size: 35px;
-    width: 33%;
+    width: 30%;
     color: #cccccc;
+    height:35px
 }
 
 nav {
