@@ -1,7 +1,7 @@
 body {
     background-color: #111111;
     color: purple;
-    font-size:25px;
+    font-size: 25px;
 }
 
 section {
@@ -15,18 +15,23 @@ header {
 }
 
 div {
+    border-radius: 35px;
+    border-left: 1px solid purple;
+    border-right: 1px solid purple;
+    position: relative;
     margin: auto;
     font-size: 35px;
     width: 30%;
     color: #cccccc;
-    height:35px
+    height: 40px;
 }
 
 nav {
+    align-content: space-between;
     margin: auto;
     padding-bottom: 1%;
     width: 90%;
-    height:35px;
+    height: 35px;
     border-bottom: 1px solid purple;
 }
 
@@ -49,7 +54,7 @@ h3 {
 hr {
     border-color: purple;
     width: 33%;
-    float: left;
+    
 }
 
 a {
