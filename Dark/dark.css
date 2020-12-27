@@ -7,6 +7,7 @@ body {
 section {
     margin-top: 1%;
     height: 700px;
+    padding: 10px;
 }
 
 header {
@@ -14,20 +15,30 @@ header {
     width: 100%;
 }
 
-div {
-    border-radius: 35px;
-    border-left: 1px solid purple;
-    border-right: 1px solid purple;
-    position: relative;
-    margin: auto;
-    font-size: 35px;
-    width: 30%;
-    color: #cccccc;
-    height: 40px;
+div{
+    position: absolute;
+    width:33%;
+    text-align: center;
 }
 
-nav {
-    align-content: space-between;
+.button {
+    border-left: 1px solid purple;
+    border-right: 1px solid purple;
+    border-radius: 35px;
+    margin: auto;
+    font-size: 35px;
+    width: 95%;
+    color: #cccccc;
+    height: 60px;
+    padding: 0 10%;
+}
+
+.inactive{
+
+}
+
+nav {/*
+    text-align: center;*/
     margin: auto;
     padding-bottom: 1%;
     width: 90%;
@@ -47,8 +58,9 @@ h2 {
 }
 
 h3 {
-    font-size: 30px;
+    font-size: 27px;
     color: #888888;
+    position: relative;
 }
 
 hr {
@@ -68,4 +80,11 @@ li {
 
 label {
     color: #888888;
+}
+
+p{
+    float: right;
+    top:-70px;
+    position: relative;
+    font-size: 20px;
 }
