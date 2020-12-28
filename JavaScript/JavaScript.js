@@ -38,7 +38,6 @@ function onLoad() {
         }
 
         //set availability for summary page
-        var date = new Date();
         var month = date.getMonth();
         var x = date.getDate() + 14;
         try {
