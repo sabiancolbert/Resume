@@ -7,7 +7,14 @@ body {
 section {
     margin-top: 1%;
     height: 700px;
-    padding: 10px;
+    text-align: center;
+}
+span{
+    text-align: left;
+}
+
+article{
+    padding: 0 10%;
 }
 
 header {
@@ -61,7 +68,6 @@ h3 {
 hr {
     border-color: purple;
     width: 33%;
-    
 }
 
 a {
