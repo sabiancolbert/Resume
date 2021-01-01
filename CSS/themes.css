@@ -3,3 +3,20 @@ body {
     color: #8000ff;
     font-size: 25px;
 }
+
+hr{
+    border-color: #8000ff;
+}
+
+nav{
+    color: #cccccc;
+}
+div{
+    border: 1px solid #8000ff;
+    border-radius: 50px;
+    border-width: 0 1px;
+    width: 30%;
+margin:auto;
+font-size: 40px;
+height:60px;
+}

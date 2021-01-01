@@ -6,7 +6,7 @@
     <title>Themes</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="CSS/themes.css">
-    <script src="JavaScript/themes.js"></script>
+    <script src="JavaScript/JavaScript.js"></script>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
@@ -16,14 +16,14 @@
 <body style="top:-8px">
     <header style="text-align: center;width:100%;position: absolute">
         <h1>Pick a theme</h1>
+        <hr>
     </header>
-    <div style="text-align: center;">
-        <nav id="nav" style="margin:auto;height:400px;top:108px;position: relative;">
-            <a id="1" href="index.html">Default</a>
+        <nav id="nav" style="text-align:center;top:175px;position: relative;">
+
+            <div id="0" onmouseover="expand(0)" onmouseout="shrink(0)"><a href="index.html">Default</a></div>
             <br>
-            <a id="2" href="Dark/index.html" style="top:120px">Dark</a>
+            <div id="1" onmouseover="expand(1)" onmouseout="shrink(1)"><a href="Dark/index.html">Dark</a></div>
         </nav>
-    </div>
 </body>
 
 </html>
