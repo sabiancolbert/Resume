@@ -111,3 +111,17 @@ function out(x){
     $(x).style.color = "#cccccc";
     $(x).style.width = "95%";
 }
+
+function themeOver() {
+    $("theme").style.width = "54px";
+    $("theme").style.height = "54px";
+    $("theme").style.top = "3px";
+    $("theme").style.right = "3px";
+}
+
+function themeOut() {
+    $("theme").style.width = "50px";
+    $("theme").style.height = "50px";
+    $("theme").style.top = "5px";
+    $("theme").style.right = "5px";
+}

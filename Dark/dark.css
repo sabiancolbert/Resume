@@ -9,12 +9,23 @@ section {
     height: 700px;
     text-align: center;
 }
-span{
+
+span {
     text-align: left;
 }
 
-article{
+article {
     padding: 0 10%;
+}
+
+img {
+    position: absolute;
+    top:5px;
+    right:5px;
+    height: 50px;
+    width:50px;
+    border-radius: 50px;
+    border: 1px solid #8000ff;
 }
 
 header {
@@ -22,25 +33,24 @@ header {
     width: 100%;
 }
 
-div{
+div {
     position: relative;
     text-align: center;
-    float:left;
+    float: left;
     margin: auto;
 }
 
 span div {
-margin: 0 2%;
-width: 45%;
+    margin: 0 2%;
+    width: 45%;
 }
 
-.right{
-    float:right;
+.right {
+    float: right;
 }
 
-nav div{
-    width:33%;
-    
+nav div {
+    width: 33%;
 }
 
 div a {
@@ -55,7 +65,8 @@ div a {
     padding: 0 10%;
 }
 
-nav {/*
+nav {
+    /*
     text-align: center;*/
     margin: auto;
     padding-bottom: 1%;
@@ -98,7 +109,7 @@ h4 {
     color: #888888;
 }
 
-p{
+p {
     font-size: 20px;
     max-width: 200px;
     text-align: right;
