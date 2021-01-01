@@ -125,3 +125,7 @@ function themeOut() {
     $("theme").style.top = "5px";
     $("theme").style.right = "5px";
 }
+
+function themeToggle() {
+    window.open("../themes.html", "_self");
+}
