@@ -8,7 +8,7 @@ function onLoad(){//set age for summary page
     }
     try {
         console.log("ONLOAD age = " + age);
-        $("age").innerText = age;
+        $("age").innerText = "I am a " + age + " year old                                ";
     }
     catch {
         //incase page isn't summary page

@@ -1,6 +1,6 @@
 body {
     background-color: #111111;
-    color: purple;
+    color: #8000ff;
     font-size: 25px;
 }
 
@@ -23,13 +23,29 @@ header {
 }
 
 div{
-    position: absolute;
-    width:33%;
+    position: relative;
     text-align: center;
+    float:left;
+    margin: auto;
 }
+
+span div {
+margin: 0 2%;
+width: 45%;
+}
+
+.right{
+    float:right;
+}
+
+nav div{
+    width:33%;
+    
+}
+
 div a {
-    border-left: 1px solid purple;
-    border-right: 1px solid purple;
+    border-left: 1px solid #8000ff;
+    border-right: 1px solid #8000ff;
     border-radius: 35px;
     margin: auto;
     font-size: 35px;
@@ -45,7 +61,7 @@ nav {/*
     padding-bottom: 1%;
     width: 100%;
     height: 35px;
-    border-bottom: 1px solid purple;
+    border-bottom: 1px solid #8000ff;
 }
 
 h1 {
@@ -65,7 +81,7 @@ h3 {
 }
 
 hr {
-    border-color: purple;
+    border-color: #8000ff;
     width: 33%;
 }
 
@@ -83,8 +99,7 @@ h4 {
 }
 
 p{
-    float: right;
-    top:-70px;
-    position: relative;
     font-size: 20px;
+    max-width: 200px;
+    text-align: right;
 }
