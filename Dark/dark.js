@@ -6,9 +6,9 @@ function onLoad(){//set age for summary page
     if (date.getMonth() > 4 && date.getDate() > 1) {
         age++;
     }
-    try {
+    try {//here css;      div a:hover{}
         console.log("ONLOAD age = " + age);
-        $("age").innerText = "I am a " + age + " year old                                ";
+        $("age").innerText = "I am a " + age + " year old father of two with high functioning autism and a progresss driven mind";
     }
     catch {
         //incase page isn't summary page
@@ -99,6 +99,15 @@ function onLoad(){//set age for summary page
         //incase page isn't summary page
     }
 }
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      $("scroll").style.top = "0";
+    } else {
+        $("scroll").style.top = "-50px";
+    }
+  }
 
 function over(x) {
     $(x).style.fontSize = "40px";

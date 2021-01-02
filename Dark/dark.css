@@ -8,6 +8,7 @@ section {
     margin-top: 1%;
     height: 700px;
     text-align: center;
+    height: fit-content;
 }
 
 span {
@@ -26,6 +27,7 @@ img {
     width:50px;
     border-radius: 50px;
     border: 1px solid #8000ff;
+    z-index: 1;
 }
 
 header {
@@ -53,14 +55,13 @@ nav div {
     width: 33%;
 }
 
-div a {
+.button {
     border-left: 1px solid #8000ff;
     border-right: 1px solid #8000ff;
     border-radius: 35px;
     margin: auto;
     font-size: 35px;
     width: 95%;
-    color: #cccccc;
     height: 60px;
     padding: 0 10%;
 }
@@ -97,7 +98,7 @@ hr {
 }
 
 a {
-    color: #cccccc;
+    color: #bbbbbb;
     text-decoration: solid solid;
 }
 
@@ -113,4 +114,21 @@ p {
     font-size: 20px;
     max-width: 200px;
     text-align: right;
+}
+
+label{
+    position: absolute;
+    top: 17px;
+    right:6px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+#scroll{
+    overflow-y: scroll;
+    width:29%;
+    float:right;
+    margin-right:5%;
+    height: 1165px;
 }

@@ -15,14 +15,15 @@
 
 <body onload="onLoad()">
     <!--header-->
-    <header>
+    <header id="header">
         <h1>Sabian Colbert</h1>
         <img id="theme" onmouseup="themeToggle()" onmouseover="themeOver()" onmouseout="themeOut()">
+        <label>T</label>
         <br>
         <nav>
-            <div style="width:33%;float:left"><a style="background-color:#333333">Summary</a></div>
-            <div style="width:33%;float:center"><a id="1" onmouseover="over(1)" onmouseout="out(1)">Employment</a></div>
-            <div style="width:33%;float:right"><a id="2" onmouseover="over(2)" onmouseout="out(2)">Education</a></div>
+            <div style="width:33%;float:left"><a class="button" style="background-color:#333333">Summary</a></div>
+            <div style="width:33%;float:center"><a class="button" id="1" onmouseover="over(1)" onmouseout="out(1)">Employment</a></div>
+            <div style="width:33%;float:right"><a class="button" id="2" onmouseover="over(2)" onmouseout="out(2)">Education</a></div>
         </nav>
     </header>
 
@@ -30,7 +31,7 @@
 
 
     <!--body-->
-    <section style="width:60%;float:left;margin-left:5%;border-right:1px solid #8000ff">
+    <section id="info" style="width:60%;float:left;margin-left:5%;border-right:1px solid #8000ff">
         <article>
             <h2>Info</h2>
             <span>
@@ -73,16 +74,31 @@
                 </div>
                 <br>
                 <br>
-                <h3>Available:</h3>
-                <p id="availability">2 Weeks From Now</p>
+                <br>
+                <div>
+                    <h3>Available:</h3>
+                </div>
+                <div class="right">
+                    <p id="availability">2 Weeks From Now</p>
+                </div>
                 <br>
                 <br>
-                <h3>All Week:</h3>
-                <p>5am - 7pm</p>
+                <br>
+                <div>
+                    <h3>All Week:</h3>
+                </div>
+                <div class="right">
+                    <p>5am - 7pm</p>
+                </div>
                 <br>
                 <br>
-                <h3>Relocate:</h3>
-                <p>No</p>
+                <br>
+                <div>
+                    <h3>Relocate:</h3>
+                </div>
+                <div class="right">
+                    <p>No</p>
+                </div>
             </span>
         </article>
         <hr style="width: 75%">
@@ -90,13 +106,22 @@
         <article>
             <h2>Details</h2>
             <span>
-                <h3><a href="https://drive.google.com/drive/folders/1qfcPBlXp8IiYMMFtdfbGFHq1I7-69YgF?usp=sharing">Programming
-                        Portfolio</a></h3>
-                <p> father of two with high functioning autism and a progresss driven mind</p>
-                <p id="age">I am a </p>
+                <div>
+                    <h3><a href="https://drive.google.com/drive/folders/1qfcPBlXp8IiYMMFtdfbGFHq1I7-69YgF?usp=sharing">Programming
+                            Portfolio</a></h3>
+                </div>
+                <div class="right">
+                    <p id="age">I am a father of two with high functioning autism and a progresss driven mind</p>
+                </div>
                 <br>
+                <br>
+                <br>
+                <div>
                 <h3>US Resident:</h3>
+            </div>
+            <div class="right">
                 <p>Valid license, no felonies, authorized to work in the US</p>
+                </div>
             </span>
         </article>
     </section>
@@ -106,7 +131,7 @@
 
 
     <!--sidebar-->
-    <section style="width:29%;float:right;margin-right:5%">
+    <section id="scroll">
         <h2>Documents</h2>
         <hr style="width: 66%">
         <!--resume-->
