@@ -85,10 +85,13 @@ h2 {
 }
 
 h3 {
-    left:70px;
     font-size: 27px;
     color: #888888;
     position: relative;
+}
+
+article h3{
+    left:70px;
 }
 
 hr {
