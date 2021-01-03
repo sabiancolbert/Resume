@@ -324,6 +324,8 @@ function toggleTheme() {
                     //if done opening, then stop opening animation
                     if (tNav.style.height == "300px") {
                         $("4").hidden = false;
+                        $("5").hidden = false;
+                        $("6").hidden = false;
                         console.log("TOGGLEMENU } theme opened");
                         clearInterval(animation);
                     }
@@ -346,6 +348,8 @@ function toggleTheme() {
                     //if done closing, then stop closing animation
                     if (tNav.style.height == "100px") {
                         $("4").hidden = true;
+                        $("5").hidden = true;
+                        $("6").hidden = true;
                         console.log("TOGGLEMENU } theme closed");
                         clearInterval(animation);
                     }
