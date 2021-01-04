@@ -6,17 +6,19 @@ body {
 
 section {
     margin-top: 1%;
-    height: 700px;
     text-align: center;
-    height: fit-content;
+    width:65%;
+    float:left;
+}
+
+#scroll{
+    overflow-y: scroll;
+    width:34%;
+    float:right;
 }
 
 span {
     text-align: left;
-}
-
-article {
-    padding: 0 10%;
 }
 
 img {
@@ -38,6 +40,7 @@ header {
 div {
     position: relative;
     float: left;
+    height:150px;
 }
 
 span div {
@@ -51,6 +54,8 @@ span div {
 
 nav div {
     width: 33%;
+    height:50px;
+    top:-53px;
 }
 
 .button {
@@ -58,15 +63,14 @@ nav div {
     border-right: 1px solid #8000ff;
     border-radius: 35px;
     margin: auto;
-    font-size: 35px;
+    font-size: 50px;
     width: 95%;
     height: 60px;
     padding: 0 10%;
 }
 
 nav {
-    /*
-    text-align: center;*/
+    top:-10px;
     margin: auto;
     padding-bottom: 1%;
     width: 100%;
@@ -75,18 +79,16 @@ nav {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 70px;
     color: 888888;
 }
 
 h2 {
-    color: #888888;
-    font-size: 35px;
+    font-size: 50px;
 }
 
 h3 {
-    font-size: 27px;
-    color: #888888;
+    font-size: 40px;
     position: relative;
 }
 
@@ -99,25 +101,14 @@ hr {
     width: 33%;
 }
 
-a {
-    color: #bbbbbb;
-    text-decoration: solid solid;
-}
-
-li {
-    color: #888888;
-}
-
-h4 {
+li, h2, h3, h4, a{
     color: #888888;
 }
 
 p {
-    font-size: 20px;
-    max-width: 200px;
+    font-size: 35px;
     text-align: right;
     top:11px;
-    right:-30px;
     position: relative;
 }
 
@@ -128,12 +119,4 @@ label{
     width: 50px;
     height: 50px;
     text-align: center;
-}
-
-#scroll{
-    overflow-y: scroll;
-    width:29%;
-    float:right;
-    margin-right:5%;
-    height: 1165px;
 }
