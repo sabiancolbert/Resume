@@ -41,11 +41,9 @@ div {
     position: relative;
     float: left;
     height:150px;
-}
-
-span div {
-    margin: 0 2%;
-    width: 45%;
+    width:49%;
+    border:1px solid red;
+    vertical-align: middle;
 }
 
 .right {
