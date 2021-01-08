@@ -43,7 +43,6 @@ div {
     height:150px;
     width:49%;
     border:1px solid red;
-    vertical-align: middle;
 }
 
 .right {
@@ -88,10 +87,6 @@ h2 {
 h3 {
     font-size: 40px;
     position: relative;
-}
-
-article h3{
-    left:70px;
 }
 
 hr {
