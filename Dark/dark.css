@@ -9,13 +9,6 @@ header {
     text-align: center;
 }
 
-nav {
-    top: 100px;
-    height: 35px;
-    width: 100%;
-    position: absolute;
-}
-
 /* theme button */
 
 button {
@@ -40,31 +33,39 @@ button:hover {
 
 /* nav buttons */
 
-article{
+nav {
+    top: 100px;
+    height: 35px;
+    width: 100%;
+    min-width: 820px;
+    position: absolute;
+}
+
+article {
     width: 33%;
-    text-align: center;
     margin: auto;
 }
 
 article div {
     height: 45px;
-    width: 75%;
-    font-size: 50px;
+    width: 95%;
+    font-size: 40px;
     border-radius: 60px;
     border-left: 1px solid #8000ff;
     border-right: 1px solid #8000ff;
+    margin: auto;
     position: relative;
 }
 
 article div:hover {
-    width: 25%;
-    font-size: 55px;
+    width: 90%;
+    font-size: 45px;
 }
 
-#selected{
+#selected {
     height: 45px;
     width: 30%;
-    font-size: 50px;
+    font-size: 40px;
     margin: auto;
     position: relative;
 }
