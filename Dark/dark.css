@@ -24,30 +24,50 @@ button {
     height: 50px;
     width: 50px;
     border-radius: 50px;
+    font-size: 25px;
+    color: #8000ff;
     background-color: transparent;
     position: absolute;
 }
 
-button:hover {}
-
-button:active {}
+button:hover {
+    right: 8px;
+    top: 8px;
+    height: 46px;
+    width: 46px;
+    font-size: 30px;
+}
 
 /* nav buttons */
 
-nav div {
+article{
+    width: 33%;
+    text-align: center;
+    margin: auto;
+}
+
+article div {
     height: 45px;
-    width: 30%;
+    width: 75%;
     font-size: 50px;
     border-radius: 60px;
     border-left: 1px solid #8000ff;
     border-right: 1px solid #8000ff;
-    margin: auto;
     position: relative;
 }
 
-button:hover {}
+article div:hover {
+    width: 25%;
+    font-size: 55px;
+}
 
-button:active {}
+#selected{
+    height: 45px;
+    width: 30%;
+    font-size: 50px;
+    margin: auto;
+    position: relative;
+}
 
 /* body */
 
