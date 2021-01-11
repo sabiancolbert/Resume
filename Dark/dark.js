@@ -1,6 +1,6 @@
 function $($) { return document.getElementById($); }
 
-function onLoad(){//set age for summary page
+function onLoad() {//set age for summary page
     var date = new Date();
     var age = date.getFullYear() - 2001;
     if (date.getMonth() > 4 && date.getDate() > 1) {
@@ -100,39 +100,13 @@ function onLoad(){//set age for summary page
     }
 }
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () { scrollFunction() };
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      $("scroll").style.top = "0";
+        $("scroll").style.top = "0";
     } else {
         $("scroll").style.top = "-50px";
     }
-  }
-
-function over(x) {
-    $(x).style.fontSize = "40px";
-    $(x).style.color = "#eeeeee";
-    $(x).style.width = "100%";
-}
-
-function out(x){
-    $(x).style.fontSize = "35px";
-    $(x).style.color = "#cccccc";
-    $(x).style.width = "95%";
-}
-
-function themeOver() {
-    $("theme").style.width = "54px";
-    $("theme").style.height = "54px";
-    $("theme").style.top = "3px";
-    $("theme").style.right = "3px";
-}
-
-function themeOut() {
-    $("theme").style.width = "50px";
-    $("theme").style.height = "50px";
-    $("theme").style.top = "5px";
-    $("theme").style.right = "5px";
 }
 
 function themeToggle() {
