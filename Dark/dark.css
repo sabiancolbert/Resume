@@ -2,6 +2,7 @@ body {
     font-size: 25px;
     color: #8000ff;
     background-color: #111111;
+    margin:0;
 }
 
 header {
@@ -42,19 +43,24 @@ nav {
 }
 
 article {
+    height:50px;
     width: 33%;
-    margin: auto;
+    margin:auto;
+    position: absolute;
 }
 
 article div {
+    left:0;
+    right:0;
     height: 45px;
     width: 95%;
     font-size: 40px;
     border-radius: 60px;
     border-left: 1px solid #8000ff;
     border-right: 1px solid #8000ff;
-    margin: auto;
-    position: relative;
+    text-align: center;
+    margin:auto;
+    position: absolute;
 }
 
 article div:hover {
@@ -73,7 +79,6 @@ article div:hover {
 /* body */
 
 section {
-    margin-top: 1%;
     width: 65%;
     text-align: center;
     float: left;
