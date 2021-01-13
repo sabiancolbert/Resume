@@ -68,6 +68,7 @@ label{
 
 #mother{
     width:100%;
+    border-top: 1px solid #8000ff;
 }
 
 section {
@@ -80,6 +81,7 @@ section {
     top:0;
     right:0;
     width: 35%;
+    border-left: 1px solid #8000ff;
     float: right;
     position: relative;
 }
