@@ -100,15 +100,6 @@ function onLoad() {//set age for summary page
     }
 }
 
-window.onscroll = function () { scrollFunction() };
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        $("scroll").style.top = "0";
-    } else {
-        $("scroll").style.top = "-50px";
-    }
-}
-
 function themeToggle() {
     window.open("../themes.html", "_self");
 }
