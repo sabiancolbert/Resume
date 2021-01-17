@@ -3,64 +3,55 @@
 
 <head>
     <title>Resume</title>
-
     <meta charset="UTF-8">
     <link rel="stylesheet" href="default.css">
-    <script src="JavaScript/JavaScript.js"></script>
+    <script src="JavaScript.js"></script>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <link rel="icon" type="image/ico" href="Resources/favicon.ico" />
 </head>
 
-<body onload="onLoad()">
+<body onscroll="setButton()">
     <!--menu-->
-    <nav id="nav">
-        <a id="1" href="index.html" style="top:20px" onmouseover="expand(1)" onmouseout="shrink(1)">Summary</a>
-        <br>
-        <a id="2" href="employment.html" style="top:120px" onmouseover="expand(2)" onmouseout="shrink(2)">Employment</a>
-        <br>
-        <a id="3" href="documents.html" style="top:220px" onmouseover="expand(3)" onmouseout="shrink(3)">Documents</a>
-    </nav>
-    <div id="js">
-        <p>Enable JavaScript</p>
-    </div>
-    <nav id="tNav">
-        <a id="4" href="Dark/index.html" style="top:20px" onmouseover="expand(4)" onmouseout="shrink(4)">Dark</a>
-        <br>
-        <a id="5" style="top:120px">-</a>
-        <br>
-        <a id="6" href="themes.html" style="top:220px" onmouseover="expand(6)" onmouseout="shrink(6)">More</a>
+
+    <nav id="nav" hidden="true" onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">
+        <div onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">
+            <a href="index.html" onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">Summary</a>
+        </div>
+        <div onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">
+            <a href="employment.html" onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">Employment</a>
+        </div>
+        <div onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">
+            <a href="documents.html" onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">Documents</a>
+        </div>
     </nav>
     <!--header-->
-    <header onmouseover="testToggle()">
-        <!--menu button-->
-        <img id="menuButton" onmouseover="revealButton()" onmouseup="toggleMenu()" onmouseout="hideButton()"
-            src="Resources/menu.png">
-        <!--title-->
-        <h1 onmouseover="testToggle()">Education</h1>
-        <!--theme button-->
-        <img src="Resources/theme.png" id="theme" onmouseup="toggleTheme()">
+
+    <header>
+        <h1>Education</h1>
+        <img id="menuButton" onmouseup="toggleMenu(true)" onmouseover="revealButton()" onmouseout="hideButton()" src="Resources/menu.png">
+        <img onmouseup="theme()" src="Resources/theme.png">
     </header>
     <!--main page-->
-    <section onmouseover="testToggle()">
-        <!--cv tech-->
-        <div>
+
+    <section>
+
+        <article>
+            <!--cv tech-->
             <h2>C</h2>
-        </div>
-        <h3>anadian Valley Technology Center</h3>
-        <hr>
-        <article onmouseover="testToggle()">
+            <h3>anadian Valley Technology Center</h3>
+            <hr>
+
             <label><strong>Certifications: </strong></label>
             <a href="documents.html">Aug 2017 - May 2018</a>
         </article>
         <!--yukon high school-->
-        <div>
+
+        <article>
             <h2>Y</h2>
-        </div>
-        <h3>ukon High School</h3>
-        <hr>
-        <article onmouseover="testToggle()">
+            <h3>ukon High School</h3>
+            <hr>
             <label><strong>Diploma: </strong></label>
             <a href="Resources/Diploma.jpg">Aug 2014 - May 2018</a>
         </article>

@@ -3,66 +3,56 @@
 
 <head>
     <title>Resume</title>
-
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="CSS/light.css">
-    <script src="JavaScript/JavaScript.js"></script>
+    <link rel="stylesheet" href="default.css">
+    <script src="JavaScript.js"></script>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <link rel="icon" type="image/ico" href="Resources/favicon.ico" />
 </head>
 
-<body onload="onLoad()">
+<body onscroll="setButton()">
     <!--menu-->
-    <nav id="nav">
-        <a id="1" href="index.html" style="top:20px" onmouseover="expand(1)" onmouseout="shrink(1)">Summary</a>
-        <br>
-        <a id="2" href="employment.html" style="top:120px" onmouseover="expand(2)" onmouseout="shrink(2)">Employment</a>
-        <br>
-        <a id="3" href="education.html" style="top:220px" onmouseover="expand(3)" onmouseout="shrink(3)">Education</a>
-    </nav>
-    <div id="js">
-        <p>Enable JavaScript</p>
-    </div>
-    <nav id="tNav">
-        <a id="4" href="Dark/index.html" style="top:20px" onmouseover="expand(4)" onmouseout="shrink(4)">Dark</a>
-        <br>
-        <a id="5" style="top:120px">-</a>
-        <br>
-        <a id="6" href="themes.html" style="top:220px" onmouseover="expand(6)" onmouseout="shrink(6)">More</a>
+
+    <nav id="nav" hidden="true" onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">
+        <div onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">
+            <a href="index.html" onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">Summary</a>
+        </div>
+        <div onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">
+            <a href="employment.html" onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">Employment</a>
+        </div>
+        <div onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">
+            <a href="education.html" onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">Education</a>
+        </div>
     </nav>
     <!--header-->
-    <header onmouseover="testToggle()">
-        <!--menu button-->
-        <img id="menuButton" onmouseover="revealButton()" onmouseup="toggleMenu()" onmouseout="hideButton()"
-            src="Resources/menu.png">
-        <!--title-->
-        <h1 onmouseover="testToggle()">Documents</h1>
-        <!--theme button-->
-        <img src="Resources/theme.png" id="theme" onmouseup="toggleTheme()">
+
+    <header>
+        <h1>Documents</h1>
+        <img id="menuButton" onmouseup="toggleMenu(true)" onmouseover="revealButton()" onmouseout="hideButton()" src="Resources/menu.png">
+        <img onmouseup="theme()" src="Resources/theme.png">
     </header>
     <!--main page-->
-    <section onmouseover="testToggle()">
+
+    <section>
         <!--resume-->
-        <div>
+
+        <article>
             <h2>R</h2>
-        </div>
-        <h3>esume</h3>
-        <hr>
-        <article onmouseover="testToggle()">
+            <h3>esume</h3>
+            <hr>
             <a href="Resources/Sabian-Colbert.pdf">Sabian-Colbert.pdf</a>
             <ul>
                 <li>Everything in this website</li>
             </ul>
         </article>
         <!--national career readiness certificate-->
-        <div>
+
+        <article>
             <h2>N</h2>
-        </div>
-        <h3>ational Career Readiness Certificate</h3>
-        <hr>
-        <article onmouseover="testToggle()">
+            <h3>ational Career Readiness Certificate</h3>
+            <hr>
             <a href="Resources/National-Career-Readiness-Certificate.jpg">From the state of Oklahoma</a>
             <br>
             <label>2017</label>
@@ -73,12 +63,11 @@
             </ul>
         </article>
         <!--computer literacy certificate-->
-        <div>
+
+        <article>
             <h2>C</h2>
-        </div>
-        <h3>omputer Literacy Certificate</h3>
-        <hr>
-        <article onmouseover="testToggle()">
+            <h3>omputer Literacy Certificate</h3>
+            <hr>
             <a href="Resources/Computer-Literacy.jpg">From Canadian Valley Technology Center</a>
             <br>
             <label>2017</label>
@@ -87,12 +76,11 @@
             </ul>
         </article>
         <!--c# fundamentals certificate-->
-        <div>
+
+        <article>
             <h2>C</h2>
-        </div>
-        <h3># Fundamentals Certificate</h3>
-        <hr>
-        <article onmouseover="testToggle()">
+            <h3># Fundamentals Certificate</h3>
+            <hr>
             <a href="Resources/C-Fundamentals.jpg">From Canadian Valley Technology Center</a>
             <br>
             <label>2018</label>
@@ -101,12 +89,11 @@
             </ul>
         </article>
         <!--high school diploma-->
-        <div>
+
+        <article>
             <h2>H</h2>
-        </div>
-        <h3>igh School Diploma</h3>
-        <hr>
-        <article onmouseover="testToggle()">
+            <h3>igh School Diploma</h3>
+            <hr>
             <a href="Resources/Diploma.jpg">From Yukon High School</a>
             <br>
             <label>2018</label>
@@ -115,12 +102,11 @@
             </ul>
         </article>
         <!--learn to code-->
-        <div>
+
+        <article>
             <h2>L</h2>
-        </div>
-        <h3>earn To Code</h3>
-        <hr>
-        <article onmouseover="testToggle()">
+            <h3>earn To Code</h3>
+            <hr>
             <a href="Resources/Learn-To-Code.pdf">From Mimo</a>
             <br>
             <label>2020</label>

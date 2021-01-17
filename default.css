@@ -112,8 +112,7 @@ p {
 }
 
 ul {
-    margin: 0;
-    padding: 0;
+    padding: 0 34px 0 0;
     left: 34px;
     font-size: 30px;
     position: relative;
