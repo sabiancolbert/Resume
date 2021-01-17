@@ -1,0 +1,28 @@
+section{
+    height:700px;
+    width:100%;
+    border: 1px solid red;
+}
+header{
+    height:200px;
+    width : 50%;
+    border: 1px solid red;
+}
+nav{
+    height:200px;
+    width : 50%;
+    border: 1px solid red;
+}
+article{
+    position: relative;
+    float:left;
+    margin: auto;
+    height:200px;
+    width : 50%;
+    border: 1px solid red;
+}
+div{
+    height:200px;
+    width : 50%;
+    border: 1px solid red;
+}

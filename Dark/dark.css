@@ -124,10 +124,14 @@ a {
 }
 
 p {
-    top: 11px;
+    top:11px;
     font-size: 35px;
     text-align: right;
     position: relative;
+}
+
+p a{
+    text-decoration:underline;
 }
 
 li{
