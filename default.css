@@ -20,12 +20,12 @@ nav div {
     text-align: center;
 }
 
-div a {
+nav a {
     font-size: 40px;
     color: black;
 }
 
-div a:hover {
+nav a:hover {
     font-size: 43px;
     color: #777777;
 }
@@ -60,11 +60,13 @@ section {
 }
 
 article {
-    overflow-x: hidden;
+    text-align: left;
+    overflow: hidden;
     position: relative;
 }
 
 article div {
+    text-align: center;
     overflow: wrap;
     padding-right: 50px;
 }
@@ -93,26 +95,23 @@ h2 {
 }
 
 h3 {
-    margin-top: 77px;
-    font-size: 70px;
+    top: -30px;
+    left: 100px;
+    font-size: 60px;
+    line-height: 1;
     position: absolute;
+}
+
+a {
+    font-size: 40px;
 }
 
 label {
     font-size: 40px;
 }
 
-a {
-    font-size: 30px;
-}
-
-p {
-    font-size: 150px;
-    font-weight: bold;
-}
-
 ul {
-    padding: 0 34px 0 0;
+    margin-right: 110px;
     left: 34px;
     font-size: 30px;
     position: relative;
@@ -127,11 +126,4 @@ hr {
     background-color: #B4B4B4;
     border: none;
     position: relative;
-}
-
-h3 {
-    top: -43px;
-    left: 100px;
-    font-size: 60px;
-    position: absolute;
 }
