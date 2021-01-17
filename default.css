@@ -60,14 +60,14 @@ section {
 }
 
 article {
-    text-align: left;
     overflow: hidden;
+    text-align: left;
     position: relative;
 }
 
 article div {
-    text-align: center;
     overflow: wrap;
+    text-align: center;
     padding-right: 50px;
 }
 
