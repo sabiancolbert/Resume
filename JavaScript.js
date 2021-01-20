@@ -11,7 +11,7 @@ window.onload = function () {
             age++;
         }
         try {
-            pageAge.innerText = age;
+            pageAge.innerText = age++ + " year old ";
         }
         catch {
             //incase page isn't summary page

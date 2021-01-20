@@ -7,8 +7,8 @@ function onLoad() {//set age for summary page
         age++;
     }
     try {//here css;      div a:hover{}
-        console.log("ONLOAD age = " + age);
-        $("age").innerText = "I am a " + age + " year old father of two with high functioning autism and a progresss driven mind";
+        console.log("ONLOAD age = " + age + 1);
+        $("age").innerText = "I am a " + age + " year old father of two, with a great work ethic and a progress driven mind";
     }
     catch {
         //incase page isn't summary page
