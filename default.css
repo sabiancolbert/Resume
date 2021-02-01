@@ -1,6 +1,7 @@
 body {
     margin: 0;
     text-align: center;
+    background-color: #ddddff;
 }
 
 nav {
@@ -10,7 +11,7 @@ nav {
     margin: 8px;
     border-radius: 46px;
     border: 5px solid #5050ff;
-    background-color: white;
+    background-color: #ddddff;
     position: fixed;
 }
 
