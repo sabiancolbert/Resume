@@ -116,7 +116,7 @@ function theme() { window.open("themes.html", "_self"); }
 function setButton() {
     toggleMenu(false, false);
     //scroll is >=27px, allow menu button to hide (if scroll is < 50 it won't appear to change yet)
-    if (document.documentElement.scrollTop >= 54 && window.innerHeight > 600) {
+    if (document.documentElement.scrollTop >= 54) {
         if (!buttonOut) {
             menuButton.style.top = "-54px";
         }
