@@ -1,5 +1,5 @@
 var mouseA = false;
-var buttonOut = true;
+var buttonOut = false;
 
 //here change images on hover
 window.onload = function () {
@@ -116,7 +116,7 @@ function theme() { window.open("themes.html", "_self"); }
 function setButton() {
     toggleMenu(false, false);
     //scroll is >=27px, allow menu button to hide (if scroll is < 50 it won't appear to change yet)
-    if (document.documentElement.scrollTop >= 54) {
+    if (document.documentElement.scrollTop >= 54 && window.innerHeight > 600) {
         if (!buttonOut) {
             menuButton.style.top = "-54px";
         }
