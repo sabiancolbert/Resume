@@ -114,10 +114,12 @@ function theme() { window.open("themes.html", "_self"); }
 
 //automatically hide/reveal menu button
 function setButton() {
-
+    toggleMenu(false, false);
     //scroll is >=27px, allow menu button to hide (if scroll is < 50 it won't appear to change yet)
     if (document.documentElement.scrollTop >= 54) {
-        menuButton.style.top = "-54px";
+        if (!buttonOut) {
+            menuButton.style.top = "-54px";
+        }
         menuButton.style.position = "fixed";
     }
     //scroll is NOT >=27px, allow menu button to reveal
@@ -168,7 +170,7 @@ function hideButton(override = false) {
 }
 
 //toggle nav menu
-function toggleMenu(open = true) {
+function toggleMenu(open = true, setbutton = true) {
     if (open) {
         nav.hidden = false;
         menuButton.hidden = true;
@@ -176,6 +178,8 @@ function toggleMenu(open = true) {
     else {
         nav.hidden = true;
         menuButton.hidden = false;
-        setButton();
+        if (setbutton) {
+            setButton();
+        }
     }
 }
