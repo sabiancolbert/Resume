@@ -16,27 +16,18 @@
 <body onscroll="setButton()">
     <!--menu-->
 
-    <nav id="nav" hidden="true" onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">
-        <div onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">
-            <a href="employment.html" onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">Employment</a>
-        </div>
-        <div onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">
-            <a href="education.html" onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">Education</a>
-        </div>
-        <div onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">
-            <a href="documents.html" onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">Documents</a>
-        </div>
+    <nav id="nav" hidden="true">
     </nav>
     <!--header-->
 
     <header>
-        <h1>Sabian Colbert</h1>
-        <img id="menuButton" onmouseup="toggleMenu(true)" onmouseover="revealButton()" onmouseout="hideButton()" src="Resources/menu.png">
+        <h1 id="title">Sabian Colbert</h1>
+        <img id="menuButton" onmouseup="toggleMenu()" onmouseover="revealButton()" onmouseout="hideButton()" src="Resources/menu.png">
         <img onmouseup="theme()" src="Resources/theme.png">
     </header>
     <!--main page-->
 
-    <section>
+    <section onclick="df()">
         <!--info-->
 
         <article>

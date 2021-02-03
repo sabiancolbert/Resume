@@ -183,3 +183,8 @@ function toggleMenu(open = true, setbutton = true) {
         }
     }
 }
+function df() {
+
+    document.getElementById("title").innerHTML = "ef";
+    toggleMenu(false);
+}
