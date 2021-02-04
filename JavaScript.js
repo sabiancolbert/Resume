@@ -1,7 +1,6 @@
 var mouseA = false;
 var buttonOut = false;
 
-//here change images on hover
 window.onload = function () {
     //set age for summary page
     {
@@ -108,8 +107,9 @@ window.onload = function () {
         }
     }
 }
+window.onscroll = setButton();
 
-//go to themes
+//themes button
 function theme() { window.open("themes.html", "_self"); }
 
 //automatically hide/reveal menu button
@@ -170,7 +170,7 @@ function hideButton(override = false) {
 }
 
 //toggle nav menu
-function toggleMenu(open = true, setbutton = true) {
+function toggleMenu(open, setbutton = true) {
     if (open) {
         nav.hidden = false;
         menuButton.hidden = true;

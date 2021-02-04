@@ -15,27 +15,27 @@
 <body onscroll="setButton()">
     <!--menu-->
 
-    <nav id="nav" hidden="true" onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">
-        <div onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">
-            <a href="index.html" onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">Summary</a>
+    <nav id="nav" hidden="true">
+        <div>
+            <a href="index.html">Summary</a>
         </div>
-        <div onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">
-            <a href="employment.html" onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">Employment</a>
+        <div>
+            <a href="employment.html">Employment</a>
         </div>
-        <div onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">
-            <a href="education.html" onmouseover="toggleMenu()" onmouseout="toggleMenu(false)">Education</a>
+        <div>
+            <a href="documents.html">Education</a>
         </div>
     </nav>
     <!--header-->
 
-    <header>
+    <header onmouseover="toggleMenu(false)">
         <h1>Documents</h1>
         <img id="menuButton" onmouseup="toggleMenu(true)" onmouseover="revealButton()" onmouseout="hideButton()" src="Resources/menu.png">
         <img onmouseup="theme()" src="Resources/theme.png">
     </header>
     <!--main page-->
 
-    <section>
+    <section onmouseover="toggleMenu(false)">
         <!--resume-->
 
         <article>
