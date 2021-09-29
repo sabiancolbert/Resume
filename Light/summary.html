@@ -1,1 +1,96 @@
+<!DOCTYPE html>
 
+<html>
+
+<head>
+	<title>Resume</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="default.css">
+	<script src="JavaScript.js"></script>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<link rel="icon" type="image/ico" href="Resources/favicon.ico" />
+</head>
+
+<body onscroll="setButton()">
+	<!-- menu -->
+	<nav id="nav" hidden="true">
+		<div>
+			<a href="employment.html">Employment</a>
+		</div>
+		<div>
+			<a href="education.html">Education</a>
+		</div>
+		<div>
+			<a href="documents.html">Documents</a>
+		</div>
+		<div>
+			<a href="Portfolio/portfolio.html">Portfolio</a>
+		</div>
+	</nav>
+	<!-- header -->
+	<header onmouseover="toggleMenu(false)">
+		<h1>Sabian Colbert</h1>
+		<img alt="Menu" id="menuButton" onmouseup="toggleMenu(true)" onmouseover="revealButton()" onmouseout="hideButton()" src="Resources/menu.png">
+		<img alt="Themes" id="theme" onmouseup="theme()" src="Resources/theme.png">
+	</header>
+	<!-- main page -->
+	<section onmouseover="toggleMenu(false)">
+		<!-- info -->
+		<article>
+			<h2>I</h2>
+			<h3>nfo</h3>
+			<hr>
+			<div>
+				<label><strong>Name: </strong>Sabian Saadha Clark Cobert</label>
+				<br>
+				<label><strong>Email: </strong>sabian.c.colbert@gmail.com</label>
+				<br>
+				<label><strong>Birthday: </strong>June 2nd 2000</label>
+				<br>
+				<label><strong>Phone: </strong>(405) 439-6389</label>
+				<br>
+				<label><strong>Address: </strong>4221 N Knollridge Rd, A4, Peoria, IL 61614</label>
+			</div>
+		</article>
+		<!-- availability -->
+		<article>
+			<h2>A</h2>
+			<h3>vailability</h3>
+			<hr>
+			<div>
+				<label>Currently employed</label>
+				<br>
+				<label>at Tequila's Bar & Grill</label>
+				<!--<br>																												<label>Available for employment </label>
+																																																																														<label id="availability">2 weeks from now</label>
+																																																																														<br>
+																																																																														<label>Monday-Sunday 5am-7pm</label>
+																																																																														-->
+				<br>
+				<label>Not able to relocate</label>
+			</div>
+		</article>
+		<!-- details -->
+		<article>
+			<h2>D</h2>
+			<h3>etails</h3>
+			<hr>
+			<div>
+				<label>I am a</label>
+				<label id="pageAge"> </label>
+				<label>father of two, with a strong work ethic and a passion for progress.</label>
+				<br>
+				<ul>
+					<li>Valid license</li>
+					<li>No felonies</li>
+					<li>No handicaps</li>
+					<li>US resident</li>
+					<li>Authorized to work in the US</li>
+				</ul>
+			</div>
+		</article>
+	</section>
+</body>
+</html>
