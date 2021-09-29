@@ -110,7 +110,7 @@ window.onload = function () {
 window.onscroll = setButton();
 
 //themes button
-function theme() { window.open("themes.html", "_self"); }
+function theme() { window.open("/themes.html", "_self"); }
 
 //automatically hide/reveal menu button
 function setButton() {
