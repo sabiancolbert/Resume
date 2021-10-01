@@ -1,9 +1,9 @@
 var mouseA = false;
 var buttonOut = false;
 
-window.onload = function () {
+function onload() {
 	//set age for summary page
-consile.log("load");
+	consile.log("loaded");
 	{
 		var date = new Date();
 		var age = date.getFullYear() - 2001;
