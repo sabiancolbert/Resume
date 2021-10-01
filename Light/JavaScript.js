@@ -92,7 +92,6 @@ function onload() {
 		}
 	}
 }
-window.onscroll = setButton();
 
 //themes button
 function theme() {
