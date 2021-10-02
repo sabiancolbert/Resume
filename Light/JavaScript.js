@@ -9,10 +9,9 @@ function onload() {
 		if (date.getMonth() > 4 && date.getDate() > 1) {
 			age++;
 		}
-		document.getElementById("head").innerHTML = age;
-		if (pageAge.innerText == " ") {
+		if (document.getElementById("pageAge").innerText == " ") {
 			console.log(age);
-			pageAge.innerText = age++ + " year old ";
+			document.getElementById("pageAge").innerText = age++ + " year old ";
 		} else {
 			//incase page isn't summary page
 			console.log("ONLOAD age did not work (likely not summary page)");
