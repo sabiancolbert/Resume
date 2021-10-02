@@ -3,7 +3,7 @@ var buttonOut = false;
 
 function onload() {
 	//set age for summary page
-	consile.log("loaded");
+	console.log("loaded");
 	{
 		var date = new Date();
 		var age = date.getFullYear() - 2001;
