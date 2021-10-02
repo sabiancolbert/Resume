@@ -3,13 +3,13 @@ var buttonOut = false;
 
 function onload() {
 	//set age for summary page
-	console.log("loaded");
 	{
 		var date = new Date();
 		var age = date.getFullYear() - 2001;
 		if (date.getMonth() > 4 && date.getDate() > 1) {
 			age++;
 		}
+		document.getElementById("head").innerHTML = age;
 		if (pageAge.innerText == " ") {
 			console.log(age);
 			pageAge.innerText = age++ + " year old ";
