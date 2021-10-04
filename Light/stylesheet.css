@@ -131,7 +131,7 @@ hr {
 	position: fixed;
 	width: 40%;
 
-
+background-color:yellow;
 	z-index: 1;
 	margin: 8px;
 	top: 0;
@@ -140,9 +140,11 @@ hr {
 
 .square2 {
 	margin-top: 100%;
+	background-color:orange;
 }
 
 .img {
+	background-color:red;
 	position: absolute;
 	top: 0;
 	bottom: 0;
