@@ -1,8 +1,8 @@
-body {
+/*body {
 	margin: 0;
 	text-align: center;
-	/*	background-color: #eeeeff;
-*/
+		background-color: #eeeeff;
+
 }
 
 nav {
@@ -68,10 +68,10 @@ article div {
 	padding-right: 50px;
 }
 
-/*div {
+div {
 	left: 50px;
 	position: relative;
-}*/
+}
 
 h1 {
 	top: -57px;
@@ -124,6 +124,7 @@ hr {
 	border: none;
 	position: relative;
 }
+*/
 
 .square1 {
 	display: inline-block;
