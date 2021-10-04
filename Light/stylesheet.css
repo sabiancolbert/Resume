@@ -148,7 +148,7 @@ hr {
 	bottom: 0;
 	left: 0;
 	right: 0;
-object-fit:fill;
+	background-size: cover;
 	border-radius: 100%;
 	border: 20px #eeeeff;
 }
