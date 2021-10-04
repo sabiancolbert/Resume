@@ -1,4 +1,4 @@
-/*body {
+body {
 	margin: 0;
 	text-align: center;
 	background-color: #eeeeff;
@@ -124,7 +124,7 @@ hr {
 	border: none;
 	position: relative;
 }
-*/
+
 
 .square1 {
 	display: inline-block;
