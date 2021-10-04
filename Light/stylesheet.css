@@ -134,10 +134,12 @@ hr {
 	margin: 8px;
 	border-radius: 100%;
 	border: 20px #eeeeff;
+	background-color: red;
 }
 
 .square2 {
 	margin-top: 100%;
+	background-color: red;
 }
 
 .square3 {
@@ -146,5 +148,5 @@ hr {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color:red;
+	background-color: red;
 }
