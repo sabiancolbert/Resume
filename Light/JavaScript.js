@@ -3,7 +3,7 @@ var buttonOut = false;
 
 console.log("works");
 
-window.onload = function() {
+function onload() {
 	//set age for summary page
 	{
 
