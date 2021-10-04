@@ -129,7 +129,7 @@ hr {
 .square1 {
 	display: inline-block;
 	position: relative;
-	width: 10%;
+	width: 15%;
 
 
 	z-index: 1;
@@ -144,7 +144,7 @@ hr {
 	background-color: red;
 }
 
-.square3 {
+.img {
 	position: absolute;
 	top: 0;
 	bottom: 0;
