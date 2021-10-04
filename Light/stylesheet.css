@@ -1,11 +1,10 @@
-body {
+/*body {
 	margin: 0;
 	text-align: center;
-	/*background-color: #eeeeff;
-*/
-	background-color: red;
+	background-color: #eeeeff;
+
 }
-/*
+
 nav {
 	z-index: 1;
 	height: 400px;
