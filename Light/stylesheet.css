@@ -128,7 +128,7 @@ hr {
 
 .square1 {
 	display: inline-block;
-	position: relative;
+	position: fixed;
 	width: 15%;
 
 
@@ -136,8 +136,8 @@ hr {
 	margin: 8px;
 	border-radius: 100%;
 	border: 20px #eeeeff;
-	top:0;
-	left:0;
+	top: 0;
+	left: 0;
 }
 
 .square2 {
