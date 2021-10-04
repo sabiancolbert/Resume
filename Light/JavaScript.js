@@ -1,9 +1,10 @@
 var mouseA = false;
 var buttonOut = false;
 
-function onload() {
+window.onload = function() {
 	//set age for summary page
 	{
+		console.log("works");
 		var date = new Date();
 		var age = date.getFullYear() - 2001;
 		if (date.getMonth() > 4 && date.getDate() > 1) {
