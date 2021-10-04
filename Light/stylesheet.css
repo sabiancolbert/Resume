@@ -129,6 +129,7 @@ hr {
 	position: relative;
 	width: 5%;
 
+
 	z-index: 1;
 	margin: 8px;
 	border-radius: 100%;
@@ -136,8 +137,7 @@ hr {
 }
 
 .square2 {
-	margin-top: 75%;
-	/* 4:3 aspect ratio */
+	margin-top: 100%;
 }
 
 img {
