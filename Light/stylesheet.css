@@ -145,6 +145,7 @@ hr {
 }
 
 .img {
+	object-fit:fill;
 	position: absolute;
 	top: 0;
 	bottom: 0;
