@@ -134,8 +134,6 @@ hr {
 
 	z-index: 1;
 	margin: 8px;
-	border-radius: 100%;
-	border: 20px #eeeeff;
 	top: 0;
 	left: 0;
 }
@@ -145,10 +143,12 @@ hr {
 }
 
 .img {
-	object-fit:fill;
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
+	
+	border-radius: 100%;
+	border: 20px #eeeeff;
 }
