@@ -39,16 +39,7 @@ header {
 	position: absolute;
 }
 
-img {
-	z-index: 1;
-	top: 0;
-	right: 0;
-	margin: 8px;
-	width: 92px;
-	border-radius: 100%;
-	border: 20px #eeeeff;
-	position: absolute;
-}
+
 
 img:hover {
 	transform: rotate(-20deg);
@@ -134,21 +125,26 @@ hr {
 }
 
 .square1 {
-  display: inline-block;
-  position: relative;
-  width: 10%;
+	display: inline-block;
+	position: relative;
+	width: 5%;
+	
+	z-index: 1;
+	margin: 8px;
+	width: 92px;
+	border-radius: 100%;
+	border: 20px #eeeeff;
 }
 
 .square2 {
-  margin-top: 75%;
-  /* 4:3 aspect ratio */
+	margin-top: 75%;
+	/* 4:3 aspect ratio */
 }
 
 .square3 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: silver/* show me! */
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
