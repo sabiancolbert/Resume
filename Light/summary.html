@@ -10,7 +10,14 @@
 </head>
 
 <body onscroll="setButton()" onload="onload()">
-	
+<div class="square1">
+			<div class="square2">
+				<div class="square3">
+					<img alt="Menu" id="menuButton" onmouseup="toggleMenu(true)" onmouseover="revealButton()" onmouseout="hideButton()" src="Resources/menu.png">
+					<img alt="Themes" id="theme" onmouseup="theme()" src="Resources/theme.png">
+				</div>
+			</div>
+		</div>
 	<!-- menu -->
 	<nav id="nav" hidden="true">
 		<div>
@@ -26,21 +33,21 @@
 			<a href="/Portfolio/portfolio.html">Portfolio</a>
 		</div>
 	</nav>
-	<!-- header -->
+	<!-- header 
 	<header onmouseover="toggleMenu(false)">
 		<h1 id="head">Sabian Colbert</h1>
 		<div class="square1">
 			<div class="square2">
-			<div class="square3">
-				<img alt="Menu" id="menuButton" onmouseup="toggleMenu(true)" onmouseover="revealButton()" onmouseout="hideButton()" src="Resources/menu.png">
-				<img alt="Themes" id="theme" onmouseup="theme()" src="Resources/theme.png">
+				<div class="square3">
+					<img alt="Menu" id="menuButton" onmouseup="toggleMenu(true)" onmouseover="revealButton()" onmouseout="hideButton()" src="Resources/menu.png">
+					<img alt="Themes" id="theme" onmouseup="theme()" src="Resources/theme.png">
+				</div>
 			</div>
 		</div>
-		</div>
 	</header>
-	<!-- main page -->
+	<!-- main page 
 	<section onmouseover="toggleMenu(false)">
-		<!-- info -->
+		<!-- info 
 		<article>
 			<h2>I</h2>
 			<h3>nfo</h3>
@@ -57,7 +64,7 @@
 				<label><strong>Address: </strong>4221 N Knollridge Rd, A4, Peoria, IL 61614</label>
 			</div>
 		</article>
-		<!-- availability -->
+		<!-- availability 
 		<article>
 			<h2>A</h2>
 			<h3>vailability</h3>
@@ -66,16 +73,16 @@
 				<label>Currently employed</label>
 				<br>
 				<label>at Tequila's Bar & Grill</label>
-				<!--<br>																												<label>Available for employment </label>
-																																																																																																																																																																																														<label id="availability">2 weeks from now</label>
-																																																																																																																																																																																														<br>
-																																																																																																																																																																																														<label>Monday-Sunday 5am-7pm</label>
-																																																																																																																																																																																														-->
+				<!--<br>
+				<label>Available for employment </label>
+<label id="availability">2 weeks from now</label>
+<br>
+<label>Monday-Sunday 5am-7pm</label>
 				<br>
 				<label>Not able to relocate</label>
 			</div>
 		</article>
-		<!-- details -->
+		<!-- details 
 		<article>
 			<h2>D</h2>
 			<h3>etails</h3>
@@ -95,5 +102,6 @@
 			</div>
 		</article>
 	</section>
+	
 </body>
 </html>
