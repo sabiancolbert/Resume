@@ -125,7 +125,7 @@ hr {
 	position: relative;
 }
 img {
-	position: absolute;
+	position: fixed;
 	border-radius: 100%;
 	border: 20px #eeeeff;
 	width: 20%;
