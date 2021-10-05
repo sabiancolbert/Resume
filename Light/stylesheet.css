@@ -41,11 +41,12 @@ header {
 }
 
 img {
-	position: fixed;
+	position: absolute;
 	border-radius: 100%;
 	border: 20px #eeeeff;
 	width: 20%;
 	top: 0;
+	right:0;
 	margin: 8px;
 }
 
@@ -55,6 +56,7 @@ img:hover {
 
 #menuButton {
 	left: 0;
+	position: fixed;
 }
 
 section {
