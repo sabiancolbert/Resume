@@ -143,14 +143,16 @@ hr {
 	background-color: orange;
 }
 
-.img {
+.square3 {
 	background-color: red;
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-size: cover;
+	
+}
+img{background-size: cover;
 	border-radius: 100%;
 	border: 20px #eeeeff;
 }
