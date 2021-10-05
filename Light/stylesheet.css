@@ -153,6 +153,7 @@ hr {
 
 }
 img {
+	position: relative;
 	background-size: cover;
 	border-radius: 100%;
 	border: 20px #eeeeff;
