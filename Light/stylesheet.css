@@ -124,37 +124,10 @@ hr {
 	border: none;
 	position: relative;
 }
-
-
-.square1 {
-	display: inline-block;
-	position: fixed;
-	width: 10%;
-
-	background-color: yellow;
-	z-index: 1;
-	margin: 8px;
-	top: 0;
-	left: 0;
-}
-
-.square2 {
-	margin-top: 50%;
-	background-color: orange;
-}
-
-.square3 {
-	background-color: red;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-
-}
 img {
 	position: relative;
 	background-size: cover;
 	border-radius: 100%;
 	border: 20px #eeeeff;
+	width=10%
 }
