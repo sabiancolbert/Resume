@@ -125,9 +125,10 @@ hr {
 	position: relative;
 }
 img {
-	position: relative;
-	background-size: cover;
+	position: absolute;
 	border-radius: 100%;
 	border: 20px #eeeeff;
 	width: 20%;
+	top: 0;
+	left: 0;
 }
