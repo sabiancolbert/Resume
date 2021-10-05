@@ -40,7 +40,14 @@ header {
 	position: absolute;
 }
 
-
+img {
+	position: fixed;
+	border-radius: 100%;
+	border: 20px #eeeeff;
+	width: 20%;
+	top: 0;
+	margin: 8px;
+}
 
 img:hover {
 	transform: rotate(-20deg);
@@ -123,12 +130,4 @@ hr {
 	background-color: #B4B4B4;
 	border: none;
 	position: relative;
-}
-img {
-	position: fixed;
-	border-radius: 100%;
-	border: 20px #eeeeff;
-	width: 20%;
-	top: 0;
-	margin: 8px;
 }
