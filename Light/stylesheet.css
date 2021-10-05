@@ -129,7 +129,7 @@ hr {
 .square1 {
 	display: inline-block;
 	position: fixed;
-	width: 40%;
+	width: 10%;
 
 	background-color: yellow;
 	z-index: 1;
