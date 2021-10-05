@@ -97,6 +97,7 @@ function onload() {
 
 //themes button
 function theme() {
+	console.log("theme");
 	window.open("/themes.html", "_self");
 }
 
