@@ -82,7 +82,7 @@ div {
 }
 
 h1 {
-	text-align:top;
+vertical-align: text-top;
 	font-size: 40px;
 	color: white;
 	position: relative;
