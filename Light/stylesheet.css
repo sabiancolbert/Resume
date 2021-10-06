@@ -6,8 +6,9 @@ body {
 
 nav {
 	z-index: 1;
-	height: 86px;
+	height: 400px;
 	width: 300px;
+	margin:8px;
 	border-radius: 46px;
 	border: 5px solid #5050ff;
 	background-color: #eeeeff;
@@ -31,7 +32,7 @@ nav a:hover {
 }
 
 header {
-	height: 108px;
+	height: 86px;
 	width: 100%;
 	text-align: center;
 	background-color: #5050ff;
