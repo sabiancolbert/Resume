@@ -8,7 +8,7 @@ nav {
 	z-index: 1;
 	height: 400px;
 	width: 300px;
-	margin:8px;
+	margin: 8px;
 	border-radius: 46px;
 	border: 5px solid #5050ff;
 	background-color: #eeeeff;
@@ -83,7 +83,7 @@ div {
 
 h1 {
 	top: -57px;
-	font-size: 90px;
+	font-size: 40px;
 	color: white;
 	position: relative;
 }
