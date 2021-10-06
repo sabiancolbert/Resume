@@ -35,7 +35,7 @@ header {
 	height: 86px;
 	width: 100%;
 	text-align: center;
-	vertical-align: text-top;
+	vertical-align:middle;
 	background-color: #5050ff;
 	position: absolute;
 }
@@ -83,7 +83,6 @@ div {
 }
 
 h1 {
-	top: -18px;
 	font-size: 30px;
 	color: white;
 	position: relative;
