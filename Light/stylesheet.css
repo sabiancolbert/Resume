@@ -2,14 +2,12 @@ body {
 	margin: 0;
 	text-align: center;
 	background-color: #eeeeff;
-
 }
 
 nav {
 	z-index: 1;
 	height: 86px;
 	width: 300px;
-	margin: 8px;
 	border-radius: 46px;
 	border: 5px solid #5050ff;
 	background-color: #eeeeff;
