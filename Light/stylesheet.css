@@ -44,11 +44,11 @@ header {
 }
 
 header div {
-	position:absolute;
-	left:86px;
-	right:86px;
-	overflow:hidden
-line-height:20px;
+	position: absolute;
+	left: 86px;
+	right: 86px;
+	overflow: hidden;
+	line-height: 20px;
 }
 
 img {
