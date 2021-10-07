@@ -42,7 +42,7 @@ header {
 	background-color: #5050ff;
 	position: absolute;
 	line-height: 1em;
-	font-size: 30px;
+	font-size: 35px;
 }
 
 img {
@@ -88,7 +88,7 @@ div {
 }
 
 h1 {
-	font-size: 30px;
+	font-size: 35px;
 	top: -9px;
 	color: white;
 	position: relative;
