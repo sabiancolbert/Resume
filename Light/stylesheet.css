@@ -36,6 +36,7 @@ nav a:hover {
 }
 
 header {
+	overflow: hidden;
 	height: 86px;
 	width: 100%;
 	vertical-align: middle;
@@ -86,7 +87,6 @@ div {
 }
 
 h1 {
-	overflow: hidden;
 	font-size: 55px;
 	top: -9px;
 	color: white;
