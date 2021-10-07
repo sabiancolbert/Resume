@@ -41,7 +41,8 @@ header {
 	vertical-align: middle;
 	background-color: #5050ff;
 	position: absolute;
-	line-height:0;
+	line-height: 1em;
+	font-size: 30px;
 }
 
 img {
@@ -88,7 +89,6 @@ div {
 
 h1 {
 	top: -9px;
-	font-size: 30px;
 	color: white;
 	position: relative;
 }
