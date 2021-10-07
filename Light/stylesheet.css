@@ -43,6 +43,14 @@ header {
 	position: absolute;
 }
 
+header div {
+	position:absolute;
+	left:86px;
+	right:86px;
+	overflow:hidden
+line-height:20px;
+}
+
 img {
 	position: absolute;
 	border-radius: 100%;
