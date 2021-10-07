@@ -39,7 +39,7 @@ header {
 	overflow: hidden;
 	height: 86px;
 	width: 100%;
-	vertical-align: middle;
+	vertical-align: central;
 	background-color: #5050ff;
 	position: absolute;
 }
