@@ -41,8 +41,6 @@ header {
 	vertical-align: middle;
 	background-color: #5050ff;
 	position: absolute;
-	line-height: 1em;
-	font-size: 35px;
 }
 
 img {
@@ -88,7 +86,7 @@ div {
 }
 
 h1 {
-	overflow:hidden;
+	overflow: hidden;
 	font-size: 35px;
 	top: -9px;
 	color: white;
