@@ -39,9 +39,9 @@ header {
 	overflow: hidden;
 	height: 86px;
 	width: 100%;
-	vertical-align: central;
 	background-color: #5050ff;
 	position: absolute;
+	vertical-align:text-top;
 }
 
 img {
@@ -76,7 +76,6 @@ article {
 }
 
 article div {
-	overflow: wrap;
 	text-align: center;
 	padding-right: 50px;
 }
@@ -88,7 +87,7 @@ div {
 
 h1 {
 	font-size: 55px;
-	top: -9px;
+	
 	color: white;
 	position: relative;
 }
