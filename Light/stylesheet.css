@@ -47,7 +47,8 @@ header div {
 	position: absolute;
 	left: 86px;
 	right: 86px;
-	overflow: hidden;
+	overflow:hidden;
+	overflow-wrap: break-word;
 	line-height: 5em;
 }
 
