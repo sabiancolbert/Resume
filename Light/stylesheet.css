@@ -1,6 +1,7 @@
 html, body {
 	height: 100%;
 	width: 100%
+	margin:0;
 }
 body {
 	margin: 0;
@@ -47,7 +48,8 @@ header div {
 	position: absolute;
 	left: 86px;
 	right: 86px;
-	top:10px;
+	top: 10px;
+	margin:0;
 	overflow: hidden;
 	overflow-wrap: break-word;
 }
