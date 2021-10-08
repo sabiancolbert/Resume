@@ -51,8 +51,7 @@ header div {
 	left: 78px;
 	right: 78px;
 	border: 1px solid yellow;
-	line-height: 0;
-	vertical-align: middle;
+	line-height: .5em;
 }
 
 img {
