@@ -50,9 +50,6 @@ header div {
 	overflow: hidden;
 	line-height: 10em;
 	overflow-wrap: break-word;
-	word-break: break-all;
-	word-wrap: break-word;
-
 }
 
 img {
