@@ -94,7 +94,9 @@ function onload() {
 	}
 }
 
-window.onresize = () => { document.getElementById("name").innerHTML = counter; };
+function onresize() {
+	document.getElementById("name").innerHTML = counter;
+}
 
 //themes button
 function theme() {
