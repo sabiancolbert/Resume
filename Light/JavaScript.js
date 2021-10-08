@@ -1,7 +1,6 @@
 var mouseA = false;
 var buttonOut = false;
-
-console.log("works");
+var counter = 0;
 
 function onload() {
 	//set age for summary page
@@ -94,6 +93,8 @@ function onload() {
 		}
 	}
 }
+
+window.onresize = () => { document.getElementById("name").innerHTML = counter; };
 
 //themes button
 function theme() {
