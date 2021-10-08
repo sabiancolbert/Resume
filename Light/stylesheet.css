@@ -45,10 +45,11 @@ header {
 }
 
 header div {
+	height:86px;
 	position: absolute;
 	left: 86px;
 	right: 86px;
-	bottom:8px;
+	bottom: 8px;
 	overflow: hidden;
 	overflow-wrap: break-word;
 }
