@@ -11,8 +11,12 @@ function onresize() {
 }
 
 function onload() {
+	//size name
+onresize();
+	
 	//set age for summary page
 	{
+
 
 		var date = new Date();
 		var age = date.getFullYear() - 2001;
