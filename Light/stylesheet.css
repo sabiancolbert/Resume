@@ -48,8 +48,10 @@ header div {
 	position: absolute;
 	height: 70px;
 	margin: 8px, 0;
+	top: 8px;
 	left: 86px;
 	right: 86px;
+	
 	border: 1px solid red;
 }
 
