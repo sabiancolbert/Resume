@@ -50,11 +50,10 @@ header div {
 	margin: 8px;
 	left: 78px;
 	right: 78px;
-	border: 1px solid yellow;
+	border: 1px solid red;
 	line-height: 3em;
 	white-space: nowrap;
 	overflow: hidden;
-	text-overflow:hidden;
 }
 
 img {
