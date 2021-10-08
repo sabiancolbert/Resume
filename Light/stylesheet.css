@@ -51,6 +51,7 @@ header div {
 	left: 78px;
 	right: 78px;
 	border: 1px solid blue;
+	line-height:0;
 	vertical-align: middle;
 }
 
