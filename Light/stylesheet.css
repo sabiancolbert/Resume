@@ -53,7 +53,8 @@ header div {
 	border: 1px solid yellow;
 	line-height: 3em;
 	white-space: nowrap;
-	overflow:hidden;
+	overflow: hidden;
+	text-overflow:hidden;
 }
 
 img {
