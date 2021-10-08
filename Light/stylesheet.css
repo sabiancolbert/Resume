@@ -51,6 +51,11 @@ header div {
 	left: 78px;
 	right: 78px;
 	border: 1px solid red;
+	vertical-align:middle;
+}
+
+#name {
+	position:relative;
 }
 
 img {
