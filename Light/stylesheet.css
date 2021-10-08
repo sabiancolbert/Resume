@@ -50,7 +50,6 @@ header div {
 	margin: 8px, 0;
 	left: 86px;
 	right: 86px;
-	overflow: hidden;
 	border: 1px solid red;
 	overflow-wrap: break-word;
 }
