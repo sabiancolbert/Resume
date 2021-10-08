@@ -1,10 +1,13 @@
 var mouseA = false;
 var buttonOut = false;
-var counter = 0;
 
 function onresize() {
-	counter++;
-	document.getElementById("name").innerHTML = counter;
+	if(){
+	document.getElementById("name").innerHTML = "Sabian";
+}
+else{
+	document.getElementById("name").innerHTML = "Sabian Colbert";
+}
 }
 
 function onload() {
