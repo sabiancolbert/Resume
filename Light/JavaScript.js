@@ -2,12 +2,11 @@ var mouseA = false;
 var buttonOut = false;
 
 function onresize() {
-	if(){
-	document.getElementById("name").innerHTML = "Sabian";
-}
-else{
-	document.getElementById("name").innerHTML = "Sabian Colbert";
-}
+	if (document.getElementById("name").width > 1) {
+		document.getElementById("name").innerHTML = "Sabian";
+	} else {
+		document.getElementById("name").innerHTML = "Sabian Colbert";
+	}
 }
 
 function onload() {
