@@ -52,7 +52,7 @@ header div {
 	right: 78px;
 	border: 1px solid yellow;
 	line-height: 3em;
-	white-space: pre;
+	white-space: nowrap;
 }
 
 img {
