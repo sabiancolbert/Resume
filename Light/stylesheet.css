@@ -49,6 +49,7 @@ header div {
 	right: 86px;
 	overflow: hidden;
 	overflow-wrap: break-word;
+	word-break: break-all;
 
 }
 
