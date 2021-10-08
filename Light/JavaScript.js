@@ -2,6 +2,11 @@ var mouseA = false;
 var buttonOut = false;
 var counter = 0;
 
+function onresize() {
+	counter++;
+	document.getElementById("name").innerHTML = counter;
+}
+
 function onload() {
 	//set age for summary page
 	{
@@ -92,10 +97,6 @@ function onload() {
 			console.log("ONLOAD availability did not work (likely not summary page)");
 		}
 	}
-}
-
-function onresize() {
-	document.getElementById("name").innerHTML = counter;
 }
 
 //themes button
