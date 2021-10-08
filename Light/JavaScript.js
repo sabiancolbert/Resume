@@ -2,7 +2,7 @@ var mouseA = false;
 var buttonOut = false;
 
 function onresize() {
-	document.getElementById("test").innerHTML = window.innerWidth;
+	document.getElementById("test").innerHTML = window.innerWidth +"";
 	if (window.innerWidth < 700) {
 		document.getElementById("name").innerHTML = "Sabian";
 	} else {
