@@ -2,7 +2,7 @@ var mouseA = false;
 var buttonOut = false;
 
 function onresize() {
-	console.log("RESIZE " + document.getElementById("name").width);
+	console.log("RESIZE " + window.innerWidth);
 	if (document.getElementById("name").width.substring(0, (window.innerWidth.length - 2)) > 1) {
 		document.getElementById("name").innerHTML = "Sabian";
 	} else {
