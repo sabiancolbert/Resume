@@ -3,7 +3,7 @@ var buttonOut = false;
 
 function onresize() {
 	console.log("RESIZE " + window.innerWidth);
-	if (window.innerWidth > 400) {
+	if (window.innerWidth < 400) {
 		document.getElementById("name").innerHTML = "Sabian";
 	} else {
 		document.getElementById("name").innerHTML = "Sabian Colbert";
