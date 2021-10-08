@@ -51,11 +51,12 @@ header div {
 	left: 78px;
 	right: 78px;
 	border: 1px solid red;
-	vertical-align: central;
+	
 }
 
 #name {
 	position: relative;
+	vertical-align: middle;
 }
 
 img {
