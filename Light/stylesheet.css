@@ -47,8 +47,9 @@ header {
 header div {
 	position: absolute;
 	height: 70px;
-	margin: 8px, 86px;
-
+	margin: 8px;
+left:78px;
+right:78px;
 	border: 1px solid red;
 }
 
