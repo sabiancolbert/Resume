@@ -46,8 +46,8 @@ header {
 
 header div {
 	position: absolute;
-		height: 70px;
-		margin:8px, 0, 8px;
+	height: 70px;
+	margin: 8px, 0;
 	left: 86px;
 	right: 86px;
 	overflow: hidden;
