@@ -18,7 +18,7 @@ nav {
 	border: 5px solid #5050ff;
 	background-color: #eeeeff;
 	position: fixed;
-	line-height:3em;
+	line-height: 3em;
 }
 
 nav div {
@@ -48,7 +48,7 @@ header {
 header div {
 	position: absolute;
 	height: 70px;
-	margin: 16px;
+	margin: 6px, 0, 10px, 0;
 	left: 70px;
 	right: 70px;
 	line-height: 3em;
