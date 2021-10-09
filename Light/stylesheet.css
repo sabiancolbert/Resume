@@ -19,11 +19,10 @@ header {
 /* name box */
 header div {
 	position: absolute;
+	top:10px;
 	left: 86px;
 	right: 86px;
-	
 	height: 1px;
-	vertical-align: bottom;
 	line-height: 0;
 }
 
