@@ -58,6 +58,7 @@ img:hover {
 
 /* menu button */
 #menuButton {
+	z-index:2;
 	left: 0;
 	position: fixed;
 }
@@ -81,7 +82,8 @@ nav div {
 }
 
 /* menu items */
-nav a {/* try css, if cant then use divs*/
+nav a {
+	/* try css, if cant then use divs*/
 	color: black;
 	font-size: 40px;
 }
