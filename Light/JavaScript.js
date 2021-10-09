@@ -16,28 +16,19 @@ window.onload = () => {
 	window.onresize();
 
 	//set age for summary page
-	{
-
-
+	if (document.getElementById("pageAge").innerText == " "){
 		var date = new Date();
 		var age = date.getFullYear() - 2001;
 		if (date.getMonth() > 4 && date.getDate() > 1) {
 			age++;
 		}
-		if (document.getElementById("pageAge").innerText == " ") {
-			console.log(age);
 			document.getElementById("pageAge").innerText = age++ + " year old ";
-		} else {
-			//incase page isn't summary page
-			console.log("ONLOAD age did not work (likely not summary page)");
-		}
 	}
 
 	//set availability for summary page
-	{
+	if(document.getElementById.innerHTML == "2 weeks from now"){
 		var month = date.getMonth();
 		var x = date.getDate() + 14;
-		try {
 			//set variables
 			{
 				if (x >= 29 && date.getMonth() == 1) {
@@ -99,11 +90,6 @@ window.onload = () => {
 			}
 			console.log("ONLOAD x = " + x);
 			availability.innerText = x;
-		}
-		catch {
-			//incase page isn't summary page
-			console.log("ONLOAD availability did not work (likely not summary page)");
-		}
 	}
 }
 
