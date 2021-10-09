@@ -55,14 +55,14 @@ header div {
 	right: 86px;
 	vertical-align: bottom;
 	line-height: 0;
-	border: 1px solid blue;
+	border: 1px solid red;
 }
 
 /* useless */
 @-moz-document url-prefix() {
-  h1 {
-    bottom:3em;
-  }
+	h1 {
+		bottom: 3em;
+	}
 }
 
 img {
