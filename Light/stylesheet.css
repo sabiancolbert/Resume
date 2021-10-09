@@ -53,7 +53,7 @@ header div {
 	margin-bottom: 9px;
 	left: 86px;
 	right: 86px;
-	line-height: 3em;
+	line-height: 0;
 	border: 1px solid red;
 }
 
