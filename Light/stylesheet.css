@@ -9,29 +9,33 @@ body {
 	background-color: #eeeeff;
 }
 
+/* menu */
 nav {
 	z-index: 1;
-	height: 400px;
-	width: 300px;
-	margin: 8px;
-	border-radius: 46px;
-	border: 5px solid #5050ff;
-	background-color: #eeeeff;
 	position: fixed;
+	margin: 8px;
+	border: 5px solid #5050ff;
+	border-radius: 46px;
+	width: 300px;
+	height: 400px;
+	background-color: #eeeeff;
 	line-height: 3em;
 }
 
+/* menu items box */
 nav div {
 	left: 0;
-	font-size: 75px;
 	text-align: center;
+	font-size: 75px;
 }
 
+/* menu items */
 nav a {
 	font-size: 40px;
 	color: black;
 }
 
+/* menu item hover */
 nav a:hover {
 	font-size: 43px;
 	color: #777777;
@@ -39,23 +43,22 @@ nav a:hover {
 
 /* header */
 header {
-	overflow: hidden;
-	height: 86px;
-	width: 100%;
-	background-color: #5050ff;
 	position: absolute;
+	width: 100%;
+	height: 86px;
+	background-color: #5050ff;
+	overflow: hidden;
 }
 
 /* name box */
 header div {
 	position: absolute;
-	height: 1px;
-	margin-top: 2.8em;
 	left: 86px;
 	right: 86px;
+	margin-top: 2.8em;
+	height: 1px;
 	vertical-align: bottom;
 	line-height: 0;
-	border: 1px solid yellow;
 }
 
 /* useless */
