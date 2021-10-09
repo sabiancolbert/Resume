@@ -35,7 +35,7 @@ h1 {
 /* useless */
 @-moz-document url-prefix() {
 	header div {
-		bottom: 3em;
+		top: -10px;
 	}
 }
 
