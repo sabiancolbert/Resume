@@ -18,6 +18,7 @@ nav {
 	border: 5px solid #5050ff;
 	background-color: #eeeeff;
 	position: fixed;
+	line-height:3em;
 }
 
 nav div {
@@ -50,7 +51,7 @@ header div {
 	margin: 8px;
 	left: 78px;
 	right: 78px;
-  line-height:3em;
+	line-height: 3em;
 }
 
 img {
