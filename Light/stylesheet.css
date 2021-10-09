@@ -21,7 +21,7 @@ header div {
 	position: absolute;
 	left: 86px;
 	right: 86px;
-	margin-top: 2.8em;
+	
 	height: 1px;
 	vertical-align: bottom;
 	line-height: 0;
@@ -97,7 +97,7 @@ nav a:hover {
 
 /* article box */
 section {
-		position: absolute;
+	position: absolute;
 	top: 100px;
 	width: 100%;
 }
@@ -122,8 +122,8 @@ h2 {
 	border-radius: 100%;
 	width: 92px;
 	height: 92px;
-background-color: #5050ff;
-text-align: center;
+	background-color: #5050ff;
+	text-align: center;
 	vertical-align: middle;
 	color: white;
 	font-size: 80px;
