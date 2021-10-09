@@ -3,7 +3,9 @@ var buttonOut = false;
 
 window.onscroll = setButton();
 
-document.body.onresize = () => {
+window.onresize = setName();
+
+function setName() {
 	if (window.innerWidth < 650) {
 		document.getElementById("name").innerHTML = "Sabian";
 	} else {
