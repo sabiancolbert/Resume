@@ -48,7 +48,7 @@ header {
 header div {
 	position: absolute;
 	height: 60px;
-	margin: 13px, 0, 13px, 0;
+	margin: 20px, 0, 6px, 0;
 	left: 86px;
 	right: 86px;
 	line-height: 3em;
