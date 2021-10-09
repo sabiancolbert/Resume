@@ -1,12 +1,66 @@
+/* body */
 html, body {
-	height: 100%;
+	margin: 0;
 	width: 100%;
-	margin: 0;
-}
-body {
-	margin: 0;
-	text-align: center;
+	height: 100%;
 	background-color: #eeeeff;
+	text-align: center;
+}
+
+/* header */
+header {
+	position: absolute;
+	width: 100%;
+	height: 86px;
+	background-color: #5050ff;
+	overflow: hidden;
+}
+
+/* name box */
+header div {
+	position: absolute;
+	left: 86px;
+	right: 86px;
+	margin-top: 2.8em;
+	height: 1px;
+	vertical-align: bottom;
+	line-height: 0;
+}
+
+/* name */
+h1 {
+	position: relative;
+	font-size: 55px;
+	color: white;
+}
+
+/* useless */
+@-moz-document url-prefix() {
+	header div {
+		bottom: 2.5em;
+	}
+}
+
+/* header buttons */
+img {
+	position: absolute;
+	border-radius: 100%;
+	border: 20px #eeeeff;
+	width: 70px;
+	top: 0;
+	right: 0;
+	margin: 8px;
+}
+
+/* header buttons tilt */
+img:hover {
+	transform: rotate(-20deg);
+}
+
+/* menu button */
+#menuButton {
+	left: 0;
+	position: fixed;
 }
 
 /* menu */
@@ -35,82 +89,34 @@ nav a {
 	color: black;
 }
 
-/* menu item hover */
+/* menu items hover */
 nav a:hover {
 	font-size: 43px;
 	color: #777777;
 }
 
-/* header */
-header {
-	position: absolute;
-	width: 100%;
-	height: 86px;
-	background-color: #5050ff;
-	overflow: hidden;
-}
-
-/* name box */
-header div {
-	position: absolute;
-	left: 86px;
-	right: 86px;
-	margin-top: 2.8em;
-	height: 1px;
-	vertical-align: bottom;
-	line-height: 0;
-}
-
-/* useless */
-@-moz-document url-prefix() {
-	header div {
-		bottom: 2.5em;
-	}
-}
-
-img {
-	position: absolute;
-	border-radius: 100%;
-	border: 20px #eeeeff;
-	width: 70px;
-	top: 0;
-	right: 0;
-	margin: 8px;
-}
-
-img:hover {
-	transform: rotate(-20deg);
-}
-
-#menuButton {
-	left: 0;
-	position: fixed;
-}
-
+/* article box */
 section {
 	top: 100px;
 	width: 100%;
 	position: absolute;
 }
 
+/* body item boxes */
 article {
 	overflow: hidden;
 	text-align: left;
 	position: relative;
 }
 
+/* body item info boxes */
 article div {
 	text-align: center;
 	padding-right: 50px;
 	left: 50px;
 }
 
-h1 {
-	font-size: 55px;
-	top: -30px;
-	color: white;
-	position: relative;
-}
+
 
 h2 {
 	height: 92px;
