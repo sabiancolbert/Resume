@@ -13,7 +13,7 @@ window.onresize = () => {
 
 window.onload = () => {
 	//size name
-	onresize();
+	window.onresize();
 
 	//set age for summary page
 	{
