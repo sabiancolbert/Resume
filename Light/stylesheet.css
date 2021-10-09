@@ -61,7 +61,7 @@ header div {
 /* useless */
 @-moz-document url-prefix() {
 	header div {
-		bottom: 3em;
+		bottom: 2.5em;
 	}
 }
 
