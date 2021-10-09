@@ -49,12 +49,11 @@ header {
 /* name box */
 header div {
 	position: absolute;
-	height: 60px;
-	margin-top: 17px;
-	margin-bottom: 9px;
+	height: 1px;
+	margin-top: 3em;
 	left: 86px;
 	right: 86px;
-	vertical-align:bottom;
+	vertical-align: bottom;
 	line-height: 0;
 	border: 1px solid green;
 }
