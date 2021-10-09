@@ -108,7 +108,7 @@ function onload() {
 //themes button
 function theme() {
 	console.log("theme");
-	window.open("/themes.html", "_self");
+	window.location.replace("/themes.html");
 }
 
 //automatically hide/reveal menu button
