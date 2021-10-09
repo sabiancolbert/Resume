@@ -48,9 +48,9 @@ header {
 header div {
 	position: absolute;
 	height: 70px;
-	margin: 8px;
-	left: 78px;
-	right: 78px;
+	margin: 16px;
+	left: 70px;
+	right: 70px;
 	line-height: 3em;
 }
 
