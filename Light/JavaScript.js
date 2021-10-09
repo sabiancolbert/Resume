@@ -1,6 +1,8 @@
 var mouseA = false;
 var buttonOut = false;
 
+window.onscroll = setButton();
+
 window.onresize = () => {
 	if (window.innerWidth < 650) {
 		document.getElementById("name").innerHTML = "Sabian";
@@ -9,7 +11,7 @@ window.onresize = () => {
 	}
 }
 
-function onload() {
+window.onload = () => {
 	//size name
 	onresize();
 
