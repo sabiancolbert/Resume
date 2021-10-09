@@ -55,12 +55,12 @@ header div {
 	right: 86px;
 	vertical-align: bottom;
 	line-height: 0;
-	border: 1px solid red;
+	border: 1px solid yellow;
 }
 
 /* useless */
 @-moz-document url-prefix() {
-	h1 {
+	header div {
 		bottom: 3em;
 	}
 }
