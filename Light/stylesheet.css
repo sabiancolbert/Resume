@@ -29,14 +29,14 @@ header div {
 h1 {
 	position: relative;
 	font-size: 55px;
-	color: blue;
+	color: white;
 }
 
 /* useless */
 @-moz-document url-prefix() {
 	header div {
 		top: -5px;
-		vertical-align:bottom;
+		vertical-align: bottom;
 	}
 }
 
