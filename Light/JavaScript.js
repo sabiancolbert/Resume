@@ -1,7 +1,7 @@
 var mouseA = false;
 var buttonOut = false;
 
-function onresize() {
+window.onresize = () => {
 	if (window.innerWidth < 650) {
 		document.getElementById("name").innerHTML = "Sabian";
 	} else {
