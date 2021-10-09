@@ -45,6 +45,7 @@ header {
 	position: absolute;
 }
 
+/* name box */
 header div {
 	position: absolute;
 	height: 60px;
@@ -52,6 +53,7 @@ header div {
 	left: 86px;
 	right: 86px;
 	line-height: 3em;
+	border;1px solid red;
 }
 
 img {
