@@ -58,6 +58,13 @@ header div {
 	border: 1px solid blue;
 }
 
+/* useless */
+@-moz-document url-prefix() {
+  h1 {
+    bottom:3em;
+  }
+}
+
 img {
 	position: absolute;
 	border-radius: 100%;
