@@ -77,8 +77,8 @@ nav {
 
 /* menu items boxes */
 nav div {
-	margin-top: 35px;
-	margin-bottom: 35px;
+	margin-top: 37px;
+	margin-bottom: 37px;
 	left: 0;
 	text-align: center;
 }
@@ -87,13 +87,13 @@ nav div {
 @-moz-document url-prefix() {
 	nav div {
 		margin-top: 30px;
-	margin-bottom: 30px;
+		margin-bottom: 30px;
 	}
 }
 
 /* menu items */
 nav a {
-	color: yellow;
+	color: blue;
 	font-size: 40px;
 }
 
