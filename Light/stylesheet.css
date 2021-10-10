@@ -77,16 +77,23 @@ nav {
 
 /* menu items boxes */
 nav div {
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-top: 35px;
+	margin-bottom: 35px;
 	left: 0;
 	text-align: center;
 }
 
+/* useless */
+@-moz-document url-prefix() {
+	nav div {
+		margin-top: 30px;
+	margin-bottom: 30px;
+	}
+}
+
 /* menu items */
 nav a {
-	/* try css, if cant then use divs*/
-	color: red;
+	color: yellow;
 	font-size: 40px;
 }
 
