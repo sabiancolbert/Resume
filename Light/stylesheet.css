@@ -92,7 +92,7 @@ nav div {
 
 /* menu items */
 nav a {
-	position: relative;
+	position: absolute;
 	color: black;
 	font-size: 40px;
 }
