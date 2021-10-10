@@ -1,10 +1,6 @@
 var mouseA = false;
 var buttonOut = false;
 
-window.onscroll = setButton();
-
-window.onresize = setName();
-
 function setName() {
 	if (window.innerWidth < 650) {
 		document.getElementById("name").innerHTML = "Sabian";
@@ -13,9 +9,9 @@ function setName() {
 	}
 }
 
-window.onload = () => {
+function onload() {
 	//size name
-	window.onresize();
+	setName();
 
 	//set age for summary page
 	if (document.getElementById("pageAge").innerText == " ") {
