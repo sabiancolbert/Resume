@@ -88,10 +88,9 @@ nav div {
 
 /* menu items */
 nav a {
-	height: 100%;
+	padding;30px, 0;
 	color: black;
 	font-size: 40px;
-	vertical-align: middle;
 }
 
 /* menu items hover */
