@@ -88,8 +88,9 @@ nav div {
 
 /* menu items */
 nav a {
+	position:relative;
 	top: 30px;
-	color: green;
+	color: black;
 	font-size: 40px;
 }
 
