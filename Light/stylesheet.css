@@ -36,7 +36,7 @@ h1 {
 @-moz-document url-prefix() {
 	header div {
 		top: -5px;
-		vertical-align: bottom;
+		
 	}
 }
 
