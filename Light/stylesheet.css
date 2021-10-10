@@ -77,7 +77,7 @@ nav {
 
 /* menu items boxes */
 nav div {
-	margin:auto;
+	margin: 30px, 0, 30px, 0;
 	left: 0;
 	text-align: center;
 }
