@@ -36,7 +36,6 @@ h1 {
 @-moz-document url-prefix() {
 	header div {
 		top: .2em;
-
 	}
 }
 
@@ -93,7 +92,7 @@ nav div {
 
 /* menu items */
 nav a {
-	color: blue;
+	color: black;
 	font-size: 40px;
 }
 
