@@ -77,9 +77,9 @@ nav {
 /* menu items boxes */
 nav div {
 	left: 0;
-	height:100px;
+	height: 100px;
 	text-align: center;
-	vertical-align:middle;
+	vertical-align: middle;
 }
 
 /* useless */
@@ -92,6 +92,7 @@ nav div {
 
 /* menu items */
 nav a {
+	position: relative;
 	color: black;
 	font-size: 40px;
 }
