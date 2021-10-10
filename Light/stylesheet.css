@@ -78,7 +78,7 @@ nav {
 /* menu items boxes */
 nav div {
 	margin-top: 30px;
-	margin-bottom:30px;
+	margin-bottom: 30px;
 	left: 0;
 	text-align: center;
 }
@@ -86,7 +86,7 @@ nav div {
 /* menu items */
 nav a {
 	/* try css, if cant then use divs*/
-	color: black;
+	color: red;
 	font-size: 40px;
 }
 
