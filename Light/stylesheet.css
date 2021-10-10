@@ -79,20 +79,18 @@ nav div {
 	left: 0;
 	height: 100px;
 	text-align: center;
-	vertical-align: center;
 }
 
 /* useless */
 @-moz-document url-prefix() {
 	nav div {
-		margin-top: 33px;
-		margin-bottom: 33px;
 	}
 }
 
 /* menu items */
 nav a {
-	position: absolute;
+	margin-top:auto;
+	margin-bottom:auto;
 	color: black;
 	font-size: 40px;
 }
