@@ -29,7 +29,7 @@ header div {
 h1 {
 	position: relative;
 	font-size: 55px;
-	color: yellow;
+	color: white;
 }
 
 /* useless */
@@ -75,8 +75,9 @@ nav {
 	background-color: #eeeeff;
 }
 
-/* menu items box */
+/* menu items boxes */
 nav div {
+	margin:auto;
 	left: 0;
 	text-align: center;
 }
