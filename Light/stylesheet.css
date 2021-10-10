@@ -83,14 +83,12 @@ nav div {
 
 /* useless */
 @-moz-document url-prefix() {
-	nav div {
-	}
+	nav div {}
 }
 
 /* menu items */
 nav a {
-	margin-top:auto;
-	margin-bottom:auto;
+	height:100%;
 	color: black;
 	font-size: 40px;
 }
