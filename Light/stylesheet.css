@@ -15,6 +15,16 @@ header {
 	background-color: #5050ff;
 }
 
+/* hole */
+#hole{
+	position: absolute;
+	margin:8px;
+	width:70px;
+	height:70px;
+	border-radius:70px;
+	background-color:#eeeeff;
+}
+
 /* name box */
 header div {
 	position: absolute;
