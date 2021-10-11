@@ -114,15 +114,14 @@ function setButton() {
 		menuButton.style.position = "fixed";
 	}
 	//scroll is NOT >=27px, allow menu button to reveal
-	else if (mouse){
+	else if (mouse) {
 		menuButton.style.top = "0px";
 		menuButton.style.position = "absolute";
 	}
 	//mobile
-	else{
+	else {
 		menuButton.style.top = "0px";
 		menuButton.style.position = "fixed";
-	}
 }
 
 //reveal menu button
@@ -168,9 +167,11 @@ function hideButton(override = false) {
 //toggle nav menu
 function toggleMenu(open, setbutton = true) {
 	if (open) {
+		console.log("opening");
 		nav.hidden = false;
 		menuButton.hidden = true;
 	} else {
+		console.log("closing");
 		nav.hidden = true;
 		menuButton.hidden = false;
 		if (setbutton) {
