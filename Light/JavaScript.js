@@ -5,7 +5,7 @@ function setName() {
 	if (window.innerWidth < 650) {
 		document.getElementById("name").innerHTML = "Sabian";
 	} else {
-		document.getElementById("name").innerHTML = window.innerWidth + "Sabian Colbert";
+		document.getElementById("name").innerHTML = "Sabian Colbert";
 	}
 }
 
@@ -113,6 +113,14 @@ function setButton() {
 		menuButton.style.position = "absolute";
 	}
 }
+
+document.getElementsByTagName("body").addEventListenerr('mousemove', e => {
+  if (isDrawing === true) {
+    drawLine(context, x, y, e.offsetX, e.offsetY);
+    x = e.offsetX;
+    y = e.offsetY;
+  }
+});
 
 //reveal menu button
 function revealButton(override = false) {
