@@ -127,6 +127,7 @@ article {
 	width: 100%;
 	overflow: hidden;
 	text-align: center;
+	vertical-align:middle;
 }
 
 /* body item info boxes */
