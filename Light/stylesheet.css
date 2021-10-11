@@ -110,6 +110,7 @@ section {
 /* body item boxes */
 article {
 	position: relative;
+	width: 100%;
 	overflow: hidden;
 }
 
