@@ -5,6 +5,7 @@ html, body {
 	height: 100%;
 	background-color: #eeeeff;
 	text-align: center;
+	font-size-adjust:1;
 }
 
 /* header */
