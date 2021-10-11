@@ -110,7 +110,6 @@ section {
 /* body item boxes */
 article {
 	position: relative;
-	text-align: left;
 	overflow: hidden;
 }
 
@@ -166,7 +165,7 @@ ul {
 	left: 34px;
 	margin-right: 110px;
 	font-size: 30px;
-	text-align:left;
+	text-align: left;
 }
 
 /* links */
