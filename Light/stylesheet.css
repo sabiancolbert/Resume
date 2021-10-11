@@ -136,7 +136,7 @@ article div {
 
 /* body item letters */
 h2 {
-	z-index:1;
+	z-index: 1;
 	margin: 16px 8px;
 	border-radius: 100%;
 	width: 92px;
@@ -159,6 +159,7 @@ h3 {
 
 /* body item lines */
 hr {
+	z-index:0;
 	position: relative;
 	top: -33px;
 	left: 50px;
