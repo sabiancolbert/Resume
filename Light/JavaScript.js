@@ -98,7 +98,7 @@ function theme() {
 }
 
 //detect touch vs cursor
-document.getElementById("html").addEventListenerr('mousemove', e => {
+document.getElementById("html").addEventListener('mousemove', e => {
 	mouse = true;
 });
 
