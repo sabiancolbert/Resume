@@ -1,5 +1,4 @@
 var mouse = false;
-var
 var buttonOut = false;
 
 function setName() {
@@ -125,58 +124,58 @@ function setButton() {
 	}
 }
 
-	//reveal menu button
-	function revealButton(override = false) {
-		buttonOut = true;
+//reveal menu button
+function revealButton(override = false) {
+	buttonOut = true;
 
-		//if button needs revealed, then reveal button
-		if (menuButton.style.top == "-54px" || override) {
-			var animation = setInterval(() => {
-				if (menuButton.style.top == "0px" || !buttonOut) {
-					clearInterval(animation);
-					if (!buttonOut) {
-						hideButton(true);
-					}
-				} else {
-					menuButton.style.top = Number(menuButton.style.top.substring(0, menuButton.style.top.length - 2)) + 2 + "px";
+	//if button needs revealed, then reveal button
+	if (menuButton.style.top == "-54px" || override) {
+		var animation = setInterval(() => {
+			if (menuButton.style.top == "0px" || !buttonOut) {
+				clearInterval(animation);
+				if (!buttonOut) {
+					hideButton(true);
 				}
-			},
-				10);
-		}
-	}
-
-	//hide menu button
-	function hideButton(override = false) {
-		buttonOut = false;
-
-		//if button needs hidden, then hide button
-		if ((menuButton.style.top == "0px" || override) && document.documentElement.scrollTop >= 54) {
-			var animation = setInterval(() => {
-				if (menuButton.style.top == "-54px" || buttonOut) {
-					clearInterval(animation);
-					if (buttonOut) {
-						revealButton(true);
-					}
-				} else {
-					menuButton.style.top = Number(menuButton.style.top.substring(0, menuButton.style.top.length - 2)) - 2 + "px";
-				}
-			},
-				10);
-		}
-	}
-
-	//toggle nav menu
-	function toggleMenu(open, setbutton = true) {
-		if (open) {
-			console.log("opening");
-			nav.hidden = false;
-			menuButton.hidden = true;
-		} else {
-			console.log("closing");
-			nav.hidden = true;
-			menuButton.hidden = false;
-			if (setbutton) {
-				setButton();
+			} else {
+				menuButton.style.top = Number(menuButton.style.top.substring(0, menuButton.style.top.length - 2)) + 2 + "px";
 			}
+		},
+			10);
+	}
+}
+
+//hide menu button
+function hideButton(override = false) {
+	buttonOut = false;
+
+	//if button needs hidden, then hide button
+	if ((menuButton.style.top == "0px" || override) && document.documentElement.scrollTop >= 54) {
+		var animation = setInterval(() => {
+			if (menuButton.style.top == "-54px" || buttonOut) {
+				clearInterval(animation);
+				if (buttonOut) {
+					revealButton(true);
+				}
+			} else {
+				menuButton.style.top = Number(menuButton.style.top.substring(0, menuButton.style.top.length - 2)) - 2 + "px";
+			}
+		},
+			10);
+	}
+}
+
+//toggle nav menu
+function toggleMenu(open, setbutton = true) {
+	if (open) {
+		console.log("opening");
+		nav.hidden = false;
+		menuButton.hidden = true;
+	} else {
+		console.log("closing");
+		nav.hidden = true;
+		menuButton.hidden = false;
+		if (setbutton) {
+			setButton();
 		}
 	}
+}
