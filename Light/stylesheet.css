@@ -41,7 +41,7 @@ header div {
 h1 {
 	position: relative;
 	font-size: 55px;
-	color: yellow;
+	color: purple;
 }
 
 /* useless */
@@ -117,7 +117,7 @@ section {
 /* useless */
 @-moz-document url-prefix() {
 	section {
-		font-size-adjust:none;
+		font-size-adjust: none;
 	}
 }
 
