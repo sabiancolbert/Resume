@@ -1,4 +1,5 @@
-var mouseA = false;
+var mouse = false;
+var
 var buttonOut = false;
 
 function setName() {
@@ -97,30 +98,32 @@ function theme() {
 	window.location.replace("/themes.html");
 }
 
+//detect touch vs cursor
+document.getElementsByTagName("html").addEventListenerr('mousemove', e => {
+	mouse = true;
+});
+
 //automatically hide/reveal menu button
 function setButton() {
 	toggleMenu(false, false);
 	//scroll is >=27px, allow menu button to hide (if scroll is < 50 it won't appear to change yet)
-	if (document.documentElement.scrollTop >= 54) {
+	if (mouse && document.documentElement.scrollTop >= 54) {
 		if (!buttonOut) {
 			menuButton.style.top = "-54px";
 		}
 		menuButton.style.position = "fixed";
 	}
 	//scroll is NOT >=27px, allow menu button to reveal
-	else {
+	else if (mouse){
 		menuButton.style.top = "0px";
 		menuButton.style.position = "absolute";
 	}
+	//mobile
+	else{
+		menuButton.style.top = "0px";
+		menuButton.style.position = "fixed";
+	}
 }
-
-document.getElementsByTagName("body").addEventListenerr('mousemove', e => {
-  if (isDrawing === true) {
-    drawLine(context, x, y, e.offsetX, e.offsetY);
-    x = e.offsetX;
-    y = e.offsetY;
-  }
-});
 
 //reveal menu button
 function revealButton(override = false) {
