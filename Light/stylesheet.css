@@ -93,11 +93,6 @@ nav div {
 	text-align: center;
 }
 
-/* useless */
-@-moz-document url-prefix() {
-	nav div {}
-}
-
 /* menu items */
 nav a {
 	position: relative;
@@ -122,7 +117,7 @@ section {
 /* useless */
 @-moz-document url-prefix() {
 	section {
-		font-size-adjust:.2;
+		font-size-adjust:none;
 	}
 }
 
