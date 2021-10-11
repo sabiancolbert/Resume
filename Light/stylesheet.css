@@ -16,13 +16,15 @@ header {
 }
 
 /* hole */
-#hole{
+#hole {
 	position: absolute;
-	margin:8px;
-	width:70px;
-	height:70px;
-	border-radius:70px;
-	background-color:#eeeeff;
+	top:0;
+	left:0;
+	margin: 8px;
+	width: 70px;
+	height: 70px;
+	border-radius: 70px;
+	background-color: #eeeeff;
 }
 
 /* name box */
