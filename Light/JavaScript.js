@@ -14,17 +14,17 @@ function onload() {
 	setName();
 
 	//set age for summary page
-	if (document.getElementById("pageAge").innerText == " ") {
+	if (document.getElementById("pageAge").innerHTML == " ") {
 		var date = new Date();
 		var age = date.getFullYear() - 2001;
 		if (date.getMonth() > 4 && date.getDate() > 1) {
 			age++;
 		}
-		document.getElementById("pageAge").innerText = age++ + " year old ";
+		document.getElementById("pageAge").innerHTML = age++ + " year old ";
 	}
 
 	//set availability for summary page
-	if (document.getElementById.innerHTML == "2 weeks from now") {
+	if (document.getElementById("availability").innerHTML == "2 weeks from now") {
 		var month = date.getMonth();
 		var x = date.getDate() + 14;
 		//set variables
