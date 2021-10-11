@@ -167,11 +167,9 @@ function hideButton(override = false) {
 //toggle nav menu
 function toggleMenu(open, setbutton = true) {
 	if (open) {
-		console.log("opening");
 		nav.hidden = false;
 		menuButton.hidden = true;
 	} else {
-		console.log("closing");
 		nav.hidden = true;
 		menuButton.hidden = false;
 		if (setbutton) {
