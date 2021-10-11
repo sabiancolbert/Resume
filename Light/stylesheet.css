@@ -132,7 +132,7 @@ section {
 /* useless */
 @-moz-document url-prefix() {
 	h3 {
-		top: -.5em;
+		top: -.5ex;
 	}
 }
 
