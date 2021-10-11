@@ -116,8 +116,8 @@ section {
 
 /* useless */
 @-moz-document url-prefix() {
-	section {
-		font-size-adjust: none;
+	h3 {
+		top:-1em
 	}
 }
 
