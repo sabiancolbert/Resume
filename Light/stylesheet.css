@@ -148,7 +148,6 @@ article {
 
 /* body item letters */
 h2 {
-	z-index: 1;
 	position: relative;
 	border-radius: 100%;
 	width: 92px;
@@ -169,8 +168,9 @@ h3 {
 
 /* body item lines */
 hr {
+	z-index: 1;
 	position: relative;
-
+top:-22px;
 	left: 50px;
 	border: none;
 	width: 100%;
