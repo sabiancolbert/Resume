@@ -5,7 +5,7 @@ function setName() {
 	if (window.innerWidth < 650) {
 		document.getElementById("name").innerHTML = "Sabian";
 	} else {
-		document.getElementById("name").innerHTML = "Sabian Cygggolbert";
+		document.getElementById("name").innerHTML = "Sabian Colbert";
 	}
 }
 
@@ -175,7 +175,7 @@ function toggleMenu(open, setbutton = true) {
 		nav.hidden = false;
 		menuButton.hidden = true;
 	} else {
-	hideButton();
+	
 		nav.hidden = true;
 		menuButton.hidden = false;
 		if (setbutton) {
