@@ -122,7 +122,7 @@ function setButton() {
 	//mobile
 	else {
 		menuButton.style.top = "0px";
-		menuButton.style.position = "fixed";
+		menuButton.style.position = "absolute";
 	}
 }
 
