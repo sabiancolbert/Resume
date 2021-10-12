@@ -101,30 +101,30 @@ function setTitle() {
 				try {
 					document.getElementById("edu").innerHTML = "Edu.";
 				}catch {
-						document.getElementById("docs").innerHTML = "Docs";
-					
+					document.getElementById("docs").innerHTML = "Docs";
+
 				}
 			}
 		}
 
 	} else {
 		console.log("else");
-		try{
-		document.getElementById("name").innerHTML = "Sabian Colbert";
-		}catch{try}
-		document.getElementById("emp").innerHTML = "Employment";
-	}catch{try{
-		document.getElementById("edu").innerHTML = "Education";
-	}catch{
-		document.getElementById("docs").innerHTML = "Documents";
-	}
+		try {
+			document.getElementById("name").innerHTML = "Sabian Colbert";
+		}catch {
+			try
+			{
+				document.getElementById("emp").innerHTML = "Employment";
+			}catch {
+				try {
+					document.getElementById("edu").innerHTML = "Education";
+				}catch {
+					document.getElementById("docs").innerHTML = "Documents";
+				}
+			}
+		}
 	}
 }
-	}
-	
-	
-}
-
 /* themes button */
 function theme() {
 	window.location.replace("/themes.html");
