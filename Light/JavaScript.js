@@ -1,4 +1,4 @@
-var mouse = true;
+var mouse = false;
 var buttonRevealed = false;
 
 function setName() {
@@ -112,17 +112,15 @@ function setButton() {
 			menuButton.style.top = "-40px";
 		}
 		menuButton.style.position = "fixed";
-		console.log("111");
+		
 	}
 	//scroll is NOT >=27px, allow menu button to reveal
 	else if (mouse) {
-		console.log("222");
 		menuButton.style.top = "0px";
 		menuButton.style.position = "absolute";
 	}
 	//mobile
 	else {
-		console.log("333");
 		menuButton.style.top = "0px";
 		menuButton.style.position = "fixed";
 	}
