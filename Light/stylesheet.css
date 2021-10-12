@@ -162,7 +162,7 @@ h2 {
 /* body item labels */
 h3 {
 	position: absolute;
-	top: 0;
+	top: 10px;
 	left: 100px;
 	line-height:0;
 	font-size: 60px;
