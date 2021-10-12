@@ -108,7 +108,7 @@ function setButton() {
 	//scroll is >=27px, allow menu button to hide (if scroll is < 50 it won't appear to change yet)
 	if (mouse && document.documentElement.scrollTop >= 54) {
 		if (!buttonOut) {
-			menuButton.style.top = "-46px";
+			menuButton.style.top = "-46px";//maybe -62
 		}
 		menuButton.style.position = "fixed";
 	}
