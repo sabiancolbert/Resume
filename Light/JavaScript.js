@@ -90,11 +90,13 @@ function onload() {
 /* determine title */
 function setTitle() {
 	if (window.innerWidth < 650) {
+		console.log("id");
 		document.getElementById("name").innerHTML = "Sabian";
 		document.getElementById("emp").innerHTML = "Emp.";
 		document.getElementById("edu").innerHTML = "Edu.";
 		document.getElementById("docs").innerHTML = "Docs";
 	} else {
+		console.log("else");
 		document.getElementById("name").innerHTML = "Sabian Colbert";
 		document.getElementById("emp").innerHTML = "Employment";
 		document.getElementById("edu").innerHTML = "Education";
