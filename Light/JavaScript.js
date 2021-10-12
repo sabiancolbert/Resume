@@ -96,7 +96,6 @@ setButton();
 
 //themes button
 function theme() {
-	console.log("theme");
 	window.location.replace("/themes.html");
 }
 //HERE fix comments 😭
