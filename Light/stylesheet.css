@@ -125,7 +125,8 @@ nav a:hover {
 
 section {
 	position: absolute;
-	margin-top:16px;
+	top:86px;
+	margin-top: 8px;
 	width: 100%;
 }
 
