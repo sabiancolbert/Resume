@@ -133,6 +133,7 @@ section {
 @-moz-document url-prefix() {
 	h3 {
 		top: -1ex;
+		color: blue;
 	}
 }
 
@@ -156,14 +157,14 @@ article div {
 h2 {
 	z-index: 1;
 	position: relative;
-	top: -17px;
+	
 	margin: 16px 8px;
 	border-radius: 100%;
 	width: 92px;
 	height: 92px;
 	background-color: #5050ff;
 	text-align: center;
-	color: yellow;
+	color: white;
 	font-size: 80px;
 }
 
