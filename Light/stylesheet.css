@@ -40,11 +40,13 @@ header div {
 	right: 86px;
 	height: 1px;
 	line-height: 0;
+	overflow:hidden;
 }
 
 /* name */
 h1 {
 	position: relative;
+	width: 100%;
 	font-size: 55px;
 	color: white;
 	text-overflow: ellipsis;
@@ -126,33 +128,33 @@ nav a:hover {
 section {
 	position: absolute;
 	top: 70px;
-	overflow:hidden;
-	width:100%;
+	overflow: hidden;
+	width: 100%;
 }
 
 /* useless */
 @-moz-document url-prefix() {
 	h3 {
 
-		color:red;
+		color: red;
 	}
 }
 
 /* section boxes */
 article {
 	position: relative;
-	padding:16px;
-	width:100%;
+	padding: 16px;
+	width: 100%;
 	text-align: center;
 	overflow: hidden;
-  overflow-wrap: anywhere;
+	overflow-wrap: anywhere;
 }
 
 /* body item boxes */
-article div{
-	position:relative;
-	top:-32px;
-	padding-right:32px;
+article div {
+	position: relative;
+	top: -32px;
+	padding-right: 32px;
 }
 
 /* body item letters */
@@ -162,18 +164,18 @@ h2 {
 	width: 92px;
 	height: 92px;
 	background-color: #5050ff;
-	line-height:0;
+	line-height: 0;
 	font-size: 80px;
-	color:#303020;
+	color: #303020;
 }
 
 /* body item labels */
 h3 {
 	position: absolute;
-	max-width:65%;
-	top:-3px;
+	max-width: 65%;
+	top: -3px;
 	left: 108px;
-	line-height:1;
+	line-height: 1;
 	font-size: 60px;
 }
 
@@ -181,7 +183,7 @@ h3 {
 hr {
 	z-index: 1;
 	position: relative;
-top:-116px;
+	top: -116px;
 	border: none;
 	width: 100%;
 	height: 3px;
@@ -196,7 +198,7 @@ label, a {
 /* body item list items */
 ul {
 	position: relative;
-	margin:0, 110px, 0, 34px;
+	margin: 0, 110px, 0, 34px;
 	font-size: 30px;
 	text-align: left;
 }
