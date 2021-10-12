@@ -153,6 +153,7 @@ article {
 
 /* body item boxes */
 article div{
+	top:-16px;
 	padding-right:32px;
 }
 
