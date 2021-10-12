@@ -2,14 +2,9 @@
 html, body {
 	margin: 0;
 	width: 100%;
-	max-width:100%;
 	height: 100%;
 	background-color: #eeeeff;
 	text-align: center;
-}
-
-body{
-	
 }
 
 
@@ -133,6 +128,7 @@ section {
 	top: 19px;
 	margin: 8px;
 	width: 100%;
+	overflow:hidden;
 }
 
 /* useless */
