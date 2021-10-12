@@ -172,7 +172,7 @@ h2 {
 /* body item labels */
 h3 {
 	position: absolute;
-	width:80%;
+	max-width:60%;
 	top: 50px;
 	left: 125px;
 	line-height:0;
