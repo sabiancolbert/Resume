@@ -13,6 +13,9 @@ function onload() {
 	//size name
 	setName();
 
+//set menu button
+setButton();
+
 	//set age for summary page
 	if (document.getElementById("pageAge").innerHTML == " ") {
 		var date = new Date();
