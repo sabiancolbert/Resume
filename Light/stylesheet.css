@@ -190,8 +190,7 @@ label {
 /* body item list items */
 ul {
 	position: relative;
-	left: 34px;
-	margin-right: 110px;
+	margin:0, 110px, 0, 34px;
 	font-size: 30px;
 	text-align: left;
 }
