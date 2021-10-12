@@ -95,6 +95,10 @@ nav {
 	position: fixed;
 }
 
+#menuButton:hover{
+	transform:0;
+}
+
 /* menu items boxes */
 nav div {
 	left: 0;
