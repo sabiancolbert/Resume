@@ -6,8 +6,8 @@ function onload() {
 	//size name
 	setName();
 
-//set menu button
-setButton();
+	//set menu button
+	setButton();
 
 	//set age for summary page
 	if (document.getElementById("pageAge").innerHTML == " ") {
@@ -102,32 +102,35 @@ function theme() {
 }
 
 //determine menu button position
-function isMouse(){
-	mouse= true;
+function isMouse() {
+	mouse = true;
 }
 
 //set menu button position
 function setButton() {
 	toggleMenu(false, false);
-	//scroll is >=40px, allow menu button to hide (if scroll is < 54 it won't appear to change yet)
+	
+	//scroll is >=40px, allow menu button to hide (if scroll is < 40 it won't appear to change yet)
 	if (mouse && document.documentElement.scrollTop >= 40) {
 		if (!buttonRevealed) {
 			menuButton.style.top = "-40px";
 		}
 		menuButton.style.position = "fixed";
-		
+
 	}
-	//scroll is NOT >=27px, allow menu button to reveal
+	
+	//scroll is NOT >=40px, allow menu button to reveal
 	else if (mouse) {
 		menuButton.style.top = "0px";
 		menuButton.style.position = "absolute";
 	}
-	//mobile
+	
+	//if mobile, fix button
 	else {
 		menuButton.style.top = "0px";
 		menuButton.style.position = "fixed";
 	}
-} 
+}
 
 //reveal menu button
 function revealButton(override = false) {
@@ -152,7 +155,7 @@ function revealButton(override = false) {
 //hide menu button
 function hideButton(override = false) {
 	buttonRevealed = false;
-
+	
 	//if button needs hidden, then hide button
 	if ((menuButton.style.top == "0px" || override) && document.documentElement.scrollTop >= 54) {
 		var animation = setInterval(() => {
@@ -175,7 +178,6 @@ function toggleMenu(open, setbutton = true) {
 		nav.hidden = false;
 		menuButton.hidden = true;
 	} else {
-	
 		nav.hidden = true;
 		menuButton.hidden = false;
 		if (setbutton) {
