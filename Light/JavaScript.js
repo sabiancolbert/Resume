@@ -1,4 +1,4 @@
-var mouse = true;
+var mouse = false;
 var buttonRevealed = false;
 
 function setName() {
@@ -100,6 +100,7 @@ function theme() {
 //detect touch vs cursor
 document.getElementById("html").addEventListener('mousemove', e => {
 	mouse = true;
+	console.log("mouse");
 });
 
 //automatically hide/reveal menu button
