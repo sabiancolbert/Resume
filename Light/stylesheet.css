@@ -41,13 +41,12 @@ header div {
 	height: 1px;
 	line-height: 0;
 	text-overflow: hidden;
-	word-break:break-all;
 }
 
 /* name */
 h1 {
 	position: relative;
-	width: 100%;
+	max-width: 100%;
 	font-size: 55px;
 	color: white;
 }
