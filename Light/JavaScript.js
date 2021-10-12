@@ -1,7 +1,7 @@
 var mouse = false;
 var buttonRevealed = false;
 
-//set up page
+/* set up page*/
 function onload() {
 	//size name
 	setName();
@@ -87,7 +87,7 @@ function onload() {
 	}
 }
 
-//determine last name or no last name
+/* determine last name or no last name */
 function setName() {
 	if (window.innerWidth < 650) {
 		document.getElementById("name").innerHTML = "Sabian";
@@ -96,20 +96,20 @@ function setName() {
 	}
 }
 
-//themes button
+/* themes button */
 function theme() {
 	window.location.replace("/themes.html");
 }
 
-//determine menu button position
+/* determine menu button position */
 function isMouse() {
 	mouse = true;
 }
 
-//set menu button position
+/* set menu button position */
 function setButton() {
 	toggleMenu(false, false);
-	
+
 	//scroll is >=40px, allow menu button to hide (if scroll is < 40 it won't appear to change yet)
 	if (mouse && document.documentElement.scrollTop >= 40) {
 		if (!buttonRevealed) {
@@ -118,13 +118,13 @@ function setButton() {
 		menuButton.style.position = "fixed";
 
 	}
-	
+
 	//scroll is NOT >=40px, allow menu button to reveal
 	else if (mouse) {
 		menuButton.style.top = "0px";
 		menuButton.style.position = "absolute";
 	}
-	
+
 	//if mobile, fix button
 	else {
 		menuButton.style.top = "0px";
@@ -132,7 +132,7 @@ function setButton() {
 	}
 }
 
-//reveal menu button
+/* reveal menu button */
 function revealButton(override = false) {
 	buttonRevealed = true;
 
@@ -152,10 +152,10 @@ function revealButton(override = false) {
 	}
 }
 
-//hide menu button
+/* hide menu button */
 function hideButton(override = false) {
 	buttonRevealed = false;
-	
+
 	//if button needs hidden, then hide button
 	if ((menuButton.style.top == "0px" || override) && document.documentElement.scrollTop >= 54) {
 		var animation = setInterval(() => {
@@ -172,7 +172,7 @@ function hideButton(override = false) {
 	}
 }
 
-//toggle nav menu
+/* toggle nav menu */
 function toggleMenu(open, setbutton = true) {
 	if (open) {
 		nav.hidden = false;
