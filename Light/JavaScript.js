@@ -90,9 +90,15 @@ function onload() {
 /* determine title */
 function setTitle() {
 	if (window.innerWidth < 650) {
-		document.getElementById("title").innerHTML = "Sabian";
+		document.getElementById("name").innerHTML = "Sabian";
+		document.getElementById("emp").innerHTML = "Emp.";
+		document.getElementById("edu").innerHTML = "Edu.";
+		document.getElementById("docs").innerHTML = "Docs";
 	} else {
-		document.getElementById("title").innerHTML = "Sabian Colbert";
+		document.getElementById("name").innerHTML = "Sabian Colbert";
+		document.getElementById("emp").innerHTML = "Employment";
+		document.getElementById("edu").innerHTML = "Education";
+		document.getElementById("docs").innerHTML = "Documents";
 	}
 }
 
