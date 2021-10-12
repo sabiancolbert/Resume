@@ -3,8 +3,8 @@ var buttonRevealed = false;
 
 /* set up page*/
 function onload() {
-	//size name
-	setName();
+	//size title
+	setTitle();
 
 	//set menu button
 	setButton();
@@ -87,12 +87,12 @@ function onload() {
 	}
 }
 
-/* determine last name or no last name */
-function setName() {
+/* determine title */
+function setTitle() {
 	if (window.innerWidth < 650) {
-		document.getElementById("name").innerHTML = "Sabian";
+		document.getElementById("title").innerHTML = "Sabian";
 	} else {
-		document.getElementById("name").innerHTML = "Sabian Colbert";
+		document.getElementById("title").innerHTML = "Sabian Colbert";
 	}
 }
 
