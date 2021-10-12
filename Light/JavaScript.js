@@ -90,7 +90,6 @@ function onload() {
 /* determine title */
 function setTitle() {
 	if (window.innerWidth < 650) {
-		console.log("id");
 		try {
 			document.getElementById("name").innerHTML = "Sabian";
 		}
@@ -108,7 +107,6 @@ function setTitle() {
 		}
 
 	} else {
-		console.log("else");
 		try {
 			document.getElementById("name").innerHTML = "Sabian Colbert";
 		}catch {
