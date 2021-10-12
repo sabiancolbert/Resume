@@ -124,7 +124,7 @@ function setButton() {
 		menuButton.style.top = "0px";
 		menuButton.style.position = "fixed";
 	}
-}
+} 
 
 //reveal menu button
 function revealButton(override = false) {
