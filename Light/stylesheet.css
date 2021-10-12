@@ -156,7 +156,7 @@ h2 {
 	height: 92px;
 	background-color: #5050ff;
 	color: pink;
-	vertical-align: 100%;
+	vertical-align: text-top;
 	font-size: 80px;
 }
 
