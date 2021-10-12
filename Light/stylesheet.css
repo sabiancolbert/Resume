@@ -141,7 +141,6 @@ section {
 /* body item boxes */
 article {
 	position: relative;
-
 	width: 100%;
 	overflow: hidden;
 	text-align: center;
@@ -156,7 +155,7 @@ h2 {
 	height: 92px;
 	background-color: #5050ff;
 	color: pink;
-	line-height:180px;
+	line-height:1px;
 	font-size: 80px;
 }
 
