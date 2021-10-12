@@ -141,7 +141,7 @@ section {
 	}
 }
 
-/* body item boxes */
+/* section boxes */
 article {
 	position: relative;
 	margin-top:32px;
@@ -149,6 +149,11 @@ article {
 	width:100%;
 	text-align: center;
 	overflow: hidden;
+}
+
+/* body item boxes */
+article div{
+	padding-right:32px;
 }
 
 /* body item letters */
