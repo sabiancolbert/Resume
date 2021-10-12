@@ -107,10 +107,10 @@ document.documentElement.addEventListener('mousemove', e => {
 function setButton() {
 	document.getElementById("test").innerHTML = (document.documentElement.scrollTop +" ");
 	toggleMenu(false, false);
-	//scroll is >=54px, allow menu button to hide (if scroll is < 54 it won't appear to change yet)
-	if (mouse && document.documentElement.scrollTop >= 1900) {
+	//scroll is >=40px, allow menu button to hide (if scroll is < 54 it won't appear to change yet)
+	if (mouse && document.documentElement.scrollTop >= 40) {
 		if (!buttonRevealed) {
-			menuButton.style.top = "-35px";
+			menuButton.style.top = "-30px";
 		}
 		menuButton.style.position = "fixed";
 	}
@@ -122,7 +122,7 @@ function setButton() {
 	//mobile
 	else {
 		menuButton.style.top = "0px";
-		menuButton.style.position = "absolute";
+		menuButton.style.position = "fixed";
 	}
 }
 
