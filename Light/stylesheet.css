@@ -179,6 +179,11 @@ top:-116px;
 	background-color: #B4B4B4;
 }
 
+/* body item info boxes */
+article div {
+	margin: 8px, 8px, 32px;
+}
+
 /* body items */
 label, a {
 	font-size: 40px;
