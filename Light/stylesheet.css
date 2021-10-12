@@ -146,7 +146,7 @@ article {
 	position: relative;
 	margin-top:32px;
 	padding:32px;
-	height:initial;
+	width:100%;
 	text-align: center;
 	overflow: hidden;
 }
