@@ -131,7 +131,7 @@ function revealButton(override = false) {
 	buttonRevealed = true;
 
 	//if button needs revealed, then reveal button
-	if (menuButton.style.top == "-54px" || override) {
+	if (menuButton.style.top == "-40px" || override) {
 		var animation = setInterval(() => {
 			if (menuButton.style.top == "0px" || !buttonRevealed) {
 				clearInterval(animation);
@@ -153,7 +153,7 @@ function hideButton(override = false) {
 	//if button needs hidden, then hide button
 	if ((menuButton.style.top == "0px" || override) && document.documentElement.scrollTop >= 54) {
 		var animation = setInterval(() => {
-			if (menuButton.style.top == "-54px" || buttonRevealed) {
+			if (menuButton.style.top == "-40px" || buttonRevealed) {
 				clearInterval(animation);
 				if (buttonRevealed) {
 					revealButton(true);
