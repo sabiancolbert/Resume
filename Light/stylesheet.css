@@ -147,6 +147,7 @@ article {
 	padding:32px;
 	height:initial;
 	text-align: center;
+	overflow: hidden;
 }
 
 /* body item letters */
