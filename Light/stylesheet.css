@@ -125,7 +125,7 @@ nav a:hover {
 
 section {
 	position: absolute;
-	margin-top: 8px;
+	
 	width: 100%;
 }
 
@@ -140,7 +140,7 @@ section {
 /* body item boxes */
 article {
 	position: relative;
-	padding: 8px;
+	
 	width: 100%;
 	overflow: hidden;
 	text-align: center;
