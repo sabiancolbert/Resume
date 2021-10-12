@@ -1,4 +1,4 @@
-var mouse = true;
+var mouse = false;
 var buttonRevealed = false;
 
 function setName() {
