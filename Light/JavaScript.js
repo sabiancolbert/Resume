@@ -175,7 +175,7 @@ function toggleMenu(open, setbutton = true) {
 		nav.hidden = false;
 		menuButton.hidden = true;
 	} else {
-	
+	hideButton();
 		nav.hidden = true;
 		menuButton.hidden = false;
 		if (setbutton) {
