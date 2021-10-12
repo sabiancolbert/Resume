@@ -3,7 +3,7 @@ var buttonRevealed = false;
 
 function setName() {
 	if (window.innerWidth < 650) {
-		document.getElementById("name").innerHTML = "Sabian";
+		document.getElementById("name").innerHTML = "Sabitggan";
 	} else {
 		document.getElementById("name").innerHTML = "Sabian Colbert";
 	}
