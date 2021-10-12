@@ -132,7 +132,7 @@ section {
 /* useless */
 @-moz-document url-prefix() {
 	h3 {
-		top: -.5ex;
+		top: -1ex;
 	}
 }
 
@@ -171,7 +171,7 @@ h2 {
 /* body item labels */
 h3 {
 	position: absolute;
-
+top:-22px;
 	left: 100px;
 	font-size: 60px;
 	line-height: 1;
