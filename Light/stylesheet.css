@@ -130,6 +130,7 @@ section {
 	position: absolute;
 	top: 70px;
 	overflow:hidden;
+	width:100%;
 }
 
 /* useless */
