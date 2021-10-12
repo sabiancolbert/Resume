@@ -125,6 +125,7 @@ nav a:hover {
 
 section {
 	position: absolute;
+	top: 86px;
 	width: 100%;
 }
 
@@ -147,8 +148,7 @@ article {
 
 /* body item info boxes */
 article div {
-	padding;
-	8px;
+	padding:8px;
 }
 
 /* body item letters */
