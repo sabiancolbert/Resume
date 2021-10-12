@@ -114,12 +114,12 @@ function setButton() {
 	}
 	//scroll is NOT >=27px, allow menu button to reveal
 	else if (mouse) {
-		menuButton.style.top = "8px";
+		menuButton.style.top = "0px";
 		menuButton.style.position = "absolute";
 	}
 	//mobile
 	else {
-		menuButton.style.top = "8px";
+		menuButton.style.top = "0px";
 		menuButton.style.position = "fixed";
 	}
 }
