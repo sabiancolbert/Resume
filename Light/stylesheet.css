@@ -141,7 +141,7 @@ section {
 /* section boxes */
 article {
 	position: relative;
-	padding:32px, 16px;
+	padding: 16px;
 	width: 100%;
 	text-align: center;
 	overflow: hidden;
@@ -152,6 +152,7 @@ article {
 article div {
 	position: relative;
 	top: -32px;
+	padding: 16px, 0;
 	padding-right: 32px;
 }
 
