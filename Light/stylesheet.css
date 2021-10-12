@@ -40,7 +40,8 @@ header div {
 	right: 86px;
 	height: 1px;
 	line-height: 0;
-	text-overflow: ellipsis;
+	text-overflow: hidden;
+	word-break:break-all;
 }
 
 /* name */
