@@ -91,10 +91,20 @@ function onload() {
 function setTitle() {
 	if (window.innerWidth < 650) {
 		console.log("id");
+		try{
 		document.getElementById("name").innerHTML = "Sabian";
+		}
+		catch{try{
 		document.getElementById("emp").innerHTML = "Emp.";
+		}catch{try{
 		document.getElementById("edu").innerHTML = "Edu.";
+		}catch{try{
 		document.getElementById("docs").innerHTML = "Docs";
+	}
+		}
+		}
+		}
+		
 	} else {
 		console.log("else");
 		document.getElementById("name").innerHTML = "Sabian Colbert";
