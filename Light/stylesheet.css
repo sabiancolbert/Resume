@@ -45,9 +45,10 @@ header div {
 /* name */
 h1 {
 	position: relative;
+	top:10px;
 	font-size: 55px;
 	color: red;
-	line-height:0;
+	line-height: 0;
 }
 
 /* useless */
