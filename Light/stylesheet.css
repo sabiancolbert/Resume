@@ -172,7 +172,7 @@ h2 {
 h3 {
 	position: absolute;
 	max-width:60%;
-	top:0;
+	top:-3px;
 	left: 125px;
 	line-height:1;
 	font-size: 60px;
