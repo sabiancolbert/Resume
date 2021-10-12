@@ -1,18 +1,7 @@
 var mouse = false;
 var buttonRevealed = false;
 
-function isMouse(){
-	mouse= true;
-}
-
-function setName() {
-	if (window.innerWidth < 650) {
-		document.getElementById("name").innerHTML = "Sabian";
-	} else {
-		document.getElementById("name").innerHTML = "Sabian Colbert";
-	}
-}
-
+//set up page
 function onload() {
 	//size name
 	setName();
@@ -98,18 +87,26 @@ setButton();
 	}
 }
 
+//determine last name or no last name
+function setName() {
+	if (window.innerWidth < 650) {
+		document.getElementById("name").innerHTML = "Sabian";
+	} else {
+		document.getElementById("name").innerHTML = "Sabian Colbert";
+	}
+}
+
 //themes button
 function theme() {
 	window.location.replace("/themes.html");
 }
-//HERE fix comments 😭
-//detect touch vs cursor
-document.documentElement.addEventListener('mousemove', e => {
-	mouse = true;
-	console.log("mouse");
-});
 
-//automatically hide/reveal menu button
+//determine menu button position
+function isMouse(){
+	mouse= true;
+}
+
+//set menu button position
 function setButton() {
 	toggleMenu(false, false);
 	//scroll is >=40px, allow menu button to hide (if scroll is < 54 it won't appear to change yet)
