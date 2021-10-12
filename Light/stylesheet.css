@@ -143,6 +143,7 @@ article {
 	position: relative;
 	top:70px;
 	width: 100%;
+	height:initial;
 	overflow: hidden;
 	text-align: center;
 }
@@ -177,11 +178,6 @@ top:-116px;
 	width: 100%;
 	height: 3px;
 	background-color: #B4B4B4;
-}
-
-/* body item info boxes */
-article div {
-	margin: 8px, 8px, 32px;
 }
 
 /* body items */
