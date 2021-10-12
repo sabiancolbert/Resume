@@ -62,9 +62,8 @@ img {
 	border-radius: 100%;
 	border: 20px #eeeeff;
 	width: 70px;
-	top: 0;
-	right: 0;
-	margin: 8px;
+	top: 8px;
+	right: 8px;
 }
 
 /* header buttons tilt */
@@ -92,7 +91,7 @@ nav {
 /* menu button */
 #menuButton {
 	z-index: 3;
-	left: 0;
+	left: 8px;
 	position: fixed;
 }
 
