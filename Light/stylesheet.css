@@ -137,7 +137,7 @@ section {
 @-moz-document url-prefix() {
 	h3 {
 
-		color: red;
+		color:red;
 	}
 }
 
@@ -172,7 +172,7 @@ h2 {
 h3 {
 	position: absolute;
 	max-width:60%;
-	top: 8px;
+	top: 0;
 	left: 125px;
 	line-height:1;
 	font-size: 60px;
