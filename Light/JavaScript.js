@@ -107,7 +107,7 @@ document.getElementById("html").addEventListener('mousemove', e => {
 function setButton() {
 	toggleMenu(false, false);
 	//scroll is >=54px, allow menu button to hide (if scroll is < 54 it won't appear to change yet)
-	if (mouse && document.documentElement.scrollTop >= 54) {
+	if (mouse && document.documentElement.scrollTop >= 33) {
 		if (!buttonRevealed) {
 			menuButton.style.top = "-35px";
 		}
