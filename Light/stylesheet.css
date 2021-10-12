@@ -141,6 +141,7 @@ section {
 /* body item boxes */
 article {
 	position: relative;
+	top:70px;
 	width: 100%;
 	overflow: hidden;
 	text-align: center;
