@@ -157,14 +157,14 @@ article div {
 h2 {
 	z-index: 1;
 	position: relative;
-	
+
 	margin: 16px 8px;
 	border-radius: 100%;
 	width: 92px;
 	height: 92px;
 	background-color: #5050ff;
 	text-align: center;
-	color: white;
+	color: red;
 	font-size: 80px;
 }
 
@@ -174,7 +174,7 @@ h3 {
 	/*top: -22px;*/
 	left: 100px;
 	font-size: 60px;
-	line-height: 1;
+	
 }
 
 /* body item lines */
