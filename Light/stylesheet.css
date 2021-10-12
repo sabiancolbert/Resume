@@ -40,7 +40,7 @@ header div {
 	right: 86px;
 	height: 1px;
 	line-height: 0;
-	text-overflow: hidden;
+	overflow: hidden;
 }
 
 /* name */
