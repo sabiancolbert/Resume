@@ -144,7 +144,6 @@ section {
 /* section boxes */
 article {
 	position: relative;
-	margin-top:32px;
 	padding:32px;
 	width:100%;
 	text-align: center;
