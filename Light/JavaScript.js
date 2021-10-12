@@ -1,5 +1,9 @@
-var mouse = true;
+var mouse = false;
 var buttonRevealed = false;
+
+function isMouse(){
+	mouse= true;
+}
 
 function setName() {
 	if (window.innerWidth < 650) {
