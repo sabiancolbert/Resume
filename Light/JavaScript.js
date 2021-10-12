@@ -96,15 +96,16 @@ function theme() {
 	console.log("theme");
 	window.location.replace("/themes.html");
 }
-
+//HERE fix comments 😭
 //detect touch vs cursor
-document.getElementById("html").addEventListener('mousemove', e => {
+document.documentElement.addEventListener('mousemove', e => {
 	mouse = true;
 	console.log("mouse");
 });
 
 //automatically hide/reveal menu button
 function setButton() {
+	console.log(document.documentElement.scrollTop +" ");
 	toggleMenu(false, false);
 	//scroll is >=54px, allow menu button to hide (if scroll is < 54 it won't appear to change yet)
 	if (mouse && document.documentElement.scrollTop >= 33) {
