@@ -108,18 +108,18 @@ function setButton() {
 	//scroll is >=27px, allow menu button to hide (if scroll is < 50 it won't appear to change yet)
 	if (mouse && document.documentElement.scrollTop >= 54) {
 		if (!buttonOut) {
-			menuButton.style.top = "-54px";
+			menuButton.style.top = "-46px";
 		}
 		menuButton.style.position = "fixed";
 	}
 	//scroll is NOT >=27px, allow menu button to reveal
 	else if (mouse) {
-		menuButton.style.top = "0px";
+		menuButton.style.top = "8px";
 		menuButton.style.position = "absolute";
 	}
 	//mobile
 	else {
-		menuButton.style.top = "0px";
+		menuButton.style.top = "8px";
 		menuButton.style.position = "fixed";
 	}
 }
