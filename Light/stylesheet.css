@@ -152,7 +152,6 @@ article {
 article div {
 	position: relative;
 	top: -32px;
-	padding: 16px, 0;
 	padding-right: 32px;
 }
 
@@ -175,7 +174,7 @@ h3 {
 	top: 8px;
 	left: 108px;
 	line-height: 1;
-	font-size: 60px;
+	font-size: 50px;
 	text-align: left;
 }
 
