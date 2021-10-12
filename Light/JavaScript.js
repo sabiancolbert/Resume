@@ -1,5 +1,5 @@
 var mouse = false;
-var buttonOut = false;
+var buttonRevealed = false;
 
 function setName() {
 	if (window.innerWidth < 650) {
@@ -105,10 +105,10 @@ document.getElementById("html").addEventListener('mousemove', e => {
 //automatically hide/reveal menu button
 function setButton() {
 	toggleMenu(false, false);
-	//scroll is >=27px, allow menu button to hide (if scroll is < 50 it won't appear to change yet)
-	if (mouse && document.documentElement.scrollTop >= 46) {
-		if (!buttonOut) {
-			menuButton.style.top = "-46px";
+	//scroll is >=54px, allow menu button to hide (if scroll is < 54 it won't appear to change yet)
+	if (mouse && document.documentElement.scrollTop >= 54) {
+		if (!buttonRevealed) {
+			menuButton.style.top = "-35px";
 		}
 		menuButton.style.position = "fixed";
 	}
@@ -126,14 +126,14 @@ function setButton() {
 
 //reveal menu button
 function revealButton(override = false) {
-	buttonOut = true;
+	buttonRevealed = true;
 
 	//if button needs revealed, then reveal button
 	if (menuButton.style.top == "-54px" || override) {
 		var animation = setInterval(() => {
-			if (menuButton.style.top == "0px" || !buttonOut) {
+			if (menuButton.style.top == "0px" || !buttonRevealed) {
 				clearInterval(animation);
-				if (!buttonOut) {
+				if (!buttonRevealed) {
 					hideButton(true);
 				}
 			} else {
@@ -146,14 +146,14 @@ function revealButton(override = false) {
 
 //hide menu button
 function hideButton(override = false) {
-	buttonOut = false;
+	buttonRevealed = false;
 
 	//if button needs hidden, then hide button
 	if ((menuButton.style.top == "0px" || override) && document.documentElement.scrollTop >= 54) {
 		var animation = setInterval(() => {
-			if (menuButton.style.top == "-54px" || buttonOut) {
+			if (menuButton.style.top == "-54px" || buttonRevealed) {
 				clearInterval(animation);
-				if (buttonOut) {
+				if (buttonRevealed) {
 					revealButton(true);
 				}
 			} else {
