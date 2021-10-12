@@ -155,14 +155,14 @@ h2 {
 	height: 92px;
 	background-color: #5050ff;
 	color: pink;
-	line-height:1px;
+	line-height:0;
 	font-size: 80px;
 }
 
 /* body item labels */
 h3 {
 	position: absolute;
-	top: -22px;
+	top: -30px;
 	left: 100px;
 	font-size: 60px;
 }
