@@ -149,8 +149,7 @@ article {
 	width:100%;
 	text-align: center;
 	overflow: hidden;
-	display: flex;  
-  flex-wrap: wrap;
+  overflow-wrap: anywhere;
 }
 
 /* body item boxes */
