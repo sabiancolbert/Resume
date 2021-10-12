@@ -105,7 +105,6 @@ document.documentElement.addEventListener('mousemove', e => {
 
 //automatically hide/reveal menu button
 function setButton() {
-	document.getElementById("test").innerHTML = (document.documentElement.scrollTop +" ");
 	toggleMenu(false, false);
 	//scroll is >=40px, allow menu button to hide (if scroll is < 54 it won't appear to change yet)
 	if (mouse && document.documentElement.scrollTop >= 40) {
