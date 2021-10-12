@@ -40,7 +40,6 @@ header div {
 	left: 86px;
 	right: 86px;
 	height: 1px;
-	word-break: break-all;
 }
 
 /* name */
@@ -48,6 +47,7 @@ h1 {
 	position: relative;
 	font-size: 55px;
 	color: red;
+	line-height:0;
 }
 
 /* useless */
