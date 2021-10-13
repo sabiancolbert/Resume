@@ -190,9 +190,9 @@ function revealButton(override = false) {
 
 /* hide menu button */
 function hideButton(override = false) {
+
+	buttonRevealed = false;
 	
-		buttonRevealed = false;
-if (mouse) {
 		//if button needs hidden, then hide button
 		if ((menuButton.style.top == "0px" || override) && document.documentElement.scrollTop >= 54) {
 			var animation = setInterval(() => {
@@ -207,7 +207,7 @@ if (mouse) {
 			},
 				10);
 		}
-	}
+	
 }
 
 /* toggle nav menu */
