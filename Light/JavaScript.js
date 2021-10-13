@@ -140,12 +140,13 @@ function theme() {
 /* determine menu button position */
 function isMouse() {
 	mouse = true;
+	console.log("mouse" + mouse);
 }
 
 /* set menu button position */
 function setButton() {
 	toggleMenu(false, false);
-
+console.log("&"+mouse);
 	//scroll is >=40px, allow menu button to hide (if scroll is < 40 it won't appear to change yet)
 	if (mouse && document.documentElement.scrollTop >= 40) {
 		if (!buttonRevealed) {
@@ -171,30 +172,30 @@ function setButton() {
 /* reveal menu button */
 function revealButton(override = false) {
 	buttonRevealed = true;
-if(mouse){
+	if (mouse) {
 
-	//if button needs revealed, then reveal button
-	if (menuButton.style.top == "-40px" || override) {
-		var animation = setInterval(() => {
-			if (menuButton.style.top == "0px" || !buttonRevealed) {
-				clearInterval(animation);
-				if (!buttonRevealed) {
-					hideButton(true);
+		//if button needs revealed, then reveal button
+		if (menuButton.style.top == "-40px" || override) {
+			var animation = setInterval(() => {
+				if (menuButton.style.top == "0px" || !buttonRevealed) {
+					clearInterval(animation);
+					if (!buttonRevealed) {
+						hideButton(true);
+					}
+				} else {
+					menuButton.style.top = Number(menuButton.style.top.substring(0, menuButton.style.top.length - 2)) + 2 + "px";
 				}
-			} else {
-				menuButton.style.top = Number(menuButton.style.top.substring(0, menuButton.style.top.length - 2)) + 2 + "px";
-			}
-		},
-			10);
+			},
+				10);
+		}
 	}
-}
 }
 
 /* hide menu button */
 function hideButton(override = false) {
 	buttonRevealed = false;
 	if (mouse) {
-		
+
 		//if button needs hidden, then hide button
 		if ((menuButton.style.top == "0px" || override) && document.documentElement.scrollTop >= 54) {
 			var animation = setInterval(() => {
