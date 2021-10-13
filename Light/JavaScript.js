@@ -1,7 +1,7 @@
 var mouse = true;
 var buttonRevealed = false;
 
-document.body.touchStart = function() {
+document.getElementById("body").touchStart = function() {
 	mouse = false; console.log("mousing"+mouse);
 }
 
