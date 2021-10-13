@@ -140,6 +140,7 @@ function theme() {
 //determine menu button position
 function setMouse() {
 	mouse = false;
+	document.getElementById("name").innerHTML="HDDH";
 	console.log("mousing"+mouse);
 }
 
