@@ -138,7 +138,7 @@ function theme() {
 }
 
 //determine menu button position
-document.body.addEventListener('touchstart', event =>  {
+document.getElementById("body").addEventListener('touchstart', event =>  {
 	mouse = false;
 	console.log("mousing"+mouse);
 });
