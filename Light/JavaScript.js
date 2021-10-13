@@ -130,6 +130,7 @@ function setTitle() {
 			}
 		}
 	}
+}
 
 	/* themes button */
 	function theme() {
