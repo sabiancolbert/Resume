@@ -138,10 +138,10 @@ function theme() {
 }
 
 //determine menu button position
-function setMouse() {
+document.body.addEventListener('touchstart', event =>  {
 	mouse = false;
 	console.log("mousing"+mouse);
-}
+});
 document.getElementById("name").innerHTML="HDhDH";
 	
 /* set menu button position */
