@@ -2,13 +2,15 @@
 /* functions */
 /* --------- */
 
+/* teehee */
 function c(c) {
 	console.log(c);
 }
 
+/* set puzzle */
 function onload() {
 	console.log("start");
-	/* create puzzle */
+	/* create solution */
 	var counter = 1;
 	var boxArr = new Array(0);
 	var clearArr = new Array(0);
@@ -50,6 +52,7 @@ function onload() {
 	display("i");
 }
 
+/* get cell relative to cell */
 function get(cellX, cellY, x, y) {
 	cellX += x;
 	cellY += y;
@@ -78,6 +81,7 @@ function get(cellX, cellY, x, y) {
 	}
 }
 
+/* test cell for each rule */
 function rules(x, y) {
 	var invalid = false;
 	/* consecutive */
@@ -111,11 +115,49 @@ function rules(x, y) {
 	return invalid;
 }
 
+/* cell creation function */
+function createCell(triedArr, clearArr, boxArr, x, y, xLine, yLine, previous, next) {
+	var number = 0;
+	invalid = true;
+	while (invalid && triedArr.length < 9) {
+		number = Math.floor(Math.random()*9+1);
+		invalid = false;
+		if (triedArr.includes(number)) {
+			invalid = true;
+		} else {
+			triedArr.push(number);
+			if (xLine.includes(number) || yLine.includes(number)) {
+				invalid = true;
+			} else if (boxArr.includes(number)) {
+				invalid = true;
+			} else {
+				invalid = rules(x, y);
+			}
+		}
+	}
+	if (invalid) {
+		//HERE foreach array in clear arrray
+		for(i=clearArr.length;i>0;i--){
+		clearArr[i] = [];
+		}
+		xLine[x] = 0;
+		yLine[y] = 0;
+		cellCounter--;
+		previous();
+	} else {
+		xLine[x] = number;
+		yLine[y] = number;
+		cells[cellCounter] = number;
+		cellCounter++;
+		next();
+	}
+}
+
+/* user set number to cell */
 function set(cell) {
 	/* set cell */
 	if (!setNumbers.includes(cell)) {
 		document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
-	}
 	/* check answer */
 	var answer = 0;
 	if (cell.substring(0, 1) == "a") {
@@ -142,41 +184,6 @@ function set(cell) {
 	} else {
 		document.getElementById(cell).style = "color:black;";
 	}
-}
-
-/* cell functions */
-
-function createCell(triedArr, clearArr, boxArr, x, y, xLine, yLine, previous, next) {
-	var number = 0;
-	invalid = true;
-	while (invalid && triedArr.length < 9) {
-		number = Math.floor(Math.random()*9+1);
-		invalid = false;
-		if (triedArr.includes(number)) {
-			invalid = true;
-		} else {
-			triedArr.push(number);
-			if (xLine.includes(number) || yLine.includes(number)) {
-				invalid = true;
-			} else if (boxArr.includes(number)) {
-				invalid = true;
-			} else {
-				invalid = rules(x, y);
-			}
-		}
-	}
-	if (invalid) {
-		clearArr = [];
-		xLine[x] = 0;
-		yLine[y] = 0;
-		cellCounter--;
-		previous();
-	} else {
-		xLine[x] = number;
-		yLine[y] = number;
-		cells[cellCounter] = number;
-		cellCounter++;
-		next();
 	}
 }
 
