@@ -1,7 +1,8 @@
 var mouse = true;
 var buttonRevealed = false;
 
-document.touchStartn=function () =>{mouse=false;console.log("mousing"+mouse)}
+document.body.touchStart = () => {
+	mouse = false; console.log("mousing"+mouse)}
 
 /* set up page*/
 function onload() {
