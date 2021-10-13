@@ -1,5 +1,7 @@
-var mouse = false;
+var mouse = true;
 var buttonRevealed = false;
+
+document.touchStartn=function () =>{mouse=false;console.log("mousing"+mouse)}
 
 /* set up page*/
 function onload() {
@@ -146,7 +148,7 @@ function isMouse() {
 /* set menu button position */
 function setButton() {
 	toggleMenu(false, false);
-console.log("&"+mouse);
+	console.log("&"+mouse);
 	//scroll is >=40px, allow menu button to hide (if scroll is < 40 it won't appear to change yet)
 	if (mouse && document.documentElement.scrollTop >= 40) {
 		if (!buttonRevealed) {
