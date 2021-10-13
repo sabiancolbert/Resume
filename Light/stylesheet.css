@@ -47,7 +47,7 @@ h1 {
 	position: relative;
 	top: 32px;
 	font-size: 55px;
-	color: red;
+	color: white;
 	line-height: 0;
 }
 
@@ -135,7 +135,7 @@ section {
 @-moz-document url-prefix() {
 	h3 {
 		max-height: 123px;
-		color: blue;
+		color: yellow;
 	}
 }
 
@@ -154,7 +154,7 @@ article div {
 	position: relative;
 	top: -32px;
 	padding-right: 32px;
-	background-color:#eeeeff;
+	background-color: #eeeeff;
 }
 
 /* body item letters */
