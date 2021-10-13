@@ -138,7 +138,7 @@ function theme() {
 }
 
 //determine menu button position
-document.getElementById("body").touchStart = function() {
+function setMouse() {
 	mouse = false;
 	console.log("mousing"+mouse);
 }
