@@ -132,92 +132,94 @@ function setTitle() {
 	}
 }
 
-	/* themes button */
-	function theme() {
-		window.location.replace("/themes.html");
+/* themes button */
+function theme() {
+	window.location.replace("/themes.html");
+}
+
+/* determine menu button position */
+function isMouse() {
+	mouse = true;
+}
+
+/* set menu button position */
+function setButton() {
+	toggleMenu(false, false);
+
+	//scroll is >=40px, allow menu button to hide (if scroll is < 40 it won't appear to change yet)
+	if (mouse && document.documentElement.scrollTop >= 40) {
+		if (!buttonRevealed) {
+			menuButton.style.top = "-40px";
+		}
+		menuButton.style.position = "fixed";
+
 	}
 
-	/* determine menu button position */
-	function isMouse() {
-		mouse = true;
+	//scroll is NOT >=40px, allow menu button to reveal
+	else if (mouse) {
+		menuButton.style.top = "0px";
+		menuButton.style.position = "absolute";
 	}
 
-	/* set menu button position */
-	function setButton() {
-		toggleMenu(false, false);
-
-		//scroll is >=40px, allow menu button to hide (if scroll is < 40 it won't appear to change yet)
-		if (mouse && document.documentElement.scrollTop >= 40) {
-			if (!buttonRevealed) {
-				menuButton.style.top = "-40px";
-			}
-			menuButton.style.position = "fixed";
-
-		}
-
-		//scroll is NOT >=40px, allow menu button to reveal
-		else if (mouse) {
-			menuButton.style.top = "0px";
-			menuButton.style.position = "absolute";
-		}
-
-		//if mobile, fix button
-		else {
-			menuButton.style.top = "0px";
-			menuButton.style.position = "fixed";
-		}
+	//if mobile, fix button
+	else {
+		menuButton.style.top = "0px";
+		menuButton.style.position = "fixed";
 	}
+}
 
-	/* reveal menu button */
-	function revealButton(override = false) {
-		buttonRevealed = true;
+/* reveal menu button */
+function revealButton(override = false) {
+	buttonRevealed = true;
 
-		//if button needs revealed, then reveal button
-		if (menuButton.style.top == "-40px" || override) {
-			var animation = setInterval(() => {
-				if (menuButton.style.top == "0px" || !buttonRevealed) {
-					clearInterval(animation);
-					if (!buttonRevealed) {
-						hideButton(true);
-					}
-				} else {
-					menuButton.style.top = Number(menuButton.style.top.substring(0, menuButton.style.top.length - 2)) + 2 + "px";
+	//if button needs revealed, then reveal button
+	if (menuButton.style.top == "-40px" || override) {
+		var animation = setInterval(() => {
+			if (menuButton.style.top == "0px" || !buttonRevealed) {
+				clearInterval(animation);
+				if (!buttonRevealed) {
+					hideButton(true);
 				}
-			},
-				10);
-		}
-	}
-
-	/* hide menu button */
-	function hideButton(override = false) {
-		buttonRevealed = false;
-
-		//if button needs hidden, then hide button
-		if ((menuButton.style.top == "0px" || override) && document.documentElement.scrollTop >= 54) {
-			var animation = setInterval(() => {
-				if (menuButton.style.top == "-40px" || buttonRevealed) {
-					clearInterval(animation);
-					if (buttonRevealed) {
-						revealButton(true);
-					}
-				} else {
-					menuButton.style.top = Number(menuButton.style.top.substring(0, menuButton.style.top.length - 2)) - 2 + "px";
-				}
-			},
-				10);
-		}
-	}
-
-	/* toggle nav menu */
-	function toggleMenu(open, setbutton = true) {
-		if (open) {
-			nav.hidden = false;
-			menuButton.hidden = true;
-		} else {
-			nav.hidden = true;
-			menuButton.hidden = false;
-			if (setbutton) {
-				setButton();
+			} else {
+				menuButton.style.top = Number(menuButton.style.top.substring(0, menuButton.style.top.length - 2)) + 2 + "px";
 			}
+		},
+			10);
+	}
+}
+
+/* hide menu button */
+function hideButton(override = false) {
+	if(mouse){
+	buttonRevealed = false;
+
+	//if button needs hidden, then hide button
+	if ((menuButton.style.top == "0px" || override) && document.documentElement.scrollTop >= 54) {
+		var animation = setInterval(() => {
+			if (menuButton.style.top == "-40px" || buttonRevealed) {
+				clearInterval(animation);
+				if (buttonRevealed) {
+					revealButton(true);
+				}
+			} else {
+				menuButton.style.top = Number(menuButton.style.top.substring(0, menuButton.style.top.length - 2)) - 2 + "px";
+			}
+		},
+			10);
+	}
+	}
+}
+
+/* toggle nav menu */
+function toggleMenu(open, setbutton = true) {
+	if (open) {
+		nav.hidden = false;
+		menuButton.hidden = true;
+	} else {
+		nav.hidden = true;
+		menuButton.hidden = false;
+		if (setbutton) {
+			setButton();
 		}
 	}
+}
