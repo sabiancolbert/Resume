@@ -134,8 +134,8 @@ section {
 /* useless */
 @-moz-document url-prefix() {
 	h3 {
-
-		color: red;
+max-height:123px;
+		color: blue;
 	}
 }
 
