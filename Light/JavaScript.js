@@ -140,10 +140,10 @@ function theme() {
 //determine menu button position
 function setMouse() {
 	mouse = false;
-	document.getElementById("name").innerHTML="HDDH";
 	console.log("mousing"+mouse);
 }
-
+document.getElementById("name").innerHTML="HDhDH";
+	
 /* set menu button position */
 function setButton() {
 	toggleMenu(false, false);
