@@ -1,10 +1,6 @@
 var mouse = true;
 var buttonRevealed = false;
 
-document.getElementById("body").touchStart = function() {
-	mouse = false; console.log("mousing"+mouse);
-}
-
 /* set up page*/
 function onload() {
 	//size title
@@ -91,7 +87,7 @@ function onload() {
 	}
 }
 
-/* determine title */
+/* determine and set title */
 function setTitle() {
 	if (window.innerWidth < 650) {
 		try {
@@ -141,16 +137,15 @@ function theme() {
 	window.location.replace("/themes.html");
 }
 
-/* determine menu button position */
-function isMouse() {
-	mouse = true;
-	console.log("mouse" + mouse);
+//determine menu button position
+document.getElementById("body").touchStart = function() {
+	mouse = false;
+	console.log("mousing"+mouse);
 }
 
 /* set menu button position */
 function setButton() {
 	toggleMenu(false, false);
-	console.log("&"+mouse);
 	//scroll is >=40px, allow menu button to hide (if scroll is < 40 it won't appear to change yet)
 	if (mouse && document.documentElement.scrollTop >= 40) {
 		if (!buttonRevealed) {
