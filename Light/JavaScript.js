@@ -171,6 +171,7 @@ function setButton() {
 /* reveal menu button */
 function revealButton(override = false) {
 	buttonRevealed = true;
+if(mouse){
 
 	//if button needs revealed, then reveal button
 	if (menuButton.style.top == "-40px" || override) {
@@ -187,27 +188,28 @@ function revealButton(override = false) {
 			10);
 	}
 }
+}
 
 /* hide menu button */
 function hideButton(override = false) {
-	if(mouse){
 	buttonRevealed = false;
-
-	//if button needs hidden, then hide button
-	if ((menuButton.style.top == "0px" || override) && document.documentElement.scrollTop >= 54) {
-		var animation = setInterval(() => {
-			if (menuButton.style.top == "-40px" || buttonRevealed) {
-				clearInterval(animation);
-				if (buttonRevealed) {
-					revealButton(true);
+	if (mouse) {
+		
+		//if button needs hidden, then hide button
+		if ((menuButton.style.top == "0px" || override) && document.documentElement.scrollTop >= 54) {
+			var animation = setInterval(() => {
+				if (menuButton.style.top == "-40px" || buttonRevealed) {
+					clearInterval(animation);
+					if (buttonRevealed) {
+						revealButton(true);
+					}
+				} else {
+					menuButton.style.top = Number(menuButton.style.top.substring(0, menuButton.style.top.length - 2)) - 2 + "px";
 				}
-			} else {
-				menuButton.style.top = Number(menuButton.style.top.substring(0, menuButton.style.top.length - 2)) - 2 + "px";
-			}
-		},
-			10);
+			},
+				10);
+		}
 	}
-}
 }
 
 /* toggle nav menu */
