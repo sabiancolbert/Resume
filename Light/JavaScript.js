@@ -100,8 +100,12 @@ function setTitle() {
 				try {
 					document.getElementById("edu").innerHTML = "Edu.";
 				}catch {
+					try{
 					document.getElementById("docs").innerHTML = "Docs";
-
+}
+catch {
+	document.getElementById("port").innerHTML = "Port.";
+}
 				}
 			}
 		}
@@ -117,12 +121,16 @@ function setTitle() {
 				try {
 					document.getElementById("edu").innerHTML = "Education";
 				}catch {
+					try{
 					document.getElementById("docs").innerHTML = "Documents";
+					}catch{
+						document.getElementById("port").innerHTML = "Portfolio";
 				}
 			}
 		}
 	}
 }
+
 /* themes button */
 function theme() {
 	window.location.replace("/themes.html");
