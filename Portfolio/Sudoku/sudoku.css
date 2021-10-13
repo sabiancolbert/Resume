@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+    color:white;
+    text-align:center;
+}
+table{
+    margin:auto;
+}
+td, #selectionCell {
+    width: 30px;
+    height: 30px;
+    color:black;
+    background-color: white;
+    border: 1px solid black;
+}
+p{
+    background-color:red;
+}
