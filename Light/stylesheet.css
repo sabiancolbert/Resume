@@ -134,7 +134,7 @@ section {
 /* useless */
 @-moz-document url-prefix() {
 	h3 {
-max-height:123px;
+		max-height: 123px;
 		color: blue;
 	}
 }
@@ -154,6 +154,7 @@ article div {
 	position: relative;
 	top: -32px;
 	padding-right: 32px;
+	background-color:#eeeeff;
 }
 
 /* body item letters */
