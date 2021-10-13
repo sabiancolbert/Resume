@@ -54,7 +54,7 @@ h1 {
 /* useless */
 @-moz-document url-prefix() {
 	header div {
-		top: -2em;
+		top: -1.5em;
 	}
 }
 
