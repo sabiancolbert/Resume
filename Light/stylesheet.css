@@ -131,14 +131,6 @@ section {
 	width: 100%;
 }
 
-/* useless */
-@-moz-document url-prefix() {
-	h3 {
-		max-height: 123px;
-		color: yellow;
-	}
-}
-
 /* section boxes */
 article {
 	position: relative;
