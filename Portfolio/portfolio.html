@@ -2,53 +2,51 @@
 <html>
 
 <head>
-	<title></title>
+	<title>Resume</title>
+	<script type="text/javascript" src="JavaScript.js"></script>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="default.css">
-	<script src="JavaScript.js"></script>
-	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-	<meta http-equiv="Pragma" content="no-cache" />
-	<meta http-equiv="Expires" content="0" />
-	<link rel="icon" type="image/ico" href="Resources/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="icon" type="image/ico" href="/Resources/favicon.ico" />
 </head>
 
-<body onscroll="setButton()">
-	<!--menu-->
-
+<body onload="onload()" onresize="setTitle()" onscroll="setButton()">
+	<!-- menu -->
 	<nav id="nav" hidden="true">
 		<div>
-			<a href="/index.html">Summary</a>
+			<a href="summary.html">Summary</a>
 		</div>
 		<div>
-			<a href="/employment.html">Employment</a>
+			<a href="employment.html">Employment</a>
 		</div>
 		<div>
-			<a href="/education.html">Education</a>
+			<a href="education.html">Education</a>
 		</div>
 		<div>
-			<a href="/document.html">Documents</a>
+			<a href="documents.html">Documents</a>
 		</div>
 	</nav>
-	<!--header-->
-
+	<!-- header -->
 	<header onmouseover="toggleMenu(false)">
-		<h1>Documents</h1>
+		<div id="hole"></div>
 		<img alt="Menu" id="menuButton" onmouseup="toggleMenu(true)" onmouseover="revealButton()" onmouseout="hideButton()" src="Resources/menu.png">
+		<div>
+			<h1 id="port">W.I.P.</h1>
+		</div>
 		<img alt="Themes" onmouseup="theme()" src="Resources/theme.png">
 	</header>
-	<!--main page-->
-
+	<!-- main page -->
 	<section onmouseover="toggleMenu(false)">
-		<!--sudoku-->
-
+		<!-- sudoku -->
 		<article>
 			<h2>S</h2>
-			<h3>udoku Website</h3>
+			<h3>udoku</h3>
 			<hr>
 			<div>
-				<a href="Sudoku/sudoku.html">SabianColbert.pdf</a>
 				<ul>
-					<li>Completely random Sudoku with several options for variants</li>
+					<li>Random games</li>
+					<li>9 Game variations</li>
+					<li>Combine Variations</li>
 				</ul>
 			</div>
 		</article>
