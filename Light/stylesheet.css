@@ -51,7 +51,7 @@ h1 {
 	line-height: 0;
 }
 
-/* useless */
+/* useless (firefox adaptive font) */
 @-moz-document url-prefix() {
 	header div {
 		top: -1.5em;
