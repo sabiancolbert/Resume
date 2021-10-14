@@ -116,13 +116,12 @@ function onload() {
 		c("b8");
 		createCell(B8tried, boxArr, B8tried, 8, 2, X2, Y8, b7, b9);
 	}
-	function b9() {}/*
+	function b9() {}
 		c("b9");
 		createCell(B9tried, boxArr, B9tried, 9, 2, X2, Y9, b8, c1);
 	}
 	function c1(){}
 	/*
-	function b1() {
 		c("b1");
 		boxArr =
 		[X1[1],
