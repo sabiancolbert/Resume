@@ -279,7 +279,7 @@ function rules(x, y) {
 
 /* cell creation function */
 function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, next, test = true) {
-	c("creating cell");
+	c("creating cell" + test);
 	c("clearArr:" + clearArr);
 	c("boxArr:"+boxArr);
 	var number = 0;
