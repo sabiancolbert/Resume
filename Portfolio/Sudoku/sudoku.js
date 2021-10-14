@@ -89,6 +89,19 @@ function onload() {
 		c("b3");
 		createCell(B3tried, boxArr, B3tried, 3, 2, X2, Y3, b2, b4);
 	}
+	function b4() {
+		c("b4");
+		boxArr=[X1[4],X1[5],X1[6]];
+		createCell(B4tried, boxArr, B4tried, 4, 2, X2, Y4, b3, b5);
+	}
+	function b5() {
+		c("b5");
+		createCell(B5tried, boxArr, B5tried, 5, 2, X2, Y5, b4, b6);
+	}
+	function b6() {
+		c("b6");
+		//createCell(B5tried, boxArr, B5tried, 5, 2, X2, Y5, b4, b6);
+	}
 	//HERE are these finished?
 	a1();
 	/* unsolve puzzle */
