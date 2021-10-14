@@ -84,7 +84,8 @@ function onload() {
 		createCell(B2tried, B2tried, boxArr, 2, 2, X2, Y2, b1, b3);
 	}
 	function b3() {
-		c("b3");}
+		c("b3");
+	}
 	//HERE are these finished?
 	a1();
 	/* unsolve puzzle */
@@ -199,7 +200,7 @@ function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, ne
 		for (var i = clearArr.length-1; i>-1; i++) {
 			clearArr[i] = 0; //HERE
 		}
-		c("UNDO");
+		c("UNDO" + clearArr.length);
 		cellCounter -= clearArr.length;
 		previous();
 	} else {
