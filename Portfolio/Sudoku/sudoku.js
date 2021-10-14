@@ -28,6 +28,9 @@ function onload() {
 	function a4(){
 		createCell(A4tried, A4tried, boxArr, 4, 1, X1, Y4, a3, a5);
 	}
+	a5(){
+		
+	}
 	//HERE are these finished?
 	a1();
 	/* unsolve puzzle */
@@ -150,7 +153,6 @@ function createCell(triedArr, clearArr, boxArr, x, y, xLine, yLine, previous, ne
 		yLine[y] = number;
 		cells[cellCounter] = number;
 		cellCounter++;
-		c(next);
 		next();
 	}
 }
