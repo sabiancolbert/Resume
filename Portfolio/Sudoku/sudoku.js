@@ -150,6 +150,7 @@ function createCell(triedArr, clearArr, boxArr, x, y, xLine, yLine, previous, ne
 		yLine[y] = number;
 		cells[cellCounter] = number;
 		cellCounter++;
+		c(next);
 		next();
 	}
 }
