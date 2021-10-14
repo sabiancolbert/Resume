@@ -17,41 +17,62 @@ function onload() {
 		stop();
 	}
 	function a1() {
-		createCell(A1tried, A1tried, boxArr, 1, 1, X1, Y1, fail, , a2);
+		createCell(A1tried, A1tried, boxArr, 1, 1, X1, Y1, fail,, a2);
 	}
 	function a2() {
 		createCell(A2tried, A2tried, boxArr, 2, 1, X1, Y2, a1, a3);
 	}
 	function a3() {
-		createCell(A3tried, A3tried, boxArr, 3, 1, X1, Y3, a2,a4);
+		createCell(A3tried, A3tried, boxArr, 3, 1, X1, Y3, a2, a4);
 	}
 	function a4() {
-		createCell(A4tried, A4tried, boxArr, 4, 1, X1, Y4, a3,a5);
+		createCell(A4tried, A4tried, boxArr, 4, 1, X1, Y4, a3, a5);
 	}
 	function a5() {
-		createCell(A5tried, A5tried, boxArr, 5, 1, X1, Y5, a4,a6);
+		createCell(A5tried, A5tried, boxArr, 5, 1, X1, Y5, a4, a6);
 	}
 	function a6() {
-		createCell(A6tried, A6tried, boxArr, 6, 1, X1, Y6, a5,a7);
+		createCell(A6tried, A6tried, boxArr, 6, 1, X1, Y6, a5, a7);
 	}
 	function a7() {
-		createCell(A7tried, A7tried, boxArr, 7, 1, X1, Y7, a6,a8);
+		createCell(A7tried, A7tried, boxArr, 7, 1, X1, Y7, a6, a8);
 	}
 	function a8() {
-		createCell(A8tried, A8tried, boxArr, 8, 1, X1, Y8, a7,a9);
+		createCell(A8tried, A8tried, boxArr, 8, 1, X1, Y8, a7, a9);
 	}
 	function a9() {
-		createCell(A9tried, A9tried, boxArr, 9, 1, X1, Y9, a8,b1);
+		createCell(A9tried, A9tried, boxArr, 9, 1, X1, Y9, a8, b1);
 	}
 	function b1() {
-		boxArrs = [X1[1], X1[2], X1[3]];
-		clearArrs = [X2[1], Y1[2], X1[2], Y2[1], X1[3], Y3[1], X1[4], Y4[1], X1[5], Y5[1], X1[6], Y6[1], X1[7], Y7[1], X1[8], Y8[1], X1[9], Y9[1];
-		createCell(B1tried, clearArr, boxArr, 1, 2, X2, Y1, a1,b2);
+		boxArrs =
+		[X1[1],
+			X1[2],
+			X1[3]];
+		clearArrs =
+		[X2[1],
+			Y1[2],
+			X1[2],
+			Y2[1],
+			X1[3],
+			Y3[1],
+			X1[4],
+			Y4[1],
+			X1[5],
+			Y5[1],
+			X1[6],
+			Y6[1],
+			X1[7],
+			Y7[1],
+			X1[8],
+			Y8[1],
+			X1[9],
+			Y9[1]];
+		createCell(B1tried, clearArr, boxArr, 1, 2, X2, Y1, a1, b2);
 	}
 	function b2() {
-		createCell(B2tried, B2tried, boxArr, 2, 2, X2, Y2, b1,b3);
+		createCell(B2tried, B2tried, boxArr, 2, 2, X2, Y2, b1, b3);
 	}
-	function b3(){}
+	function b3() {}
 	//HERE are these finished?
 	a1();
 	/* unsolve puzzle */
@@ -164,7 +185,7 @@ function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, ne
 	}
 	if (invalid) {
 		for (var i = clearArr.length-1; i>-1; i++) {
-			clearArr[i] = 0;//HERE
+			clearArr[i] = 0; //HERE
 		}
 		cellCounter -= clearArr.length;
 		previous();
