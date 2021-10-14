@@ -17,7 +17,7 @@ function onload() {
 		stop();
 	}
 	function a1() {
-		createCell(A1tried, A1tried, boxArr, 1, 1, X1, Y1, fail,, a2);
+		createCell(A1tried, A1tried, boxArr, 1, 1, X1, Y1, fail, a2);
 	}
 	function a2() {
 		createCell(A2tried, A2tried, boxArr, 2, 1, X1, Y2, a1, a3);
