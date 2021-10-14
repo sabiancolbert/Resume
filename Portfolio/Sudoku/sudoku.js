@@ -11,8 +11,8 @@ function c(c) {
 function onload() {
 	/* create solution */
 	var counter = 1;
-	var boxArr = new Array(0);
 	var clearArr = new Array(0);
+	var boxArr = new Array(0);
 	function fail() {
 		alert("No possible games with these settings.");
 	}
@@ -41,7 +41,12 @@ function onload() {
 		createCell(A8tried, A8tried, boxArr, 8, 1, X1, Y8, a7, a9);
 	}
 	function a9() {
-		createCell(A9tried, A9tried, boxArr, 9, 1, X1, Y9, a8, b1);
+		createCell(A9tried, A9tried, boxArr, 9, 1, X1, Y9, a8, setArrs([X1[2],X1[3],X1[4],X1[5],X1[6],X1[7],X1[8],X1[9]],[X1[1],X1[2],X1[3]]));
+	}
+	function setArrs(a2_a9, a1_a3){
+	clearArr = a2_a9;
+	boxArr = a1_a3;
+	b1();
 	}
 	function b1() {};
 	//HERE are these finished?
