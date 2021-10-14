@@ -34,13 +34,13 @@ function onload() {
 	function a6() {
 		createCell(A6tried, A6tried, boxArr, 6, 1, X1, Y6, a5, a7);
 	}
-	function a5() {
+	function a7() {
 		createCell(A7tried, A7tried, boxArr, 7, 1, X1, Y7, a6, a8);
 	}
-	function a5() {
+	function a8() {
 		createCell(A8tried, A8tried, boxArr, 8, 1, X1, Y8, a7, a9);
 	}
-	function a5() {
+	function a9() {
 		createCell(A9tried, A9tried, boxArr, 9, 1, X1, Y9, a8, b1);
 	}
 	function b1() {};
