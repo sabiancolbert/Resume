@@ -53,6 +53,7 @@ function onload() {
 		c("a9");
 		createCell(A9tried, boxArr, A9tried, 9, 1, X1, Y9, a8, b1);
 	}
+
 	function b1() {
 		c("b1");
 		boxArr =
@@ -91,7 +92,9 @@ function onload() {
 	}
 	function b4() {
 		c("b4");
-		boxArr=[X1[4],X1[5],X1[6]];
+		boxArr = [X1[4],
+			X1[5],
+			X1[6]];
 		createCell(B4tried, boxArr, B4tried, 4, 2, X2, Y4, b3, b5);
 	}
 	function b5() {
@@ -100,8 +103,91 @@ function onload() {
 	}
 	function b6() {
 		c("b6");
-		//createCell(B5tried, boxArr, B5tried, 5, 2, X2, Y5, b4, b6);
+		createCell(B6tried, boxArr, B6tried, 6, 2, X2, Y6, b5, b7);
 	}
+	function b7() {
+		c("b7");
+		boxArr = [X1[7],
+			X1[8],
+			X1[9]];
+		createCell(B7tried, boxArr, B7tried, 7, 2, X2, Y7, b6, b8);
+	}
+	function b8() {
+		c("b8");
+		createCell(B8tried, boxArr, B8tried, 8, 2, X2, Y8, b7, b9);
+	}
+	function b9() {
+		c("b9");
+		createCell(B9tried, boxArr, B9tried, 9, 2, X2, Y9, b8, c1);
+	}
+	function c1(){}
+	/*
+	function b1() {
+		c("b1");
+		boxArr =
+		[X1[1],
+			X1[2],
+			X1[3]];
+		c("&"+boxArr);
+		clearArr =
+		[X2[1],
+			Y1[2],
+			X1[2],
+			Y2[1],
+			X1[3],
+			Y3[1],
+			X1[4],
+			Y4[1],
+			X1[5],
+			Y5[1],
+			X1[6],
+			Y6[1],
+			X1[7],
+			Y7[1],
+			X1[8],
+			Y8[1],
+			X1[9],
+			Y9[1]];
+		createCell(B1tried, boxArr, clearArr, 1, 2, X2, Y1, a1, b2);
+	}
+	function b2() {
+		c("b2");
+		createCell(B2tried, boxArr, B2tried, 2, 2, X2, Y2, b1, b3);
+	}
+	function b3() {
+		c("b3");
+		createCell(B3tried, boxArr, B3tried, 3, 2, X2, Y3, b2, b4);
+	}
+	function b4() {
+		c("b4");
+		boxArr = [X1[4],
+			X1[5],
+			X1[6]];
+		createCell(B4tried, boxArr, B4tried, 4, 2, X2, Y4, b3, b5);
+	}
+	function b5() {
+		c("b5");
+		createCell(B5tried, boxArr, B5tried, 5, 2, X2, Y5, b4, b6);
+	}
+	function b6() {
+		c("b6");
+		createCell(B6tried, boxArr, B6tried, 6, 2, X2, Y6, b5, b7);
+	}
+	function b7() {
+		c("b7");
+		boxArr = [X1[7],
+			X1[8],
+			X1[9]];
+		createCell(B7tried, boxArr, B7tried, 7, 2, X2, Y7, b6, b8);
+	}
+	function b8() {
+		c("b8");
+		createCell(B8tried, boxArr, B8tried, 8, 2, X2, Y8, b7, b9);
+	}
+	function b9() {
+		c("b9");
+		createCell(B9tried, boxArr, B9tried, 9, 2, X2, Y9, b8, c1);
+	}*/
 	//HERE are these finished?
 	a1();
 	/* unsolve puzzle */
