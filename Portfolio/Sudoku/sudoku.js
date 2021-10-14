@@ -194,7 +194,7 @@ function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, ne
 				c("invalid lines");
 				invalid = true;
 			} else if (boxArr.includes(number)) {
-				c(number+ "invalid box" + boxArr);
+				c(number+ "&" + triedArr+"invalid box" + boxArr);
 				invalid = true;
 			} else {
 				invalid = rules(x, y);
