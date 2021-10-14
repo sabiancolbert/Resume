@@ -10,11 +10,11 @@ function c(c) {
 /* set puzzle */
 function onload() {
 	/* create solution */
-	var clearArr = new Array(0);
 	var boxArr = new Array(0);
-	function setArrs(clears, boxes) {
-		clearArr = clears;
+	var clearArr = new Array(0);
+	function setArrs(boxes,  clears) {
 		boxArr = boxes;
+		clearArr = clears;
 	}
 	function fail() {
 		alert("No possible games with these settings.");
@@ -46,13 +46,13 @@ function onload() {
 	function a9() {
 		createCell(A9tried, A9tried, boxArr, 9, 1, X1, Y9, a8);
 	}
-	//clearArr a2-a9
 	//boxArr a1-a3
+	//clearArr a2-a9
 	function b1() {
 		createCell(B1tried, clearArr, boxArr, 1, 2, X2, Y1, a1);
 	}
-	function b2(){
-		createCell(B2tried, );
+	function b2() {
+		createCell(B2tried, B2tried, boxArr, 2, 2, X2, Y2, b1);
 	}
 	//HERE are these finished?
 	a1();
@@ -64,7 +64,7 @@ function onload() {
 	a7();
 	a8();
 	a9();
-	setArrs([X2[1], Y1[2], X1[2], Y2[1], X1[3],Y3[1],  X1[4],Y4[1],  X1[5], Y5[1],  X1[6], Y6[1],  X1[7], Y7[1],  X1[8],Y8[1],  X1[9], Y9[1]],  [X1[1],  X1[2], X1[3]]);
+	setArrs([X1[1], X1[2], X1[3]], [X2[1], Y1[2], X1[2], Y2[1], X1[3], Y3[1], X1[4], Y4[1], X1[5], Y5[1], X1[6], Y6[1], X1[7], Y7[1], X1[8], Y8[1], X1[9], Y9[1]]);
 	b1();
 	/* unsolve puzzle */
 	{}
@@ -155,7 +155,7 @@ function rules(x, y) {
 }
 
 /* cell creation function */
-function createCell(triedArr, clearArr, boxArr, x, y, xLine, yLine, previous, next) {
+function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, next) {
 	var number = 0;
 	invalid = true;
 	while (invalid && triedArr.length < 9) {
@@ -176,7 +176,7 @@ function createCell(triedArr, clearArr, boxArr, x, y, xLine, yLine, previous, ne
 	}
 	if (invalid) {
 		clearArr.foreach(cell => cell = 0);
-		cellCounter-=clearArr.length;
+		cellCounter -= clearArr.length;
 		previous();
 	} else {
 		xLine[x] = number;
