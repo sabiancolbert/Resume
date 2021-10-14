@@ -23,14 +23,12 @@ function onload() {
 		createCell(A2tried, A2tried, boxArr, 2, 1, X1, Y2, a1, a3);
 	}
 	function a3() {
-	createCell(A3tried, A3tried, boxArr, 3, 1, X1, Y3, a2, a4);
+		createCell(A3tried, A3tried, boxArr, 3, 1, X1, Y3, a2, a4);
 	}
-	function a4(){
+	function a4() {
 		createCell(A4tried, A4tried, boxArr, 4, 1, X1, Y4, a3, a5);
 	}
-	a5(){
-		
-	}
+	function a5() {}
 	//HERE are these finished?
 	a1();
 	/* unsolve puzzle */
@@ -162,32 +160,32 @@ function set(cell) {
 	/* set cell */
 	if (!setNumbers.includes(cell)) {
 		document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
-	/* check answer */
-	var answer = 0;
-	if (cell.substring(0, 1) == "a") {
-		answer = cell.substring(1, 2);
-	} else if (cell.substring(0, 1) == "b") {
-		answer = 9 + cell.substring(1, 2);
-	} else if (cell.substring(0, 1) == "c") {
-		answer = 18 + cell.substring(1, 2);
-	} else if (cell.substring(0, 1) == "d") {
-		answer = 27 + cell.substring(1, 2);
-	} else if (cell.substring(0, 1) == "e") {
-		answer = 36 + cell.substring(1, 2);
-	} else if (cell.substring(0, 1) == "f") {
-		answer = 45 + cell.substring(1, 2);
-	} else if (cell.substring(0, 1) == "g") {
-		answer = 54 + cell.substring(1, 2);
-	} else if (cell.substring(0, 1) == "h") {
-		answer = 63 + cell.substring(1, 2);
-	} else if (cell.substring(0, 1) == "i") {
-		answer = 72 + cell.substring(1, 2);
-	}
-	if (check && !cell.innerHTML == answer) {
-		document.getElementById(cell).style = "color:red;";
-	} else {
-		document.getElementById(cell).style = "color:black;";
-	}
+		/* check answer */
+		var answer = 0;
+		if (cell.substring(0, 1) == "a") {
+			answer = cell.substring(1, 2);
+		} else if (cell.substring(0, 1) == "b") {
+			answer = 9 + cell.substring(1, 2);
+		} else if (cell.substring(0, 1) == "c") {
+			answer = 18 + cell.substring(1, 2);
+		} else if (cell.substring(0, 1) == "d") {
+			answer = 27 + cell.substring(1, 2);
+		} else if (cell.substring(0, 1) == "e") {
+			answer = 36 + cell.substring(1, 2);
+		} else if (cell.substring(0, 1) == "f") {
+			answer = 45 + cell.substring(1, 2);
+		} else if (cell.substring(0, 1) == "g") {
+			answer = 54 + cell.substring(1, 2);
+		} else if (cell.substring(0, 1) == "h") {
+			answer = 63 + cell.substring(1, 2);
+		} else if (cell.substring(0, 1) == "i") {
+			answer = 72 + cell.substring(1, 2);
+		}
+		if (check && !cell.innerHTML == answer) {
+			document.getElementById(cell).style = "color:red;";
+		} else {
+			document.getElementById(cell).style = "color:black;";
+		}
 	}
 }
 
