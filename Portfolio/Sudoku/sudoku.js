@@ -118,7 +118,7 @@ function onload() {
 	}
 	function b9() {
 		c("b9");
-		createCell(B9tried, boxArr, B9tried, 9, 2, X2, Y9, b8, c1, false);
+		createCell(B9tried, boxArr, B9tried, 9, 2, X2, Y9, b8, c1);
 	}
 	function c1() {}
 	/*
@@ -278,13 +278,13 @@ function rules(x, y) {
 }
 
 /* cell creation function */
-function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, next, test = true) {
-	c("creating cell" + test);
+function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, next) {
+	c("creating cell");
 	c("clearArr:" + clearArr);
 	c("boxArr:"+boxArr);
 	var number = 0;
 	invalid = true;
-	while (invalid && triedArr.length < 9 && test) {
+	while (invalid && triedArr.length < 9) {
 		number = Math.floor(Math.random()*9+1);
 		invalid = false;
 		c("number:"+number);
@@ -305,7 +305,6 @@ function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, ne
 			}
 		}
 	}
-	if (test) {
 		if (invalid) {
 			for (var i = clearArr.length-1; i>-1; i++) {
 				clearArr[i] = 0; //HERE
@@ -321,10 +320,6 @@ function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, ne
 			cellCounter++;
 			next ();
 		}
-
-	} else {
-		c("Nope");
-	}
 }
 
 /* user set number to cell */
