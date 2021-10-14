@@ -18,6 +18,7 @@ function onload() {
 	}
 	function fail() {
 		alert("No possible games with these settings.");
+	stop();
 	}
 	function a1() {
 		createCell(A1tried, A1tried, boxArr, 1, 1, X1, Y1, fail);
@@ -175,7 +176,7 @@ function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, ne
 		}
 	}
 	if (invalid) {
-		for(i = clearArr.length-1; i>-1;i++ ){
+		for (i = clearArr.length-1; i>-1; i++) {
 			clearArr[i] = 0;
 		}
 		cellCounter -= clearArr.length;
