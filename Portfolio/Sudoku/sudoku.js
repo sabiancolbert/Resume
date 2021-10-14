@@ -323,7 +323,8 @@ function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, ne
 		}
 
 	} else {
-		c("Nope")}
+		c("Nope");
+	}
 }
 
 /* user set number to cell */
