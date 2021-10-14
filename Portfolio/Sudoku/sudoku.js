@@ -175,7 +175,9 @@ function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, ne
 		}
 	}
 	if (invalid) {
-		clearArr.foreach(cell => cell = 0);
+		for(i = clearArr.length-1; i>-1;i++ ){
+			clearArr[i] = 0;
+		}
 		cellCounter -= clearArr.length;
 		previous();
 	} else {
