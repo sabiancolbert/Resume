@@ -105,8 +105,8 @@ function onload() {
 		c("b6");
 		createCell(B6tried, boxArr, B6tried, 6, 2, X2, Y6, b5, b7);
 	}
-	function b7() {
-		c("b7");
+	function b7() {}
+	/*	c("b7");
 		boxArr = [X1[7],
 			X1[8],
 			X1[9]];
