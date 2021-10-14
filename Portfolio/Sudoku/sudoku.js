@@ -139,7 +139,8 @@ function createCell(triedArr, clearArr, boxArr, x, y, xLine, yLine, previous, ne
 		}
 	}
 	if (invalid) {
-		clearArr.forEach(arr => arr = []);
+		clearArr = [];
+		//clearArr.forEach(arr => arr = []);
 		xLine[x] = 0;
 		yLine[y] = 0;
 		cellCounter--;
