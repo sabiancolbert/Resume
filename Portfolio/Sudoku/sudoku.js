@@ -10,7 +10,7 @@ function c(c) {
 /* set puzzle */
 function onload() {
 	/* create solution */
-	var counter =1;
+	var counter = 1;
 	var boxArr = new Array(0);
 	var clearArr = new Array(0);
 	function fail() {
@@ -179,19 +179,22 @@ function rules(x, y) {
 
 /* cell creation function */
 function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, next) {
-	c("creating " + triedArr.name);
+	c("creating cell");
 	var number = 0;
 	invalid = true;
 	while (invalid && triedArr.length < 9) {
 		number = Math.floor(Math.random()*9+1);
 		invalid = false;
 		if (triedArr.includes(number)) {
+			c("invalid tried");
 			invalid = true;
 		} else {
 			triedArr.push(number);
 			if (xLine.includes(number) || yLine.includes(number)) {
+				c("invalid lines");
 				invalid = true;
 			} else if (boxArr.includes(number)) {
+				c("invalid box");
 				invalid = true;
 			} else {
 				invalid = rules(x, y);
