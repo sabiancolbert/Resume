@@ -87,6 +87,7 @@ function onload() {
 	}
 	function b3() {
 		c("b3");
+		createCell(B3tried, boxArr, B3tried, 3, 2, X2, Y3, b2, b4);
 	}
 	//HERE are these finished?
 	a1();
