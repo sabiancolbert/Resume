@@ -55,12 +55,12 @@ function onload() {
 	}
 	function b1() {
 		c("b1");
-		boxArrs =
+		boxArr =
 		[X1[1],
 			X1[2],
 			X1[3]];
-			c("&"+boxArrs);
-		clearArrs =
+		c("&"+boxArrs);
+		clearArr =
 		[X2[1],
 			Y1[2],
 			X1[2],
