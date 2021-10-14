@@ -27,7 +27,7 @@ function onload() {
 	}
 	function a3() {
 		c("a3");
-		createCell(A3tried,boxArr, A3tried, 3, 1, X1, Y3, a2, a4);
+		createCell(A3tried, boxArr, A3tried, 3, 1, X1, Y3, a2, a4);
 	}
 	function a4() {
 		c("a4");
@@ -39,19 +39,19 @@ function onload() {
 	}
 	function a6() {
 		c("a6");
-		createCell(A6tried,boxArr, A6tried, 6, 1, X1, Y6, a5, a7);
+		createCell(A6tried, boxArr, A6tried, 6, 1, X1, Y6, a5, a7);
 	}
 	function a7() {
 		c("a7");
-		createCell(A7tried,boxArr, A7tried, 7, 1, X1, Y7, a6, a8);
+		createCell(A7tried, boxArr, A7tried, 7, 1, X1, Y7, a6, a8);
 	}
 	function a8() {
 		c("a8");
-		createCell(A8tried,boxArr, A8tried, 8, 1, X1, Y8, a7, a9);
+		createCell(A8tried, boxArr, A8tried, 8, 1, X1, Y8, a7, a9);
 	}
 	function a9() {
 		c("a9");
-		createCell(A9tried,boxArr, A9tried, 9, 1, X1, Y9, a8, b1);
+		createCell(A9tried, boxArr, A9tried, 9, 1, X1, Y9, a8, b1);
 	}
 	function b1() {
 		c("b1");
@@ -78,11 +78,11 @@ function onload() {
 			Y8[1],
 			X1[9],
 			Y9[1]];
-		createCell(B1tried,boxArr, clearArr, 1, 2, X2, Y1, a1, b2);
+		createCell(B1tried, boxArr, clearArr, 1, 2, X2, Y1, a1, b2);
 	}
 	function b2() {
 		c("b2");
-		createCell(B2tried,boxArr, B2tried, 2, 2, X2, Y2, b1, b3);
+		createCell(B2tried, boxArr, B2tried, 2, 2, X2, Y2, b1, b3);
 	}
 	function b3() {
 		c("b3");
@@ -180,11 +180,14 @@ function rules(x, y) {
 /* cell creation function */
 function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, next) {
 	c("creating cell");
+	c("clearArr:" + clearArr);
+	c("boxArr"+boxArr);
 	var number = 0;
 	invalid = true;
 	while (invalid && triedArr.length < 9) {
 		number = Math.floor(Math.random()*9+1);
 		invalid = false;
+		c("number:"+number);
 		if (triedArr.includes(number)) {
 			c("invalid tried");
 			invalid = true;
@@ -194,21 +197,23 @@ function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, ne
 				c("invalid lines");
 				invalid = true;
 			} else if (boxArr.includes(number)) {
-				c(number+ "&" + triedArr+"invalid box" + boxArr);
+				c("invalid box");
 				invalid = true;
 			} else {
 				invalid = rules(x, y);
-			}
+			c("to rules, invalid = " + invalid);
+				}
 		}
 	}
 	if (invalid) {
 		for (var i = clearArr.length-1; i>-1; i++) {
 			clearArr[i] = 0; //HERE
 		}
-		c("UNDO" + clearArr.length);
+		c("invalid, clearing " + clearArr.length);
 		cellCounter -= clearArr.length;
 		previous();
 	} else {
+		c("valid");
 		xLine[x] = number;
 		yLine[y] = number;
 		cells[cellCounter] = number;
