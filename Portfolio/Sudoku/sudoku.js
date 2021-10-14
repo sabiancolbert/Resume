@@ -9,7 +9,6 @@ function c(c) {
 
 /* set puzzle */
 function onload() {
-	console.log("start");
 	/* create solution */
 	var counter = 1;
 	var boxArr = new Array(0);
@@ -24,8 +23,12 @@ function onload() {
 		createCell(A2tried, A2tried, boxArr, 2, 1, X1, Y2, a1, a3);
 	}
 	function a3() {
-		console.log("done");
+	createCell(A3tried, A3tried, boxArr, 3, 1, X1, Y3, a2, a4);
 	}
+	function a4(){
+		createCell(A4tried, A4tried, boxArr, 4, 1, X1, Y4, a3, a5);
+	}
+	//HERE are these finished?
 	a1();
 	/* unsolve puzzle */
 	{}
@@ -136,7 +139,7 @@ function createCell(triedArr, clearArr, boxArr, x, y, xLine, yLine, previous, ne
 		}
 	}
 	if (invalid) {
-		//HERE foreach array in clear arrray
+		//HERE break maybe
 		for(i=clearArr.length - 1;i>-1;i--){
 		clearArr[i] = [];
 		}
