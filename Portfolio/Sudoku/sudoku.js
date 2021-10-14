@@ -41,12 +41,13 @@ function onload() {
 		createCell(A8tried, A8tried, boxArr, 8, 1, X1, Y8, a7, a9);
 	}
 	function a9() {
-		createCell(A9tried, A9tried, boxArr, 9, 1, X1, Y9, a8, setArrs([X1[2],X1[3],X1[4],X1[5],X1[6],X1[7],X1[8],X1[9]],[X1[1],X1[2],X1[3]]));
+		createCell(A9tried, A9tried, boxArr, 9, 1, X1, Y9, a8, setArrs([X1[2], X1[3], X1[4], X1[5], X1[6], X1[7], X1[8], X1[9]], [X1[1], X1[2], X1[3]]));
 	}
-	function setArrs(a2_a9, a1_a3){
-	clearArr = a2_a9;
-	boxArr = a1_a3;
-	b1();
+	function setArrs(a2_a9, a1_a3) {
+		clearArr = a2_a9;
+		boxArr = a1_a3;
+		b1();
+		//maybe dont functionception for 82 cells in a webpage
 	}
 	function b1() {};
 	//HERE are these finished?
