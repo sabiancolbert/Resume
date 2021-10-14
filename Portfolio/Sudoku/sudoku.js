@@ -10,6 +10,7 @@ function c(c) {
 /* set puzzle */
 function onload() {
 	/* create solution */
+	var counter =1;
 	var boxArr = new Array(0);
 	var clearArr = new Array(0);
 	function fail() {
@@ -91,7 +92,7 @@ function onload() {
 	/* unsolve puzzle */
 	{}
 	/* display puzzle */
-	var counter = 1;
+	counter = 1;
 	function display(row) {
 		for (var i = 1; i < 10; i++) {
 			if (cells[counter] > 0) {
@@ -178,7 +179,7 @@ function rules(x, y) {
 
 /* cell creation function */
 function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, next) {
-	c("creating " + triedArr);
+	c("creating " + triedArr.name);
 	var number = 0;
 	invalid = true;
 	while (invalid && triedArr.length < 9) {
