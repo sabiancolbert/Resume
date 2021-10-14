@@ -59,6 +59,7 @@ function onload() {
 		[X1[1],
 			X1[2],
 			X1[3]];
+			c("&"+boxArrs);
 		clearArrs =
 		[X2[1],
 			Y1[2],
@@ -181,7 +182,7 @@ function rules(x, y) {
 function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, next) {
 	c("creating cell");
 	c("clearArr:" + clearArr);
-	c("boxArr"+boxArr);
+	c("boxArr:"+boxArr);
 	var number = 0;
 	invalid = true;
 	while (invalid && triedArr.length < 9) {
@@ -201,8 +202,8 @@ function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, ne
 				invalid = true;
 			} else {
 				invalid = rules(x, y);
-			c("to rules, invalid = " + invalid);
-				}
+				c("to rules, invalid = " + invalid);
+			}
 		}
 	}
 	if (invalid) {
