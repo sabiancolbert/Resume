@@ -59,7 +59,7 @@ function onload() {
 		[X1[1],
 			X1[2],
 			X1[3]];
-		c("&"+boxArrs);
+		c("&"+boxArr);
 		clearArr =
 		[X2[1],
 			Y1[2],
