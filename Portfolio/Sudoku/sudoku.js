@@ -43,7 +43,7 @@ function onload() {
 	function a5() {
 		createCell(A9tried, A9tried, boxArr, 9, 1, X1, Y9, a8, b1);
 	}
-	function b1();
+	function b1() {};
 	//HERE are these finished?
 	a1();
 	/* unsolve puzzle */
