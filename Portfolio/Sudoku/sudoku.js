@@ -19,39 +19,39 @@ function onload() {
 	}
 	function a1() {
 		c("a1");
-		createCell(A1tried, A1tried, boxArr, 1, 1, X1, Y1, fail, a2);
+		createCell(A1tried, boxArr, A1tried, 1, 1, X1, Y1, fail, a2);
 	}
 	function a2() {
 		c("a2");
-		createCell(A2tried, A2tried, boxArr, 2, 1, X1, Y2, a1, a3);
+		createCell(A2tried, boxArr, A2tried, 2, 1, X1, Y2, a1, a3);
 	}
 	function a3() {
 		c("a3");
-		createCell(A3tried, A3tried, boxArr, 3, 1, X1, Y3, a2, a4);
+		createCell(A3tried,boxArr, A3tried, 3, 1, X1, Y3, a2, a4);
 	}
 	function a4() {
 		c("a4");
-		createCell(A4tried, A4tried, boxArr, 4, 1, X1, Y4, a3, a5);
+		createCell(A4tried, boxArr, A4tried, 4, 1, X1, Y4, a3, a5);
 	}
 	function a5() {
 		c("a5");
-		createCell(A5tried, A5tried, boxArr, 5, 1, X1, Y5, a4, a6);
+		createCell(A5tried, boxArr, A5tried, 5, 1, X1, Y5, a4, a6);
 	}
 	function a6() {
 		c("a6");
-		createCell(A6tried, A6tried, boxArr, 6, 1, X1, Y6, a5, a7);
+		createCell(A6tried,boxArr, A6tried, 6, 1, X1, Y6, a5, a7);
 	}
 	function a7() {
 		c("a7");
-		createCell(A7tried, A7tried, boxArr, 7, 1, X1, Y7, a6, a8);
+		createCell(A7tried,boxArr, A7tried, 7, 1, X1, Y7, a6, a8);
 	}
 	function a8() {
 		c("a8");
-		createCell(A8tried, A8tried, boxArr, 8, 1, X1, Y8, a7, a9);
+		createCell(A8tried,boxArr, A8tried, 8, 1, X1, Y8, a7, a9);
 	}
 	function a9() {
 		c("a9");
-		createCell(A9tried, A9tried, boxArr, 9, 1, X1, Y9, a8, b1);
+		createCell(A9tried,boxArr, A9tried, 9, 1, X1, Y9, a8, b1);
 	}
 	function b1() {
 		c("b1");
@@ -78,11 +78,11 @@ function onload() {
 			Y8[1],
 			X1[9],
 			Y9[1]];
-		createCell(B1tried, clearArr, boxArr, 1, 2, X2, Y1, a1, b2);
+		createCell(B1tried,boxArr, clearArr, 1, 2, X2, Y1, a1, b2);
 	}
 	function b2() {
 		c("b2");
-		createCell(B2tried, B2tried, boxArr, 2, 2, X2, Y2, b1, b3);
+		createCell(B2tried,boxArr, B2tried, 2, 2, X2, Y2, b1, b3);
 	}
 	function b3() {
 		c("b3");
