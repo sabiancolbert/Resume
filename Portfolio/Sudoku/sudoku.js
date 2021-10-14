@@ -305,22 +305,25 @@ function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, ne
 			}
 		}
 	}
-	if(test){
-	if (invalid) {
-		for (var i = clearArr.length-1; i>-1; i++) {
-			clearArr[i] = 0; //HERE
+	if (test) {
+		if (invalid) {
+			for (var i = clearArr.length-1; i>-1; i++) {
+				clearArr[i] = 0; //HERE
+			}
+			c("invalid, clearing " + clearArr.length);
+			cellCounter -= clearArr.length;
+			previous();
+		} else {
+			c("valid");
+			xLine[x] = number;
+			yLine[y] = number;
+			cells[cellCounter] = number;
+			cellCounter++;
+			next ();
 		}
-		c("invalid, clearing " + clearArr.length);
-		cellCounter -= clearArr.length;
-		previous();
+
 	} else {
-		c("valid");
-		xLine[x] = number;
-		yLine[y] = number;
-		cells[cellCounter] = number;
-		cellCounter++;
-		next ();
-	}}
+		c("Nope")}
 }
 
 /* user set number to cell */
