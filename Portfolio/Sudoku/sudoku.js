@@ -28,7 +28,22 @@ function onload() {
 	function a4() {
 		createCell(A4tried, A4tried, boxArr, 4, 1, X1, Y4, a3, a5);
 	}
-	function a5() {}
+	function a5() {
+		createCell(A5tried, A5tried, boxArr, 5, 1, X1, Y5, a4, a6);
+	}
+	function a6() {
+		createCell(A6tried, A6tried, boxArr, 6, 1, X1, Y6, a5, a7);
+	}
+	function a5() {
+		createCell(A7tried, A7tried, boxArr, 7, 1, X1, Y7, a6, a8);
+	}
+	function a5() {
+		createCell(A8tried, A8tried, boxArr, 8, 1, X1, Y8, a7, a9);
+	}
+	function a5() {
+		createCell(A9tried, A9tried, boxArr, 9, 1, X1, Y9, a8, b1);
+	}
+	function b1();
 	//HERE are these finished?
 	a1();
 	/* unsolve puzzle */
