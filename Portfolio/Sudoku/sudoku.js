@@ -178,6 +178,7 @@ function rules(x, y) {
 
 /* cell creation function */
 function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, next) {
+	c("creating " + triedArr);
 	var number = 0;
 	invalid = true;
 	while (invalid && triedArr.length < 9) {
