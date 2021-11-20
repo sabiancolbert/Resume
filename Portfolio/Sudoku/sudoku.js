@@ -13,6 +13,53 @@ function onload() {
 	var counter = 1;
 	var boxArr = new Array(0);
 	var clearArr = new Array(0);
+	var next = true;
+	var done = false;
+
+/* cell creation function */
+function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine) {
+	c("creating cell");
+	c("clearArr:" + clearArr);
+	c("boxArr:"+boxArr);
+	var number = 0;
+	invalid = true;
+	while (invalid && triedArr.length < 9) {
+		number = Math.floor(Math.random()*9+1);
+		invalid = false;
+		c("number:"+number);
+		if (triedArr.includes(number)) {
+			c("invalid tried");
+			invalid = true;
+		} else {
+			triedArr.push(number);
+			if (xLine.includes(number) || yLine.includes(number)) {
+				c("invalid lines");
+				invalid = true;
+			} else if (boxArr.includes(number)) {
+				c("invalid box");
+				invalid = true;
+			} else {
+				invalid = rules(x, y);
+				c("to rules, invalid = " + invalid);
+			}
+		}
+	}
+		if (invalid) {
+			for (var i = clearArr.length-1; i>-1; i++) {
+				clearArr[i] = 0; //HERE
+			}
+			c("invalid, clearing " + clearArr.length);
+			cellCounter -= clearArr.length;
+			next = false;
+		} else {
+			c("valid");
+			xLine[x] = number;
+			yLine[y] = number;
+			cells[cellCounter] = number;
+			cellCounter++;
+			next = true;
+		}
+}
 	function fail() {
 		alert("No possible games with these settings.");
 		stop();
@@ -188,7 +235,12 @@ function onload() {
 		createCell(B9tried, boxArr, B9tried, 9, 2, X2, Y9, b8, c1);
 	}*/
 	//HERE are these finished?
-	a1();
+	while(!done){
+	  foreach(){
+	    //HERE HERE
+	  }
+	}
+	//next cell while true, if no more 0s then fin 
 	/* unsolve puzzle */
 	{}
 	/* display puzzle */
@@ -275,51 +327,6 @@ function rules(x, y) {
 	if (kn) {}
 
 	return invalid;
-}
-
-/* cell creation function */
-function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine, previous, next) {
-	c("creating cell");
-	c("clearArr:" + clearArr);
-	c("boxArr:"+boxArr);
-	var number = 0;
-	invalid = true;
-	while (invalid && triedArr.length < 9) {
-		number = Math.floor(Math.random()*9+1);
-		invalid = false;
-		c("number:"+number);
-		if (triedArr.includes(number)) {
-			c("invalid tried");
-			invalid = true;
-		} else {
-			triedArr.push(number);
-			if (xLine.includes(number) || yLine.includes(number)) {
-				c("invalid lines");
-				invalid = true;
-			} else if (boxArr.includes(number)) {
-				c("invalid box");
-				invalid = true;
-			} else {
-				invalid = rules(x, y);
-				c("to rules, invalid = " + invalid);
-			}
-		}
-	}
-		if (invalid) {
-			for (var i = clearArr.length-1; i>-1; i++) {
-				clearArr[i] = 0; //HERE
-			}
-			c("invalid, clearing " + clearArr.length);
-			cellCounter -= clearArr.length;
-			previous();
-		} else {
-			c("valid");
-			xLine[x] = number;
-			yLine[y] = number;
-			cells[cellCounter] = number;
-			cellCounter++;
-			next ();
-		}
 }
 
 /* user set number to cell */
