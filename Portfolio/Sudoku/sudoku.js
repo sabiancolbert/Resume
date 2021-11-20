@@ -237,6 +237,12 @@ function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine) {
 	//HERE are these finished?
 	while(!done){
 	  foreach(){
+	    if(next){
+	      
+	    }
+	    else{
+	      
+	    }
 	    //HERE HERE
 	  }
 	}
