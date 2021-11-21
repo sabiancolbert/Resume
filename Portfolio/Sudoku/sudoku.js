@@ -263,8 +263,7 @@ function onload() {
         } else if (currentX = 9) {
           a8();
         }
-      }
-      else if (currentY = 2){
+      } else if (currentY = 2) {
         if (currentX = 1) {
           a9();
         } else if (currentX = 2) {
@@ -284,28 +283,69 @@ function onload() {
         } else if (currentX = 9) {
           b8();
         }
-      }
-      else if(currentY = 3){
-      if (currentX = 1) {
+      } else if (currentY = 3) {
+        if (currentX = 1) {
           b9();
         } else if (currentX = 2) {
           c1();
         } else if (currentX = 3) {
-          2();
+          c2();
         } else if (currentX = 4) {
-          3();
+          c3();
         } else if (currentX = 5) {
-          4();
+          c4();
         } else if (currentX = 6) {
-          5();
+          c5();
         } else if (currentX = 7) {
-          6();
+          c6();
         } else if (currentX = 8) {
-          7();
+          c7();
         } else if (currentX = 9) {
-          8();
+          c8();
         }
-    }
+      }
+      else if (currentY = 4){
+        if (currentX = 1) {
+          c9();
+        } else if (currentX = 2) {
+          d1();
+        } else if (currentX = 3) {
+          d2();
+        } else if (currentX = 4) {
+          d3();
+        } else if (currentX = 5) {
+          d4();
+        } else if (currentX = 6) {
+          d5();
+        } else if (currentX = 7) {
+          d6();
+        } else if (currentX = 8) {
+          d7();
+        } else if (currentX = 9) {
+          d8();
+        }
+      }
+      else if (currentY = 5){
+        if (currentX = 1) {
+          d9();
+        } else if (currentX = 2) {
+          e1();
+        } else if (currentX = 3) {
+          e2();
+        } else if (currentX = 4) {
+          e3();
+        } else if (currentX = 5) {
+          e4();
+        } else if (currentX = 6) {
+          e5();
+        } else if (currentX = 7) {
+          e6();
+        } else if (currentX = 8) {
+          e7();
+        } else if (currentX = 9) {
+          e8();
+        }
+      }
     }
     //HERE HERE
   }
