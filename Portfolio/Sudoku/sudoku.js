@@ -15,6 +15,8 @@ function onload() {
 	var clearArr = new Array(0);
 	var next = true;
 	var done = false;
+	var currentX = 0;
+	var currentY = 0;
 
 /* cell creation function */
 function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine) {
@@ -59,6 +61,8 @@ function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine) {
 			cellCounter++;
 			next = true;
 		}
+			currentX=X;
+			currentY = Y;
 }
 	function fail() {
 		alert("No possible games with these settings.");
@@ -238,10 +242,17 @@ function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine) {
 	while(!done){
 	  foreach(){
 	    if(next){
-	      
+	      if(){}
 	    }
 	    else{
-	      
+	      if(currentY=1)
+	      {
+	        if(
+	        currentY=1){
+	        fail();
+	      }
+	          
+	        }
 	    }
 	    //HERE HERE
 	  }
