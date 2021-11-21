@@ -4,175 +4,175 @@
 
 /* teehee */
 function c(c) {
-	console.log(c);
+  console.log(c);
 }
 
 /* set puzzle */
 function onload() {
-	/* create solution */
-	var counter = 1;
-	var boxArr = new Array(0);
-	var clearArr = new Array(0);
-	var next = true;
-	var done = false;
-	var currentX = 0;
-	var currentY = 0;
+  /* create solution */
+  var counter = 1;
+  var boxArr = new Array(0);
+  var clearArr = new Array(0);
+  var next = true;
+  var done = false;
+  var currentX = 0;
+  var currentY = 0;
 
-/* cell creation function */
-function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine) {
-	c("creating cell");
-	c("clearArr:" + clearArr);
-	c("boxArr:"+boxArr);
-	var number = 0;
-	invalid = true;
-	while (invalid && triedArr.length < 9) {
-		number = Math.floor(Math.random()*9+1);
-		invalid = false;
-		c("number:"+number);
-		if (triedArr.includes(number)) {
-			c("invalid tried");
-			invalid = true;
-		} else {
-			triedArr.push(number);
-			if (xLine.includes(number) || yLine.includes(number)) {
-				c("invalid lines");
-				invalid = true;
-			} else if (boxArr.includes(number)) {
-				c("invalid box");
-				invalid = true;
-			} else {
-				invalid = rules(x, y);
-				c("to rules, invalid = " + invalid);
-			}
-		}
-	}
-		if (invalid) {
-			for (var i = clearArr.length-1; i>-1; i++) {
-				clearArr[i] = 0; //HERE
-			}
-			c("invalid, clearing " + clearArr.length);
-			cellCounter -= clearArr.length;
-			next = false;
-		} else {
-			c("valid");
-			xLine[x] = number;
-			yLine[y] = number;
-			cells[cellCounter] = number;
-			cellCounter++;
-			next = true;
-		}
-			currentX=X;
-			currentY = Y;
-}
-	function fail() {
-		alert("No possible games with these settings.");
-		stop();
-	}
-	function a1() {
-		c("a1");
-		createCell(A1tried, boxArr, A1tried, 1, 1, X1, Y1, fail, a2);
-	}
-	function a2() {
-		c("a2");
-		createCell(A2tried, boxArr, A2tried, 2, 1, X1, Y2, a1, a3);
-	}
-	function a3() {
-		c("a3");
-		createCell(A3tried, boxArr, A3tried, 3, 1, X1, Y3, a2, a4);
-	}
-	function a4() {
-		c("a4");
-		createCell(A4tried, boxArr, A4tried, 4, 1, X1, Y4, a3, a5);
-	}
-	function a5() {
-		c("a5");
-		createCell(A5tried, boxArr, A5tried, 5, 1, X1, Y5, a4, a6);
-	}
-	function a6() {
-		c("a6");
-		createCell(A6tried, boxArr, A6tried, 6, 1, X1, Y6, a5, a7);
-	}
-	function a7() {
-		c("a7");
-		createCell(A7tried, boxArr, A7tried, 7, 1, X1, Y7, a6, a8);
-	}
-	function a8() {
-		c("a8");
-		createCell(A8tried, boxArr, A8tried, 8, 1, X1, Y8, a7, a9);
-	}
-	function a9() {
-		c("a9");
-		createCell(A9tried, boxArr, A9tried, 9, 1, X1, Y9, a8, b1);
-	}
+  /* cell creation function */
+  function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine) {
+    c("creating cell");
+    c("clearArr:" + clearArr);
+    c("boxArr:"+boxArr);
+    var number = 0;
+    invalid = true;
+    while (invalid && triedArr.length < 9) {
+      number = Math.floor(Math.random()*9+1);
+      invalid = false;
+      c("number:"+number);
+      if (triedArr.includes(number)) {
+        c("invalid tried");
+        invalid = true;
+      } else {
+        triedArr.push(number);
+        if (xLine.includes(number) || yLine.includes(number)) {
+          c("invalid lines");
+          invalid = true;
+        } else if (boxArr.includes(number)) {
+          c("invalid box");
+          invalid = true;
+        } else {
+          invalid = rules(x, y);
+          c("to rules, invalid = " + invalid);
+        }
+      }
+    }
+    if (invalid) {
+      for (var i = clearArr.length-1; i>-1; i++) {
+        clearArr[i] = 0; //HERE
+      }
+      c("invalid, clearing " + clearArr.length);
+      cellCounter -= clearArr.length;
+      next = false;
+    } else {
+      c("valid");
+      xLine[x] = number;
+      yLine[y] = number;
+      cells[cellCounter] = number;
+      cellCounter++;
+      next = true;
+    }
+    currentX = X;
+    currentY = Y;
+  }
+  function fail() {
+    alert("No possible games with these settings.");
+    stop();
+  }
+  function a1() {
+    c("a1");
+    createCell(A1tried, boxArr, A1tried, 1, 1, X1, Y1, fail, a2);
+  }
+  function a2() {
+    c("a2");
+    createCell(A2tried, boxArr, A2tried, 2, 1, X1, Y2, a1, a3);
+  }
+  function a3() {
+    c("a3");
+    createCell(A3tried, boxArr, A3tried, 3, 1, X1, Y3, a2, a4);
+  }
+  function a4() {
+    c("a4");
+    createCell(A4tried, boxArr, A4tried, 4, 1, X1, Y4, a3, a5);
+  }
+  function a5() {
+    c("a5");
+    createCell(A5tried, boxArr, A5tried, 5, 1, X1, Y5, a4, a6);
+  }
+  function a6() {
+    c("a6");
+    createCell(A6tried, boxArr, A6tried, 6, 1, X1, Y6, a5, a7);
+  }
+  function a7() {
+    c("a7");
+    createCell(A7tried, boxArr, A7tried, 7, 1, X1, Y7, a6, a8);
+  }
+  function a8() {
+    c("a8");
+    createCell(A8tried, boxArr, A8tried, 8, 1, X1, Y8, a7, a9);
+  }
+  function a9() {
+    c("a9");
+    createCell(A9tried, boxArr, A9tried, 9, 1, X1, Y9, a8, b1);
+  }
 
-	function b1() {
-		c("b1");
-		boxArr =
-		[X1[1],
-			X1[2],
-			X1[3]];
-		c("&"+boxArr);
-		clearArr =
-		[X2[1],
-			Y1[2],
-			X1[2],
-			Y2[1],
-			X1[3],
-			Y3[1],
-			X1[4],
-			Y4[1],
-			X1[5],
-			Y5[1],
-			X1[6],
-			Y6[1],
-			X1[7],
-			Y7[1],
-			X1[8],
-			Y8[1],
-			X1[9],
-			Y9[1]];
-		createCell(B1tried, boxArr, clearArr, 1, 2, X2, Y1, a1, b2);
-	}
-	function b2() {
-		c("b2");
-		createCell(B2tried, boxArr, B2tried, 2, 2, X2, Y2, b1, b3);
-	}
-	function b3() {
-		c("b3");
-		createCell(B3tried, boxArr, B3tried, 3, 2, X2, Y3, b2, b4);
-	}
-	function b4() {
-		c("b4");
-		boxArr = [X1[4],
-			X1[5],
-			X1[6]];
-		createCell(B4tried, boxArr, B4tried, 4, 2, X2, Y4, b3, b5);
-	}
-	function b5() {
-		c("b5");
-		createCell(B5tried, boxArr, B5tried, 5, 2, X2, Y5, b4, b6);
-	}
-	function b6() {
-		c("b6");
-		createCell(B6tried, boxArr, B6tried, 6, 2, X2, Y6, b5, b7);
-	}
-	function b7() {
-		c("b7");
-		boxArr = [X1[7],
-			X1[8],
-			X1[9]];
-		createCell(B7tried, boxArr, B7tried, 7, 2, X2, Y7, b6, b8);
-	}
-	function b8() {
-		c("b8");
-		createCell(B8tried, boxArr, B8tried, 8, 2, X2, Y8, b7, b9);
-	}
-	function b9() {
-		c("b9");
-		createCell(B9tried, boxArr, B9tried, 9, 2, X2, Y9, b8, c1);
-	}
-	function c1() {}
-	/*
+  function b1() {
+    c("b1");
+    boxArr =
+    [X1[1],
+      X1[2],
+      X1[3]];
+    c("&"+boxArr);
+    clearArr =
+    [X2[1],
+      Y1[2],
+      X1[2],
+      Y2[1],
+      X1[3],
+      Y3[1],
+      X1[4],
+      Y4[1],
+      X1[5],
+      Y5[1],
+      X1[6],
+      Y6[1],
+      X1[7],
+      Y7[1],
+      X1[8],
+      Y8[1],
+      X1[9],
+      Y9[1]];
+    createCell(B1tried, boxArr, clearArr, 1, 2, X2, Y1, a1, b2);
+  }
+  function b2() {
+    c("b2");
+    createCell(B2tried, boxArr, B2tried, 2, 2, X2, Y2, b1, b3);
+  }
+  function b3() {
+    c("b3");
+    createCell(B3tried, boxArr, B3tried, 3, 2, X2, Y3, b2, b4);
+  }
+  function b4() {
+    c("b4");
+    boxArr = [X1[4],
+      X1[5],
+      X1[6]];
+    createCell(B4tried, boxArr, B4tried, 4, 2, X2, Y4, b3, b5);
+  }
+  function b5() {
+    c("b5");
+    createCell(B5tried, boxArr, B5tried, 5, 2, X2, Y5, b4, b6);
+  }
+  function b6() {
+    c("b6");
+    createCell(B6tried, boxArr, B6tried, 6, 2, X2, Y6, b5, b7);
+  }
+  function b7() {
+    c("b7");
+    boxArr = [X1[7],
+      X1[8],
+      X1[9]];
+    createCell(B7tried, boxArr, B7tried, 7, 2, X2, Y7, b6, b8);
+  }
+  function b8() {
+    c("b8");
+    createCell(B8tried, boxArr, B8tried, 8, 2, X2, Y8, b7, b9);
+  }
+  function b9() {
+    c("b9");
+    createCell(B9tried, boxArr, B9tried, 9, 2, X2, Y9, b8, c1);
+  }
+  function c1() {}
+  /*
 		c("b1");
 		boxArr =
 		[X1[1],
@@ -238,146 +238,144 @@ function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine) {
 		c("b9");
 		createCell(B9tried, boxArr, B9tried, 9, 2, X2, Y9, b8, c1);
 	}*/
-	//HERE are these finished?
-	while(!done){
-	  foreach(){
-	    if(next){
-	      if(){}
-	    }
-	    else{
-	      if(currentY=1)
-	      {
-	        if(
-	        currentY=1){
-	        fail();
-	      }
-	          
-	        }
-	    }
-	    //HERE HERE
-	  }
-	}
-	//next cell while true, if no more 0s then fin 
-	/* unsolve puzzle */
-	{}
-	/* display puzzle */
-	counter = 1;
-	function display(row) {
-		for (var i = 1; i < 10; i++) {
-			if (cells[counter] > 0) {
-				document.getElementById(row + i).innerHTML = cells[counter];
-				document.getElementById(row + i).style = "font-weight:bold;";
-				setNumbers.push((row + i));
-			}
-			counter++;
-		}
-	}
-	display("a");
-	display("b");
-	display("c");
-	display("d");
-	display("e");
-	display("f");
-	display("g");
-	display("h");
-	display("i");
+  //HERE are these finished?
+  while (!done) {
+      if (next) {
+        if (true) {}
+      } else {
+        if (currentY = 1) {
+          if (currentX = 1) {
+            fail();
+          }
+          else if(currentX=2){
+            a1();
+          }
+        }
+      }
+      //HERE HERE
+    }
+  }
+  //next cell while true, if no more 0s then fin
+  /* unsolve puzzle */
+  {}
+  /* display puzzle */
+  counter = 1;
+  function display(row) {
+    for (var i = 1; i < 10; i++) {
+      if (cells[counter] > 0) {
+        document.getElementById(row + i).innerHTML = cells[counter];
+        document.getElementById(row + i).style = "font-weight:bold;";
+        setNumbers.push((row + i));
+      }
+      counter++;
+    }
+  }
+  display("a");
+  display("b");
+  display("c");
+  display("d");
+  display("e");
+  display("f");
+  display("g");
+  display("h");
+  display("i");
 }
 
 /* get cell relative to cell */
 function get(cellX, cellY, x, y) {
-	cellX += x;
-	cellY += y;
-	if (cellX > 0 && cellX < 10 && cellY > 0 && cellY < 10) {
-		if (cellY == 1) {
-			return X1[cellX];
-		} else if (cellY == 2) {
-			return X2[cellX];
-		} else if (cellY == 3) {
-			return X3[cellX];
-		} else if (cellY == 4) {
-			return X4[cellX];
-		} else if (cellY == 5) {
-			return X5[cellX];
-		} else if (cellY == 6) {
-			return X6[cellX];
-		} else if (cellY == 7) {
-			return X7[cellX];
-		} else if (cellY == 8) {
-			return X8[cellX];
-		} else if (cellY == 9) {
-			return X9[cellX];
-		}
-	} else {
-		return 0;
-	}
+  cellX += x;
+  cellY += y;
+  if (cellX > 0 && cellX < 10 && cellY > 0 && cellY < 10) {
+    if (cellY == 1) {
+      return X1[cellX];
+    } else if (cellY == 2) {
+      return X2[cellX];
+    } else if (cellY == 3) {
+      return X3[cellX];
+    } else if (cellY == 4) {
+      return X4[cellX];
+    } else if (cellY == 5) {
+      return X5[cellX];
+    } else if (cellY == 6) {
+      return X6[cellX];
+    } else if (cellY == 7) {
+      return X7[cellX];
+    } else if (cellY == 8) {
+      return X8[cellX];
+    } else if (cellY == 9) {
+      return X9[cellX];
+    }
+  } else {
+    return 0;
+  }
 }
 
 /* test cell for each rule */
 function rules(x, y) {
-	var invalid = false;
-	/* consecutive */
-	if (co) {}
-	/* killer (cage) */
-	if (ca) {}
-	/* non consecutive */
-	if (no) {}
+  var invalid = false;
+  /* consecutive */
+  if (co) {}
+  /* killer (cage) */
+  if (ca) {}
+  /* non consecutive */
+  if (no) {}
 
-	/* sandwich */
-	if (sa) {}
-	/* kropki */
-	if (kr) {}
-	/* xv */
-	if (xv) {}
+  /* sandwich */
+  if (sa) {}
+  /* kropki */
+  if (kr) {}
+  /* xv */
+  if (xv) {}
 
-	/* thermo */
-	if (th) {}
-	/* palidrome */
-	if (pa) {}
-	/* arrow */
-	if (ar) {}
+  /* thermo */
+  if (th) {}
+  /* palidrome */
+  if (pa) {}
+  /* arrow */
+  if (ar) {}
 
-	/* diagonal (bishop) */
-	if (di) {}
-	/* king */
-	if (ki) {}
-	/* knight */
-	if (kn) {}
+  /* diagonal (bishop) */
+  if (di) {}
+  /* king */
+  if (ki) {}
+  /* knight */
+  if (kn) {}
 
-	return invalid;
+  return invalid;
 }
 
 /* user set number to cell */
 function set(cell) {
-	/* set cell */
-	if (!setNumbers.includes(cell)) {
-		document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
-		/* check answer */
-		var answer = 0;
-		if (cell.substring(0, 1) == "a") {
-			answer = cell.substring(1, 2);
-		} else if (cell.substring(0, 1) == "b") {
-			answer = 9 + cell.substring(1, 2);
-		} else if (cell.substring(0, 1) == "c") {
-			answer = 18 + cell.substring(1, 2);
-		} else if (cell.substring(0, 1) == "d") {
-			answer = 27 + cell.substring(1, 2);
-		} else if (cell.substring(0, 1) == "e") {
-			answer = 36 + cell.substring(1, 2);
-		} else if (cell.substring(0, 1) == "f") {
-			answer = 45 + cell.substring(1, 2);
-		} else if (cell.substring(0, 1) == "g") {
-			answer = 54 + cell.substring(1, 2);
-		} else if (cell.substring(0, 1) == "h") {
-			answer = 63 + cell.substring(1, 2);
-		} else if (cell.substring(0, 1) == "i") {
-			answer = 72 + cell.substring(1, 2);
-		}
-		if (check && !cell.innerHTML == answer) {
-			document.getElementById(cell).style = "color:red;";
-		} else {
-			document.getElementById(cell).style = "color:black;";
-		}
-	}
+  /* set cell */
+  if (!setNumbers.includes(cell)) {
+    document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
+    /* check answer */
+    var answer = 0;
+    if (cell.substring(0, 1) == "a") {
+      answer = cell.substring(1, 2);
+    } else if (cell.substring(0, 1) == "b") {
+      answer = 9 + cell.substring(1, 2);
+    } else if (cell.substring(0, 1) == "c") {
+      answer = 18 + cell.substring(1, 2);
+    } else if (cell.substring(0, 1) == "d") {
+      answer = 27 + cell.substring(1, 2);
+    } else if (cell.substring(0, 1) == "e") {
+      answer = 36 + cell.substring(1, 2);
+    } else if (cell.substring(0, 1) == "f") {
+      answer = 45 + cell.substring(1, 2);
+    } else if (cell.substring(0, 1) == "g") {
+      answer = 54 + cell.substring(1, 2);
+    } else if (cell.substring(0, 1) == "h") {
+      answer = 63 + cell.substring(1, 2);
+    } else if (cell.substring(0, 1) == "i") {
+      answer = 72 + cell.substring(1, 2);
+    }
+    if (check && !cell.innerHTML == answer) {
+      document.getElementById(cell).style = "color:red;";
+    } else {
+      document.getElementById(cell).style = "color:black;";
+    }
+  }
 }
 
 
