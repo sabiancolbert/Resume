@@ -248,29 +248,64 @@ function onload() {
           fail();
         } else if (currentX = 2) {
           a1();
-        }
-        else if(currentX=3){
-          2();
-        }
-        else if(currentX=4){
-          3();
-        }
-        else if(currentX=5){
-          4();
-        }
-        else if(currentX=6){
-          5();
-        }
-        else if(currentX=7){
-          6();
-        }
-        else if(currentX=8){
-          7();
-        }
-        else if(currentX=9){
-          8();
+        } else if (currentX = 3) {
+          a2();
+        } else if (currentX = 4) {
+          a3();
+        } else if (currentX = 5) {
+          a4();
+        } else if (currentX = 6) {
+          a5();
+        } else if (currentX = 7) {
+          a6();
+        } else if (currentX = 8) {
+          a7();
+        } else if (currentX = 9) {
+          a8();
         }
       }
+      else if (currentY = 2){
+        if (currentX = 1) {
+          a9();
+        } else if (currentX = 2) {
+          b1();
+        } else if (currentX = 3) {
+          b2();
+        } else if (currentX = 4) {
+          b3();
+        } else if (currentX = 5) {
+          b4();
+        } else if (currentX = 6) {
+          b5();
+        } else if (currentX = 7) {
+          b6();
+        } else if (currentX = 8) {
+          b7();
+        } else if (currentX = 9) {
+          b8();
+        }
+      }
+      else if(currentY = 3){
+      if (currentX = 1) {
+          b9();
+        } else if (currentX = 2) {
+          c1();
+        } else if (currentX = 3) {
+          2();
+        } else if (currentX = 4) {
+          3();
+        } else if (currentX = 5) {
+          4();
+        } else if (currentX = 6) {
+          5();
+        } else if (currentX = 7) {
+          6();
+        } else if (currentX = 8) {
+          7();
+        } else if (currentX = 9) {
+          8();
+        }
+    }
     }
     //HERE HERE
   }
