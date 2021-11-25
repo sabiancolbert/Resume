@@ -303,8 +303,7 @@ function onload() {
         } else if (currentX = 9) {
           c8();
         }
-      }
-      else if (currentY = 4){
+      } else if (currentY = 4) {
         if (currentX = 1) {
           c9();
         } else if (currentX = 2) {
@@ -324,8 +323,7 @@ function onload() {
         } else if (currentX = 9) {
           d8();
         }
-      }
-      else if (currentY = 5){
+      } else if (currentY = 5) {
         if (currentX = 1) {
           d9();
         } else if (currentX = 2) {
@@ -345,9 +343,9 @@ function onload() {
         } else if (currentX = 9) {
           e8();
         }
-      }
+      }//HERE HERE
     }
-    //HERE HERE
+
   }
 }
 //next cell while true, if no more 0s then fin
