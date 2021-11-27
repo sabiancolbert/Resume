@@ -565,7 +565,7 @@ function onload() {
       }
     }
 
-  }
+  
 }
 /* unsolve puzzle */
 {}
