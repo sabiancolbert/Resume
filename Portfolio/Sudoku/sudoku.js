@@ -65,9 +65,9 @@ function onload() {
     currentY = y;
   }
   function success() {
-    alert("success!")}
+    c("success!")}
   function fail() {
-    alert("No possible games with these settings.");
+    c("No possible games with these settings.");
     stop();
   }
   function a1() {
