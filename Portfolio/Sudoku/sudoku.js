@@ -227,7 +227,7 @@ function onload() {
         } else if (currentX = 6) {
           b7();
         } else if (currentX = 7) {
-          b8();
+          done = true;//b8();
         } else if (currentX = 8) {
           b9();
         } else if (currentX = 9) {
