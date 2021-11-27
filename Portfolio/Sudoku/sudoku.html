@@ -1,125 +1,124 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sudoku</title>
-	<script type="text/javascript" src="sudoku.js"></script>
-	<link rel="stylesheet" type="text/css" href="sudoku.css">
-	<link rel="icon" type="image/ico" href="Resources/favicon.ico" />
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sudoku</title>
+  <script type="text/javascript" src="sudoku.js"></script>
+  <link rel="stylesheet" type="text/css" href="sudoku.css">
+  <link rel="icon" type="image/ico" href="Resources/favicon.ico" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body onload="onload()">
-	<!--version numbers for testing-->
-	<p style="color:white">
-		1
-	</p>
-	<p style="color:white" id="js"></p>
-	<!-- Sudoku Grid -->
-	<table>
-		<tr>
-			<td onclick="set('a1');" id="a1"></td>
-			<td onclick="set('a2');" id="a2"></td>
-			<td onclick="set('a3');" id="a3"></td>
-			<td onclick="set('a4');" id="a4"></td>
-			<td onclick="set('a5');" id="a5"></td>
-			<td onclick="set('a6');" id="a6"></td>
-			<td onclick="set('a7');" id="a7"></td>
-			<td onclick="set('a8');" id="a8"></td>
-			<td onclick="set('a9');" id="a9"></td>
-		</tr>
-		<tr>
-			<td onclick="set('b1');" id="b1"></td>
-			<td onclick="set('b2');" id="b2"></td>
-			<td onclick="set('b3');" id="b3"></td>
-			<td onclick="set('b4');" id="b4"></td>
-			<td onclick="set('b5');" id="b5"></td>
-			<td onclick="set('b6');" id="b6"></td>
-			<td onclick="set('b7');" id="b7"></td>
-			<td onclick="set('b8');" id="b8"></td>
-			<td onclick="set('b9');" id="b9"></td>
-		</tr>
-		<tr>
-			<td onclick="set('c1');" id="c1"></td>
-			<td onclick="set('c2');" id="c2"></td>
-			<td onclick="set('c3');" id="c3"></td>
-			<td onclick="set('c4');" id="c4"></td>
-			<td onclick="set('c5');" id="c5"></td>
-			<td onclick="set('c6');" id="c6"></td>
-			<td onclick="set('c7');" id="c7"></td>
-			<td onclick="set('c8');" id="c8"></td>
-			<td onclick="set('c9');" id="c9"></td>
-		</tr>
-		<tr>
-			<td onclick="set('d1');" id="d1"></td>
-			<td onclick="set('d2');" id="d2"></td>
-			<td onclick="set('d3');" id="d3"></td>
-			<td onclick="set('d4');" id="d4"></td>
-			<td onclick="set('d5');" id="d5"></td>
-			<td onclick="set('d6');" id="d6"></td>
-			<td onclick="set('d7');" id="d7"></td>
-			<td onclick="set('d8');" id="d8"></td>
-			<td onclick="set('d9');" id="d9"></td>
-		</tr>
-		<tr>
-			<td onclick="set('e1');" id="e1"></td>
-			<td onclick="set('e2');" id="e2"></td>
-			<td onclick="set('e3');" id="e3"></td>
-			<td onclick="set('e4');" id="e4"></td>
-			<td onclick="set('e5');" id="e5"></td>
-			<td onclick="set('e6');" id="e6"></td>
-			<td onclick="set('e7');" id="e7"></td>
-			<td onclick="set('e8');" id="e8"></td>
-			<td onclick="set('e9');" id="e9"></td>
-		</tr>
-		<tr>
-			<td onclick="set('f1');" id="f1"></td>
-			<td onclick="set('f2');" id="f2"></td>
-			<td onclick="set('f3');" id="f3"></td>
-			<td onclick="set('f4');" id="f4"></td>
-			<td onclick="set('f5');" id="f5"></td>
-			<td onclick="set('f6');" id="f6"></td>
-			<td onclick="set('f7');" id="f7"></td>
-			<td onclick="set('f8');" id="f8"></td>
-			<td onclick="set('f9');" id="f9"></td>
-		</tr>
-		<tr>
-			<td onclick="set('g1');" id="g1"></td>
-			<td onclick="set('g2');" id="g2"></td>
-			<td onclick="set('g3');" id="g3"></td>
-			<td onclick="set('g4');" id="g4"></td>
-			<td onclick="set('g5');" id="g5"></td>
-			<td onclick="set('g6');" id="g6"></td>
-			<td onclick="set('g7');" id="g7"></td>
-			<td onclick="set('g8');" id="g8"></td>
-			<td onclick="set('g9');" id="g9"></td>
-		</tr>
-		<tr>
-			<td onclick="set('h1');" id="h1"></td>
-			<td onclick="set('h2');" id="h2"></td>
-			<td onclick="set('h3');" id="h3"></td>
-			<td onclick="set('h4');" id="h4"></td>
-			<td onclick="set('h5');" id="h5"></td>
-			<td onclick="set('h6');" id="h6"></td>
-			<td onclick="set('h7');" id="h7"></td>
-			<td onclick="set('h8');" id="h8"></td>
-			<td onclick="set('h9');" id="h9"></td>
-		</tr>
-		<tr>
-			<td onclick="set('i1');" id="i1"></td>
-			<td onclick="set('i2');" id="i2"></td>
-			<td onclick="set('i3');" id="i3"></td>
-			<td onclick="set('i4');" id="i4"></td>
-			<td onclick="set('i5');" id="i5"></td>
-			<td onclick="set('i6');" id="i6"></td>
-			<td onclick="set('i7');" id="i7"></td>
-			<td onclick="set('i8');" id="i8"></td>
-			<td onclick="set('i9');" id="i9"></td>
-		</tr>
-
-	</table>
-	<!-- Number Pad -->
-	<div id="selectionCell">
-		<text id="selection">h</text>
-	</div>
+  <!--version numbers for testing-->
+  <p style="color:white">
+    t
+  </p>
+  <p style="color:white" id="js"></p>
+  <!-- Sudoku Grid -->
+  <table>
+    <tr>
+      <td onclick="set('a1');" id="a1"></td>
+      <td onclick="set('a2');" id="a2"></td>
+      <td onclick="set('a3');" id="a3"></td>
+      <td onclick="set('a4');" id="a4"></td>
+      <td onclick="set('a5');" id="a5"></td>
+      <td onclick="set('a6');" id="a6"></td>
+      <td onclick="set('a7');" id="a7"></td>
+      <td onclick="set('a8');" id="a8"></td>
+      <td onclick="set('a9');" id="a9"></td>
+    </tr>
+    <tr>
+      <td onclick="set('b1');" id="b1"></td>
+      <td onclick="set('b2');" id="b2"></td>
+      <td onclick="set('b3');" id="b3"></td>
+      <td onclick="set('b4');" id="b4"></td>
+      <td onclick="set('b5');" id="b5"></td>
+      <td onclick="set('b6');" id="b6"></td>
+      <td onclick="set('b7');" id="b7"></td>
+      <td onclick="set('b8');" id="b8"></td>
+      <td onclick="set('b9');" id="b9"></td>
+    </tr>
+    <tr>
+      <td onclick="set('c1');" id="c1"></td>
+      <td onclick="set('c2');" id="c2"></td>
+      <td onclick="set('c3');" id="c3"></td>
+      <td onclick="set('c4');" id="c4"></td>
+      <td onclick="set('c5');" id="c5"></td>
+      <td onclick="set('c6');" id="c6"></td>
+      <td onclick="set('c7');" id="c7"></td>
+      <td onclick="set('c8');" id="c8"></td>
+      <td onclick="set('c9');" id="c9"></td>
+    </tr>
+    <tr>
+      <td onclick="set('d1');" id="d1"></td>
+      <td onclick="set('d2');" id="d2"></td>
+      <td onclick="set('d3');" id="d3"></td>
+      <td onclick="set('d4');" id="d4"></td>
+      <td onclick="set('d5');" id="d5"></td>
+      <td onclick="set('d6');" id="d6"></td>
+      <td onclick="set('d7');" id="d7"></td>
+      <td onclick="set('d8');" id="d8"></td>
+      <td onclick="set('d9');" id="d9"></td>
+    </tr>
+    <tr>
+      <td onclick="set('e1');" id="e1"></td>
+      <td onclick="set('e2');" id="e2"></td>
+      <td onclick="set('e3');" id="e3"></td>
+      <td onclick="set('e4');" id="e4"></td>
+      <td onclick="set('e5');" id="e5"></td>
+      <td onclick="set('e6');" id="e6"></td>
+      <td onclick="set('e7');" id="e7"></td>
+      <td onclick="set('e8');" id="e8"></td>
+      <td onclick="set('e9');" id="e9"></td>
+    </tr>
+    <tr>
+      <td onclick="set('f1');" id="f1"></td>
+      <td onclick="set('f2');" id="f2"></td>
+      <td onclick="set('f3');" id="f3"></td>
+      <td onclick="set('f4');" id="f4"></td>
+      <td onclick="set('f5');" id="f5"></td>
+      <td onclick="set('f6');" id="f6"></td>
+      <td onclick="set('f7');" id="f7"></td>
+      <td onclick="set('f8');" id="f8"></td>
+      <td onclick="set('f9');" id="f9"></td>
+    </tr>
+    <tr>
+      <td onclick="set('g1');" id="g1"></td>
+      <td onclick="set('g2');" id="g2"></td>
+      <td onclick="set('g3');" id="g3"></td>
+      <td onclick="set('g4');" id="g4"></td>
+      <td onclick="set('g5');" id="g5"></td>
+      <td onclick="set('g6');" id="g6"></td>
+      <td onclick="set('g7');" id="g7"></td>
+      <td onclick="set('g8');" id="g8"></td>
+      <td onclick="set('g9');" id="g9"></td>
+    </tr>
+    <tr>
+      <td onclick="set('h1');" id="h1"></td>
+      <td onclick="set('h2');" id="h2"></td>
+      <td onclick="set('h3');" id="h3"></td>
+      <td onclick="set('h4');" id="h4"></td>
+      <td onclick="set('h5');" id="h5"></td>
+      <td onclick="set('h6');" id="h6"></td>
+      <td onclick="set('h7');" id="h7"></td>
+      <td onclick="set('h8');" id="h8"></td>
+      <td onclick="set('h9');" id="h9"></td>
+    </tr>
+    <tr>
+      <td onclick="set('i1');" id="i1"></td>
+      <td onclick="set('i2');" id="i2"></td>
+      <td onclick="set('i3');" id="i3"></td>
+      <td onclick="set('i4');" id="i4"></td>
+      <td onclick="set('i5');" id="i5"></td>
+      <td onclick="set('i6');" id="i6"></td>
+      <td onclick="set('i7');" id="i7"></td>
+      <td onclick="set('i8');" id="i8"></td>
+      <td onclick="set('i9');" id="i9"></td>
+    </tr>
+  </table>
+  <!-- Number Pad -->
+  <div id="selectionCell">
+    <text id="selection">h</text>
+  </div>
 </body>
 </html>
