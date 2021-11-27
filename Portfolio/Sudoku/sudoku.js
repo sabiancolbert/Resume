@@ -15,7 +15,7 @@ function onload() {
   var clearArr = new Array(0);
   var next = true;
   var done = false;
-  var currentX = 9;
+  var currentX = 0;
   var currentY = 0;
 
   /* cell creation function */
@@ -64,6 +64,7 @@ function onload() {
     currentX = X;
     currentY = Y;
   }
+  function success(){alert("success!")}
   function fail() {
     alert("No possible games with these settings.");
     stop();
@@ -175,6 +176,210 @@ function onload() {
   while (!done) {
     if (next) {
       
+      
+      
+      
+      
+      
+      if (currentX == 0 && currentY==0){
+        a1();
+      }
+      
+       
+      if (currentY = 1) {
+        if (currentX = 1) {
+          a2();
+        } else if (currentX = 2) {
+          a3();
+        } else if (currentX = 3) {
+          a4();
+        } else if (currentX = 4) {
+          a5();
+        } else if (currentX = 5) {
+          a6();
+        } else if (currentX = 6) {
+          a7();
+        } else if (currentX = 7) {
+          a8();
+        } else if (currentX = 8) {
+          a9();
+        } else if (currentX = 9) {
+          b1();
+        }
+      } else if (currentY = 2) {
+        if (currentX = 1) {
+          b2();
+        } else if (currentX = 2) {
+          b3();
+        } else if (currentX = 3) {
+          b4();
+        } else if (currentX = 4) {
+          b5();
+        } else if (currentX = 5) {
+          b6();
+        } else if (currentX = 6) {
+          b7();
+        } else if (currentX = 7) {
+          b8();
+        } else if (currentX = 8) {
+          b9();
+        } else if (currentX = 9) {
+          c1();
+        }
+      } else if (currentY = 3) {
+        if (currentX = 1) {
+          c2();
+        } else if (currentX = 2) {
+          c3();
+        } else if (currentX = 3) {
+          c4();
+        } else if (currentX = 4) {
+          c5();
+        } else if (currentX = 5) {
+          c6();
+        } else if (currentX = 6) {
+          c7();
+        } else if (currentX = 7) {
+          c8();
+        } else if (currentX = 8) {
+          c9();
+        } else if (currentX = 9) {
+          d1();
+        }
+      } else if (currentY = 4) {
+        if (currentX = 1) {
+          d2();
+        } else if (currentX = 2) {
+          d3();
+        } else if (currentX = 3) {
+          d4();
+        } else if (currentX = 4) {
+          d5();
+        } else if (currentX = 5) {
+          d6();
+        } else if (currentX = 6) {
+          d7();
+        } else if (currentX = 7) {
+          d8();
+        } else if (currentX = 8) {
+          d9();
+        } else if (currentX = 9) {
+          e1();
+        }
+      } else if (currentY = 5) {
+        if (currentX = 1) {
+          e2();
+        } else if (currentX = 2) {
+          e3();
+        } else if (currentX = 3) {
+          e4();
+        } else if (currentX = 4) {
+          e5();
+        } else if (currentX = 5) {
+          e6();
+        } else if (currentX = 6) {
+          e7();
+        } else if (currentX = 7) {
+          e8();
+        } else if (currentX = 8) {
+          e9();
+        } else if (currentX = 9) {
+          f1();
+        }
+
+      } else if (currentY = 6) {
+        if (currentX = 1) {
+          f2();
+        } else if (currentX = 2) {
+          f3();
+        } else if (currentX = 3) {
+          f4();
+        } else if (currentX = 4) {
+          f5();
+        } else if (currentX = 5) {
+          f6();
+        } else if (currentX = 6) {
+          f7();
+        } else if (currentX = 7) {
+          f8();
+        } else if (currentX = 8) {
+          f9();
+        } else if (currentX = 9) {
+          g1();
+        }
+      } else if (currentY = 7) {
+        if (currentX = 1) {
+          g2();
+        } else if (currentX = 2) {
+          g3();
+        } else if (currentX = 3) {
+          g4();
+        } else if (currentX = 4) {
+          g5();
+        } else if (currentX = 5) {
+          g6();
+        } else if (currentX = 6) {
+          g7();
+        } else if (currentX = 7) {
+          g8();
+        } else if (currentX = 8) {
+          g9();
+        } else if (currentX = 9) {
+          h1();
+        }
+      } else if (currentY = 8) {
+        if (currentX = 1) {
+          h2();
+        } else if (currentX = 2) {
+          h3();
+        } else if (currentX = 3) {
+          h4();
+        } else if (currentX = 4) {
+          h5();
+        } else if (currentX = 5) {
+          h6();
+        } else if (currentX = 6) {
+          h7();
+        } else if (currentX = 7) {
+          h8();
+        } else if (currentX = 8) {
+          h9();
+        } else if (currentX = 9) {
+          i1();
+        }
+      } else if (currentY = 9) {
+        if (currentX = 1) {
+          i2();
+        } else if (currentX = 2) {
+          i3();
+        } else if (currentX = 3) {
+          i4();
+        } else if (currentX = 4) {
+          i5();
+        } else if (currentX = 5) {
+          i6();
+        } else if (currentX = 6) {
+          i7();
+        } else if (currentX = 7) {
+          i8();
+        } else if (currentX = 8) {
+          i9();
+        } else if (currentX = 9) {
+          success();
+        }
+      }
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     } else {
       if (currentY = 1) {
         if (currentX = 1) {
@@ -276,8 +481,8 @@ function onload() {
         } else if (currentX = 9) {
           e8();
         }
-      
-      }else if (currentY = 6) {
+
+      } else if (currentY = 6) {
         if (currentX = 1) {
           e9();
         } else if (currentX = 2) {
@@ -297,7 +502,7 @@ function onload() {
         } else if (currentX = 9) {
           f8();
         }
-      }else if (currentY = 5) {
+      } else if (currentY = 7) {
         if (currentX = 1) {
           f9();
         } else if (currentX = 2) {
@@ -317,7 +522,7 @@ function onload() {
         } else if (currentX = 9) {
           g8();
         }
-      }else if (currentY = 5) {
+      } else if (currentY = 8) {
         if (currentX = 1) {
           g9();
         } else if (currentX = 2) {
@@ -337,7 +542,7 @@ function onload() {
         } else if (currentX = 9) {
           h8();
         }
-      }else if (currentY = 5) {
+      } else if (currentY = 9) {
         if (currentX = 1) {
           h9();
         } else if (currentX = 2) {
@@ -357,7 +562,7 @@ function onload() {
         } else if (currentX = 9) {
           i8();
         }
-      }//HERE HERE
+      }
     }
 
   }
