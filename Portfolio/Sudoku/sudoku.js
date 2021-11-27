@@ -180,6 +180,7 @@ function onload() {
 /* start creating */
   //HERE are these finished?
   while (!done) {
+    c(next +"&"+currentX+"&"+currentY)
     if (next) {
 
 
