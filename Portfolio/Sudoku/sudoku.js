@@ -18,7 +18,7 @@ function onload() {
   var currentX = 0;
   var currentY = 0;
 
-  /* cell creation function */
+  /* modular cell creation function */
   function createCell(triedArr, boxArr, clearArr, x, y, xLine, yLine) {
     c("creating cell");
     c("clearArr:" + clearArr);
@@ -64,12 +64,15 @@ function onload() {
     currentX = x;
     currentY = y;
   }
+  /* creation endings */
   function success() {
     c("success!")}
   function fail() {
     c("No possible games with these settings.");
     stop();
   }
+  /* creation middles */
+  {
   function a1() {
     c("a1");
     createCell(A1tried, boxArr, A1tried, 1, 1, X1, Y1);
@@ -173,6 +176,8 @@ function onload() {
     c("b9");
     createCell(B9tried, boxArr, B9tried, 9, 2, X2, Y9);
   }
+}
+/* start creating */
   //HERE are these finished?
   while (!done) {
     if (next) {
