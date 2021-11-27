@@ -61,10 +61,11 @@ function onload() {
       cellCounter++;
       next = true;
     }
-    currentX = X;
-    currentY = Y;
+    currentX = x;
+    currentY = y;
   }
-  function success(){alert("success!")}
+  function success() {
+    alert("success!")}
   function fail() {
     alert("No possible games with these settings.");
     stop();
@@ -175,17 +176,17 @@ function onload() {
   //HERE are these finished?
   while (!done) {
     if (next) {
-      
-      
-      
-      
-      
-      
-      if (currentX == 0 && currentY==0){
+
+
+
+
+
+
+      if (currentX == 0 && currentY == 0) {
         a1();
       }
-      
-       
+
+
       if (currentY = 1) {
         if (currentX = 1) {
           a2();
@@ -368,18 +369,18 @@ function onload() {
           success();
         }
       }
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
     } else {
       if (currentY = 1) {
         if (currentX = 1) {
@@ -565,128 +566,128 @@ function onload() {
       }
     }
 
-  
-}
-/* unsolve puzzle */
-{}
-/* display puzzle */
-counter = 1;
-function display(row) {
-  for (var i = 1; i < 10; i++) {
-    if (cells[counter] > 0) {
-      document.getElementById(row + i).innerHTML = cells[counter];
-      document.getElementById(row + i).style = "font-weight:bold;";
-      setNumbers.push((row + i));
-    }
-    counter++;
+
   }
-}
-display("a");
-display("b");
-display("c");
-display("d");
-display("e");
-display("f");
-display("g");
-display("h");
-display("i");
+  /* unsolve puzzle */
+  {}
+  /* display puzzle */
+  counter = 1;
+  function display(row) {
+    for (var i = 1; i < 10; i++) {
+      if (cells[counter] > 0) {
+        document.getElementById(row + i).innerHTML = cells[counter];
+        document.getElementById(row + i).style = "font-weight:bold;";
+        setNumbers.push((row + i));
+      }
+      counter++;
+    }
+  }
+  display("a");
+  display("b");
+  display("c");
+  display("d");
+  display("e");
+  display("f");
+  display("g");
+  display("h");
+  display("i");
 }
 
 /* get cell relative to cell */
 function get(cellX, cellY, x, y) {
-cellX += x;
-cellY += y;
-if (cellX > 0 && cellX < 10 && cellY > 0 && cellY < 10) {
-if (cellY == 1) {
-return X1[cellX];
-} else if (cellY == 2) {
-return X2[cellX];
-} else if (cellY == 3) {
-return X3[cellX];
-} else if (cellY == 4) {
-return X4[cellX];
-} else if (cellY == 5) {
-return X5[cellX];
-} else if (cellY == 6) {
-return X6[cellX];
-} else if (cellY == 7) {
-return X7[cellX];
-} else if (cellY == 8) {
-return X8[cellX];
-} else if (cellY == 9) {
-return X9[cellX];
-}
-} else {
-return 0;
-}
+  cellX += x;
+  cellY += y;
+  if (cellX > 0 && cellX < 10 && cellY > 0 && cellY < 10) {
+    if (cellY == 1) {
+      return X1[cellX];
+    } else if (cellY == 2) {
+      return X2[cellX];
+    } else if (cellY == 3) {
+      return X3[cellX];
+    } else if (cellY == 4) {
+      return X4[cellX];
+    } else if (cellY == 5) {
+      return X5[cellX];
+    } else if (cellY == 6) {
+      return X6[cellX];
+    } else if (cellY == 7) {
+      return X7[cellX];
+    } else if (cellY == 8) {
+      return X8[cellX];
+    } else if (cellY == 9) {
+      return X9[cellX];
+    }
+  } else {
+    return 0;
+  }
 }
 
 /* test cell for each rule */
 function rules(x, y) {
-var invalid = false;
-/* consecutive */
-if (co) {}
-/* killer (cage) */
-if (ca) {}
-/* non consecutive */
-if (no) {}
+  var invalid = false;
+  /* consecutive */
+  if (co) {}
+  /* killer (cage) */
+  if (ca) {}
+  /* non consecutive */
+  if (no) {}
 
-/* sandwich */
-if (sa) {}
-/* kropki */
-if (kr) {}
-/* xv */
-if (xv) {}
+  /* sandwich */
+  if (sa) {}
+  /* kropki */
+  if (kr) {}
+  /* xv */
+  if (xv) {}
 
-/* thermo */
-if (th) {}
-/* palidrome */
-if (pa) {}
-/* arrow */
-if (ar) {}
+  /* thermo */
+  if (th) {}
+  /* palidrome */
+  if (pa) {}
+  /* arrow */
+  if (ar) {}
 
-/* diagonal (bishop) */
-if (di) {}
-/* king */
-if (ki) {}
-/* knight */
-if (kn) {}
+  /* diagonal (bishop) */
+  if (di) {}
+  /* king */
+  if (ki) {}
+  /* knight */
+  if (kn) {}
 
-return invalid;
+  return invalid;
 }
 
 /* user set number to cell */
 function set(cell) {
-/* set cell */
-if (!setNumbers.includes(cell)) {
-document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
-/* check answer */
-var answer = 0;
-if (cell.substring(0, 1) == "a") {
-answer = cell.substring(1, 2);
-} else if (cell.substring(0, 1) == "b") {
-answer = 9 + cell.substring(1, 2);
-} else if (cell.substring(0, 1) == "c") {
-answer = 18 + cell.substring(1, 2);
-} else if (cell.substring(0, 1) == "d") {
-answer = 27 + cell.substring(1, 2);
-} else if (cell.substring(0, 1) == "e") {
-answer = 36 + cell.substring(1, 2);
-} else if (cell.substring(0, 1) == "f") {
-answer = 45 + cell.substring(1, 2);
-} else if (cell.substring(0, 1) == "g") {
-answer = 54 + cell.substring(1, 2);
-} else if (cell.substring(0, 1) == "h") {
-answer = 63 + cell.substring(1, 2);
-} else if (cell.substring(0, 1) == "i") {
-answer = 72 + cell.substring(1, 2);
-}
-if (check && !cell.innerHTML == answer) {
-document.getElementById(cell).style = "color:red;";
-} else {
-document.getElementById(cell).style = "color:black;";
-}
-}
+  /* set cell */
+  if (!setNumbers.includes(cell)) {
+    document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
+    /* check answer */
+    var answer = 0;
+    if (cell.substring(0, 1) == "a") {
+      answer = cell.substring(1, 2);
+    } else if (cell.substring(0, 1) == "b") {
+      answer = 9 + cell.substring(1, 2);
+    } else if (cell.substring(0, 1) == "c") {
+      answer = 18 + cell.substring(1, 2);
+    } else if (cell.substring(0, 1) == "d") {
+      answer = 27 + cell.substring(1, 2);
+    } else if (cell.substring(0, 1) == "e") {
+      answer = 36 + cell.substring(1, 2);
+    } else if (cell.substring(0, 1) == "f") {
+      answer = 45 + cell.substring(1, 2);
+    } else if (cell.substring(0, 1) == "g") {
+      answer = 54 + cell.substring(1, 2);
+    } else if (cell.substring(0, 1) == "h") {
+      answer = 63 + cell.substring(1, 2);
+    } else if (cell.substring(0, 1) == "i") {
+      answer = 72 + cell.substring(1, 2);
+    }
+    if (check && !cell.innerHTML == answer) {
+      document.getElementById(cell).style = "color:red;";
+    } else {
+      document.getElementById(cell).style = "color:black;";
+    }
+  }
 }
 
 
