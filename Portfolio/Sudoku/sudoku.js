@@ -174,7 +174,7 @@ function onload() {
   //HERE are these finished?
   while (!done) {
     if (next) {
-      if (true) {}
+      
     } else {
       if (currentY = 1) {
         if (currentX = 1) {
@@ -275,6 +275,87 @@ function onload() {
           e7();
         } else if (currentX = 9) {
           e8();
+        }
+      
+      }else if (currentY = 6) {
+        if (currentX = 1) {
+          e9();
+        } else if (currentX = 2) {
+          f1();
+        } else if (currentX = 3) {
+          f2();
+        } else if (currentX = 4) {
+          f3();
+        } else if (currentX = 5) {
+          f4();
+        } else if (currentX = 6) {
+          f5();
+        } else if (currentX = 7) {
+          f6();
+        } else if (currentX = 8) {
+          f7();
+        } else if (currentX = 9) {
+          f8();
+        }
+      }else if (currentY = 5) {
+        if (currentX = 1) {
+          f9();
+        } else if (currentX = 2) {
+          g1();
+        } else if (currentX = 3) {
+          g2();
+        } else if (currentX = 4) {
+          g3();
+        } else if (currentX = 5) {
+          g4();
+        } else if (currentX = 6) {
+          g5();
+        } else if (currentX = 7) {
+          g6();
+        } else if (currentX = 8) {
+          g7();
+        } else if (currentX = 9) {
+          g8();
+        }
+      }else if (currentY = 5) {
+        if (currentX = 1) {
+          g9();
+        } else if (currentX = 2) {
+          h1();
+        } else if (currentX = 3) {
+          h2();
+        } else if (currentX = 4) {
+          h3();
+        } else if (currentX = 5) {
+          h4();
+        } else if (currentX = 6) {
+          h5();
+        } else if (currentX = 7) {
+          h6();
+        } else if (currentX = 8) {
+          h7();
+        } else if (currentX = 9) {
+          h8();
+        }
+      }else if (currentY = 5) {
+        if (currentX = 1) {
+          h9();
+        } else if (currentX = 2) {
+          i1();
+        } else if (currentX = 3) {
+          i2();
+        } else if (currentX = 4) {
+          i3();
+        } else if (currentX = 5) {
+          i4();
+        } else if (currentX = 6) {
+          i5();
+        } else if (currentX = 7) {
+          i6();
+        } else if (currentX = 8) {
+          i7();
+        } else if (currentX = 9) {
+          i8();
         }
       }//HERE HERE
     }
