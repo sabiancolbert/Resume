@@ -10,7 +10,7 @@ function c(c) {
 /* set puzzle */
 function onload() {
   var js = 0;
-  if((10/3).includes(".3")){
+  if(((10/3)+" ").includes(".3")){
     js= true;
   }
   document.getElementById("js").innerHTML = js;
