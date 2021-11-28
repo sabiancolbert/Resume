@@ -572,7 +572,7 @@ function onload() {
       }
     }
 
-if(currentX == 2 && currentY == 1){
+if(currentX == 7 && currentY == 1){
   c("x"+currentX + "y"+currentY);
   done = true;
 }
