@@ -54,12 +54,12 @@ function setCells() {
 }
 
 function testVertical(currentCell, number) {
-  var availability = true;
+  /*var availability = true;
   for (i = currentCell-9; i > 0; i-9) {
     if (cells[i] == number) {
       availability = false;
     }
-  }
+  }*/
   return true;
 }
 
