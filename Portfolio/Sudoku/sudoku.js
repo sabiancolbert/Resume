@@ -92,6 +92,7 @@ function testBox(currentCell, number) {
   } else if (temp.includes(".3")) {
     adjust = 0;
   }
+  c(currentCell+" number:"+number+" stop:"+stop+" adjust:"+adjust);
   /* test box */
   /*for (i = currentCell; i > stop; i-9) {
     if (cells[i+adjust] == number || cells[i+adjust+1] == number || cells[i+adjust+2] == number) {
