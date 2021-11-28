@@ -64,14 +64,15 @@ function testVertical(currentCell, number) {
 }
 
 function testHorizonal(currentCell, number) {
-  /*var availability = true;
+  var availability = true;
   var rowStart = Math.floor(currentCell/9)*9+1;
-  for (i = rowStart; i < rowStart+9; i++) {
+  c(rowStart);
+  /*for (i = rowStart; i < rowStart+9; i++) {
     if (cells[i]) {
       availability = false;
     }
   }*/
-  return true;
+  return availability;
 }
 
 function testBox(currentCell, number) {
