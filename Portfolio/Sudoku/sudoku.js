@@ -55,13 +55,13 @@ function setCells() {
 
 function testVertical(currentCell, number) {
   var availability = true;
-  if(currentCell>8){
-  for (i = currentCell-9; i > -1; i -= 9) {
-    if (cells[i] == number) {
-      availability = false;
+  currentCell=2;
+  if (currentCell > 8) {
+    for (i = currentCell-9; i > -1; i -= 9) {
+      if (cells[i] == number) {
+        availability = false;
+      }
     }
-    
-  }
   }
   return availability;
 }
