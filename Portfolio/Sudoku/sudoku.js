@@ -572,7 +572,7 @@ function onload() {
       }
     }
 
-if(cells[4] > 0){
+if(cells[13] > 0){
   done = true;
 }
   }
