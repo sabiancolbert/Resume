@@ -66,10 +66,11 @@ function testVertical(currentCell, number) {
 function testHorizonal(currentCell, number) {
   var availability = true;
   var rowStart = Math.floor(currentCell/9)*9;
+  c(" ");
   for (i = rowStart; i < rowStart+9; i++) {
+    c(i);
     if (cells[i] == number) {
       availability = false;
-      c(currentCell + " " +number+" "+i);
     }
   }
   return true;
