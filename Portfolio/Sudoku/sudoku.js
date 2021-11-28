@@ -182,7 +182,7 @@ function onload() {
 /* start creating */
   
   while (!done) {
-    c(next +"&"+currentX+"&"+currentY);
+    
     if (next) {
 
 
@@ -576,8 +576,8 @@ function onload() {
       }
     }
 
-if(cells[13] > 0){//HERE HERE doesnt change current x or y correctly?
-  c("x"+currentX + "y"+currentY);
+if(cells[17] > 0){//HERE HERE
+  
   done = true;
 }
   }
