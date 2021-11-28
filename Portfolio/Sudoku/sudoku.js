@@ -195,14 +195,10 @@ function onload() {
 
        else if (currentY = 1) {
         if (currentX = 1) {
-          
           a2();
         } else if (currentX = 2) {
-          c(next +"&"+currentX+"&"+currentY);
-          done = true;//HERE HERE
           a3();
         } else if (currentX = 3) {
-          
           a4();
         } else if (currentX = 4) {
           a5();
@@ -576,7 +572,9 @@ function onload() {
       }
     }
 
-
+if(cells[2] > 0){
+  done = true;
+}
   }
   /* unsolve puzzle */
   {}
