@@ -64,13 +64,13 @@ function testVertical(currentCell, number) {
 }
 
 function testHorizonal(currentCell, number) {
-  var availability = true;
+  /*var availability = true;
   var rowStart = Math.floor(currentCell/9)*9+1;
   for (i = rowStart; i < rowStart+9; i++) {
     if (cells[i]) {
       availability = false;
     }
-  }
+  }*/
   return true;
 }
 
@@ -79,20 +79,20 @@ function testBox(currentCell, number) {
   var stop = currentCell -9;
   var adjust = -2;
   var temp = Math.floor(currentCell/9-.1+1)/3-.1+1+" ";
-  /* find vertical stop 
+  /* find vertical stop
   if (temp.includes(".5")) {
     stop -= 9;
   } else if (temp.includes(".9")) {
     stop -= 18;
   }
-  /* find horizontal stop 
+  /* find horizontal stop
   temp = currentCell / 3 +" ";
   if (temp.includes(".6")) {
     adjust = -1;
   } else if (temp.includes(".3")) {
     adjust = 0;
   }
-  /* test box 
+  /* test box
   for (i = currentCell; i > stop; i-9) {
     if (cells[i+adjust] == number || cells[i+adjust+1] == number || cells[i+adjust+2] == number) {
       availability = false;
