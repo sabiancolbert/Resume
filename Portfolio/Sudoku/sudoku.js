@@ -81,7 +81,7 @@ function onload() {
   function a2() {
     c("a2");
     createCell(A2tried, boxArr, A2tried, 2, 1, X1, Y2);
-    c("a2 done, currentx"+currentX+"y"+currentY);
+   
   }
   function a3() {
     c("a3");
@@ -195,14 +195,14 @@ function onload() {
       }
 
 
-       else if (currentY = 1) {
-        if (currentX = 1) {
+       else if (currentY == 1) {
+        if (currentX == 1) {
           c("running2");
           a2();
-        } else if (currentX = 2) {
+        } else if (currentX == 2) {
           c("running3");
           a3();
-        } else if (currentX = 3) {
+        } else if (currentX == 3) {
           a4();
         } else if (currentX = 4) {
           a5();
