@@ -199,7 +199,7 @@ function onload() {
           a2();
         } else if (currentX = 2) {
           c(next +"&"+currentX+"&"+currentY);
-          done = true;
+          done = true;//HERE HERE
           a3();
         } else if (currentX = 3) {
           
