@@ -572,7 +572,7 @@ function onload() {
       }
     }
 
-if(currentX == 7 && currentY == 1){
+if(cells[8] > 0){
   c("x"+currentX + "y"+currentY);
   done = true;
 }
