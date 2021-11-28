@@ -9,6 +9,7 @@ function c(c) {
 
 /* set puzzle */
 function onload() {
+  document.getElementById("js").innerHTML = 10/3;
   /* create solution */
   var counter = 1;
   var boxArr = new Array(0);
