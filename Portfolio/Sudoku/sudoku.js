@@ -55,7 +55,7 @@ function setCells() {
 
 function testVertical(currentCell, number) {
   var availability = true;
-  currentCell=2;
+  currentCell = 9;
   c(currentCell);
   if (currentCell > 8) {
     for (i = currentCell-9; i > -1; i-9) {
