@@ -93,11 +93,11 @@ function testBox(currentCell, number) {
     adjust = 0;
   }
   /* test box */
-  for (i = currentCell; i > stop; i-9) {
+  /*for (i = currentCell; i > stop; i-9) {
     if (cells[i+adjust] == number || cells[i+adjust+1] == number || cells[i+adjust+2] == number) {
       availability = false;
     }
-  }
+  }*/
   return availability;
 }
 
