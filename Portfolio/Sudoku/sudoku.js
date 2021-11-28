@@ -45,7 +45,7 @@ function setCells() {
   }
 }
 
-function verticle(currentCell, number) {
+function testVertical(currentCell, number) {
   var availability = true;
   for (i = currentCell-9; i > 0; i-9) {
     if (cells[i] == number) {
@@ -58,9 +58,9 @@ function verticle(currentCell, number) {
 function testHorizonal(currentCell, number) {
   var availability = true;
   var rowStart = Math.floor(currentCell/9)*9+1;
-  for(i=rowStart;i< rowStart+9;i++){
-    if(cells[i]){
-      availability=false;
+  for (i = rowStart; i < rowStart+9; i++) {
+    if (cells[i]) {
+      availability = false;
     }
   }
   return availability;
@@ -71,22 +71,23 @@ function testBox(currentCell, number) {
   var stop = currentCell -9;
   var adjust = -2;
   var temp = Math.floor(currentCell/9-.1+1)/3-.1+1+" ";
-  if(temp.includes(".5")){
+  /* find vertical stop */
+  if (temp.includes(".5")) {
     stop -= 9;
+  } else if (temp.includes(".9")) {
+    stop -= 18;
   }
-  else if(temp.includes(".9")){
-    stop-=18;
-  }
+  /* find horizontal stop */
   temp = currentCell / 3 +" ";
-  if(temp.includes(".6")){
-    adjust= -1;
-  }
-  else if (temp.includes(".3")){
+  if (temp.includes(".6")) {
+    adjust = -1;
+  } else if (temp.includes(".3")) {
     adjust = 0;
   }
-  for(i=currentCell;i>stop;i-9){
-    if(cells[i+adjust]==number||cells[i+adjust+1]==number||cells[i+adjust+2]==number){
-      availability=false;
+  /* test box */
+  for (i = currentCell; i > stop; i-9) {
+    if (cells[i+adjust] == number || cells[i+adjust+1] == number || cells[i+adjust+2] == number) {
+      availability = false;
     }
   }
   return availability;
@@ -94,4 +95,9 @@ function testBox(currentCell, number) {
 
 function fail() {}
 
-function displayCells() {}
+function displayCells() {
+    for(i=0;i<81;i++){
+      
+    }
+  }
+}
