@@ -71,7 +71,7 @@ function testHorizonal(currentCell, number) {
       availability = false;
     }
   }
-  return true;
+  return availability;
 }
 
 function testBox(currentCell, number) {
