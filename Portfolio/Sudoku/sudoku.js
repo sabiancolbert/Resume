@@ -76,7 +76,7 @@ function testHorizonal(currentCell, number) {
 
 function testBox(currentCell, number) {
   var availability = true;
-  var stop = currentCell -9;
+  var stop = currentCell;
   var adjust = 0;
   var temp = currentCell / 3 +" ";
   /* find horizontal stop */
@@ -85,8 +85,8 @@ function testBox(currentCell, number) {
   } else if (temp.includes(".3")) {
     adjust = -1;
   }
-    /* find vertical stop */
- temp = Math.floor(currentCell/9-.1+1)/3-.1+1+" ";
+  /* find vertical stop */
+  temp = Math.floor(currentCell/9-.1+1)/3-.1+1+" ";
   if (temp.includes(".5")) {
     stop -= 9;
   } else if (temp.includes(".9")) {
