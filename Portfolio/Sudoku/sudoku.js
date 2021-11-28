@@ -48,7 +48,7 @@ function onload() {
     }
     if (invalid) {
       for (var i = clearArr.length-1; i>-1; i--) {
-        clearArr[i] = 0; //HERE
+        clearArr[i] = 0; //HERE does this clear an array of arrays? because clearArr isnt showing up in console
       }
       c("invalid, clearing " + clearArr.length);
       cellCounter -= clearArr.length;
@@ -176,9 +176,9 @@ function onload() {
     c("b9");
     createCell(B9tried, boxArr, B9tried, 9, 2, X2, Y9);
   }
-
+//HERE are these finished?
 /* start creating */
-  //HERE are these finished?
+  
   while (!done) {
     c(next +"&"+currentX+"&"+currentY);
     if (next) {
@@ -572,7 +572,7 @@ function onload() {
       }
     }
 
-if(cells[2] > 0){
+if(cells[4] > 0){
   done = true;
 }
   }
