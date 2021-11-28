@@ -17,14 +17,14 @@ function setCells() {
     while (invalid && attemptedNumbers[currentCell].length < 9) {
       number = Math.floor(Math.random()*9+1);
       if (!attemptedNumbers[currentCell].includes(number)) {
-        attemptedNumbers[currentCell].push(number);/*
+        attemptedNumbers[currentCell].push(number); /*
         if (testVertical(currentCell, number) && testHorizonal(currentCell, number) && testBox(currentCell, number)) {
           //if(rules){
           //HERE
           invalid = false;
           //}
         }*/
-        invalid=false;
+        invalid = false;
       }
     }
     /* previous cell */
@@ -94,7 +94,9 @@ function testBox(currentCell, number) {
   return availability;
 }
 
-function fail() {}
+function fail() {
+  document.getElementById("js").innerHTML="FAILED";
+}
 
 function displayCells() {
   /* unsolve */
