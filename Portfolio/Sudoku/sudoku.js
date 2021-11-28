@@ -32,7 +32,6 @@ function setCells() {
           invalid = false;
           //}
         }
-        invalid = false;
       }
     }
     /* previous cell */
