@@ -576,7 +576,7 @@ function onload() {
       }
     }
 
-if(cells[8] > 0){//HERE HERE doesnt change current x or y correctly?
+if(cells[13] > 0){//HERE HERE doesnt change current x or y correctly?
   c("x"+currentX + "y"+currentY);
   done = true;
 }
