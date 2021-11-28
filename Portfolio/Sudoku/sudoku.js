@@ -45,9 +45,19 @@ function setCells() {
   }
 }
 
-function verticle(currentCell, number) {}
+function verticle(currentCell, number) {
+  var availability = true;
+  for(i=currentCell-9;i>0;i-9){
+    if(cells[i] == number){
+      availability = false;
+    }
+  }
+  return availability;
+}
 
-function horizontal(currentCell, number) {}
+function horizontal(currentCell, number) {
+  
+}
 
 function box(currentCell, number) {}
 
