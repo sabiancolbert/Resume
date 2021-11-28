@@ -4,7 +4,7 @@ var currentCell = 0;
 
 /* functions */
 
-function c(c){
+function c(c) {
   console.log(c);
 }
 
@@ -18,11 +18,11 @@ function setCells() {
     var number = 0;
     var attemptedNumbers = new Array();
     var invalid = true;
-  c("START curcel:"+currentCell+" number:"+number+" att:"+attemptedNumbers);
+    c("START curcel:"+currentCell+" number:"+number+" att:"+attemptedNumbers);
     /* set current cell */
-    while (invalid && attemptedNumbers[currentCell].length < 9) {
-      
-  c("middle curcel:"+currentCell+" number:"+number+" att:"+attemptedNumbers);
+    while (invalid && attemptedNumbers[currentCell].count < 9) {
+
+      c("middle curcel:"+currentCell+" number:"+number+" att:"+attemptedNumbers);
       number = Math.floor(Math.random()*9+1);
       if (!attemptedNumbers[currentCell].includes(number)) {
         attemptedNumbers[currentCell].push(number); /*
