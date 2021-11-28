@@ -71,7 +71,7 @@ function testHorizonal(currentCell, number) {
     if (cells[i] == number) {
       availability = false;
     }
-    c(rowStart +" "+i);
+    //c(rowStart +" "+i);
   }
   return availability;
 }
