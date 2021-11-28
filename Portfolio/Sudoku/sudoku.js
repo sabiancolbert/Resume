@@ -57,7 +57,7 @@ function testVertical(currentCell, number) {
   var availability = true;
   for (i = currentCell-9; i > -1; i -= 9) {
     if (cells[i] == number) {
-      //availability = false;
+      availability = true;
     }
   }
   return availability;
