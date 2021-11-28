@@ -15,7 +15,7 @@ function setCells() {
     var attemptedNumbers = new Array([], []);
     var invalid = true;
     /* set current cell */
-    while (invalid && attemptedNumbers[currentCell].length < 9) {
+    /*while (invalid && attemptedNumbers[currentCell].length < 9) {
       number = Math.floor(Math.random()*9+1);
       if (!attemptedNumbers[currentCell].includes(number)) {
         attemptedNumbers[currentCell].push(number);
@@ -26,8 +26,9 @@ function setCells() {
           //}
         }
       }
-    }
+    }*/
     /* previous cell */
+    invalid=false;
     if (invalid) {
       attemptedNumbers[currentCell] = [];
       cells[currentCell] = 0;
@@ -39,11 +40,11 @@ function setCells() {
       currentCell++;
     }
   }
-  /*if (currentCell==-1) {
+  if (currentCell==-1) {
     fail();
   } else {
     displayCells();
-  }*/
+  }
 }
 
 function testVertical(currentCell, number) {
