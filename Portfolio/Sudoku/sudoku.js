@@ -572,7 +572,7 @@ function onload() {
       }
     }
 
-if(cells[10] > 0){
+if(currentX==9&&currentY==1){
   done = true;
 }
   }
