@@ -84,7 +84,6 @@ function onload() {
   }
   function a3() {
     c("a3");
-    c("&&&&&&&&&&&&&&");
     createCell(A3tried, boxArr, A3tried, 3, 1, X1, Y3);
   }
   function a4() {
@@ -197,8 +196,10 @@ function onload() {
 
        else if (currentY = 1) {
         if (currentX = 1) {
+          c("running2");
           a2();
         } else if (currentX = 2) {
+          c("running3");
           a3();
         } else if (currentX = 3) {
           a4();
