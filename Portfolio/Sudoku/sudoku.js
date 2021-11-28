@@ -10,9 +10,8 @@ function c(c) {
 /* set puzzle */
 function onload() {
   var js = 0;
-  if(((10/3)+" ").includes(".3")){
-    js= true;
-  }
+  js = (11/3+" ").includes(".3")
+   
   document.getElementById("js").innerHTML = js;
   /* create solution */
   var counter = 1;
