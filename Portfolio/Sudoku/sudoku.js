@@ -16,7 +16,7 @@ function askDifficulty() {
 function setCells() {
   while (currentCell > -1 && currentCell < 81) {
     var number = 0;
-    var attemptedNumbers = [],[];
+    var attemptedNumbers = new Array(9);
     var invalid = true;
     c("START curcel:"+currentCell+" number:"+number+" att:"+attemptedNumbers);
     /* set current cell */
