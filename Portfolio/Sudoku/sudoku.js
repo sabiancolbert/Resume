@@ -45,6 +45,7 @@ function setCells() {
       cells[currentCell] = number;
       currentCell++;
     }
+    displayCells();
   }
   if (currentCell==-1) {
     fail();
@@ -71,7 +72,7 @@ function testHorizonal(currentCell, number) {
       availability = false;
     }
   }
-  return availability;//HERE
+  return availability; //HERE
 }
 
 function testBox(currentCell, number) {
