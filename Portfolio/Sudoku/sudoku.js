@@ -18,22 +18,21 @@ function setCells() {
     var number = 0;
     var attemptedNumbers = new Array(81);
     for (i = 0; i < 81; i++) {
-      attemptedNumbers[i]=[0];
+      attemptedNumbers[i] = [0];
     }
     var invalid = true;
-    c("START curcel:"+currentCell+" number:"+number+" att:"+attemptedNumbers);
     /* set current cell */
     while (invalid && attemptedNumbers[currentCell].length < 10) {
       c("middle curcel:"+currentCell+" number:"+number+" att:"+attemptedNumbers);
       number = Math.floor(Math.random()*9+1);
       if (!attemptedNumbers[currentCell].includes(number)) {
-        attemptedNumbers[currentCell].push(number); /*
+        attemptedNumbers[currentCell].push(number);
         if (testVertical(currentCell, number) && testHorizonal(currentCell, number) && testBox(currentCell, number)) {
           //if(rules){
           //HERE
           invalid = false;
           //}
-        }*/
+        }
         invalid = false;
       }
     }
