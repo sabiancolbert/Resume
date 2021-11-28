@@ -10,11 +10,15 @@ function c(c) {
 
 function askDifficulty() {
   //ask difficulty
+while(currentCell<81){
   setCells();
+}
 }
 
 function setCells() {
-  while (currentCell > -1 && currentCell < 81) {
+  var attempts = 0;
+  while (attempts<400&&currentCell > -1 && currentCell < 81) {
+    attempts++;
     var number = 0;
     var attemptedNumbers = new Array(81);
     for (i = 0; i < 81; i++) {
@@ -71,7 +75,7 @@ function testHorizonal(currentCell, number) {
       availability = false;
     }
   }
-  return availability; //HERE
+  return availability;
 }
 
 function testBox(currentCell, number) {
