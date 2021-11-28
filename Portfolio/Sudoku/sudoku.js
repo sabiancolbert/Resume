@@ -204,178 +204,178 @@ function onload() {
           a3();
         } else if (currentX == 3) {
           a4();
-        } else if (currentX = 4) {
+        } else if (currentX == 4) {
           a5();
-        } else if (currentX = 5) {
+        } else if (currentX == 5) {
           a6();
-        } else if (currentX = 6) {
+        } else if (currentX == 6) {
           a7();
-        } else if (currentX = 7) {
+        } else if (currentX == 7) {
           a8();
-        } else if (currentX = 8) {
+        } else if (currentX == 8) {
           a9();
-        } else if (currentX = 9) {
+        } else if (currentX == 9) {
           b1();
         }
-      } else if (currentY = 2) {
-        if (currentX = 1) {
+      } else if (currentY == 2) {
+        if (currentX == 1) {
           b2();
-        } else if (currentX = 2) {
+        } else if (currentX == 2) {
           b3();
-        } else if (currentX = 3) {
+        } else if (currentX == 3) {
           b4();
-        } else if (currentX = 4) {
+        } else if (currentX == 4) {
           b5();
-        } else if (currentX = 5) {
+        } else if (currentX == 5) {
           b6();
-        } else if (currentX = 6) {
+        } else if (currentX == 6) {
           b7();
-        } else if (currentX = 7) {
+        } else if (currentX == 7) {
           b8();
-        } else if (currentX = 8) {
+        } else if (currentX == 8) {
           b9();
-        } else if (currentX = 9) {
+        } else if (currentX == 9) {
           c1();
         }
-      } else if (currentY = 3) {
-        if (currentX = 1) {
+      } else if (currentY == 3) {
+        if (currentX == 1) {
           c2();
-        } else if (currentX = 2) {
+        } else if (currentX == 2) {
           c3();
-        } else if (currentX = 3) {
+        } else if (currentX == 3) {
           c4();
-        } else if (currentX = 4) {
+        } else if (currentX == 4) {
           c5();
-        } else if (currentX = 5) {
+        } else if (currentX == 5) {
           c6();
-        } else if (currentX = 6) {
+        } else if (currentX == 6) {
           c7();
-        } else if (currentX = 7) {
+        } else if (currentX == 7) {
           c8();
-        } else if (currentX = 8) {
+        } else if (currentX == 8) {
           c9();
-        } else if (currentX = 9) {
+        } else if (currentX == 9) {
           d1();
         }
-      } else if (currentY = 4) {
-        if (currentX = 1) {
+      } else if (currentY == 4) {
+        if (currentX == 1) {
           d2();
-        } else if (currentX = 2) {
+        } else if (currentX == 2) {
           d3();
-        } else if (currentX = 3) {
+        } else if (currentX == 3) {
           d4();
-        } else if (currentX = 4) {
+        } else if (currentX == 4) {
           d5();
-        } else if (currentX = 5) {
+        } else if (currentX == 5) {
           d6();
-        } else if (currentX = 6) {
+        } else if (currentX == 6) {
           d7();
-        } else if (currentX = 7) {
+        } else if (currentX == 7) {
           d8();
-        } else if (currentX = 8) {
+        } else if (currentX == 8) {
           d9();
-        } else if (currentX = 9) {
+        } else if (currentX == 9) {
           e1();
         }
-      } else if (currentY = 5) {
-        if (currentX = 1) {
+      } else if (currentY == 5) {
+        if (currentX == 1) {
           e2();
-        } else if (currentX = 2) {
+        } else if (currentX == 2) {
           e3();
-        } else if (currentX = 3) {
+        } else if (currentX == 3) {
           e4();
-        } else if (currentX = 4) {
+        } else if (currentX == 4) {
           e5();
-        } else if (currentX = 5) {
+        } else if (currentX == 5) {
           e6();
-        } else if (currentX = 6) {
+        } else if (currentX == 6) {
           e7();
-        } else if (currentX = 7) {
+        } else if (currentX == 7) {
           e8();
-        } else if (currentX = 8) {
+        } else if (currentX == 8) {
           e9();
-        } else if (currentX = 9) {
+        } else if (currentX == 9) {
           f1();
         }
 
-      } else if (currentY = 6) {
-        if (currentX = 1) {
+      } else if (currentY == 6) {
+        if (currentX == 1) {
           f2();
-        } else if (currentX = 2) {
+        } else if (currentX == 2) {
           f3();
-        } else if (currentX = 3) {
+        } else if (currentX == 3) {
           f4();
-        } else if (currentX = 4) {
+        } else if (currentX == 4) {
           f5();
-        } else if (currentX = 5) {
+        } else if (currentX == 5) {
           f6();
-        } else if (currentX = 6) {
+        } else if (currentX == 6) {
           f7();
-        } else if (currentX = 7) {
+        } else if (currentX == 7) {
           f8();
-        } else if (currentX = 8) {
+        } else if (currentX == 8) {
           f9();
-        } else if (currentX = 9) {
+        } else if (currentX == 9) {
           g1();
         }
-      } else if (currentY = 7) {
-        if (currentX = 1) {
+      } else if (currentY == 7) {
+        if (currentX == 1) {
           g2();
-        } else if (currentX = 2) {
+        } else if (currentX == 2) {
           g3();
-        } else if (currentX = 3) {
+        } else if (currentX == 3) {
           g4();
-        } else if (currentX = 4) {
+        } else if (currentX == 4) {
           g5();
-        } else if (currentX = 5) {
+        } else if (currentX == 5) {
           g6();
-        } else if (currentX = 6) {
+        } else if (currentX == 6) {
           g7();
-        } else if (currentX = 7) {
+        } else if (currentX == 7) {
           g8();
-        } else if (currentX = 8) {
+        } else if (currentX == 8) {
           g9();
-        } else if (currentX = 9) {
+        } else if (currentX == 9) {
           h1();
         }
-      } else if (currentY = 8) {
-        if (currentX = 1) {
+      } else if (currentY == 8) {
+        if (currentX == 1) {
           h2();
-        } else if (currentX = 2) {
+        } else if (currentX == 2) {
           h3();
-        } else if (currentX = 3) {
+        } else if (currentX == 3) {
           h4();
-        } else if (currentX = 4) {
+        } else if (currentX == 4) {
           h5();
-        } else if (currentX = 5) {
+        } else if (currentX == 5) {
           h6();
-        } else if (currentX = 6) {
+        } else if (currentX == 6) {
           h7();
-        } else if (currentX = 7) {
+        } else if (currentX == 7) {
           h8();
-        } else if (currentX = 8) {
+        } else if (currentX == 8) {
           h9();
-        } else if (currentX = 9) {
+        } else if (currentX == 9) {
           i1();
         }
-      } else if (currentY = 9) {
-        if (currentX = 1) {
+      } else if (currentY == 9) {
+        if (currentX == 1) {
           i2();
-        } else if (currentX = 2) {
+        } else if (currentX == 2) {
           i3();
-        } else if (currentX = 3) {
+        } else if (currentX == 3) {
           i4();
-        } else if (currentX = 4) {
+        } else if (currentX == 4) {
           i5();
-        } else if (currentX = 5) {
+        } else if (currentX == 5) {
           i6();
-        } else if (currentX = 6) {
+        } else if (currentX == 6) {
           i7();
-        } else if (currentX = 7) {
+        } else if (currentX == 7) {
           i8();
-        } else if (currentX = 8) {
+        } else if (currentX == 8) {
           i9();
-        } else if (currentX = 9) {
+        } else if (currentX == 9) {
           success();
         }
       }
@@ -392,185 +392,185 @@ function onload() {
 
 
     } else {
-      if (currentY = 1) {
-        if (currentX = 1) {
+      if (currentY == 1) {
+        if (currentX == 1) {
           fail();
-        } else if (currentX = 2) {
+        } else if (currentX == 2) {
           a1();
-        } else if (currentX = 3) {
+        } else if (currentX == 3) {
           a2();
-        } else if (currentX = 4) {
+        } else if (currentX == 4) {
           a3();
-        } else if (currentX = 5) {
+        } else if (currentX == 5) {
           a4();
-        } else if (currentX = 6) {
+        } else if (currentX == 6) {
           a5();
-        } else if (currentX = 7) {
+        } else if (currentX == 7) {
           a6();
-        } else if (currentX = 8) {
+        } else if (currentX == 8) {
           a7();
-        } else if (currentX = 9) {
+        } else if (currentX == 9) {
           a8();
         }
-      } else if (currentY = 2) {
-        if (currentX = 1) {
+      } else if (currentY == 2) {
+        if (currentX == 1) {
           a9();
-        } else if (currentX = 2) {
+        } else if (currentX == 2) {
           b1();
-        } else if (currentX = 3) {
+        } else if (currentX == 3) {
           b2();
-        } else if (currentX = 4) {
+        } else if (currentX == 4) {
           b3();
-        } else if (currentX = 5) {
+        } else if (currentX == 5) {
           b4();
-        } else if (currentX = 6) {
+        } else if (currentX == 6) {
           b5();
-        } else if (currentX = 7) {
+        } else if (currentX == 7) {
           b6();
-        } else if (currentX = 8) {
+        } else if (currentX == 8) {
           b7();
-        } else if (currentX = 9) {
+        } else if (currentX == 9) {
           b8();
         }
-      } else if (currentY = 3) {
-        if (currentX = 1) {
+      } else if (currentY == 3) {
+        if (currentX == 1) {
           b9();
-        } else if (currentX = 2) {
+        } else if (currentX == 2) {
           c1();
-        } else if (currentX = 3) {
+        } else if (currentX == 3) {
           c2();
-        } else if (currentX = 4) {
+        } else if (currentX == 4) {
           c3();
-        } else if (currentX = 5) {
+        } else if (currentX == 5) {
           c4();
-        } else if (currentX = 6) {
+        } else if (currentX == 6) {
           c5();
-        } else if (currentX = 7) {
+        } else if (currentX == 7) {
           c6();
-        } else if (currentX = 8) {
+        } else if (currentX == 8) {
           c7();
-        } else if (currentX = 9) {
+        } else if (currentX == 9) {
           c8();
         }
-      } else if (currentY = 4) {
-        if (currentX = 1) {
+      } else if (currentY == 4) {
+        if (currentX == 1) {
           c9();
-        } else if (currentX = 2) {
+        } else if (currentX == 2) {
           d1();
-        } else if (currentX = 3) {
+        } else if (currentX == 3) {
           d2();
-        } else if (currentX = 4) {
+        } else if (currentX == 4) {
           d3();
-        } else if (currentX = 5) {
+        } else if (currentX == 5) {
           d4();
-        } else if (currentX = 6) {
+        } else if (currentX == 6) {
           d5();
-        } else if (currentX = 7) {
+        } else if (currentX == 7) {
           d6();
-        } else if (currentX = 8) {
+        } else if (currentX == 8) {
           d7();
-        } else if (currentX = 9) {
+        } else if (currentX == 9) {
           d8();
         }
-      } else if (currentY = 5) {
-        if (currentX = 1) {
+      } else if (currentY == 5) {
+        if (currentX == 1) {
           d9();
-        } else if (currentX = 2) {
+        } else if (currentX == 2) {
           e1();
-        } else if (currentX = 3) {
+        } else if (currentX == 3) {
           e2();
-        } else if (currentX = 4) {
+        } else if (currentX == 4) {
           e3();
-        } else if (currentX = 5) {
+        } else if (currentX == 5) {
           e4();
-        } else if (currentX = 6) {
+        } else if (currentX == 6) {
           e5();
-        } else if (currentX = 7) {
+        } else if (currentX == 7) {
           e6();
-        } else if (currentX = 8) {
+        } else if (currentX == 8) {
           e7();
-        } else if (currentX = 9) {
+        } else if (currentX == 9) {
           e8();
         }
 
-      } else if (currentY = 6) {
-        if (currentX = 1) {
+      } else if (currentY == 6) {
+        if (currentX == 1) {
           e9();
-        } else if (currentX = 2) {
+        } else if (currentX == 2) {
           f1();
-        } else if (currentX = 3) {
+        } else if (currentX == 3) {
           f2();
-        } else if (currentX = 4) {
+        } else if (currentX == 4) {
           f3();
-        } else if (currentX = 5) {
+        } else if (currentX == 5) {
           f4();
-        } else if (currentX = 6) {
+        } else if (currentX == 6) {
           f5();
-        } else if (currentX = 7) {
+        } else if (currentX == 7) {
           f6();
-        } else if (currentX = 8) {
+        } else if (currentX == 8) {
           f7();
-        } else if (currentX = 9) {
+        } else if (currentX == 9) {
           f8();
         }
-      } else if (currentY = 7) {
-        if (currentX = 1) {
+      } else if (currentY == 7) {
+        if (currentX == 1) {
           f9();
-        } else if (currentX = 2) {
+        } else if (currentX == 2) {
           g1();
-        } else if (currentX = 3) {
+        } else if (currentX == 3) {
           g2();
-        } else if (currentX = 4) {
+        } else if (currentX == 4) {
           g3();
-        } else if (currentX = 5) {
+        } else if (currentX == 5) {
           g4();
-        } else if (currentX = 6) {
+        } else if (currentX == 6) {
           g5();
-        } else if (currentX = 7) {
+        } else if (currentX == 7) {
           g6();
-        } else if (currentX = 8) {
+        } else if (currentX == 8) {
           g7();
-        } else if (currentX = 9) {
+        } else if (currentX == 9) {
           g8();
         }
-      } else if (currentY = 8) {
-        if (currentX = 1) {
+      } else if (currentY == 8) {
+        if (currentX == 1) {
           g9();
-        } else if (currentX = 2) {
+        } else if (currentX == 2) {
           h1();
-        } else if (currentX = 3) {
+        } else if (currentX == 3) {
           h2();
-        } else if (currentX = 4) {
+        } else if (currentX == 4) {
           h3();
-        } else if (currentX = 5) {
+        } else if (currentX == 5) {
           h4();
-        } else if (currentX = 6) {
+        } else if (currentX == 6) {
           h5();
-        } else if (currentX = 7) {
+        } else if (currentX == 7) {
           h6();
-        } else if (currentX = 8) {
+        } else if (currentX == 8) {
           h7();
-        } else if (currentX = 9) {
+        } else if (currentX == 9) {
           h8();
         }
-      } else if (currentY = 9) {
-        if (currentX = 1) {
+      } else if (currentY == 9) {
+        if (currentX == 1) {
           h9();
-        } else if (currentX = 2) {
+        } else if (currentX == 2) {
           i1();
-        } else if (currentX = 3) {
+        } else if (currentX == 3) {
           i2();
-        } else if (currentX = 4) {
+        } else if (currentX == 4) {
           i3();
-        } else if (currentX = 5) {
+        } else if (currentX == 5) {
           i4();
-        } else if (currentX = 6) {
+        } else if (currentX == 6) {
           i5();
-        } else if (currentX = 7) {
+        } else if (currentX == 7) {
           i6();
-        } else if (currentX = 8) {
+        } else if (currentX == 8) {
           i7();
-        } else if (currentX = 9) {
+        } else if (currentX == 9) {
           i8();
         }
       }
