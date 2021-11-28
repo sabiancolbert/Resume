@@ -81,6 +81,7 @@ function onload() {
   function a2() {
     c("a2");
     createCell(A2tried, boxArr, A2tried, 2, 1, X1, Y2);
+    c("a2 done, currentx"+currentX+"y"+currentY);
   }
   function a3() {
     c("a3");
