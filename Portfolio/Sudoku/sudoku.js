@@ -26,12 +26,12 @@ function setCells() {
       number = Math.floor(Math.random()*9+1);
       if (!attemptedNumbers[currentCell].includes(number)) {
         attemptedNumbers[currentCell].push(number);
-        //if (testVertical(currentCell, number) && testHorizonal(currentCell, number) && testBox(currentCell, number)) {
-          //if(rules){
-          //HERE
-          invalid = false;
-          //}
+        if (testVertical(currentCell, number) && testHorizonal(currentCell, number) && testBox(currentCell, number)) {
+        //if(rules){
+        //HERE
+        invalid = false;
         //}
+        }
       }
     }
     /* previous cell */
@@ -60,7 +60,7 @@ function testVertical(currentCell, number) {
       availability = false;
     }
   }
-  return availability;
+  return true;
 }
 
 function testHorizonal(currentCell, number) {
@@ -71,7 +71,7 @@ function testHorizonal(currentCell, number) {
       availability = false;
     }
   }
-  return availability;
+  return true;
 }
 
 function testBox(currentCell, number) {
@@ -98,7 +98,7 @@ function testBox(currentCell, number) {
       availability = false;
     }
   }
-  return availability;
+  return true;
 }
 
 function fail() {
