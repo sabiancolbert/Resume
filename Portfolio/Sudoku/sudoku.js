@@ -58,11 +58,11 @@ function testVertical(currentCell, number) {
   for (i = currentCell-9; i > -1; i -= 9) {
     c(currentCell +" trying:"+number+" cell:"+i +" = "+cells[i]);
     if (cells[i] == number) {
-      //availability = false;
+      availability = false;
       //HERE
-      }
+    }
   }
-  return availability;
+  return true;
 }
 
 function testHorizonal(currentCell, number) {
