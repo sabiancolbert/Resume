@@ -23,7 +23,6 @@ function setCells() {
     var invalid = true;
     /* set current cell */
     while (invalid && attemptedNumbers[currentCell].length < 10) {
-      c("middle curcel:"+currentCell+" number:"+number+" att:"+attemptedNumbers);
       number = Math.floor(Math.random()*9+1);
       if (!attemptedNumbers[currentCell].includes(number)) {
         attemptedNumbers[currentCell].push(number);
@@ -47,8 +46,6 @@ function setCells() {
       cells[currentCell] = number;
       currentCell++;
     }
-
-    c("nextup curcel:"+currentCell+" number:"+number+" att:"+attemptedNumbers);
   }
   if (currentCell==-1) {
     fail();
