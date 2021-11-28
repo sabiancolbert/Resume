@@ -180,7 +180,7 @@ function onload() {
 /* start creating */
   //HERE are these finished?
   while (!done) {
-    c(next +"&"+currentX+"&"+currentY)
+    c(next +"&"+currentX+"&"+currentY);
     if (next) {
 
 
@@ -195,10 +195,10 @@ function onload() {
 
        else if (currentY = 1) {
         if (currentX = 1) {
-          
+          c(next +"&"+currentX+"&"+currentY);
+          done = true;
           a2();
         } else if (currentX = 2) {
-          done = true;
           a3();
         } else if (currentX = 3) {
           
