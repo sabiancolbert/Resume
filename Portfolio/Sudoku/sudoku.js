@@ -16,11 +16,21 @@ function askDifficulty() {
 function setCells() {
   while (currentCell > -1 && currentCell < 81) {
     var number = 0;
-    var attemptedNumbers = new Array(9);
+    var attemptedNumbers = [
+      [0],
+      [0],
+      [0],
+      [0],
+      [0],
+      [0],
+      [0],
+      [0],
+      [0],
+      ];
     var invalid = true;
     c("START curcel:"+currentCell+" number:"+number+" att:"+attemptedNumbers);
     /* set current cell */
-    while (invalid && attemptedNumbers[currentCell].length < 9) {
+    while (invalid && attemptedNumbers[currentCell].length < 10) {
 
       c("middle curcel:"+currentCell+" number:"+number+" att:"+attemptedNumbers);
       number = Math.floor(Math.random()*9+1);
@@ -37,7 +47,7 @@ function setCells() {
     }
     /* previous cell */
     if (invalid) {
-      attemptedNumbers[currentCell] = [];
+      attemptedNumbers[currentCell] = [0];
       cells[currentCell] = 0;
       currentCell--;
     }
