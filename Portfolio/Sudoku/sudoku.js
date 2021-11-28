@@ -573,7 +573,7 @@ function onload() {
     }
 
 if(cells[7] > 0){
-  c(currentX + currentY);
+  c("x"+currentX + "y"+currentY);
   done = true;
 }
   }
