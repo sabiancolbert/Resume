@@ -26,12 +26,12 @@ function setCells() {
       number = Math.floor(Math.random()*9+1);
       if (!attemptedNumbers[currentCell].includes(number)) {
         attemptedNumbers[currentCell].push(number);
-        if (testVertical(currentCell, number) && testHorizonal(currentCell, number) && testBox(currentCell, number)) {
+        //if (testVertical(currentCell, number) && testHorizonal(currentCell, number) && testBox(currentCell, number)) {
           //if(rules){
           //HERE
           invalid = false;
           //}
-        }
+        //}
       }
     }
     /* previous cell */
