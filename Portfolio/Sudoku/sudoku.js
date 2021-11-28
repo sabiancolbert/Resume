@@ -26,62 +26,60 @@ function setCells() {
       number = Math.floor(Math.random()*9+1);
       if (!attemptedNumbers[currentCell].includes(number)) {
         attemptedNumbers[currentCell].push(number);
-        if (testHorizonal(currentCell, number) && testBox(currentCell, number)) {
-          if (testVertical (currentCell, number)) {
-            //if(rules){
-            //HERE
-            invalid = false;
-            //}
-          }
-          }
+        if (testVertical(currentCell, number) && testHorizonal(currentCell, number) && testBox(currentCell, number)) {
+          //if(rules){
+          //HERE
+          invalid = false;
+          //}
         }
       }
-      /* previous cell */
-      if (invalid) {
-        attemptedNumbers[currentCell] = [0];
-        cells[currentCell] = 0;
-        currentCell--;
-      }
-      /* next cell */
-      else {
-        cells[currentCell] = number;
-        currentCell++;
-      }
     }
-    if (currentCell==-1) {
-      fail();
-    } else {
-      displayCells();
+    /* previous cell */
+    if (invalid) {
+      attemptedNumbers[currentCell] = [0];
+      cells[currentCell] = 0;
+      currentCell--;
+    }
+    /* next cell */
+    else {
+      cells[currentCell] = number;
+      currentCell++;
     }
   }
-
-  function testVertical(currentCell, number) {
-    var availability = true;
-    for (i = currentCell-9; i > -1; i -= 9) {
-      if (cells[i] == number) {
-        availability = false;
-      }
-    }
-    return availability;
+  if (currentCell==-1) {
+    fail();
+  } else {
+    displayCells();
   }
+}
 
-  function testHorizonal(currentCell, number) {
-    var availability = true;
-    var rowStart = Math.floor(currentCell/9)*9;
-    for (i = rowStart; i < rowStart+9; i++) {
-      if (cells[i] == number) {
-        availability = false;
-      }
+function testVertical(currentCell, number) {
+  var availability = true;
+  for (i = currentCell-9; i > -1; i -= 9) {
+    if (cells[i] == number) {
+      availability = false;
     }
-    return availability; //HERE
   }
+  return availability;
+}
 
-  function testBox(currentCell, number) {
-    var availability = true;
-    var stop = currentCell -9;
-    var adjust = -2;
-    var temp = Math.floor(currentCell/9-.1+1)/3-.1+1+" ";
-    /* find vertical stop
+function testHorizonal(currentCell, number) {
+  var availability = true;
+  var rowStart = Math.floor(currentCell/9)*9;
+  for (i = rowStart; i < rowStart+9; i++) {
+    if (cells[i] == number) {
+      availability = false;
+    }
+  }
+  return availability; //HERE
+}
+
+function testBox(currentCell, number) {
+  var availability = true;
+  var stop = currentCell -9;
+  var adjust = -2;
+  var temp = Math.floor(currentCell/9-.1+1)/3-.1+1+" ";
+  /* find vertical stop
   if (temp.includes(".5")) {
     stop -= 9;
   } else if (temp.includes(".9")) {
@@ -100,19 +98,19 @@ function setCells() {
       availability = false;
     }
   }*/
-    return true;
-  }
+  return true;
+}
 
-  function fail() {
-    document.getElementById("js").innerHTML = "FAILED";
-  }
+function fail() {
+  document.getElementById("js").innerHTML = "FAILED";
+}
 
-  function displayCells() {
-    /* unsolve */
+function displayCells() {
+  /* unsolve */
 
-    /* display cells */
-    var display = cells;
-    for (i = 0; i < 81; i++) {
-      document.getElementById("c"+i).innerHTML = "<strong>"+cells[i]+"</strong>";
-    }
+  /* display cells */
+  var display = cells;
+  for (i = 0; i < 81; i++) {
+    document.getElementById("c"+i).innerHTML = "<strong>"+cells[i]+"</strong>";
   }
+}
