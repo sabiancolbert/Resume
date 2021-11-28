@@ -56,11 +56,11 @@ function setCells() {
 function testVertical(currentCell, number) {
   var availability = true;
   for (i = currentCell-9; i > -1; i -= 9) {
+    c(currentCell +" trying:"+number+" cell:"+i +" = "+cells[i]);
     if (cells[i] == number) {
       //availability = false;
       //HERE
-      c(currentCell +" trying:"+number+" cell:"+i +" = "+cells[i]);
-    }
+      }
   }
   return availability;
 }
