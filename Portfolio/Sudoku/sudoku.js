@@ -9,26 +9,25 @@ function askDifficulty() {
 }
 
 function setCells() {
-
   while (currentCell > -1 && currentCell < 81) {
     var number = 0;
     var attemptedNumbers = new Array([], []);
     var invalid = true;
     /* set current cell */
-    /*while (invalid && attemptedNumbers[currentCell].length < 9) {
+    while (invalid && attemptedNumbers[currentCell].length < 9) {
       number = Math.floor(Math.random()*9+1);
       if (!attemptedNumbers[currentCell].includes(number)) {
-        attemptedNumbers[currentCell].push(number);
+        attemptedNumbers[currentCell].push(number);/*
         if (testVertical(currentCell, number) && testHorizonal(currentCell, number) && testBox(currentCell, number)) {
           //if(rules){
           //HERE
           invalid = false;
           //}
-        }
+        }*/
+        invalid=false;
       }
-    }*/
+    }
     /* previous cell */
-    invalid=false;
     if (invalid) {
       attemptedNumbers[currentCell] = [];
       cells[currentCell] = 0;
