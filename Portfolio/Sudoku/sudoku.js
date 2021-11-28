@@ -69,9 +69,10 @@ function testHorizonal(currentCell, number) {
   for (i = rowStart; i < rowStart+9; i++) {
     if (cells[i] == number) {
       availability = false;
+      c(currentCell + " " +number+" "+i);
     }
   }
-  return availability;
+  return true;
 }
 
 function testBox(currentCell, number) {
