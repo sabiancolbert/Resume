@@ -27,10 +27,12 @@ function setCells() {
       if (!attemptedNumbers[currentCell].includes(number)) {
         attemptedNumbers[currentCell].push(number);
         if (testHorizonal(currentCell, number) && testBox(currentCell, number)) {
+          if(testVertical (currentCell,number){
           //if(rules){
           //HERE
           invalid = false;
           //}
+          }
         }
       }
     }
