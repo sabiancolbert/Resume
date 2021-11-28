@@ -10,20 +10,20 @@ function c(c) {
 
 function askDifficulty() {
   //ask difficulty
- // while (currentCell < 81) {
+  // while (currentCell < 81) {
   //  currentCell =0;
-    setCells();
- // }
+  setCells();
+  // }
 }
 
 function setCells() {
   var attemptedNumbers = new Array(81);
-    
-  while (currentCell > -1 && currentCell < 81) {
-    var number = 0;
     for (i = 0; i < 81; i++) {
       attemptedNumbers[i] = [0];
     }
+  while (currentCell > -1 && currentCell < 81) {
+    var number = 0;
+
     var invalid = true;
     /* set current cell */
     while (invalid && attemptedNumbers[currentCell].length < 10) {
