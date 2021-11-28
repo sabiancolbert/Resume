@@ -4,6 +4,7 @@ var currentCell = 0;
 
 /* functions */
 function askDifficulty() {
+  document.getElementById("js").innerHTML = "starting";
   //ask difficulty
   setCells();
 }
@@ -95,7 +96,7 @@ function testBox(currentCell, number) {
 }
 
 function fail() {
-  document.getElementById("js").innerHTML="FAILED";
+  document.getElementById("js").innerHTML = "FAILED";
 }
 
 function displayCells() {
