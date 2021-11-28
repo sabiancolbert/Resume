@@ -78,15 +78,15 @@ function testBox(currentCell, number) {
   var availability = true;
   var stop = currentCell -9;
   var adjust = 0;
-  var temp = Math.floor(currentCell/9-.1+1)/3-.1+1+" ";
+  var temp = currentCell / 3 +" ";
   /* find horizontal stop */
-  temp = currentCell / 3 +" ";
   if (temp.includes(".6")) {
     adjust = -2;
   } else if (temp.includes(".3")) {
     adjust = -1;
   }
     /* find vertical stop */
+ temp = Math.floor(currentCell/9-.1+1)/3-.1+1+" ";
   if (temp.includes(".5")) {
     stop -= 9;
   } else if (temp.includes(".9")) {
