@@ -9,6 +9,7 @@ function askDifficulty() {
 }
 
 function setCells() {
+  console.log("d");
   while (currentCell > -1 && currentCell < 81) {
     var number = 0;
     var attemptedNumbers = new Array([], []);
@@ -97,7 +98,7 @@ function fail() {}
 
 function displayCells() {
   /* unsolve */
-  
+
   /* display cells */
   var display = cells;
   for (i = 0; i < 81; i++) {
