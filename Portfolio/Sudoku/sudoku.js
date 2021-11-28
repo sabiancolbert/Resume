@@ -5,11 +5,11 @@ var currentCell = 0;
 /* functions */
 function askDifficulty() {
   //ask difficulty
-  setCells();
+  //setCells();
 }
 
 function setCells() {
-  console.log("d");
+  
   while (currentCell > -1 && currentCell < 81) {
     var number = 0;
     var attemptedNumbers = new Array([], []);
