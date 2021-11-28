@@ -26,7 +26,7 @@ function setCells() {
       number = Math.floor(Math.random()*9+1);
       if (!attemptedNumbers[currentCell].includes(number)) {
         attemptedNumbers[currentCell].push(number);
-        if (testVertical(currentCell, number) && testHorizonal(currentCell, number) && testBox(currentCell, number)) {
+        if (testHorizonal(currentCell, number) && testBox(currentCell, number)) {
           //if(rules){
           //HERE
           invalid = false;
@@ -45,7 +45,6 @@ function setCells() {
       cells[currentCell] = number;
       currentCell++;
     }
-    displayCells();
   }
   if (currentCell==-1) {
     fail();
