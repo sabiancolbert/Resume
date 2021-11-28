@@ -10,17 +10,17 @@ function c(c) {
 
 function askDifficulty() {
   //ask difficulty
-while(currentCell<81){
-  setCells();
-}
+ // while (currentCell < 81) {
+  //  currentCell =0;
+    setCells();
+ // }
 }
 
 function setCells() {
-  var attempts = 0;
-  while (attempts<400&&currentCell > -1 && currentCell < 81) {
-    attempts++;
+  var attemptedNumbers = new Array(81);
+    
+  while (currentCell > -1 && currentCell < 81) {
     var number = 0;
-    var attemptedNumbers = new Array(81);
     for (i = 0; i < 81; i++) {
       attemptedNumbers[i] = [0];
     }
