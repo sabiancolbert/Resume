@@ -96,8 +96,11 @@ function testBox(currentCell, number) {
 function fail() {}
 
 function displayCells() {
-    for(i=0;i<81;i++){
-      
-    }
+  /* unsolve */
+  
+  /* display cells */
+  var display = cells;
+  for (i = 0; i < 81; i++) {
+    document.getElementById("c"+i).innerHTML = "<strong>"+cells[i]+"</strong>";
   }
 }
