@@ -54,24 +54,22 @@ function setCells() {
 }
 
 function testVertical(currentCell, number) {
-  /*var availability = true;
+  var availability = true;
   for (i = currentCell-9; i > 0; i-9) {
     if (cells[i] == number) {
       availability = false;
     }
-  }*/
-  return true;
+  }
+  return availability;
 }
 
 function testHorizonal(currentCell, number) {
   var availability = true;
   var rowStart = Math.floor(currentCell/9)*9;
-  c("START "+rowStart);
   for (i = rowStart; i < rowStart+9; i++) {
     if (cells[i] == number) {
       availability = false;
     }
-    c(rowStart +" "+i);
   }
   return availability;
 }
