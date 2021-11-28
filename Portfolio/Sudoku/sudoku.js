@@ -59,7 +59,7 @@ function testVertical(currentCell, number) {
     if (cells[i] == number) {
       //availability = false;
       //HERE
-c(number+" cell:"+i +" = "+cells[i]);
+      c(currentCell +" trying:"+number+" cell:"+i +" = "+cells[i]);
     }
   }
   return availability;
