@@ -572,7 +572,7 @@ function onload() {
       }
     }
 
-if(currentX==9&&currentY==1){
+if(currentX==8&&currentY==1){
   done = true;
 }
   }
