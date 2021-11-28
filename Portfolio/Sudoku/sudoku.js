@@ -17,8 +17,8 @@ function setCells() {
   while (currentCell > -1 && currentCell < 81) {
     var number = 0;
     var attemptedNumbers = new Array(81);
-    for(i=0;i<81;i++){
-      attemptedNumbers[i].push(0);
+    for (i = 0; i < 81; i++) {
+      attemptedNumbers[i]=[0];
     }
     var invalid = true;
     c("START curcel:"+currentCell+" number:"+number+" att:"+attemptedNumbers);
