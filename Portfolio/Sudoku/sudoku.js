@@ -195,10 +195,11 @@ function onload() {
 
        else if (currentY = 1) {
         if (currentX = 1) {
-          c(next +"&"+currentX+"&"+currentY);
-          done = true;
+          
           a2();
         } else if (currentX = 2) {
+          c(next +"&"+currentX+"&"+currentY);
+          done = true;
           a3();
         } else if (currentX = 3) {
           
