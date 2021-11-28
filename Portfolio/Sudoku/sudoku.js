@@ -4,7 +4,6 @@ var currentCell = 0;
 
 /* functions */
 function askDifficulty() {
-  document.getElementById("js").innerHTML = "starting";
   //ask difficulty
   setCells();
 }
@@ -12,7 +11,7 @@ function askDifficulty() {
 function setCells() {
   while (currentCell > -1 && currentCell < 81) {
     var number = 0;
-    var attemptedNumbers = new Array([], []);
+    var attemptedNumbers = new Array();
     var invalid = true;
     /* set current cell */
     while (invalid && attemptedNumbers[currentCell].length < 9) {
