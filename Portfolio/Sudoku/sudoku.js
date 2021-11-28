@@ -23,6 +23,8 @@ function onload() {
     c("creating cell");
     c("clearArr:" + clearArr);
     c("boxArr:"+boxArr);
+    currentX = x;
+    currentY = y;
     var number = 0;
     invalid = true;
     while (invalid && triedArr.length < 9) {
@@ -48,7 +50,7 @@ function onload() {
     }
     if (invalid) {
       for (var i = clearArr.length-1; i>-1; i--) {
-        clearArr[i] = 0; //HERE does this clear an array of arrays? because clearArr isnt showing up in console
+        clearArr[i] = 0;
       }
       c("invalid, clearing " + clearArr.length);
       cellCounter -= clearArr.length;
@@ -61,8 +63,7 @@ function onload() {
       cellCounter++;
       next = true;
     }
-    currentX = x;
-    currentY = y;
+    
   }
   /* creation endings */
   function success() {
