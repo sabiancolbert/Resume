@@ -187,7 +187,7 @@ function onload() {
 
 
 
-
+done = true;
       if (currentX == 0 && currentY == 0) {
         a1();
       }
@@ -199,7 +199,7 @@ function onload() {
         } else if (currentX = 2) {
           a3();
         } else if (currentX = 3) {
-          done = true;
+          
           a4();
         } else if (currentX = 4) {
           a5();
