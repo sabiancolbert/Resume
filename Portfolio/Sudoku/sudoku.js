@@ -9,7 +9,11 @@ function c(c) {
 
 /* set puzzle */
 function onload() {
-  document.getElementById("js").innerHTML = 10/3;
+  var js = 0;
+  if((10/3).includes(".3")){
+    js= true;
+  }
+  document.getElementById("js").innerHTML = js;
   /* create solution */
   var counter = 1;
   var boxArr = new Array(0);
