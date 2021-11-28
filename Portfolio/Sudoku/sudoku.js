@@ -84,6 +84,7 @@ function onload() {
   }
   function a3() {
     c("a3");
+    c("&&&&&&&&&&&&&&");
     createCell(A3tried, boxArr, A3tried, 3, 1, X1, Y3);
   }
   function a4() {
