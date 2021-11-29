@@ -115,15 +115,27 @@ function fail() {
 function displayCells(minimumCells) {
   /* unsolve */
   var display = cells;
+  var tested = new Array([0]);
   var stop = 81 - Math.floor(Math.random()*5+minimumCells);
-  while(stop>0){
-    
+  while (stop > 0 && tested.length <81) {
+    var x = Math.floor(Math.random()*81);
+    if(!tested.includes(x)){
+      tested.push(x);
+      if(unsolve(x)){
+        display[x] = 0;
+        stop--;
+      }
+    }
   }
-  c(stop);
   /* display cells */
   for (i = 0; i < 81; i++) {
     if (display[i] > 0) {
       document.getElementById("c"+i).innerHTML = "<strong>"+display[i]+"</strong>";
     }
   }
+}
+
+function unsolve(cell){
+  var unsolvable = false;
+  return unsolvable;
 }
