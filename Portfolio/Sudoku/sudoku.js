@@ -107,10 +107,11 @@ function fail() {
 
 function displayCells() {
   /* unsolve */
-
+  var display = new Array();
   /* display cells */
-  var display = cells;
   for (i = 0; i < 81; i++) {
-    document.getElementById("c"+i).innerHTML = "<strong>"+cells[i]+"</strong>";
+    if(display[i]>0){
+    document.getElementById("c"+i).innerHTML = "<strong>"+display[i]+"</strong>";
+  }
   }
 }
