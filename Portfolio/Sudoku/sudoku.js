@@ -86,13 +86,12 @@ function testBox(currentCell, number) {
     adjust = -1;
   }
   /* find vertical stop */
-  temp = Math.floor(currentCell/9-.1+1)/3-.1+1+" ";
-  if (temp.includes(".5")) {
-    stop -= 9;
-  } else if (temp.includes(".9")) {
-    stop -= 18;
+  temp = currentCell;
+  while(temp > 26){
+    temp-=27;
   }
-  
+  temp = Math.floor(temp/9)*9;
+  stop = currentCell + adjust - temp;
   c(currentCell+" number:"+number+" stop:"+stop+" adjust:"+adjust);
   /* test box */
   /*for (i = currentCell; i > stop; i-9) {
