@@ -91,12 +91,12 @@ function testBox(currentCell, number) {
     temp -= 27;
   }
   temp = Math.floor(temp/9)*9;
-  stop = currentCell + adjust - temp;
+  stop = currentCell + adjust - temp -1;
   c(currentCell+" number:"+number+" stop:"+stop+" adjust:"+adjust);
   /* test box */
   for (i = currentCell + adjust; i > stop; i-9) {
     if (cells[i] == number || cells[i+1] == number || cells[i+2] == number) {
-      availability = true;
+      availability =  false;
     }
   }
   return availability;
