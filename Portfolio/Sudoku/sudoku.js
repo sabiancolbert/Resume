@@ -9,11 +9,13 @@ function c(c) {
 }
 
 function askDifficulty() {
-  //ask difficulty
-  setCells();
+  var difficulty = 30;
+  //HERE ask difficulty
+//adjust difficulty to rules
+  setCells(difficulty);
 }
 
-function setCells() {
+function setCells(difficulty) {
   var attemptedNumbers = new Array(81);
   for (i = 0; i < 81; i++) {
     attemptedNumbers[i] = [0];
@@ -49,7 +51,7 @@ function setCells() {
   if (currentCell==-1) {
     fail();
   } else {
-    displayCells();
+    displayCells(difficulty);
   }
 }
 
@@ -102,16 +104,16 @@ function testBox(currentCell, number) {
 }
 
 function fail() {
-  document.getElementById("js").innerHTML = "FAILED";
+  alert("No possible games!");
 }
 
-function displayCells() {
+function displayCells(minimumCells) {
   /* unsolve */
-  var display = new Array();
+  var display = new Array(81);
   /* display cells */
   for (i = 0; i < 81; i++) {
-    if(display[i]>0){
-    document.getElementById("c"+i).innerHTML = "<strong>"+display[i]+"</strong>";
-  }
+    if (display[i] > 0) {
+      document.getElementById("c"+i).innerHTML = "<strong>"+display[i]+"</strong>";
+    }
   }
 }
