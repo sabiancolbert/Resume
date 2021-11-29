@@ -10,6 +10,11 @@ function c(c) {
 
 function askDifficulty() {
   var difficulty = 30;
+  //beginner 40
+  //easy 35
+  //med 30
+  //hard 25
+  //expert 20
   //HERE ask difficulty
   //adjust difficulty to rules
   setCells(difficulty);
