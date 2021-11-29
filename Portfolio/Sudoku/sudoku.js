@@ -92,7 +92,7 @@ function testBox(currentCell, number) {
   } else if (temp.includes(".9")) {
     stop -= 18;
   }
-  stop += adjust;
+  
   c(currentCell+" number:"+number+" stop:"+stop+" adjust:"+adjust);
   /* test box */
   /*for (i = currentCell; i > stop; i-9) {
