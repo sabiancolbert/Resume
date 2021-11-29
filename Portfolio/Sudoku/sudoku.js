@@ -115,7 +115,10 @@ function fail() {
 function displayCells(minimumCells) {
   /* unsolve */
   var display = cells;
-  var stop = Math.floor(Math.random()*5+minimumCells);
+  var stop = 81 - Math.floor(Math.random()*5+minimumCells);
+  while(stop>0){
+    
+  }
   c(stop);
   /* display cells */
   for (i = 0; i < 81; i++) {
