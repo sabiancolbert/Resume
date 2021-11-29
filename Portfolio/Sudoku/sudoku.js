@@ -87,18 +87,18 @@ function testBox(currentCell, number) {
   }
   /* find vertical stop */
   temp = currentCell;
-  while(temp > 26){
-    temp-=27;
+  while (temp > 26) {
+    temp -= 27;
   }
   temp = Math.floor(temp/9)*9;
   stop = currentCell + adjust - temp;
   c(currentCell+" number:"+number+" stop:"+stop+" adjust:"+adjust);
   /* test box */
-  /*for (i = currentCell; i > stop; i-9) {
+  for (i = currentCell; i > stop; i-9) {
     if (cells[i+adjust] == number || cells[i+adjust+1] == number || cells[i+adjust+2] == number) {
       availability = false;
     }
-  }*/
+  }
   return availability;
 }
 
