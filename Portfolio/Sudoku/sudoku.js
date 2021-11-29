@@ -11,7 +11,7 @@ function c(c) {
 function askDifficulty() {
   var difficulty = 30;
   //HERE ask difficulty
-//adjust difficulty to rules
+  //adjust difficulty to rules
   setCells(difficulty);
 }
 
@@ -109,7 +109,8 @@ function fail() {
 
 function displayCells(minimumCells) {
   /* unsolve */
-  var display = new Array(81);
+  var display = cells;
+  var stop = 0;
   /* display cells */
   for (i = 0; i < 81; i++) {
     if (display[i] > 0) {
