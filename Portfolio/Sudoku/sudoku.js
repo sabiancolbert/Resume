@@ -110,7 +110,8 @@ function fail() {
 function displayCells(minimumCells) {
   /* unsolve */
   var display = cells;
-  var stop = 0;
+  var stop = Math.floor(Math.random()*5+minimumCells);
+  c(stop);
   /* display cells */
   for (i = 0; i < 81; i++) {
     if (display[i] > 0) {
