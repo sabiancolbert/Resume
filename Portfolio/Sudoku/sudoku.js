@@ -51,7 +51,7 @@ function setCells() {
     /* next cell */
     else {
       cells[currentCell] = number;
-      c(cells[currentNumber]);
+      c(cells[currentCell]);
       currentCell++;
     }
   }
