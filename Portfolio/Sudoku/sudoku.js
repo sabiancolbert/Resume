@@ -10,11 +10,11 @@ function c(c) {
 
 function askDifficulty() {
   var difficulty = 30;
-  //beginner 40
-  //easy 35
-  //med 30
-  //hard 25
-  //expert 20
+  //beginner 45
+  //easy 40
+  //med 35
+  //hard 30
+  //expert 25
   //HERE ask difficulty
   //adjust difficulty to rules
   setCells(difficulty);
@@ -117,11 +117,11 @@ function displayCells(minimumCells) {
   var display = cells;
   var tested = new Array([0]);
   var stop = 81 - Math.floor(Math.random()*5+minimumCells);
-  while (stop > 0 && tested.length <81) {
+  while (stop > 0 && tested.length < 81) {
     var x = Math.floor(Math.random()*81);
-    if(!tested.includes(x)){
+    if (!tested.includes(x)) {
       tested.push(x);
-      if(unsolve(x)){
+      if (unsolve(x)) {
         display[x] = 0;
         stop--;
       }
@@ -135,7 +135,7 @@ function displayCells(minimumCells) {
   }
 }
 
-function unsolve(cell){
+function unsolve(cell) {
   var unsolvable = false;
   return unsolvable;
 }
