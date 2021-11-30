@@ -119,11 +119,11 @@ function displayCells() {
   var tested = new Array([0]);
   var stop = 81 - Math.floor(Math.random()*5+difficulty);
   while (stop > 0 && tested.length < 81) {
-    var x = Math.floor(Math.random()*81);
-    if (!tested.includes(x)) {
-      tested.push(x);
-      if (unsolve(x)) {
-        display[x] = 0;
+    var cell = Math.floor(Math.random()*81);
+    if (!tested.includes(cell)) {
+      tested.push(cell);
+      if (isDefaultNumber(cell)||isDefaultCell(cell)) {
+        display[cell] = 0;
         stop--;
       }
     }
@@ -136,7 +136,12 @@ function displayCells() {
   }
 }
 
-function unsolve(cell) {
-  var unsolve = false;
-  return unsolve;
+function isDefaultNumber(cell) {
+  var result = false;
+  return result;
+}
+
+function isDefaultCell(cell){
+  var result = false;
+  return result;
 }
