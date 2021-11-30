@@ -158,10 +158,9 @@ function isDefaultNumber(cell) {
   for (i = 1; i < 10; i++) {
     if (i != cells[cell]) {
       var b=i;
-      c(b);
       if (isInVertical(cell, b)/* || isInHorizonal(cell, i) || isInBox(cell, i)*/) {
-        c(b);
         otherNumbers.push(b);
+        c("pushing"+b+i);
       }
     }
   }
