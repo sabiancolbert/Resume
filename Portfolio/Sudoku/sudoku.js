@@ -159,7 +159,7 @@ function isDefaultNumber(cell) {
     c(i+" "+cells[cell]);
     if (!(i+0 == cells[cell])) {
       c(i);
-      if (isInVertical(cell, i)/* || isInHorizonal(cell, i) || isInBox(cell, i)*/) {
+      if (isInVertical(cell, i+0)/* || isInHorizonal(cell, i) || isInBox(cell, i)*/) {
         otherNumbers.push(i);
         c("pushing"+i);
       }
