@@ -68,7 +68,12 @@ function isInVertical(cell, number) {
   for (i = cell-9; i > -1; i -= 9) {
     if (cells[i] == number) {
       result = true;
-    }//HERE make it check down, not just up
+    }
+  }
+  for (i = cell+9; i < 81; i += 9) {
+    if (cells[i] == number) {
+      result = true;
+    }
   }
   return result;
 }
@@ -153,7 +158,7 @@ function isDefaultNumber(cell) {
   var otherNumbers = new Array();
   for (i = 1; i < 10; i++) {
     if (i != cells[cell]) {
-      if (isInVertical(cell, i)/* || isInHorizonal(cell, i) || isInBox(cell, i)*/) {
+      if (true/*isInVertical(cell, i)/* || isInHorizonal(cell, i) || isInBox(cell, i)*/) {
         otherNumbers.push(i);
       }
     }
