@@ -50,9 +50,7 @@ function setCells() {
     }
     /* next cell */
     else {
-      c(cells[currentCell]);
       cells[currentCell] = number;
-      c(cells[currentCell]);
       currentCell++;
     }
   }
@@ -60,6 +58,8 @@ function setCells() {
   if (currentCell==-1) {
     fail();
   } else {
+    c(currentCell);
+    c(cells);
     displayCells();
   }
 }
