@@ -63,9 +63,9 @@ function setCells() {
 }
 
 //search for the same number in the same column
-function isInVertical(currentCell, number) {
+function isInVertical(cell, number) {
   var result = false;
-  for (i = currentCell-9; i > -1; i -= 9) {
+  for (i = cell-9; i > -1; i -= 9) {
     if (cells[i] == number) {
       result = true;
     }
@@ -74,9 +74,9 @@ function isInVertical(currentCell, number) {
 }
 
 //search for the same number in the same row
-function isInHorizonal(currentCell, number) {
+function isInHorizonal(cell, number) {
   var result = false;
-  var rowStart = Math.floor(currentCell/9)*9;
+  var rowStart = Math.floor(cell/9)*9;
   for (i = rowStart; i < rowStart+9; i++) {
     if (cells[i] == number) {
       result = true;
@@ -86,11 +86,11 @@ function isInHorizonal(currentCell, number) {
 }
 
 //search for the same number in the same 3x3
-function isInBox(currentCell, number) {
+function isInBox(cell, number) {
   var result = false;
-  var stop = currentCell;
+  var stop = cell;
   var adjust = 0;
-  var temp = currentCell / 3 +" ";
+  var temp = cell / 3 +" ";
   /* find horizontal stop */
   if (temp.includes(".6")) {
     adjust = -2;
@@ -98,14 +98,14 @@ function isInBox(currentCell, number) {
     adjust = -1;
   }
   /* find vertical stop */
-  temp = currentCell;
+  temp = cell;
   while (temp > 26) {
     temp -= 27;
   }
   temp = Math.floor(temp/9)*9;
-  stop = currentCell + adjust - temp;
+  stop = cell + adjust - temp;
   /* isIn box */
-  for (i = currentCell + adjust; i >= stop; i -= 9) {
+  for (i = cell + adjust; i >= stop; i -= 9) {
     if (cells[i] == number || cells[i+1] == number || cells[i+2] == number) {
       result = true;
     }
@@ -161,10 +161,9 @@ function isDefaultCell(cell) {
   var otherNumbers = new Array();
   for (i = 1; i < 10; i++) {
     if (i != cells[cell]) {
-      result=true/*
       if (isInVertical(cell, i) || isInHorizonal(cell, i) || isInBox(cell, i)) {
         otherNumbers.push(i);
-      }*/
+      }
     }
   }
   if (otherNumbers.length == 8) {
