@@ -59,8 +59,6 @@ function setCells() {
   if (currentCell==-1) {
     fail();
   } else {
-    c(currentCell);
-    c(cells);
     displayCells();
   }
 }
