@@ -155,7 +155,7 @@ function displayCells() {
 function isDefaultNumber(cell) {
   var result = false;
   var otherNumbers = new Array();
-  for (i = 1; i < 10; i++) {
+  for (i = 1; i < 10; i+=1) {
     c(i+" "+cells[cell]);
     if (!(i+0 == cells[cell])) {
       c(i);
