@@ -1,7 +1,7 @@
 /* variables */
-var difficulty = 0;
 var cells = new Array(81);
 var currentCell = 0;
+var difficulty = 0;
 
 /* functions */
 
@@ -21,6 +21,7 @@ function askDifficulty() {
   setCells();
 }
 
+//generate number board
 function setCells() {
   var attemptedNumbers = new Array(81);
   for (i = 0; i < 81; i++) {
@@ -35,10 +36,9 @@ function setCells() {
       if (!attemptedNumbers[currentCell].includes(number)) {
         attemptedNumbers[currentCell].push(number);
         if (testVertical(currentCell, number) && testHorizonal(currentCell, number) && testBox(currentCell, number)) {
-          //if(rules){
-          //HERE
-          invalid = false;
-          //}
+          if(variantValid(currentCell, number)){
+            invalid = false;
+          }
         }
       }
     }
@@ -54,6 +54,7 @@ function setCells() {
       currentCell++;
     }
   }
+  //start or end game
   if (currentCell==-1) {
     fail();
   } else {
@@ -61,6 +62,7 @@ function setCells() {
   }
 }
 
+//search for the same number in the same column
 function testVertical(currentCell, number) {
   var availability = true;
   for (i = currentCell-9; i > -1; i -= 9) {
@@ -71,6 +73,7 @@ function testVertical(currentCell, number) {
   return availability;
 }
 
+//search for the same number in the same row
 function testHorizonal(currentCell, number) {
   var availability = true;
   var rowStart = Math.floor(currentCell/9)*9;
@@ -82,6 +85,7 @@ function testHorizonal(currentCell, number) {
   return availability;
 }
 
+//search for the same number in the same 3x3
 function testBox(currentCell, number) {
   var availability = true;
   var stop = currentCell;
@@ -109,8 +113,13 @@ function testBox(currentCell, number) {
   return availability;
 }
 
+function variantValid(cell, number){
+  //HERE
+  return true;
+}
+
 function fail() {
-  alert("No possible games!");
+  alert("No possible games! Try removing some variants.");
 }
 
 function displayCells() {
@@ -123,7 +132,7 @@ function displayCells() {
     if (!tested.includes(cell)) {
       tested.push(cell);
       //if solvable
-      if (isDefaultCell(cell) || isDefaultNumber) {
+      if (isDefaultNumber || isDefaultCell(cell)) {
         display[cell] = 0;
         stop--;
       }
@@ -137,14 +146,19 @@ function displayCells() {
   }
 }
 
-//is this cell the only option for this number?
-function isDefaultCell(cell) {
-  var result = false;
-  return result;
-}
-
 //is this number the only option for this cell?
 function isDefaultNumber(cell) {
   var result = false;
+  //HERE HERE
+  //test all numbers on hard and up
+  return result;
+}
+
+//is this cell the only option for this number?
+function isDefaultCell(cell) {
+  var result = false;
+  //HERE HERE
+//only do if on medium or uo
+//test all numbers on hard and up
   return result;
 }
