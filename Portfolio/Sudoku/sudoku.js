@@ -64,7 +64,7 @@ function setCells() {
 
 //search for the same number in the same column
 function isInVertical(cell, number) {
-  var result = false;/*
+  var result = false; /*
   for (i = cell-9; i > -1; i -= 9) {
     if (cells[i] == number) {
       result = true;
@@ -108,7 +108,8 @@ function isInBox(cell, number) {
   }
   temp = Math.floor(temp/9)*9;
   stop = cell + adjust - temp;
-  /* isIn box */
+  c(stop);
+  /* test box */
   for (i = stop + 20; i >= stop; i -= 9) {
     if (cells[i] == number || cells[i+1] == number || cells[i+2] == number) {
       result = true;
@@ -157,7 +158,7 @@ function isDefaultNumber(cell) {
   var otherNumbers = new Array();
   for (i = 1; i < 10; i++) {
     if (i != cells[cell]) {
-      if (isInVertical(cell, i)/* || isInHorizonal(cell, i) || isInBox(cell, i)*/) {
+      if (false/*isInVertical(cell, i)/* || isInHorizonal(cell, i) || isInBox(cell, i)*/) {
         otherNumbers.push(i);
       }
     }
