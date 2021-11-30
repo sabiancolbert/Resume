@@ -164,6 +164,7 @@ function isDefaultNumber(cell) {
         c("pushing"+i);
       }
     }
+    c("end"+i);
   }
   if (otherNumbers.length == 8) {
     result = true;
