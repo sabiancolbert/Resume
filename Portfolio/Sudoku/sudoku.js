@@ -124,12 +124,8 @@ function fail() {
 
 function displayCells() {
   /* unsolve */
-  var display = cells;
-  c(cells);
-  display[1] = 0;
-  c(cells);
-  c(display);
-  /*
+  var display = new Array();
+  didplay = cells;
   var tested = new Array([0]);
   var stop = 81 - Math.floor(Math.random()*5+difficulty);
   while (stop > 0 && tested.length < 81) {
