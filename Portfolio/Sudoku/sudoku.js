@@ -160,12 +160,14 @@ function isDefaultNumber(cell) {
     if (i != cells[cell]) {
       if (isInVertical(cell, i)/* || isInHorizonal(cell, i) || isInBox(cell, i)*/) {
         otherNumbers.push(i);
+        c("pushing"+i);
       }
     }
   }
   if (otherNumbers.length == 8) {
     result = true;
   }
+  c(otherNumbers +" "+result);
   return result;
 }
 
