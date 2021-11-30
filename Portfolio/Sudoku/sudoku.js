@@ -157,8 +157,8 @@ function isDefaultNumber(cell) {
   var otherNumbers = new Array();
   for (i = 1; i < 10; i++) {
     if (!(i == cells[cell])) {
+      c(i);
       if (isInVertical(cell, i)/* || isInHorizonal(cell, i) || isInBox(cell, i)*/) {
-c(i);
         otherNumbers.push(i);
       }
     }
