@@ -64,7 +64,7 @@ function setCells() {
 
 //search for the same number in the same column
 function isInVertical(cell, number) {
-  var result = false; /*
+  var result = false; 
   for (i = cell-9; i > -1; i -= 9) {
     if (cells[i] == number) {
       result = true;
@@ -74,7 +74,7 @@ function isInVertical(cell, number) {
     if (cells[i] == number) {
       result = true;
     }
-  }*/
+  }
   return result;
 }
 
