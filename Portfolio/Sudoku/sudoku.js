@@ -35,7 +35,7 @@ function setCells() {
       number = Math.floor(Math.random()*9+1);
       if (!attemptedNumbers[currentCell].includes(number)) {
         attemptedNumbers[currentCell].push(number);
-        if (isInVertical(currentCell, number) && isInHorizonal(currentCell, number) && isInBox(currentCell, number)) {
+        if (!isInVertical(currentCell, number) && !isInHorizonal(currentCell, number) && !isInBox(currentCell, number)) {
           if (variantValid(currentCell, number)) {
             invalid = false;
           }
