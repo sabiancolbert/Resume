@@ -52,7 +52,7 @@ function setCells() {
     else {
       cells[currentCell] = number;
       currentCell++;
-      c(number);
+      c(cells);
     }
   }
   //start or end game
