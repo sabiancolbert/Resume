@@ -150,19 +150,10 @@ function displayCells() {
 //is this number the only option for this cell?
 function isDefaultNumber(cell) {
   var result = false;
-  //HERE HERE
-  //isIn all numbers on hard and up
-  return result;
-}
-
-//is this cell the only option for this number?
-function isDefaultCell(cell) {
-  var result = false;
   var otherNumbers = new Array();
   for (i = 1; i < 10; i++) {
     if (i != cells[cell]) {
-      if (true/*isInVertical(cell, i)/* || isInHorizonal(cell, i) || isInBox(cell, i)*/) {
-        c(cell +" "+i);
+      if (isInVertical(cell, i)/* || isInHorizonal(cell, i) || isInBox(cell, i)*/) {
         otherNumbers.push(i);
       }
     }
@@ -170,5 +161,11 @@ function isDefaultCell(cell) {
   if (otherNumbers.length == 8) {
     result = true;
   }
+  return result;
+}
+
+//is this cell the only option for this number?
+function isDefaultCell(cell) {
+  var result = false;
   return result;
 }
