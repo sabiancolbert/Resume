@@ -155,16 +155,13 @@ function displayCells() {
 function isDefaultNumber(cell) {
   var result = false;
   var otherNumbers = new Array();
-  for (i = 1; i < 10; i+=1) {
-    c(i+" "+cells[cell]);
-    if (!(i+0 == cells[cell])) {
-      c(i);
-      if (isInVertical(cell, i+0)/* || isInHorizonal(cell, i) || isInBox(cell, i)*/) {
-        otherNumbers.push(i+0);
-        c("pushing"+(0+i));
+  for (i = 1; i < 10; i++) {
+    if (!(i == cells[cell])) {
+      if (isInVertical(cell, i)/* || isInHorizonal(cell, i) || isInBox(cell, i)*/) {
+c(i);
+        otherNumbers.push(i);
       }
     }
-    c("end"+i);
   }
   if (otherNumbers.length == 8) {
     result = true;
