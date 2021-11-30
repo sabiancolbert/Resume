@@ -35,7 +35,7 @@ function setCells() {
       number = Math.floor(Math.random()*9+1);
       if (!attemptedNumbers[currentCell].includes(number)) {
         attemptedNumbers[currentCell].push(number);
-        if (testVertical(currentCell, number) && testHorizonal(currentCell, number) && testBox(currentCell, number)) {
+        if (isInVertical(currentCell, number) && isInHorizonal(currentCell, number) && isInBox(currentCell, number)) {
           if (variantValid(currentCell, number)) {
             invalid = false;
           }
@@ -63,31 +63,31 @@ function setCells() {
 }
 
 //search for the same number in the same column
-function testVertical(currentCell, number) {
-  var availability = true;
+function isInVertical(currentCell, number) {
+  var result = false;
   for (i = currentCell-9; i > -1; i -= 9) {
     if (cells[i] == number) {
-      availability = false;
+      result = true;
     }
   }
-  return availability;
+  return result;
 }
 
 //search for the same number in the same row
-function testHorizonal(currentCell, number) {
-  var availability = true;
+function isInHorizonal(currentCell, number) {
+  var result = false;
   var rowStart = Math.floor(currentCell/9)*9;
   for (i = rowStart; i < rowStart+9; i++) {
     if (cells[i] == number) {
-      availability = false;
+      result = true;
     }
   }
-  return availability;
+  return result;
 }
 
 //search for the same number in the same 3x3
-function testBox(currentCell, number) {
-  var availability = true;
+function isInBox(currentCell, number) {
+  var result = false;
   var stop = currentCell;
   var adjust = 0;
   var temp = currentCell / 3 +" ";
@@ -104,13 +104,13 @@ function testBox(currentCell, number) {
   }
   temp = Math.floor(temp/9)*9;
   stop = currentCell + adjust - temp;
-  /* test box */
+  /* isIn box */
   for (i = currentCell + adjust; i >= stop; i -= 9) {
     if (cells[i] == number || cells[i+1] == number || cells[i+2] == number) {
-      availability = false;
+      result = true;
     }
   }
-  return availability;
+  return result;
 }
 
 function variantValid(cell, number) {
@@ -125,12 +125,12 @@ function fail() {
 function displayCells() {
   /* unsolve */
   var display = cells;
-  var tested = new Array([0]);
+  var isIned = new Array([0]);
   var stop = 81 - Math.floor(Math.random()*5+difficulty);
-  while (stop > 0 && tested.length < 81) {
+  while (stop > 0 && isIned.length < 81) {
     var cell = Math.floor(Math.random()*81);
-    if (!tested.includes(cell)) {
-      tested.push(cell);
+    if (!isIned.includes(cell)) {
+      isIned.push(cell);
       //if solvable
       if (isDefaultNumber || isDefaultCell(cell)) {
         display[cell] = 0;
@@ -150,7 +150,7 @@ function displayCells() {
 function isDefaultNumber(cell) {
   var result = false;
   //HERE HERE
-  //test all numbers on hard and up
+  //isIn all numbers on hard and up
   return result;
 }
 
@@ -159,6 +159,6 @@ function isDefaultCell(cell) {
   var result = false;
   //HERE HERE
   //only do if on medium or uo
-  //test all numbers on hard and up
+  //isIn all numbers on hard and up
   return result;
 }
