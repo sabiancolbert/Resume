@@ -1,7 +1,7 @@
 /* variables */
 var cells = new Array(81);
 var currentCell = 0;
-var difficulty = 0;
+var difficulty = 15;
 
 /* functions */
 
@@ -10,7 +10,6 @@ function c(c) {
 }
 
 function askDifficulty() {
-  difficulty = 35;
   //beginner 45
   //easy 40
   //med 35
