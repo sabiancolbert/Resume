@@ -160,8 +160,8 @@ function isDefaultNumber(cell) {
     if (!(i+0 == cells[cell])) {
       c(i);
       if (isInVertical(cell, i+0)/* || isInHorizonal(cell, i) || isInBox(cell, i)*/) {
-        otherNumbers.push(i);
-        c("pushing"+i);
+        otherNumbers.push(i+0);
+        c("pushing"+i+0);
       }
     }
     c("end"+i);
