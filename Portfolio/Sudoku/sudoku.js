@@ -35,8 +35,8 @@ function setCells() {
       number = Math.floor(Math.random()*9+1);
       if (!attemptedNumbers[currentCell].includes(number)) {
         attemptedNumbers[currentCell].push(number);
-        if (testVertical(currentCell, number) && testHorizonal(currentCell, number) && testBox(currentCell, number)) {
-          if(variantValid(currentCell, number)){
+        if (!isInVertical(currentCell, number) && !isInHorizonal(currentCell, number) && !isInBox(currentCell, number)) {
+          if (variantValid(currentCell, number)) {
             invalid = false;
           }
         }
@@ -63,31 +63,31 @@ function setCells() {
 }
 
 //search for the same number in the same column
-function testVertical(currentCell, number) {
-  var availability = true;
+function isInVertical(currentCell, number) {
+  var result = false;
   for (i = currentCell-9; i > -1; i -= 9) {
     if (cells[i] == number) {
-      availability = false;
+      result = true;
     }
   }
-  return availability;
+  return result;
 }
 
 //search for the same number in the same row
-function testHorizonal(currentCell, number) {
-  var availability = true;
+function isInHorizonal(currentCell, number) {
+  var result = false;
   var rowStart = Math.floor(currentCell/9)*9;
   for (i = rowStart; i < rowStart+9; i++) {
     if (cells[i] == number) {
-      availability = false;
+      result = true;
     }
   }
-  return availability;
+  return result;
 }
 
 //search for the same number in the same 3x3
-function testBox(currentCell, number) {
-  var availability = true;
+function isInBox(currentCell, number) {
+  var result = false;
   var stop = currentCell;
   var adjust = 0;
   var temp = currentCell / 3 +" ";
@@ -107,13 +107,14 @@ function testBox(currentCell, number) {
   /* test box */
   for (i = currentCell + adjust; i >= stop; i -= 9) {
     if (cells[i] == number || cells[i+1] == number || cells[i+2] == number) {
-      availability = false;
+      result = true;
     }
   }
-  return availability;
+  return result;
 }
 
-function variantValid(cell, number){
+//test game variation rules
+function variantValid(cell, number) {
   //HERE
   return true;
 }
@@ -158,7 +159,7 @@ function isDefaultNumber(cell) {
 function isDefaultCell(cell) {
   var result = false;
   //HERE HERE
-//only do if on medium or uo
-//test all numbers on hard and up
+  //only do if on medium or uo
+  //test all numbers on hard and up
   return result;
 }
