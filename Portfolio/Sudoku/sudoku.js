@@ -161,7 +161,7 @@ function isDefaultNumber(cell) {
       c(i);
       if (isInVertical(cell, i+0)/* || isInHorizonal(cell, i) || isInBox(cell, i)*/) {
         otherNumbers.push(i+0);
-        c("pushing"+i+0);
+        c("pushing"+(0+i));
       }
     }
     c("end"+i);
