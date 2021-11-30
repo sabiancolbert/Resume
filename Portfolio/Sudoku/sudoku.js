@@ -68,7 +68,7 @@ function isInVertical(cell, number) {
   for (i = cell-9; i > -1; i -= 9) {
     if (cells[i] == number) {
       result = true;
-    }
+    }//HERE make it check down, not just up
   }
   return result;
 }
