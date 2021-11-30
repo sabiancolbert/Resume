@@ -110,7 +110,7 @@ function isInBox(cell, number) {
   stop = cell + adjust - temp;
   c(stop);
   /* test box */
-  for (i = stop + 20; i >= stop; i -= 9) {
+  for (i = stop + 18; i >= stop; i -= 9) {
     if (cells[i] == number || cells[i+1] == number || cells[i+2] == number) {
       result = true;
     }
