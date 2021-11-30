@@ -126,7 +126,6 @@ function displayCells() {
   /* unsolve */
   var display = new Array();
   cells.forEach(cell => display.push(cell));
-  c(cells);
   var tested = new Array([0]);
   var stop = 81 - Math.floor(Math.random()*5+difficulty);
   while (stop > 0 && tested.length < 81) {
@@ -134,7 +133,7 @@ function displayCells() {
     if (!tested.includes(cell)) {
       tested.push(cell);
       //if solvable
-      if (isDefaultNumber || isDefaultCell(cell)) {
+      if (isDefaultNumber(cell) || isDefaultCell(cell)) {
         display[cell] = 0;
         stop--;
       }
