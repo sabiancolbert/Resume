@@ -108,7 +108,6 @@ function isInBox(cell, number) {
   }
   temp = Math.floor(temp/9)*9;
   stop = cell + adjust - temp;
-  c(stop);
   /* test box */
   for (i = stop + 18; i >= stop; i -= 9) {
     if (cells[i] == number || cells[i+1] == number || cells[i+2] == number) {
