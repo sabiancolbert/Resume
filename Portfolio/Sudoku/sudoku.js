@@ -162,6 +162,7 @@ function isDefaultCell(cell) {
   for (i = 1; i < 10; i++) {
     if (i != cells[cell]) {
       if (true/*isInVertical(cell, i)/* || isInHorizonal(cell, i) || isInBox(cell, i)*/) {
+        c(cell +" "+i);
         otherNumbers.push(i);
       }
     }
