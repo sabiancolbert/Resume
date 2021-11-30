@@ -125,7 +125,7 @@ function fail() {
 function displayCells() {
   /* unsolve */
   var display = new Array();
-  display = cells;
+  cells.forEach(cell => display.push(cell));
   c(cells);
   var tested = new Array([0]);
   var stop = 81 - Math.floor(Math.random()*5+difficulty);
