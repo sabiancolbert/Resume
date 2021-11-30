@@ -155,12 +155,10 @@ function displayCells() {
 function isDefaultNumber(cell) {
   var result = false;
   var otherNumbers = new Array();
-  for (i = 1; i < 10; i++) {
-    var b=i+0;
-    if (b != cells[cell]) {
-      if (isInVertical(cell, b)/* || isInHorizonal(cell, i) || isInBox(cell, i)*/) {
-        otherNumbers.push(b);
-        c("pushing"+b+i);
+  for (x = 1; x < 10; x++) {
+    if (x != cells[cell]) {
+      if (isInVertical(cell, x)/* || isInHorizonal(cell, i) || isInBox(cell, i)*/) {
+        otherNumbers.push(x);
       }
     }
   }
