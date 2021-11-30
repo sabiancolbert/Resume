@@ -1,7 +1,7 @@
 /* variables */
 var cells = new Array(81);
 var currentCell = 0;
-var difficulty = 15;
+var difficulty = 45;
 
 /* functions */
 
