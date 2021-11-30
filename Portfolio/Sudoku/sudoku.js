@@ -125,12 +125,12 @@ function fail() {
 function displayCells() {
   /* unsolve */
   var display = cells;
-  var isIned = new Array([0]);
+  var tested = new Array([0]);
   var stop = 81 - Math.floor(Math.random()*5+difficulty);
-  while (stop > 0 && isIned.length < 81) {
+  while (stop > 0 && tested.length < 81) {
     var cell = Math.floor(Math.random()*81);
-    if (!isIned.includes(cell)) {
-      isIned.push(cell);
+    if (!tested.includes(cell)) {
+      tested.push(cell);
       //if solvable
       if (isDefaultNumber || isDefaultCell(cell)) {
         display[cell] = 0;
