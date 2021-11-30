@@ -1,4 +1,5 @@
 /* variables */
+var difficulty = 0;
 var cells = new Array(81);
 var currentCell = 0;
 
@@ -9,7 +10,7 @@ function c(c) {
 }
 
 function askDifficulty() {
-  var difficulty = 30;
+  difficulty = 35;
   //beginner 45
   //easy 40
   //med 35
@@ -17,10 +18,10 @@ function askDifficulty() {
   //expert 25
   //HERE ask difficulty
   //adjust difficulty to rules
-  setCells(difficulty);
+  setCells();
 }
 
-function setCells(difficulty) {
+function setCells() {
   var attemptedNumbers = new Array(81);
   for (i = 0; i < 81; i++) {
     attemptedNumbers[i] = [0];
@@ -56,7 +57,7 @@ function setCells(difficulty) {
   if (currentCell==-1) {
     fail();
   } else {
-    displayCells(difficulty);
+    displayCells();
   }
 }
 
@@ -112,11 +113,11 @@ function fail() {
   alert("No possible games!");
 }
 
-function displayCells(minimumCells) {
+function displayCells() {
   /* unsolve */
   var display = cells;
   var tested = new Array([0]);
-  var stop = 81 - Math.floor(Math.random()*5+minimumCells);
+  var stop = 81 - Math.floor(Math.random()*5+difficulty);
   while (stop > 0 && tested.length < 81) {
     var x = Math.floor(Math.random()*81);
     if (!tested.includes(x)) {
@@ -136,6 +137,6 @@ function displayCells(minimumCells) {
 }
 
 function unsolve(cell) {
-  var unsolvable = false;
-  return unsolvable;
+  var unsolve = false;
+  return unsolve;
 }
