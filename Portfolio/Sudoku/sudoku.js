@@ -124,9 +124,9 @@ function fail() {
 
 function displayCells() {
   /* unsolve */
-  var display = cells; 
+  var display = cells;
   c(cells);
-  display[0]=0;
+  display[1] = 0;
   c(cells);
   c(display);
   /*
