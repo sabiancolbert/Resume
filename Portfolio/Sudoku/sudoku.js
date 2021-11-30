@@ -122,7 +122,8 @@ function displayCells() {
     var cell = Math.floor(Math.random()*81);
     if (!tested.includes(cell)) {
       tested.push(cell);
-      if (isDefaultNumber(cell)||isDefaultCell(cell)) {
+      //if solvable
+      if (isDefaultCell(cell) || isDefaultNumber) {
         display[cell] = 0;
         stop--;
       }
@@ -136,12 +137,14 @@ function displayCells() {
   }
 }
 
-function isDefaultNumber(cell) {
+//is this cell the only option for this number?
+function isDefaultCell(cell) {
   var result = false;
   return result;
 }
 
-function isDefaultCell(cell){
+//is this number the only option for this cell?
+function isDefaultNumber(cell) {
   var result = false;
   return result;
 }
