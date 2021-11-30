@@ -94,15 +94,14 @@ function isInHorizonal(cell, number) {
 function isInBox(cell, number) {
   var result = false;
   var stop = cell;
+  /* find stopping cell */
   var adjust = 0;
   var temp = cell / 3 +" ";
-  /* find horizontal stop */
   if (temp.includes(".6")) {
     adjust = -2;
   } else if (temp.includes(".3")) {
     adjust = -1;
   }
-  /* find vertical stop */
   temp = cell;
   while (temp > 26) {
     temp -= 27;
