@@ -162,7 +162,6 @@ function isDefaultNumber(cell) {
       }
     }
   }
-  c(otherNumbers);
   if (otherNumbers.length == 8) {
     result = true;
   }
