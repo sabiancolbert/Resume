@@ -157,19 +157,17 @@ function isDefaultNumber(cell) {
   var otherNumbers = new Array();
   for (i = 1; i < 10; i++) {
     if (i != cells[cell]) {
-      c(i);
-      var b=i+0;
+      var b=i;
       c(b);
       if (isInVertical(cell, b)/* || isInHorizonal(cell, i) || isInBox(cell, i)*/) {
         c(b);
-        otherNumbers.push(i);
+        otherNumbers.push(b);
       }
     }
   }
   if (otherNumbers.length == 8) {
     result = true;
   }
-  c(otherNumbers +" "+result);
   return result;
 }
 
