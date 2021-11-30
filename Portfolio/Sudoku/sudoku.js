@@ -50,7 +50,9 @@ function setCells() {
     }
     /* next cell */
     else {
+      c(cells[currentCell]);
       cells[currentCell] = number;
+      c(cells[currentCell]);
       currentCell++;
     }
   }
