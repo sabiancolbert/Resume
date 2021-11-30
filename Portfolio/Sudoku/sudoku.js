@@ -158,8 +158,16 @@ function isDefaultNumber(cell) {
 //is this cell the only option for this number?
 function isDefaultCell(cell) {
   var result = false;
-  //HERE HERE
-  //only do if on medium or uo
-  //isIn all numbers on hard and up
+  var otherNumbers = new Array();
+  for (i=1;i<10;i++){
+    if(i != cells[cell]){
+      if(isInVertical(cell, i) || isInHorizonal(cell, i) || isInBox(cell, i)){
+        otherNumbers.push(i);
+      }
+    }
+  }
+  if (otherNumbers.length == 8){
+    result = true;
+  }
   return result;
 }
