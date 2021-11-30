@@ -35,7 +35,7 @@ function setCells() {
       number = Math.floor(Math.random()*9+1);
       if (!attemptedNumbers[currentCell].includes(number)) {
         attemptedNumbers[currentCell].push(number);
-        if (!isInVertical(currentCell, number) && !isInHorizonal(currentCell, number) && !isInBox(currentCell, number)) {
+        if (testVertical(currentCell, number) && testHorizonal(currentCell, number) && testBox(currentCell, number)) {
           if (variantValid(currentCell, number)) {
             invalid = false;
           }
@@ -52,7 +52,6 @@ function setCells() {
     else {
       cells[currentCell] = number;
       currentCell++;
-      c(cells);
     }
   }
   //start or end game
@@ -64,31 +63,31 @@ function setCells() {
 }
 
 //search for the same number in the same column
-function isInVertical(currentCell, number) {
-  var result = false;
+function testVertical(currentCell, number) {
+  var availability = true;
   for (i = currentCell-9; i > -1; i -= 9) {
     if (cells[i] == number) {
-      result = true;
+      availability = false;
     }
   }
-  return result;
+  return availability;
 }
 
 //search for the same number in the same row
-function isInHorizonal(currentCell, number) {
-  var result = false;
+function testHorizonal(currentCell, number) {
+  var availability = true;
   var rowStart = Math.floor(currentCell/9)*9;
   for (i = rowStart; i < rowStart+9; i++) {
     if (cells[i] == number) {
-      result = true;
+      availability = false;
     }
   }
-  return result;
+  return availability;
 }
 
 //search for the same number in the same 3x3
-function isInBox(currentCell, number) {
-  var result = false;
+function testBox(currentCell, number) {
+  var availability = true;
   var stop = currentCell;
   var adjust = 0;
   var temp = currentCell / 3 +" ";
@@ -108,13 +107,12 @@ function isInBox(currentCell, number) {
   /* test box */
   for (i = currentCell + adjust; i >= stop; i -= 9) {
     if (cells[i] == number || cells[i+1] == number || cells[i+2] == number) {
-      result = true;
+      availability = false;
     }
   }
-  return result;
+  return availability;
 }
 
-//test game variation rules
 function variantValid(cell, number) {
   //HERE
   return true;
@@ -127,7 +125,6 @@ function fail() {
 function displayCells() {
   /* unsolve */
   var display = cells;
-  c(cells);
   var tested = new Array([0]);
   var stop = 81 - Math.floor(Math.random()*5+difficulty);
   while (stop > 0 && tested.length < 81) {
