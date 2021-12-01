@@ -155,7 +155,7 @@ function isDefaultNumber(cell) {
   var otherNumbers = new Array();
   for (x = 1; x < 10; x++) {
     if (x != display[cell]) {
-      if (isInVertical(cell, x) || isInHorizonal(cell, i) || isInBox(cell, i)) {
+      if (isInVertical(cell, x) || isInHorizonal(cell, x) || isInBox(cell, x)) {
         otherNumbers.push(x);
       }
     }
@@ -163,7 +163,6 @@ function isDefaultNumber(cell) {
   if (otherNumbers.length == 8) {
     result = true;
   }
-  result =false;
   return result;
 }
 
