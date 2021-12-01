@@ -1,7 +1,6 @@
 body {
   background-color: black;
   color: white;
-  text-align: center;
 }
 .container {
   position: relative;
@@ -18,6 +17,10 @@ table {
   height: 100%;
   width: 100%;
 }
+td {
+  color: black;
+  background-color: white;
+}
 #grid td {
   width: 10.5%;
   height: 10.5%;
@@ -27,19 +30,14 @@ table {
   height: 19%;
 }
 td:first-child {
-
-  border-left:2.5% solid;
+  border-left: 2.5% solid;
 }
 td:nth-child(3n) {
-  border-right:2.5% solid;
+  border-right: 2.5% solid;
 }
 tr:first-child {
-  border-top:2.5% solid;
+  border-top: 2.5% solid;
 }
 tr:nth-child(3n) td {
-  border-bottom:2.5% solid;
-}
-td {
-  color: black;
-  background-color: white;
+  border-bottom: 2.5% solid;
 }
