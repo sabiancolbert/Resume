@@ -52,7 +52,6 @@ tr:nth-child(3n) td {
   right: 0;
   left: 0;
   bottom: 0;
-  object-position: bottom;
 }
 
 button {
@@ -60,6 +59,7 @@ button {
   height: 100%;
   border-radius: 100%;
   border: none;
+  bottom:0;
 }
 .option {
   width: 80%;
