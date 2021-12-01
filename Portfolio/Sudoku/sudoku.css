@@ -5,7 +5,7 @@ body {
 }
 .container {
   position: relative;
-  margin:auto;
+  margin: auto;
 }
 .holder {
   position: absolute;
@@ -13,7 +13,6 @@ body {
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: red;
 }
 table {
   height: 100%;
@@ -28,7 +27,4 @@ td {
   color: black;
   background-color: white;
   border: 1px solid black;
-}
-p {
-  background-color: red;
 }
