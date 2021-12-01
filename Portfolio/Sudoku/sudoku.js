@@ -193,28 +193,28 @@ function isDefaultCell(cell) {
     emptyCells.push(start);
   }
   if (display[start + 1] == 0) {
-    emptyCells.push(start);
+    emptyCells.push(start +1);
   }
   if (display[start +2] == 0) {
-    emptyCells.push(start);
+    emptyCells.push(start+2);
   }
   if (display[start+9] == 0) {
-    emptyCells.push(start);
+    emptyCells.push(start+9);
   }
   if (display[start+10] == 0) {
-    emptyCells.push(start);
+    emptyCells.push(start+10);
   }
   if (display[start+11] == 0) {
-    emptyCells.push(start);
+    emptyCells.push(start+11);
   }
   if (display[start+18] == 0) {
-    emptyCells.push(start);
+    emptyCells.push(start+18);
   }
   if (display[start+19] == 0) {
-    emptyCells.push(start);
+    emptyCells.push(start+19;
   }
   if (display[start+20] == 0) {
-    emptyCells.push(start);
+    emptyCells.push(start+20);
   }
   c(emptyCells);
   //find empties in row
