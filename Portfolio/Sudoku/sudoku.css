@@ -30,6 +30,9 @@ table {
 .spacedRow {
   height: 2.5%;
 }
+.spacedColumn{
+  width:2.5%;
+}
 td {
   color: black;
   background-color: white;
