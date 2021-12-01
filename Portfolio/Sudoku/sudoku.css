@@ -16,9 +16,11 @@ body {
   bottom: 0;
   background-color: red;
 }
-table{
-  height:100%;
-  width:100%;
+table {
+  height: 100%;
+  width: 100%;
+
+}
 td {
   color: black;
   background-color: white;
