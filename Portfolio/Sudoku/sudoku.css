@@ -41,15 +41,12 @@ tr:nth-child(3n) td {
 
 button {
   width: 19%;
-  height: 19%;
   border-radius: 100%;
   border: none;
 }
 #selection {
   width: 23%;
-  height: 23%;
 }
 .option {
   width: 18%;
-  height: 18%;
 }
