@@ -39,13 +39,13 @@ tr:nth-child(3n) td {
   border-bottom: 2.5% solid;
 }
 
-#buttoncontainer {
+.buttoncontainer {
   position: relative;
   margin: auto;
   width: 20%;
   padding-top: 20%;
 }
-#buttonholder {
+.buttonholder {
   position: absolute;
   top: 0;
   right: 0;
