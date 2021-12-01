@@ -1,5 +1,6 @@
 /* variables */
 var cells = new Array(81);
+var display = new Array();
 var currentCell = 0;
 var difficulty = 30;
 
@@ -127,7 +128,6 @@ function fail() {
 
 function displayCells() {
   /* unsolve */
-  var display = new Array();
   cells.forEach(cell => display.push(cell));
   var tested = new Array([0]);
   var stop = 81 - Math.floor(Math.random()*5+difficulty);
@@ -155,8 +155,8 @@ function isDefaultNumber(cell) {
   var result = false;
   var otherNumbers = new Array();
   for (x = 1; x < 10; x++) {
-    if (x != cells[cell]) {
-      if (isInVertical(cell, x)/* || isInHorizonal(cell, i) || isInBox(cell, i)*/) {
+    if (x != display[cell]) {
+      if (isInVertical(cell, x) || isInHorizonal(cell, i) || isInBox(cell, i)) {
         otherNumbers.push(x);
       }
     }
@@ -169,6 +169,6 @@ function isDefaultNumber(cell) {
 
 //is this cell the only option for this number?
 function isDefaultCell(cell) {
-  var result = false;
+  var result = true;
   return result;
 }
