@@ -64,6 +64,5 @@ button {
   width: 80%;
   height: 80%;
   bottom: 0;
-  position: absolute;
-  margin:auto;
+  margin-top:20%;
 }
