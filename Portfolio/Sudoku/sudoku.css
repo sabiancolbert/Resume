@@ -4,7 +4,7 @@ body {
   text-align: center;
 }
 #gridcontainer {
-  
+*display:inline;
   display: inline-block;
   position: relative;
   margin: auto;
