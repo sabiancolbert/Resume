@@ -232,10 +232,9 @@ var adjust = 0;
 /* gameplay */
 
 function set(cell){
-  c(cell+" "+(cell.substring(1,cell.length)));
   if(userCells.includes(cell.substring(1,cell.length))){
   getElementById(cell).innerHTML = getElementById("selection").innerHTML;
   //add to display
 }
-else{c("no")}
+c(userCells);
 }
