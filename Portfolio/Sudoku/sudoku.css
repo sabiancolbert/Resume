@@ -5,7 +5,6 @@ body {
 }
 .container {
   position: relative;
-  padding-top: 100%;
 }
 .holder {
   position: absolute;
