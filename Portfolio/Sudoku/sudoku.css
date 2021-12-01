@@ -40,9 +40,8 @@ tr:nth-child(3n) td {
 }
 
 button {
-  width: 20%;
-  height: 20%;
-  margin: 0;
+  width: 19%;
+  height: 19%;
   border-radius: 100%;
   border: none;
 }
