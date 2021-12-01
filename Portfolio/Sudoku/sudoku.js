@@ -186,7 +186,7 @@ function isDefaultCell(cell) {
   }
   temp = Math.floor(temp/9)*9;
   var start = cell + adjust - temp;
-  c("stop:"+stop);
+  c("stop:"+start);
   //find empties in box
   display[cell]=-1;
   if (display[start] == 0) {
