@@ -211,35 +211,35 @@ function isDefaultCell(cell) {
     emptyCells.push(start+18);
   }
   if (display[start+19] == 0) {
-    emptyCells.push(start+19;
-  }
-  if (display[start+20] == 0) {
-    emptyCells.push(start+20);
-  }
-  c(emptyCells);
-  //find empties in row
-
-  //find empties in column
-  display[cell] = cells[cell];
-  //test empties
-  emptyCells.forEach(option => {
-    if (result && !isInVertical(option, display[cell]) && !isInHorizonal(option, display[cell])) {
-      result = false;
+    emptyCells.push(start+19);
     }
-  });
-  result = false;
-  return result;
-}
+    if (display[start+20] == 0) {
+      emptyCells.push(start+20);
+    }
+    c(emptyCells);
+    //find empties in row
 
-/* gameplay */
-
-function set(cell) {
-  if (userCells.includes(1*cell.substring(1, cell.length))) {
-    document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
-    //add to display
+    //find empties in column
+    display[cell] = cells[cell];
+    //test empties
+    emptyCells.forEach(option => {
+      if (result && !isInVertical(option, display[cell]) && !isInHorizonal(option, display[cell])) {
+        result = false;
+      }
+    });
+    result = false;
+    return result;
   }
-}
 
-function select(number) {
-  document.getElementById("selection").innerHTML = number;
-}
+  /* gameplay */
+
+  function set(cell) {
+    if (userCells.includes(1*cell.substring(1, cell.length))) {
+      document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
+      //add to display
+    }
+  }
+
+  function select(number) {
+    document.getElementById("selection").innerHTML = number;
+  }
