@@ -18,17 +18,17 @@ table {
   height: 100%;
   width: 100%;
 }
-#grid td{
-  width:10%;
-  height:10%;
+#grid td {
+  width: 10%;
+  height: 10%;
 }
 #buttons td {
   width: 19%;
   height: 19%;
   margin: 1%;
 }
-.spacedRow{
-  margin-bottom:5%;
+.spacedRow {
+  height: 5%;
 }
 td {
   color: black;
