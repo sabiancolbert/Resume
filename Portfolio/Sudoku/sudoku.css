@@ -26,11 +26,12 @@ table {
   width: 19%;
   height: 19%;
 }
-.spacedRow {
-  height: 2.5%;
+td:nth-child(3n) {
+  border-right:2.5% solid;
 }
-.spacedColumn {
-  padding-right: 2.5%;
+tr:nth-child(3n) td {
+  
+  border-bottom:2.5% solid;
 }
 td {
   color: black;
