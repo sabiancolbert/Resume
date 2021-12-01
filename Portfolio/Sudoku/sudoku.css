@@ -27,26 +27,25 @@ td {
   height: 10.5%;
 }
 td:first-child {
-  border-left: 2.5% solid black;
+  border-left: 2.5% solid;
 }
 td:nth-child(3n) {
-  border-right: 2.5% solid black;
+  border-right: 2.5% solid;
 }
 tr:first-child {
-  border-top: 2.5% solid black;
+  border-top: 2.5% solid;
 }
 tr:nth-child(3n) td {
-  border-bottom: 2.5% solid black;
+  border-bottom: 2.5% solid;
 }
 
 button {
-  width: 19%;
+  width: 100%;
+  height:100%;
   border-radius: 100%;
   border: none;
 }
-#selection {
-  width: 23%;
-}
 .option {
-  width: 18%;
+  width: 80%;
+  height:80%;
 }
