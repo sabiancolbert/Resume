@@ -238,6 +238,6 @@ function set(cell){
 }
 }
 
-function select (number){
-  document.getElementById("selection").innerHTML = cell;
+function select(number){
+  document.getElementById("selection").innerHTML = number;
 }
