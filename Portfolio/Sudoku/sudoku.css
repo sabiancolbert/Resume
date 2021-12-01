@@ -19,8 +19,8 @@ table {
   width: 100%;
 }
 #grid td {
-  width: 10%;
-  height: 10%;
+  width: 10.5%;
+  height: 10.5%;
 }
 #buttons td {
   width: 19%;
@@ -28,7 +28,7 @@ table {
   margin: 1%;
 }
 .spacedRow {
-  height: 5%;
+  height: 2.5%;
 }
 td {
   color: black;
