@@ -31,7 +31,7 @@ td:first-child {
 }
 td:nth-child(3n) {
   width: 5%;
-  margin-right: 30px solid;
+  padding-right: 30px solid;
   background-color: red
 }
 tr:first-child {
