@@ -7,13 +7,11 @@ div {
   margin: auto;
   position: relative;
   width: 100%;
-  padding-top: 100%;
+  padding:100%;
 }
 table {
   position: absolute;
   background-color: red;
-  height:100%;
-  width:100%;
 }
 td {
   color: black;
