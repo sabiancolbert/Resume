@@ -30,7 +30,7 @@ table {
 .spacedRow {
   height: 2.5%;
 }
-.spacedColumn {
+#spacedColumn {
   width: 2.5%;
   background-color: transparent;
 }
