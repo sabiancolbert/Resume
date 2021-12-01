@@ -232,8 +232,10 @@ var adjust = 0;
 /* gameplay */
 
 function set(cell){
+  c("Setting cell");
   if(userCells.includes(cell.substring(1,cell.length))){
   getElementById(cell).innerHTML = getElementById("selection").innerHTML;
   //add to display
 }
+else{c("no")}
 }
