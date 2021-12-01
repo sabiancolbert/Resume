@@ -3,7 +3,7 @@ var cells = new Array(81);
 var display = new Array();
 var userCells = new Array();
 var currentCell = 0;
-var difficulty = 0;
+var difficulty = 70;
 
 /* game creation */
 
@@ -165,7 +165,7 @@ function isDefaultNumber(cell) {
   if (otherNumbers.length == 8) {
     result = true;
   }
-  result= false;
+  result = false;
   return result;
 }
 
