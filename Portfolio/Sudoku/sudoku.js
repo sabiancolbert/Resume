@@ -3,7 +3,7 @@ var cells = new Array(81);
 var display = new Array();
 var userCells = new Array();
 var currentCell = 0;
-var difficulty = 70;
+var difficulty = 50;
 
 /* game creation */
 
