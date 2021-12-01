@@ -24,14 +24,6 @@ td {
   color: black;
   background-color: white;
 }
-td:first-child {
-  border-left: 20% solid;
-}
-td:nth-child(3n) {
-  width: 5%;
-  padding-right: 30px solid;
-  background-color: red
-}
 tr:first-child {
   border-top: 2.5% solid;
 }
