@@ -184,8 +184,8 @@ var adjust = 0;
   }
   temp = Math.floor(temp/9)*9;
   var start = cell + adjust - temp;
-  display[cell]=-1;
   //find empties in box
+  display[cell]=-1;
   if(display[start]==0){
     emptyCells.push(start);
   }
@@ -213,8 +213,8 @@ var adjust = 0;
   if(display[start+20]==0){
     emptyCells.push(start);
   }
-  //test empties
   display[cell]=cells[cell];
+  //test empties
   emptyCells.forEach(option =>{
     if(result && !isInVertical(option, display[cell]) && !isInHorizonal(option, display[cell])){
       result = false;
