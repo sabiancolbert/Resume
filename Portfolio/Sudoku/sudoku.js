@@ -165,7 +165,6 @@ function isDefaultNumber(cell) {
   if (otherNumbers.length == 8) {
     result = true;
   }
-  result = false;
   return result;
 }
 
