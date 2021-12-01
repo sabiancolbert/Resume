@@ -46,11 +46,13 @@ function setCells() {
     if (invalid) {
       attemptedNumbers[currentCell] = [0];
       cells[currentCell] = 0;
+      display[currentCell] = 0;
       currentCell--;
     }
     /* next cell */
     else {
       cells[currentCell] = number;
+      display[currentCell] = number;
       currentCell++;
     }
   }
@@ -66,12 +68,12 @@ function setCells() {
 function isInVertical(cell, number) {
   var result = false; 
   for (i = cell-9; i > -1; i -= 9) {
-    if (cells[i] == number) {
+    if (display[i] == number) {
       result = true;
     }
   }
   for (i = cell+9; i < 81; i += 9) {
-    if (cells[i] == number) {
+    if (display[i] == number) {
       result = true;
     }
   }
@@ -83,7 +85,7 @@ function isInHorizonal(cell, number) {
   var result = false;
   var rowStart = Math.floor(cell/9)*9;
   for (i = rowStart; i < rowStart+9; i++) {
-    if (cells[i] == number) {
+    if (display[i] == number) {
       result = true;
     }
   }
@@ -109,7 +111,7 @@ function isInBox(cell, number) {
   var stop = cell + adjust - temp;
   /* test box */
   for (i = stop + 18; i >= stop; i -= 9) {
-    if (cells[i] == number || cells[i+1] == number || cells[i+2] == number) {
+    if (display[i] == number || display[i+1] == number || display[i+2] == number) {
       result = true;
     }
   }
@@ -127,7 +129,6 @@ function fail() {
 
 function displayCells() {
   /* unsolve */
-  cells.forEach(cell => display.push(cell));
   var tested = new Array([0]);
   var stop = 81 - Math.floor(Math.random()*5+difficulty);
   while (stop > 0 && tested.length < 81) {
