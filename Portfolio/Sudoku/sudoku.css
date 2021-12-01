@@ -6,7 +6,7 @@ body {
 table{
     margin:auto;
 }
-td, #selectionCell {
+td {
     width: 30px;
     height: 30px;
     color:black;
