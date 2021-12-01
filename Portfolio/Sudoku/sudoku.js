@@ -2,7 +2,7 @@
 var cells = new Array(81);
 var display = new Array();
 var currentCell = 0;
-var difficulty = 30;
+var difficulty = 15;
 
 /* functions */
 
