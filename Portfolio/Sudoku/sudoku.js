@@ -237,7 +237,7 @@ function set(cell){
   //add to display
 }
 else{
-  c(cell);
+  c(cell.substring(1,cell.length));
 }
 c(userCells);
 }
