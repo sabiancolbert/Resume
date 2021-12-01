@@ -163,6 +163,7 @@ function isDefaultNumber(cell) {
   if (otherNumbers.length == 8) {
     result = true;
   }
+  result =false;
   return result;
 }
 
@@ -213,6 +214,9 @@ var adjust = 0;
   if(display[start+20]==0){
     emptyCells.push(start);
   }
+  //find empties in row
+
+//find empties in column
   display[cell]=cells[cell];
   //test empties
   emptyCells.forEach(option =>{
