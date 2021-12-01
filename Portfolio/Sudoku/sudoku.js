@@ -233,7 +233,7 @@ var adjust = 0;
 
 function set(cell){
   if(userCells.includes(1*cell.substring(1,cell.length))){
-  getElementById(cell).innerHTML = getElementById("selection").innerHTML;
+  document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
   //add to display
 }
 else{
