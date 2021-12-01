@@ -236,5 +236,8 @@ function set(cell){
   getElementById(cell).innerHTML = getElementById("selection").innerHTML;
   //add to display
 }
+else{
+  c(cell);
+}
 c(userCells);
 }
