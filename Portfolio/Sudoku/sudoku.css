@@ -11,6 +11,7 @@ div {
 }
 table {
   position: absolute;
+  background-color:red;
   top: 0;
   left: 0;
   right: 0;
