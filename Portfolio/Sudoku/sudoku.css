@@ -18,13 +18,19 @@ table {
   height: 100%;
   width: 100%;
 }
+#grid td{
+  width:10%;
+  height:10%;
+}
 #buttons td {
   width: 19%;
   height: 19%;
   margin: 1%;
 }
+.spacedRow{
+  margin-bottom:5%;
+}
 td {
   color: black;
   background-color: white;
-  border: 1px solid black;
 }
