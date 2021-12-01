@@ -30,8 +30,9 @@ table {
 .spacedRow {
   height: 2.5%;
 }
-.spacedColumn{
-  width:2.5%;
+#grid .spacedColumn {
+  width: 2.5%;
+  background-color:transparent;
 }
 td {
   color: black;
