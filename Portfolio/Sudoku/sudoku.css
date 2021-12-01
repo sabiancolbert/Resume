@@ -30,6 +30,7 @@ td:first-child {
   border-left: 20% solid;
 }
 td:nth-child(3n) {
+  width:5%;
   margin-right: 10px solid;
   background-color: red
 }
