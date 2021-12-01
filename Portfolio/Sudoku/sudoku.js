@@ -93,7 +93,6 @@ function isInHorizonal(cell, number) {
 //search for the same number in the same 3x3
 function isInBox(cell, number) {
   var result = false;
-  var stop = cell;
   /* find stopping cell */
   var adjust = 0;
   var temp = cell / 3 +" ";
@@ -107,7 +106,7 @@ function isInBox(cell, number) {
     temp -= 27;
   }
   temp = Math.floor(temp/9)*9;
-  stop = cell + adjust - temp;
+  var stop = cell + adjust - temp;
   /* test box */
   for (i = stop + 18; i >= stop; i -= 9) {
     if (cells[i] == number || cells[i+1] == number || cells[i+2] == number) {
@@ -170,5 +169,56 @@ function isDefaultNumber(cell) {
 //is this cell the only option for this number?
 function isDefaultCell(cell) {
   var result = true;
+  var emptyCells = new Array();
+  //find box
+var adjust = 0;
+  var temp = cell / 3 +" ";
+  if (temp.includes(".6")) {
+    adjust = -2;
+  } else if (temp.includes(".3")) {
+    adjust = -1;
+  }
+  temp = cell;
+  while (temp > 26) {
+    temp -= 27;
+  }
+  temp = Math.floor(temp/9)*9;
+  var start = cell + adjust - temp;
+  display[cell]=-1;
+  //find empties in box
+  if(display[start]==0){
+    emptyCells.push(start);
+  }
+  if(display[start + 1]==0){
+    emptyCells.push(start);
+  }
+  if(display[start +2]==0){
+    emptyCells.push(start);
+  }
+  if(display[start+9]==0){
+    emptyCells.push(start);
+  }
+  if(display[start+10]==0){
+    emptyCells.push(start);
+  }
+  if(display[start+11]==0){
+    emptyCells.push(start);
+  }
+  if(display[start+18]==0){
+    emptyCells.push(start);
+  }
+  if(display[start+19]==0){
+    emptyCells.push(start);
+  }
+  if(display[start+20]==0){
+    emptyCells.push(start);
+  }
+  //test empties
+  display[cell]=cells[cell];
+  emptyCells.forEach(option =>{
+    if(result && !isInVertical(option, display[cell]) && !isInHorizonal(option, display[cell])){
+      result = false;
+    }
+  });
   return result;
 }
