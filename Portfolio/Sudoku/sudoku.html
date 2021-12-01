@@ -10,9 +10,9 @@
 </head>
 <body onload="askDifficulty()">
   <!-- Sudoku Grid -->
-  <div class="container" style="padding-top: 100%;width:100%">
+  <div class="container">
     <div class="holder">
-      <table id="grid">
+      <table>
         <tr>
           <td onclick="set('c0');" id="c0"></td>
           <td onclick="set('c1');" id="c1"></td>
@@ -137,27 +137,24 @@
     </div>
   </div>
   <!-- Number Pad -->
-  <div class="container" style="padding-top: 80%;width:80%">
-    <div class="holder">
+  <div>
       <button onclick="undo()" class="option">u</button>
       <button onclick="redo()" class="option">r</button>
       <button onclick="note()" id="selection">0</button>
       <button onclick="restart()" class="option">r</button>
       <button onclick="menu()" class="option">m</button>
-<br>
+      <br>
       <button onclick="select(1)">1</button>
       <button onclick="select(2)">2</button>
       <button onclick="select(3)">3</button>
       <button onclick="select(4)">4</button>
       <button onclick="select(5)">5</button>
-<br>
+      <br>
       <button onclick="select(6)">6</button>
       <button onclick="select(7)">7</button>
       <button onclick="select(8)">8</button>
       <button onclick="select(9)">9</button>
       <button onclick="select('')">E</button>
-
-    </div>
   </div>
 </body>
 </html>
