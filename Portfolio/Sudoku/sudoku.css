@@ -1,18 +1,19 @@
 body {
-    background-color: black;
-    color:white;
-    text-align:center;
+  background-color: black;
+  color: white;
+  text-align: center;
 }
-table{
-    margin:auto;
+table {
+  margin: auto;
+  width:99%;
 }
 td {
-    width: 30px;
-    height: 30px;
-    color:black;
-    background-color: white;
-    border: 1px solid black;
+  width: 30px;
+  height: 30px;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
 }
-p{
-    background-color:red;
+p {
+  background-color: red;
 }
