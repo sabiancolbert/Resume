@@ -3,12 +3,12 @@ body {
   color: white;
   text-align: center;
 }
-#container {
+.container {
   position: relative;
   width: 100%;
   padding-top: 100%;
 }
-#holder {
+.holder {
   position: absolute;
   top: 0;
   right: 0;
