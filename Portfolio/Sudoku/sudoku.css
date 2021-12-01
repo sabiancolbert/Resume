@@ -25,13 +25,12 @@ table {
 #buttons td {
   width: 19%;
   height: 19%;
- 
 }
 .spacedRow {
   height: 2.5%;
 }
 .spacedColumn {
-  margin-right: 2.5%;
+  padding-right: 2.5%;
 }
 td {
   color: black;
