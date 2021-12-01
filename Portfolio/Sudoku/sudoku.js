@@ -236,8 +236,8 @@ function set(cell){
   document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
   //add to display
 }
-else{
-  c(cell.substring(1,cell.length));
 }
-c(userCells);
+
+function select (number){
+  document.getElementById("selection").innerHTML = cell;
 }
