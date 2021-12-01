@@ -4,14 +4,13 @@ body {
   text-align: center;
 }
 #gridcontainer {
-  display: inline;
-  
   position: relative;
   margin: auto;
   width: 100%;
   padding-top: 100%;
 }
 #gridholder {
+    display: inline;
   position: absolute;
   top: 0;
   right: 0;
