@@ -4,7 +4,7 @@ var display = new Array();
 var currentCell = 0;
 var difficulty = 0;
 
-/* functions */
+/* game creation */
 
 function c(c) {
   console.log(c);
@@ -225,4 +225,10 @@ var adjust = 0;
   });
   result = false;
   return result;
+}
+
+/* gameplay */
+
+function set(cell){
+  getElementById(cell).innerHTML = getElementById("selection").innerHTML;
 }
