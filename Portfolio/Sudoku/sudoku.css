@@ -18,6 +18,11 @@ table {
   height: 100%;
   width: 100%;
 }
+#buttons, td{
+  width:19%;
+  height:19%;
+  margin:1%;
+}
 td {
   color: black;
   background-color: white;
