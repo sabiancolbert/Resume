@@ -173,14 +173,14 @@ function isDefaultNumber(cell) {
 function isDefaultCell(cell) {
   var result = true;
   var emptyCells = new Array();
-  //find empties in row
-var temp = Math.floor(cell/9)*9;
+  //find empty cells in row
+  var temp = Math.floor(cell/9)*9;
   for (i = temp; i < temp+9; i++) {
     if (display[i] == 0) {
       emptyCells.push(i);
     }
   }
-  //find empties in column
+  //find empty cells in column
   for (i = cell-9; i > -1; i -= 9) {
     if (display[i] == 0) {
       emptyCells.push(i);
@@ -206,7 +206,7 @@ var temp = Math.floor(cell/9)*9;
   temp = Math.floor(temp/9)*9;
   var start = cell + adjust - temp;
   c("stop:"+start);
-  //find empties in box
+  //find empty cells in box
   display[cell]=-1;
   if (display[start] == 0) {
     emptyCells.push(start);
@@ -236,7 +236,7 @@ var temp = Math.floor(cell/9)*9;
     emptyCells.push(start+20);
   }
   display[cell] = cells[cell];
-  //test empties
+  //test empty cells
   emptyCells.forEach(option => {
     if (result && !isInVertical(option, display[cell]) && !isInHorizonal(option, display[cell])) {
       result = false;
