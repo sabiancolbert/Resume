@@ -59,9 +59,9 @@ button {
   height: 100%;
   border-radius: 100%;
   border: none;
-  bottom:0;
 }
 .option {
   width: 80%;
   height: 80%;
+  bottom: 0;
 }
