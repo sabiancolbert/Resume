@@ -3,13 +3,13 @@ body {
   color: white;
   text-align: center;
 }
-table {
+div {
   margin: auto;
   position: relative;
   width: 99%;
   padding-top: 100%;
 }
-tr {
+table {
   position: absolute;
   top: 0;
   left: 0;
