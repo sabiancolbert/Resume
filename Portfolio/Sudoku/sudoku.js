@@ -1,6 +1,7 @@
 /* variables */
 var cells = new Array(81);
 var display = new Array();
+var userCells = new Array();
 var currentCell = 0;
 var difficulty = 0;
 
@@ -137,6 +138,7 @@ function displayCells() {
       //if solvable
       if (isDefaultNumber(cell) || isDefaultCell(cell)) {
         display[cell] = 0;
+        userCells.push(cell);
         stop--;
       }
     }
@@ -230,5 +232,8 @@ var adjust = 0;
 /* gameplay */
 
 function set(cell){
+  if(userCells.includes(cell.substring(1,cell.length))){
   getElementById(cell).innerHTML = getElementById("selection").innerHTML;
+  //add to display
+}
 }
