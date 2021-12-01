@@ -4,8 +4,8 @@ body {
   text-align: center;
 }
 #gridcontainer {
-*display:inline;
-  display: inline-block;
+  display: inline;
+  
   position: relative;
   margin: auto;
   width: 100%;
