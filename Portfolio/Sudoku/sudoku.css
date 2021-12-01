@@ -29,6 +29,7 @@ td {
 button {
   width: 20%;
   height: 20%;
+  margin:0;
 }
 #selection {
   width: 24%;
