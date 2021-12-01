@@ -3,14 +3,17 @@ body {
   color: white;
   text-align: center;
 }
-div {
+#container {
   position: relative;
   width: 100%;
   padding-top: 100%;
 }
-table {
+#holder{
   position: absolute;
-  background-color: red;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
 }
 td {
   color: black;
