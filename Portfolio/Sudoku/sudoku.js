@@ -235,6 +235,9 @@ function set(cell){
   if(userCells.includes(cell.substring(1,cell.length))){
   getElementById(cell).innerHTML = getElementById("selection").innerHTML;
   //add to display
+c("suc"+cell);
 }
+else{
+  c("fai"+cell);
 c(userCells);
 }
