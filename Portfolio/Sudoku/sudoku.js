@@ -173,9 +173,18 @@ function isDefaultNumber(cell) {
 function isDefaultCell(cell) {
   var result = true;
   var emptyCells = new Array();
-  //find empties in row
-
   //find empties in column
+for (i = cell-9; i > -1; i -= 9) {
+    if (display[i] == 0) {
+      emptyCells.push(i);
+    }
+  }
+  for (i = cell+9; i < 81; i += 9) {
+    if (display[i] == 0) {
+      emptyCells.push(i);
+    }
+  }
+  //find empties in row
   //find box
   var adjust = 0;
   var temp = cell / 3 +" ";
