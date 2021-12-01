@@ -26,11 +26,17 @@ table {
   width: 19%;
   height: 19%;
 }
+td:first-child {
+
+  border-left:2.5% solid;
+}
 td:nth-child(3n) {
   border-right:2.5% solid;
 }
+tr:first-child {
+  border-top:2.5% solid;
+}
 tr:nth-child(3n) td {
-  
   border-bottom:2.5% solid;
 }
 td {
