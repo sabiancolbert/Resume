@@ -232,7 +232,7 @@ var adjust = 0;
 /* gameplay */
 
 function set(cell){
-  c("Setting cell");
+  c("Setting cell"+userCells.includes(cell.substring(1,cell.length)));
   if(userCells.includes(cell.substring(1,cell.length))){
   getElementById(cell).innerHTML = getElementById("selection").innerHTML;
   //add to display
