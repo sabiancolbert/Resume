@@ -45,7 +45,6 @@ function setCells() {
     /* previous cell */
     if (invalid) {
       attemptedNumbers[currentCell] = [0];
-      cells[currentCell] = 0;
       display[currentCell] = 0;
       currentCell--;
     }
