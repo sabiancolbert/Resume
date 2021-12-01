@@ -17,8 +17,6 @@ table {
   bottom: 0;
 }
 td {
-  width: auto;
-  height: auto;
   color: black;
   background-color: white;
   border: 1px solid black;
