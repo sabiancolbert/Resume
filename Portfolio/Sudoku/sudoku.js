@@ -228,7 +228,6 @@ function isDefaultCell(cell) {
       result = false;
     }
   });
-  result = false;
   return result;
 }
 
