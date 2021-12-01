@@ -5,11 +5,12 @@ body {
 }
 table {
   margin: auto;
-position:relative;
+  position: relative;
   width: 99%;
   padding-top: 100%;
 }
 tr {
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
