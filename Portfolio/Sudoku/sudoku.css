@@ -27,11 +27,11 @@ td {
   height: 10.5%;
 }
 td:first-child {
-  border-left: 2.5% solid;
+  border-left: 20% solid;
 }
 td:nth-child(3n) {
-  border-right: 2.5% solid;
-  background-color:red
+  border-right: 20% solid;
+  background-color: red
 }
 tr:first-child {
   border-top: 2.5% solid;
