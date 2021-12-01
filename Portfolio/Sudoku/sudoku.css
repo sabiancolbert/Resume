@@ -26,17 +26,17 @@ td {
   width: 10.5%;
   height: 10.5%;
 }
-#buttons td {
+button {
   width: 20%;
   height: 20%;
 }
-#selection{
+#selection {
   width: 24%;
-  height:20%;
+  height: 24%;
 }
-.option{
-  width:19%;
-  height:19%;
+.option {
+  width: 19%;
+  height: 19%;
 }
 td:first-child {
   border-left: 2.5% solid;
