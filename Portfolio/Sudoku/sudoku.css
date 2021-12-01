@@ -30,9 +30,8 @@ table {
 .spacedRow {
   height: 2.5%;
 }
-#spacedColumn {
-  width: 2.5%;
-  background-color: transparent;
+.spacedColumn {
+  margin-right: 2.5%;
 }
 td {
   color: black;
