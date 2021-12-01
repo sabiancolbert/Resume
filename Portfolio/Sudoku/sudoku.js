@@ -173,6 +173,9 @@ function isDefaultNumber(cell) {
 function isDefaultCell(cell) {
   var result = true;
   var emptyCells = new Array();
+  //find empties in row
+
+  //find empties in column
   //find box
   var adjust = 0;
   var temp = cell / 3 +" ";
@@ -217,10 +220,6 @@ function isDefaultCell(cell) {
   if (display[start+20] == 0) {
     emptyCells.push(start+20);
   }
-  c(emptyCells);
-  //find empties in row
-
-  //find empties in column
   display[cell] = cells[cell];
   //test empties
   emptyCells.forEach(option => {
