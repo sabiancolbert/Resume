@@ -66,7 +66,7 @@ function setCells() {
 
 //search for the same number in the same column
 function isInVertical(cell, number) {
-  var result = false; 
+  var result = false;
   for (i = cell-9; i > -1; i -= 9) {
     if (display[i] == number) {
       result = true;
@@ -173,7 +173,7 @@ function isDefaultCell(cell) {
   var result = true;
   var emptyCells = new Array();
   //find box
-var adjust = 0;
+  var adjust = 0;
   var temp = cell / 3 +" ";
   if (temp.includes(".6")) {
     adjust = -2;
@@ -186,42 +186,44 @@ var adjust = 0;
   }
   temp = Math.floor(temp/9)*9;
   var start = cell + adjust - temp;
+  c("stop:"+stop);
   //find empties in box
   display[cell]=-1;
-  if(display[start]==0){
+  if (display[start] == 0) {
     emptyCells.push(start);
   }
-  if(display[start + 1]==0){
+  if (display[start + 1] == 0) {
     emptyCells.push(start);
   }
-  if(display[start +2]==0){
+  if (display[start +2] == 0) {
     emptyCells.push(start);
   }
-  if(display[start+9]==0){
+  if (display[start+9] == 0) {
     emptyCells.push(start);
   }
-  if(display[start+10]==0){
+  if (display[start+10] == 0) {
     emptyCells.push(start);
   }
-  if(display[start+11]==0){
+  if (display[start+11] == 0) {
     emptyCells.push(start);
   }
-  if(display[start+18]==0){
+  if (display[start+18] == 0) {
     emptyCells.push(start);
   }
-  if(display[start+19]==0){
+  if (display[start+19] == 0) {
     emptyCells.push(start);
   }
-  if(display[start+20]==0){
+  if (display[start+20] == 0) {
     emptyCells.push(start);
   }
+  c(emptyCells);
   //find empties in row
 
-//find empties in column
-  display[cell]=cells[cell];
+  //find empties in column
+  display[cell] = cells[cell];
   //test empties
-  emptyCells.forEach(option =>{
-    if(result && !isInVertical(option, display[cell]) && !isInHorizonal(option, display[cell])){
+  emptyCells.forEach(option => {
+    if (result && !isInVertical(option, display[cell]) && !isInHorizonal(option, display[cell])) {
       result = false;
     }
   });
@@ -231,13 +233,13 @@ var adjust = 0;
 
 /* gameplay */
 
-function set(cell){
-  if(userCells.includes(1*cell.substring(1,cell.length))){
-  document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
-  //add to display
-}
+function set(cell) {
+  if (userCells.includes(1*cell.substring(1, cell.length))) {
+    document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
+    //add to display
+  }
 }
 
-function select(number){
+function select(number) {
   document.getElementById("selection").innerHTML = number;
 }
