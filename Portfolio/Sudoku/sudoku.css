@@ -5,7 +5,7 @@ body {
 }
 @media screen and (orientation: landscape) {
   p {
-    visibility: visible;
+    color:white;
   }
   section {
     visibility: hidden;
@@ -14,10 +14,8 @@ body {
 p {
   top: 10px;
   font-size: 10px;
-  visibility: visible;
   position: absolute;
-  color: white;
-  z-index: 1;
+  color: black;
 }
 #gridcontainer {
   position: relative;
