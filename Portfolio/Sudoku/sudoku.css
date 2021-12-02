@@ -29,7 +29,7 @@ p {
   right: 0;
   left: 0;
   bottom: 0;
-  padding: 1%;
+  padding: 5px;
 }
 table {
   height: 100%;
@@ -83,11 +83,11 @@ bold {
   font-weight: 1000;
 }
 
-numbercontainer{
+numbercontainer {
   background-color: #0000bb;
   border-radius: 5px;
 }
 
-numberholder{
-  padding:1%;
+numberholder {
+  padding: 5px;
 }
