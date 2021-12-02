@@ -52,8 +52,6 @@ td {
   margin: auto;
   width: 19%;
   padding-top: 19%;
-  background-color: #0000bb;
-  border-radius: 5px;
 }
 .buttonholder {
   position: absolute;
@@ -63,7 +61,6 @@ td {
   bottom: 0;
   position: absolute;
   top: 0;
-  padding: 1%;
 }
 
 button {
@@ -84,4 +81,13 @@ button:active {
 }
 bold {
   font-weight: 1000;
+}
+
+numbercontainer{
+  background-color: #0000bb;
+  border-radius: 5px;
+}
+
+numberholder{
+  padding:1%;
 }
