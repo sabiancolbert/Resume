@@ -12,7 +12,7 @@ body {
   }
 }
 p {
-  top: 10%;
+  top: 10px;
   font-size: 10px;
   visibility: hidden;
   position: absolute;
