@@ -68,6 +68,7 @@ button {
   border-radius: 100%;
   border: none;
   font-size: 150%;
+  font-weight:750;
   background-color: #aaaaff;
 }
 button:active {
