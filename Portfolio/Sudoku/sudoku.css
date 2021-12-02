@@ -11,6 +11,7 @@ body {
   p {
     visibility: visible;
   }
+  body{background-color:white;}
 }
 p {
   top: 10px;
