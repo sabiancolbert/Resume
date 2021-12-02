@@ -3,6 +3,12 @@ body {
   color: white;
   text-align: center;
 }
+@media only screen and (orientation:landscape) {
+  body {
+    height: 100vw;
+    transform: rotate(90deg);
+  }
+}
 #gridcontainer {
   position: relative;
   margin: auto;
