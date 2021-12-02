@@ -44,6 +44,7 @@ td {
   color: black;
   background-color: white;
   font-size: 150%;
+  border-radius: 7px;
 }
 .buttoncontainer {
   display: inline-block;
