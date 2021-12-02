@@ -16,7 +16,8 @@ p {
   font-size: 100px;
   visibility: hidden;
   position: absolute;
-  color:white;
+  color: white;
+  z-index:1;
 }
 #gridcontainer {
   position: relative;
