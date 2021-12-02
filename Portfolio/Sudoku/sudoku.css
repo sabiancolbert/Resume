@@ -11,10 +11,10 @@ body {
   p {
     visibility: visible;
     top: 10px;
-  font-size: 10px;
-  position: absolute;
-  color: white;
-  z-index: 1;
+    font-size: 10px;
+    position: absolute;
+    color: white;
+    z-index: 1;
   }
 }
 p {
@@ -23,7 +23,7 @@ p {
   position: absolute;
   color: white;
   z-index: 1;
-  visibility: hidden;
+  visibility: visible;
 }
 #gridcontainer {
   position: relative;
