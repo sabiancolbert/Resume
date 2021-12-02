@@ -18,7 +18,7 @@ body {
 }
 table {
   table-layout: fixed;
-  overflow-y: clip;
+  overflow-y: hidden;
   height: 100%;
   width: 33%;
   float: left;
