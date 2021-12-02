@@ -21,6 +21,7 @@ p {
   width: 100%;
   padding-top: 100%;
   background-color: #0000bb;
+  border-radius:5px;
 }
 #gridholder {
   position: absolute;
@@ -28,8 +29,8 @@ p {
   right: 0;
   left: 0;
   bottom: 0;
-  padding:1%;
-  
+  padding: 1%;
+ border-radius:5px;
 }
 table {
   height: 100%;
