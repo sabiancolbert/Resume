@@ -22,11 +22,11 @@ table {
   float: left;
 }
 td {
-  height:11%;
+  height: 11%;
   width: 32%;
   color: black;
   background-color: white;
-  font-size:80%;
+  font-size: 200%;
 }
 tr:nth-child(34n) td {
   height: 3px;
