@@ -59,6 +59,7 @@ td {
   left: 0;
   bottom: 0;
   position: absolute;
+  background-color: #ddddff;
 }
 
 button {
