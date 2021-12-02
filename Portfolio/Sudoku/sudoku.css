@@ -52,6 +52,8 @@ td {
   margin: auto;
   width: 19%;
   padding-top: 19%;
+  background-color: #0000bb;
+  border-radius: 5px;
 }
 .buttonholder {
   position: absolute;
@@ -59,6 +61,9 @@ td {
   right: 0;
   left: 0;
   bottom: 0;
+  position: absolute;
+  top: 0;
+  padding: 1%;
 }
 
 button {
