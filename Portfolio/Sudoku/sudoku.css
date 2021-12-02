@@ -22,8 +22,8 @@ table {
   float: left;
 }
 td {
-  height: 11.3%;
-  width: 33.3%;
+  height:100%;
+  width: 100%;
   color: black;
   background-color: white;
 }
