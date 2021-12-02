@@ -66,11 +66,11 @@ button {
   height: 100%;
   border-radius: 100%;
   border: none;
-  background-color:#ddddff;
-  color:white;
+  background-color: #aaaaff;
+  color: white;
 }
-button:active{
-  background-color:#0000bb;
+button:active {
+  background-color: #0000bb;
 }
 .option {
   width: 80%;
