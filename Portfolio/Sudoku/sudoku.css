@@ -26,7 +26,7 @@ td {
   width: 32%;
   color: black;
   background-color: white;
-  font-size: 200%;
+  font-size: 150%;
 }
 tr:nth-child(34n) td {
   height: 3px;
