@@ -19,7 +19,7 @@ body {
 table {
   height: 100%;
   width: 33%;
-  position: relative;
+  float: left;
 }
 td {
   height: 11%;
