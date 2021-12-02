@@ -9,7 +9,7 @@ body {
     visibility: hidden;
   }
   p {
-    visibility:visible;
+    visibility: visible;
   }
 }
 p {
@@ -17,8 +17,8 @@ p {
   font-size: 10px;
   position: absolute;
   color: white;
-  z-index:1;
-  visibility:hidden;
+  z-index: 1;
+  visibility: hidden;
 }
 #gridcontainer {
   position: relative;
@@ -37,11 +37,13 @@ table {
   height: 100%;
   width: 33%;
   float: left;
+  background-color: black;
 }
 td {
   max-height: 10.5%;
   height: 10.5%;
-  width: 32%;/*just use padding???*/
+  width: 32%;
+  /*just use padding???*/
   color: black;
   background-color: white;
   font-size: 150%;
