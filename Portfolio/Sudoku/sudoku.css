@@ -12,9 +12,11 @@ body {
   }
 }
 p {
-  top:10%;
-  font-size:100px;
+  top: 10%;
+  font-size: 100px;
   visibility: hidden;
+  position: absolute;
+  color:white;
 }
 #gridcontainer {
   position: relative;
