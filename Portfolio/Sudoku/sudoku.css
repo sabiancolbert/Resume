@@ -17,6 +17,7 @@ body {
   bottom: 0;
 }
 table {
+  table-layout:fixed;
   height: 100%;
   width: 33%;
   float: left;
