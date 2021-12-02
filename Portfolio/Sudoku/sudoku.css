@@ -30,7 +30,10 @@ td {
 tr:nth-child(34n) td {
   height: 3px;
 }
-
+td{
+  height:100%;
+  width:100%;
+}
 .buttoncontainer {
   display: inline-block;
   position: relative;
