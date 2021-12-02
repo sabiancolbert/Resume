@@ -42,7 +42,7 @@ td {
   width: 32%;
   /*just use padding???*/
   color: black;
-  background-color: white;
+  background-color: #000099;
   font-size: 150%;
   border-radius: 7px;
 }
