@@ -67,7 +67,6 @@ button {
   border-radius: 100%;
   border: none;
   background-color: #aaaaff;
-  color: white;
 }
 button:active {
   background-color: #0000bb;
