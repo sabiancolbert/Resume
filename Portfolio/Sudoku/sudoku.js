@@ -146,7 +146,7 @@ function displayCells() {
   /* display cells */
   for (i = 0; i < 81; i++) {
     if (display[i] > 0) {
-      document.getElementById("c"+i).innerHTML = "<strong>"+display[i]+"</strong>";
+      document.getElementById("c"+i).innerHTML = "<bold>"+display[i]+"</strong>";
     }
   }
 }
