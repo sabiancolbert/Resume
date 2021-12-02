@@ -22,7 +22,7 @@ table {
   float: left;
 }
 tr:nth-child(34n) td {
-  height: 2px;
+  height: 1px;
 }
 td {
   max-height: 10.5%;
