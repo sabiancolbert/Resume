@@ -23,7 +23,7 @@ p {
   position: absolute;
   color: white;
   z-index: 1;
-  visibility: visible;
+  visibility: hidden;
 }
 #gridcontainer {
   position: relative;
