@@ -14,7 +14,7 @@ body {
 p {
   top: 10px;
   font-size: 10px;
-  visibility: hidden;
+  visibility: visible;
   position: absolute;
   color: white;
   z-index: 1;
