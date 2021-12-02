@@ -9,15 +9,14 @@ body {
     visibility: hidden;
   }
   p {
-    color: white;
-    z-index:1;
+    z-index: 1;
   }
 }
 p {
   top: 10px;
   font-size: 10px;
   position: absolute;
-  color: black;
+  color: white;
 }
 #gridcontainer {
   position: relative;
