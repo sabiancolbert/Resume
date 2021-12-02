@@ -28,7 +28,7 @@ td {
   background-color: white;
 }
 tr:nth-child(34n) td {
-  height: 4px;
+  height: 3px;
 }
 
 .buttoncontainer {
