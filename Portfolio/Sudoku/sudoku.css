@@ -22,6 +22,8 @@ table {
   width: 33%;
 }
 td {
+  height:100%;
+  width:100%;
   color: black;
   background-color: white;
 }
