@@ -10,7 +10,7 @@ body {
   padding-top: 100%;
 }
 #gridholder {
-
+display:inline-block;
   position: absolute;
   top: 0;
   right: 0;
@@ -20,7 +20,7 @@ body {
 table {
   position: relative;
   height: 100%;
-  width: 30%;
+  width: 33%;
 }
 td {
   height: 11%;
