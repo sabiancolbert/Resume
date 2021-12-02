@@ -4,26 +4,16 @@ body {
   text-align: center;
 }
 @media screen and (orientation: landscape) {
-
   section {
     visibility: hidden;
-  }
-  p {
-    visibility: visible;
-    top: 10px;
-    font-size: 10px;
-    position: absolute;
-    color: white;
-    z-index: 1;
   }
 }
 p {
   top: 10px;
-  font-size: 10px;
+  font-size: 70px;
   position: absolute;
   color: white;
-  z-index: 1;
-  visibility: hidden;
+  z-index: -1;
 }
 #gridcontainer {
   position: relative;
@@ -37,6 +27,7 @@ p {
   right: 0;
   left: 0;
   bottom: 0;
+  background-color: black;
 }
 table {
   height: 100%;
