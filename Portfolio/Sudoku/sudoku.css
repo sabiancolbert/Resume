@@ -25,8 +25,7 @@ tr:nth-child(34n) td {
   height: 3px;
 }
 td {
-table-layout: fixed;
-  overflow-y: hidden;
+  max-height: 11%;
   height: 11%;
   width: 32%;
   color: black;
