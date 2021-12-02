@@ -7,9 +7,10 @@ body {
 
   section {
     visibility: hidden;
-  } 
+  }
   p {
     color: white;
+    z-index:1;
   }
 }
 p {
