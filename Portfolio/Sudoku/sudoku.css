@@ -27,11 +27,8 @@ td {
   color: black;
   background-color: white;
 }
-tr:first-child {
-  border-top: 2.5% solid;
-}
 tr:nth-child(3n) td {
-  border-bottom: 2.5% solid;
+  margin-bottom: 2.5% solid;
 }
 
 .buttoncontainer {
