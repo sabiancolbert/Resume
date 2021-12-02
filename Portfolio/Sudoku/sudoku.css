@@ -18,9 +18,9 @@ body {
   bottom: 0;
 }
 table {
-  position :relative;
+  position: relative;
   height: 100%;
-  width: 33%;
+  width: 30%;
 }
 td {
   height: 11%;
