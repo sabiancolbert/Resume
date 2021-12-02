@@ -17,13 +17,13 @@ body {
   bottom: 0;
 }
 table {
-  table-layout: fixed;
-  overflow-y: hidden;
   height: 100%;
   width: 33%;
   float: left;
 }
 td {
+  
+  overflow-y: hidden;
   height: 11%;
   width: 32%;
   color: black;
