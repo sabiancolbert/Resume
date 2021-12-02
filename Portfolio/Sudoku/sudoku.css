@@ -4,11 +4,12 @@ body {
   text-align: center;
 }
 @media screen and (orientation: landscape) {
-  p {
-    color:white;
-  }
+
   section {
     visibility: hidden;
+  } 
+  p {
+    color: white;
   }
 }
 p {
