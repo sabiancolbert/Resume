@@ -5,13 +5,17 @@ body {
 }
 @media screen and (orientation: landscape) {
   p {
-    visibility:visible;
+    visibility: visible;
   }
-  section{
-    visibility:hidden;
+  section {
+    visibility: hidden;
   }
 }
-p{visibility:hidden;}
+p {
+  top:10%;
+  font-size:100px;
+  visibility: hidden;
+}
 #gridcontainer {
   position: relative;
   margin: auto;
