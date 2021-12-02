@@ -148,9 +148,6 @@ function displayCells() {
     if (display[i] > 0) {
       document.getElementById("c"+i).innerHTML = "<strong>"+display[i]+"</strong>";
     }
-    else{
-      document.getElementById("c"+i).innerHTML = " ";
-    }
   }
 }
 
