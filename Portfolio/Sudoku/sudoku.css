@@ -1,3 +1,4 @@
+/* Misc */
 body {
   background-color: black;
   color: white;
@@ -15,6 +16,10 @@ p {
   color: white;
   z-index: -1;
 }
+bold {
+  font-weight: 1000;
+}
+/* Game Board */
 #gridcontainer {
   position: relative;
   margin: auto;
@@ -46,14 +51,23 @@ td {
   font-size: 150%;
   border-radius: 7px;
 }
-.buttoncontainer {
+/* Buttons */
+#buttoncontainer {
+  background-color: #0000bb;
+  border-radius: 5px;
+}
+#buttonholder {
+  padding: 5px;
+  background-color: #ddddff;
+}
+.optioncontainer {
   display: inline-block;
   position: relative;
   margin: auto;
   width: 14%;
   padding-top: 14%;
 }
-.buttonholder {
+.optionholder {
   top: 0;
   right: 0;
   left: 0;
@@ -61,7 +75,12 @@ td {
   position: absolute;
   background-color: #ddddff;
 }
-
+.option {
+  width: 80%;
+  height: 80%;
+  bottom: 0;
+  margin-top: 20%;
+}
 button {
   width: 100%;
   height: 100%;
@@ -73,23 +92,4 @@ button {
 }
 button:active {
   background-color: #0000bb;
-}
-.option {
-  width: 80%;
-  height: 80%;
-  bottom: 0;
-  margin-top: 20%;
-}
-bold {
-  font-weight: 1000;
-}
-
-numbercontainer {
-  background-color: #0000bb;
-  border-radius: 5px;
-}
-
-numberholder {
-  padding: 5px;
-  background-color: #ddddff;
 }
