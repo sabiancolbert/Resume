@@ -100,5 +100,6 @@ button:active {
 }
 label {
   position: absolute;
-  top:90%;
+  top: 80%;
+  left:-10%;
 }
