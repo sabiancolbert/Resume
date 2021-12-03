@@ -263,4 +263,6 @@ function select(number) {
   document.getElementById("selection").innerHTML = number;
 }
 
-undo {}
+function undo() {}
+
+function redo(){}
