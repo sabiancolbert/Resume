@@ -258,7 +258,7 @@ function set(cell) {
     document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
     currentMove++;
     numberTotals[document.getElementById(cell).innerHTML - 1]++;
-
+document.getElementById("numberLabel").innerHTML = 1 +//HERE HERE
     //add to display
     //moveList[currentMove] =
     //HERE
