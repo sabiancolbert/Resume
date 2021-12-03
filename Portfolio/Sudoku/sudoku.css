@@ -98,9 +98,10 @@ button {
 button:active {
   background-color: #2222ff;
 }
-label {
+labelcontainer{
   position: absolute;
   top: 75%;
   color: black;
-  margin: 0 50%;
+}
+label{
 }
