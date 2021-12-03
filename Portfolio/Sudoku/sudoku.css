@@ -88,7 +88,7 @@ td {
 }
 #labelcontainer {
   position: absolute;
-  top: 70%;
+  top: -10%;
   color: black;
   width: 100%;
 }
