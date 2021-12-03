@@ -1,6 +1,6 @@
 /* Misc */
 body {
-  background-color: #333333;
+  background-color: #222222;
   color: white;
   text-align: center;
 }
@@ -25,7 +25,7 @@ bold {
   margin: auto;
   width: 100%;
   padding-top: 100%;
-  background-color: #333333;
+  background-color: #222222;
 }
 #gridholder {
   position: absolute;
