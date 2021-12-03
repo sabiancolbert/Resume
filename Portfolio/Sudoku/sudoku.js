@@ -265,4 +265,6 @@ function select(number) {
 
 function undo() {}
 
-function redo(){}
+function redo() {}
+
+//HERE in html add little test under the numbers to show how many are left like: (2/9)
