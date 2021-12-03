@@ -250,10 +250,15 @@ function isDefaultCell(cell) {
 /* gameplay */
 
 function set(cell) {
-  if (userCells.includes(1*cell.substring(1, cell.length))) {
-    currentMove++;
+  if (userCells.includes(1*cell.substring(1, cell.length)) && display[1*cell.substring(1, cell.length)] != document.getElementById(cell).innerHTML){
+    if(document.getElementById(cell).innerHTML +1 != 1)){
+      numberTotals[document.getElementById(cell).innerHTML - 1]--;
+    }
+    
     document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
-    // numberTotals[
+        currentMove++;
+      numberTotals[document.getElementById(cell).innerHTML - 1]++;
+    
     //add to display
     //moveList[currentMove] =
     //HERE
