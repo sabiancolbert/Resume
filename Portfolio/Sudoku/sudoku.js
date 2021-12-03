@@ -269,7 +269,7 @@ function redo() {}
 
 /*//HERE
    HTML
-add little test under the numbers to show how many are left like: 2/9
+add little text under the numbers to show how many are left like: 2/9
 
 
 
