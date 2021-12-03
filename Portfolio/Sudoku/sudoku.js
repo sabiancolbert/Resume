@@ -267,4 +267,18 @@ function undo() {}
 
 function redo() {}
 
-//HERE in html add little test under the numbers to show how many are left like: (2/9)
+/*//HERE
+   HTML
+add little test under the numbers to show how many are left like: 2/9
+
+
+
+
+
+
+   JAVASCRIPT
+highlight on grid all instances of the selected number
+
+
+
+*/
