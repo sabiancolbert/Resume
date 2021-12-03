@@ -49,7 +49,7 @@ td {
   width: 32%;
   /*just use padding???*/
   color: black;
-  background-color: #ddddff;
+  background-color: #ccccee;
   font-size: 150%;
   border-radius: 20%;
 }
@@ -83,7 +83,7 @@ td {
 }
 #selectioncontainer button {
   border-radius: 20%;
-  background-color: #ddddff;
+  background-color: #ccccee;
   font-size: 300%;
 }
 button {
