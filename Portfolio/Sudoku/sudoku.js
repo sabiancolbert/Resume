@@ -2,7 +2,9 @@
 var cells = new Array(81);
 var display = new Array();
 var userCells = new Array();
+var moveList = new Array();
 var currentCell = 0;
+var currentMove = 0;
 var difficulty = 35;
 
 /* game creation */
@@ -247,11 +249,18 @@ function isDefaultCell(cell) {
 
 function set(cell) {
   if (userCells.includes(1*cell.substring(1, cell.length))) {
+    currentMove++;
     document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
     //add to display
+moveList[currentMove] = //HERE
+
+for(i=currentMove+1;i<
   }
 }
 
 function select(number) {
   document.getElementById("selection").innerHTML = number;
+}
+
+undo{
 }
