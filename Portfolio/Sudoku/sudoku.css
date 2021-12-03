@@ -56,7 +56,8 @@ td {
   background-color: #0000bb;
   border-radius: 5px;
   width: 80%;
-  left:10%;
+  left: 10%;
+  position:relative;
 }
 #buttonholder {
   padding: 5px;
