@@ -3,6 +3,7 @@ var cells = new Array(81);
 var display = new Array();
 var userCells = new Array();
 var moveList = new Array();
+var numberTotals = new Array(9);
 var currentCell = 0;
 var currentMove = 0;
 var difficulty = 35;
