@@ -252,15 +252,15 @@ function set(cell) {
     currentMove++;
     document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
     //add to display
-moveList[currentMove] = //HERE
+    //moveList[currentMove] = 
+    //HERE
 
-for(i=currentMove+1;i<
+    /for (i = currentMove+1; i <
+    }
   }
-}
 
-function select(number) {
-  document.getElementById("selection").innerHTML = number;
-}
+  function select(number) {
+    document.getElementById("selection").innerHTML = number;
+  }
 
-undo{
-}
+  undo {}
