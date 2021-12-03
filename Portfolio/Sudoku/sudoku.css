@@ -98,3 +98,6 @@ button {
 button:active {
   background-color: #2222ff;
 }
+label{ 
+  position:absolute;
+}
