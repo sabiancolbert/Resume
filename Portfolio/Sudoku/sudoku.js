@@ -264,7 +264,9 @@ function set(cell) {
 
 function select(number) {
   document.getElementById("selection").innerHTML = number;
+  if(number!=0){
   document.getElementById("numberLabel").innerHTML = numberTotals[number-1] + "/9";
+}
 }
 
 function undo() {}
