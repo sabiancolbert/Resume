@@ -27,7 +27,7 @@ bold {
   width: 100%;
   padding-top: 100%;
   background-color: #222222;
-  border: 5px solid #7777ff;
+  border: 5px solid #7777dd;
   border-radius: 5px;
 }
 #gridholder {
@@ -93,7 +93,7 @@ button {
   border: none;
   font-size: 150%;
   font-weight: 750;
-  background-color: #7777ff;
+  background-color: #7777dd;
 }
 button:active {
   background-color: #2222ff;
