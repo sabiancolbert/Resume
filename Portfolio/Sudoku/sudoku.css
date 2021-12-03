@@ -58,6 +58,7 @@ td {
 }
 #buttonholder {
   padding: 5px;
+  border-radius:6px;
   background-color: #ddddff;
 }
 .optioncontainer {
