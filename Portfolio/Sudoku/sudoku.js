@@ -3,7 +3,7 @@ var cells = new Array(81);
 var display = new Array();
 var userCells = new Array();
 var moveList = new Array();
-var numberTotals = new Array(9,9,9,9,9,9,9,9,9);
+var numberTotals = new Array(9, 9, 9, 9, 9, 9, 9, 9, 9);
 var currentCell = 0;
 var currentMove = 0;
 var difficulty = 35;
@@ -253,7 +253,7 @@ function set(cell) {
   if (userCells.includes(1*cell.substring(1, cell.length))) {
     currentMove++;
     document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
-   // numberTotals[
+    // numberTotals[
     //add to display
     //moveList[currentMove] =
     //HERE
@@ -264,6 +264,7 @@ function set(cell) {
 
 function select(number) {
   document.getElementById("selection").innerHTML = number;
+  document.getElementById("numberLabel").innerHTML = numberTotals[number-1] + "/9";
 }
 
 function undo() {}
