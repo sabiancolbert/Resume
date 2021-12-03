@@ -102,5 +102,6 @@ button:active {
   position: absolute;
   top: 75%;
   color: black;
+  margin:auto;
 }
 label {}
