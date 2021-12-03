@@ -101,5 +101,6 @@ button:active {
 label {
   position: absolute;
   top: 75%;
-  left: 30%;
+  color:black;
+  margin:auto;
 }
