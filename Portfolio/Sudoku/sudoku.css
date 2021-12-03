@@ -26,6 +26,8 @@ bold {
   width: 100%;
   padding-top: 100%;
   background-color: #222222;
+  border:5px solid #3333ff;
+  border-radius:5px;
 }
 #gridholder {
   position: absolute;
@@ -33,6 +35,7 @@ bold {
   right: 0;
   left: 0;
   bottom: 0;
+  padding:5px;
 }
 table {
   height: 100%;
