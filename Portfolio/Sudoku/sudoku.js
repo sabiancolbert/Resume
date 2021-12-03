@@ -264,9 +264,11 @@ function set(cell) {
 
 function select(number) {
   document.getElementById("selection").innerHTML = number;
-  if(number!=0){
-  document.getElementById("numberLabel").innerHTML = numberTotals[number-1] + "/9";
-}
+  if (number != 0) {
+    document.getElementById("numberLabel").innerHTML = numberTotals[number-1] + "/9";
+  } else {
+    document.getElementById("numberLabel").innerHTML = "";
+  }
 }
 
 function undo() {}
