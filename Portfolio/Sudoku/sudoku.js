@@ -280,6 +280,10 @@ add little test under the numbers to show how many are left like: 2/9
 highlight on grid all instances of the selected number
 highlight selected number/eraser
 click on selected number/eraser to change #selected to blank, switching to grid cell selection mode (press cell first, then number)
+some games end with two posibilities;test for criss crossed pairs, plug one answer in if so
+
+
+
 
 
 */
