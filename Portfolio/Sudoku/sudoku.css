@@ -61,6 +61,7 @@ td {
   position: relative;
 }
 #buttonholder {
+  padding:10px 0 5px;
   border-radius: 6px;
   background-color: #ddddff;
 }
