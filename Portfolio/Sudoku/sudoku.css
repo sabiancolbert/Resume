@@ -25,7 +25,7 @@ bold {
   margin: auto;
   width: 100%;
   padding-top: 100%;
-  background-color: black;
+  background-color: #555555;
 }
 #gridholder {
   position: absolute;
@@ -83,5 +83,5 @@ button {
   background-color: #aaaaff;
 }
 button:active {
-  background-color: #7777ff;
+  background-color: #5555ff;
 }
