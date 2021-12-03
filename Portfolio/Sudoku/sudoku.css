@@ -86,7 +86,7 @@ td {
   background-color: #ccccee;
   font-size: 300%;
 }
-.labelcontainer {
+#labelcontainer {
   position: absolute;
   top: 70%;
   color: black;
