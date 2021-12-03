@@ -51,9 +51,7 @@ td {
 }
 /* Buttons */
 #buttoncontainer {
-  width: 90%;
-  left: 5%;
-  position: relative;
+  width: 100%;
 }
 .optioncontainer {
   display: inline-block;
