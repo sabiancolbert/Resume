@@ -80,8 +80,8 @@ button {
   border: none;
   font-size: 150%;
   font-weight: 750;
-  background-color: #aaaaff;
+  background-color: #7777ff;
 }
 button:active {
-  background-color: #5555ff;
+  background-color: #3333ff;
 }
