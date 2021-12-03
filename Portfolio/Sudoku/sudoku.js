@@ -140,9 +140,9 @@ function displayCells() {
       tested.push(cell);
       //if solvable
       if (isDefaultNumber(cell) || isDefaultCell(cell)) {
+        numberTotals[display[cell]-1]--;
         display[cell] = 0;
         userCells.push(cell);
-        numberTotals[number-1]--;
         stop--;
       }
     }
