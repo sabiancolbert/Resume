@@ -250,30 +250,30 @@ function isDefaultCell(cell) {
 /* gameplay */
 
 function set(cell) {
-  if (userCells.includes(1*cell.substring(1, cell.length)) && display[1*cell.substring(1, cell.length)] != document.getElementById(cell).innerHTML){
-    if(document.getElementById(cell).innerHTML +1 != 1)){
-      numberTotals[document.getElementById(cell).innerHTML - 1]--;
-    }
-    
-    document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
-        currentMove++;
-      numberTotals[document.getElementById(cell).innerHTML - 1]++;
-    
-    //add to display
-    //moveList[currentMove] =
-    //HERE
-
-    //for (i = currentMove+1; i <
+  if (userCells.includes(1*cell.substring(1, cell.length)) && display[1*cell.substring(1, cell.length)] != document.getElementById(cell).innerHTML) {
+    if (document.getElementById(cell).innerHTML +1 != 1) {
+    numberTotals[document.getElementById(cell).innerHTML - 1]--;
   }
+
+  document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
+  currentMove++;
+  numberTotals[document.getElementById(cell).innerHTML - 1]++;
+
+  //add to display
+  //moveList[currentMove] =
+  //HERE
+
+  //for (i = currentMove+1; i <
+}
 }
 
 function select(number) {
-  document.getElementById("selection").innerHTML = number;
-  if (number != 0) {
-    document.getElementById("numberLabel").innerHTML = numberTotals[number-1] + "/9";
-  } else {
-    document.getElementById("numberLabel").innerHTML = "";
-  }
+document.getElementById("selection").innerHTML = number;
+if (number != 0) {
+document.getElementById("numberLabel").innerHTML = numberTotals[number-1] + "/9";
+} else {
+document.getElementById("numberLabel").innerHTML = "";
+}
 }
 
 function undo() {}
