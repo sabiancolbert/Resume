@@ -22,7 +22,8 @@ bold {
 /* Game Board */
 #gridcontainer {
   position: relative;
-  margin:0;
+  left: 0;
+  top:0;
   width: 100%;
   padding-top: 100%;
   background-color: #222222;
