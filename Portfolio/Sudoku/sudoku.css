@@ -50,7 +50,7 @@ td {
   color: black;
   background-color: #ddddff;
   font-size: 150%;
-  border-radius: 30%;
+  border-radius: 20%;
 }
 /* Buttons */
 #buttoncontainer {
@@ -81,7 +81,7 @@ td {
   width: 18%
 }
 #selectioncontainer button {
-  border-radius: 30%;
+  border-radius: 20%;
   background-color: #ddddff;
   font-size: 300%;
 }
