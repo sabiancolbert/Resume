@@ -263,9 +263,13 @@ function set(cell) {
     if (document.getElementById(cell).innerHTML +1 != 1) {
       //update new number total
       numberTotals[document.getElementById(cell).innerHTML - 1]--;
-    }
     //display new number total
     document.getElementById("numberLabel").innerHTML = numberTotals[document.getElementById(cell).innerHTML -1];
+    }
+    else{
+      //clear number label
+    document.getElementById("numberLabel").innerHTML = "";
+    }
     //add to display
     //moveList[currentMove] =
     currentMove++;
