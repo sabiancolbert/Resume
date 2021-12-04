@@ -8,6 +8,7 @@ var currentCell = 0;
 var currentMove = 0;
 var difficulty = 35;
 var noteMode = 0;
+var noteModeList = new Array(81);
 
 /* game creation */
 
@@ -154,6 +155,9 @@ function displayCells() {
       document.getElementById("c"+i).innerHTML = "<bold>"+display[i]+"</strong>";
     }
   }
+    for (i = 0; i < 81; i++) {
+    noteModeList[i] = 0;
+  }
 }
 
 //is this number the only option for this cell?
@@ -252,13 +256,14 @@ function isDefaultCell(cell) {
 
 function set(id) {
   var cellId = cellId;
-  var cellNumber = id.substring(1,id.length) * 1;
+  var cellNumber = id.substring(1,
+    id.length) * 1;
   var selection = document.getElementById("selection");
   var numberLabel = document.getElementById("numberLabel");
-  //if not in note mode
+  //if not in note mode 3
   if (note != 2) {
     //if not same number
-    //HERE if not same number AND not same note mode
+    //HERE if not same number
     if (display[cellNumber] != selection.innerHTML) {
       //if old is not empty
       if (cellId.innerHTML +1 != 1) {
@@ -284,7 +289,12 @@ function set(id) {
       //for (i = currentMove+1; i <
       currentMove++;
     }
-  } else {
+    /* if same number */
+    else{
+      
+    }
+  } 
+  else {
     //here note mode
   }
 }
