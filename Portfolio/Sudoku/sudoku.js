@@ -3,7 +3,7 @@ var cells = new Array(81);
 var display = new Array();
 var userCells = new Array();
 var moveList = new Array();
-var numberTotals = new Array(9, 9, 9, 9, 9, 9, 9, 9, 9);
+var numberTotals = new Array(0,0,0,0,0,0,0,0,0);
 var currentCell = 0;
 var currentMove = 0;
 var difficulty = 35;
@@ -140,7 +140,7 @@ function displayCells() {
       tested.push(cell);
       //if solvable
       if (isDefaultNumber(cell) || isDefaultCell(cell)) {
-        numberTotals[display[cell]-1]--;
+        numberTotals[display[cell]-1]++;
         display[cell] = 0;
         userCells.push(cell);
         stop--;
@@ -252,12 +252,12 @@ function isDefaultCell(cell) {
 function set(cell) {
   if (userCells.includes(1*cell.substring(1, cell.length)) && display[1*cell.substring(1, cell.length)] != document.getElementById("selection").innerHTML) {
     if (document.getElementById(cell).innerHTML +1 != 1) {
-      numberTotals[document.getElementById(cell).innerHTML - 1]--;
+      numberTotals[document.getElementById(cell).innerHTML - 1]++;
     }
 
     document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
     currentMove++;
-    numberTotals[document.getElementById(cell).innerHTML - 1]++;
+    numberTotals[document.getElementById(cell).innerHTML - 1]--;
     document.getElementById("numberLabel").innerHTML = numberTotals[document.getElementById(cell).innerHTML -1];
     //add to display
     //moveList[currentMove] =
@@ -270,7 +270,7 @@ function set(cell) {
 function select(number) {
   document.getElementById("selection").innerHTML = number;
   if (number != 0) {
-    document.getElementById("numberLabel").innerHTML = numberTotals[number-1] + "/9";
+    document.getElementById("numberLabel").innerHTML = numberTotals[number-1];
   } else {
     document.getElementById("numberLabel").innerHTML = "";
   }
