@@ -290,6 +290,7 @@ add little text under the numbers to show how many are left like: 2/9
 
 
    JAVASCRIPT
+make numberLabel go down instead of up
 highlight on grid all instances of the selected number
 highlight selected number/eraser
 click on selected number/eraser to change #selected to blank, switching to grid cell selection mode (press cell first, then number)
