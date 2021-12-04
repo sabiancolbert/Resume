@@ -273,13 +273,12 @@ function set(cell) {
       //clear number label
       document.getElementById("numberLabel").innerHTML = "";
     }
-    display[cell.substring(1,cell.length)] = document.getElementById("selection").innerHTML
-    //add to display
+    //update display array
+    display[cell.substring(1, cell.length)] = document.getElementById("selection").innerHTML
+    //update move list
     //moveList[currentMove] =
-    currentMove++;
-    //HERE
-
     //for (i = currentMove+1; i <
+    currentMove++;
   }
 }
 
@@ -313,7 +312,7 @@ click on selected number/eraser to change #selected to blank, switching to grid 
 some games end with two posibilities;test for criss crossed pairs, plug one answer in if so
 
 change all cells function calls to ## instead of c## and fix the JavaScript for it
-
+condense set using variables for readability and remove notes after
 
 
 */
