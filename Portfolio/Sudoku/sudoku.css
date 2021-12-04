@@ -53,8 +53,8 @@ td {
   font-size: 150%;
   border-radius: 20%;
 }
-td:active{
-  background-color: 7777dd;
+td:active {
+  background-color: #7777dd;
 }
 /* Buttons */
 #buttoncontainer {
