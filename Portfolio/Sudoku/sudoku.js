@@ -260,9 +260,8 @@ function set(cellId) {
   var numberLabel = document.getElementById("numberLabel");
   //if not in note mode 3
   if (note != 2) {
-    //if not same number
-    //HERE if not same number
-    if (display[cellNumber] != selection.innerHTML) {
+    //if not same number but same note mode
+    if (display[cellNumber] != selection.innerHTML && noteMode == noteModeList(cell)) {
       //if old is not empty
       if (cellId.innerHTML +1 != 1) {
         //update old number total
