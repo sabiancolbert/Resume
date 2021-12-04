@@ -3,7 +3,7 @@ var cells = new Array(81);
 var display = new Array();
 var userCells = new Array();
 var moveList = new Array();
-var numberTotals = new Array(0,0,0,0,0,0,0,0,0);
+var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0);
 var currentCell = 0;
 var currentMove = 0;
 var difficulty = 35;
@@ -250,17 +250,24 @@ function isDefaultCell(cell) {
 /* gameplay */
 
 function set(cell) {
+  //if user available cell and not same number
   if (userCells.includes(1*cell.substring(1, cell.length)) && display[1*cell.substring(1, cell.length)] != document.getElementById("selection").innerHTML) {
+    //if old is not empty
     if (document.getElementById(cell).innerHTML +1 != 1) {
+      //update old number total
       numberTotals[document.getElementById(cell).innerHTML - 1]++;
     }
-
+//update cell
     document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
-    currentMove++;
+    //if new is not empty
+    if(){
+      //update new number 
     numberTotals[document.getElementById(cell).innerHTML - 1]--;
+  }
     document.getElementById("numberLabel").innerHTML = numberTotals[document.getElementById(cell).innerHTML -1];
     //add to display
     //moveList[currentMove] =
+    currentMove++;
     //HERE
 
     //for (i = currentMove+1; i <
