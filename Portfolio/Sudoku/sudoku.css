@@ -27,7 +27,7 @@ bold {
   width: 100%;
   padding-top: 100%;
   background-color: #222222;
-  border: 5px solid #8585dd;
+  border: 5px solid #3388dd;
   border-radius: 5px;
 }
 #gridholder {
@@ -54,7 +54,7 @@ td {
   border-radius: 20%;
 }
 td:active {
-  background-color: #8585dd;
+  background-color: #3388dd;
 }
 /* Buttons */
 #buttoncontainer {
@@ -90,7 +90,7 @@ td:active {
   font-size: 300%;
 }
 #selection:active {
-  background-color: #8585dd;
+  background-color: #3388dd;
 }
 #labelcontainer {
   position: absolute;
@@ -104,7 +104,7 @@ button {
   border: none;
   font-size: 150%;
   font-weight: 750;
-  background-color: #8585dd;
+  background-color: #3388dd;
 }
 button:active {
   background-color: #2222ff;
