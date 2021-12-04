@@ -253,9 +253,12 @@ function set(cell) {
   //if user available cell and not same number
   if (userCells.includes(1*cell.substring(1, cell.length)) && display[1*cell.substring(1, cell.length)] != document.getElementById("selection").innerHTML) {
     //if old is not empty
+c("1");
     if (document.getElementById(cell).innerHTML +1 != 1) {
       //update old number total
       numberTotals[document.getElementById(cell).innerHTML - 1]++;
+    c("2");
+      
     }
     //update cell
     document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
@@ -263,12 +266,11 @@ function set(cell) {
     if (document.getElementById(cell).innerHTML +1 != 1) {
       //update new number total
       numberTotals[document.getElementById(cell).innerHTML - 1]--;
-    //display new number total
-    document.getElementById("numberLabel").innerHTML = numberTotals[document.getElementById(cell).innerHTML -1];
-    }
-    else{
+      //display new number total
+      document.getElementById("numberLabel").innerHTML = numberTotals[document.getElementById(cell).innerHTML -1];
+    } else {
       //clear number label
-    document.getElementById("numberLabel").innerHTML = "";
+      document.getElementById("numberLabel").innerHTML = "";
     }
     //add to display
     //moveList[currentMove] =
