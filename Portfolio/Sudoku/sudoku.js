@@ -254,10 +254,8 @@ function isDefaultCell(cell) {
 
 /* gameplay */
 
-function set(id) {
-  var cellId = cellId;
-  var cellNumber = id.substring(1,
-    id.length) * 1;
+function set(cellId) {
+  var cellNumber = id.substring(1,id.length) * 1;
   var selection = document.getElementById("selection");
   var numberLabel = document.getElementById("numberLabel");
   //if not in note mode 3
