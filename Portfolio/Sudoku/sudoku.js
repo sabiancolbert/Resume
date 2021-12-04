@@ -257,13 +257,14 @@ function set(cell) {
       //update old number total
       numberTotals[document.getElementById(cell).innerHTML - 1]++;
     }
-//update cell
+    //update cell
     document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
     //if new is not empty
-    if(){
-      //update new number 
-    numberTotals[document.getElementById(cell).innerHTML - 1]--;
-  }
+    if (document.getElementById(cell).innerHTML +1 != 1) {
+      //update new number total
+      numberTotals[document.getElementById(cell).innerHTML - 1]--;
+    }
+    //display new number total
     document.getElementById("numberLabel").innerHTML = numberTotals[document.getElementById(cell).innerHTML -1];
     //add to display
     //moveList[currentMove] =
