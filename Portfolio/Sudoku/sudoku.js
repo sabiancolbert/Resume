@@ -251,40 +251,42 @@ function isDefaultCell(cell) {
 /* gameplay */
 
 function set(id) {
-  var cellId = document.getElementById(id);
-var cellNumber = id.substring(1,id.length) * 1;
-if(note!=2){
-  //if not same number
-//HERE if not same number AND not same note mode
-  if (display[cellNumber] != document.getElementById("selection").innerHTML) {
-    //if old is not empty
-    if (document.getElementById(id).innerHTML +1 != 1) {
-      //update old number total
-      numberTotals[document.getElementById(id).innerHTML - 1]++;
+  var cellId = cellId;
+  var cellNumber = id.substring(1,id.length) * 1;
+  var selection = document.getElementById("selection");
+  var numberLabel = document.getElementById("numberLabel");
+  //if not in note mode
+  if (note != 2) {
+    //if not same number
+    //HERE if not same number AND not same note mode
+    if (display[cellNumber] != selection.innerHTML) {
+      //if old is not empty
+      if (cellId.innerHTML +1 != 1) {
+        //update old number total
+        numberTotals[cellId.innerHTML - 1]++;
+      }
+      //update cell
+      cellId.innerHTML = selection.innerHTML;
+      //if new is not empty
+      if (cellId.innerHTML +1 != 1) {
+        //update new number total
+        numberTotals[cellId.innerHTML - 1]--;
+        //display new number total
+        numberLabel.innerHTML = numberTotals[cellId.innerHTML -1];
+      } else {
+        //clear number label
+        numberLabel.innerHTML = "";
+      }
+      //update display array
+      display[cellNumber] = selection.innerHTML
+      //update move list
+      //moveList[currentMove] =
+      //for (i = currentMove+1; i <
+      currentMove++;
     }
-    //update cell
-    document.getElementById(id).innerHTML = document.getElementById("selection").innerHTML;
-    //if new is not empty
-    if (document.getElementById(id).innerHTML +1 != 1) {
-      //update new number total
-      numberTotals[document.getElementById(id).innerHTML - 1]--;
-      //display new number total
-      document.getElementById("numberLabel").innerHTML = numberTotals[document.getElementById(id).innerHTML -1];
-    } else {
-      //clear number label
-      document.getElementById("numberLabel").innerHTML = "";
-    }
-    //update display array
-    display[cellNumber] = document.getElementById("selection").innerHTML
-    //update move list
-    //moveList[currentMove] =
-    //for (i = currentMove+1; i <
-    currentMove++;
+  } else {
+    //here note mode
   }
-}
-else{
-  //here note mode
-}
 }
 
 function select(number) {
@@ -300,9 +302,9 @@ function undo() {}
 
 function redo() {}
 
-function note(){
+function note() {
   noteMode++;
-  if(noteMode==3){
+  if (noteMode == 3) {
     noteMode = 0;
   }
   //HERE set style of selection
