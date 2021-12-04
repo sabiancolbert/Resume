@@ -250,15 +250,16 @@ function isDefaultCell(cell) {
 /* gameplay */
 
 function set(cell) {
+  c("0");
   //if user available cell and not same number
   if (userCells.includes(1*cell.substring(1, cell.length)) && display[1*cell.substring(1, cell.length)] != document.getElementById("selection").innerHTML) {
     //if old is not empty
-c("1");
+    c("1");
     if (document.getElementById(cell).innerHTML +1 != 1) {
       //update old number total
       numberTotals[document.getElementById(cell).innerHTML - 1]++;
-    c("2");
-      
+      c("2");
+
     }
     //update cell
     document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
