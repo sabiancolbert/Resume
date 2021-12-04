@@ -273,6 +273,7 @@ function set(cell) {
       //clear number label
       document.getElementById("numberLabel").innerHTML = "";
     }
+    display[cell.substring(1,cell.length)] = document.getElementById("selection").innerHTML
     //add to display
     //moveList[currentMove] =
     currentMove++;
@@ -311,7 +312,7 @@ highlight selected number/eraser
 click on selected number/eraser to change #selected to blank, switching to grid cell selection mode (press cell first, then number)
 some games end with two posibilities;test for criss crossed pairs, plug one answer in if so
 
-
+change all cells function calls to ## instead of c## and fix the JavaScript for it
 
 
 
