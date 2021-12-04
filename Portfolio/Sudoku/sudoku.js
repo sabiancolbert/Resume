@@ -286,8 +286,8 @@ function set(cellId) {
       //for (i = currentMove+1; i <
       currentMove++;
     }
-    /* if same number */
-    else{
+    //if not same number and node mode 1 //HERE
+    else if(){
       
     }
   } 
