@@ -7,6 +7,7 @@ var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0);
 var currentCell = 0;
 var currentMove = 0;
 var difficulty = 35;
+var noteMode = 0;
 
 /* game creation */
 
@@ -249,37 +250,41 @@ function isDefaultCell(cell) {
 
 /* gameplay */
 
-function set(cell) {
-  c("0");
-  //if user available cell and not same number
-  if (userCells.includes(1*cell.substring(1, cell.length)) && display[1*cell.substring(1, cell.length)] != document.getElementById("selection").innerHTML) {
+function set(id) {
+  var cellId = document.getElementById(id);
+var cellNumber = id.substring(1,id.length) * 1;
+if(note!=2){
+  //if not same number
+//HERE if not same number AND not same note mode
+  if (display[cellNumber] != document.getElementById("selection").innerHTML) {
     //if old is not empty
-    c("1");
-    if (document.getElementById(cell).innerHTML +1 != 1) {
+    if (document.getElementById(id).innerHTML +1 != 1) {
       //update old number total
-      numberTotals[document.getElementById(cell).innerHTML - 1]++;
-      c("2");
-
+      numberTotals[document.getElementById(id).innerHTML - 1]++;
     }
     //update cell
-    document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
+    document.getElementById(id).innerHTML = document.getElementById("selection").innerHTML;
     //if new is not empty
-    if (document.getElementById(cell).innerHTML +1 != 1) {
+    if (document.getElementById(id).innerHTML +1 != 1) {
       //update new number total
-      numberTotals[document.getElementById(cell).innerHTML - 1]--;
+      numberTotals[document.getElementById(id).innerHTML - 1]--;
       //display new number total
-      document.getElementById("numberLabel").innerHTML = numberTotals[document.getElementById(cell).innerHTML -1];
+      document.getElementById("numberLabel").innerHTML = numberTotals[document.getElementById(id).innerHTML -1];
     } else {
       //clear number label
       document.getElementById("numberLabel").innerHTML = "";
     }
     //update display array
-    display[cell.substring(1, cell.length)] = document.getElementById("selection").innerHTML
+    display[cellNumber] = document.getElementById("selection").innerHTML
     //update move list
     //moveList[currentMove] =
     //for (i = currentMove+1; i <
     currentMove++;
   }
+}
+else{
+  //here note mode
+}
 }
 
 function select(number) {
@@ -295,6 +300,13 @@ function undo() {}
 
 function redo() {}
 
+function note(){
+  noteMode++;
+  if(noteMode==3){
+    noteMode = 0;
+  }
+  //HERE set style of selection
+}
 /*//HERE
    HTML
 add little text under the numbers to show how many are left like: 2/9
@@ -306,9 +318,9 @@ add little text under the numbers to show how many are left like: 2/9
 
    JAVASCRIPT
 make numberLabel go down instead of up
-highlight on grid all instances of the selected number
+highlight on grid all instances of the selected number; note=1 highlights, note =2 does not
 highlight selected number/eraser
-click on selected number/eraser to change #selected to blank, switching to grid cell selection mode (press cell first, then number)
+click on selected number/eraser to change #selected to blank, switching to grid cell selection mode (press 1 first, then number)
 some games end with two posibilities;test for criss crossed pairs, plug one answer in if so
 
 change all cells function calls to ## instead of c## and fix the JavaScript for it
