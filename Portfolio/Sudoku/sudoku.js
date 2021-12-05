@@ -260,7 +260,7 @@ function set(id) {
     id.length) * 1;
   var selection = document.getElementById("selection");
   var numberLabel = document.getElementById("numberLabel");
-  //if in regular number note mode (0)
+  /* number mode (black or grey) */)
   if (noteMode != 2) {
     //if different number or different note mode
     if (display[cellNumber] != selection.innerHTML || noteMode != noteModeList[cellNumber]) {
@@ -298,12 +298,10 @@ function set(id) {
       }
     }
   }
-  /*else if(){
-    //here grey mode
-  }
+  /* note mode */
   else {
-    //here note mode
-  }*/
+    
+  }
 }
 
 function select(number) {
@@ -323,14 +321,13 @@ function note() {
   noteMode++;
   if (noteMode == 3) {
     noteMode = 0;
-    document.getElementById("selection").style.color = "black";
-  }
-  else if(noteMode == 1){
+    document.getElementById("selection").style.fontSize = "300%";
+  } else if (noteMode == 1) {
     document.getElementById("selection").style.color = "#777777";
-    
-  }
-  else{
-    
+
+  } else {
+    document.getElementById("selection").style.color = "black";
+    document.getElementById("selection").style.fontSize = "75%";
   }
   //HERE set style of selection
 }
