@@ -323,6 +323,14 @@ function note() {
   noteMode++;
   if (noteMode == 3) {
     noteMode = 0;
+    document.getElementById("selection").style.color = "black";
+  }
+  else if(noteMode == 1){
+    document.getElementById("selection").style.color = "#777777";
+    
+  }
+  else{
+    
   }
   //HERE set style of selection
 }
