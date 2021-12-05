@@ -111,24 +111,22 @@ button:active {
 }
 /* Notes */
 article {
+  display:inline-block;
   font-size: 60%;
   position: relative;
-  height: 33.33%;
-  width: 33.33%;
+  height: 33%;
+  width: 33%;
   font-weight: 500;
-}
+}/*
 article:nth-child(1n) {
-  top: 0;
   left: 0;
 }
 article:nth-child(2n) {
-  top: -66%;
   left: 33.33%;
 }
 article:nth-child(3n) {
-  top: -80%;
   left: 66.66%;
-}
+}*/
 article:nth-child(4n) {}
 article:nth-child(5n) {}
 article:nth-child(6n) {}
