@@ -109,38 +109,45 @@ button {
 button:active {
   background-color: #1050aa;
 }
-article{
-  position:absolute;
-  height:33.33%;
-  width:33.33%;
+#notecontainer{
+  position: relative;
+  left: -5px;
+  top: -5px;
+  width: 100%;
+  padding-top: 100%;
+  margin:5px;
+  border-radius: 5px;}
+#noteholder{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 5px;
 }
-article:nth-child(1n){
-  top:0;
-  left:0;
+#noteholder td{
+  background-color:red;
 }
-article:nth-child(2n){
-  top:0;
-  left:33.33%;
+article {
+  position: absolute;
+  height: 33.33%;
+  width: 33.33%;
 }
-article:nth-child(3n){
-  top:0;
-  right:0;
+article:nth-child(1n) {
+  top: 0;
+  left: 0;
 }
-article:nth-child(4n){
-  
+article:nth-child(2n) {
+  top: 0;
+  left: 33.33%;
 }
-article:nth-child(5n){
-  
+article:nth-child(3n) {
+  top: 0;
+  right: 0;
 }
-article:nth-child(6n){
-  
-}
-article:nth-child(7n){
-  
-}
-article:nth-child(8n){
-  
-}
-article:nth-child(9n){
-  
-}
+article:nth-child(4n) {}
+article:nth-child(5n) {}
+article:nth-child(6n) {}
+article:nth-child(7n) {}
+article:nth-child(8n) {}
+article:nth-child(9n) {}
