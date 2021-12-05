@@ -290,7 +290,7 @@ function set(id) {
       //for (i = currentMove+1; i <
       currentMove++;
       //seperate note mode 1 and 2
-      if (note == 0) {
+      if (noteMode == 0) {
         //check();
         cellId.style.color = "black";
       } else {
