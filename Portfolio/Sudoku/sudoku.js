@@ -260,7 +260,7 @@ function set(id) {
   var selection = document.getElementById("selection");
   var numberLabel = document.getElementById("numberLabel");
   //if in regular number note mode (0)
-  if (noteMode == 0) {
+  if (noteMode !=2) {
     //if different number or different note mode
     if (display[cellNumber] != selection.innerHTML || noteMode != noteModeList[cellNumber]) {
       //update cells notemode
@@ -289,6 +289,8 @@ c("3)");
       //moveList[currentMove] =
       //for (i = currentMove+1; i <
       currentMove++;
+      //add to checklist
+//check();
     }
   } 
   /*else if(){
