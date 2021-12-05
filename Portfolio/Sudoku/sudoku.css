@@ -110,35 +110,6 @@ button:active {
   background-color: #1050aa;
 }
 /* Notes */
-td:nth-child(even){
-  position:absolute;
-}
-
-
-
-
-
-
-#notecontainer {
-  position: relative;
-  left: -5px;
-  top: -5px;
-  width: 100%;
-  padding-top: 100%;
-  margin: 5px;
-  border-radius: 5px;
-}
-#noteholder {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  padding: 5px;
-}
-#noteholder td {
-  background-color: red;
-}
 article {
   position: absolute;
   height: 33.33%;
