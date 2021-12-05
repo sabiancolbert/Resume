@@ -6,7 +6,7 @@ var moveList = new Array();
 var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0);
 var currentCell = 0;
 var currentMove = 0;
-var difficulty = 35;
+var difficulty = 0;
 var noteMode = 0;
 var noteModeList = new Array(81);
 
