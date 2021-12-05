@@ -114,12 +114,12 @@ article {
   display: inline-block;
   font-size: 60%;
   position: relative;
-  height: 33%;
-  width: 33%;
+  height: 30%;
+  width: 30%;
   font-weight: 500;
 }
 
-
+/*
 article:nth-child(1n) {
   left: 0;
 }
@@ -128,7 +128,7 @@ article:nth-child(2n) {
 }
 article:nth-child(3n) {
   left: 66.66%;
-}
+}*/
 article:nth-child(4n) {}
 article:nth-child(5n) {}
 article:nth-child(6n) {}
