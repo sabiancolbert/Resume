@@ -114,9 +114,10 @@ article {
   display: inline-block;
   font-size: 60%;
   position: relative;
-  max-height:33%;
+  max-height: 33%;
   font-weight: 500;
   background-color: red;
+  overflow:hidden;
 }
 
 /*
