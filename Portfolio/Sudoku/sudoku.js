@@ -261,54 +261,56 @@ function set(id) {
   var selection = document.getElementById("selection");
   var numberLabel = document.getElementById("numberLabel");
   /* number mode (black or grey) */
-if (noteMode != 2) {
-  //if different number or different note mode
-  if (display[cellNumber] != selection.innerHTML || noteMode != noteModeList[cellNumber]) {
-    //update cells notemode
-    noteModeList[cellNumber] = 0;
-    //if old is not empty
-    if (cellId.innerHTML +1 != 1) {
-      //update old number total
-      numberTotals[cellId.innerHTML - 1]++;
-    }
-    //update cell
-    cellId.innerHTML = selection.innerHTML;
-    //if new is not empty
-    if (cellId.innerHTML +1 != 1) {
-      //update new number total
-      numberTotals[cellId.innerHTML - 1]--;
-      //display new number total
-      numberLabel.innerHTML = numberTotals[cellId.innerHTML -1];
-    } else {
-      //clear number label
-      numberLabel.innerHTML = "";
-    }
-    //update display array
-    display[cellNumber] = selection.innerHTML
-    //update move list
-    //moveList[currentMove] =
-    //for (i = currentMove+1; i <
-    currentMove++;
-    //seperate note mode 1 and 2
-    if (noteMode == 0) {
-      //check();
-      cellId.style.color = "black";
-    } else {
-      cellId.style.color = "#777777";
+  if (noteMode != 2) {
+    //if different number or different note mode
+    if (display[cellNumber] != selection.innerHTML || noteMode != noteModeList[cellNumber]) {
+      //clear notes and add to move list for undo
+//HERE
+      //update cells notemode
+      noteModeList[cellNumber] = 0;
+      //if old is not empty
+      if (cellId.innerHTML +1 != 1) {
+        //update old number total
+        numberTotals[cellId.innerHTML - 1]++;
+      }
+      //update cell
+      cellId.innerHTML = selection.innerHTML;
+      //if new is not empty
+      if (cellId.innerHTML +1 != 1) {
+        //update new number total
+        numberTotals[cellId.innerHTML - 1]--;
+        //display new number total
+        numberLabel.innerHTML = numberTotals[cellId.innerHTML -1];
+      } else {
+        //clear number label
+        numberLabel.innerHTML = "";
+      }
+      //update display array
+      display[cellNumber] = selection.innerHTML
+      //update move list
+      //moveList[currentMove] =
+      //for (i = currentMove+1; i <
+      currentMove++;
+      //seperate note mode 1 and 2
+      if (noteMode == 0) {
+        //check();
+        cellId.style.color = "black";
+      } else {
+        cellId.style.color = "#777777";
+      }
     }
   }
-}
-/* note mode */
-else {}
+  /* note mode */
+  else {}
 }
 
 function select(number) {
-document.getElementById("selection").innerHTML = number;
-if (number != 0) {
-document.getElementById("numberLabel").innerHTML = numberTotals[number-1];
-} else {
-document.getElementById("numberLabel").innerHTML = "";
-}
+  document.getElementById("selection").innerHTML = number;
+  if (number != 0) {
+    document.getElementById("numberLabel").innerHTML = numberTotals[number-1];
+  } else {
+    document.getElementById("numberLabel").innerHTML = "";
+  }
 }
 
 function undo() {}
@@ -316,18 +318,19 @@ function undo() {}
 function redo() {}
 
 function note() {
-noteMode++;
-if (noteMode == 3) {
-noteMode = 0;
-document.getElementById("selection").style.fontSize = "300%";
-} else if (noteMode == 1) {
-document.getElementById("selection").style.color = "#777777";
+  noteMode++;
+  if (noteMode == 3) {
+    noteMode = 0;
+    document.getElementById("selection").style.fontSize = "300%";
+  } else if (noteMode == 1) {
+    document.getElementById("selection").style.color = "#777777";
 
-} else {
-document.getElementById("selection").style.color = "black";
-document.getElementById("selection").style.fontSize = "75%";
-}
-//HERE set style of selection
+  } else {
+    //clear number label
+    document.getElementById("selection").style.color = "black";
+    document.getElementById("selection").style.fontSize = "75%";
+  }
+  //HERE set style of selection
 }
 /*//HERE
    HTML
