@@ -254,8 +254,9 @@ function isDefaultCell(cell) {
 
 /* gameplay */
 
-function set(cellId) {
-  var cellNumber = cellId.substring(1,cellId.length) * 1;
+function set(id) {
+  var cellId = document.getElementById(id);
+  var cellNumber = id.substring(1,id.length) * 1;
   var selection = document.getElementById("selection");
   var numberLabel = document.getElementById("numberLabel");
   //if in regular number note mode (0)
