@@ -111,7 +111,7 @@ button:active {
 }
 /* Notes */
 article {
-  font-size: 40%;
+  font-size: 60%;
   position: relative;
   height: 33.33%;
   width: 33.33%;
@@ -122,11 +122,11 @@ article:nth-child(1n) {
   left: 0;
 }
 article:nth-child(2n) {
-  top: -33.33%;
+  top: -66%;
   left: 33.33%;
 }
 article:nth-child(3n) {
-  top: -66.66%;
+  top: -80%;
   left: 66.66%;
 }
 article:nth-child(4n) {}
