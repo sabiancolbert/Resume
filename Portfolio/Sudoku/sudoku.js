@@ -287,9 +287,9 @@ function set(cellId) {
       currentMove++;
     }
     //if not same number and node mode 1 //HERE
-    else if(){
+    /*else if(){
       
-    }
+    }*/
   } 
   else {
     //here note mode
