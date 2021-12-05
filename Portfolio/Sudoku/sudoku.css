@@ -113,7 +113,7 @@ button:active {
 article {
   display: inline-block;
   font-size: 60%;
-  position: relative;
+  position: absolute;
 
   font-weight: 500;
   background-color: red;
