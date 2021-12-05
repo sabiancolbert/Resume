@@ -258,10 +258,12 @@ function set(cellId) {
   var cellNumber = id.substring(1,cellId.length) * 1;
   var selection = document.getElementById("selection");
   var numberLabel = document.getElementById("numberLabel");
-  //if not in note mode 3
-  if (note != 2) {
-    //if not same number but same note mode
-    if (display[cellNumber] != selection.innerHTML && noteMode == noteModeList(cell)) {
+  //if in regular number note mode (0)
+  if (noteMode == 0) {
+    //if different number or different note mode
+    if (display[cellNumber] != selection.innerHTML || noteMode != noteModeList[cellNumber]) {
+      //update cells notemode
+noteModeList[cellNumber] = 0;
       //if old is not empty
       if (cellId.innerHTML +1 != 1) {
         //update old number total
@@ -286,11 +288,10 @@ function set(cellId) {
       //for (i = currentMove+1; i <
       currentMove++;
     }
-    //if not same number and node mode 1 //HERE
-    /*else if(){
-      
-    }*/
   } 
+  else if(){
+    
+  }
   else {
     //here note mode
   }
