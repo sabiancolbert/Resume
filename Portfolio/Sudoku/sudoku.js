@@ -265,7 +265,7 @@ function set(id) {
     //if different number or different note mode
     if (display[cellNumber] != selection.innerHTML || noteMode != noteModeList[cellNumber]) {
       //clear notes and add to move list for undo
-//HERE
+      //HERE
       //update cells notemode
       noteModeList[cellNumber] = 0;
       //if old is not empty
@@ -274,7 +274,7 @@ function set(id) {
         numberTotals[cellId.innerHTML - 1]++;
       }
       //update cell
-      cellId.innerHTML = selection.innerHTML;
+      cellId.innerHTML = selection.innerText;
       //if new is not empty
       if (cellId.innerHTML +1 != 1) {
         //update new number total
