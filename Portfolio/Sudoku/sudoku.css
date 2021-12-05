@@ -111,7 +111,8 @@ button:active {
 }
 /* Notes */
 article {
-  position: absolute;
+  font-size: 10%;
+  position: relative;
   height: 33.33%;
   width: 33.33%;
 }
