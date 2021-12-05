@@ -109,15 +109,16 @@ button {
 button:active {
   background-color: #1050aa;
 }
-#notecontainer{
-  position: relative;
+#notecontainer {
+  position: absolute;
   left: -5px;
   top: -5px;
   width: 100%;
   padding-top: 100%;
-  margin:5px;
-  border-radius: 5px;}
-#noteholder{
+  margin: 5px;
+  border-radius: 5px;
+}
+#noteholder {
   position: absolute;
   top: 0;
   right: 0;
@@ -125,8 +126,8 @@ button:active {
   bottom: 0;
   padding: 5px;
 }
-#noteholder td{
-  background-color:red;
+#noteholder td {
+  background-color: red;
 }
 article {
   position: absolute;
