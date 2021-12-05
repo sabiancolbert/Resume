@@ -254,7 +254,7 @@ function isDefaultCell(cell) {
 
 /* gameplay */
 
-function set(cellId) {/*
+function set(cellId) {
   var cellNumber = id.substring(1,cellId.length) * 1;
   var selection = document.getElementById("selection");
   var numberLabel = document.getElementById("numberLabel");
@@ -293,7 +293,7 @@ function set(cellId) {/*
   } 
   else {
     //here note mode
-  }*/
+  }
 }
 
 function select(number) {
