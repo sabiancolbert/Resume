@@ -270,6 +270,7 @@ noteModeList[cellNumber] = 0;
         numberTotals[cellId.innerHTML - 1]++;
       }
       //update cell
+c("3)");
       cellId.innerHTML = selection.innerHTML;
       //if new is not empty
       if (cellId.innerHTML +1 != 1) {
