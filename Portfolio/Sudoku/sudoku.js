@@ -289,12 +289,12 @@ noteModeList[cellNumber] = 0;
       currentMove++;
     }
   } 
-  else if(){
-    
+  /*else if(){
+    //here grey mode
   }
   else {
     //here note mode
-  }
+  }*/
 }
 
 function select(number) {
