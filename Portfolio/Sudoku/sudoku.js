@@ -290,12 +290,11 @@ function set(id) {
       //for (i = currentMove+1; i <
       currentMove++;
       //seperate note mode 1 and 2
-      if(note ==0){
-      //check();
-      cellId.style.color = "black";
-      }
-      else{
-        cellId.style.color = "#333333";
+      if (note == 0) {
+        //check();
+        cellId.style.color = "black";
+      } else {
+        cellId.style.color = "#777777";
       }
     }
   }
