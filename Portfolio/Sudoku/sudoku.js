@@ -155,7 +155,7 @@ function displayCells() {
       document.getElementById("c"+i).innerHTML = "<bold>"+display[i]+"</strong>";
     }
   }
-    for (i = 0; i < 81; i++) {
+  for (i = 0; i < 81; i++) {
     noteModeList[i] = 0;
   }
 }
@@ -256,22 +256,22 @@ function isDefaultCell(cell) {
 
 function set(id) {
   var cellId = document.getElementById(id);
-  var cellNumber = id.substring(1,id.length) * 1;
+  var cellNumber = id.substring(1,
+    id.length) * 1;
   var selection = document.getElementById("selection");
   var numberLabel = document.getElementById("numberLabel");
   //if in regular number note mode (0)
-  if (noteMode !=2) {
+  if (noteMode != 2) {
     //if different number or different note mode
     if (display[cellNumber] != selection.innerHTML || noteMode != noteModeList[cellNumber]) {
       //update cells notemode
-noteModeList[cellNumber] = 0;
+      noteModeList[cellNumber] = 0;
       //if old is not empty
       if (cellId.innerHTML +1 != 1) {
         //update old number total
         numberTotals[cellId.innerHTML - 1]++;
       }
       //update cell
-c("3)");
       cellId.innerHTML = selection.innerHTML;
       //if new is not empty
       if (cellId.innerHTML +1 != 1) {
@@ -290,9 +290,11 @@ c("3)");
       //for (i = currentMove+1; i <
       currentMove++;
       //add to checklist
-//check();
+      //if(note ==0){
+      //check();
+      //}
     }
-  } 
+  }
   /*else if(){
     //here grey mode
   }
@@ -340,5 +342,5 @@ some games end with two posibilities;test for criss crossed pairs, plug one answ
 change all cells function calls to ## instead of c## and fix the JavaScript for it
 condense set using variables for readability and remove notes after
 
-
+checklist has a wrong answers var displayed on page
 */
