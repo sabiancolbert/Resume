@@ -289,10 +289,14 @@ function set(id) {
       //moveList[currentMove] =
       //for (i = currentMove+1; i <
       currentMove++;
-      //add to checklist
-      //if(note ==0){
+      //seperate note mode 1 and 2
+      if(note ==0){
       //check();
-      //}
+      cellId.style.color = "black";
+      }
+      else{
+        cellId.style.color = "#333333";
+      }
     }
   }
   /*else if(){
