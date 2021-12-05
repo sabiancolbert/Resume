@@ -274,7 +274,7 @@ function set(id) {
         numberTotals[cellId.innerHTML - 1]++;
       }
       //update cell
-      cellId.innerHTML = selection.innerText;
+      cellId.innerText = selection.innerText;
       //if new is not empty
       if (cellId.innerHTML +1 != 1) {
         //update new number total
