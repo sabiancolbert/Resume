@@ -109,6 +109,16 @@ button {
 button:active {
   background-color: #1050aa;
 }
+/* Notes */
+td:nth-child(even){
+  position:absolute;
+}
+
+
+
+
+
+
 #notecontainer {
   position: relative;
   left: -5px;
