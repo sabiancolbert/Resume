@@ -112,11 +112,11 @@ button:active {
 .notesholder {
   position: absolute;
   background-color: red;
-  width: 100%;
-  height: 100%;
+  width: 10.5%;
+  height: 10.5%;
   top: 0;
-  left:0;
-  margin:7px;
+  left: 0;
+  margin: 7px;
 }
 article {
   margin: 0;
