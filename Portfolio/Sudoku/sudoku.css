@@ -105,7 +105,7 @@ button {
   font-weight: 550;
   background-color: #3388dd;
 }
-button:active, eraser:active {
+button:active, #eraser:active {
   background-color: #1050aa;
 }
 #eraser {
