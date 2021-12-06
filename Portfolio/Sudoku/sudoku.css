@@ -119,15 +119,11 @@ button:active {
   margin: 7px;
 }
 article {
-  margin: 0;
-  padding: 5px;
   display: inline-block;
   font-size: 60%;
   position: absolute;
   max-height: 33%;
   font-weight: 500;
-  background-color: red;
-  overflow: hidden;
 }
 
 article:nth-child(1n) {
