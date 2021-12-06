@@ -110,7 +110,7 @@ button:active {
 }
 /* Notes */
 .notesholder {
-  position: absolute;
+  position: relative;
   width: 9.5%;
   height: 9.5%;
   top: 0;
