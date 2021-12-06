@@ -112,8 +112,8 @@ button:active {
 .notesholder {
   position: absolute;
   background-color: red;
-  width: 10.5%;
-  height: 10.5%;
+  width: 10%;
+  height: 10%;
   top: 0;
   left: 0;
   margin: 7px;
@@ -139,26 +139,26 @@ article:nth-child(3n) {
   top: 0;
 }
 article:nth-child(4n) {
-  top:33.33%;
-  left:0;
+  top: 33.33%;
+  left: 0;
 }
 article:nth-child(5n) {
-  top:33.33%;
-  left:33.33%;
+  top: 33.33%;
+  left: 33.33%;
 }
 article:nth-child(6n) {
-  top:33.33%;
-  left:66.66%;
+  top: 33.33%;
+  left: 66.66%;
 }
 article:nth-child(7n) {
-  top:66.66%;
-  left:0;
+  top: 66.66%;
+  left: 0;
 }
 article:nth-child(8n) {
-  top:66.66%;
-  left:33.33%;
+  top: 66.66%;
+  left: 33.33%;
 }
 article:nth-child(9n) {
-  top:66.66%;
-  left:66.66%;
+  top: 66.66%;
+  left: 66.66%;
 }
