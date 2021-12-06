@@ -325,7 +325,7 @@ function select(number) {
     document.getElementById("selection").style.background = "none";
   } else {
     document.getElementById("numberLabel").innerHTML = "";
-    document.getElementById("selection").style.backgroundImage = "url('eraser.png') no-repeat";
+    document.getElementById("selection").style.background = "url('eraser.png') no-repeat";
     document.getElementById("selection").style.backgroundColor = "#ccccee";
   }
 }
