@@ -105,12 +105,12 @@ button {
   font-weight: 550;
   background-color: #3388dd;
 }
-button:active {
+button:active, eraser:active {
   background-color: #1050aa;
 }
 #eraser {
   background: url("eraser.png") no-repeat;
-  background-size: contain; 
+  background-size: contain;
   background-color: #3388dd;
 }
 /* Notes */
