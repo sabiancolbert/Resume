@@ -51,6 +51,7 @@ td {
   background-color: #ccccee;
   font-size: 150%;
   border-radius: 20%;
+  line-height:0;
 }
 td:active {
   background-color: #3388dd;
@@ -110,15 +111,15 @@ button:active {
 }
 /* Notes */
 article {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   display: inline-block;
   font-size: 60%;
   position: relative;
   max-height: 33%;
   font-weight: 500;
   background-color: red;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 /*
