@@ -267,8 +267,6 @@ function set(id) {
     if (display[cellNumber] != selection.innerHTML || noteMode != noteModeList[cellNumber]) {
       //clear notes and add to move list for undo
       //HERE
-      //update cells notemode
-      noteModeList[cellNumber] = 0;
       //if old is not empty
       if (cellId.innerHTML +1 != 1) {
         //update old number total
@@ -296,8 +294,14 @@ function set(id) {
       if (noteMode == 0) {
         //check();
         cellId.style.color = "black";
+        
+      //update cells notemode
+      noteModeList[cellNumber] = 0;
       } else {
         cellId.style.color = "#777777";
+        
+      //update cells notemode
+      noteModeList[cellNumber] = 1;
       }
     }
   }
