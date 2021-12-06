@@ -115,23 +115,25 @@ article {
   padding: 5px;
   display: inline-block;
   font-size: 60%;
-  position: relative;
+  position: absolute;
   max-height: 33%;
   font-weight: 500;
   background-color: red;
   overflow: hidden;
 }
 
-/*
 article:nth-child(1n) {
   left: 0;
+  top:0;
 }
 article:nth-child(2n) {
   left: 33.33%;
+  top:0;
 }
 article:nth-child(3n) {
   left: 66.66%;
-}*/
+  top:0;
+}
 article:nth-child(4n) {}
 article:nth-child(5n) {}
 article:nth-child(6n) {}
