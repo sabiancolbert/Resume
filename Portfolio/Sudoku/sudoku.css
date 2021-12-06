@@ -108,8 +108,9 @@ button {
 button:active {
   background-color: #1050aa;
 }
-#eraser{
-  background:url("eraser.png");
+#eraser {
+  background: url("eraser.png") no-repeat;
+  background-size:contain;
 }
 /* Notes */
 .notesholder {
