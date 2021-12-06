@@ -108,6 +108,9 @@ button {
 button:active {
   background-color: #1050aa;
 }
+#eraser{
+  background:url("eraser.png");
+}
 /* Notes */
 .notesholder {
   position: relative;
