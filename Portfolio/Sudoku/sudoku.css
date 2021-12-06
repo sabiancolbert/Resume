@@ -87,10 +87,10 @@ td:active {
   border-radius: 20%;
   background-color: #ccccee;
   font-size: 300%;
+  background-size: contain;
 }
 #selection:active {
   background-color: #3388dd;
-  background-size: contain;
 }
 #labelcontainer {
   position: absolute;
