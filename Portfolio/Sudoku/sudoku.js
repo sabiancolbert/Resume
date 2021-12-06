@@ -260,6 +260,7 @@ function set(id) {
     id.length) * 1;
   var selection = document.getElementById("selection");
   var numberLabel = document.getElementById("numberLabel");
+  c(id);
   /* number mode (black or grey) */
   if (noteMode != 2) {
     //if different number or different note mode
