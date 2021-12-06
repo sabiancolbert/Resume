@@ -51,7 +51,7 @@ td {
   background-color: #ccccee;
   font-size: 150%;
   border-radius: 20%;
-  line-height: 1;
+  line-height: .5;
 }
 td:active {
   background-color: #3388dd;
