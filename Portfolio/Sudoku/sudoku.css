@@ -47,7 +47,6 @@ td {
   max-height: 10.5%;
   height: 10.5%;
   width: 32%;
-  /*just use padding???*/
   color: black;
   background-color: #ccccee;
   font-size: 150%;
@@ -111,6 +110,8 @@ button:active {
 }
 /* Notes */
 article {
+  margin:0;
+  padding:0;
   display: inline-block;
   font-size: 60%;
   position: relative;
