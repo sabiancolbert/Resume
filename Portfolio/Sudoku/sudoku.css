@@ -135,7 +135,7 @@ article:nth-child(2n) {
   top: 0;
 }
 article:nth-child(3n) {
-  left: 66.66%;
+  right:0;
   top: 0;
 }
 article:nth-child(4n) {}
