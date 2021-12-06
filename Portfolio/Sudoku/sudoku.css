@@ -135,12 +135,30 @@ article:nth-child(2n) {
   top: 0;
 }
 article:nth-child(3n) {
-  right:0;
+  left: 66.66%;
   top: 0;
 }
-article:nth-child(4n) {}
-article:nth-child(5n) {}
-article:nth-child(6n) {}
-article:nth-child(7n) {}
-article:nth-child(8n) {}
-article:nth-child(9n) {}
+article:nth-child(4n) {
+  top:33.33%;
+  left:0;
+}
+article:nth-child(5n) {
+  top:33.33%;
+  left:33.33%;
+}
+article:nth-child(6n) {
+  top:33.33%;
+  left:66.66%;
+}
+article:nth-child(7n) {
+  top:66.66%;
+  left:0;
+}
+article:nth-child(8n) {
+  top:66.66%;
+  left:33.33%;
+}
+article:nth-child(9n) {
+  top:66.66%;
+  left:66.66%;
+}
