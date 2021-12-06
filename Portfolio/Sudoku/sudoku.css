@@ -51,7 +51,6 @@ td {
   background-color: #ccccee;
   font-size: 150%;
   border-radius: 20%;
-  line-height: .5;
 }
 td:active {
   background-color: #3388dd;
@@ -110,6 +109,10 @@ button:active {
   background-color: #1050aa;
 }
 /* Notes */
+.notesholder{
+  position: absolute;
+  background-color: red;
+}
 article {
   margin: 0;
   padding: 5px;
@@ -124,15 +127,15 @@ article {
 
 article:nth-child(1n) {
   left: 0;
-  top:0;
+  top: 0;
 }
 article:nth-child(2n) {
   left: 33.33%;
-  top:0;
+  top: 0;
 }
 article:nth-child(3n) {
   left: 66.66%;
-  top:0;
+  top: 0;
 }
 article:nth-child(4n) {}
 article:nth-child(5n) {}
