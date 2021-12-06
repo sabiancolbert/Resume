@@ -90,6 +90,7 @@ td:active {
 }
 #selection:active {
   background-color: #3388dd;
+  background-size: contain;
 }
 #labelcontainer {
   position: absolute;
