@@ -116,14 +116,14 @@ button:active {
   height: 10%;
   top: 0;
   left: 0;
-  margin: 7px;
+  margin: 10px;
 }
 article {
   display: inline-block;
   font-size: 60%;
   position: absolute;
   max-height: 33.33%;
-  width:33.33%;
+  width: 33.33%;
   font-weight: 500;
 }
 
