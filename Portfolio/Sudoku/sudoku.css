@@ -116,15 +116,15 @@ button:active {
   height: 10%;
   top: 0;
   left: 0;
-  margin: 8px;
+  margin: 7px;
 }
 article {
   display: inline-block;
-  font-size: 60%;
+  font-size: 50%;
   position: absolute;
   max-height: 33.33%;
   width: 33.33%;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 article:nth-child(1n) {
