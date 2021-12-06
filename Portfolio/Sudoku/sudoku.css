@@ -112,7 +112,7 @@ button:active {
 /* Notes */
 article {
   margin: 0;
-  padding: 0;
+  padding: 5px;
   display: inline-block;
   font-size: 60%;
   position: relative;
