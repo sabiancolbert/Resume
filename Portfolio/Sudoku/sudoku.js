@@ -316,7 +316,6 @@ function set(id) {
     cellId.innerHTML = string;
     document.getElementById("n1"+cellNumber).style = "top:0;display: inline-block;font-size: 50%;position: absolute;max-height: 33.33%;width: 33.33%;font-weight: 600;";
     c(document.getElementById("n1"+cellNumber));
-    redraw();
   }
 }
 
