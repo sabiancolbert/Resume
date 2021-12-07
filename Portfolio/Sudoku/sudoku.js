@@ -158,6 +158,7 @@ function displayCells() {
   for (i = 0; i < 81; i++) {
     noteModeList[i] = 0;
   }
+  select(1);
 }
 
 //is this number the only option for this cell?
@@ -326,7 +327,7 @@ function select(number) {
   } else {
     document.getElementById("selection").innerHTML = " ";
     document.getElementById("numberLabel").innerHTML = "Erase";
-}
+  }
 }
 
 function undo() {}
