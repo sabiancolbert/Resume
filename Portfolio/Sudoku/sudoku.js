@@ -376,8 +376,4 @@ change all cells function calls to ## instead of c## and fix the JavaScript for 
 condense set using variables for readability and remove notes after
 
 checklist has a wrong answers var displayed on page
-
-empty cell > any # > note 1 > note 2> note 1> note 2 doesnt change cell
-
-sometimes when swotching numbers, grey mode stays black in selection
 */
