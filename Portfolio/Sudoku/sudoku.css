@@ -106,7 +106,7 @@ button {
   font-weight: 550;
   background-color: #3388dd;
 }
-button:active, #eraser:active #restart:active, #undo:active, #redo: active, #menu:active {
+button:active, #eraser:active #restart:active, #undo:active, #redo:active, #menu:active {
   background-color: #1050aa;
 }
 #eraser, #restart, #undo, #redo, #menu {
