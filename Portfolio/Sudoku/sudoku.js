@@ -326,7 +326,7 @@ function select(number) {
   } else {
     document.getElementById("selection").innerHTML = " ";
     document.getElementById("numberLabel").innerHTML = "";
-    document.getElementById("selection").style = "background-color:#ccccee;background:url('eraser.png') no-repeat";
+    document.getElementById("selection").style = "background:url(\"eraser.png\") no-repeat";
     // document.getElementById("selection").style.backgroundColor = "#ccccee";
   }
 }
@@ -372,4 +372,6 @@ condense set using variables for readability and remove notes after
 checklist has a wrong answers var displayed on page
 
 empty cell > any # > note 1 > note 2> note 1> note 2 doesnt change cell
+
+sometimes when swotching numbers, grey mode stays black in selection
 */
