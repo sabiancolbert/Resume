@@ -106,10 +106,10 @@ button {
   font-weight: 550;
   background-color: #3388dd;
 }
-button:active, #eraser:active {
+button:active, #eraser:active #restart:active, #undo:active, #redo: active, #menu:active {
   background-color: #1050aa;
 }
-#eraser, #restart, #undo, #redo, #menu{  
+#eraser, #restart, #undo, #redo, #menu {
   background-size: contain;
   background-color: #3388dd;
 }
