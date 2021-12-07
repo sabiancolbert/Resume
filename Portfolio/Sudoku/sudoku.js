@@ -326,7 +326,7 @@ function select(number) {
   } else {
     document.getElementById("selection").innerHTML = " ";
     document.getElementById("numberLabel").innerHTML = "";
-    document.getElementById("selection").style.background = document.getElementById("eraser");
+    document.getElementById("selection").style.background = document.getElementById("eraser").style.background;
     // document.getElementById("selection").style.backgroundColor = "#ccccee";
   }
 }
