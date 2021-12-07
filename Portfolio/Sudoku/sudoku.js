@@ -325,10 +325,8 @@ function select(number) {
     document.getElementById("selection").innerHTML = number;
   } else {
     document.getElementById("selection").innerHTML = " ";
-    document.getElementById("numberLabel").innerHTML = "";
-    document.getElementById("selection").style.background = document.getElementById("eraser").style.background;
-    // document.getElementById("selection").style.backgroundColor = "#ccccee";
-  }
+    document.getElementById("numberLabel").innerHTML = "Erase";
+}
 }
 
 function undo() {}
