@@ -283,10 +283,9 @@ function set(id) {
       } else {
         //clear number label
         if (selection.innerHTML = " ") {
-          numberLabel.innerHTML = "Eraser";
+          numberLabel.innerHTML = "Erase";
         } else {
           numberLabel.innerHTML = "";
-          c("$");
         }
       }
       //update display array
