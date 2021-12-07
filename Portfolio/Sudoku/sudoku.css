@@ -109,24 +109,31 @@ button {
 button:active, #eraser:active #restart:active, #undo:active, #redo:active, #menu:active {
   background-color: #1050aa;
 }
-#eraser, #restart, #undo, #redo, #menu {
+
+#eraser {
+  background: url("eraser.png") no-repeat;
   background-size: contain;
   background-color: #3388dd;
 }
-#eraser {
-  background: url("eraser.png") no-repeat;
-}
 #restart {
   background: url("restart.png") no-repeat;
+  background-size: contain;
+  background-color: #3388dd;
 }
 #undo {
   background: url("undo.png") no-repeat;
+  background-size: contain;
+  background-color: #3388dd;
 }
 #redo {
   background: url("redo.png") no-repeat;
+  background-size: contain;
+  background-color: #3388dd;
 }
 #menu {
   background: url("menu.png") no-repeat;
+  background-size: contain;
+  background-color: #3388dd;
 }
 /* Notes */
 .notesholder {
