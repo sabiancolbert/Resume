@@ -282,11 +282,12 @@ function set(id) {
         numberLabel.innerHTML = numberTotals[cellId.innerHTML -1];
       } else {
         //clear number label
-if(selection.innerHTML=" "){
-        numberLabel.innerHTML = "Eraser";
-}else{
-        numberLabel.innerHTML = "";
-}
+        if (selection.innerHTML = " ") {
+          numberLabel.innerHTML = "Eraser";
+        } else {
+          numberLabel.innerHTML = "";
+          c("$");
+        }
       }
       //update display array
       display[cellNumber] = selection.innerHTML
