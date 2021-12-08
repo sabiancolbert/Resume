@@ -303,7 +303,7 @@ function set(id) {
         if (noteMode == 1) {
 
           cellElement.style.color = "#777777";
-
+//smaller font size
           //update cells notemode
           noteModeCells[cellNumber] = 1;
         } else {
@@ -312,7 +312,7 @@ function set(id) {
 
           //update cells notemode
           noteModeCells[cellNumber] = 0;
-
+//same font size
           /* auto remove notes */
           //HERE
         }
@@ -329,6 +329,7 @@ function set(id) {
       document.getElementById("n1"+cellNumber).style = "top:0;displayCells: inline-block;font-size: 50%;position: absolute;max-height: 33.33%;width: 33.33%;font-weight: 600;";
       c(document.getElementById("n1"+cellNumber));
       noteModeCells[cellNumber] = 2;
+      //same font size
       //HERE
     }
   }
