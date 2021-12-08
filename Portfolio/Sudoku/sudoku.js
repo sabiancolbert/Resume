@@ -261,102 +261,103 @@ function set(id) {
     id.length) * 1;
   var selectionElement = document.getElementById("selectionElement");
   var counterElement = document.getElementById("counterElement");
-  /* set
+  /* set cellElement */
   if (userCells.includes(cellNumber)) {
     /* number mode (black or grey) */
-  if (noteMode != 2) {
-    //if different number or different note mode
-    if (displayCells[cellNumber] != selectionElement.innerHTML || noteMode != noteModeCells[cellNumber]) {
-      //clear notes and add to move list for undo
-      //HERE
-      //if old is not empty
-      if (cellElement.innerHTML +1 != 1) {
-        //update old number total
-        numberTotals[cellElement.innerHTML - 1]++;
-      }
-      //update cell
-      cellElement.innerText = selectionElement.innerText;
-      //if new is not empty
-      if (cellElement.innerHTML +1 != 1) {
-        //update new number total
-        numberTotals[cellElement.innerHTML - 1]--;
-        //displayCells new number total
-        counterElement.innerHTML = numberTotals[cellElement.innerHTML -1];
-      } else {
-        //clear number label
-        if (selectionElement.innerHTML = " ") {
-          counterElement.innerHTML = "Erase";
+    if (noteMode != 2) {
+      //if different number or different note mode
+      if (displayCells[cellNumber] != selectionElement.innerHTML || noteMode != noteModeCells[cellNumber]) {
+        //clear notes and add to move list for undo
+        //HERE
+        //if old is not empty
+        if (cellElement.innerHTML +1 != 1) {
+          //update old number total
+          numberTotals[cellElement.innerHTML - 1]++;
+        }
+        //update cell
+        cellElement.innerText = selectionElement.innerText;
+        //if new is not empty
+        if (cellElement.innerHTML +1 != 1) {
+          //update new number total
+          numberTotals[cellElement.innerHTML - 1]--;
+          //displayCells new number total
+          counterElement.innerHTML = numberTotals[cellElement.innerHTML -1];
         } else {
-          counterElement.innerHTML = "";
+          //clear number label
+          if (selectionElement.innerHTML = " ") {
+            counterElement.innerHTML = "Erase";
+          } else {
+            counterElement.innerHTML = "";
+          }
+        }
+        //update displayCells array
+        displayCells[cellNumber] = selectionElement.innerHTML
+        //update move list
+        //moveList[currentMove] =
+        //for (i = currentMove+1; i <
+        currentMove++;
+        //seperate note mode 1 and 2
+        if (noteMode == 1) {
+
+          cellElement.style.color = "#777777";
+
+          //update cells notemode
+          noteModeCells[cellNumber] = 1;
+        } else {
+          //check();
+          cellElement.style.color = "black";
+
+          //update cells notemode
+          noteModeCells[cellNumber] = 0;
+
+          /* auto remove notes */
+          //HERE
         }
       }
-      //update displayCells array
-      displayCells[cellNumber] = selectionElement.innerHTML
-      //update move list
-      //moveList[currentMove] =
-      //for (i = currentMove+1; i <
-      currentMove++;
-      //seperate note mode 1 and 2
-      if (noteMode == 1) {
-
-        cellElement.style.color = "#777777";
-
-        //update cells notemode
-        noteModeCells[cellNumber] = 1;
-      } else {
-        //check();
-        cellElement.style.color = "black";
-
-        //update cells notemode
-        noteModeCells[cellNumber] = 0;
-
-        /* auto remove notes */
-        //HERE
-      }
+    }
+    /* note mode */
+    else {
+      cellElement.style.color = "black";
+      var string = "<div class='notesholder'><article id='n1"+cellNumber+"'>1</article><article id='n2"+cellNumber+"'>2</article><article id='n3"+cellNumber+"'>3</article><article id='n4"+cellNumber+"'>4</article><article id='n5"+cellNumber+"'>5</article><article id='n6"+cellNumber+"'>6</article><article id='n7"+cellNumber+"'>7</article><article id='n8"+cellNumber+"'>8</article><article id='n9"+cellNumber+"'>9</article></div>";
+      cellElement.innerHTML = string;
+      document.getElementById("n1"+cellNumber).style = "top:0;displayCells: inline-block;font-size: 50%;position: absolute;max-height: 33.33%;width: 33.33%;font-weight: 600;";
+      c(document.getElementById("n1"+cellNumber));
+      noteModeCells[cellNumber] = 2;
     }
   }
-  /* note mode */
-  else {
-    cellElement.style.color = "black";
-    var string = "<div class='notesholder'><article id='n1"+cellNumber+"'>1</article><article id='n2"+cellNumber+"'>2</article><article id='n3"+cellNumber+"'>3</article><article id='n4"+cellNumber+"'>4</article><article id='n5"+cellNumber+"'>5</article><article id='n6"+cellNumber+"'>6</article><article id='n7"+cellNumber+"'>7</article><article id='n8"+cellNumber+"'>8</article><article id='n9"+cellNumber+"'>9</article></div>";
-    cellElement.innerHTML = string;
-    document.getElementById("n1"+cellNumber).style = "top:0;displayCells: inline-block;font-size: 50%;position: absolute;max-height: 33.33%;width: 33.33%;font-weight: 600;";
-    c(document.getElementById("n1"+cellNumber));
-    noteModeCells[cellNumber] = 2;
+  /* highlight!*/
+}
+  function select(number) {
+    if (number != 0) {
+      document.getElementById("counterElement").innerHTML = numberTotals[number-1];
+      // document.getElementById("selectionElement").style.background = "none";
+      document.getElementById("selectionElement").innerHTML = number;
+    } else {
+      document.getElementById("selectionElement").innerHTML = " ";
+      document.getElementById("counterElement").innerHTML = "Erase";
+    }
   }
-}
 
-function select(number) {
-if (number != 0) {
-document.getElementById("counterElement").innerHTML = numberTotals[number-1];
-// document.getElementById("selectionElement").style.background = "none";
-document.getElementById("selectionElement").innerHTML = number;
-} else {
-document.getElementById("selectionElement").innerHTML = " ";
-document.getElementById("counterElement").innerHTML = "Erase";
-}
-}
+  function undo() {}
 
-function undo() {}
+  function redo() {}
 
-function redo() {}
+  function note() {
+    noteMode++;
+    if (noteMode == 3) {
+      noteMode = 0;
+      document.getElementById("selectionElement").style.fontSize = "300%";
+    } else if (noteMode == 1) {
+      document.getElementById("selectionElement").style.color = "#777777";
 
-function note() {
-noteMode++;
-if (noteMode == 3) {
-noteMode = 0;
-document.getElementById("selectionElement").style.fontSize = "300%";
-} else if (noteMode == 1) {
-document.getElementById("selectionElement").style.color = "#777777";
-
-} else {
-//clear number label
-document.getElementById("selectionElement").style.color = "black";
-document.getElementById("selectionElement").style.fontSize = "75%";
-}
-//HERE set style of selectionElement
-}
-/*//HERE
+    } else {
+      //clear number label
+      document.getElementById("selectionElement").style.color = "black";
+      document.getElementById("selectionElement").style.fontSize = "75%";
+    }
+    //HERE set style of selectionElement
+  }
+  /*//HERE
 highlight on grid all instances of the selected number; note=1 highlights, note =2 does not
 highlight selected number/eraser
 some games end with two posibilities;test for criss crossed pairs, plug one answer in if so
