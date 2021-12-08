@@ -17,6 +17,7 @@ function c(c) {
 }
 
 function askDifficulty() {
+  c("askDifficulty()");
   //beginner 45
   //easy 40
   //med 35
@@ -29,6 +30,7 @@ function askDifficulty() {
 
 //generate number board
 function setCells() {
+  c("setCells()");
   var attemptedNumbers = new Array(81);
   for (i = 0; i < 81; i++) {
     attemptedNumbers[i] = [0];
@@ -129,10 +131,12 @@ function variantValid(cell, number) {
 }
 
 function fail() {
+  c("fail()");
   alert("No possible games! Try removing some variants.");
 }
 
-function displayCellsCells() {
+function displayCells() {
+  c("displayCells()");
   /* unsolve */
   var tested = new Array([0]);
   var stop = 81 - Math.floor(Math.random()*5+difficulty);
@@ -258,8 +262,10 @@ function isDefaultCell(cell) {
 /* gameplay */
 
 function set(id) {
+  c("set("+id+")");
   var cellElement = document.getElementById(id);
-  var cellNumber = id.substring(1,id.length) * 1;
+  var cellNumber = id.substring(1,
+    id.length) * 1;
   var selectionElement = document.getElementById("selectionElement");
   var counterElement = document.getElementById("counterElement");
   /* set cellElement */
@@ -335,22 +341,28 @@ function set(id) {
 }
 
 function select(number) {
+  c("select("+number+")")
   //dont clear highlight, for visually easier erasing
   if (number != 0) {
     document.getElementById("counterElement").innerHTML = numberTotals[number-1];
     document.getElementById("selectionElement").innerHTML = number;
-      //HERE change highlight
+    //HERE change highlight
   } else {
     document.getElementById("selectionElement").innerHTML = " ";
     document.getElementById("counterElement").innerHTML = "Erase";
   }
 }
 
-function undo() {}
+function undo() {
+  c("undo()");
+}
 
-function redo() {}
+function redo() {
+  c("redo()");
+}
 
 function note() {
+  c("note()");
   noteMode++;
   if (noteMode == 3) {
     noteMode = 0;
