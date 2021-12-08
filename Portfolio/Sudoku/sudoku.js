@@ -149,6 +149,8 @@ function displayCellsCells() {
       }
     }
   }
+  //HERE dont do whats under me. criss cross shouldnt be happening so fix that instead
+  //HERE if there are unsolvable criss crossed cells, plug one corner in here
   /* displayCells cells */
   for (i = 0; i < 81; i++) {
     if (displayCells[i] > 0) {
@@ -261,6 +263,7 @@ function set(id) {
     id.length) * 1;
   var selectionElement = document.getElementById("selectionElement");
   var counterElement = document.getElementById("counterElement");
+  //HERE clear highlight
   /* set cellElement */
   if (userCells.includes(cellNumber)) {
     /* number mode (black or grey) */
@@ -314,6 +317,9 @@ function set(id) {
           //HERE
         }
       }
+      
+  /* highlight */
+  //HERE
     }
     /* note mode */
     else {
@@ -326,8 +332,6 @@ function set(id) {
       //HERE
     }
   }
-  /* highlight */
-  //HERE
 }
 function select(number) {
   if (number != 0) {
@@ -360,9 +364,6 @@ function note() {
   //HERE set style of selectionElement
 }
 /*//HERE
-highlight on grid all instances of the selected number; note=1 highlights, note =2 does not
-highlight selected number/eraser
-some games end with two posibilities;test for criss crossed pairs, plug one answer in if so
 capitalize notes
 when changing note mode, change position of the number on selectionElement based on the selected number
 have a numbers page when you click the wrong answers button (number of undos, redos, restarts, total time (saved games), ingame time, etc?)
