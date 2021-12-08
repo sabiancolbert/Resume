@@ -67,7 +67,7 @@ function setCells() {
   if (currentCell==-1) {
     fail();
   } else {
-    displayCellsCells();
+    displayCells();
   }
 }
 
