@@ -67,7 +67,7 @@ function setCells() {
   if (currentCell==-1) {
     fail();
   } else {
-    displayCells();
+    setGrid();
   }
 }
 
@@ -135,8 +135,8 @@ function fail() {
   alert("No possible games! Try removing some variants.");
 }
 
-function displayCells() {
-  c("displayCells()");
+function setGrid() {
+  c("setGrid()");
   /* unsolve */
   var tested = new Array([0]);
   var stop = 81 - Math.floor(Math.random()*5+difficulty);
