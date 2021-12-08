@@ -323,45 +323,47 @@ function set(id) {
       document.getElementById("n1"+cellNumber).style = "top:0;displayCells: inline-block;font-size: 50%;position: absolute;max-height: 33.33%;width: 33.33%;font-weight: 600;";
       c(document.getElementById("n1"+cellNumber));
       noteModeCells[cellNumber] = 2;
+      //HERE
     }
   }
-  /* highlight!*/
+  /* highlight */
+  //HERE
 }
-  function select(number) {
-    if (number != 0) {
-      document.getElementById("counterElement").innerHTML = numberTotals[number-1];
-      // document.getElementById("selectionElement").style.background = "none";
-      document.getElementById("selectionElement").innerHTML = number;
-    } else {
-      document.getElementById("selectionElement").innerHTML = " ";
-      document.getElementById("counterElement").innerHTML = "Erase";
-    }
+function select(number) {
+  if (number != 0) {
+    document.getElementById("counterElement").innerHTML = numberTotals[number-1];
+    // document.getElementById("selectionElement").style.background = "none";
+    document.getElementById("selectionElement").innerHTML = number;
+  } else {
+    document.getElementById("selectionElement").innerHTML = " ";
+    document.getElementById("counterElement").innerHTML = "Erase";
   }
+}
 
-  function undo() {}
+function undo() {}
 
-  function redo() {}
+function redo() {}
 
-  function note() {
-    noteMode++;
-    if (noteMode == 3) {
-      noteMode = 0;
-      document.getElementById("selectionElement").style.fontSize = "300%";
-    } else if (noteMode == 1) {
-      document.getElementById("selectionElement").style.color = "#777777";
+function note() {
+  noteMode++;
+  if (noteMode == 3) {
+    noteMode = 0;
+    document.getElementById("selectionElement").style.fontSize = "300%";
+  } else if (noteMode == 1) {
+    document.getElementById("selectionElement").style.color = "#777777";
 
-    } else {
-      //clear number label
-      document.getElementById("selectionElement").style.color = "black";
-      document.getElementById("selectionElement").style.fontSize = "75%";
-    }
-    //HERE set style of selectionElement
+  } else {
+    //clear number label
+    document.getElementById("selectionElement").style.color = "black";
+    document.getElementById("selectionElement").style.fontSize = "75%";
   }
-  /*//HERE
+  //HERE set style of selectionElement
+}
+/*//HERE
 highlight on grid all instances of the selected number; note=1 highlights, note =2 does not
 highlight selected number/eraser
 some games end with two posibilities;test for criss crossed pairs, plug one answer in if so
-
+capitalize notes
 
 
 */
