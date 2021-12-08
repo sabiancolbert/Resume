@@ -353,7 +353,7 @@ function note() {
     document.getElementById("selectionElement").style.color = "#777777";
 
   } else {
-    //clear number label
+    //clear number label //HERE?
     document.getElementById("selectionElement").style.color = "black";
     document.getElementById("selectionElement").style.fontSize = "75%";
   }
