@@ -365,5 +365,5 @@ highlight selected number/eraser
 some games end with two posibilities;test for criss crossed pairs, plug one answer in if so
 capitalize notes
 when changing note mode, change position of the number on selectionElement based on the selected number
-
+have a numbers page when you click the wrong answers button (number of undos, redos, restarts, total time (saved games), ingame time, etc?)
 */
