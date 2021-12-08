@@ -2,6 +2,7 @@
 body {
   background-color: #222222;
   color: white;
+  user-select: none;
   text-align: center;
 }
 @media screen and (orientation: landscape) {
@@ -106,7 +107,7 @@ button {
   font-weight: 550;
   background-color: #3388dd;
 }
-button:active{
+button:active {
   background-color: #1050aa;
 }
 
@@ -115,7 +116,7 @@ button:active{
   background-size: contain;
   background-color: #3388dd;
 }
-#eraser:active{
+#eraser:active {
   background-color: #1050aa;
 }
 #restart {
@@ -123,7 +124,7 @@ button:active{
   background-size: contain;
   background-color: #3388dd;
 }
-#restart:active{
+#restart:active {
   background-color: #1050aa;
 }
 #undo {
@@ -131,7 +132,7 @@ button:active{
   background-size: contain;
   background-color: #3388dd;
 }
-#undo:active{
+#undo:active {
   background-color: #1050aa;
 }
 #redo {
@@ -139,7 +140,7 @@ button:active{
   background-size: contain;
   background-color: #3388dd;
 }
-#redo:active{
+#redo:active {
   background-color: #1050aa;
 }
 #menu {
@@ -147,7 +148,7 @@ button:active{
   background-size: contain;
   background-color: #3388dd;
 }
-#menu:active{
+#menu:active {
   background-color: #1050aa;
 }
 /* Notes */
