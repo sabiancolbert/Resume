@@ -259,11 +259,9 @@ function isDefaultCell(cell) {
 
 function set(id) {
   var cellElement = document.getElementById(id);
-  var cellNumber = id.substring(1,
-    id.length) * 1;
+  var cellNumber = id.substring(1,id.length) * 1;
   var selectionElement = document.getElementById("selectionElement");
   var counterElement = document.getElementById("counterElement");
-  //HERE clear highlight
   /* set cellElement */
   if (userCells.includes(cellNumber)) {
     /* number mode (black or grey) */
@@ -303,7 +301,7 @@ function set(id) {
         if (noteMode == 1) {
 
           cellElement.style.color = "#777777";
-//smaller font size
+          //smaller font size
           //update cells notemode
           noteModeCells[cellNumber] = 1;
         } else {
@@ -312,7 +310,7 @@ function set(id) {
 
           //update cells notemode
           noteModeCells[cellNumber] = 0;
-//same font size
+          //same font size
           /* auto remove notes */
           //HERE
         }
@@ -329,16 +327,19 @@ function set(id) {
       document.getElementById("n1"+cellNumber).style = "top:0;displayCells: inline-block;font-size: 50%;position: absolute;max-height: 33.33%;width: 33.33%;font-weight: 600;";
       c(document.getElementById("n1"+cellNumber));
       noteModeCells[cellNumber] = 2;
+      displayCells[cellNumber]=-1;
       //same font size
       //HERE
     }
   }
 }
+
 function select(number) {
+  //dont clear highlight, for visually easier erasing
   if (number != 0) {
     document.getElementById("counterElement").innerHTML = numberTotals[number-1];
-    // document.getElementById("selectionElement").style.background = "none";
     document.getElementById("selectionElement").innerHTML = number;
+      //HERE change highlight
   } else {
     document.getElementById("selectionElement").innerHTML = " ";
     document.getElementById("counterElement").innerHTML = "Erase";
