@@ -357,23 +357,10 @@ function note() {
   //HERE set style of selection
 }
 /*//HERE
-   HTML
-add little text under the numbers to show how many are left like: 2/9
-
-
-
-
-
-
-   JAVASCRIPT
-make numberLabel go down instead of up
 highlight on grid all instances of the selected number; note=1 highlights, note =2 does not
 highlight selected number/eraser
-click on selected number/eraser to change #selected to blank, switching to grid cell selection mode (press 1 first, then number)
 some games end with two posibilities;test for criss crossed pairs, plug one answer in if so
 
-change all cells function calls to ## instead of c## and fix the JavaScript for it
-condense set using variables for readability and remove notes after
 
-checklist has a wrong answers var displayed on page
+
 */
