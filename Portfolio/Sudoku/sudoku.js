@@ -6,7 +6,7 @@ var moveList = new Array();
 var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0);
 var currentCell = 0;
 var currentMove = 0;
-var difficulty = 0;
+var difficulty = 40;
 var noteMode = 0;
 var noteModeCells = new Array(81);
 
@@ -317,9 +317,9 @@ function set(id) {
           //HERE
         }
       }
-      
-  /* highlight */
-  //HERE
+
+      /* highlight */
+      //HERE
     }
     /* note mode */
     else {
