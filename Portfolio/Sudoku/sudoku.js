@@ -364,6 +364,6 @@ highlight on grid all instances of the selected number; note=1 highlights, note 
 highlight selected number/eraser
 some games end with two posibilities;test for criss crossed pairs, plug one answer in if so
 capitalize notes
-
+when changing note mode, change position of the number on selectionElement based on the selected number
 
 */
