@@ -1,21 +1,22 @@
-/* variables */
+/* Globals */
 var cells = new Array(81);
 var displayCells = new Array();
 var userCells = new Array();
-var moveList = new Array();
 var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0);
-var currentCell = 0;
-var currentMove = 0;
-var difficulty = 40;
-var noteMode = 0;
 var noteModeCells = new Array(81);
-
-/* game creation */
+var moveList = new Array();
+var difficulty = 40;
+var currentCell = 0;
+var noteMode = 0;
+var currentMove = 0;
 
 function c(c) {
   console.log(c);
 }
 
+/* Game Creation */
+
+//set difficulty
 function askDifficulty() {
   c("askDifficulty()");
   //beginner 45
@@ -23,8 +24,10 @@ function askDifficulty() {
   //med 35
   //hard 30
   //expert 25
+  
   //HERE ask difficulty
   //adjust difficulty to rules
+/* Generate Number Board */
   setCells();
 }
 
@@ -38,7 +41,7 @@ function setCells() {
   while (currentCell > -1 && currentCell < 81) {
     var number = 0;
     var invalid = true;
-    /* set current cell */
+    /* Set Current Cell */
     while (invalid && attemptedNumbers[currentCell].length < 10) {
       number = Math.floor(Math.random()*9+1);
       if (!attemptedNumbers[currentCell].includes(number)) {
@@ -50,20 +53,20 @@ function setCells() {
         }
       }
     }
-    /* previous cell */
+    /* Previous Cell */
     if (invalid) {
       attemptedNumbers[currentCell] = [0];
       displayCells[currentCell] = 0;
       currentCell--;
     }
-    /* next cell */
+    /* Next Cell */
     else {
       cells[currentCell] = number;
       displayCells[currentCell] = number;
       currentCell++;
     }
   }
-  //start or end game
+  /* Start Or Fail Game */
   if (currentCell==-1) {
     fail();
   } else {
@@ -102,7 +105,7 @@ function isInHorizonal(cell, number) {
 //search for the same number in the same 3x3
 function isInBox(cell, number) {
   var result = false;
-  /* find stopping cell */
+  /* Find Stopping Cell */
   var adjust = 0;
   var temp = cell / 3 +" ";
   if (temp.includes(".6")) {
@@ -116,7 +119,7 @@ function isInBox(cell, number) {
   }
   temp = Math.floor(temp/9)*9;
   var stop = cell + adjust - temp;
-  /* test box */
+  /* Test Box */
   for (i = stop + 18; i >= stop; i -= 9) {
     if (displayCells[i] == number || displayCells[i+1] == number || displayCells[i+2] == number) {
       result = true;
@@ -125,19 +128,22 @@ function isInBox(cell, number) {
   return result;
 }
 
+//check each rule the user added
 function variantValid(cell, number) {
   //HERE
   return true;
 }
 
+//no possible games
 function fail() {
   c("fail()");
   alert("No possible games! Try removing some variants.");
 }
 
+//display the "displayCells" array on the grid
 function setGrid() {
   c("setGrid()");
-  /* unsolve */
+  /* Unsolve */
   var tested = new Array([0]);
   var stop = 81 - Math.floor(Math.random()*5+difficulty);
   while (stop > 0 && tested.length < 81) {
@@ -259,18 +265,30 @@ function isDefaultCell(cell) {
   return result;
 }
 
-/* gameplay */
+/* Gameplay */
+
+function select(number) {
+  c("select("+number+")")
+  //dont clear highlight, for visually easier erasing
+  if (number != 0) {
+    document.getElementById("counterElement").innerHTML = numberTotals[number-1];
+    document.getElementById("selectionElement").innerHTML = number;
+    //HERE change highlight
+  } else {
+    document.getElementById("selectionElement").innerHTML = " ";
+    document.getElementById("counterElement").innerHTML = "Erase";
+  }
+}
 
 function set(id) {
   c("set("+id+")");
   var cellElement = document.getElementById(id);
-  var cellNumber = id.substring(1,
-    id.length) * 1;
+  var cellNumber = id.substring(1,id.length) * 1;
   var selectionElement = document.getElementById("selectionElement");
   var counterElement = document.getElementById("counterElement");
-  /* set cellElement */
+  //if user-available cell
   if (userCells.includes(cellNumber)) {
-    /* number mode (black or grey) */
+    /* Set As Number */
     if (noteMode != 2) {
       //if different number or different note mode
       if (displayCells[cellNumber] != selectionElement.innerHTML || noteMode != noteModeCells[cellNumber]) {
@@ -305,7 +323,6 @@ function set(id) {
         currentMove++;
         //seperate note mode 1 and 2
         if (noteMode == 1) {
-
           cellElement.style.color = "#777777";
           //smaller font size
           //update cells notemode
@@ -321,44 +338,21 @@ function set(id) {
           //HERE
         }
       }
-
-      /* highlight */
-      //HERE
     }
-    /* note mode */
+    /* Set As Note */
     else {
       cellElement.style.color = "black";
       var string = "<div class='notesholder'><article id='n1"+cellNumber+"'>1</article><article id='n2"+cellNumber+"'>2</article><article id='n3"+cellNumber+"'>3</article><article id='n4"+cellNumber+"'>4</article><article id='n5"+cellNumber+"'>5</article><article id='n6"+cellNumber+"'>6</article><article id='n7"+cellNumber+"'>7</article><article id='n8"+cellNumber+"'>8</article><article id='n9"+cellNumber+"'>9</article></div>";
       cellElement.innerHTML = string;
       document.getElementById("n1"+cellNumber).style = "top:0;displayCells: inline-block;font-size: 50%;position: absolute;max-height: 33.33%;width: 33.33%;font-weight: 600;";
       c(document.getElementById("n1"+cellNumber));
+      //HERE ^^^
       noteModeCells[cellNumber] = 2;
       displayCells[cellNumber]=-1;
       //same font size
       //HERE
     }
   }
-}
-
-function select(number) {
-  c("select("+number+")")
-  //dont clear highlight, for visually easier erasing
-  if (number != 0) {
-    document.getElementById("counterElement").innerHTML = numberTotals[number-1];
-    document.getElementById("selectionElement").innerHTML = number;
-    //HERE change highlight
-  } else {
-    document.getElementById("selectionElement").innerHTML = " ";
-    document.getElementById("counterElement").innerHTML = "Erase";
-  }
-}
-
-function undo() {
-  c("undo()");
-}
-
-function redo() {
-  c("redo()");
 }
 
 function note() {
@@ -376,6 +370,22 @@ function note() {
     document.getElementById("selectionElement").style.fontSize = "75%";
   }
   //HERE set style of selectionElement
+}
+
+function undo() {
+  c("undo()");
+}
+
+function redo() {
+  c("redo()");
+}
+
+function restart(){
+  c("restart()");
+}
+
+function menu(){
+  c("menu()");
 }
 /*//HERE
 capitalize notes
