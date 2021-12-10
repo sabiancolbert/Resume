@@ -321,23 +321,17 @@ function set(id) {
         //moveList[currentMove] =
         //for (i = currentMove+1; i <
         currentMove++;
-        //seperate note mode 1 and 2
+        /* update using note mode 1 or 2 */
         if (noteMode == 1) {
           cellElement.style.color = "#777777";
           cellElement.style.fontSize = "125%";
-          //smaller font size
-          //update cells notemode
           noteModeCells[cellNumber] = 1;
         } else {
           //check();
           cellElement.style.color = "black";
           cellElement.style.fontSize = "150%";
-
-          //update cells notemode
           noteModeCells[cellNumber] = 0;
-          //same font size
-          /* auto remove notes */
-          //HERE
+          autoRemoveNotes();
         }
       }
     }
@@ -347,13 +341,18 @@ function set(id) {
       var string = "<div class='notesholder'><article id='n1"+cellNumber+"'>1</article><article id='n2"+cellNumber+"'>2</article><article id='n3"+cellNumber+"'>3</article><article id='n4"+cellNumber+"'>4</article><article id='n5"+cellNumber+"'>5</article><article id='n6"+cellNumber+"'>6</article><article id='n7"+cellNumber+"'>7</article><article id='n8"+cellNumber+"'>8</article><article id='n9"+cellNumber+"'>9</article></div>";
       cellElement.innerHTML = string;
       document.getElementById("n1"+cellNumber).style = "top:0;displayCells: inline-block;font-size: 50%;position: absolute;max-height: 33.33%;width: 33.33%;font-weight: 600;";
-      c(document.getElementById("n1"+cellNumber));
-      //HERE ^^^
       noteModeCells[cellNumber] = 2;
       displayCells[cellNumber]=-1;
-      //same font size
-      //HERE
+      c(document.getElementById("n1"+cellNumber));
+      //HERE ^^^ HERE HERE
     }
+  }
+}
+
+function autoRemoveNotes(){
+  c("autoRemoveNotes()");
+  if(true){//if autoremove notes in settings is on
+  //HERE
   }
 }
 
@@ -390,6 +389,7 @@ function restart() {
 function menu() {
   c("menu()");
 }
+
 /*//HERE
 capitalize notes
 when changing note mode, change position of the number on selectionElement based on the selected number
