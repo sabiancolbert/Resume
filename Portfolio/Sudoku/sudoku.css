@@ -155,7 +155,6 @@ button:active {
 .notesholder {
   background-color: green;
   position: absolute;
-  max-height: 11%;
   height: 11%;
   width: 11%;
 }
