@@ -314,14 +314,14 @@ function select(number) {
   }
 }
 
-function set(id) {
+function set(id, useSelection=true) {//HERE
   c("set("+id+")");
   var cellElement = document.getElementById(id);
   var cellNumber = id.substring(1, id.length) * 1;
   var selectionElement = document.getElementById("selectionElement");
   var counterElement = document.getElementById("counterElement");
   if (userCells.includes(cellNumber)) {
-    moveList.push([noteMode, cellElement, cellElement.innerHTML])
+    moveList.push([noteMode, cellElement.id, cellElement.innerHTML])
     lastMove++;
     currentMove = lastMove;
     /* Set As Number */
@@ -472,10 +472,29 @@ function updateNoteMode() {
 function changeMove(direction) {
   c("changeMove("+direction+")");
   if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < lastMove) {
-      currentMove += direction;
-      var move = moveList[currentMove];
-      moveList.push(move);
-  }
+    currentMove += direction;
+    var move = moveList[currentMove];
+    set(move[1], false);//HERE
+    /*moveList.push(move);
+    numberTotals[move[1].innerHTML]++;
+    if(selectionElement.innerHTML==move[1].innerHTML){
+      counterElement.innerHTML = numberTotals[selectionElement.innerHTML];
+    }
+    /* Update Old Cell Number */
+    /*move[1].innerHTML = move[2];
+    if (move[0]!=2){
+      displayCells[(move[1].id+"0").substring(1,2)]=move[2];
+    }
+    else{
+      displayCells[(move[1].id+"0").substring(1,2)]=-1;
+    }
+    //HERE set notemodecells (copy paste from set())
+    numberTotals[move[1].innerHTML]--;
+    if(move[2]==selectionElement.innerHTML)
+    {
+      counterElement.innerHTML=numberTotals[move[2]];
+    }
+  */}
 }
 
 function restart() {
