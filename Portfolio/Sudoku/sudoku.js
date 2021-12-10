@@ -368,119 +368,119 @@ function set(id) {
       }
       /* Add Number To Cell */
       else {
-        if(displayCells[cellNumber !=-1){
+        if (displayCells[cellNumber] !=-1) {
           cellElement.innerHTML = "<div class='notesholder'><article id='n1"+cellNumber+"'>1</article><article id='n2"+cellNumber+"'>2</article><article id='n3"+cellNumber+"'>3</article><article id='n4"+cellNumber+"'>4</article><article id='n5"+cellNumber+"'>5</article><article id='n6"+cellNumber+"'>6</article><article id='n7"+cellNumber+"'>7</article><article id='n8"+cellNumber+"'>8</article><article id='n9"+cellNumber+"'>9</article></div>";
         }
-        c("set - add number to cell");
-        cellElement.style.color = "black";
-        document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.visibility = "visible";
-        noteModeCells[cellNumber][selectionElement.innerHTML] = selectionElement.innerHTML;
-        displayCells[cellNumber]=-1;
-        c(document.getElementById("n1"+cellNumber));
-        //HERE ^^^ HERE HERE
+          c("set - add number to cell");
+          cellElement.style.color = "black";
+          document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.visibility = "visible";
+          noteModeCells[cellNumber][selectionElement.innerHTML] = selectionElement.innerHTML;
+          displayCells[cellNumber]=-1;
+          c(document.getElementById("n1"+cellNumber));
+          //HERE ^^^ HERE HERE
+        }
       }
     }
   }
-}
 
-function check() {
-  var result = true;
-  //if autocheck in settings
-  if (false) {
-    var counter = 0;
-    //compare displayCells to cells
-    if (true)//HERE
-    {
-      result = false
+  function check() {
+    var result = true;
+    //if autocheck in settings
+    if (false) {
+      var counter = 0;
+      //compare displayCells to cells
+      if (true)//HERE
+      {
+        result = false
+      }
+      document.getElementById("wrongElement").innerHTML = counter;
     }
-    document.getElementById("wrongElement").innerHTML = counter;
+    c("check() = "+result);
+    return result;
   }
-  c("check() = "+result);
-  return result;
-}
 
-function autoRemoveNotes() {
-  c("autoRemoveNotes() =");
-  //if autoremove notes in settings is on
-  if (true) {
-    c("true");
-    //HERE
-    //remove horizontal, vertical, and box
-  } else {
-    c("false");
-    {}
-  }
-}
-
-function updateNoteMode() {
-  c("updateNoteMode()");
-  var selectionElement = document.getElementById("selectionElement");
-  noteMode++;
-  selectionElement.style.padding = 0;
-  /* Regular Number Mode */
-  if (noteMode > 2) {
-    noteMode = 0;
-    selectionElement.style.fontSize = "300%";
-  }
-  /* Grey Note Number Mode */
-  else if (noteMode == 1) {
-    selectionElement.style.color = "#777777";
-    selectionElement.style.fontSize = "225%";
-
-  }
-  /* Note Mode */
-  else {
-    selectionElement.style.color = "black";
-    selectionElement.style.fontSize = "100%";
-    switch (selectionElement.innerHTML * 1) {
-      case 1:
-        selectionElement.style.padding = "0 60% 60% 0";
-        break;
-      case 2:
-        selectionElement.style.padding = "0 0 60% 0";
-        break;
-      case 3:
-        selectionElement.style.padding = "0 0 60% 60%";
-        break;
-      case 4:
-        selectionElement.style.padding = "0 60% 0 0";
-        break;
-      case 5:
-        selectionElement.style.padding = "0 0 0 0";
-        break;
-      case 6:
-        selectionElement.style.padding = "0 0 0 60%";
-        break;
-      case 7:
-        selectionElement.style.padding = "60% 60% 0 0";
-        break;
-      case 8:
-        selectionElement.style.padding = "60% 0 0 0";
-        break;
-      case 9:
-        selectionElement.style.padding = "60% 0 0 60%";
-        break;
+  function autoRemoveNotes() {
+    c("autoRemoveNotes() =");
+    //if autoremove notes in settings is on
+    if (true) {
+      c("true");
+      //HERE
+      //remove horizontal, vertical, and box
+    } else {
+      c("false");
+      {}
     }
   }
-}
 
-function undo() {
-  c("undo()");
-}
+  function updateNoteMode() {
+    c("updateNoteMode()");
+    var selectionElement = document.getElementById("selectionElement");
+    noteMode++;
+    selectionElement.style.padding = 0;
+    /* Regular Number Mode */
+    if (noteMode > 2) {
+      noteMode = 0;
+      selectionElement.style.fontSize = "300%";
+    }
+    /* Grey Note Number Mode */
+    else if (noteMode == 1) {
+      selectionElement.style.color = "#777777";
+      selectionElement.style.fontSize = "225%";
 
-function redo() {
-  c("redo()");
-}
+    }
+    /* Note Mode */
+    else {
+      selectionElement.style.color = "black";
+      selectionElement.style.fontSize = "100%";
+      switch (selectionElement.innerHTML * 1) {
+        case 1:
+          selectionElement.style.padding = "0 60% 60% 0";
+          break;
+        case 2:
+          selectionElement.style.padding = "0 0 60% 0";
+          break;
+        case 3:
+          selectionElement.style.padding = "0 0 60% 60%";
+          break;
+        case 4:
+          selectionElement.style.padding = "0 60% 0 0";
+          break;
+        case 5:
+          selectionElement.style.padding = "0 0 0 0";
+          break;
+        case 6:
+          selectionElement.style.padding = "0 0 0 60%";
+          break;
+        case 7:
+          selectionElement.style.padding = "60% 60% 0 0";
+          break;
+        case 8:
+          selectionElement.style.padding = "60% 0 0 0";
+          break;
+        case 9:
+          selectionElement.style.padding = "60% 0 0 60%";
+          break;
+      }
+    }
+  }
 
-function restart() {
-  c("restart()");
-}
+  function undo() {
+    c("undo()");
+  }
 
-function menu() {
-  c("menu()");
-}
+  function redo() {
+    c("redo()");
+  }
 
-/*//HERE
+  function restart() {
+    c("restart()");
+  }
+
+  function menu() {
+    c("menu()");
+  }
+
+  /*//HERE
 capitalize notes
 see if a switch() would be useful anywhere
 when changing note mode, change position of the number on selectionElement based on the selected nu
