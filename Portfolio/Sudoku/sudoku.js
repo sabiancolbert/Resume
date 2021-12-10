@@ -409,25 +409,25 @@ function autoRemoveNotes() {
 
 function note() {
   c("note()");
-  var selectionElementStyle = document.getElementById("selectionElement").style;
+  var selectionElement = document.getElementById("selectionElement");
   noteMode++;
-  selectionElementStyle.padding = 0;
+  selectionElement.style.padding = 0;
   /* Regular Number Mode */
   if (noteMode > 2) {
     noteMode = 0;
-    selectionElementStyle.fontSize = "300%";
+    selectionElement.style.fontSize = "300%";
   }
   /* Grey Note Number Mode */
   else if (noteMode == 1) {
-    selectionElementStyle.color = "#777777";
-    selectionElementStyle.fontSize = "225%";
+    selectionElement.style.color = "#777777";
+    selectionElement.style.fontSize = "225%";
 
   }
   /* Note Mode */
   else {
-    selectionElementStyle.color = "black";
-    selectionElementStyle.fontSize = "100%";
-    switch (number) {
+    selectionElement.style.color = "black";
+    selectionElement.style.fontSize = "100%";
+    switch (selectionElement.innerHTML) {
       case 1:
         selectionElement.style.padding = "0 60% 60% 0";
         break;
@@ -459,23 +459,23 @@ function note() {
   }
 }
 
-  function undo() {
-    c("undo()");
-  }
+function undo() {
+  c("undo()");
+}
 
-  function redo() {
-    c("redo()");
-  }
+function redo() {
+  c("redo()");
+}
 
-  function restart() {
-    c("restart()");
-  }
+function restart() {
+  c("restart()");
+}
 
-  function menu() {
-    c("menu()");
-  }
+function menu() {
+  c("menu()");
+}
 
-  /*//HERE
+/*//HERE
 capitalize notes
 see if a switch() would be useful anywhere
 when changing note mode, change position of the number on selectionElement based on the selected nu
