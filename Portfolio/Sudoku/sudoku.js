@@ -324,7 +324,7 @@ function set(id) {
         //seperate note mode 1 and 2
         if (noteMode == 1) {
           cellElement.style.color = "#777777";
-          cellElement.style.fontSize = "80%";
+          cellElement.style.fontSize = "110%";
           //smaller font size
           //update cells notemode
           noteModeCells[cellNumber] = 1;
