@@ -167,35 +167,27 @@ article {
 }
 
 article:nth-child(1n) {
-
   padding: 0 40% 40% 0;
 }
 article:nth-child(2n) {
-
   padding: 0 0 40% 0;
 }
 article:nth-child(3n) {
-
   padding: 0 0 40% 40%;
 }
 article:nth-child(4n) {
-
   padding: 0 40% 0 0;
 }
 article:nth-child(5n) {
   padding: 0 0 0 0;
-
 }
 article:nth-child(6n) {
   padding: 0 0 0 40%;
-
 }
 article:nth-child(7n) {
-
   padding: 40% 40% 0 0;
 }
 article:nth-child(8n) {
-
   padding: 40% 0 0 0;
 }
 article:nth-child(9n) {
