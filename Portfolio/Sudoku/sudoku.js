@@ -289,33 +289,26 @@ function set(id) {
   if (userCells.includes(cellNumber)) {
     /* Set As Number */
     if (noteMode != 2) {
-      //if different number or different note mode
       if (displayCells[cellNumber] != selectionElement.innerHTML || noteMode != noteModeCells[cellNumber]) {
-        //clear notes and add to move list for undo
-        //HERE
-        //if old is not empty
+        /* Update Old Cell Number */
         if (cellElement.innerHTML +1 != 1) {
-          //update old number total
           numberTotals[cellElement.innerHTML - 1]++;
         }
-        //update cell
+        /* Update New Cell Number */
         cellElement.innerText = selectionElement.innerText;
-        //if new is not empty
         if (cellElement.innerHTML +1 != 1) {
-          //update new number total
           numberTotals[cellElement.innerHTML - 1]--;
-          //displayCells new number total
           counterElement.innerHTML = numberTotals[cellElement.innerHTML -1];
         } else {
-          //clear number label
           if (selectionElement.innerHTML = " ") {
             counterElement.innerHTML = "Erase";
           } else {
             counterElement.innerHTML = "";
           }
         }
-        //update displayCells array
         displayCells[cellNumber] = selectionElement.innerHTML
+        //clear notes
+        //HERE
         //update move list
         //moveList[currentMove] =
         //for (i = currentMove+1; i <
@@ -363,7 +356,7 @@ function note() {
   if (noteMode > 2) {
     noteMode = 0;
     document.getElementById("selectionElement").style.fontSize = "300%";
-  } 
+  }
   /* Grey Note Number Mode */
   else if (noteMode == 1) {
     document.getElementById("selectionElement").style.color = "#777777";
