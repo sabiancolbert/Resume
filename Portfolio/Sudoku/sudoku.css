@@ -175,7 +175,7 @@ article:nth-child(2n) {
   padding: 0 0 40% 0;
 }
 article:nth-child(3n) {
-  padding: 0 0 40% 40%;
+  
 }
 article:nth-child(4n) {
   padding: 0 40% 0 0;
