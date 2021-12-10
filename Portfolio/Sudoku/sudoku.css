@@ -159,6 +159,7 @@ button:active {
   height: 100%;
 }
 article {
+  visibility: hidden;
   font-size: 50%;
   position: absolute;
   height: auto;
