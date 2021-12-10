@@ -328,6 +328,7 @@ function set(id, useSelection = true) {
     moveList.push([noteMode, cellElement.id, cellElement.innerHTML])
     lastMove++;
     currentMove = lastMove;
+    //HERE put erarse if else here
     /* Set As Number */
     if (noteMode != 2) {
       if (displayCells[cellNumber] != selectionElement.innerHTML || noteMode != noteModeCells[cellNumber]) {
