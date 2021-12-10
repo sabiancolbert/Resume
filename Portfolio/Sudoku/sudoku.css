@@ -159,11 +159,12 @@ button:active {
   width: 7%;
   margin-top: -4.8%;
   margin-left: 1%;
+  line-height: 0;
 }
 article {
   visibility: hidden;
   font-size: 50%;
-  top:0;
+  top: 0;
   font-weight: 600;
 }
 
