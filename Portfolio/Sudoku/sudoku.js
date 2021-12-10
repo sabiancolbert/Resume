@@ -24,10 +24,10 @@ function askDifficulty() {
   //med 35
   //hard 30
   //expert 25
-  
+
   //HERE ask difficulty
   //adjust difficulty to rules
-/* Generate Number Board */
+  /* Generate Number Board */
   setCells();
 }
 
@@ -283,7 +283,7 @@ function select(number) {
 function set(id) {
   c("set("+id+")");
   var cellElement = document.getElementById(id);
-  var cellNumber = id.substring(1,id.length) * 1;
+  var cellNumber = id.substring(1, id.length) * 1;
   var selectionElement = document.getElementById("selectionElement");
   var counterElement = document.getElementById("counterElement");
   //if user-available cell
@@ -363,7 +363,7 @@ function note() {
     document.getElementById("selectionElement").style.fontSize = "300%";
   } else if (noteMode == 1) {
     document.getElementById("selectionElement").style.color = "#777777";
-    document.getElementById("selectionElement").style.fontSize = "200%";
+    document.getElementById("selectionElement").style.fontSize = "225%";
 
   } else {
     //clear number label //HERE?
@@ -381,11 +381,11 @@ function redo() {
   c("redo()");
 }
 
-function restart(){
+function restart() {
   c("restart()");
 }
 
-function menu(){
+function menu() {
   c("menu()");
 }
 /*//HERE
