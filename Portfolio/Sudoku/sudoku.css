@@ -163,13 +163,11 @@ article {
   visibility: hidden;
   font-size: 50%;
   position: absolute;
-  height: 13%;
-  width: 13%;
   font-weight: 600;
 }
 
 article:nth-child(2) {
- margin:0 auto;
+  margin: 0 50%;
 }
 article:nth-child(3) {
   right: 0;
