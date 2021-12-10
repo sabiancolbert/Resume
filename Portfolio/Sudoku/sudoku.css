@@ -45,7 +45,8 @@ table {
   float: left;
 }
 td {
-  height: 11.11%;
+  height: 11%;
+  max-height:11%;
   width: 32%;
   color: black;
   background-color: #ccccee;
