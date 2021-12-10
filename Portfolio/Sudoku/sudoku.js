@@ -394,5 +394,4 @@ function menu() {
 capitalize notes
 when changing note mode, change position of the number on selectionElement based on the selected number
 have a numbers page when you click the wrong answers button (number of undos, redos, restarts, total time (saved games), ingame time, etc?)
-*/ve a numbers page when you click the wrong answers button (number of undos, redos, restarts, total time (saved games), ingame time, etc?)
 */
