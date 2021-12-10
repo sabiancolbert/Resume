@@ -154,7 +154,7 @@ button:active {
 /* Notes */
 .notesholder {
   position: absolute;
-  background-color:green;
+  background-color: green;
   height: 7%;
   width: 7%;
   margin-top: -4.8%;
@@ -163,26 +163,20 @@ button:active {
 article {
   visibility: hidden;
   font-size: 50%;
-  position: absolute;
   font-weight: 600;
 }
 
+article:nth-child(1) {}
 article:nth-child(2) {}
 article:nth-child(3) {
-  right: 0;
 }
 article:nth-child(4) {}
 article:nth-child(5) {}
 article:nth-child(6) {
-  right: 0;
 }
 article:nth-child(7) {
-  bottom: 0;
 }
 article:nth-child(8) {
-  bottom: 0;
 }
 article:nth-child(9) {
-  bottom: 0;
-  right: 0;
 }
