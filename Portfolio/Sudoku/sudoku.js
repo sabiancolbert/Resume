@@ -437,13 +437,13 @@ function note() {
         selectionElement.style.padding = "0 0 60% 60%";
         break;
       case 4:
-        selectionElement.style.padding = "0 0 0 60%";
+        selectionElement.style.padding = "0 60% 0 0";
         break;
       case 5:
         selectionElement.style.padding = "0 0 0 0";
         break;
       case 6:
-        selectionElement.style.padding = "0 60% 0 0";
+        selectionElement.style.padding = "0 0 0 60%";
         break;
       case 7:
         selectionElement.style.padding = "60% 60% 0 0";
