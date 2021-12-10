@@ -428,6 +428,7 @@ function note() {
     selectionElement.style.fontSize = "100%";
     switch (selectionElement.innerHTML) {
       case 1:
+        c("&_)");
         selectionElement.style.padding = "0 60% 60% 0";
         break;
       case 2:
