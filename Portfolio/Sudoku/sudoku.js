@@ -360,7 +360,7 @@ function set(id) {
     else {
       c("set - set as note");
       /* Remove Number From Cell */
-      if (noteModeCell[cellNumber].includes (selectionElement.innerHTML)) {
+      if (noteModeCells[cellNumber].includes (selectionElement.innerHTML)) {
         c("set - remove number from cell");
 
       }
