@@ -455,26 +455,27 @@ function note() {
       case 9:
         selectionElement.style.padding = "60% 0 0 60%";
         break;
+    }
   }
 }
 
-function undo() {
-  c("undo()");
-}
+  function undo() {
+    c("undo()");
+  }
 
-function redo() {
-  c("redo()");
-}
+  function redo() {
+    c("redo()");
+  }
 
-function restart() {
-  c("restart()");
-}
+  function restart() {
+    c("restart()");
+  }
 
-function menu() {
-  c("menu()");
-}
+  function menu() {
+    c("menu()");
+  }
 
-/*//HERE
+  /*//HERE
 capitalize notes
 see if a switch() would be useful anywhere
 when changing note mode, change position of the number on selectionElement based on the selected nu
