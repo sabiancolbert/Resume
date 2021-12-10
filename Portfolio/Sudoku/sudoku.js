@@ -309,6 +309,7 @@ function select(number) {
       case 9:
         selectionElement.style.padding = "60% 0 0 60%";
         break;
+        //HERE HERE HERE DO THIS FOR THE GRID TOO
     }
   }
 }
@@ -426,7 +427,7 @@ function note() {
     selectionElementStyle.color = "black";
     selectionElementStyle.fontSize = "100%";
     //HERE HERE HERE SET NUMBER POSITION
-//copy paste
+    //copy paste
   }
 }
 
