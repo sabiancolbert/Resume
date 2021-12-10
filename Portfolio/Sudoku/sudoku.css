@@ -164,8 +164,7 @@ article {
   position: absolute;
   height: 10%;
   width: 10%;
-  font-weight: 600; 
-  text-align: center;
+  font-weight: 600;
 }
 
 article:nth-child(1n) {
@@ -194,6 +193,6 @@ article:nth-child(8n) {
 }
 article:nth-child(9n) {
   bottom: 0;
-  right: 0;
+  right: 10px;
   background-color: red;
 }
