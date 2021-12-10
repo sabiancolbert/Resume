@@ -415,9 +415,9 @@ function note() {
   /* Note Mode */
   else {
     document.getElementById("selectionElement").style.color = "black";
-    document.getElementById("selectionElement").style.fontSize = "75%";
-  //HERE HERE HERE SET NUMBER POSITION
-    
+    document.getElementById("selectionElement").style.fontSize = "100%";
+    //HERE HERE HERE SET NUMBER POSITION
+
   }
 }
 
