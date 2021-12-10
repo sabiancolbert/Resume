@@ -155,7 +155,8 @@ button:active {
 .notesholder {
   position: absolute;
   background-color: green;
-text-align: center;
+  text-align: center;
+  width: inherit;
   line-height: 0;
 }
 article {
