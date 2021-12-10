@@ -162,7 +162,7 @@ button:active {
 }
 article {
   display: inline-block;
-  background-color: red;
+ /* background-color: red;*/
   font-size: 50%;
   position: absolute;
   max-height: 100%;
