@@ -167,26 +167,25 @@ article {
   font-weight: 600;
 }
 
-article:nth-child(1) {}
 article:nth-child(2) {
-  left:50%;
+  left: 50%;
 }
 article:nth-child(3) {
-  right:0;
+  right: 0;
 }
 article:nth-child(4) {
-  top:50%;
+  top: 50%;
 }
 article:nth-child(5) {
-  top:50%;
-  left:50%;
+  top: 50%;
+  left: 50%;
 }
 article:nth-child(6) {
-  top:50%;
-  right:0;
+  top: 50%;
+  right: 0;
 }
 article:nth-child(7) {
-  bottom:0;
+  bottom: 0;
 }
 article:nth-child(8) {
   bottom: 0;
