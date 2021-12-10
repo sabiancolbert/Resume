@@ -160,18 +160,15 @@ function setGrid() {
   }
   //HERE dont do whats under me. criss cross shouldnt be happening so fix that instead
   //HERE if there are unsolvable criss crossed cells, plug one corner in here
-  /* displayCells cells */
+  /* Display Cells */
   for (i = 0; i < 81; i++) {
     if (displayCells[i] > 0) {
       document.getElementById("c"+i).innerHTML = "<bold>"+displayCells[i]+"</strong>";
     }
   }
+  /* Last Minute Game Prep */
   for (i = 0; i < 81; i++) {
-    noteModeCells[i] = 0;
-  }
-  /* Prep */
-  for (i = 0; i < 81; i++) {
-   noteModeCells[i]= [];
+    noteModeCells[i] = [];
   }
   select(1);
 }
@@ -376,7 +373,7 @@ function set(id) {
         cellElement.innerHTML = string;
         cellElement.style.color = "black";
         document.getElementById("n1"+cellNumber).hidden = "false";
-        noteModeCells[cellNumber].push([selectionElement.innerHTML]);
+        noteModeCells[cellNumber][selectionElement.innerHTML] = selectionElement.innerHTML;
         displayCells[cellNumber]=-1;
         c(document.getElementById("n1"+cellNumber));
         //HERE ^^^ HERE HERE
