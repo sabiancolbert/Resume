@@ -427,8 +427,34 @@ function note() {
   else {
     selectionElementStyle.color = "black";
     selectionElementStyle.fontSize = "100%";
-    //HERE HERE HERE SET NUMBER POSITION
-    //copy paste
+    switch (number) {
+      case 1:
+        selectionElement.style.padding = "0 60% 60% 0";
+        break;
+      case 2:
+        selectionElement.style.padding = "0 0 60% 0";
+        break;
+      case 3:
+        selectionElement.style.padding = "0 0 60% 60%";
+        break;
+      case 4:
+        selectionElement.style.padding = "0 0 0 60%";
+        break;
+      case 5:
+        selectionElement.style.padding = "0 0 0 0";
+        break;
+      case 6:
+        selectionElement.style.padding = "0 60% 0 0";
+        break;
+      case 7:
+        selectionElement.style.padding = "60% 60% 0 0";
+        break;
+      case 8:
+        selectionElement.style.padding = "60% 0 0 0";
+        break;
+      case 9:
+        selectionElement.style.padding = "60% 0 0 60%";
+        break;
   }
 }
 
