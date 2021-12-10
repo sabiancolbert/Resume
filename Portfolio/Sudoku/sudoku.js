@@ -5,10 +5,11 @@ var userCells = new Array();
 var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 var noteModeCells = new Array(81);
 var moveList = new Array();
+var currentMove = 0;
+var lastMove = 0;
 var difficulty = 40;
 var currentCell = 0;
 var noteMode = 0;
-var currentMove = 0;
 
 function c(c) {
   console.log(c);
@@ -320,6 +321,9 @@ function set(id) {
   var selectionElement = document.getElementById("selectionElement");
   var counterElement = document.getElementById("counterElement");
   if (userCells.includes(cellNumber)) {
+        moveList.push([noteMode, cellElement, cellElement.innerHTML])
+        currentMove++;
+        lastMove++;
     /* Set As Number */
     if (noteMode != 2) {
       if (displayCells[cellNumber] != selectionElement.innerHTML || noteMode != noteModeCells[cellNumber]) {
@@ -327,8 +331,6 @@ function set(id) {
         if (cellElement.innerHTML +1 != 1) {
           numberTotals[cellElement.innerHTML - 1]++;
         }
-        moveList.push([noteMode, cellElement, cellElement.innerHTML])
-        currentMove++;
         //HERE set all noteModeCells to 0
         /* Update New Cell Number */
         cellElement.innerText = selectionElement.innerText;
@@ -387,14 +389,14 @@ function check() {
   //if autocheck in settings
   if (false) {
     var counter = 0;
-    for(i=0;i<81;i++){
-    //compare displayCells to cells
-    if (true)//HERE
-    {
-      counter++;
-      //element.style.color = red
-      result = false
-    }
+    for (i = 0; i < 81; i++) {
+      //compare displayCells to cells
+      if (true)//HERE
+      {
+        counter++;
+        //element.style.color = red
+        result = false
+      }
     }
     document.getElementById("wrongElement").innerHTML = counter;
   }
@@ -467,12 +469,12 @@ function updateNoteMode() {
   }
 }
 
-function undo() {
-  c("undo()");
+function changeMove(direction) {
+  c("changeMove("+direction+")");
+  if(currentMove<lastMove){
+  currentMove+=direction;
+  var move = moveList[currentMove];
 }
-
-function redo() {
-  c("redo()");
 }
 
 function restart() {
