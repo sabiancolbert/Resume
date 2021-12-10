@@ -3,7 +3,7 @@ var cells = new Array(81);
 var displayCells = new Array();
 var userCells = new Array();
 var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-var noteModeCells = new Array();
+var noteModeCells = new Array(81);
 var moveList = new Array();
 var difficulty = 40;
 var currentCell = 0;
@@ -171,8 +171,7 @@ function setGrid() {
   }
   /* Prep */
   for (i = 0; i < 81; i++) {
-    noteModeCells.push([]);
-   
+   noteModeCells[i]= [];
   }
   select(1);
 }
