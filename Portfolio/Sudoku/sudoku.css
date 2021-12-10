@@ -155,9 +155,9 @@ button:active {
 .notesholder {
   background-color: green;
   position: absolute;
-  height: 9%;
-  width: 9%;
-  margin-top: -10%;
+  height: 10%;
+  width: 10%;
+  margin-top: -5%;
 }
 article {
   visibility: hidden;
