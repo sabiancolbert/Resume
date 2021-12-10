@@ -387,10 +387,14 @@ function check() {
   //if autocheck in settings
   if (false) {
     var counter = 0;
+    for(i=0;i<81;i++){
     //compare displayCells to cells
     if (true)//HERE
     {
+      counter++;
+      //element.style.color = red
       result = false
+    }
     }
     document.getElementById("wrongElement").innerHTML = counter;
   }
@@ -484,4 +488,5 @@ capitalize notes
 see if a switch() would be useful anywhere
 when changing note mode, change position of the number on selectionElement based on the selected nu
 have a numbers page when you click the wrong answers button (number of undos, redos, restarts, total time (saved games), ingame time, etc?)
+when unselecting autocheck, unred any red numbers
 */
