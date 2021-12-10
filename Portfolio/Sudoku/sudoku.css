@@ -155,9 +155,9 @@ button:active {
 .notesholder {
   background-color: green;
   position: absolute;
-  max-height: 10.5%;
-  height: 10.5%;
-  width: 32%;
+  max-height: 11%;
+  height: 11%;
+  width: 11%;
 }
 article {
   visibility: hidden;
@@ -190,7 +190,7 @@ article:nth-child(7n) {
   padding: 40% 40% 0 0;
 }
 article:nth-child(8n) {
-  bottom:0;
+  bottom: 0;
 }
 article:nth-child(9n) {
   bottom: 0;
