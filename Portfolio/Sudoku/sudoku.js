@@ -327,6 +327,8 @@ function set(id) {
         if (cellElement.innerHTML +1 != 1) {
           numberTotals[cellElement.innerHTML - 1]++;
         }
+        moveList.push([noteMode, cellElement, cellElement.innerHTML])
+        currentMove++;
         /* Update New Cell Number */
         cellElement.innerText = selectionElement.innerText;
         if (cellElement.innerHTML > 0) {
@@ -340,15 +342,7 @@ function set(id) {
           }
         }
         displayCells[cellNumber] = selectionElement.innerHTML
-        //Clear Notes
-        //HERE vertical, horizontal and box
-
-        //Update moveList
-        //HERE
-        //moveList[currentMove] =
-        //for (i = currentMove+1; i <
-        currentMove++;
-        //Update Note Mode
+        autoRemoveNotes();
         if (noteMode == 1) {
           cellElement.style.color = "#777777";
           cellElement.style.fontSize = "125%";
