@@ -192,6 +192,7 @@ article:nth-child(8n) {
   padding: 40% 0 0 0;
 }
 article:nth-child(9n) {
-  bottom:0;
-  right:0;
+  bottom: 0;
+  right: 0;
+  background-color: red;
 }
