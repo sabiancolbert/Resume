@@ -309,7 +309,7 @@ function select(number) {
       case 9:
         selectionElement.style.padding = "60% 0 0 60%";
         break;
-        //HERE HERE HERE DO THIS FOR THE GRID TOO
+      //HERE HERE HERE DO THIS FOR THE GRID TOO
     }
   }
 }
@@ -414,7 +414,7 @@ function note() {
   /* Regular Number Mode */
   if (noteMode > 2) {
     noteMode = 0;
-    .fontSize = "300%";
+    selectionElementStyle.fontSize = "300%";
   }
   /* Grey Note Number Mode */
   else if (noteMode == 1) {
