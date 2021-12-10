@@ -322,8 +322,8 @@ function set(id) {
   var counterElement = document.getElementById("counterElement");
   if (userCells.includes(cellNumber)) {
     moveList.push([noteMode, cellElement, cellElement.innerHTML])
-    currentMove++;
     lastMove++;
+    currentMove = lastMove;
     /* Set As Number */
     if (noteMode != 2) {
       if (displayCells[cellNumber] != selectionElement.innerHTML || noteMode != noteModeCells[cellNumber]) {
@@ -471,11 +471,10 @@ function updateNoteMode() {
 
 function changeMove(direction) {
   c("changeMove("+direction+")");
-  if(direction == -1 && currentMove > 0 || direction==1&&currentMove < lastMove){
-  if (currentMove <= lastMove) {
-    currentMove += direction;
-    var move = moveList[currentMove];
-  }
+  if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < lastMove) {
+      currentMove += direction;
+      var move = moveList[currentMove];
+      moveList.push(move);
   }
 }
 
