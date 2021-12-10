@@ -170,7 +170,7 @@ function setGrid() {
     noteModeCells[i] = 0;
   }
   /* Prep */
-  for(i=0; i < 81; i++){
+  for (i = 0; i < 81; i++) {
     noteModeCells.push([]);
   }
   select(1);
@@ -364,6 +364,7 @@ function set(id) {
     else {
       c("set - set as note");
       /* Remove Number From Cell */
+      c(noteModeCells[cellNumber]);
       if (noteModeCells[cellNumber].includes (selectionElement.innerHTML)) {
         c("set - remove number from cell");
 
