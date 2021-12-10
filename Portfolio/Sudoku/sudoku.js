@@ -269,14 +269,19 @@ function isDefaultCell(cell) {
 
 function select(number) {
   c("select("+number+")")
+  var selectionElement = document.getElementById("selectionElement");
+  var counterElement = document.getElementById("counterElement");
   //dont clear highlight, for visually easier erasing
   if (number != 0) {
-    document.getElementById("counterElement").innerHTML = numberTotals[number-1];
-    document.getElementById("selectionElement").innerHTML = number;
+    counterElement.innerHTML = numberTotals[number-1];
+    selectionElement.innerHTML = number;
     //HERE change highlight
   } else {
-    document.getElementById("selectionElement").innerHTML = " ";
-    document.getElementById("counterElement").innerHTML = "Erase";
+    selectionElement.innerHTML = " ";
+    counterElement.innerHTML = "Erase";
+  }
+  if(noteMode==2){
+    position(
   }
 }
 
@@ -311,7 +316,7 @@ function set(id) {
         //HERE vertical, horizontal and box
 
         //Update moveList
-//HERE
+        //HERE
         //moveList[currentMove] =
         //for (i = currentMove+1; i <
         currentMove++;
@@ -324,7 +329,7 @@ function set(id) {
           cellElement.style.color = "black";
           cellElement.style.fontSize = "150%";
           noteModeCells[cellNumber] = 0;
-          if(check()){
+          if (check()) {
             autoRemoveNotes();
           }
         }
@@ -344,26 +349,31 @@ function set(id) {
   }
 }
 
-function check(){
+function check() {
   var result = true;
-    //if autocheck in settings
-  if(false){
+  //if autocheck in settings
+  if (false) {
     //compare displayCells to cells
-    if(true)//HERE
+    if (true)//HERE
     {
       result = false
-}
+    }
   }
+  c("check() = "+result);
   return result;
 }
 
 function autoRemoveNotes() {
-  c("autoRemoveNotes()");
-  if (true) {
+  c("autoRemoveNotes() =");
     //if autoremove notes in settings is on
+  if (true) {
+    c("true");
     //HERE
-//remove horizontal, vertical, and box
+    //remove horizontal, vertical, and box
   }
+  else{
+    c("false");
+    {
 }
 
 function note() {
