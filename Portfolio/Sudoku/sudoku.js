@@ -372,11 +372,13 @@ function check() {
   var result = true;
   //if autocheck in settings
   if (false) {
+    var counter = 0;
     //compare displayCells to cells
     if (true)//HERE
     {
       result = false
     }
+    document.getElementById("wrongElement").innerHTML = counter;
   }
   c("check() = "+result);
   return result;
@@ -394,46 +396,46 @@ function autoRemoveNotes() {
     {}
   }
 }
-  function note() {
-    c("note()");
-    noteMode++;
-    /* Regular Number Mode */
-    if (noteMode > 2) {
-      noteMode = 0;
-      document.getElementById("selectionElement").style.fontSize = "300%";
-    }
-    /* Grey Note Number Mode */
-    else if (noteMode == 1) {
-      document.getElementById("selectionElement").style.color = "#777777";
-      document.getElementById("selectionElement").style.fontSize = "225%";
-
-    }
-    /* Note Mode */
-    else {
-      document.getElementById("selectionElement").style.color = "black";
-      document.getElementById("selectionElement").style.fontSize = "75%";
-    }
+function note() {
+  c("note()");
+  noteMode++;
+  /* Regular Number Mode */
+  if (noteMode > 2) {
+    noteMode = 0;
+    document.getElementById("selectionElement").style.fontSize = "300%";
   }
+  /* Grey Note Number Mode */
+  else if (noteMode == 1) {
+    document.getElementById("selectionElement").style.color = "#777777";
+    document.getElementById("selectionElement").style.fontSize = "225%";
 
-  function undo() {
-    c("undo()");
   }
-
-  function redo() {
-    c("redo()");
+  /* Note Mode */
+  else {
+    document.getElementById("selectionElement").style.color = "black";
+    document.getElementById("selectionElement").style.fontSize = "75%";
   }
+}
 
-  function restart() {
-    c("restart()");
-  }
+function undo() {
+  c("undo()");
+}
 
-  function menu() {
-    c("menu()");
-  }
+function redo() {
+  c("redo()");
+}
 
-  /*//HERE
+function restart() {
+  c("restart()");
+}
+
+function menu() {
+  c("menu()");
+}
+
+/*//HERE
 capitalize notes
 see if a switch() would be useful anywhere
-when changing note mode, change position of the number on selectionElement based on the selected number
+when changing note mode, change position of the number on selectionElement based on the selected nu
 have a numbers page when you click the wrong answers button (number of undos, redos, restarts, total time (saved games), ingame time, etc?)
 */
