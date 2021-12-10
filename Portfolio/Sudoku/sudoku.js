@@ -363,6 +363,7 @@ function note() {
     document.getElementById("selectionElement").style.fontSize = "300%";
   } else if (noteMode == 1) {
     document.getElementById("selectionElement").style.color = "#777777";
+    document.getElementById("selectionElement").style.fontSize = "200%";
 
   } else {
     //clear number label //HERE?
