@@ -16,7 +16,6 @@ function c(c) {
 
 /* Game Creation */
 
-//set difficulty
 function askDifficulty() {
   c("askDifficulty()");
   //beginner 45
@@ -150,7 +149,7 @@ function setGrid() {
     var cell = Math.floor(Math.random()*81);
     if (!tested.includes(cell)) {
       tested.push(cell);
-      //if solvable
+      //is this cell solvable?
       if (isDefaultNumber(cell) || isDefaultCell(cell)) {
         numberTotals[displayCells[cell]-1]++;
         displayCells[cell] = 0;
@@ -359,11 +358,12 @@ function set(id) {
     }
     /* Set As Note */
     else {
+      //if add number or if remove number
       cellElement.style.color = "black";
       var string = "<div class='notesholder'><article id='n1"+cellNumber+"'>1</article><article id='n2"+cellNumber+"'>2</article><article id='n3"+cellNumber+"'>3</article><article id='n4"+cellNumber+"'>4</article><article id='n5"+cellNumber+"'>5</article><article id='n6"+cellNumber+"'>6</article><article id='n7"+cellNumber+"'>7</article><article id='n8"+cellNumber+"'>8</article><article id='n9"+cellNumber+"'>9</article></div>";
       cellElement.innerHTML = string;
       document.getElementById("n1"+cellNumber).style = "top:0;displayCells: inline-block;font-size: 50%;position: absolute;max-height: 33.33%;width: 33.33%;font-weight: 600;";
-      noteModeCells[cellNumber] = 2;
+      noteModeCells[cellNumber].push(2);
       displayCells[cellNumber]=-1;
       c(document.getElementById("n1"+cellNumber));
       //HERE ^^^ HERE HERE
@@ -400,8 +400,8 @@ function autoRemoveNotes() {
   }
 }
 
-function note() {
-  c("note()");
+function updateNoteMode() {
+  c("updateNoteMode()");
   var selectionElement = document.getElementById("selectionElement");
   noteMode++;
   selectionElement.style.padding = 0;
