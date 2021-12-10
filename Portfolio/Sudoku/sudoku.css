@@ -169,7 +169,7 @@ article {
 }
 
 article:nth-child(2) {
-  left: 50%;
+ margin:0 auto;
 }
 article:nth-child(3) {
   right: 0;
