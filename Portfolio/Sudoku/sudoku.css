@@ -159,7 +159,6 @@ button:active {
   height: 100%;
 }
 article {
-  display: inline-block;
   background-color: red;
   font-size: 50%;
   position: absolute;
