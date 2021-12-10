@@ -324,12 +324,15 @@ function set(id) {
         //seperate note mode 1 and 2
         if (noteMode == 1) {
           cellElement.style.color = "#777777";
+          cellElement.style.fontSize = "225%";
           //smaller font size
           //update cells notemode
           noteModeCells[cellNumber] = 1;
+          
         } else {
           //check();
           cellElement.style.color = "black";
+          cellElement.style.fontSize = "300%";
 
           //update cells notemode
           noteModeCells[cellNumber] = 0;
@@ -363,7 +366,7 @@ function note() {
     document.getElementById("selectionElement").style.fontSize = "300%";
   } else if (noteMode == 1) {
     document.getElementById("selectionElement").style.color = "#777777";
-    document.getElementById("selectionElement").style.fontSize = "150%";
+    document.getElementById("selectionElement").style.fontSize = "225%";
 
   } else {
     //clear number label //HERE?
