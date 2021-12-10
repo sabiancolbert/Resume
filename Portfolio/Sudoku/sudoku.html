@@ -177,7 +177,7 @@
       </div>
       <div class="optioncontainer">
         <div class="optionholder">
-          <button onclick="undo()" class="option" id="undo"></button>
+          <button onclick="changeMove(-1)" class="option" id="undo"></button>
         </div>
       </div>
       <div class="optioncontainer" id="selectioncontainer">
@@ -190,7 +190,7 @@
       </div>
       <div class="optioncontainer">
         <div class="optionholder">
-          <button onclick="redo()" class="option" id="redo"></button>
+          <button onclick="changeMove(1)" class="option" id="redo"></button>
         </div>
       </div>
       <div class="optioncontainer">
@@ -256,7 +256,7 @@
     </div>
     <!-- Menu -->
     <!--home,save,auto save,autocheck,auto remove notes,theme,help -> controls, gameplay, strategies
-    -->
+        -->
   </section>
 </body>
 </html>
