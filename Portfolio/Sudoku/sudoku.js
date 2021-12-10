@@ -2,7 +2,7 @@
 var cells = new Array(81);
 var displayCells = new Array();
 var userCells = new Array();
-var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0);
+var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 var noteModeCells = new Array(81);
 var moveList = new Array();
 var difficulty = 40;
@@ -296,7 +296,7 @@ function set(id) {
         }
         /* Update New Cell Number */
         cellElement.innerText = selectionElement.innerText;
-        if (cellElement.innerHTML +1 != 1) {
+        if (cellElement.innerHTML > 0) {
           numberTotals[cellElement.innerHTML - 1]--;
           counterElement.innerHTML = numberTotals[cellElement.innerHTML -1];
         } else {
@@ -307,23 +307,26 @@ function set(id) {
           }
         }
         displayCells[cellNumber] = selectionElement.innerHTML
-        //clear notes
-        //HERE
-        //update move list
+        //Clear Notes
+        //HERE vertical, horizontal and box
+
+        //Update moveList
+//HERE
         //moveList[currentMove] =
         //for (i = currentMove+1; i <
         currentMove++;
-        /* update using note mode 1 or 2 */
+        //Update Note Mode
         if (noteMode == 1) {
           cellElement.style.color = "#777777";
           cellElement.style.fontSize = "125%";
           noteModeCells[cellNumber] = 1;
         } else {
-          //check();
           cellElement.style.color = "black";
           cellElement.style.fontSize = "150%";
           noteModeCells[cellNumber] = 0;
-          autoRemoveNotes();
+          if(check()){
+            autoRemoveNotes();
+          }
         }
       }
     }
@@ -341,11 +344,25 @@ function set(id) {
   }
 }
 
+function check(){
+  var result = true;
+    //if autocheck in settings
+  if(false){
+    //compare displayCells to cells
+    if(true)//HERE
+    {
+      result = false
+}
+  }
+  return result;
+}
+
 function autoRemoveNotes() {
   c("autoRemoveNotes()");
   if (true) {
     //if autoremove notes in settings is on
     //HERE
+//remove horizontal, vertical, and box
   }
 }
 
