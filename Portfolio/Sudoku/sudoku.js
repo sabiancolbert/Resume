@@ -409,7 +409,7 @@ function autoRemoveNotes() {
 
 function note() {
   c("note()");
-  var selectionElementStyle = document.getElementById("selection").style;
+  var selectionElementStyle = document.getElementById("selectionElement").style;
   noteMode++;
   selectionElementStyle.padding = 0;
   /* Regular Number Mode */
