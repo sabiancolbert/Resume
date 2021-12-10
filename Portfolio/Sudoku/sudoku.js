@@ -283,7 +283,7 @@ function select(number) {
   if (noteMode == 2) {
     switch (number) {
       case 1:
-        selectionElement.style.padding = "0 75% 75% 0";
+        selectionElement.style.padding = "0 60% 60% 0";
         break;
       case 2:
         break;
@@ -396,8 +396,10 @@ function autoRemoveNotes() {
     {}
   }
 }
+
 function note() {
   c("note()");
+  var selectionElement = //HERE
   noteMode++;
   /* Regular Number Mode */
   if (noteMode > 2) {
@@ -414,6 +416,8 @@ function note() {
   else {
     document.getElementById("selectionElement").style.color = "black";
     document.getElementById("selectionElement").style.fontSize = "75%";
+  //HERE HERE HERE SET NUMBER POSITION
+    
   }
 }
 
