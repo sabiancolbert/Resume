@@ -157,7 +157,7 @@ button:active {
   position: absolute;
   height: 11%;
   width: 11%;
-  margin-top:-11%;
+  margin-top: 0;
 }
 article {
   visibility: hidden;
@@ -166,6 +166,7 @@ article {
   height: 10%;
   width: 10%;
   font-weight: 600;
+  background-color: red;
 }
 
 article:nth-child(1n) {
