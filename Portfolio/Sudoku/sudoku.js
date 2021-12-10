@@ -194,14 +194,14 @@ function isDefaultNumber(cell) {
 function isDefaultCell(cell) {
   var result = true;
   var emptyCells = new Array();
-  //find empty cells in row
+  /* Find Empty Cells In Row */
   var temp = Math.floor(cell/9)*9;
   for (i = temp; i < temp+9; i++) {
     if (displayCells[i] == 0) {
       emptyCells.push(i);
     }
   }
-  //find empty cells in column
+  /* Find Empty Cells In Column */
   for (i = cell-9; i > -1; i -= 9) {
     if (displayCells[i] == 0) {
       emptyCells.push(i);
@@ -212,7 +212,7 @@ function isDefaultCell(cell) {
       emptyCells.push(i);
     }
   }
-  //find box
+  /* Find Box */
   var adjust = 0;
   temp = cell / 3 +" ";
   if (temp.includes(".6")) {
@@ -226,7 +226,7 @@ function isDefaultCell(cell) {
   }
   temp = Math.floor(temp/9)*9;
   var start = cell + adjust - temp;
-  //find empty cells in box
+  /* Find Empty Cells In Box */
   displayCells[cell]=-1;
   if (displayCells[start] == 0) {
     emptyCells.push(start);
@@ -256,7 +256,7 @@ function isDefaultCell(cell) {
     emptyCells.push(start+20);
   }
   displayCells[cell] = cells[cell];
-  //test empty cells
+  /* Test Empty Cells */
   emptyCells.forEach(option => {
     if (result && !isInVertical(option, displayCells[cell]) && !isInHorizonal(option, displayCells[cell])) {
       result = false;
@@ -286,20 +286,28 @@ function select(number) {
         selectionElement.style.padding = "0 60% 60% 0";
         break;
       case 2:
+        selectionElement.style.padding = "0 0 60% 0";
         break;
       case 3:
+        selectionElement.style.padding = "0 0 60% 60%";
         break;
       case 4:
+        selectionElement.style.padding = "0 0 0 60%";
         break;
       case 5:
+        selectionElement.style.padding = "0 0 0 0";
         break;
       case 6:
+        selectionElement.style.padding = "0 60% 0 0";
         break;
       case 7:
+        selectionElement.style.padding = "60% 60% 0 0";
         break;
       case 8:
+        selectionElement.style.padding = "60% 0 0 0";
         break;
       case 9:
+        selectionElement.style.padding = "60% 0 0 60%";
         break;
     }
   }
@@ -399,25 +407,26 @@ function autoRemoveNotes() {
 
 function note() {
   c("note()");
-  var selectionElement = //HERE
+  var selectionElementStyle = selectionElementStyle;
   noteMode++;
+  selectionElementStyle.padding = 0;
   /* Regular Number Mode */
   if (noteMode > 2) {
     noteMode = 0;
-    document.getElementById("selectionElement").style.fontSize = "300%";
+    .fontSize = "300%";
   }
   /* Grey Note Number Mode */
   else if (noteMode == 1) {
-    document.getElementById("selectionElement").style.color = "#777777";
-    document.getElementById("selectionElement").style.fontSize = "225%";
+    selectionElementStyle.color = "#777777";
+    selectionElementStyle.fontSize = "225%";
 
   }
   /* Note Mode */
   else {
-    document.getElementById("selectionElement").style.color = "black";
-    document.getElementById("selectionElement").style.fontSize = "100%";
+    selectionElementStyle.color = "black";
+    selectionElementStyle.fontSize = "100%";
     //HERE HERE HERE SET NUMBER POSITION
-
+//copy paste
   }
 }
 
