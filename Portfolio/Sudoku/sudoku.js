@@ -392,6 +392,7 @@ function autoRemoveNotes() {
   } else {
     c("false");
     {}
+}
 
     function note() {
       c("note()");
