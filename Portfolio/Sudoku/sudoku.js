@@ -377,8 +377,6 @@ function set(id) {
         document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.visibility = "visible";
         noteModeCells[cellNumber][selectionElement.innerHTML] = selectionElement.innerHTML;
         displayCells[cellNumber]=-1;
-        c(document.getElementById("n1"+cellNumber));
-        //HERE ^^^ HERE HERE
       }
     }
   }
