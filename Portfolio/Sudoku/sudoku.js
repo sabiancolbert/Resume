@@ -426,7 +426,6 @@ function note() {
   else {
     selectionElement.style.color = "black";
     selectionElement.style.fontSize = "100%";
-    c(selectionElement.innerHTML);
     switch (selectionElement.innerHTML) {
       case 1:
         selectionElement.style.padding = "0 60% 60% 0";
