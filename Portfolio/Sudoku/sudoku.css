@@ -174,25 +174,15 @@ article:nth-child(1n) {
 article:nth-child(2n) {
   padding: 0 0 40% 0;
 }
-article:nth-child(3n) {
-  
+article:nth-child(3) {
+  top: 100px;
 }
-article:nth-child(4n) {
-  padding: 0 40% 0 0;
-}
-article:nth-child(5n) {
-  padding: 0 0 0 0;
-}
-article:nth-child(6n) {
-  padding: 0 0 0 40%;
-}
-article:nth-child(7n) {
-  padding: 40% 40% 0 0;
-}
-article:nth-child(8n) {
-  bottom: 0;
-}
-article:nth-child(9n) {
+article:nth-child(4n) {}
+article:nth-child(5n) {}
+article:nth-child(6n) {}
+article:nth-child(7n) {}
+article:nth-child(8n) {}
+article:nth-child(9) {
   bottom: 0;
   right: 0;
   /*padding: 40% 0 0 40%;*/
