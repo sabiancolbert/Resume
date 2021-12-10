@@ -52,7 +52,7 @@ td {
   background-color: #ccccee;
   font-size: 150%;
   border-radius: 20%;
-  text-align:center;
+  text-align: center;
 }
 td:active {
   background-color: #3388dd;
@@ -192,5 +192,6 @@ article:nth-child(8n) {
   padding: 40% 0 0 0;
 }
 article:nth-child(9n) {
-  padding: 40% 0 0 40%;
+  bottom:0;
+  right:0;
 }
