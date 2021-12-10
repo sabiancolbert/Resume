@@ -193,5 +193,5 @@ article:nth-child(8n) {
   bottom: 0;
 }
 article:nth-child(9n) {
-  padding:0;
+  padding: 40% 0 0 40%;
 }
