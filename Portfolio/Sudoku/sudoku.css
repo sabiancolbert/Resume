@@ -170,38 +170,65 @@ article {
 }
 
 article:nth-child(1n) {
-  left: 0;
-  top: 0;
+  
+  padding :0 60% 60% 0;
 }
 article:nth-child(2n) {
-  left: 33.33%;
-  top: 0;
+  
+  padding :0 0 60% 0;
 }
 article:nth-child(3n) {
-  left: 66.66%;
-  top: 0;
+  
+  padding :0 0 60% 60%;
 }
 article:nth-child(4n) {
-  top: 33.33%;
-  left: 0;
+  
+  padding :0 60% 0 0;
 }
 article:nth-child(5n) {
-  top: 33.33%;
-  left: 33.33%;
+  padding :0 0 0 0;
+  
 }
 article:nth-child(6n) {
-  top: 33.33%;
-  left: 66.66%;
+  padding :0 0 0 60%;
+  
 }
 article:nth-child(7n) {
-  top: 66.66%;
-  left: 0;
+  
+  padding :60% 60% 0 0;
 }
 article:nth-child(8n) {
-  top: 66.66%;
-  left: 33.33%;
+  
+  padding :60% 0 0 0;
 }
 article:nth-child(9n) {
-  top: 66.66%;
-  left: 66.66%;
+  padding :60% 0 0 60%;
 }
+number) {
+      case 1:
+        selectionElement.style.padding = "";
+        break;
+      case 2:
+        selectionElement.style.padding = "";
+        break;
+      case 3:
+        selectionElement.style.padding = "";
+        break;
+      case 4:
+        selectionElement.style.padding = "";
+        break;
+      case 5:
+        selectionElement.style.padding = "0";
+        break;
+      case 6:
+        selectionElement.style.padding = "";
+        break;
+      case 7:
+        selectionElement.style.padding = ";
+        break;
+      case 8:
+        selectionElement.style.padding = "60% 0 0 0";
+        break;
+      case 9:
+        selectionElement.style.padding = "%";
+        break;
