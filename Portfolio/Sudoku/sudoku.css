@@ -157,7 +157,7 @@ button:active {
   position: absolute;
   height: 11%;
   width: 11%;
-  margin-top: 0;
+  margin-top: -25%;
 }
 article {
   visibility: hidden;
