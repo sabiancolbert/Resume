@@ -189,10 +189,10 @@ article:nth-child(7n) {
   padding: 40% 40% 0 0;
 }
 article:nth-child(8n) {
-  padding: 40% 0 0 0;
+  bottom:-5px;
+  
 }
 article:nth-child(9n) {
   bottom: -5px;
   right: 5px;
-  background-color: red;
 }
