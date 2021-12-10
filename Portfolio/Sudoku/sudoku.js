@@ -11,6 +11,9 @@ var difficulty = 40;
 var currentCell = 0;
 var noteMode = 0;
 
+var selectionElement = document.getElementById("selectionElement");
+//HERE
+
 function c(c) {
   console.log(c);
 }
@@ -314,7 +317,8 @@ function select(number) {
   }
 }
 
-function set(id, useSelection=true) {//HERE
+function set(id, useSelection = true) {
+  //HERE
   c("set("+id+")");
   var cellElement = document.getElementById(id);
   var cellNumber = id.substring(1, id.length) * 1;
@@ -474,7 +478,7 @@ function changeMove(direction) {
   if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < lastMove) {
     currentMove += direction;
     var move = moveList[currentMove];
-    set(move[1], false);//HERE
+    set(move[1], false); //HERE
     /*moveList.push(move);
     numberTotals[move[1].innerHTML]++;
     if(selectionElement.innerHTML==move[1].innerHTML){
@@ -494,7 +498,8 @@ function changeMove(direction) {
     {
       counterElement.innerHTML=numberTotals[move[2]];
     }
-  */}
+  */
+  }
 }
 
 function restart() {
