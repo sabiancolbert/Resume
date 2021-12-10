@@ -161,8 +161,8 @@ button:active {
 article {
   font-size: 50%;
   position: absolute;
-  max-height: 100%;
-  width: 100%;
+  max-height: auto;
+  width: auto;
   font-weight: 600;
 }
 
