@@ -309,7 +309,6 @@ function select(number) {
       case 9:
         selectionElement.style.padding = "60% 0 0 60%";
         break;
-      //HERE HERE HERE DO THIS FOR THE GRID TOO
     }
   }
 }
@@ -427,6 +426,7 @@ function note() {
   else {
     selectionElement.style.color = "black";
     selectionElement.style.fontSize = "100%";
+    c(selectionElement.innerHTML);
     switch (selectionElement.innerHTML) {
       case 1:
         selectionElement.style.padding = "0 60% 60% 0";
