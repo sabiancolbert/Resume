@@ -286,7 +286,6 @@ function set(id) {
   var cellNumber = id.substring(1, id.length) * 1;
   var selectionElement = document.getElementById("selectionElement");
   var counterElement = document.getElementById("counterElement");
-  //if user-available cell
   if (userCells.includes(cellNumber)) {
     /* Set As Number */
     if (noteMode != 2) {
@@ -349,29 +348,33 @@ function set(id) {
   }
 }
 
-function autoRemoveNotes(){
+function autoRemoveNotes() {
   c("autoRemoveNotes()");
-  if(true){//if autoremove notes in settings is on
-  //HERE
+  if (true) {
+    //if autoremove notes in settings is on
+    //HERE
   }
 }
 
 function note() {
   c("note()");
   noteMode++;
-  if (noteMode == 3) {
+  /* Regular Number Mode */
+  if (noteMode > 2) {
     noteMode = 0;
     document.getElementById("selectionElement").style.fontSize = "300%";
-  } else if (noteMode == 1) {
+  } 
+  /* Grey Note Number Mode */
+  else if (noteMode == 1) {
     document.getElementById("selectionElement").style.color = "#777777";
     document.getElementById("selectionElement").style.fontSize = "225%";
 
-  } else {
-    //clear number label //HERE?
+  }
+  /* Note Mode */
+  else {
     document.getElementById("selectionElement").style.color = "black";
     document.getElementById("selectionElement").style.fontSize = "75%";
   }
-  //HERE set style of selectionElement
 }
 
 function undo() {
