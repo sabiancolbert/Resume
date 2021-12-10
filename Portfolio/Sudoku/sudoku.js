@@ -371,7 +371,7 @@ function set(id) {
         c("set - add number to cell");
         cellElement.innerHTML = "<div class='notesholder'><article id='n1"+cellNumber+"'>1</article><article id='n2"+cellNumber+"'>2</article><article id='n3"+cellNumber+"'>3</article><article id='n4"+cellNumber+"'>4</article><article id='n5"+cellNumber+"'>5</article><article id='n6"+cellNumber+"'>6</article><article id='n7"+cellNumber+"'>7</article><article id='n8"+cellNumber+"'>8</article><article id='n9"+cellNumber+"'>9</article></div>";
         cellElement.style.color = "black";
-        document.getElementById("n1"+cellNumber).style.visibility = "visible";
+        document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.visibility = "visible";
         noteModeCells[cellNumber][selectionElement.innerHTML] = selectionElement.innerHTML;
         displayCells[cellNumber]=-1;
         c(document.getElementById("n1"+cellNumber));
