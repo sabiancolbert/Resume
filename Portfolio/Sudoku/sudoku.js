@@ -313,6 +313,7 @@ function select(number) {
     }
   }
 }
+
 function set(id) {
   c("set("+id+")");
   var cellElement = document.getElementById(id);
@@ -408,7 +409,7 @@ function autoRemoveNotes() {
 
 function note() {
   c("note()");
-  var selectionElementStyle = selectionElementStyle;
+  var selectionElementStyle = document.getElementById("selection").style;
   noteMode++;
   selectionElementStyle.padding = 0;
   /* Regular Number Mode */
