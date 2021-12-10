@@ -324,15 +324,14 @@ function set(id) {
         //seperate note mode 1 and 2
         if (noteMode == 1) {
           cellElement.style.color = "#777777";
-          cellElement.style.fontSize = "225%";
+          cellElement.style.fontSize = "80%";
           //smaller font size
           //update cells notemode
           noteModeCells[cellNumber] = 1;
-          
         } else {
           //check();
           cellElement.style.color = "black";
-          cellElement.style.fontSize = "300%";
+          cellElement.style.fontSize = "150%";
 
           //update cells notemode
           noteModeCells[cellNumber] = 0;
@@ -395,4 +394,5 @@ function menu() {
 capitalize notes
 when changing note mode, change position of the number on selectionElement based on the selected number
 have a numbers page when you click the wrong answers button (number of undos, redos, restarts, total time (saved games), ingame time, etc?)
+*/ve a numbers page when you click the wrong answers button (number of undos, redos, restarts, total time (saved games), ingame time, etc?)
 */
