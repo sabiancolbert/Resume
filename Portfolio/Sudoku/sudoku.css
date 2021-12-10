@@ -20,6 +20,9 @@ p {
 bold {
   font-weight: 1000;
 }
+div{
+  margin:0;
+}
 /* Game Board */
 #gridcontainer {
   position: relative;
