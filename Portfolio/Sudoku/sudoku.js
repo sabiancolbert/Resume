@@ -172,6 +172,7 @@ function setGrid() {
   /* Prep */
   for (i = 0; i < 81; i++) {
     noteModeCells.push([]);
+    noteModeCells[i].push(-1);
   }
   select(1);
 }
