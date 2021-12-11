@@ -164,6 +164,7 @@ article {
   visibility: hidden;
   font-size: 50%;
   font-weight: 600;
+  height:100%;
 }
 
 article:nth-child(1) {}
