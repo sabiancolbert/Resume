@@ -153,8 +153,8 @@ button:active {
 /* Notes */
 .notesholder {
   position: absolute;
-  
-  width: 10%;
+
+  width: 9.9%;
   background-color: green;
   line-height: 0;
   height: 100%;
