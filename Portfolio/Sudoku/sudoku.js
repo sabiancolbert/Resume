@@ -274,6 +274,7 @@ function select(number) {
   c("select("+number+")")
   //dont clear highlight, for visually easier erasing
   if (number != 0) {
+    c(counterElement);
     counterElement.innerHTML = numberTotals[number-1];
     selectionElement.innerHTML = number;
     //HERE change highlight
