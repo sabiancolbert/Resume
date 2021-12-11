@@ -23,11 +23,11 @@ bold {
 /* Game Board */
 #gridContainer {
   position: relative;
-  width: 100%;
+  width: 99%;
   padding-top: 100%;
   background-color: #222222;
-  border: 5px solid #3388dd;
-  border-radius: 5px;
+  border: 1% solid #3388dd;
+  border-radius: 1%;
 }
 #gridHolder {
   position: absolute;
