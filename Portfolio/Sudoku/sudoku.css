@@ -154,7 +154,8 @@ button:active {
 .notesholder {
   position: absolute;
   margin-left: -11.11%;
-  width: inherit;
+  width: 33.33%;
+  background-color: green;
   line-height: 0;
 }
 article {
@@ -164,7 +165,6 @@ article {
 }
 
 article:nth-child(1) {
-  padding: 0 20% 20% 0;
 }
 article:nth-child(2) {}
 article:nth-child(3) {}
@@ -174,5 +174,4 @@ article:nth-child(6) {}
 article:nth-child(7) {}
 article:nth-child(8) {}
 article:nth-child(9) {
-  padding: 10% 0 0 20%;
 }
