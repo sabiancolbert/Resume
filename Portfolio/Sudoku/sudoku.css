@@ -155,7 +155,7 @@ button:active {
   position: absolute;
   margin-top: -4.8%;
   width: 9.7%;
-  height: 3%;
+  max-height: 11%;
   background-color: green;
   line-height: 0;
   height: 100%;
