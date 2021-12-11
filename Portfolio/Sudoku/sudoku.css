@@ -30,7 +30,7 @@ bold {
   border-style: solid;
   border-color: #3388dd;
   border-radius: 3%;
-  border: 10%;
+  border: 1vw;
 }
 #gridHolder {
   position: absolute;
