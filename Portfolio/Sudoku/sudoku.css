@@ -3,7 +3,7 @@ body {
   background-color: #222222;
   user-select: none;
   text-align: center;
-  color:white;
+  color: white;
 }
 @media screen and (orientation: landscape) {
   section {
@@ -37,7 +37,7 @@ bold {
   right: 0;
   left: 0;
   bottom: 0;
-  padding: 5px;
+  padding: 3%;
 }
 table {
   height: 100%;
