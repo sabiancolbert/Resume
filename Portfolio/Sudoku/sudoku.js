@@ -10,9 +10,8 @@ var lastMove = 0;
 var difficulty = 40;
 var currentCell = 0;
 var noteMode = 0;
-
 var selectionElement = document.getElementById("selectionElement");
-//HERE
+var counterElement = document.getElementById("counterElement");
 
 function c(c) {
   console.log(c);
@@ -273,8 +272,6 @@ function isDefaultCell(cell) {
 
 function select(number) {
   c("select("+number+")")
-  var selectionElement = document.getElementById("selectionElement");
-  var counterElement = document.getElementById("counterElement");
   //dont clear highlight, for visually easier erasing
   if (number != 0) {
     counterElement.innerHTML = numberTotals[number-1];
@@ -322,8 +319,6 @@ function set(id, useSelection = true) {
   c("set("+id+")");
   var cellElement = document.getElementById(id);
   var cellNumber = id.substring(1, id.length) * 1;
-  var selectionElement = document.getElementById("selectionElement");
-  var counterElement = document.getElementById("counterElement");
   if (userCells.includes(cellNumber)) {
     moveList.push([noteMode, cellElement.id, cellElement.innerHTML])
     lastMove++;
@@ -424,7 +419,6 @@ function autoRemoveNotes() {
 
 function updateNoteMode() {
   c("updateNoteMode()");
-  var selectionElement = document.getElementById("selectionElement");
   noteMode++;
   selectionElement.style.padding = 0;
   /* Regular Number Mode */
