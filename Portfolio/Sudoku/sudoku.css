@@ -170,7 +170,8 @@ button:active {
   background-color: red;
 }
 p {
-
+  position: absolute;
+  background-color: blue;
   font-size: 50%;
 }
 p:nth-child(1) {}
