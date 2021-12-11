@@ -1,9 +1,8 @@
 /* Misc */
 body {
   background-color: #222222;
-  color: white;
   user-select: none;
-  text-align: center;
+
 }
 @media screen and (orientation: landscape) {
   section {
