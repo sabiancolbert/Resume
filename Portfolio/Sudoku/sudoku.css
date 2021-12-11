@@ -4,6 +4,7 @@ body {
   user-select: none;
   text-align: center;
   color: white;
+  margin:0;
 }
 @media screen and (orientation: landscape) {
   section {
