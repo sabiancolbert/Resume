@@ -11,7 +11,7 @@ body {
   }
 }
 #portraitWarning {
-  top: 1%;
+  top: 10%;
   font-size: 300%;
   position: absolute;
   color: white;
