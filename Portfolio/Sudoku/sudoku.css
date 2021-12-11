@@ -168,9 +168,10 @@ button:active {
   height: 100%;
   text-align: center;
   background-color: red;
+  line-height: 0;
 }
 p {
-  
+
   font-size: 50%;
 }
 p:nth-child(1) {}
