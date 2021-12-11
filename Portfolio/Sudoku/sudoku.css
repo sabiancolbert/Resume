@@ -3,6 +3,7 @@ body {
   background-color: #222222;
   user-select: none;
   text-align: center;
+  color:white;
 }
 @media screen and (orientation: landscape) {
   section {
