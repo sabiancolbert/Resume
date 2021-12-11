@@ -167,14 +167,13 @@ button:active {
   height: 100%;
   text-align: center;
   background-color: red;
-  line-height:0;
 }
 p {
   visibility: hidden;
   position: relative;
   background-color: blue;
   font-size: 50%;
-  margin-top:3%;
+  margin-top: 3%;
 }
 p:nth-child(1) {}
 p:nth-child(2) {}
