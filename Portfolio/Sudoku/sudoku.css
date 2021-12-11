@@ -163,7 +163,9 @@ article {
   font-weight: 600;
 }
 
-article:nth-child(1) {}
+article:nth-child(1) {
+  padding:0 20% 10% 0;
+}
 article:nth-child(2) {}
 article:nth-child(3) {}
 article:nth-child(4) {}
