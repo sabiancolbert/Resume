@@ -10,8 +10,7 @@ var lastMove = 0;
 var difficulty = 40;
 var currentCell = 0;
 var noteMode = 0;
-var selectionElement = document.getElementById("selectionElement");
-var counterElement = document.getElementById("counterElement");
+var selectionElement, counterElement;
 
 function c(c) {
   console.log(c);
@@ -21,6 +20,9 @@ function c(c) {
 
 function askDifficulty() {
   c("askDifficulty()");
+  selectionElement = document.getElementById("selectionElement");
+  counterElement = document.getElementById("counterElement");
+
   //beginner 45
   //easy 40
   //med 35
