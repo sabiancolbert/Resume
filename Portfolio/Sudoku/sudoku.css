@@ -173,7 +173,7 @@ p {
   position: relative;
   background-color: blue;
   font-size: 50%;
-  margin-top: 60%;
+  margin-top: 50%;
 }
 p:nth-child(1) {}
 p:nth-child(2) {}
