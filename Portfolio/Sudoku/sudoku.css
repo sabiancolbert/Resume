@@ -51,6 +51,7 @@ td {
   background-color: #ccccee;
   font-size: 150%;
   border-radius: 20%;
+  position: absolute;
 }
 td:active {
   background-color: #3388dd;
@@ -157,7 +158,7 @@ button:active {
   width: 33.33%;
   background-color: green;
   line-height: 0;
-  height:100%
+  height: 100%
 }
 article {
   visibility: hidden;
