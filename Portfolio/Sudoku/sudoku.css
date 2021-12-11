@@ -16,6 +16,7 @@ body {
   position: absolute;
   color: white;
   z-index: -1;
+  left:-20%;
 }
 bold {
   font-weight: 1000;
