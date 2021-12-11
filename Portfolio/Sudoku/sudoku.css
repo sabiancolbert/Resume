@@ -162,7 +162,6 @@ button:active {
 }
 .notesHolder {
   position: absolute;
-  visibility: hidden;
   font-size: 50%;
   font-weight: 600;
   height: 100%;
@@ -170,6 +169,7 @@ button:active {
   background-color: red;
 }
 p {
+  visibility: hidden;
   position: absolute;
   background-color: blue;
   font-size: 50%;
