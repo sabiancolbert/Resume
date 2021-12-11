@@ -14,8 +14,8 @@
   </label>
   <section>
     <!-- Sudoku Grid -->
-    <div id="gridcontainer">
-      <div id="gridholder">
+    <div id="gridContainer">
+      <div id="gridHolder">
         <table>
           <tr>
             <td onclick="set('c0');" id="c0"></td>
@@ -169,32 +169,32 @@
     <br>
     <br>
     <!-- Number Pad -->
-    <div id="buttoncontainer">
-      <div class="optioncontainer">
-        <div class="optionholder">
+    <div id="buttonContainer">
+      <div class="optionContainer">
+        <div class="optionHolder">
           <button onclick="menu()" class="option" id="menu"></button>
         </div>
       </div>
-      <div class="optioncontainer">
-        <div class="optionholder">
+      <div class="optionContainer">
+        <div class="optionHolder">
           <button onclick="changeMove(-1)" class="option" id="undo"></button>
         </div>
       </div>
-      <div class="optioncontainer" id="selectioncontainer">
-        <div class="optionholder">
+      <div class="optionContainer" id="selectionContainer">
+        <div class="optionHolder">
           <button onclick="updateNoteMode()" id="selectionElement"></button>
           <div id="labelHolder">
             <label id="counterElement"> </label>
           </div>
         </div>
       </div>
-      <div class="optioncontainer">
-        <div class="optionholder">
+      <div class="optionContainer">
+        <div class="optionHolder">
           <button onclick="changeMove(1)" class="option" id="redo"></button>
         </div>
       </div>
-      <div class="optioncontainer">
-        <div class="optionholder">
+      <div class="optionContainer">
+        <div class="optionHolder">
           <button onclick="restart()" class="option" id="restart"></button>
         </div>
       </div>
@@ -202,61 +202,61 @@
       <br>
       <br>
       <!-- Numbers -->
-      <div class="optioncontainer">
-        <div class="optionholder">
+      <div class="optionContainer">
+        <div class="optionHolder">
           <button onclick="select(1)">1</button>
         </div>
       </div>
-      <div class="optioncontainer">
-        <div class="optionholder">
+      <div class="optionContainer">
+        <div class="optionHolder">
           <button onclick="select(2)">2</button>
         </div>
       </div>
-      <div class="optioncontainer">
-        <div class="optionholder">
+      <div class="optionContainer">
+        <div class="optionHolder">
           <button onclick="select(3)">3</button>
         </div>
       </div>
-      <div class="optioncontainer">
-        <div class="optionholder">
+      <div class="optionContainer">
+        <div class="optionHolder">
           <button onclick="select(4)">4</button>
         </div>
       </div>
-      <div class="optioncontainer">
-        <div class="optionholder">
+      <div class="optionContainer">
+        <div class="optionHolder">
           <button onclick="select(5)">5</button>
         </div>
       </div>
       <br>
-      <div class="optioncontainer">
-        <div class="optionholder">
+      <div class="optionContainer">
+        <div class="optionHolder">
           <button onclick="select(6)">6</button>
         </div>
       </div>
-      <div class="optioncontainer">
-        <div class="optionholder">
+      <div class="optionContainer">
+        <div class="optionHolder">
           <button onclick="select(7)">7</button>
         </div>
       </div>
-      <div class="optioncontainer">
-        <div class="optionholder">
+      <div class="optionContainer">
+        <div class="optionHolder">
           <button onclick="select(8)">8</button>
         </div>
       </div>
-      <div class="optioncontainer">
-        <div class="optionholder">
+      <div class="optionContainer">
+        <div class="optionHolder">
           <button onclick="select(9)">9</button>
         </div>
       </div>
-      <div class="optioncontainer">
-        <div class="optionholder">
+      <div class="optionContainer">
+        <div class="optionHolder">
           <button onclick="select('0')" id="eraser"> </button>
         </div>
       </div>
     </div>
     <!-- Menu -->
     <!--home,save,auto save,autocheck,auto remove notes,theme,help -> controls, gameplay, strategies
-                            -->
+                                -->
   </section>
 </body>
 </html>
