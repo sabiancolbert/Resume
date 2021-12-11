@@ -157,6 +157,7 @@ button:active {
   width: 33.33%;
   background-color: green;
   line-height: 0;
+  height:100%
 }
 article {
   visibility: hidden;
@@ -164,8 +165,7 @@ article {
   font-weight: 600;
 }
 
-article:nth-child(1) {
-}
+article:nth-child(1) {}
 article:nth-child(2) {}
 article:nth-child(3) {}
 article:nth-child(4) {}
@@ -173,5 +173,4 @@ article:nth-child(5) {}
 article:nth-child(6) {}
 article:nth-child(7) {}
 article:nth-child(8) {}
-article:nth-child(9) {
-}
+article:nth-child(9) {}
