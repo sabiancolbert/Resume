@@ -374,7 +374,7 @@ function set(id, useSelection = true) {
       /* Add Number To Cell */
       else {
         if (displayCells[cellNumber] !=-1) {
-          cellElement.innerHTML = "<div class='notesContainer'><div class='noteHolder'><p id='n1"+cellNumber+"'>1</p></div><div class='noteHolder'><p id='n2"+cellNumber+"'>2</p></div><div class='noteHolder'><p id='n3"+cellNumber+"'>3</p></div><div class='noteHolder'><p id='n4"+cellNumber+"'>4</p></div><div class='noteHolder'><p id='n5"+cellNumber+"'>5</p></div><div class='noteHolder'><p id='n6"+cellNumber+"'>6</p></div><div class='noteHolder><p id='n7"+cellNumber+"'>7</p></div><div class='noteHolder'><p id='n8"+cellNumber+"'>8</p></div><div class='noteHolder'><p id='n9"+cellNumber+"'>9</p></div></div>";
+          cellElement.innerHTML = "&";// "<div class='notesContainer'><div class='noteHolder'><p id='n1"+cellNumber+"'>1</p></div><div class='noteHolder'><p id='n2"+cellNumber+"'>2</p></div><div class='noteHolder'><p id='n3"+cellNumber+"'>3</p></div><div class='noteHolder'><p id='n4"+cellNumber+"'>4</p></div><div class='noteHolder'><p id='n5"+cellNumber+"'>5</p></div><div class='noteHolder'><p id='n6"+cellNumber+"'>6</p></div><div class='noteHolder><p id='n7"+cellNumber+"'>7</p></div><div class='noteHolder'><p id='n8"+cellNumber+"'>8</p></div><div class='noteHolder'><p id='n9"+cellNumber+"'>9</p></div></div>";
         }
         c("set - add number to cell");
         cellElement.style.color = "black";
