@@ -24,7 +24,7 @@ bold {
 /* Game Board */
 #gridContainer {
   position: relative;
-  
+left:0;
   top: 1%;
   width: 100%;
   padding-top: 100%;
