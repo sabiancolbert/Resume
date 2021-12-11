@@ -374,7 +374,7 @@ function set(id, useSelection = true) {
       /* Add Number To Cell */
       else {
         if (displayCells[cellNumber] !=-1) {
-          cellElement.innerHTML = "<div class='notesholder'><article id='n1"+cellNumber+"'>1</article><article id='n2"+cellNumber+"'>2</article><article id='n3"+cellNumber+"'>3</article><article id='n4"+cellNumber+"'>4</article><article id='n5"+cellNumber+"'>5</article><article id='n6"+cellNumber+"'>6</article><article id='n7"+cellNumber+"'>7</article><article id='n8"+cellNumber+"'>8</article><article id='n9"+cellNumber+"'>9</article></div>";
+          cellElement.innerHTML = "<div class='notesholder'><article id='n1"+cellNumber+"'><p>1</p></article><article id='n2"+cellNumber+"'><p>2</p></article><article id='n3"+cellNumber+"'><p>3</p></article><article id='n4"+cellNumber+"'><p>4</p></article><article id='n5"+cellNumber+"'><p>5</p></article><article id='n6"+cellNumber+"'><p>6</p></article><article id='n7"+cellNumber+"'><p>7</p></article><article id='n8"+cellNumber+"'><p>8</p></article><article id='n9"+cellNumber+"'><p>9</p></article></div>";
         }
         c("set - add number to cell");
         cellElement.style.color = "black";
