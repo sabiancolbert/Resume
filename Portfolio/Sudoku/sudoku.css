@@ -10,7 +10,7 @@ body {
     visibility: hidden;
   }
 }
-p {
+#portraitWarning {
   top: 10px;
   font-size: 70px;
   position: absolute;
@@ -151,7 +151,7 @@ button:active {
   background-color: #1050aa;
 }
 /* Notes */
-.notesholder {
+.notescontainer {
   position: absolute;
   margin-top: -4.8%;
   width: 9.7%;
@@ -160,7 +160,7 @@ button:active {
   height: 100%;
   line-height: 160%;
 }
-article {
+.notesholder {
   position: absolute;
   visibility: hidden;
   font-size: 50%;
@@ -168,13 +168,13 @@ article {
   height: 100%;
   text-align: center;
 }
-
-article:nth-child(1) {}
-article:nth-child(2) {}
-article:nth-child(3) {}
-article:nth-child(4) {}
-article:nth-child(5) {}
-article:nth-child(6) {}
-article:nth-child(7) {}
-article:nth-child(8) {}
-article:nth-child(9) {}
+p{background-color:blue;}
+p:nth-child(1) {}
+p:nth-child(2) {}
+p:nth-child(3) {}
+p:nth-child(4) {}
+p:nth-child(5) {}
+p:nth-child(6) {}
+p:nth-child(7) {}
+p:nth-child(8) {}
+p:nth-child(9) {}
