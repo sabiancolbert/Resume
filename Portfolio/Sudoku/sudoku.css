@@ -26,8 +26,10 @@ bold {
   width: 98%;
   padding-top: 100%;
   background-color: #222222;
-  border: 1% solid #3388dd;
- 
+  border-style: solid;
+  border-color:#3388dd;
+border-width: 1%;
+
 }
 #gridHolder {
   position: absolute;
