@@ -51,7 +51,6 @@ td {
   background-color: #ccccee;
   font-size: 150%;
   border-radius: 20%;
-  line-height: 0;
 }
 td:active {
   background-color: #3388dd;
@@ -169,10 +168,9 @@ button:active {
   height: 100%;
   text-align: center;
   background-color: red;
-  line-height: 0;
 }
 p {
-
+position:absolute;
   font-size: 50%;
 }
 p:nth-child(1) {}
