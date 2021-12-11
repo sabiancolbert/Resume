@@ -21,7 +21,7 @@ bold {
   font-weight: 1000;
 }
 /* Game Board */
-#gridcontainer {
+#gridContainer {
   position: relative;
   left: -5px;
   top: -5px;
@@ -31,7 +31,7 @@ bold {
   border: 5px solid #3388dd;
   border-radius: 5px;
 }
-#gridholder {
+#gridHolder {
   position: absolute;
   top: 0;
   right: 0;
@@ -56,17 +56,17 @@ td:active {
   background-color: #3388dd;
 }
 /* Buttons */
-#buttoncontainer {
+#buttonContainer {
   width: 100%;
 }
-.optioncontainer {
+.optionContainer {
   display: inline-block;
   position: relative;
   margin: auto;
   width: 17%;
   padding-top: 17%;
 }
-.optionholder {
+.optionHolder {
   top: 0;
   right: 0;
   left: 0;
@@ -79,7 +79,7 @@ td:active {
   bottom: 0;
   margin-top: 20%;
 }
-#selectioncontainer {
+#selectionContainer {
   padding-top: 18%;
   width: 18%
 }
@@ -92,7 +92,7 @@ td:active {
 #selection:active {
   background-color: #3388dd;
 }
-#labelcontainer {
+#labelContainer {
   position: absolute;
   color: black;
   width: 100%;
@@ -151,7 +151,7 @@ button:active {
   background-color: #1050aa;
 }
 /* Notes */
-.notescontainer {
+.notesContainer {
   position: absolute;
   margin-top: -4.8%;
   width: 9.7%;
@@ -160,7 +160,7 @@ button:active {
   height: 100%;
   line-height: 160%;
 }
-.notesholder {
+.notesHolder {
   position: absolute;
   visibility: hidden;
   font-size: 50%;
@@ -168,7 +168,9 @@ button:active {
   height: 100%;
   text-align: center;
 }
-p{background-color:blue;}
+p {
+  background-color: blue;
+}
 p:nth-child(1) {}
 p:nth-child(2) {}
 p:nth-child(3) {}
