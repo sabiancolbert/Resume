@@ -174,13 +174,13 @@ p {
   border: 1px solid blue;
 }
 .p1, .p4, .p7 {
-  padding-right: 100%;
+  right: 33%;
 }
 .p3, .p6, .p9 {
-  left:33%;
+  left: 33%;
 }
 div[name="h1"], div[name="h2"], div[name="h3"] {
-  top: -33%;
+  bottom: 33%;
 }
 div[name="h7"], div[name="h8"], div[name="h9"] {
   top: 33%;
