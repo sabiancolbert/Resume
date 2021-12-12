@@ -152,8 +152,8 @@ function setGrid() {
   var stop = 81 - Math.floor(Math.random()*5+difficulty);
   while (stop > 0 && tested.length < 81) {
     var cellNumber = Math.floor(Math.random()*81);
-    if (!tested.includes(cell)) {
-      tested.push(cell);
+    if (!tested.includes(cellNumber)) {
+      tested.push(cellNumber);
       //is this cell solvable?
       if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber)) {
         numberTotals[displayCells[cellNumber]]++;
