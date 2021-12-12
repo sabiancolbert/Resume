@@ -177,7 +177,7 @@ p {
   padding-right: 100%;
 }
 .p3, .p6, .p9 {
-  right:0;
+  left:33%;
 }
 div[name="h1"], div[name="h2"], div[name="h3"] {
   top: -33%;
