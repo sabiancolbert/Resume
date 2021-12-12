@@ -160,22 +160,19 @@ button:active {
   height: 100%;
 }
 
-/*
 .noteHolder {
   position: absolute;
-  font-size: 5px;
-  height: 5px;
+  height: 100%;
+  width:100%;
   text-align: center;
   background-color: red;
-}*/
+}
 p {
   font-weight: 600;
   visibility: hidden;
   position: absolute;
   background-color: blue;
   font-size: 50%;
-  width: 100%;
-  height:100%;
 }
 p:nth-child(1) {
   margin-bottom: 50%;
