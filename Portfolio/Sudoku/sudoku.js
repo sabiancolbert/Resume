@@ -154,6 +154,7 @@ function setGrid() {
     var cellNumber = Math.floor(Math.random()*81);
     if (!tested.includes(cellNumber)) {
       tested.push(cellNumber);
+      tested.push(cellNumber);
       //is this cell solvable?
       if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber)) {
         numberTotals[displayCells[cellNumber]]++;
@@ -317,14 +318,10 @@ function select(number) {
 }
 
 function set(id, useSelection = true) {
-  //HERE
   c("set("+id+")");
   var cellElement = document.getElementById(id);
   var cellNumber = id.substring(1, id.length) * 1;
   if (userCells.includes(cellNumber)) {
-    moveList.push([noteMode, cellElement.id, cellElement.innerHTML])
-    lastMove++;
-    currentMove = lastMove;
     /* Update Old Number */
     if (cellElement.innerHTML - 0 > 0 && noteCells[cellNumber] == []) {
       numberTotals[cellElement.innerHTML]++;
@@ -359,6 +356,7 @@ function set(id, useSelection = true) {
     else {
       c("set - add number to cell");
       if (displayCells[cellNumber] != selectionElement.innerHTML || noteMode != noteCells[cellNumber]) {
+        displayCells[cellNumber]= selectionElement.innerHTML;
         cellElement.innerText = selectionElement.innerText;
         numberTotals[cellElement.innerHTML - 1]--;
         counterElement.innerHTML = numberTotals[cellElement.innerHTML];
@@ -377,6 +375,10 @@ function set(id, useSelection = true) {
         }
       }
     }
+    /* Update Move List */
+    moveList.push([noteMode, cellElement.id, cellElement.innerHTML])
+    lastMove++;
+    currentMove = lastMove;
   }
 }
 
