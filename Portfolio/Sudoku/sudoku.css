@@ -177,9 +177,12 @@ p {
   padding-right: 100%;
 }
 div[name="h1"] {
-  top:-33%;
+  top: -33%;
 }
 .p2 {}
+div[name="h2"]{
+  top:-33%;
+}
 .p3 {}
 .p4 {}
 .p5 {}
