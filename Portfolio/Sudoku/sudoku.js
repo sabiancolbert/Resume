@@ -351,7 +351,7 @@ function set(id, useSelection = true) {
         noteCells[cellNumber][selectionElement.innerHTML] = selectionElement.innerHTML;
         displayCells[cellNumber]=-1;
         cellElement.style.color = "black";
-        cellElement.style.fontSize = "150%";
+        cellElement.style.fontSize = "100%";
       }
     }
     /* Regular Number */
