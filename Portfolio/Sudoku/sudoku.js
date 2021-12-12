@@ -281,6 +281,7 @@ function select(number) {
     selectionElement.innerHTML = number;
     //set grid highlight
     displayCells.forEach(displayNumber => {
+      c(number +"$"+displayNumber);
       if (number != displayNumber) {
         document.getElementById("c"+cellNumber).backgroundColor = "#cceeee";
       } else {
