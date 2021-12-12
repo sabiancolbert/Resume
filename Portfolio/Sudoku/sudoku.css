@@ -166,16 +166,16 @@ bottom:0;
   line-height: 0;
 }
 .noteHolder {
-  position: relative;
+  position: absolute;
   font-size: 5px;
   height: 5px;
   text-align: center;
   background-color: red;
-}
+}*/
 p {
   font-weight: 600;
   visibility: hidden;
-  position: relative;
+  position: absolute;
   background-color: blue;
   font-size: 50%;
 }*/
