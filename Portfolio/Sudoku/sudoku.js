@@ -342,13 +342,13 @@ function set(id, useSelection = true) {
     }
     /* Note Number */
     else if (noteMode == 2) {
-      /* Remove Number From Cell */
+      /* Remove Note From Cell */
       if (noteCells[cellNumber][selectionElement.innerHTML] > 0) {
         c("set - remove note from cell");
         document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.visibility = "hidden";
         noteCells[cellNumber][selectionElement.innerHTML] = 0;
       }
-      /* Add Number To Cell */
+      /* Add Note To Cell */
       else {
         c("set - add note to cell");
         if (displayCells[cellNumber] !=-1) {
