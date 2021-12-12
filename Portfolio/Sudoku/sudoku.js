@@ -364,6 +364,7 @@ function set(id, useSelection = true) {
         noteCells[cellNumber][selectionElement.innerHTML] = selectionElement.innerHTML;
         displayCells[cellNumber]=-1;
         cellElement.style.color = "black";
+        cellElement.style.backgroundColor = "#ccccee";
         cellElement.style.fontSize = "75%";
       }
     }
