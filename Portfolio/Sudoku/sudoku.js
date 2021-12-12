@@ -279,12 +279,17 @@ function select(number) {
   if (number != 0) {
     counterElement.innerHTML = numberTotals[number];
     selectionElement.innerHTML = number;
-    //set grid highlight
     for (i = 0; i < 81; i++) {
+    //set grid highlight
       if (number != displayCells[i]) {
         document.getElementById("c"+i).style.backgroundColor = "#ccccee";
       } else {
         document.getElementById("c"+i).style.backgroundColor = "#3388dd";
+      }
+      //previously: set cell to grey number (highlights cell and changes to white number)
+      //now: set that cell back to grey
+      if(document.getElementById("c"+i).style.fontSize == "125%"){
+        cellElement.style.color="#777777";
       }
     }
   } else {
@@ -371,7 +376,7 @@ function set(id, useSelection = true) {
         counterElement.innerHTML = numberTotals[cellElement.innerHTML];
         cellElement.style.backgroundColor = "#3388dd";
         if (noteMode == 1) {
-          cellElement.style.color = "#777777";
+          cellElement.style.color = "#ccccee";
           cellElement.style.fontSize = "125%";
           noteCells[cellNumber] = 1;
         } else {
