@@ -336,7 +336,7 @@ function set(id, useSelection = true) {
     /* Note Number */
     else if (noteMode == 2) {
       /* Remove Number From Cell */
-      if (noteCells[cellNumber].includes(selectionElement.innerHTML)) {
+      if (noteCells[cellNumber][selectionElement.innerHTML]==selectionElement.innerHTML) {
         c("set - remove note from cell");
         document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.visibility = "hidden";
         noteCells[cellNumber][selectionElement.innerHTML] = 0;
@@ -356,7 +356,7 @@ function set(id, useSelection = true) {
     else {
       c("set - add number to cell");
       if (displayCells[cellNumber] != selectionElement.innerHTML || noteMode != noteCells[cellNumber]) {
-        displayCells[cellNumber]= selectionElement.innerHTML;
+        displayCells[cellNumber] = selectionElement.innerHTML;
         cellElement.innerText = selectionElement.innerText;
         numberTotals[cellElement.innerHTML - 1]--;
         counterElement.innerHTML = numberTotals[cellElement.innerHTML];
