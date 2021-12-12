@@ -173,14 +173,17 @@ p {
   font-size: 50%;
   border: 1px solid blue;
 }
-.p1{
-  padding-right:100%;
+.p1 {
+  padding-right: 100%;
 }
-.p2{}
-.p3{}
-.p4{}
-.p5{}
-.p6{}
-.p7{}
-.p8{}
-.p9{}
+.h1{
+  vertical-align: top;
+}
+.p2 {}
+.p3 {}
+.p4 {}
+.p5 {}
+.p6 {}
+.p7 {}
+.p8 {}
+.p9 {}
