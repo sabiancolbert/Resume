@@ -377,7 +377,7 @@ function set(id, useSelection = true) {
         cellElement.style.color = "black";
         cellElement.style.backgroundColor = "#ccccee";
         cellElement.style.fontSize = "75%";
-      }
+      }//something in regular unidentifies notecells
     }
     /* Regular Number */
     else {
