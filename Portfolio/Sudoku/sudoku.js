@@ -275,16 +275,16 @@ function isDefaultCell(cell) {
 
 function select(number) {
   c("select("+number+")")
-//HERE HERE clear highlight
+  //HERE HERE clear highlight
   if (number != 0) {
     counterElement.innerHTML = numberTotals[number];
     selectionElement.innerHTML = number;
     //set grid highlight
     displayCells.forEach(displayNumber => {
-      if(number != displayNumber){
-}
-      else{
-document.getElementById("c"+cellNumber).backgroundColor="#3388dd";
+      if (number != displayNumber) {
+        document.getElementById("c"+cellNumber).backgroundColor = "#cceeee";
+      } else {
+        document.getElementById("c"+cellNumber).backgroundColor = "#3388dd";
       }
     });
   } else {
