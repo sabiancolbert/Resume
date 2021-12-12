@@ -176,7 +176,9 @@ p {
 .p1 {
   padding-right: 100%;
 }
-div[name="h1"] {}
+div[name="h1"] {
+  padding-right:100%;
+}
 .p2 {}
 .p3 {}
 .p4 {}
