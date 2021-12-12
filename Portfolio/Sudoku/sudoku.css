@@ -150,15 +150,12 @@ button:active {
 #menu:active {
   background-color: #1050aa;
 }
-/* Notes */
+/* Notes *
 .notesContainer {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  
   background-color: green;
 }
-  /*
+/*
   position: absolute;
   margin-top: -4.8%;
   width: 9.7%;
@@ -173,7 +170,7 @@ button:active {
   text-align: center;
   background-color: red;
 }*/
-p{
+p {
   font-weight: 600;
   visibility: hidden;
   position: absolute;
