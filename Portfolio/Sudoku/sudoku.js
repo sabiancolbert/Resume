@@ -156,7 +156,7 @@ function setGrid() {
       tested.push(cell);
       //is this cell solvable?
       if (isDefaultNumber(cell) || isDefaultCell(cell)) {
-        numberTotals[displayCells[cell]-1]++;
+        numberTotals[displayCells[cell]]++;
         displayCells[cell] = 0;
         userCells.push(cell);
         stop--;
@@ -325,33 +325,49 @@ function set(id, useSelection = true) {
     moveList.push([noteMode, cellElement.id, cellElement.innerHTML])
     lastMove++;
     currentMove = lastMove;
-    /* Set As Number */
-    if (noteMode != 2) {
+    /* Update Old Number */
+        if (cellElement.innerHTML - 0 > 0 && noteCells[cellNumber] == []) {
+          numberTotals[cellElement.innerHTML]++;
+        }
+    /* Erase */
+    if(selectionElement.innerHTML == " "){
+      c("set - erase cell");
+      cellElement.innerHTML = " ";
+      displayCells[cellNumber] = 0;
+      noteCells[cellNumber] = [];
+    }
+    /* Note Number */
+    else if(noteMode == 2){
+      /* Remove Number From Cell */
+      if (noteCells[cellNumber].includes(selectionElement.innerHTML)) {
+        c("set - remove note from cell");
+        document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.visibility = "hidden";
+        noteCells[cellNumber][selectionElement.innerHTML] = 0;
+      }
+      /* Add Number To Cell */
+      else {
+        c("set - add note to cell");
+        if (displayCells[cellNumber] !=-1) {
+          cellElement.innerHTML = "<div class='notesContainer'><div name='h1' class='noteHolder'><p class='p1' id='n1"+cellNumber+"'>1</p></div><div name='h2' class='noteHolder'><p id='n2"+cellNumber+"'>2</p></div><div name='h3' class='noteHolder'><p class='p3' id='n3"+cellNumber+"'>3</p></div><div class='noteHolder'><p class='p4' id='n4"+cellNumber+"'>4</p></div><div class='noteHolder'><p id='n5"+cellNumber+"'>5</p></div><div class='noteHolder'><p class='p6' id='n6"+cellNumber+"'>6</p></div><div name='h7' class='noteHolder'><p class='p7' id='n7"+cellNumber+"'>7</p></div><div name='h8' class='noteHolder'><p id='n8"+cellNumber+"'>8</p></div><div name='h9' class='noteHolder'><p class='p9' id='n9"+cellNumber+"'>9</p></div></div>";
+        }
+        document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.visibility = "visible";
+        noteCells[cellNumber][selectionElement.innerHTML] = selectionElement.innerHTML;
+        displayCells[cellNumber]=-1;
+      }
+    }
+    /* Regular Number */
+    else{
+      c("set - add number to cell");
       if (displayCells[cellNumber] != selectionElement.innerHTML || noteMode != noteCells[cellNumber]) {
-        /* Update Old Cell Number */
-        if (cellElement.innerHTML +1 != 1) {
-          numberTotals[cellElement.innerHTML - 1]++;
-        }
-        //HERE set all noteCells to 0
-        /* Update New Cell Number */
         cellElement.innerText = selectionElement.innerText;
-        if (cellElement.innerHTML > 0) {
-          numberTotals[cellElement.innerHTML - 1]--;
-          counterElement.innerHTML = numberTotals[cellElement.innerHTML -1];
-        } else {
-          if (selectionElement.innerHTML = " ") {
-            counterElement.innerHTML = "Erase";
-          } else {
-            counterElement.innerHTML = "";
-          }
-        }
-        displayCells[cellNumber] = selectionElement.innerHTML
-        autoRemoveNotes();
+        numberTotals[cellElement.innerHTML - 1]--;
+        counterElement.innerHTML = numberTotals[cellElement.innerHTML];
         if (noteMode == 1) {
           cellElement.style.color = "#777777";
           cellElement.style.fontSize = "125%";
           noteCells[cellNumber] = 1;
         } else {
+          displayCells[cellNumber] = selectionElement.innerHTML;
           cellElement.style.color = "black";
           cellElement.style.fontSize = "150%";
           noteCells[cellNumber] = 0;
@@ -361,6 +377,13 @@ function set(id, useSelection = true) {
         }
       }
     }
+    
+    
+    
+    
+    
+    
+    
     /* Set As Note */
     else {
       c("set - set as note");
