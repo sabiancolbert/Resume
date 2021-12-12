@@ -280,16 +280,17 @@ function select(number) {
     counterElement.innerHTML = numberTotals[number];
     selectionElement.innerHTML = number;
     for (i = 0; i < 81; i++) {
-    //set grid highlight
+      var cellElement = document.getElementById("c"+i);
+      //set grid highlight
       if (number != displayCells[i]) {
-        document.getElementById("c"+i).style.backgroundColor = "#ccccee";
+        cellElement.style.backgroundColor = "#ccccee";
       } else {
-        document.getElementById("c"+i).style.backgroundColor = "#3388dd";
+        cellElement.style.backgroundColor = "#3388dd";
       }
       //previously: set cell to grey number (highlights cell and changes to white number)
       //now: set that cell back to grey
-      if(document.getElementById("c"+i).style.fontSize == "125%"){
-        cellElement.style.color="#777777";
+      if (cellElement.style.fontSize == "125%") {
+        cellElement.style.color = "#777777";
       }
     }
   } else {
