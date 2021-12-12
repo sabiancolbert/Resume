@@ -177,9 +177,10 @@ p {
   font-size: 50%;
 }
 p:nth-child(1) {
-  padding-bottom:50px;
 }
 p:nth-child(2) {
+  padding-bottom: 50px;
+  
 }
 p:nth-child(3) {}
 p:nth-child(4) {}
