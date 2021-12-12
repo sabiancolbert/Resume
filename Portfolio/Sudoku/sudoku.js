@@ -151,14 +151,14 @@ function setGrid() {
   var tested = new Array([0]);
   var stop = 81 - Math.floor(Math.random()*5+difficulty);
   while (stop > 0 && tested.length < 81) {
-    var cell = Math.floor(Math.random()*81);
+    var cellNumber = Math.floor(Math.random()*81);
     if (!tested.includes(cell)) {
       tested.push(cell);
       //is this cell solvable?
-      if (isDefaultNumber(cell) || isDefaultCell(cell)) {
-        numberTotals[displayCells[cell]]++;
-        displayCells[cell] = 0;
-        userCells.push(cell);
+      if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber)) {
+        numberTotals[displayCells[cellNumber]]++;
+        displayCells[cellNumber] = 0;
+        userCells.push(cellNumber);
         stop--;
       }
     }
@@ -276,7 +276,7 @@ function select(number) {
   c("select("+number+")")
   //dont clear highlight, for visually easier erasing
   if (number != 0) {
-    counterElement.innerHTML = numberTotals[number-1];
+    counterElement.innerHTML = numberTotals[number];
     selectionElement.innerHTML = number;
     //HERE change highlight
   } else {
