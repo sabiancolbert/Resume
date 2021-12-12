@@ -152,7 +152,6 @@ button:active {
 }
 /* Notes *
 .notesContainer {
-  
   background-color: green;
 }
 /*
@@ -179,7 +178,7 @@ p {
 }
 p:nth-child(1) {}
 p:nth-child(2) {
-  top: -100%
+  margin-top: -100%;
 }
 p:nth-child(3) {}
 p:nth-child(4) {}
