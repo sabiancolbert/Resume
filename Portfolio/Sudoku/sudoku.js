@@ -280,9 +280,9 @@ function select(number) {
     counterElement.innerHTML = numberTotals[number];
     selectionElement.innerHTML = number;
     //set grid highlight
-    displayCells.forEach(displayNumber => {
-      c(number +"$"+displayNumber);
-      if (number != displayNumber) {
+    displayCells.forEach(cellNumber => {
+      c(number +"$"+cellNumber);
+      if (number != cellNumber) {
         document.getElementById("c"+cellNumber).backgroundColor = "#cceeee";
       } else {
         document.getElementById("c"+cellNumber).backgroundColor = "#3388dd";
