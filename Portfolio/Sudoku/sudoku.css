@@ -172,7 +172,10 @@ p {
   position: relative;
   font-size: 50%;
 }
-p:nth-child(1) {}
+p:nth-child(1) {
+  padding-bottom:10%;
+  
+}
 p:nth-child(2) {}
 p:nth-child(3) {}
 p:nth-child(4) {}
