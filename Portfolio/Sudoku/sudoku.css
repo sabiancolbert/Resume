@@ -161,14 +161,14 @@ button:active {
   line-height: 0;
 }
 .noteHolder {
-  position: absolute;
+  position: relative;
   font-size: 5px;
-  font-weight: 600;
   height: 5px;
   text-align: center;
   background-color: red;
 }
 p {
+  font-weight: 600;
   visibility: hidden;
   position: relative;
   background-color: blue;
