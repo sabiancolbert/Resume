@@ -152,11 +152,16 @@ button:active {
 }
 /* Notes */
 .notesContainer {
+top:0;
+left:0;
+right:0;
+bottom:0;
+  background-color: green;
+/*
   position: absolute;
   margin-top: -4.8%;
   width: 9.7%;
   max-height: 9.6%;
-  background-color: green;
   height: 100%;
   line-height: 0;
 }
@@ -173,7 +178,7 @@ p {
   position: relative;
   background-color: blue;
   font-size: 50%;
-}
+}*/
 p:nth-child(1) {}
 p:nth-child(2) {
   top: -100%
