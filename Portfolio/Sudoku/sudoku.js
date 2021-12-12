@@ -391,12 +391,12 @@ function set(id, useSelection = true) {
         if (noteMode == 1) {
           cellElement.style.color = "#ccccee";
           cellElement.style.fontSize = "125%";
-          noteCells[cellNumber] = 1;
+          noteCells[cellNumber] = [0,0,0,0,0,0,0,0,0,0];
         } else {
           displayCells[cellNumber] = selectionElement.innerHTML;
           cellElement.style.color = "black";
           cellElement.style.fontSize = "150%";
-          noteCells[cellNumber] = 0;
+          noteCells[cellNumber] = [0,0,0,0,0,0,0,0,0,0];
           if (check()) {
             autoRemoveNotes();
           }
