@@ -163,19 +163,18 @@ button:active {
 .noteHolder {
   position: absolute;
   height: 100%;
-  width:100%;
+  width: 100%;
   text-align: center;
   background-color: red;
 }
 p {
   font-weight: 600;
   visibility: hidden;
-  position: absolute;
+  position: relative;
   background-color: blue;
   font-size: 50%;
 }
 p:nth-child(1) {
-  margin-bottom: 50%;
 }
 p:nth-child(2) {}
 p:nth-child(3) {}
