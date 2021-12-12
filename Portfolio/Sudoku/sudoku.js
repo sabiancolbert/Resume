@@ -3,7 +3,7 @@ var cells = new Array(81);
 var displayCells = new Array();
 var userCells = new Array();
 var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-var noteModeCells = new Array(81);
+var noteCells = new Array(81);
 var moveList = new Array();
 var currentMove = 0;
 var lastMove = 0;
@@ -173,7 +173,7 @@ function setGrid() {
   }
   /* Last Minute Game Prep */
   for (i = 0; i < 81; i++) {
-    noteModeCells[i] = [];
+    noteCells[i] = [];
   }
   select(1);
 }
@@ -325,15 +325,14 @@ function set(id, useSelection = true) {
     moveList.push([noteMode, cellElement.id, cellElement.innerHTML])
     lastMove++;
     currentMove = lastMove;
-    //HERE put erarse if else here
     /* Set As Number */
     if (noteMode != 2) {
-      if (displayCells[cellNumber] != selectionElement.innerHTML || noteMode != noteModeCells[cellNumber]) {
+      if (displayCells[cellNumber] != selectionElement.innerHTML || noteMode != noteCells[cellNumber]) {
         /* Update Old Cell Number */
         if (cellElement.innerHTML +1 != 1) {
           numberTotals[cellElement.innerHTML - 1]++;
         }
-        //HERE set all noteModeCells to 0
+        //HERE set all noteCells to 0
         /* Update New Cell Number */
         cellElement.innerText = selectionElement.innerText;
         if (cellElement.innerHTML > 0) {
@@ -351,11 +350,11 @@ function set(id, useSelection = true) {
         if (noteMode == 1) {
           cellElement.style.color = "#777777";
           cellElement.style.fontSize = "125%";
-          noteModeCells[cellNumber] = 1;
+          noteCells[cellNumber] = 1;
         } else {
           cellElement.style.color = "black";
           cellElement.style.fontSize = "150%";
-          noteModeCells[cellNumber] = 0;
+          noteCells[cellNumber] = 0;
           if (check()) {
             autoRemoveNotes();
           }
@@ -366,20 +365,19 @@ function set(id, useSelection = true) {
     else {
       c("set - set as note");
       /* Remove Number From Cell */
-      c(noteModeCells[cellNumber]);
-      if (noteModeCells[cellNumber].includes(selectionElement.innerHTML)) {
+      c(noteCells[cellNumber]);
+      if (noteCells[cellNumber].includes(selectionElement.innerHTML)) {
         c("set - remove number from cell");
-
       }
       /* Add Number To Cell */
       else {
+        c("set - add number to cell");
         if (displayCells[cellNumber] !=-1) {
           cellElement.innerHTML = "<div class='notesContainer'><div name='h1' class='noteHolder'><p class='p1' id='n1"+cellNumber+"'>1</p></div><div name='h2' class='noteHolder'><p id='n2"+cellNumber+"'>2</p></div><div name='h3' class='noteHolder'><p class='p3' id='n3"+cellNumber+"'>3</p></div><div class='noteHolder'><p class='p4' id='n4"+cellNumber+"'>4</p></div><div class='noteHolder'><p id='n5"+cellNumber+"'>5</p></div><div class='noteHolder'><p class='p6' id='n6"+cellNumber+"'>6</p></div><div name='h7' class='noteHolder'><p class='p7' id='n7"+cellNumber+"'>7</p></div><div name='h8' class='noteHolder'><p id='n8"+cellNumber+"'>8</p></div><div name='h9' class='noteHolder'><p class='p9' id='n9"+cellNumber+"'>9</p></div></div>";
         }
-        c("set - add number to cell");
         cellElement.style.color = "black";
         document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.visibility = "visible";
-        noteModeCells[cellNumber][selectionElement.innerHTML] = selectionElement.innerHTML;
+        noteCells[cellNumber][selectionElement.innerHTML] = selectionElement.innerHTML;
         displayCells[cellNumber]=-1;
       }
     }
@@ -489,7 +487,7 @@ function changeMove(direction) {
     else{
       displayCells[(move[1].id+"0").substring(1,2)]=-1;
     }
-    //HERE set notemodecells (copy paste from set())
+    //HERE set noteCells (copy paste from set())
     numberTotals[move[1].innerHTML]--;
     if(move[2]==selectionElement.innerHTML)
     {
