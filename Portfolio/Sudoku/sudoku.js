@@ -350,6 +350,7 @@ function set(id, useSelection = true) {
         document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.visibility = "visible";
         noteCells[cellNumber][selectionElement.innerHTML] = selectionElement.innerHTML;
         displayCells[cellNumber]=-1;
+        cellElement.style.color = "black";
       }
     }
     /* Regular Number */
