@@ -358,7 +358,7 @@ function set(id, useSelection = true) {
     /* Note Number */
     else if (noteMode == 2) {
       /* Remove Note From Cell */
-      c(cellNumber+" "+selectionElement.innerHTML +" "+noteCells[cellNumber][selectionElement.innerHTML]);
+      c(cellNumber+" "+selectionElement.innerHTML +" "+noteCells[0][1]);
       if (noteCells[cellNumber][selectionElement.innerHTML] > 0) {
         //HERE
         c("set - remove note from cell");
