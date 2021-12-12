@@ -359,7 +359,8 @@ function set(id, useSelection = true) {
     else if (noteMode == 2) {
       /* Remove Note From Cell */
       c(cellNumber+" "+selectionElement.innerHTML +" "+noteCells[cellNumber][selectionElement.innerHTML]);
-      if (noteCells[cellNumber][selectionElement.innerHTML] > 0) {//HERE
+      if (noteCells[cellNumber][selectionElement.innerHTML] > 0) {
+        //HERE
         c("set - remove note from cell");
         document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.visibility = "hidden";
         noteCells[cellNumber][selectionElement.innerHTML] = 0;
