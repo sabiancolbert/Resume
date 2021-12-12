@@ -174,7 +174,16 @@ function setGrid() {
   }
   /* Last Minute Game Prep */
   for (i = 0; i < 81; i++) {
-    noteCells[i] = [0, 0, 0,0,0,0,0,0,0,0];
+    noteCells[i] = [0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0];
   }
   select(1);
 }
@@ -349,7 +358,8 @@ function set(id, useSelection = true) {
     /* Note Number */
     else if (noteMode == 2) {
       /* Remove Note From Cell */
-      if (noteCells[cellNumber][selectionElement.innerHTML] > 0) {
+      c(cellNumber+" "+selectionElement.innerHTML +" "+noteCells[cellNumber][selectionElement.innerHTML]);
+      if (noteCells[cellNumber][selectionElement.innerHTML] > 0) {//HERE
         c("set - remove note from cell");
         document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.visibility = "hidden";
         noteCells[cellNumber][selectionElement.innerHTML] = 0;
