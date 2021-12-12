@@ -170,7 +170,7 @@ button:active {
 }
 p {
   visibility: hidden;
-  position: absolute;
+  position: relative;
   background-color: blue;
   font-size: 50%;
 }
