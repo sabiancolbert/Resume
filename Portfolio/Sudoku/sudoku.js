@@ -174,7 +174,7 @@ function setGrid() {
   }
   /* Last Minute Game Prep */
   for (i = 0; i < 81; i++) {
-    noteCells[i] = [];
+    noteCells[i] = [0, 0, 0,0,0,0,0,0,0,0];
   }
   select(1);
 }
