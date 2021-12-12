@@ -280,214 +280,214 @@ function select(number) {
     counterElement.innerHTML = numberTotals[number];
     selectionElement.innerHTML = number;
     //set grid highlight
-    displayCells.forEach(cellNumber => {
-      if (number != cellNumber) {
-        document.getElementById("c"+cellNumber).style.backgroundColor = "#ccccee";
+    for (i = 0; i < 81; i++) {
+      if (number != displayCells[i]) {
+        document.getElementById("c"+i).style.backgroundColor = "#ccccee";
       } else {
-        document.getElementById("c"+cellNumber).style.backgroundColor = "#3388dd";
+        document.getElementById("c"+i).style.backgroundColor = "#3388dd";
       }
-    });
-  } else {
-    selectionElement.innerHTML = " ";
-    counterElement.innerHTML = "Erase";
-  }
-  if (noteMode == 2) {
-    switch (number) {
-      case 1:
-        selectionElement.style.padding = "0 60% 60% 0";
-        break;
-      case 2:
-        selectionElement.style.padding = "0 0 60% 0";
-        break;
-      case 3:
-        selectionElement.style.padding = "0 0 60% 60%";
-        break;
-      case 4:
-        selectionElement.style.padding = "0 60% 0 0";
-        break;
-      case 5:
-        selectionElement.style.padding = "0 0 0 0";
-        break;
-      case 6:
-        selectionElement.style.padding = "0 0 0 60%";
-        break;
-      case 7:
-        selectionElement.style.padding = "60% 60% 0 0";
-        break;
-      case 8:
-        selectionElement.style.padding = "60% 0 0 0";
-        break;
-      case 9:
-        selectionElement.style.padding = "60% 0 0 60%";
-        break;
     }
+} else {
+  selectionElement.innerHTML = " ";
+  counterElement.innerHTML = "Erase";
+}
+if (noteMode == 2) {
+  switch (number) {
+    case 1:
+      selectionElement.style.padding = "0 60% 60% 0";
+      break;
+    case 2:
+      selectionElement.style.padding = "0 0 60% 0";
+      break;
+    case 3:
+      selectionElement.style.padding = "0 0 60% 60%";
+      break;
+    case 4:
+      selectionElement.style.padding = "0 60% 0 0";
+      break;
+    case 5:
+      selectionElement.style.padding = "0 0 0 0";
+      break;
+    case 6:
+      selectionElement.style.padding = "0 0 0 60%";
+      break;
+    case 7:
+      selectionElement.style.padding = "60% 60% 0 0";
+      break;
+    case 8:
+      selectionElement.style.padding = "60% 0 0 0";
+      break;
+    case 9:
+      selectionElement.style.padding = "60% 0 0 60%";
+      break;
   }
+}
 }
 
 function set(id, useSelection = true) {
-  c("set("+id+")");
-  var cellElement = document.getElementById(id);
-  var cellNumber = id.substring(1, id.length) * 1;
-  if (userCells.includes(cellNumber)) {
-    /* Update Old Number */
-    if (cellElement.innerHTML - 0 > 0 && noteCells[cellNumber] == []) {
-      numberTotals[cellElement.innerHTML]++;
-    }
-    /* Erase */
-    if (selectionElement.innerHTML == " ") {
-      c("set - erase cell");
-      cellElement.innerHTML = " ";
-      displayCells[cellNumber] = 0;
-      noteCells[cellNumber] = [];
-    }
-    /* Note Number */
-    else if (noteMode == 2) {
-      /* Remove Number From Cell */
-      if (noteCells[cellNumber][selectionElement.innerHTML] > 0) {
-        c("set - remove note from cell");
-        document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.visibility = "hidden";
-        noteCells[cellNumber][selectionElement.innerHTML] = 0;
-      }
-      /* Add Number To Cell */
-      else {
-        c("set - add note to cell");
-        if (displayCells[cellNumber] !=-1) {
-          cellElement.innerHTML = "<div class='notesContainer'><div name='h1' class='noteHolder'><p class='p1' id='n1"+cellNumber+"'>1</p></div><div name='h2' class='noteHolder'><p id='n2"+cellNumber+"'>2</p></div><div name='h3' class='noteHolder'><p class='p3' id='n3"+cellNumber+"'>3</p></div><div class='noteHolder'><p class='p4' id='n4"+cellNumber+"'>4</p></div><div class='noteHolder'><p id='n5"+cellNumber+"'>5</p></div><div class='noteHolder'><p class='p6' id='n6"+cellNumber+"'>6</p></div><div name='h7' class='noteHolder'><p class='p7' id='n7"+cellNumber+"'>7</p></div><div name='h8' class='noteHolder'><p id='n8"+cellNumber+"'>8</p></div><div name='h9' class='noteHolder'><p class='p9' id='n9"+cellNumber+"'>9</p></div></div>";
-        }
-        document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.visibility = "visible";
-        noteCells[cellNumber][selectionElement.innerHTML] = selectionElement.innerHTML;
-        displayCells[cellNumber]=-1;
-        cellElement.style.color = "black";
-        cellElement.style.fontSize = "75%";
-      }
-    }
-    /* Regular Number */
-    else {
-      c("set - add number to cell");
-      if (displayCells[cellNumber] != selectionElement.innerHTML || noteMode != noteCells[cellNumber]) {
-        displayCells[cellNumber] = selectionElement.innerHTML;
-        cellElement.innerText = selectionElement.innerText;
-        numberTotals[cellElement.innerHTML - 1]--;
-        counterElement.innerHTML = numberTotals[cellElement.innerHTML];
-        if (noteMode == 1) {
-          cellElement.style.color = "#777777";
-          cellElement.style.fontSize = "125%";
-          noteCells[cellNumber] = 1;
-        } else {
-          displayCells[cellNumber] = selectionElement.innerHTML;
-          cellElement.style.color = "black";
-          cellElement.style.fontSize = "150%";
-          noteCells[cellNumber] = 0;
-          if (check()) {
-            autoRemoveNotes();
-          }
-        }
-      }
-    }
-    /* Update Move List */
-    moveList.push([noteMode, cellElement.id, cellElement.innerHTML])
-    lastMove++;
-    currentMove = lastMove;
-  }
+c("set("+id+")");
+var cellElement = document.getElementById(id);
+var cellNumber = id.substring(1, id.length) * 1;
+if (userCells.includes(cellNumber)) {
+/* Update Old Number */
+if (cellElement.innerHTML - 0 > 0 && noteCells[cellNumber] == []) {
+numberTotals[cellElement.innerHTML]++;
+}
+/* Erase */
+if (selectionElement.innerHTML == " ") {
+c("set - erase cell");
+cellElement.innerHTML = " ";
+displayCells[cellNumber] = 0;
+noteCells[cellNumber] = [];
+}
+/* Note Number */
+else if (noteMode == 2) {
+/* Remove Number From Cell */
+if (noteCells[cellNumber][selectionElement.innerHTML] > 0) {
+c("set - remove note from cell");
+document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.visibility = "hidden";
+noteCells[cellNumber][selectionElement.innerHTML] = 0;
+}
+/* Add Number To Cell */
+else {
+c("set - add note to cell");
+if (displayCells[cellNumber] !=-1) {
+cellElement.innerHTML = "<div class='notesContainer'><div name='h1' class='noteHolder'><p class='p1' id='n1"+cellNumber+"'>1</p></div><div name='h2' class='noteHolder'><p id='n2"+cellNumber+"'>2</p></div><div name='h3' class='noteHolder'><p class='p3' id='n3"+cellNumber+"'>3</p></div><div class='noteHolder'><p class='p4' id='n4"+cellNumber+"'>4</p></div><div class='noteHolder'><p id='n5"+cellNumber+"'>5</p></div><div class='noteHolder'><p class='p6' id='n6"+cellNumber+"'>6</p></div><div name='h7' class='noteHolder'><p class='p7' id='n7"+cellNumber+"'>7</p></div><div name='h8' class='noteHolder'><p id='n8"+cellNumber+"'>8</p></div><div name='h9' class='noteHolder'><p class='p9' id='n9"+cellNumber+"'>9</p></div></div>";
+}
+document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.visibility = "visible";
+noteCells[cellNumber][selectionElement.innerHTML] = selectionElement.innerHTML;
+displayCells[cellNumber]=-1;
+cellElement.style.color = "black";
+cellElement.style.fontSize = "75%";
+}
+}
+/* Regular Number */
+else {
+c("set - add number to cell");
+if (displayCells[cellNumber] != selectionElement.innerHTML || noteMode != noteCells[cellNumber]) {
+displayCells[cellNumber] = selectionElement.innerHTML;
+cellElement.innerText = selectionElement.innerText;
+numberTotals[cellElement.innerHTML - 1]--;
+counterElement.innerHTML = numberTotals[cellElement.innerHTML];
+if (noteMode == 1) {
+cellElement.style.color = "#777777";
+cellElement.style.fontSize = "125%";
+noteCells[cellNumber] = 1;
+} else {
+displayCells[cellNumber] = selectionElement.innerHTML;
+cellElement.style.color = "black";
+cellElement.style.fontSize = "150%";
+noteCells[cellNumber] = 0;
+if (check()) {
+autoRemoveNotes();
+}
+}
+}
+}
+/* Update Move List */
+moveList.push([noteMode, cellElement.id, cellElement.innerHTML])
+lastMove++;
+currentMove = lastMove;
+}
 }
 
 function check() {
-  var result = true;
-  //if autocheck in settings
-  if (false) {
-    var counter = 0;
-    for (i = 0; i < 81; i++) {
-      //compare displayCells to cells
-      if (true)//HERE
-      {
-        counter++;
-        //element.style.color = red
-        result = false
-      }
-    }
-    document.getElementById("wrongElement").innerHTML = counter;
-  }
-  c("check() = "+result);
-  return result;
+var result = true;
+//if autocheck in settings
+if (false) {
+var counter = 0;
+for (i = 0; i < 81; i++) {
+//compare displayCells to cells
+if (true)//HERE
+{
+counter++;
+//element.style.color = red
+result = false
+}
+}
+document.getElementById("wrongElement").innerHTML = counter;
+}
+c("check() = "+result);
+return result;
 }
 
 function autoRemoveNotes() {
-  c("autoRemoveNotes() =");
-  //if autoremove notes in settings is on
-  if (true) {
-    c("true");
-    //HERE
-    //remove horizontal, vertical, and box
-  } else {
-    c("false");
-    {}
-  }
+c("autoRemoveNotes() =");
+//if autoremove notes in settings is on
+if (true) {
+c("true");
+//HERE
+//remove horizontal, vertical, and box
+} else {
+c("false");
+{}
+}
 }
 
 function updateNoteMode() {
-  c("updateNoteMode()");
-  noteMode++;
-  selectionElement.style.padding = 0;
-  /* Regular Number Mode */
-  if (noteMode > 2) {
-    noteMode = 0;
-    selectionElement.style.fontSize = "300%";
-  }
-  /* Grey Note Number Mode */
-  else if (noteMode == 1) {
-    selectionElement.style.color = "#777777";
-    selectionElement.style.fontSize = "225%";
+c("updateNoteMode()");
+noteMode++;
+selectionElement.style.padding = 0;
+/* Regular Number Mode */
+if (noteMode > 2) {
+noteMode = 0;
+selectionElement.style.fontSize = "300%";
+}
+/* Grey Note Number Mode */
+else if (noteMode == 1) {
+selectionElement.style.color = "#777777";
+selectionElement.style.fontSize = "225%";
 
-  }
-  /* Note Mode */
-  else {
-    selectionElement.style.color = "black";
-    selectionElement.style.fontSize = "100%";
-    switch (selectionElement.innerHTML * 1) {
-      case 1:
-        selectionElement.style.padding = "0 60% 60% 0";
-        break;
-      case 2:
-        selectionElement.style.padding = "0 0 60% 0";
-        break;
-      case 3:
-        selectionElement.style.padding = "0 0 60% 60%";
-        break;
-      case 4:
-        selectionElement.style.padding = "0 60% 0 0";
-        break;
-      case 5:
-        selectionElement.style.padding = "0 0 0 0";
-        break;
-      case 6:
-        selectionElement.style.padding = "0 0 0 60%";
-        break;
-      case 7:
-        selectionElement.style.padding = "60% 60% 0 0";
-        break;
-      case 8:
-        selectionElement.style.padding = "60% 0 0 0";
-        break;
-      case 9:
-        selectionElement.style.padding = "60% 0 0 60%";
-        break;
-    }
-  }
+}
+/* Note Mode */
+else {
+selectionElement.style.color = "black";
+selectionElement.style.fontSize = "100%";
+switch (selectionElement.innerHTML * 1) {
+case 1:
+selectionElement.style.padding = "0 60% 60% 0";
+break;
+case 2:
+selectionElement.style.padding = "0 0 60% 0";
+break;
+case 3:
+selectionElement.style.padding = "0 0 60% 60%";
+break;
+case 4:
+selectionElement.style.padding = "0 60% 0 0";
+break;
+case 5:
+selectionElement.style.padding = "0 0 0 0";
+break;
+case 6:
+selectionElement.style.padding = "0 0 0 60%";
+break;
+case 7:
+selectionElement.style.padding = "60% 60% 0 0";
+break;
+case 8:
+selectionElement.style.padding = "60% 0 0 0";
+break;
+case 9:
+selectionElement.style.padding = "60% 0 0 60%";
+break;
+}
+}
 }
 
 function changeMove(direction) {
-  c("changeMove("+direction+")");
-  if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < lastMove) {
-    currentMove += direction;
-    var move = moveList[currentMove];
-    set(move[1], false); //HERE
-    /*moveList.push(move);
+c("changeMove("+direction+")");
+if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < lastMove) {
+currentMove += direction;
+var move = moveList[currentMove];
+set(move[1], false); //HERE
+/*moveList.push(move);
     numberTotals[move[1].innerHTML]++;
     if(selectionElement.innerHTML==move[1].innerHTML){
       counterElement.innerHTML = numberTotals[selectionElement.innerHTML];
     }
     /* Update Old Cell Number */
-    /*move[1].innerHTML = move[2];
+/*move[1].innerHTML = move[2];
     if (move[0]!=2){
       displayCells[(move[1].id+"0").substring(1,2)]=move[2];
     }
@@ -501,15 +501,15 @@ function changeMove(direction) {
       counterElement.innerHTML=numberTotals[move[2]];
     }
   */
-  }
+}
 }
 
 function restart() {
-  c("restart()");
+c("restart()");
 }
 
 function menu() {
-  c("menu()");
+c("menu()");
 }
 
 /*//HERE
