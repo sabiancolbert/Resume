@@ -174,12 +174,12 @@ p {
   position: absolute;
   background-color: blue;
   font-size: 50%;
-  width:100%;
+  width: 100%;
 }
-p:nth-child(1) {}
+p:nth-child(1) {
+  margin-bottom:50%;
+}
 p:nth-child(2) {
-  padding-bottom: 50px;
-
 }
 p:nth-child(3) {}
 p:nth-child(4) {}
