@@ -173,13 +173,15 @@ p {
   font-size: 50%;
   border: 1px solid blue;
 }
-.p1, .p4, .p7{
+.p1, .p4, .p7 {
   padding-right: 100%;
 }
-.p3, .p6, .p9{
-  padding-left:100%;
+.p3, .p6, .p9 {
+  right:0;
 }
-div[name="h1"], div[name="h2"], div[name="h3"]{top:-33%;}
+div[name="h1"], div[name="h2"], div[name="h3"] {
+  top: -33%;
+}
 div[name="h7"], div[name="h8"], div[name="h9"] {
   top: 33%;
 }
