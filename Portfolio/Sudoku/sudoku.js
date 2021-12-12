@@ -29,7 +29,7 @@ function askDifficulty() {
   //hard 30
   //expert 25
 
-  //HERE ask difficulty
+  //HERE HERE ask difficulty
   //adjust difficulty to rules
   /* Generate Number Board */
   setCells();
@@ -275,11 +275,18 @@ function isDefaultCell(cell) {
 
 function select(number) {
   c("select("+number+")")
-  //dont clear highlight, for visually easier erasing
+//HERE HERE clear highlight
   if (number != 0) {
     counterElement.innerHTML = numberTotals[number];
     selectionElement.innerHTML = number;
-    //HERE change highlight
+    //set grid highlight
+    displayCells.forEach(displayNumber => {
+      if(number != displayNumber){
+}
+      else{
+document.getElementById("c"+cellNumber).backgroundColor="#3388dd";
+      }
+    });
   } else {
     selectionElement.innerHTML = " ";
     counterElement.innerHTML = "Erase";
@@ -508,7 +515,6 @@ function menu() {
 /*//HERE
 capitalize notes
 see if a switch() would be useful anywhere
-when changing note mode, change position of the number on selectionElement based on the selected nu
 have a numbers page when you click the wrong answers button (number of undos, redos, restarts, total time (saved games), ingame time, etc?)
 when unselecting autocheck, unred any red numbers
 */
