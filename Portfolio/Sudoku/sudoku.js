@@ -281,10 +281,10 @@ function select(number) {
     selectionElement.innerHTML = number;
     //set grid highlight
     displayCells.forEach(cellNumber => {
-      c(number +"$"+cellNumber);
       if (number != cellNumber) {
         document.getElementById("c"+cellNumber).backgroundColor = "#cceeee";
       } else {
+        c("djdheh");
         document.getElementById("c"+cellNumber).backgroundColor = "#3388dd";
       }
     });
