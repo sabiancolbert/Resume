@@ -282,10 +282,9 @@ function select(number) {
     //set grid highlight
     displayCells.forEach(cellNumber => {
       if (number != cellNumber) {
-        document.getElementById("c"+cellNumber).backgroundColor = "#cceeee";
+        document.getElementById("c"+cellNumber).style.backgroundColor = "#cceeee";
       } else {
-        c("djdheh");
-        document.getElementById("c"+cellNumber).backgroundColor = "#3388dd";
+        document.getElementById("c"+cellNumber).style.backgroundColor = "#3388dd";
       }
     });
   } else {
