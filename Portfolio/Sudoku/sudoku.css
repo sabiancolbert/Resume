@@ -152,7 +152,6 @@ button:active {
 }
 /* Notes */
 .notesContainer {
-  background-color: green;
   position: absolute;
   margin-top: -4.8%;
   width: 9.7%;
@@ -165,7 +164,7 @@ button:active {
   height: 100%;
   width: 100%;
   text-align: center;
-
+border:1px solid red;
 }
 p {
   font-weight: 600;
