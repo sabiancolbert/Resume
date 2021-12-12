@@ -326,18 +326,18 @@ function set(id, useSelection = true) {
     lastMove++;
     currentMove = lastMove;
     /* Update Old Number */
-        if (cellElement.innerHTML - 0 > 0 && noteCells[cellNumber] == []) {
-          numberTotals[cellElement.innerHTML]++;
-        }
+    if (cellElement.innerHTML - 0 > 0 && noteCells[cellNumber] == []) {
+      numberTotals[cellElement.innerHTML]++;
+    }
     /* Erase */
-    if(selectionElement.innerHTML == " "){
+    if (selectionElement.innerHTML == " ") {
       c("set - erase cell");
       cellElement.innerHTML = " ";
       displayCells[cellNumber] = 0;
       noteCells[cellNumber] = [];
     }
     /* Note Number */
-    else if(noteMode == 2){
+    else if (noteMode == 2) {
       /* Remove Number From Cell */
       if (noteCells[cellNumber].includes(selectionElement.innerHTML)) {
         c("set - remove note from cell");
@@ -356,7 +356,7 @@ function set(id, useSelection = true) {
       }
     }
     /* Regular Number */
-    else{
+    else {
       c("set - add number to cell");
       if (displayCells[cellNumber] != selectionElement.innerHTML || noteMode != noteCells[cellNumber]) {
         cellElement.innerText = selectionElement.innerText;
@@ -375,33 +375,6 @@ function set(id, useSelection = true) {
             autoRemoveNotes();
           }
         }
-      }
-    }
-    
-    
-    
-    
-    
-    
-    
-    /* Set As Note */
-    else {
-      c("set - set as note");
-      /* Remove Number From Cell */
-      c(noteCells[cellNumber]);
-      if (noteCells[cellNumber].includes(selectionElement.innerHTML)) {
-        c("set - remove number from cell");
-      }
-      /* Add Number To Cell */
-      else {
-        c("set - add number to cell");
-        if (displayCells[cellNumber] !=-1) {
-          cellElement.innerHTML = "<div class='notesContainer'><div name='h1' class='noteHolder'><p class='p1' id='n1"+cellNumber+"'>1</p></div><div name='h2' class='noteHolder'><p id='n2"+cellNumber+"'>2</p></div><div name='h3' class='noteHolder'><p class='p3' id='n3"+cellNumber+"'>3</p></div><div class='noteHolder'><p class='p4' id='n4"+cellNumber+"'>4</p></div><div class='noteHolder'><p id='n5"+cellNumber+"'>5</p></div><div class='noteHolder'><p class='p6' id='n6"+cellNumber+"'>6</p></div><div name='h7' class='noteHolder'><p class='p7' id='n7"+cellNumber+"'>7</p></div><div name='h8' class='noteHolder'><p id='n8"+cellNumber+"'>8</p></div><div name='h9' class='noteHolder'><p class='p9' id='n9"+cellNumber+"'>9</p></div></div>";
-        }
-        cellElement.style.color = "black";
-        document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.visibility = "visible";
-        noteCells[cellNumber][selectionElement.innerHTML] = selectionElement.innerHTML;
-        displayCells[cellNumber]=-1;
       }
     }
   }
