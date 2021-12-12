@@ -359,7 +359,6 @@ function set(id, useSelection = true) {
         displayCells[cellNumber]=-1;
         cellElement.style.color = "black";
         cellElement.style.fontSize = "75%";
-        cellElement.style.backgroundColor = "#3388dd";
       }
     }
     /* Regular Number */
@@ -370,6 +369,7 @@ function set(id, useSelection = true) {
         cellElement.innerText = selectionElement.innerText;
         numberTotals[cellElement.innerHTML - 1]--;
         counterElement.innerHTML = numberTotals[cellElement.innerHTML];
+        cellElement.style.backgroundColor = "#3388dd";
         if (noteMode == 1) {
           cellElement.style.color = "#777777";
           cellElement.style.fontSize = "125%";
