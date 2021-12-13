@@ -517,9 +517,10 @@ function changeMove(direction) {
   if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < lastMove) {
     currentMove += direction;
     var move = moveList[currentMove];
-    set(move[1], false); //HERE
-    /*moveList.push(move);
-    numberTotals[move[1].innerHTML]++;
+    moveList.push(move);
+    set(move[1], false);
+    /*numberTotals[move[1].innerHTML]++;
+    //HERE HERE HERE
     if(selectionElement.innerHTML==move[1].innerHTML){
       counterElement.innerHTML = numberTotals[selectionElement.innerHTML];
     }
