@@ -340,16 +340,15 @@ function select(number) {
   }
 }
 
-function set(id, useSelection = true) {
+function set(id, move = -1) {
   c("set("+id+")");
   var cellElement = document.getElementById(id);
   var cellNumber = id.substring(1, id.length) * 1;
-  var newHTML ="";
-  if(useSelection){
-  newHTML = selectionElement.innerHTML;
-  }
-  else{
-    newHTML = ;
+  var newHTML = "";
+  if (move < 0) {
+    newHTML = selectionElement.innerHTML;
+  } else {
+    newHTML = moveList[move][2];
   }
   if (userCells.includes(cellNumber)) {
     /* Update Old Number */
@@ -431,7 +430,9 @@ function set(id, useSelection = true) {
     /* Update Move List */
     moveList.push([noteMode, cellElement.id, cellElement.innerHTML])
     lastMove++;
+    if(move<0){
     currentMove = lastMove;
+  }
   }
 }
 
