@@ -295,9 +295,9 @@ function select(number) {
         cellElement.style.backgroundColor = "#ccccee";
       } else {
         cellElement.style.backgroundColor = "#3388dd";
-      if (cellElement.style.fontSize == "125%") {
-        cellElement.style.color = "#ccccee";
-      }
+        if (cellElement.style.fontSize == "125%") {
+          cellElement.style.color = "#ccccee";
+        }
       }
       //previously: set cell to grey number (highlights cell and changes to white number)
       //now: set that cell back to grey
