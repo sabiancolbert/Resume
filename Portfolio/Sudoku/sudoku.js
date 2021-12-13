@@ -348,7 +348,7 @@ function set(id, useSelection = true) {
     /* Update Old Number */
     if (cellElement.innerHTML - 0 > 0 && displayCells[cellNumber]!=-1) {
       numberTotals[cellElement.innerHTML]++;
-    }//HERE
+    }
     /* Erase */
     if (selectionElement.innerHTML == " ") {
       c("set - erase cell");
@@ -385,7 +385,7 @@ function set(id, useSelection = true) {
       if (displayCells[cellNumber] != selectionElement.innerHTML || noteMode != noteCells[cellNumber]) {
         displayCells[cellNumber] = selectionElement.innerHTML;
         cellElement.innerText = selectionElement.innerText;
-        numberTotals[cellElement.innerHTML - 1]--;
+        numberTotals[cellElement.innerHTML]--;
         counterElement.innerHTML = numberTotals[cellElement.innerHTML];
         cellElement.style.backgroundColor = "#3388dd";
         if (noteMode == 1) {
