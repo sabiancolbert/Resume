@@ -344,13 +344,20 @@ function set(id, useSelection = true) {
   c("set("+id+")");
   var cellElement = document.getElementById(id);
   var cellNumber = id.substring(1, id.length) * 1;
+  var newHTML ="";
+  if(useSelection){
+  newHTML = selectionElement.innerHTML;
+  }
+  else{
+    newHTML = ;
+  }
   if (userCells.includes(cellNumber)) {
     /* Update Old Number */
     if (cellElement.innerHTML - 0 > 0 && displayCells[cellNumber]!=-1) {
       numberTotals[cellElement.innerHTML]++;
     }
     /* Erase */
-    if (selectionElement.innerHTML == " ") {
+    if (newHTML == " ") {
       c("set - erase cell");
       cellElement.innerHTML = " ";
       displayCells[cellNumber] = 0;
@@ -359,11 +366,11 @@ function set(id, useSelection = true) {
     /* Note Number */
     else if (noteMode == 2) {
       /* Remove Note From Cell */
-      c(cellNumber+" "+selectionElement.innerHTML +" "+noteCells[0][1]);
-      if (noteCells[cellNumber][selectionElement.innerHTML] > 0) {
+      c(cellNumber+" "+newHTML +" "+noteCells[0][1]);
+      if (noteCells[cellNumber][newHTML] > 0) {
         c("set - remove note from cell");
-        document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.visibility = "hidden";
-        noteCells[cellNumber][selectionElement.innerHTML] = 0;
+        document.getElementById("n"+newHTML+cellNumber).style.visibility = "hidden";
+        noteCells[cellNumber][newHTML] = 0;
       }
       /* Add Note To Cell */
       else {
@@ -371,8 +378,8 @@ function set(id, useSelection = true) {
         if (displayCells[cellNumber] !=-1) {
           cellElement.innerHTML = "<div class='notesContainer'><div name='h1' class='noteHolder'><p class='p1' id='n1"+cellNumber+"'>1</p></div><div name='h2' class='noteHolder'><p id='n2"+cellNumber+"'>2</p></div><div name='h3' class='noteHolder'><p class='p3' id='n3"+cellNumber+"'>3</p></div><div class='noteHolder'><p class='p4' id='n4"+cellNumber+"'>4</p></div><div class='noteHolder'><p id='n5"+cellNumber+"'>5</p></div><div class='noteHolder'><p class='p6' id='n6"+cellNumber+"'>6</p></div><div name='h7' class='noteHolder'><p class='p7' id='n7"+cellNumber+"'>7</p></div><div name='h8' class='noteHolder'><p id='n8"+cellNumber+"'>8</p></div><div name='h9' class='noteHolder'><p class='p9' id='n9"+cellNumber+"'>9</p></div></div>";
         }
-        document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.visibility = "visible";
-        noteCells[cellNumber][selectionElement.innerHTML] = selectionElement.innerHTML;
+        document.getElementById("n"+newHTML+cellNumber).style.visibility = "visible";
+        noteCells[cellNumber][newHTML] = newHTML;
         displayCells[cellNumber]=-1;
         cellElement.style.color = "black";
         cellElement.style.backgroundColor = "#ccccee";
@@ -382,8 +389,8 @@ function set(id, useSelection = true) {
     /* Regular Number */
     else {
       c("set - add number to cell");
-      if (displayCells[cellNumber] != selectionElement.innerHTML || noteMode != noteCells[cellNumber]) {
-        displayCells[cellNumber] = selectionElement.innerHTML;
+      if (displayCells[cellNumber] != newHTML || noteMode != noteCells[cellNumber]) {
+        displayCells[cellNumber] = newHTML;
         cellElement.innerText = selectionElement.innerText;
         numberTotals[cellElement.innerHTML]--;
         counterElement.innerHTML = numberTotals[cellElement.innerHTML];
@@ -402,7 +409,7 @@ function set(id, useSelection = true) {
             0,
             0];
         } else {
-          displayCells[cellNumber] = selectionElement.innerHTML;
+          displayCells[cellNumber] = newHTML;
           cellElement.style.color = "black";
           cellElement.style.fontSize = "150%";
           noteCells[cellNumber] = [0,
@@ -517,7 +524,6 @@ function changeMove(direction) {
   if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < lastMove) {
     currentMove += direction;
     var move = moveList[currentMove];
-    moveList.push(move);
     set(move[1], false);
     /*numberTotals[move[1].innerHTML]++;
     //HERE HERE HERE
