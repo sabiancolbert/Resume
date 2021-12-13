@@ -295,6 +295,9 @@ function select(number) {
         cellElement.style.backgroundColor = "#ccccee";
       } else {
         cellElement.style.backgroundColor = "#3388dd";
+      if (cellElement.style.fontSize == "125%") {
+        cellElement.style.color = "#ccccee";
+      }
       }
       //previously: set cell to grey number (highlights cell and changes to white number)
       //now: set that cell back to grey
@@ -378,7 +381,7 @@ function set(id, useSelection = true) {
         cellElement.style.backgroundColor = "#ccccee";
         cellElement.style.fontSize = "75%";
       }
-      }
+    }
     /* Regular Number */
     else {
       c("set - add number to cell");
