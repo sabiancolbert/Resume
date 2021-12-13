@@ -298,6 +298,7 @@ function select(number) {
         if (cellElement.style.fontSize == "125%") {
           cellElement.style.color = "#ccccee";
         }
+        c("her");
       }
       //previously: set cell to grey number (highlights cell and changes to white number)
       //now: set that cell back to grey
