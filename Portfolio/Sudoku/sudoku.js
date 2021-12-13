@@ -554,4 +554,6 @@ capitalize notes
 see if a switch() would be useful anywhere
 have a numbers page when you click the wrong answers button (number of undos, redos, restarts, total time (saved games), ingame time, etc?)
 when unselecting autocheck, unred any red numbers
+solving it on 0 only requires basic sudoku skills *sigh*
+cefcu horizontals for notes to solve it (hypothetical notes)
 */
