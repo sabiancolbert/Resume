@@ -1,10 +1,10 @@
 /* Globals */
 var cells = new Array(81);
-var displayCells = new Array();
-var userCells = new Array();
+var displayCells = new Array([]);
+var userCells = new Array([]);
 var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 var noteCells = new Array(81);
-var moveList = new Array();
+var moveList = new Array([]);
 var currentMove = 0;
 var lastMove = 0;
 var difficulty = 0;
@@ -191,7 +191,7 @@ function setGrid() {
 //is this number the only option for this cell?
 function isDefaultNumber(cell) {
   var result = false;
-  var otherNumbers = new Array();
+  var otherNumbers = new Array([]);
   for (x = 1; x < 10; x++) {
     if (x != displayCells[cell]) {
       if (isInVertical(cell, x) || isInHorizonal(cell, x) || isInBox(cell, x)) {
