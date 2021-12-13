@@ -284,24 +284,23 @@ function isDefaultCell(cell) {
 
 function select(number) {
   c("select("+number+")")
-      //set grid highlight
-      if (number != displayCells[i]) {
-        cellElement.style.backgroundColor = "#ccccee";
-        if (cellElement.style.fontSize == "125%") {
-          cellElement.style.color = "#777777";
-        }
-      } else {
-        cellElement.style.backgroundColor = "#3388dd";
-        if (cellElement.style.fontSize == "125%") {
-          cellElement.style.color = "#ccccee";
-        }
-      }
+  //set grid highlight
+    for (i = 0; i < 81; i++) {
+      var cellElement = document.getElementById("c"+i);
+  if (number != displayCells[i]) {
+    cellElement.style.backgroundColor = "#ccccee";
+    if (cellElement.style.fontSize == "125%") {
+      cellElement.style.color = "#777777";
+    }
+  } else {
+    cellElement.style.backgroundColor = "#3388dd";
+    if (cellElement.style.fontSize == "125%") {
+      cellElement.style.color = "#ccccee";
+    }
+  }
   if (number != 0) {
     counterElement.innerHTML = numberTotals[number];
     selectionElement.innerHTML = number;
-    for (i = 0; i < 81; i++) {
-      var cellElement = document.getElementById("c"+i);
-    }
   } else {
     selectionElement.innerHTML = " ";
     counterElement.innerHTML = "Erase";
