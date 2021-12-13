@@ -7,7 +7,7 @@ var noteCells = new Array(81);
 var moveList = new Array();
 var currentMove = 0;
 var lastMove = 0;
-var difficulty = 40;
+var difficulty = 0;
 var currentCell = 0;
 var noteMode = 0;
 var selectionElement, counterElement;
