@@ -377,8 +377,8 @@ function set(id, useSelection = true) {
         cellElement.style.color = "black";
         cellElement.style.backgroundColor = "#ccccee";
         cellElement.style.fontSize = "75%";
-      }//something in regular unidentifies notecells
-    }
+      }
+      }
     /* Regular Number */
     else {
       c("set - add number to cell");
@@ -391,12 +391,30 @@ function set(id, useSelection = true) {
         if (noteMode == 1) {
           cellElement.style.color = "#ccccee";
           cellElement.style.fontSize = "125%";
-          noteCells[cellNumber] = [0,0,0,0,0,0,0,0,0,0];
+          noteCells[cellNumber] = [0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0];
         } else {
           displayCells[cellNumber] = selectionElement.innerHTML;
           cellElement.style.color = "black";
           cellElement.style.fontSize = "150%";
-          noteCells[cellNumber] = [0,0,0,0,0,0,0,0,0,0];
+          noteCells[cellNumber] = [0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0];
           if (check()) {
             autoRemoveNotes();
           }
