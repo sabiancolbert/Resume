@@ -293,17 +293,14 @@ function select(number) {
       //set grid highlight
       if (number != displayCells[i]) {
         cellElement.style.backgroundColor = "#ccccee";
+      if (cellElement.style.fontSize == "125%") {
+        cellElement.style.color = "#777777";
+      }
       } else {
         cellElement.style.backgroundColor = "#3388dd";
         if (cellElement.style.fontSize == "125%") {
           cellElement.style.color = "#ccccee";
         }
-        c("her"+cellElement);
-      }
-      //previously: set cell to grey number (highlights cell and changes to white number)
-      //now: set that cell back to grey
-      if (cellElement.style.fontSize == "125%") {
-        cellElement.style.color = "#777777";
       }
     }
   } else {
