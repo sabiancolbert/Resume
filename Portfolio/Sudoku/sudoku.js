@@ -287,7 +287,7 @@ function select(number) {
   //set grid highlight
   for (i = 0; i < 81; i++) {
     var cellElement = document.getElementById("c"+i);
-    if (number != displayCells[i]) {
+    if (number != displayCells[i] || displayCells [i] == " ") {
       cellElement.style.backgroundColor = "#ccccee";
       if (cellElement.style.fontSize == "125%") {
         cellElement.style.color = "#777777";
