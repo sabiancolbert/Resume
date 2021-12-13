@@ -284,7 +284,7 @@ function isDefaultCell(cell) {
 
 function select(number) {
   c("select("+number+")")
-  //set grid highlight
+  // Set Grid Highlight */
   for (i = 0; i < 81; i++) {
     var cellElement = document.getElementById("c"+i);
     if (number != displayCells[i] || displayCells [i] == " ") {
@@ -299,6 +299,7 @@ function select(number) {
       }
     }
   }
+  /* Select Number */
   if (number != 0) {
     counterElement.innerHTML = numberTotals[number];
     selectionElement.innerHTML = number;
@@ -345,9 +346,9 @@ function set(id, useSelection = true) {
   var cellNumber = id.substring(1, id.length) * 1;
   if (userCells.includes(cellNumber)) {
     /* Update Old Number */
-    if (cellElement.innerHTML - 0 > 0 && noteCells[cellNumber] == []) {
+    if (cellElement.innerHTML - 0 > 0 && displayCells[cellNumber]!=-1) {
       numberTotals[cellElement.innerHTML]++;
-    }
+    }//HERE
     /* Erase */
     if (selectionElement.innerHTML == " ") {
       c("set - erase cell");
@@ -360,7 +361,6 @@ function set(id, useSelection = true) {
       /* Remove Note From Cell */
       c(cellNumber+" "+selectionElement.innerHTML +" "+noteCells[0][1]);
       if (noteCells[cellNumber][selectionElement.innerHTML] > 0) {
-        //HERE
         c("set - remove note from cell");
         document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.visibility = "hidden";
         noteCells[cellNumber][selectionElement.innerHTML] = 0;
