@@ -22,7 +22,7 @@ function setCells() {
   c("setCells()");
   if (document.getElementById("difficultyElement").value < 81) {
     document.getElementById("gameElement").style.visibility = "visible";
-    difficultyPromptElement.style.visibility = "hidden";
+    difficultyPromptElement.remove;
     difficulty = document.getElementById("difficultyElement").value;
     //beginner 45
     //easy 40
@@ -571,7 +571,7 @@ function restart() {
 
 function menu() {
   c("menu()");
-  document.getElementById("menuElement").style.visibility =   !document.getElementById("menuElement").style.visibility;
+  document.getElementById("menuElement").style.visibility = !document.getElementById("menuElement").style.visibility;
 }
 
 /*//HERE
