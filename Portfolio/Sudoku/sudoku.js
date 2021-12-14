@@ -343,17 +343,24 @@ function select(number) {
 function set(id, changingMove = false) {
   c("set("+id+")");
   if (userCells.includes(cellNumber)) {
-  var cellElement = document.getElementById(id);
-  var cellNumber = id.substring(1, id.length) * 1;
-  var cellNoteMode = 2;
-  var newHTML = "";
-  if (changingMove) {
-    newHTML = moveList[currentMove][1];
-  } else {
-    newHTML = selectionElement.innerHTML;
-    
-  }
+    var cellElement = document.getElementById(id);
+    var cellNumber = id.substring(1, id.length) * 1;
+    var cellNoteMode = 0;
+    var newHTML = "";
+    if(displayCells[cellNumber]==-1){
+      cellNoteMode =1;
+    }
+    else if (displayCells[cellNumber]==-2){
+      cellNoteMode=2;
+    }
     moveList.push([cellElement.id, cellElement.innerHTML, cellNoteMode])
+    if (changingMove) {
+      newHTML = moveList[currentMove][1];
+      cellNoteMode=moveList[currentMove][2];
+    } else {
+      newHTML = selectionElement.innerHTML;
+      cellNoteMode=noteMode;
+    }
     /* Update Old Number */
     if (cellElement.innerHTML - 0 > 0 && displayCells[cellNumber]!=-1) {
       numberTotals[cellElement.innerHTML]++;
@@ -366,7 +373,7 @@ function set(id, changingMove = false) {
       noteCells[cellNumber] = [];
     }
     /* Note Number */
-    else if (noteMode == 2 || newHTML.includes("div")) {
+    else if (cellNoteMode == 2) {
       /* Remove Note From Cell */
       c(cellNumber+" "+newHTML +" "+noteCells[0][1]);
       if (noteCells[cellNumber][newHTML] > 0) {
@@ -382,7 +389,7 @@ function set(id, changingMove = false) {
         }
         document.getElementById("n"+newHTML+cellNumber).style.visibility = "visible";
         noteCells[cellNumber][newHTML] = newHTML;
-        displayCells[cellNumber]=-1;
+        displayCells[cellNumber]=-2;
         cellElement.style.color = "black";
         cellElement.style.backgroundColor = "#ccccee";
         cellElement.style.fontSize = "75%";
@@ -394,34 +401,34 @@ function set(id, changingMove = false) {
     /* Regular Number */
     else {
       c("set - add number to cell");
-      if (displayCells[cellNumber] != newHTML || noteMode != noteCells[cellNumber]) {
+      displayCells[cellNumber] = newHTML;
+      cellElement.innerHTML = newHTML;
+      numberTotals[cellElement.innerHTML]--;
+      counterElement.innerHTML = numberTotals[cellElement.innerHTML];
+      cellElement.style.backgroundColor = "#3388dd";
+      noteCells[cellNumber] = [0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0];
+      if (cellNoteMode == 1) {
+        cellElement.style.color = "#ccccee";
+        cellElement.style.fontSize = "125%";
+        displayCells[cellNumber] = -1;
+      } else {
         displayCells[cellNumber] = newHTML;
-        cellElement.innerHTML = newHTML;
-        numberTotals[cellElement.innerHTML]--;
-        counterElement.innerHTML = numberTotals[cellElement.innerHTML];
-        cellElement.style.backgroundColor = "#3388dd";
-        noteCells[cellNumber] = [0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0];
-        if (moveList[currentMove][2] == 1) {
-          cellElement.style.color = "#ccccee";
-          cellElement.style.fontSize = "125%";
-        } else {
-          displayCells[cellNumber] = newHTML;
-          cellElement.style.color = "black";
-          cellElement.style.fontSize = "150%";
-          if (check()) {
-            autoRemoveNotes();
-          }
+        cellElement.style.color = "black";
+        cellElement.style.fontSize = "150%";
+        if (check()) {
+          autoRemoveNotes();
         }
       }
+
     }
     lastMove++;
     if (!changingMove) {
