@@ -372,11 +372,12 @@ function set(cellId, direction = 0) {
         redoList.splice(i, 1);
       }
     }
-    if (newHTML == " " || newHTML =="") {
+    if (newHTML == " " || newHTML == "") {
       cellNoteMode=-1;
     }
     if (cellElement.innerHTML - 0 > 0) {
       numberTotals[cellElement.innerHTML]++;
+            counterElement.innerHTML = numberTotals[cellElement.innerHTML];
     }
     /* Erase */
     if (cellNoteMode == -1) {
