@@ -20,7 +20,7 @@ function c(c) {
 
 function askDifficulty() {
   c("askDifficulty()");
-  counterElement.innerHTML = document.getElementById("counterElement.innerHTML");
+  counterElement.innerHTML = document.getElementById("counterElement");
   selectionElement = document.getElementById("selectionElement");
   //beginner 45
   //easy 40
