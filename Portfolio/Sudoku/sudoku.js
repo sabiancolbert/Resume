@@ -340,11 +340,11 @@ function select(number) {
   }
 }
 
-function set(id, changingMove = false) {
-  c("set("+id+")");
-    var cellNumber = id.substring(1, id.length) * 1;
+function set(cellId, changingMove = false) {
+  c("set("+cellId+")");
+  var cellNumber = cellId.substring(1, cellId.length) * 1;
   if (userCells.includes(cellNumber)) {
-    var cellElement = document.getElementById(id);
+    var cellElement = document.getElementById(cellId);
     var cellNoteMode = 0;
     var newHTML = "";
     if (displayCells[cellNumber]==-1) {
@@ -352,7 +352,10 @@ function set(id, changingMove = false) {
     } else if (displayCells[cellNumber]==-2) {
       cellNoteMode = 2;
     }
-    moveList.push([cellElement.id, cellElement.innerHTML, cellNoteMode])
+    if(cellElement.innerHTML==" "){
+      cellNoteMode==-1;
+    }
+    moveList.push([cellId, cellElement.innerHTML, cellNoteMode])
     if (changingMove) {
       newHTML = moveList[currentMove][1];
       cellNoteMode = moveList[currentMove][2];
@@ -360,12 +363,14 @@ function set(id, changingMove = false) {
       newHTML = selectionElement.innerHTML;
       cellNoteMode = noteMode;
     }
-    /* Update Old Number */
+    if(newHTML==" "){
+      cellNoteMode==-1;
+    }
     if (cellElement.innerHTML - 0 > 0 && displayCells[cellNumber]!=-1) {
       numberTotals[cellElement.innerHTML]++;
     }
     /* Erase */
-    if (newHTML == " ") {
+    if (cellNoteMode == -1) {
       c("set - erase cell");
       cellElement.innerHTML = " ";
       displayCells[cellNumber] = 0;
