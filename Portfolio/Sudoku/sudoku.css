@@ -7,11 +7,12 @@ body {
   margin: 0;
 }
 @media screen and (orientation: landscape) {
-  section {
+  body {
     /*visibility: hidden;*/
+    max-height:100vmin;
   }
 }
-#portraitWarning {
+  #portraitWarning {
   top: 10%;
   font-size: 300%;
   position: absolute;
