@@ -344,6 +344,7 @@ function set(cellId, direction = 0) {
   c("set("+cellId+","+direction+")");
   var cellNumber = cellId.substring(1, cellId.length) * 1;
   if (userCells.includes(cellNumber)) {
+    /* Preliminary */
     var cellElement = document.getElementById(cellId);
     var cellNoteMode = 0;
     if (cellElement.innerHTML == " ") {
@@ -417,7 +418,9 @@ function set(cellId, direction = 0) {
       cellElement.innerHTML = newHTML;
       numberTotals[cellElement.innerHTML]--;
       counterElement.innerHTML = numberTotals[cellElement.innerHTML];
+      if(newHTML == selectionElement.innerHTML){
       cellElement.style.backgroundColor = "#3388dd";
+    }
       noteCells[cellNumber] = [0,
         0,
         0,
@@ -440,7 +443,6 @@ function set(cellId, direction = 0) {
           autoRemoveNotes();
         }
       }
-
     }
     if (direction == 0) {
       currentMove++;
