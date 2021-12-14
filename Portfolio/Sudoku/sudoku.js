@@ -384,6 +384,8 @@ function set(cellId, direction = 0) {
       cellElement.innerHTML = " ";
       displayCells[cellNumber] = 0;
       noteCells[cellNumber] = [];
+              cellElement.style.backgroundColor = "#ccccee";
+
     }
     /* Note Number */
     else if (cellNoteMode == 2) {
@@ -418,9 +420,9 @@ function set(cellId, direction = 0) {
       cellElement.innerHTML = newHTML;
       numberTotals[cellElement.innerHTML]--;
       counterElement.innerHTML = numberTotals[cellElement.innerHTML];
-      if(newHTML == selectionElement.innerHTML){
-      cellElement.style.backgroundColor = "#3388dd";
-    }
+      if (newHTML == selectionElement.innerHTML) {
+        cellElement.style.backgroundColor = "#3388dd";
+      }
       noteCells[cellNumber] = [0,
         0,
         0,
