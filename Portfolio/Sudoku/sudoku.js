@@ -4,7 +4,7 @@ var displayCells = new Array([]);
 var userCells = new Array([]);
 var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 var noteCells = new Array(81);
-var moveList = new Array([]);
+var moveList = new Array();
 var currentMove = 0;
 var lastMove = 0;
 var difficulty = 0;
@@ -355,10 +355,10 @@ function set(cellId, changingMove = false) {
     if (cellElement.innerHTML == " ") {
       cellNoteMode==-1;
     }
-c(moveList);
+    c(moveList);
     moveList.push([cellId, cellElement.innerHTML, cellNoteMode]);
-c(moveList);
-if (changingMove) {
+    c(moveList);
+    if (changingMove) {
       newHTML = moveList[currentMove][1];
       cellNoteMode = moveList[currentMove][2];
     } else {
