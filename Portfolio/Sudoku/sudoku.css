@@ -25,10 +25,10 @@ bold {
 /* Game Board */
 #gridContainer {
   position: relative;
-  width: 98%;
+  width: 98vmin;
   padding-top: 100%;
   background-color: #222222;
-  border: 1vw solid #3388dd;
+  border: 1vmin solid #3388dd;
   border-radius: 5%;
 }
 #gridHolder {
