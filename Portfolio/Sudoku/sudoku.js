@@ -566,10 +566,12 @@ function updateNoteMode() {
 
 function restart() {
   c("restart()");
+  
 }
 
 function menu() {
   c("menu()");
+  document.getElementById("menuElement").style.visibility^=;
 }
 
 /*//HERE
