@@ -444,7 +444,7 @@ function set(cellId, changingMove = false) {
 
     }
     if (!changingMove) {
-      currentMove++;
+      //currentMove++;
       if (moveList.length == currentMove) {
         moveList.push([
           cellId,
