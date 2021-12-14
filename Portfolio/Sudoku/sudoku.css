@@ -18,7 +18,7 @@ body {
   z-index: -1;
   left: 10%;
 }*/
-#difficultyPromptElement{
+#difficultyPromptElement {
   position: absolute;
 }
 /* Game Board */
@@ -158,6 +158,9 @@ button:active {
 /* Menu */
 #menuElement {
   visibility: hidden;
+  width:50%;
+  height:50%;
+  background-color: #ccccee;
 }
 /* Notes */
 .notesContainer {
