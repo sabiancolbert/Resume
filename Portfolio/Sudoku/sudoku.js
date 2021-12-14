@@ -384,7 +384,7 @@ function set(cellId, direction = 0) {
       cellElement.innerHTML = " ";
       displayCells[cellNumber] = 0;
       noteCells[cellNumber] = [];
-      cellElement.style.backgroundColor = "#ccccee";
+      cellElement.style.backgroundColor = "red";
     }
     /* Note Number */
     else if (cellNoteMode == 2) {
