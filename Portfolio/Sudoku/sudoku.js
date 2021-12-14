@@ -422,8 +422,10 @@ function set(cellId, direction = 0) {
       displayCells[cellNumber] = newHTML;
       cellElement.innerHTML = newHTML;
       numberTotals[cellElement.innerHTML]--;
-      c("d");
+      c("d");//HERE HERE this misfires clunterelement
+if(selectionElement.innerHTML==cellElement.innerHTML){
       counterElement.innerHTML = numberTotals[cellElement.innerHTML];
+}
       if (newHTML == selectionElement.innerHTML) {
         cellElement.style.backgroundColor = "#3388dd";
       }
