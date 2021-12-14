@@ -20,8 +20,7 @@ function c(c) {
 
 function setCells() {
   c("setCells()");
-  counterElement = document.getElementById("counterElement");
-  selectionElement = document.getElementById("selectionElement");
+  if(document.getElementById("difficultyElement").value <81){
   difficulty = document.getElementById("difficultyElement").value;
   //beginner 45
   //easy 40
@@ -31,6 +30,8 @@ function setCells() {
   //HERE adjust difficulty to rules
   c("askDifficulty - difficulty = "+difficulty);
   var attemptedNumbers = new Array(81);
+  counterElement = document.getElementById("counterElement");
+  selectionElement = document.getElementById("selectionElement");
   for (i = 0; i < 81; i++) {
     attemptedNumbers[i] = [0];
   }
@@ -68,6 +69,7 @@ function setCells() {
   } else {
     setGrid();
   }
+}
 }
 
 //search for the same number in the same column
