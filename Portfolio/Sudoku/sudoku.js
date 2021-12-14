@@ -353,15 +353,15 @@ function set(cellId, changingMove = false) {
     } else if (displayCells[cellNumber]==-2) {
       cellNoteMode = 2;
     }
-    moveList.push([
-      cellId,
-      cellElement.innerHTML,
-      cellNoteMode]);
     var newHTML = "";
     if (changingMove) {
       newHTML = moveList[currentMove][1];
       cellNoteMode = moveList[currentMove][2];
     } else {
+    moveList.push([
+      cellId,
+      cellElement.innerHTML,
+      cellNoteMode]);
       newHTML = selectionElement.innerHTML;
       cellNoteMode = noteMode;
     }
