@@ -19,7 +19,7 @@ body {
   left: 10%;
 }*/
 #difficultyPromptElement {
-  position: absolute;
+  position: fixed;
 }
 /* Game Board */
 #gameElement {
