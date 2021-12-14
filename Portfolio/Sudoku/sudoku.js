@@ -22,7 +22,7 @@ function setCells() {
   c("setCells()");
   if (document.getElementById("difficultyElement").value < 81) {
     document.getElementById("gameElement").style.visibility = "visible";
-    difficultyPromptElement.remove;
+    document.getElementById("difficultyPromptElement").remove;
     difficulty = document.getElementById("difficultyElement").value;
     //beginner 45
     //easy 40
