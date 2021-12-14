@@ -348,7 +348,7 @@ function set(id, move = -1) {
   if (move < 0) {
     newHTML = selectionElement.innerHTML;
   } else {
-    newHTML = moveList[move][2];
+    newHTML = moveList[move][1];
   }
   if (userCells.includes(cellNumber)) {
     /* Update Old Number */
@@ -363,7 +363,7 @@ function set(id, move = -1) {
       noteCells[cellNumber] = [];
     }
     /* Note Number */
-    else if (noteMode == 2) {
+    else if (noteMode == 2 || newHTML.includes("div")) {
       /* Remove Note From Cell */
       c(cellNumber+" "+newHTML +" "+noteCells[0][1]);
       if (noteCells[cellNumber][newHTML] > 0) {
@@ -383,6 +383,9 @@ function set(id, move = -1) {
         cellElement.style.color = "black";
         cellElement.style.backgroundColor = "#ccccee";
         cellElement.style.fontSize = "75%";
+        if(newHTML.includes("div"){
+          cellElement.innerHTML = newHTML;
+        }
       }
     }
     /* Regular Number */
@@ -390,13 +393,10 @@ function set(id, move = -1) {
       c("set - add number to cell");
       if (displayCells[cellNumber] != newHTML || noteMode != noteCells[cellNumber]) {
         displayCells[cellNumber] = newHTML;
-        cellElement.innerText = selectionElement.innerText;
+        cellElement.innerHTML = newHTML;
         numberTotals[cellElement.innerHTML]--;
         counterElement.innerHTML = numberTotals[cellElement.innerHTML];
         cellElement.style.backgroundColor = "#3388dd";
-        if (noteMode == 1) {
-          cellElement.style.color = "#ccccee";
-          cellElement.style.fontSize = "125%";
           noteCells[cellNumber] = [0,
             0,
             0,
@@ -407,20 +407,13 @@ function set(id, move = -1) {
             0,
             0,
             0];
+        if (noteMode == 1 || moveList[currentMove][2] == 1) {
+          cellElement.style.color = "#ccccee";
+          cellElement.style.fontSize = "125%";
         } else {
           displayCells[cellNumber] = newHTML;
           cellElement.style.color = "black";
           cellElement.style.fontSize = "150%";
-          noteCells[cellNumber] = [0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0];
           if (check()) {
             autoRemoveNotes();
           }
@@ -428,11 +421,39 @@ function set(id, move = -1) {
       }
     }
     /* Update Move List */
-    moveList.push([noteMode, cellElement.id, cellElement.innerHTML])
+    moveList.push([cellElement.id, cellElement.innerHTML])
     lastMove++;
-    if(move<0){
-    currentMove = lastMove;
+    if (move < 0) {
+      currentMove = lastMove;
+    }
   }
+}
+
+function changeMove(direction) {
+  c("changeMove("+direction+")");
+  if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < lastMove) {
+    currentMove += direction;
+    set(moveList[currentMove][0], );
+    /*numberTotals[move[1].innerHTML]++;
+    //HERE HERE HERE
+    if(selectionElement.innerHTML==move[1].innerHTML){
+      counterElement.innerHTML = numberTotals[selectionElement.innerHTML];
+    }
+    /* Update Old Cell Number */
+    /*move[1].innerHTML = move[2];
+    if (move[0]!=2){
+      displayCells[(move[1].id+"0").substring(1,2)]=move[2];
+    }
+    else{
+      displayCells[(move[1].id+"0").substring(1,2)]=-1;
+    }
+    //HERE set noteCells (copy paste from set())
+    numberTotals[move[1].innerHTML]--;
+    if(move[2]==selectionElement.innerHTML)
+    {
+      counterElement.innerHTML=numberTotals[move[2]];
+    }
+  */
   }
 }
 
@@ -517,35 +538,6 @@ function updateNoteMode() {
         selectionElement.style.padding = "60% 0 0 60%";
         break;
     }
-  }
-}
-
-function changeMove(direction) {
-  c("changeMove("+direction+")");
-  if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < lastMove) {
-    currentMove += direction;
-    var move = moveList[currentMove];
-    set(move[1], false);
-    /*numberTotals[move[1].innerHTML]++;
-    //HERE HERE HERE
-    if(selectionElement.innerHTML==move[1].innerHTML){
-      counterElement.innerHTML = numberTotals[selectionElement.innerHTML];
-    }
-    /* Update Old Cell Number */
-    /*move[1].innerHTML = move[2];
-    if (move[0]!=2){
-      displayCells[(move[1].id+"0").substring(1,2)]=move[2];
-    }
-    else{
-      displayCells[(move[1].id+"0").substring(1,2)]=-1;
-    }
-    //HERE set noteCells (copy paste from set())
-    numberTotals[move[1].innerHTML]--;
-    if(move[2]==selectionElement.innerHTML)
-    {
-      counterElement.innerHTML=numberTotals[move[2]];
-    }
-  */
   }
 }
 
