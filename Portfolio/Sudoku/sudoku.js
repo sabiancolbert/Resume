@@ -355,7 +355,7 @@ function set(cellId, changingMove = false) {
     if (cellElement.innerHTML == " ") {
       cellNoteMode==-1;
     }
-      moveList.push([cellId, cellElement.innerHTML, cellNoteMode]);
+    moveList.push([cellId, cellElement.innerHTML, cellNoteMode]);
     if (changingMove) {
       newHTML = moveList[currentMove][1];
       cellNoteMode = moveList[currentMove][2];
@@ -446,6 +446,7 @@ function changeMove(direction) {
   c("changeMove("+direction+")");
   if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < lastMove) {
     currentMove += direction;
+    c("&&&&"+currentMove);
     c("current" + currentMove + "last"+lastMove);
     c("HERE "+moveList[currentMove][0]);
     set(moveList[currentMove][0], true);
