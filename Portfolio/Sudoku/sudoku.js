@@ -340,18 +340,20 @@ function select(number) {
   }
 }
 
-function set(id, changingMove= false) {
+function set(id, changingMove = false) {
   c("set("+id+")");
+  if (userCells.includes(cellNumber)) {
   var cellElement = document.getElementById(id);
   var cellNumber = id.substring(1, id.length) * 1;
-  var cellNoteMode =2;
+  var cellNoteMode = 2;
   var newHTML = "";
   if (changingMove) {
     newHTML = moveList[currentMove][1];
   } else {
     newHTML = selectionElement.innerHTML;
+    
   }
-  if (userCells.includes(cellNumber)) {
+    moveList.push([cellElement.id, cellElement.innerHTML, cellNoteMode])
     /* Update Old Number */
     if (cellElement.innerHTML - 0 > 0 && displayCells[cellNumber]!=-1) {
       numberTotals[cellElement.innerHTML]++;
@@ -408,23 +410,19 @@ function set(id, changingMove= false) {
           0,
           0,
           0];
-        if (noteMode == 1 || moveList[currentMove][2] == 1) {
+        if (moveList[currentMove][2] == 1) {
           cellElement.style.color = "#ccccee";
           cellElement.style.fontSize = "125%";
-          cellNoteMode = 1;
         } else {
           displayCells[cellNumber] = newHTML;
           cellElement.style.color = "black";
           cellElement.style.fontSize = "150%";
-          cellNoteMode = 0;
           if (check()) {
             autoRemoveNotes();
           }
         }
       }
     }
-    /* Update Move List */
-    moveList.push([cellElement.id, cellElement.innerHTML, cellNoteMode])
     lastMove++;
     if (!changingMove) {
       currentMove = lastMove;
