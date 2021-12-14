@@ -446,7 +446,7 @@ function set(cellId, changingMove = false) {
 
 function changeMove(direction) {
   c("changeMove("+direction+")");
-  if (direction == -1 && currentMove > 0 || direction == 0 && currentMove < lastMove) {
+  if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < lastMove) {
     currentMove += direction;
     c(currentMove);
     set(moveList[currentMove][0], true);
