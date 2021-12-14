@@ -21,9 +21,9 @@ function c(c) {
 function setCells() {
   c("setCells()");
   if (document.getElementById("difficultyElement").value < 81) {
-    document.getElementById("gameElement").style.visibility = "visible";
     difficulty = document.getElementById("difficultyElement").value;
     document.getElementById("difficultyPromptElement") = "";
+    document.getElementById("gameElement").style.visibility = "visible";
     //beginner 45
     //easy 40
     //med 35
