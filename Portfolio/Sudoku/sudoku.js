@@ -437,12 +437,10 @@ function set(cellId, changingMove = false) {
     }
     if (!changingMove) {
       currentMove++;
-      if (moveList.length == currentMove) {
-        moveList.push([
+        moveList[currentMove] = [
           cellId,
           cellElement.innerHTML,
-          cellNoteMode]);
-      }
+          cellNoteMode];
     }
   }
   c("Current Move: "+currentMove+" total: "+moveList.length+" Move List:"+moveList);
