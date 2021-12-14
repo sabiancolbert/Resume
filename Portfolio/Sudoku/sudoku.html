@@ -9,260 +9,264 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <!-- Difficulty -->
-  <label for="difficultyElement">Set difficulty to:</label>
-  <select onchange="setCells()" id="difficultyElement">
-    <option value="81"></option>
-    <option value="45">Beginner</option>
-    <option value="40">Easy</option>
-    <option value="35">Medium</option>
-    <option value="30">Hard</option>
-    <option value="0">Expert</option>
-  </select>
-  <!-- Sudoku Grid -->
-  <div id="gridContainer">
-    <div id="gridHolder">
-      <table>
-        <tr>
-          <td onclick="set('c0');" id="c0"></td>
-          <td onclick="set('c1');" id="c1"></td>
-          <td onclick="set('c2');" id="c2"></td>
-        </tr>
-        <tr>
-          <td onclick="set('c9');" id="c9"></td>
-          <td onclick="set('c10');" id="c10"></td>
-          <td onclick="set('c11');" id="c11"></td>
-        </tr>
-        <tr>
-          <td onclick="set('c18');" id="c18"></td>
-          <td onclick="set('c19');" id="c19"></td>
-          <td onclick="set('c20');" id="c20"></td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <td onclick="set('c27');" id="c27"></td>
-          <td onclick="set('c28');" id="c28"></td>
-          <td onclick="set('c29');" id="c29"></td>
-        </tr>
-        <tr>
-          <td onclick="set('c36');" id="c36"></td>
-          <td onclick="set('c37');" id="c37"></td>
-          <td onclick="set('c38');" id="c38"></td>
-        </tr>
-        <tr>
-          <td onclick="set('c45');" id="c45"></td>
-          <td onclick="set('c46');" id="c46"></td>
-          <td onclick="set('c47');" id="c47"></td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <td onclick="set('c54');" id="c54"></td>
-          <td onclick="set('c55');" id="c55"></td>
-          <td onclick="set('c56');" id="c56"></td>
-        </tr>
-        <tr>
-          <td onclick="set('c63');" id="c63"></td>
-          <td onclick="set('c64');" id="c64"></td>
-          <td onclick="set('c65');" id="c65"></td>
-        </tr>
-        <tr>
-          <td onclick="set('c72');" id="c72"></td>
-          <td onclick="set('c73');" id="c73"></td>
-          <td onclick="set('c74');" id="c74"></td>
-        </tr>
-      </table>
-      <table>
-        <tr>
-          <td onclick="set('c3');" id="c3"></td>
-          <td onclick="set('c4');" id="c4"></td>
-          <td onclick="set('c5');" id="c5"></td>
-        </tr>
-        <tr>
-          <td onclick="set('c12');" id="c12"></td>
-          <td onclick="set('c13');" id="c13"></td>
-          <td onclick="set('c14');" id="c14"></td>
-        </tr>
-        <tr>
-          <td onclick="set('c21');" id="c21"></td>
-          <td onclick="set('c22');" id="c22"></td>
-          <td onclick="set('c23');" id="c23"></td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <td onclick="set('c30');" id="c30"></td>
-          <td onclick="set('c31');" id="c31"></td>
-          <td onclick="set('c32');" id="c32"></td>
-        </tr>
-        <tr>
-          <td onclick="set('c39');" id="c39"></td>
-          <td onclick="set('c40');" id="c40"></td>
-          <td onclick="set('c41');" id="c41"></td>
-        </tr>
-        <tr>
-          <td onclick="set('c48');" id="c48"></td>
-          <td onclick="set('c49');" id="c49"></td>
-          <td onclick="set('c50');" id="c50"></td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <td onclick="set('c57');" id="c57"></td>
-          <td onclick="set('c58');" id="c58"></td>
-          <td onclick="set('c59');" id="c59"></td>
-        </tr>
-        <tr>
-          <td onclick="set('c66');" id="c66"></td>
-          <td onclick="set('c67');" id="c67"></td>
-          <td onclick="set('c68');" id="c68"></td>
-        </tr>
-        <tr>
-          <td onclick="set('c75');" id="c75"></td>
-          <td onclick="set('c76');" id="c76"></td>
-          <td onclick="set('c77');" id="c77"></td>
-        </tr>
-      </table>
-      <table>
-        <tr>
-          <td onclick="set('c6');" id="c6"></td>
-          <td onclick="set('c7');" id="c7"></td>
-          <td onclick="set('c8');" id="c8"></td>
-        </tr>
-        <tr>
-          <td onclick="set('c15');" id="c15"></td>
-          <td onclick="set('c16');" id="c16"></td>
-          <td onclick="set('c17');" id="c17"></td>
-        </tr>
-        <tr>
-          <td onclick="set('c24');" id="c24"></td>
-          <td onclick="set('c25');" id="c25"></td>
-          <td onclick="set('c26');" id="c26"></td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <td onclick="set('c33');" id="c33"></td>
-          <td onclick="set('c34');" id="c34"></td>
-          <td onclick="set('c35');" id="c35"></td>
-        </tr>
-        <tr>
-          <td onclick="set('c42');" id="c42"></td>
-          <td onclick="set('c43');" id="c43"></td>
-          <td onclick="set('c44');" id="c44"></td>
-        </tr>
-        <tr>
-          <td onclick="set('c51');" id="c51"></td>
-          <td onclick="set('c52');" id="c52"></td>
-          <td onclick="set('c53');" id="c53"></td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <td onclick="set('c60');" id="c60"></td>
-          <td onclick="set('c61');" id="c61"></td>
-          <td onclick="set('c62');" id="c62"></td>
-        </tr>
-        <tr>
-          <td onclick="set('c69');" id="c69"></td>
-          <td onclick="set('c70');" id="c70"></td>
-          <td onclick="set('c71');" id="c71"></td>
-        </tr>
-        <tr>
-          <td onclick="set('c78');" id="c78"></td>
-          <td onclick="set('c79');" id="c79"></td>
-          <td onclick="set('c80');" id="c80"></td>
-        </tr>
-      </table>
-    </div>
-  </div>
-  <label style="color:red" id="wrongElement"></label>
-  <br>
-  <br>
-  <!-- Number Pad -->
-  <div id="buttonContainer">
-    <div class="optionContainer">
-      <div class="optionHolder">
-        <button onclick="menu()" class="option" id="menu"></button>
+  <section id="difficultyPromptElement">
+    <!-- Difficulty -->
+    <label for="difficultyElement">Set difficulty to:</label>
+    <select onchange="setCells()" id="difficultyElement">
+      <option value="81"></option>
+      <option value="45">Beginner</option>
+      <option value="40">Easy</option>
+      <option value="35">Medium</option>
+      <option value="30">Hard</option>
+      <option value="0">Expert</option>
+    </select>
+  </section>
+  <section id="gameElement">
+    <!-- Sudoku Grid -->
+    <div id="gridContainer">
+      <div id="gridHolder">
+        <table>
+          <tr>
+            <td onclick="set('c0');" id="c0"></td>
+            <td onclick="set('c1');" id="c1"></td>
+            <td onclick="set('c2');" id="c2"></td>
+          </tr>
+          <tr>
+            <td onclick="set('c9');" id="c9"></td>
+            <td onclick="set('c10');" id="c10"></td>
+            <td onclick="set('c11');" id="c11"></td>
+          </tr>
+          <tr>
+            <td onclick="set('c18');" id="c18"></td>
+            <td onclick="set('c19');" id="c19"></td>
+            <td onclick="set('c20');" id="c20"></td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td onclick="set('c27');" id="c27"></td>
+            <td onclick="set('c28');" id="c28"></td>
+            <td onclick="set('c29');" id="c29"></td>
+          </tr>
+          <tr>
+            <td onclick="set('c36');" id="c36"></td>
+            <td onclick="set('c37');" id="c37"></td>
+            <td onclick="set('c38');" id="c38"></td>
+          </tr>
+          <tr>
+            <td onclick="set('c45');" id="c45"></td>
+            <td onclick="set('c46');" id="c46"></td>
+            <td onclick="set('c47');" id="c47"></td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td onclick="set('c54');" id="c54"></td>
+            <td onclick="set('c55');" id="c55"></td>
+            <td onclick="set('c56');" id="c56"></td>
+          </tr>
+          <tr>
+            <td onclick="set('c63');" id="c63"></td>
+            <td onclick="set('c64');" id="c64"></td>
+            <td onclick="set('c65');" id="c65"></td>
+          </tr>
+          <tr>
+            <td onclick="set('c72');" id="c72"></td>
+            <td onclick="set('c73');" id="c73"></td>
+            <td onclick="set('c74');" id="c74"></td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td onclick="set('c3');" id="c3"></td>
+            <td onclick="set('c4');" id="c4"></td>
+            <td onclick="set('c5');" id="c5"></td>
+          </tr>
+          <tr>
+            <td onclick="set('c12');" id="c12"></td>
+            <td onclick="set('c13');" id="c13"></td>
+            <td onclick="set('c14');" id="c14"></td>
+          </tr>
+          <tr>
+            <td onclick="set('c21');" id="c21"></td>
+            <td onclick="set('c22');" id="c22"></td>
+            <td onclick="set('c23');" id="c23"></td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td onclick="set('c30');" id="c30"></td>
+            <td onclick="set('c31');" id="c31"></td>
+            <td onclick="set('c32');" id="c32"></td>
+          </tr>
+          <tr>
+            <td onclick="set('c39');" id="c39"></td>
+            <td onclick="set('c40');" id="c40"></td>
+            <td onclick="set('c41');" id="c41"></td>
+          </tr>
+          <tr>
+            <td onclick="set('c48');" id="c48"></td>
+            <td onclick="set('c49');" id="c49"></td>
+            <td onclick="set('c50');" id="c50"></td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td onclick="set('c57');" id="c57"></td>
+            <td onclick="set('c58');" id="c58"></td>
+            <td onclick="set('c59');" id="c59"></td>
+          </tr>
+          <tr>
+            <td onclick="set('c66');" id="c66"></td>
+            <td onclick="set('c67');" id="c67"></td>
+            <td onclick="set('c68');" id="c68"></td>
+          </tr>
+          <tr>
+            <td onclick="set('c75');" id="c75"></td>
+            <td onclick="set('c76');" id="c76"></td>
+            <td onclick="set('c77');" id="c77"></td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td onclick="set('c6');" id="c6"></td>
+            <td onclick="set('c7');" id="c7"></td>
+            <td onclick="set('c8');" id="c8"></td>
+          </tr>
+          <tr>
+            <td onclick="set('c15');" id="c15"></td>
+            <td onclick="set('c16');" id="c16"></td>
+            <td onclick="set('c17');" id="c17"></td>
+          </tr>
+          <tr>
+            <td onclick="set('c24');" id="c24"></td>
+            <td onclick="set('c25');" id="c25"></td>
+            <td onclick="set('c26');" id="c26"></td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td onclick="set('c33');" id="c33"></td>
+            <td onclick="set('c34');" id="c34"></td>
+            <td onclick="set('c35');" id="c35"></td>
+          </tr>
+          <tr>
+            <td onclick="set('c42');" id="c42"></td>
+            <td onclick="set('c43');" id="c43"></td>
+            <td onclick="set('c44');" id="c44"></td>
+          </tr>
+          <tr>
+            <td onclick="set('c51');" id="c51"></td>
+            <td onclick="set('c52');" id="c52"></td>
+            <td onclick="set('c53');" id="c53"></td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td onclick="set('c60');" id="c60"></td>
+            <td onclick="set('c61');" id="c61"></td>
+            <td onclick="set('c62');" id="c62"></td>
+          </tr>
+          <tr>
+            <td onclick="set('c69');" id="c69"></td>
+            <td onclick="set('c70');" id="c70"></td>
+            <td onclick="set('c71');" id="c71"></td>
+          </tr>
+          <tr>
+            <td onclick="set('c78');" id="c78"></td>
+            <td onclick="set('c79');" id="c79"></td>
+            <td onclick="set('c80');" id="c80"></td>
+          </tr>
+        </table>
       </div>
     </div>
-    <div class="optionContainer">
-      <div class="optionHolder">
-        <button onclick="changeMove(-1)" class="option" id="undo"></button>
+    <label style="color:red" id="wrongElement"></label>
+    <br>
+    <br>
+    <!-- Number Pad -->
+    <div id="buttonContainer">
+      <div class="optionContainer">
+        <div class="optionHolder">
+          <button onclick="menu()" class="option" id="menu"></button>
+        </div>
       </div>
-    </div>
-    <div class="optionContainer" id="selectionContainer">
-      <div class="optionHolder">
-        <button onclick="updateNoteMode()" id="selectionElement"></button>
-        <div id="labelHolder">
-          <label id="counterElement"> </label>
+      <div class="optionContainer">
+        <div class="optionHolder">
+          <button onclick="changeMove(-1)" class="option" id="undo"></button>
+        </div>
+      </div>
+      <div class="optionContainer" id="selectionContainer">
+        <div class="optionHolder">
+          <button onclick="updateNoteMode()" id="selectionElement"></button>
+          <div id="labelHolder">
+            <label id="counterElement"> </label>
+          </div>
+        </div>
+      </div>
+      <div class="optionContainer">
+        <div class="optionHolder">
+          <button onclick="changeMove(1)" class="option" id="redo"></button>
+        </div>
+      </div>
+      <div class="optionContainer">
+        <div class="optionHolder">
+          <button onclick="restart()" class="option" id="restart"></button>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <!-- Numbers -->
+      <div class="optionContainer">
+        <div class="optionHolder">
+          <button onclick="select(1)">1</button>
+        </div>
+      </div>
+      <div class="optionContainer">
+        <div class="optionHolder">
+          <button onclick="select(2)">2</button>
+        </div>
+      </div>
+      <div class="optionContainer">
+        <div class="optionHolder">
+          <button onclick="select(3)">3</button>
+        </div>
+      </div>
+      <div class="optionContainer">
+        <div class="optionHolder">
+          <button onclick="select(4)">4</button>
+        </div>
+      </div>
+      <div class="optionContainer">
+        <div class="optionHolder">
+          <button onclick="select(5)">5</button>
+        </div>
+      </div>
+      <br>
+      <div class="optionContainer">
+        <div class="optionHolder">
+          <button onclick="select(6)">6</button>
+        </div>
+      </div>
+      <div class="optionContainer">
+        <div class="optionHolder">
+          <button onclick="select(7)">7</button>
+        </div>
+      </div>
+      <div class="optionContainer">
+        <div class="optionHolder">
+          <button onclick="select(8)">8</button>
+        </div>
+      </div>
+      <div class="optionContainer">
+        <div class="optionHolder">
+          <button onclick="select(9)">9</button>
+        </div>
+      </div>
+      <div class="optionContainer">
+        <div class="optionHolder">
+          <button onclick="select('0')" id="eraser"> </button>
         </div>
       </div>
     </div>
-    <div class="optionContainer">
-      <div class="optionHolder">
-        <button onclick="changeMove(1)" class="option" id="redo"></button>
-      </div>
-    </div>
-    <div class="optionContainer">
-      <div class="optionHolder">
-        <button onclick="restart()" class="option" id="restart"></button>
-      </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <!-- Numbers -->
-    <div class="optionContainer">
-      <div class="optionHolder">
-        <button onclick="select(1)">1</button>
-      </div>
-    </div>
-    <div class="optionContainer">
-      <div class="optionHolder">
-        <button onclick="select(2)">2</button>
-      </div>
-    </div>
-    <div class="optionContainer">
-      <div class="optionHolder">
-        <button onclick="select(3)">3</button>
-      </div>
-    </div>
-    <div class="optionContainer">
-      <div class="optionHolder">
-        <button onclick="select(4)">4</button>
-      </div>
-    </div>
-    <div class="optionContainer">
-      <div class="optionHolder">
-        <button onclick="select(5)">5</button>
-      </div>
-    </div>
-    <br>
-    <div class="optionContainer">
-      <div class="optionHolder">
-        <button onclick="select(6)">6</button>
-      </div>
-    </div>
-    <div class="optionContainer">
-      <div class="optionHolder">
-        <button onclick="select(7)">7</button>
-      </div>
-    </div>
-    <div class="optionContainer">
-      <div class="optionHolder">
-        <button onclick="select(8)">8</button>
-      </div>
-    </div>
-    <div class="optionContainer">
-      <div class="optionHolder">
-        <button onclick="select(9)">9</button>
-      </div>
-    </div>
-    <div class="optionContainer">
-      <div class="optionHolder">
-        <button onclick="select('0')" id="eraser"> </button>
-      </div>
-    </div>
-  </div>
+  </section>
+  <section id="menuElement">
   <!-- Menu -->
-  <!--home,save,auto save,autocheck,auto remove notes,theme,help -> controls, gameplay, strategies
-                                                      -->
-
+  <!--home,save,auto save,autocheck,auto remove notes,theme,help -> controls, gameplay, strategies-->
+</section>
 </body>
 </html>
