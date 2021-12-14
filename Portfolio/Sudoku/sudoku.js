@@ -10,7 +10,7 @@ var currentMove = 0;
 var difficulty = 0;
 var currentCell = 0;
 var noteMode = 0;
-var counterElement, selectionElement, selectionHTML;
+var counterElement.innerHTML, selectionElement;
 
 function c(c) {
   console.log(c);
@@ -20,9 +20,8 @@ function c(c) {
 
 function askDifficulty() {
   c("askDifficulty()");
-  counterElement = document.getElementById("counterElement");
+  counterElement.innerHTML = document.getElementById("counterElement.innerHTML");
   selectionElement = document.getElementById("selectionElement");
-  selectionHTML=selectionElement.innerHTML;
   //beginner 45
   //easy 40
   //med 35
@@ -157,7 +156,7 @@ function setGrid() {
       tested.push(cellNumber);
       //is this cell solvable?
       if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber)) {
-        c("a"); c("b"); c("c"); c("d"); c("e"); c("f"); numberTotals[displayCells[cellNumber]]++;
+        numberTotals[displayCells[cellNumber]]++;
         displayCells[cellNumber] = 0;
         userCells.push(cellNumber);
         stop--;
@@ -301,10 +300,12 @@ function select(number) {
   }
   /* Select Number */
   if (number != 0) {
+    c("b");
     counterElement.innerHTML = numberTotals[number];
-    selectionHTML = number;
+    selectionElement.innerHTML = number;
   } else {
-    selectionHTML = " ";
+    c("c");
+    selectionElement.innerHTML = " ";
     counterElement.innerHTML = "Erase";
   }
   if (noteMode == 2) {
@@ -366,7 +367,7 @@ function set(cellId, direction = 0) {
         cellId,
         cellElement.innerHTML,
         cellNoteMode];
-      newHTML = selectionHTML;
+      newHTML = selectionElement.innerHTML;
       cellNoteMode = noteMode;
       for (i = redoList.length; i > currentMove; i--) {
         redoList.splice(i, 1);
@@ -377,8 +378,9 @@ function set(cellId, direction = 0) {
     }
     if (cellElement.innerHTML - 0 > 0) {
       numberTotals[cellElement.innerHTML]++;
-      if (cellElement.innerHTML == selectionHTML) {
+      if (cellElement.innerHTML == selectionElement.innerHTML) {
         counterElement.innerHTML = numberTotals[cellElement.innerHTML];
+        c("a");
       }}
     /* Erase */
     if (cellNoteMode == -1) {
@@ -420,8 +422,9 @@ function set(cellId, direction = 0) {
       displayCells[cellNumber] = newHTML;
       cellElement.innerHTML = newHTML;
       numberTotals[cellElement.innerHTML]--;
+      c("d");
       counterElement.innerHTML = numberTotals[cellElement.innerHTML];
-      if (newHTML == selectionHTML) {
+      if (newHTML == selectionElement.innerHTML) {
         cellElement.style.backgroundColor = "#3388dd";
       }
       noteCells[cellNumber] = [0,
@@ -521,7 +524,7 @@ function updateNoteMode() {
   else {
     selectionElement.style.color = "black";
     selectionElement.style.fontSize = "100%";
-    switch (selectionHTML * 1) {
+    switch (selectionElement.innerHTML * 1) {
       case 1:
         selectionElement.style.padding = "0 60% 60% 0";
         break;
