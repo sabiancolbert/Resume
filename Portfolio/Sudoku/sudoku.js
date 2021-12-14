@@ -357,12 +357,10 @@ function set(cellId, direction = 0) {
     if (direction ==-1) {
       newHTML = undoList[currentMove][1];
       cellNoteMode = undoList[currentMove][2];
-    } 
-    else if(direction == 1){
+    } else if (direction == 1) {
       newHTML = redoList[currentMove][1];
       cellNoteMode = redoList[currentMove][2];
-    }
-    else {
+    } else {
       undoList[currentMove] = [
         cellId,
         cellElement.innerHTML,
@@ -449,14 +447,18 @@ function set(cellId, direction = 0) {
         cellNoteMode];
     }
   }
-  c("Current Move: "+currentMove+" total: "+moveList.length+" Move List:"+moveList);
 }
 
 function changeMove(direction) {
   c("changeMove("+direction+")");
-  if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < moveList.length) {
+  if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < redoList.length) {
     currentMove += direction;
-    set(moveList[currentMove][0], direction);
+    if(direction==-1){
+    set(undoList[currentMove][0], direction);
+  }
+  else{
+    set(redoList[currentMove][0], direction);
+  }
   }
 }
 
