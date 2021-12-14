@@ -4,7 +4,8 @@ var displayCells = new Array([]);
 var userCells = new Array([]);
 var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 var noteCells = new Array(81);
-var moveList = new Array();
+var undoList = new Array();
+var redoList = new Array();
 var currentMove = 0;
 var difficulty = 0;
 var currentCell = 0;
@@ -339,8 +340,8 @@ function select(number) {
   }
 }
 
-function set(cellId, changingMove = false) {
-  c("set("+cellId+","+changingMove+")");
+function set(cellId, direction = 0) {
+  c("set("+cellId+","+direction+")");
   var cellNumber = cellId.substring(1, cellId.length) * 1;
   if (userCells.includes(cellNumber)) {
     var cellElement = document.getElementById(cellId);
@@ -353,11 +354,16 @@ function set(cellId, changingMove = false) {
       cellNoteMode = 2;
     }
     var newHTML = "";
-    if (changingMove) {
-      newHTML = moveList[currentMove][1];
-      cellNoteMode = moveList[currentMove][2];
-    } else {
-      moveList[currentMove] = [
+    if (direction ==-1) {
+      newHTML = undoList[currentMove][1];
+      cellNoteMode = undoList[currentMove][2];
+    } 
+    else if(direction == 1){
+      newHTML = redoList[currentMove][1];
+      cellNoteMode = redoList[currentMove][2];
+    }
+    else {
+      undoList[currentMove] = [
         cellId,
         cellElement.innerHTML,
         cellNoteMode];
@@ -435,12 +441,12 @@ function set(cellId, changingMove = false) {
       }
 
     }
-    if (!changingMove) {
+    if (direction == 0) {
       currentMove++;
-        moveList[currentMove] = [
-          cellId,
-          cellElement.innerHTML,
-          cellNoteMode];
+      redoList[currentMove] = [
+        cellId,
+        cellElement.innerHTML,
+        cellNoteMode];
     }
   }
   c("Current Move: "+currentMove+" total: "+moveList.length+" Move List:"+moveList);
@@ -450,8 +456,7 @@ function changeMove(direction) {
   c("changeMove("+direction+")");
   if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < moveList.length) {
     currentMove += direction;
-    c(currentMove);
-    set(moveList[currentMove][0], true);
+    set(moveList[currentMove][0], direction);
   }
 }
 
