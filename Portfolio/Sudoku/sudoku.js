@@ -367,6 +367,10 @@ function set(cellId, direction = 0) {
         cellNoteMode];
       newHTML = selectionElement.innerHTML;
       cellNoteMode = noteMode;
+for(i=redoList.length;i>currentMove;i--){
+      //HERE clear redo list
+  redoList.splice(i,1);
+}
     }
     if (newHTML == " ") {
       cellNoteMode==-1;
