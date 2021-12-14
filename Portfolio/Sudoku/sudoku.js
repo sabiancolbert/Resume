@@ -455,8 +455,8 @@ function set(cellId, changingMove = false) {
           cellId,
           cellElement.innerHTML,
           cellNoteMode];
-
       }
+      currentMove++;
     }
   }
   c("Current Move: "+currentMove+" total: "+moveList.length+" Move List:"+moveList);
