@@ -442,11 +442,6 @@ function set(cellId, changingMove = false) {
           cellId,
           cellElement.innerHTML,
           cellNoteMode]);
-      } else {
-        moveList[currentMove] = [
-          cellId,
-          cellElement.innerHTML,
-          cellNoteMode];
       }
     }
   }
