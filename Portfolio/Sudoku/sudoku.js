@@ -372,8 +372,7 @@ function set(cellId, direction = 0) {
         redoList.splice(i, 1);
       }
     }
-    c("&&"+newHTML+"&");
-    if (newHTML == " ") {
+    if (newHTML == " " || newHTML =="") {
       cellNoteMode=-1;
     }
     if (cellElement.innerHTML - 0 > 0) {
