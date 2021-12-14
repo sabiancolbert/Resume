@@ -358,10 +358,10 @@ function set(cellId, changingMove = false) {
       newHTML = moveList[currentMove][1];
       cellNoteMode = moveList[currentMove][2];
     } else {
-    moveList.push([
-      cellId,
-      cellElement.innerHTML,
-      cellNoteMode]);
+      moveList.push([
+        cellId,
+        cellElement.innerHTML,
+        cellNoteMode]);
       newHTML = selectionElement.innerHTML;
       cellNoteMode = noteMode;
     }
@@ -436,8 +436,8 @@ function set(cellId, changingMove = false) {
       }
 
     }
-    lastMove++;
     if (!changingMove) {
+    lastMove++;
       currentMove = lastMove;
     }
   }
