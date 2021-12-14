@@ -373,7 +373,7 @@ function set(cellId, direction = 0) {
       }
     }
     if (newHTML == " ") {
-      cellNoteMode==-1;
+      cellNoteMode=-1;
     }
     if (cellElement.innerHTML - 0 > 0) {
       numberTotals[cellElement.innerHTML]++;
@@ -420,7 +420,7 @@ function set(cellId, direction = 0) {
       numberTotals[cellElement.innerHTML]--;
       counterElement.innerHTML = numberTotals[cellElement.innerHTML];
       if (newHTML == selectionElement.innerHTML) {
-        cellElement.style.backgroundColor = "red";
+        cellElement.style.backgroundColor = "#3388dd";
       }
       noteCells[cellNumber] = [0,
         0,
