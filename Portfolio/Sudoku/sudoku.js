@@ -10,7 +10,7 @@ var currentMove = 0;
 var difficulty = 0;
 var currentCell = 0;
 var noteMode = 0;
-var selectionElement, counterElement;
+var counterElement, selectionElement, selectionHTML;
 
 function c(c) {
   console.log(c);
@@ -20,9 +20,9 @@ function c(c) {
 
 function askDifficulty() {
   c("askDifficulty()");
-  selectionElement = document.getElementById("selectionElement");
   counterElement = document.getElementById("counterElement");
-
+  selectionElement = document.getElementById("selectionElement");
+  selectionHTML=selectionElement.innerHTML;
   //beginner 45
   //easy 40
   //med 35
@@ -157,7 +157,7 @@ function setGrid() {
       tested.push(cellNumber);
       //is this cell solvable?
       if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber)) {
-        numberTotals[displayCells[cellNumber]]++;
+        c("a"); c("b"); c("c"); c("d"); c("e"); c("f"); numberTotals[displayCells[cellNumber]]++;
         displayCells[cellNumber] = 0;
         userCells.push(cellNumber);
         stop--;
@@ -302,9 +302,9 @@ function select(number) {
   /* Select Number */
   if (number != 0) {
     counterElement.innerHTML = numberTotals[number];
-    selectionElement.innerHTML = number;
+    selectionHTML = number;
   } else {
-    selectionElement.innerHTML = " ";
+    selectionHTML = " ";
     counterElement.innerHTML = "Erase";
   }
   if (noteMode == 2) {
@@ -366,7 +366,7 @@ function set(cellId, direction = 0) {
         cellId,
         cellElement.innerHTML,
         cellNoteMode];
-      newHTML = selectionElement.innerHTML;
+      newHTML = selectionHTML;
       cellNoteMode = noteMode;
       for (i = redoList.length; i > currentMove; i--) {
         redoList.splice(i, 1);
@@ -377,9 +377,9 @@ function set(cellId, direction = 0) {
     }
     if (cellElement.innerHTML - 0 > 0) {
       numberTotals[cellElement.innerHTML]++;
-      if(cellElement.innerHTML == selectionElement.innerHTML){
+      if (cellElement.innerHTML == selectionHTML) {
         counterElement.innerHTML = numberTotals[cellElement.innerHTML];
-    }}
+      }}
     /* Erase */
     if (cellNoteMode == -1) {
       c("set - erase cell");
@@ -421,7 +421,7 @@ function set(cellId, direction = 0) {
       cellElement.innerHTML = newHTML;
       numberTotals[cellElement.innerHTML]--;
       counterElement.innerHTML = numberTotals[cellElement.innerHTML];
-      if (newHTML == selectionElement.innerHTML) {
+      if (newHTML == selectionHTML) {
         cellElement.style.backgroundColor = "#3388dd";
       }
       noteCells[cellNumber] = [0,
@@ -521,7 +521,7 @@ function updateNoteMode() {
   else {
     selectionElement.style.color = "black";
     selectionElement.style.fontSize = "100%";
-    switch (selectionElement.innerHTML * 1) {
+    switch (selectionHTML * 1) {
       case 1:
         selectionElement.style.padding = "0 60% 60% 0";
         break;
