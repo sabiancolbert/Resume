@@ -18,8 +18,8 @@ function c(c) {
 
 /* Game Creation */
 
-function askDifficulty() {
-  c("askDifficulty()");
+function setCells() {
+  c("setCells()");
   counterElement = document.getElementById("counterElement");
   selectionElement = document.getElementById("selectionElement");
   difficulty = document.getElementById("difficultyElement").value;
@@ -30,12 +30,6 @@ function askDifficulty() {
   //expert 0
   //HERE adjust difficulty to rules
   c("askDifficulty - difficulty = "+difficulty);
-  setCells();
-}
-
-//generate number board
-function setCells() {
-  c("setCells()");
   var attemptedNumbers = new Array(81);
   for (i = 0; i < 81; i++) {
     attemptedNumbers[i] = [0];
