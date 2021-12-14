@@ -300,11 +300,9 @@ function select(number) {
   }
   /* Select Number */
   if (number != 0) {
-    c("b");
     counterElement.innerHTML = numberTotals[number];
     selectionElement.innerHTML = number;
   } else {
-    c("c");
     selectionElement.innerHTML = " ";
     counterElement.innerHTML = "Erase";
   }
@@ -380,7 +378,6 @@ function set(cellId, direction = 0) {
       numberTotals[cellElement.innerHTML]++;
       if (cellElement.innerHTML == selectionElement.innerHTML) {
         counterElement.innerHTML = numberTotals[cellElement.innerHTML];
-        c("a");
       }}
     /* Erase */
     if (cellNoteMode == -1) {
@@ -393,7 +390,6 @@ function set(cellId, direction = 0) {
     /* Note Number */
     else if (cellNoteMode == 2) {
       /* Remove Note From Cell */
-      c(cellNumber+" "+newHTML +" "+noteCells[0][1]);
       if (noteCells[cellNumber][newHTML] > 0) {
         c("set - remove note from cell");
         document.getElementById("n"+newHTML+cellNumber).style.visibility = "hidden";
@@ -422,10 +418,9 @@ function set(cellId, direction = 0) {
       displayCells[cellNumber] = newHTML;
       cellElement.innerHTML = newHTML;
       numberTotals[cellElement.innerHTML]--;
-      c("d");//HERE HERE this misfires clunterelement
-if(selectionElement.innerHTML==cellElement.innerHTML){
-      counterElement.innerHTML = numberTotals[cellElement.innerHTML];
-}
+      if (selectionElement.innerHTML == cellElement.innerHTML) {
+        counterElement.innerHTML = numberTotals[cellElement.innerHTML];
+      }
       if (newHTML == selectionElement.innerHTML) {
         cellElement.style.backgroundColor = "#3388dd";
       }
