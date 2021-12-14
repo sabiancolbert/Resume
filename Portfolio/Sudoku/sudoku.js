@@ -22,16 +22,14 @@ function askDifficulty() {
   c("askDifficulty()");
   counterElement = document.getElementById("counterElement");
   selectionElement = document.getElementById("selectionElement");
+  difficulty = document.getElementById("difficultyElement").value;
   //beginner 45
   //easy 40
   //med 35
   //hard 30
-  //expert 25
-difficulty=document.getElementById("difficultyElement").value;
-c("askDifficulty - difficulty = "+difficulty);
-  //HERE HERE ask difficulty
-  //adjust difficulty to rules
-  /* Generate Number Board */
+  //expert 0
+  //HERE adjust difficulty to rules
+  c("askDifficulty - difficulty = "+difficulty);
   setCells();
 }
 
@@ -473,12 +471,12 @@ function changeMove(direction) {
       }
     } else {
       /* Redo Restart */
-      if(redoList[currentMove][0] == 81){
+      if (redoList[currentMove][0] == 81) {
         //HERE
       }
       /* Normal Redo */
-      else{
-      set(redoList[currentMove][0], direction);
+      else {
+        set(redoList[currentMove][0], direction);
       }
     }
   }
