@@ -25,7 +25,7 @@ body {
 #gameElement {
   visibility: hidden;
 }
-#gridContainer {
+#gridContainer, #difficultyContainer {
   position: relative;
   width: 98vmin;
   padding-top: 100%;
@@ -33,7 +33,7 @@ body {
   border: 1vmin solid #3388dd;
   border-radius: 5%;
 }
-#gridHolder {
+#gridHolder #difficultyHolder {
   position: absolute;
   top: 0;
   right: 0;
@@ -158,8 +158,8 @@ button:active {
 /* Menu */
 #menuElement {
   visibility: hidden;
-  width:50%;
-  height:50%;
+  width: 50%;
+  height: 50%;
   background-color: #ccccee;
 }
 /* Notes */
