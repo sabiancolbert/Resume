@@ -357,11 +357,10 @@ function set(cellId, changingMove = false) {
       newHTML = moveList[currentMove][1];
       cellNoteMode = moveList[currentMove][2];
     } else {
-      
-        moveList[currentMove] = [
-          cellId,
-          cellElement.innerHTML,
-          cellNoteMode];
+      moveList[currentMove] = [
+        cellId,
+        cellElement.innerHTML,
+        cellNoteMode];
       newHTML = selectionElement.innerHTML;
       cellNoteMode = noteMode;
     }
