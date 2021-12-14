@@ -10,7 +10,7 @@ var currentMove = 0;
 var difficulty = 0;
 var currentCell = 0;
 var noteMode = 0;
-var counterElement.innerHTML, selectionElement;
+var counterElement, selectionElement;
 
 function c(c) {
   console.log(c);
