@@ -340,15 +340,16 @@ function select(number) {
   }
 }
 
-function set(id, move = -1) {
+function set(id, changingMove= false) {
   c("set("+id+")");
   var cellElement = document.getElementById(id);
   var cellNumber = id.substring(1, id.length) * 1;
+  var cellNoteMode =2;
   var newHTML = "";
-  if (move < 0) {
-    newHTML = selectionElement.innerHTML;
+  if (changingMove) {
+    newHTML = moveList[currentMove][1];
   } else {
-    newHTML = moveList[move][1];
+    newHTML = selectionElement.innerHTML;
   }
   if (userCells.includes(cellNumber)) {
     /* Update Old Number */
@@ -386,61 +387,64 @@ function set(id, move = -1) {
         if (newHTML.includes("div")) {
           cellElement.innerHTML = newHTML;
         }
-        }
       }
-      /* Regular Number */
-      else {
-        c("set - add number to cell");
-        if (displayCells[cellNumber] != newHTML || noteMode != noteCells[cellNumber]) {
+    }
+    /* Regular Number */
+    else {
+      c("set - add number to cell");
+      if (displayCells[cellNumber] != newHTML || noteMode != noteCells[cellNumber]) {
+        displayCells[cellNumber] = newHTML;
+        cellElement.innerHTML = newHTML;
+        numberTotals[cellElement.innerHTML]--;
+        counterElement.innerHTML = numberTotals[cellElement.innerHTML];
+        cellElement.style.backgroundColor = "#3388dd";
+        noteCells[cellNumber] = [0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0];
+        if (noteMode == 1 || moveList[currentMove][2] == 1) {
+          cellElement.style.color = "#ccccee";
+          cellElement.style.fontSize = "125%";
+          cellNoteMode = 1;
+        } else {
           displayCells[cellNumber] = newHTML;
-          cellElement.innerHTML = newHTML;
-          numberTotals[cellElement.innerHTML]--;
-          counterElement.innerHTML = numberTotals[cellElement.innerHTML];
-          cellElement.style.backgroundColor = "#3388dd";
-          noteCells[cellNumber] = [0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0];
-          if (noteMode == 1 || moveList[currentMove][2] == 1) {
-            cellElement.style.color = "#ccccee";
-            cellElement.style.fontSize = "125%";
-          } else {
-            displayCells[cellNumber] = newHTML;
-            cellElement.style.color = "black";
-            cellElement.style.fontSize = "150%";
-            if (check()) {
-              autoRemoveNotes();
-            }
+          cellElement.style.color = "black";
+          cellElement.style.fontSize = "150%";
+          cellNoteMode = 0;
+          if (check()) {
+            autoRemoveNotes();
           }
         }
       }
-      /* Update Move List */
-      moveList.push([cellElement.id, cellElement.innerHTML])
-      lastMove++;
-      if (move < 0) {
-        currentMove = lastMove;
-      }
+    }
+    /* Update Move List */
+    moveList.push([cellElement.id, cellElement.innerHTML, cellNoteMode])
+    lastMove++;
+    if (!changingMove) {
+      currentMove = lastMove;
     }
   }
+}
 
-  function changeMove(direction) {
-    c("changeMove("+direction+")");
-    if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < lastMove) {
-      currentMove += direction;
-      set(moveList[currentMove][0],);
-      /*numberTotals[move[1].innerHTML]++;
+function changeMove(direction) {
+  c("changeMove("+direction+")");
+  if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < lastMove) {
+    currentMove += direction;
+    c("current" + currentMove + "last"+lastMove);
+    set(moveList[currentMove][0], true);
+    /*numberTotals[move[1].innerHTML]++;
     //HERE HERE HERE
     if(selectionElement.innerHTML==move[1].innerHTML){
       counterElement.innerHTML = numberTotals[selectionElement.innerHTML];
     }
     /* Update Old Cell Number */
-      /*move[1].innerHTML = move[2];
+    /*move[1].innerHTML = move[2];
     if (move[0]!=2){
       displayCells[(move[1].id+"0").substring(1,2)]=move[2];
     }
@@ -454,102 +458,102 @@ function set(id, move = -1) {
       counterElement.innerHTML=numberTotals[move[2]];
     }
   */
-    }
   }
+}
 
-  function check() {
-    var result = true;
-    //if autocheck in settings
-    if (false) {
-      var counter = 0;
-      for (i = 0; i < 81; i++) {
-        //compare displayCells to cells
-        if (true)//HERE
-        {
-          counter++;
-          //element.style.color = red
-          result = false
-        }
-      }
-      document.getElementById("wrongElement").innerHTML = counter;
-    }
-    c("check() = "+result);
-    return result;
-  }
-
-  function autoRemoveNotes() {
-    c("autoRemoveNotes() =");
-    //if autoremove notes in settings is on
-    if (true) {
-      c("true");
-      //HERE
-      //remove horizontal, vertical, and box
-    } else {
-      c("false");
-      {}
-    }
-  }
-
-  function updateNoteMode() {
-    c("updateNoteMode()");
-    noteMode++;
-    selectionElement.style.padding = 0;
-    /* Regular Number Mode */
-    if (noteMode > 2) {
-      noteMode = 0;
-      selectionElement.style.fontSize = "300%";
-    }
-    /* Grey Note Number Mode */
-    else if (noteMode == 1) {
-      selectionElement.style.color = "#777777";
-      selectionElement.style.fontSize = "225%";
-
-    }
-    /* Note Mode */
-    else {
-      selectionElement.style.color = "black";
-      selectionElement.style.fontSize = "100%";
-      switch (selectionElement.innerHTML * 1) {
-        case 1:
-          selectionElement.style.padding = "0 60% 60% 0";
-          break;
-        case 2:
-          selectionElement.style.padding = "0 0 60% 0";
-          break;
-        case 3:
-          selectionElement.style.padding = "0 0 60% 60%";
-          break;
-        case 4:
-          selectionElement.style.padding = "0 60% 0 0";
-          break;
-        case 5:
-          selectionElement.style.padding = "0 0 0 0";
-          break;
-        case 6:
-          selectionElement.style.padding = "0 0 0 60%";
-          break;
-        case 7:
-          selectionElement.style.padding = "60% 60% 0 0";
-          break;
-        case 8:
-          selectionElement.style.padding = "60% 0 0 0";
-          break;
-        case 9:
-          selectionElement.style.padding = "60% 0 0 60%";
-          break;
+function check() {
+  var result = true;
+  //if autocheck in settings
+  if (false) {
+    var counter = 0;
+    for (i = 0; i < 81; i++) {
+      //compare displayCells to cells
+      if (true)//HERE
+      {
+        counter++;
+        //element.style.color = red
+        result = false
       }
     }
+    document.getElementById("wrongElement").innerHTML = counter;
   }
+  c("check() = "+result);
+  return result;
+}
 
-  function restart() {
-    c("restart()");
+function autoRemoveNotes() {
+  c("autoRemoveNotes() =");
+  //if autoremove notes in settings is on
+  if (true) {
+    c("true");
+    //HERE
+    //remove horizontal, vertical, and box
+  } else {
+    c("false");
+    {}
   }
+}
 
-  function menu() {
-    c("menu()");
+function updateNoteMode() {
+  c("updateNoteMode()");
+  noteMode++;
+  selectionElement.style.padding = 0;
+  /* Regular Number Mode */
+  if (noteMode > 2) {
+    noteMode = 0;
+    selectionElement.style.fontSize = "300%";
   }
+  /* Grey Note Number Mode */
+  else if (noteMode == 1) {
+    selectionElement.style.color = "#777777";
+    selectionElement.style.fontSize = "225%";
 
-  /*//HERE
+  }
+  /* Note Mode */
+  else {
+    selectionElement.style.color = "black";
+    selectionElement.style.fontSize = "100%";
+    switch (selectionElement.innerHTML * 1) {
+      case 1:
+        selectionElement.style.padding = "0 60% 60% 0";
+        break;
+      case 2:
+        selectionElement.style.padding = "0 0 60% 0";
+        break;
+      case 3:
+        selectionElement.style.padding = "0 0 60% 60%";
+        break;
+      case 4:
+        selectionElement.style.padding = "0 60% 0 0";
+        break;
+      case 5:
+        selectionElement.style.padding = "0 0 0 0";
+        break;
+      case 6:
+        selectionElement.style.padding = "0 0 0 60%";
+        break;
+      case 7:
+        selectionElement.style.padding = "60% 60% 0 0";
+        break;
+      case 8:
+        selectionElement.style.padding = "60% 0 0 0";
+        break;
+      case 9:
+        selectionElement.style.padding = "60% 0 0 60%";
+        break;
+    }
+  }
+}
+
+function restart() {
+  c("restart()");
+}
+
+function menu() {
+  c("menu()");
+}
+
+/*//HERE
 capitalize notes
 see if a switch() would be useful anywhere
 have a numbers page when you click the wrong answers button (number of undos, redos, restarts, total time (saved games), ingame time, etc?)
