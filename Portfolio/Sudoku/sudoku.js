@@ -340,7 +340,7 @@ function select(number) {
 }
 
 function set(cellId, changingMove = false) {
-  c("set("+cellId+")");
+  c("set("+cellId+","+changingMove+")");
   var cellNumber = cellId.substring(1, cellId.length) * 1;
   if (userCells.includes(cellNumber)) {
     var cellElement = document.getElementById(cellId);
@@ -357,18 +357,17 @@ function set(cellId, changingMove = false) {
       newHTML = moveList[currentMove][1];
       cellNoteMode = moveList[currentMove][2];
     } else {
-      if(moveList.length == currentMove){
+      if (moveList.length == currentMove) {
         moveList.push([
-        cellId,
-        cellElement.innerHTML,
-        cellNoteMode]);
-      }
-      else{
-      moveList[currentMove]=[
-        cellId,
-        cellElement.innerHTML,
-        cellNoteMode];
-        
+          cellId,
+          cellElement.innerHTML,
+          cellNoteMode]);
+      } else {
+        moveList[currentMove] = [
+          cellId,
+          cellElement.innerHTML,
+          cellNoteMode];
+
       }
       newHTML = selectionElement.innerHTML;
       cellNoteMode = noteMode;
@@ -446,18 +445,17 @@ function set(cellId, changingMove = false) {
     }
     if (!changingMove) {
       currentMove++;
-            if(moveList.length == currentMove){
+      if (moveList.length == currentMove) {
         moveList.push([
-        cellId,
-        cellElement.innerHTML,
-        cellNoteMode]);
-      }
-      else{
-      moveList[currentMove]=[
-        cellId,
-        cellElement.innerHTML,
-        cellNoteMode];
-        
+          cellId,
+          cellElement.innerHTML,
+          cellNoteMode]);
+      } else {
+        moveList[currentMove] = [
+          cellId,
+          cellElement.innerHTML,
+          cellNoteMode];
+
       }
     }
   }
