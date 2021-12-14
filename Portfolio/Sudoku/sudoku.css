@@ -7,19 +7,17 @@ body {
   margin: 0;
 }
 @media screen and (orientation: landscape) {
-  body {
-    /*visibility: hidden;*/
-    max-height:100vmin;
-  }
+  /* HERE */
 }
-  #portraitWarning {
+    /*
+#portraitWarning {
   top: 10%;
   font-size: 300%;
   position: absolute;
   color: white;
   z-index: -1;
   left: 10%;
-}
+}*/
 bold {
   font-weight: 1000;
 }
