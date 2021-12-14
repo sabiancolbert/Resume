@@ -357,18 +357,11 @@ function set(cellId, changingMove = false) {
       newHTML = moveList[currentMove][1];
       cellNoteMode = moveList[currentMove][2];
     } else {
-      if (moveList.length == currentMove) {
-        moveList.push([
-          cellId,
-          cellElement.innerHTML,
-          cellNoteMode]);
-      } else {
+      
         moveList[currentMove] = [
           cellId,
           cellElement.innerHTML,
           cellNoteMode];
-
-      }
       newHTML = selectionElement.innerHTML;
       cellNoteMode = noteMode;
     }
@@ -444,7 +437,7 @@ function set(cellId, changingMove = false) {
 
     }
     if (!changingMove) {
-      //currentMove++;
+      currentMove++;
       if (moveList.length == currentMove) {
         moveList.push([
           cellId,
@@ -456,7 +449,6 @@ function set(cellId, changingMove = false) {
           cellElement.innerHTML,
           cellNoteMode];
       }
-      currentMove++;
     }
   }
   c("Current Move: "+currentMove+" total: "+moveList.length+" Move List:"+moveList);
