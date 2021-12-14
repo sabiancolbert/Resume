@@ -352,7 +352,7 @@ function set(cellId, changingMove = false) {
     } else if (displayCells[cellNumber]==-2) {
       cellNoteMode = 2;
     }
-    if(cellElement.innerHTML==" "){
+    if (cellElement.innerHTML == " ") {
       cellNoteMode==-1;
     }
     moveList.push([cellId, cellElement.innerHTML, cellNoteMode])
@@ -363,7 +363,7 @@ function set(cellId, changingMove = false) {
       newHTML = selectionElement.innerHTML;
       cellNoteMode = noteMode;
     }
-    if(newHTML==" "){
+    if (newHTML == " ") {
       cellNoteMode==-1;
     }
     if (cellElement.innerHTML - 0 > 0 && displayCells[cellNumber]!=-1) {
@@ -439,6 +439,7 @@ function set(cellId, changingMove = false) {
       currentMove = lastMove;
     }
   }
+  c("Current Move: "+currentMove+" Last Move: "+lastMove+" Move List:"+moveList);
 }
 
 function changeMove(direction) {
