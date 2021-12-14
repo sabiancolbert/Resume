@@ -342,24 +342,23 @@ function select(number) {
 
 function set(id, changingMove = false) {
   c("set("+id+")");
+    var cellNumber = id.substring(1, id.length) * 1;
   if (userCells.includes(cellNumber)) {
     var cellElement = document.getElementById(id);
-    var cellNumber = id.substring(1, id.length) * 1;
     var cellNoteMode = 0;
     var newHTML = "";
-    if(displayCells[cellNumber]==-1){
-      cellNoteMode =1;
-    }
-    else if (displayCells[cellNumber]==-2){
-      cellNoteMode=2;
+    if (displayCells[cellNumber]==-1) {
+      cellNoteMode = 1;
+    } else if (displayCells[cellNumber]==-2) {
+      cellNoteMode = 2;
     }
     moveList.push([cellElement.id, cellElement.innerHTML, cellNoteMode])
     if (changingMove) {
       newHTML = moveList[currentMove][1];
-      cellNoteMode=moveList[currentMove][2];
+      cellNoteMode = moveList[currentMove][2];
     } else {
       newHTML = selectionElement.innerHTML;
-      cellNoteMode=noteMode;
+      cellNoteMode = noteMode;
     }
     /* Update Old Number */
     if (cellElement.innerHTML - 0 > 0 && displayCells[cellNumber]!=-1) {
