@@ -447,6 +447,7 @@ function changeMove(direction) {
   if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < lastMove) {
     currentMove += direction;
     c("current" + currentMove + "last"+lastMove);
+    c("HERE "+moveList[currentMove][0]);
     set(moveList[currentMove][0], true);
     /*numberTotals[move[1].innerHTML]++;
     //HERE HERE HERE
