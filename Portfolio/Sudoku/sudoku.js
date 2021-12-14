@@ -6,7 +6,6 @@ var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 var noteCells = new Array(81);
 var moveList = new Array();
 var currentMove = 0;
-var lastMove = 0;
 var difficulty = 0;
 var currentCell = 0;
 var noteMode = 0;
@@ -358,13 +357,21 @@ function set(cellId, changingMove = false) {
       newHTML = moveList[currentMove][1];
       cellNoteMode = moveList[currentMove][2];
     } else {
-      moveList.push([
+      if(moveList.length == currentMove){
+        moveList.push([
         cellId,
         cellElement.innerHTML,
         cellNoteMode]);
+      }
+      else{
+      moveList[currentMove]=[
+        cellId,
+        cellElement.innerHTML,
+        cellNoteMode];
+        
+      }
       newHTML = selectionElement.innerHTML;
       cellNoteMode = noteMode;
-      //HERE cut some of movelist and currentmove and etc
     }
     if (newHTML == " ") {
       cellNoteMode==-1;
@@ -438,16 +445,28 @@ function set(cellId, changingMove = false) {
 
     }
     if (!changingMove) {
-      lastMove++;
-      currentMove = lastMove;
+      currentMove++;
+            if(moveList.length == currentMove){
+        moveList.push([
+        cellId,
+        cellElement.innerHTML,
+        cellNoteMode]);
+      }
+      else{
+      moveList[currentMove]=[
+        cellId,
+        cellElement.innerHTML,
+        cellNoteMode];
+        
+      }
     }
   }
-  c("Current Move: "+currentMove+" Last Move: "+lastMove+" Move List:"+moveList);
+  c("Current Move: "+currentMove+" total: "+moveList.length+" Move List:"+moveList);
 }
 
 function changeMove(direction) {
   c("changeMove("+direction+")");
-  if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < lastMove) {
+  if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < moveList.length) {
     currentMove += direction;
     c(currentMove);
     set(moveList[currentMove][0], true);
