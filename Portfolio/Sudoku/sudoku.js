@@ -27,7 +27,8 @@ function askDifficulty() {
   //med 35
   //hard 30
   //expert 25
-
+difficulty=document.getElementById("difficultyElement").value;
+c("askDifficulty - difficulty = "+difficulty);
   //HERE HERE ask difficulty
   //adjust difficulty to rules
   /* Generate Number Board */
