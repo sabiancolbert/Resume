@@ -346,16 +346,17 @@ function set(cellId, changingMove = false) {
   if (userCells.includes(cellNumber)) {
     var cellElement = document.getElementById(cellId);
     var cellNoteMode = 0;
-    var newHTML = "";
-    if (displayCells[cellNumber]==-1) {
+    if (cellElement.innerHTML == " ") {
+      cellNoteMode==-1;
+    }
+    else if (displayCells[cellNumber]==-1) {
       cellNoteMode = 1;
     } else if (displayCells[cellNumber]==-2) {
       cellNoteMode = 2;
     }
-    if (cellElement.innerHTML == " ") {
-      cellNoteMode==-1;
-    }
-    moveList.push([cellId, cellElement.innerHTML, cellNoteMode]);
+    var move = [cellId, cellElement.innerHTML, cellNoteMode];
+    moveList.push(move);
+    var newHTML = "";
     if (changingMove) {
       newHTML = moveList[currentMove][1];
       cellNoteMode = moveList[currentMove][2];
@@ -366,7 +367,7 @@ function set(cellId, changingMove = false) {
     if (newHTML == " ") {
       cellNoteMode==-1;
     }
-    if (cellElement.innerHTML - 0 > 0 && displayCells[cellNumber]!=-1) {
+    if (cellElement.innerHTML - 0 > 0) {
       numberTotals[cellElement.innerHTML]++;
     }
     /* Erase */
@@ -446,30 +447,7 @@ function changeMove(direction) {
   c("changeMove("+direction+")");
   if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < lastMove) {
     currentMove += direction;
-    c("&&&&"+currentMove);
-    c("current" + currentMove + "last"+lastMove);
-    c("HERE "+moveList[currentMove][0]);
     set(moveList[currentMove][0], true);
-    /*numberTotals[move[1].innerHTML]++;
-    //HERE HERE HERE
-    if(selectionElement.innerHTML==move[1].innerHTML){
-      counterElement.innerHTML = numberTotals[selectionElement.innerHTML];
-    }
-    /* Update Old Cell Number */
-    /*move[1].innerHTML = move[2];
-    if (move[0]!=2){
-      displayCells[(move[1].id+"0").substring(1,2)]=move[2];
-    }
-    else{
-      displayCells[(move[1].id+"0").substring(1,2)]=-1;
-    }
-    //HERE set noteCells (copy paste from set())
-    numberTotals[move[1].innerHTML]--;
-    if(move[2]==selectionElement.innerHTML)
-    {
-      counterElement.innerHTML=numberTotals[move[2]];
-    }
-  */
   }
 }
 
