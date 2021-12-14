@@ -364,6 +364,7 @@ function set(cellId, changingMove = false) {
         cellNoteMode]);
       newHTML = selectionElement.innerHTML;
       cellNoteMode = noteMode;
+      //HERE cut some of movelist and currentmove and etc
     }
     if (newHTML == " ") {
       cellNoteMode==-1;
