@@ -372,7 +372,7 @@ function set(cellId, direction = 0) {
         redoList.splice(i, 1);
       }
     }
-    c("&"+newHTML);
+    c("&&"+newHTML+"&");
     if (newHTML == " ") {
       cellNoteMode=-1;
     }
