@@ -377,8 +377,9 @@ function set(cellId, direction = 0) {
     }
     if (cellElement.innerHTML - 0 > 0) {
       numberTotals[cellElement.innerHTML]++;
-            counterElement.innerHTML = numberTotals[cellElement.innerHTML];
-    }
+      if(cellElement.innerHTML == selectionElement.innerHTML){
+        counterElement.innerHTML = numberTotals[cellElement.innerHTML];
+    }}
     /* Erase */
     if (cellNoteMode == -1) {
       c("set - erase cell");
