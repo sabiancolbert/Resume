@@ -451,14 +451,13 @@ function set(cellId, direction = 0) {
 
 function changeMove(direction) {
   c("changeMove("+direction+")");
-  if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < redoList.length) {
+  if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < redoList.length -1) {
     currentMove += direction;
-    if(direction==-1){
-    set(undoList[currentMove][0], direction);
-  }
-  else{
-    set(redoList[currentMove][0], direction);
-  }
+    if (direction==-1) {
+      set(undoList[currentMove][0], direction);
+    } else {
+      set(redoList[currentMove][0], direction);
+    }
   }
 }
 
