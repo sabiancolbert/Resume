@@ -462,8 +462,15 @@ function changeMove(direction) {
   if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < redoList.length -1) {
     currentMove += direction;
     if (direction==-1) {
+      //if undo restart
+      if(undoList[currentMove][0] == 81){
+        //HERE
+      }
+      //if normal undo
+else{
       set(undoList[currentMove][0], direction);
-    } else {
+    } 
+    }else {
       set(redoList[currentMove][0], direction);
     }
   }
