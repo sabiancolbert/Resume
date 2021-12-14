@@ -9,7 +9,7 @@ body {
 @media screen and (orientation: landscape) {
   /* HERE */
 }
-    /*
+/*
 #portraitWarning {
   top: 10%;
   font-size: 300%;
@@ -22,6 +22,9 @@ bold {
   font-weight: 1000;
 }
 /* Game Board */
+#gameElement{
+  visibility: hidden;
+}
 #gridContainer {
   position: relative;
   width: 98vmin;
@@ -148,6 +151,10 @@ button:active {
 }
 #menu:active {
   background-color: #1050aa;
+}
+/* Menu */
+#menuElement{
+  visibility: hidden;
 }
 /* Notes */
 .notesContainer {
