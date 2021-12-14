@@ -18,11 +18,11 @@ body {
   z-index: -1;
   left: 10%;
 }*/
-bold {
-  font-weight: 1000;
+#difficultyPromptElement{
+  position: absolute;
 }
 /* Game Board */
-#gameElement{
+#gameElement {
   visibility: hidden;
 }
 #gridContainer {
@@ -56,6 +56,9 @@ td {
 }
 td:active {
   background-color: #3388dd;
+}
+bold {
+  font-weight: 1000;
 }
 /* Buttons */
 #buttonContainer {
@@ -153,7 +156,7 @@ button:active {
   background-color: #1050aa;
 }
 /* Menu */
-#menuElement{
+#menuElement {
   visibility: hidden;
 }
 /* Notes */
