@@ -348,14 +348,15 @@ function set(cellId, changingMove = false) {
     var cellNoteMode = 0;
     if (cellElement.innerHTML == " ") {
       cellNoteMode==-1;
-    }
-    else if (displayCells[cellNumber]==-1) {
+    } else if (displayCells[cellNumber]==-1) {
       cellNoteMode = 1;
     } else if (displayCells[cellNumber]==-2) {
       cellNoteMode = 2;
     }
-    var move = [cellId, cellElement.innerHTML, cellNoteMode];
-    moveList.push(move);
+    moveList.push([
+      cellId,
+      cellElement.innerHTML,
+      cellNoteMode]);
     var newHTML = "";
     if (changingMove) {
       newHTML = moveList[currentMove][1];
@@ -447,6 +448,7 @@ function changeMove(direction) {
   c("changeMove("+direction+")");
   if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < lastMove) {
     currentMove += direction;
+    c(currentMove);
     set(moveList[currentMove][0], true);
   }
 }
