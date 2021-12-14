@@ -21,7 +21,7 @@ function c(c) {
 function setCells() {
   c("setCells()");
   if (document.getElementById("difficultyElement").value < 81) {
-    difficultyElement.hidden = "true";
+    difficultyPromptElement.hidden = "true";
     difficulty = document.getElementById("difficultyElement").value;
     //beginner 45
     //easy 40
