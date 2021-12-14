@@ -11,7 +11,7 @@
 <body onload="askDifficulty()">
   <!-- Difficulty -->
   <label for="difficultyElement">Set difficulty to:</label>
-  <select id="difficultyElement">
+  <select onchange="set()" id="difficultyElement">
     <option value="45">Beginner</option>
     <option value="40">Easy</option>
     <option value="35">Medium</option>
@@ -261,7 +261,7 @@
   </div>
   <!-- Menu -->
   <!--home,save,auto save,autocheck,auto remove notes,theme,help -> controls, gameplay, strategies
-                                                -->
+                                                  -->
 
 </body>
 </html>
