@@ -20,56 +20,57 @@ function c(c) {
 
 function setCells() {
   c("setCells()");
-  if(document.getElementById("difficultyElement").value <81){
-  difficulty = document.getElementById("difficultyElement").value;
-  //beginner 45
-  //easy 40
-  //med 35
-  //hard 30
-  //expert 0
-  //HERE adjust difficulty to rules
-  c("askDifficulty - difficulty = "+difficulty);
-  var attemptedNumbers = new Array(81);
-  counterElement = document.getElementById("counterElement");
-  selectionElement = document.getElementById("selectionElement");
-  for (i = 0; i < 81; i++) {
-    attemptedNumbers[i] = [0];
-  }
-  while (currentCell > -1 && currentCell < 81) {
-    var number = 0;
-    var invalid = true;
-    /* Set Current Cell */
-    while (invalid && attemptedNumbers[currentCell].length < 10) {
-      number = Math.floor(Math.random()*9+1);
-      if (!attemptedNumbers[currentCell].includes(number)) {
-        attemptedNumbers[currentCell].push(number);
-        if (!isInVertical(currentCell, number) && !isInHorizonal(currentCell, number) && !isInBox(currentCell, number)) {
-          if (variantValid(currentCell, number)) {
-            invalid = false;
+  if (document.getElementById("difficultyElement").value < 81) {
+    difficultyElement.visibility= "hidden";
+    difficulty = document.getElementById("difficultyElement").value;
+    //beginner 45
+    //easy 40
+    //med 35
+    //hard 30
+    //expert 0
+    //HERE adjust difficulty to rules
+    c("askDifficulty - difficulty = "+difficulty);
+    var attemptedNumbers = new Array(81);
+    counterElement = document.getElementById("counterElement");
+    selectionElement = document.getElementById("selectionElement");
+    for (i = 0; i < 81; i++) {
+      attemptedNumbers[i] = [0];
+    }
+    while (currentCell > -1 && currentCell < 81) {
+      var number = 0;
+      var invalid = true;
+      /* Set Current Cell */
+      while (invalid && attemptedNumbers[currentCell].length < 10) {
+        number = Math.floor(Math.random()*9+1);
+        if (!attemptedNumbers[currentCell].includes(number)) {
+          attemptedNumbers[currentCell].push(number);
+          if (!isInVertical(currentCell, number) && !isInHorizonal(currentCell, number) && !isInBox(currentCell, number)) {
+            if (variantValid(currentCell, number)) {
+              invalid = false;
+            }
           }
         }
       }
+      /* Previous Cell */
+      if (invalid) {
+        attemptedNumbers[currentCell] = [0];
+        displayCells[currentCell] = 0;
+        currentCell--;
+      }
+      /* Next Cell */
+      else {
+        cells[currentCell] = number;
+        displayCells[currentCell] = number;
+        currentCell++;
+      }
     }
-    /* Previous Cell */
-    if (invalid) {
-      attemptedNumbers[currentCell] = [0];
-      displayCells[currentCell] = 0;
-      currentCell--;
-    }
-    /* Next Cell */
-    else {
-      cells[currentCell] = number;
-      displayCells[currentCell] = number;
-      currentCell++;
+    /* Start Or Fail Game */
+    if (currentCell==-1) {
+      fail();
+    } else {
+      setGrid();
     }
   }
-  /* Start Or Fail Game */
-  if (currentCell==-1) {
-    fail();
-  } else {
-    setGrid();
-  }
-}
 }
 
 //search for the same number in the same column
