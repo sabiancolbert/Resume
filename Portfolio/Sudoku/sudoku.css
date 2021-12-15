@@ -20,12 +20,12 @@ body {
 }*/
 #difficultyPromptElement {
   position: fixed;
-  height:100%;
-  width:100%;
+  height: 100%;
+  width: 100%;
 }
 /* Game Board */
 #gameElement {}
-#gridContainer, #difficultyContainer {
+#gridContainer{
   position: relative;
   width: 98vmin;
   padding-top: 100%;
