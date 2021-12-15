@@ -19,12 +19,10 @@ body {
   left: 10%;
 }*/
 #difficultyPromptElement {
-  position: fixed;
+  position: relative;
 }
 /* Game Board */
-#gameElement {
-  
-}
+#gameElement {}
 #gridContainer, #difficultyContainer {
   position: relative;
   width: 98vmin;
