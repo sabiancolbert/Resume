@@ -23,7 +23,7 @@ body {
 }
 /* Game Board */
 #gameElement {
-  visibility: hidden;
+  
 }
 #gridContainer, #difficultyContainer {
   position: relative;
