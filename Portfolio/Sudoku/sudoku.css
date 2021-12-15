@@ -18,10 +18,13 @@ body {
   z-index: -1;
   left: 10%;
 }*/
-#difficultyPromptElement {}
+#difficultyPromptElement {
+  position: fixed;
+}
 /* Game Board */
 #gameElement {
   position: fixed;
+  visibility: hidden;
 }
 #gridContainer, #difficultyContainer {
   position: relative;
