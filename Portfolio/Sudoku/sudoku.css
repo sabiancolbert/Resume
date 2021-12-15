@@ -24,9 +24,9 @@ body {
   position: fixed;
   height: 100%;
   width: 100%;
-  border:1px solid red;
+  border: 1px solid red;
 }
-#gridContainer {
+#gridContainer, #difficultyContainer {
   position: relative;
   width: 98vmin;
   padding-top: 100%;
@@ -34,7 +34,7 @@ body {
   border: 1vmin solid #3388dd;
   border-radius: 5%;
 }
-#gridHolder #difficultyHolder {
+#gridHolder, #difficultyHolder {
   position: absolute;
   top: 0;
   right: 0;
