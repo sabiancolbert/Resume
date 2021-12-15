@@ -24,8 +24,6 @@ body {
 /* Game Board */
 #gameElement {
   visibility: hidden;
-  position: fixed;
-  top:0;
 }
 #gridContainer, #difficultyContainer {
   position: relative;
