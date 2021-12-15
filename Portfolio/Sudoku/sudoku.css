@@ -18,14 +18,15 @@ body {
   z-index: -1;
   left: 10%;
 }*/
-#difficultyPromptElement {
+#difficultyPromptElement {}
+/* Game Board */
+#gameElement {
   position: fixed;
   height: 100%;
   width: 100%;
+
 }
-/* Game Board */
-#gameElement {}
-#gridContainer{
+#gridContainer {
   position: relative;
   width: 98vmin;
   padding-top: 100%;
