@@ -20,6 +20,8 @@ body {
 }*/
 #difficultyPromptElement {
   position: fixed;
+  height:100%;
+  width:100%;
 }
 /* Game Board */
 #gameElement {}
