@@ -92,14 +92,13 @@ bold {
   border-radius: 20%;
   background-color: #ccccee;
   font-size: 300%;
-
 }
 #selection:active {
   background-color: #3388dd;
 }
 #counterElement {
-  background-color: #3388dd;
-margin:auto;
+  background-color: #ccccee;
+  margin: auto;
 }
 button {
   width: 100%;
