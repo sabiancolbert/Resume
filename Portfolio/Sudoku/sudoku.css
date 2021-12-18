@@ -101,6 +101,7 @@ bold {
   background-color: #3388dd;
   color: white;
   width: 100%;
+  visibility: visible;
   border: solid 1px red;
 }
 button {
