@@ -84,9 +84,6 @@ bold {
   bottom: 0;
   margin-top: 20%;
 }
-#selectionContainer {
-
-}
 #selectionElement {
   border-radius: 20%;
   background-color: #ccccee;
@@ -99,13 +96,18 @@ bold {
   display: inline-block;
   position: relative;
   margin: auto;
-  width: 17%;
-  padding-top: 17%;
+  width: 25%;
+  padding-top: 25%;
 }
 #counterHolder {
   background-color: #ccccee;
   border-radius: 100%;
   color: black;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
 }
 #counterElement {}
 button {
