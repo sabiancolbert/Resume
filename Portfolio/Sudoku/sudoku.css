@@ -96,11 +96,12 @@ bold {
 #selection:active {
   background-color: #3388dd;
 }
-#counterHolder{
+#counterHolder {
   margin: auto;
+  position: absolute;
 }
 #counterElement {
-  color:black;
+  color: black;
   background-color: #ccccee;
   border-radius: 100%;
 }
