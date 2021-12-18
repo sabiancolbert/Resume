@@ -99,6 +99,7 @@ bold {
 #counterElement {
   background-color: #ccccee;
   margin: auto;
+  border-radius: 100%;
 }
 button {
   width: 100%;
