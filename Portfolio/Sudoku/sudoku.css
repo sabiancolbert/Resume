@@ -98,7 +98,7 @@ bold {
 }
 #counterHolder {
   margin: auto;
-  position: absolute;
+  position: relative;
 }
 #counterElement {
   color: black;
