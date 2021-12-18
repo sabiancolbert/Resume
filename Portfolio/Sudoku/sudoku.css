@@ -111,6 +111,7 @@ bold {
 }
 #counterElement {
   position: absolute;
+  top:0;
 }
 button {
   width: 100%;
