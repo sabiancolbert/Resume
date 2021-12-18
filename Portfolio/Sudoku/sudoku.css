@@ -85,8 +85,7 @@ bold {
   margin-top: 20%;
 }
 #selectionContainer {
-  padding-top: 18%;
-  width: 18%
+
 }
 #selectionElement {
   border-radius: 20%;
@@ -96,7 +95,7 @@ bold {
 #selection:active {
   background-color: #3388dd;
 }
-#counterContainer{
+#counterContainer {
   display: inline-block;
   position: relative;
   margin: auto;
