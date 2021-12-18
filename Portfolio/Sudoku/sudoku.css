@@ -97,9 +97,9 @@ bold {
 #selection:active {
   background-color: #3388dd;
 }
-#labelContainer {
+#counterElement {
   position: absolute;
-  color: black;
+  color: white;
   width: 100%;
 }
 button {
