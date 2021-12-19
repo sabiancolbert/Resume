@@ -396,7 +396,8 @@ function set(cellId, direction = 0) {
       else {
         c("set - add note to cell");
         if (displayCells[cellNumber] !=-1) {
-         // cellElement.innerHTML = "<div class='notesContainer'><div name='h1' class='noteHolder'><p class='p1' id='n1"+cellNumber+"'>1</p></div><div name='h2' class='noteHolder'><p id='n2"+cellNumber+"'>2</p></div><div name='h3' class='noteHolder'><p class='p3' id='n3"+cellNumber+"'>3</p></div><div class='noteHolder'><p class='p4' id='n4"+cellNumber+"'>4</p></div><div class='noteHolder'><p id='n5"+cellNumber+"'>5</p></div><div class='noteHolder'><p class='p6' id='n6"+cellNumber+"'>6</p></div><div name='h7' class='noteHolder'><p class='p7' id='n7"+cellNumber+"'>7</p></div><div name='h8' class='noteHolder'><p id='n8"+cellNumber+"'>8</p></div><div name='h9' class='noteHolder'><p class='p9' id='n9"+cellNumber+"'>9</p></div></div>";
+         c("hj");
+         cellElement.innerHTML = "<div class='notesContainer'><div name='h1' class='noteHolder'><p class='p1' id='n1"+cellNumber+"'>1</p></div><div name='h2' class='noteHolder'><p id='n2"+cellNumber+"'>2</p></div><div name='h3' class='noteHolder'><p class='p3' id='n3"+cellNumber+"'>3</p></div><div class='noteHolder'><p class='p4' id='n4"+cellNumber+"'>4</p></div><div class='noteHolder'><p id='n5"+cellNumber+"'>5</p></div><div class='noteHolder'><p class='p6' id='n6"+cellNumber+"'>6</p></div><div name='h7' class='noteHolder'><p class='p7' id='n7"+cellNumber+"'>7</p></div><div name='h8' class='noteHolder'><p id='n8"+cellNumber+"'>8</p></div><div name='h9' class='noteHolder'><p class='p9' id='n9"+cellNumber+"'>9</p></div></div>";
         }
         document.getElementById("n"+newHTML+cellNumber).style.visibility = "visible";
         noteCells[cellNumber][newHTML] = newHTML;
