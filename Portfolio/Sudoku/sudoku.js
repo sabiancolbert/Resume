@@ -493,15 +493,24 @@ function changeMove(direction) {
 }
 
 //check(81, true) is autocheck button
-function check(cellNumber, addingAutoCheck=false) {
+function check(cellNumber, changingAutoCheck = false) {
   var result = true;
-  if(changingAutoCheck){
+  if (changingAutoCheck) {
+    autocheck=!autocheck;
+    if(autocheck){
     document.getElementById("wrongElement").innerHTML = "0";
+    for(i=0;i<81;i++){
+      
+    }
   }
-  if(cellNumber==81){
-    //HERE HERE HERE
+  else{
+    document.getElementById("wrongElement").innerHTML = "0";
+    for(i=0;i<81;i++){
+      
+    }
   }
-  if (autocheck || addingAutoCheck) {
+  }
+  if (autocheck) {
     var adjust = 0;
     if (wrongList.includes(cellNumber)) {
       //HERE REMOVE
@@ -515,13 +524,8 @@ function check(cellNumber, addingAutoCheck=false) {
       result = false
     }
     document.getElementById("wrongElement").innerHTML = adjust + parseInt(document.getElementById("wrongElement").innerHTML);
-  }
-  else{
-    //HERE 
-    //remove all reds
-    document.getElementById("wrongElement").innerHTML = "";
-  }
-  c("check() = "+result);
+}
+c("check() = "+result);
   return result;
 }
 
