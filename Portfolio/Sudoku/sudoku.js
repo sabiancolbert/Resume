@@ -145,8 +145,7 @@ function setGrid() {
   c("setGrid()");
   /* Unsolve */
   var tested = new Array([0]);
-  c((Math.floor(Math.random()*5))*1+difficulty);
-  var stop = 81 - Math.floor(Math.random()*5+difficulty);
+  var stop = 81 - Math.floor(Math.random()*5+parseInt(difficulty));
   while (stop > 0 && tested.length < 81) {
     var cellNumber = Math.floor(Math.random()*81);
     if (!tested.includes(cellNumber)) {
