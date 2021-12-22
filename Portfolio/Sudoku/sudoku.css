@@ -174,6 +174,7 @@ button:active {
 .notesContainer {
   position: absolute;
   margin-top: -4.5%;
+  margin-left:10%;
   width: 9.7%;
   max-height: 9.6%;
   height: 100%;
@@ -186,7 +187,7 @@ button:active {
   text-align: center;
 }
 p {
-  width: 25%;
+  width: 35%;
   font-weight: 600;
   visibility: hidden;
   position: relative;
