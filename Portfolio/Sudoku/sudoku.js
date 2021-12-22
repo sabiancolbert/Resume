@@ -404,11 +404,6 @@ if(direction==0){
         document.getElementById("n"+newHTML+cellNumber).style.visibility = "visible";
         noteCells[cellNumber][newHTML] = newHTML;
 }
-//if undo or redo
-else{
-        //HERE HERE HERE
-  
-}
         cellElement.style.color = "black";
         cellElement.style.backgroundColor = "#ccccee";
         cellElement.style.fontSize = "75%";
