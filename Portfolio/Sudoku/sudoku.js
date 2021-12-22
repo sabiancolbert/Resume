@@ -152,7 +152,7 @@ function setGrid() {
       tested.push(cellNumber);
       tested.push(cellNumber);
       //is this cell solvable?
-      //HERE more if conditions
+      //HERE
       if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber) || isNoteSolvable(cellNumber) || isVariantSolvable(cellNumber)) {
         numberTotals[displayCells[cellNumber]]++;
         displayCells[cellNumber] = 0;
