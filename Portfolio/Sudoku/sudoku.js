@@ -269,9 +269,8 @@ function isDefaultCell(cell) {
  // displayCells[cell] = cells[cell];
   /* Test Empty Cells */
   emptyCells.forEach(td => {
-    if (result && !isInVertical(td, displayCells[cell]) && !isInHorizonal(option, displayCells[cell])) {
+    if (result && !isInVertical(td, displayCells[cell]) && !isInHorizonal(td, displayCells[cell])) {
       result = false;
-      c("jejdifiden");
     }
   });
   return result;
