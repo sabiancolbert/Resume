@@ -291,6 +291,7 @@ function select(selection) {
     //note highlight
     if (displayCells[i]==-2) {
       c("a");
+      c(document.getElementById("n"+selection+i);
       if (document.getElementById("n"+selection+i).style.visibility == "visible") {
         c("b");
         document.getElementById("n"+selection+i).style.backgroundColor = "#3388dd";
