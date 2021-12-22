@@ -289,16 +289,16 @@ function select(selection) {
   for (i = 0; i < 81; i++) {
     var cellElement = document.getElementById("c"+i);
     //note highlight
-    if(displayCells[cellNumber]==-2){
-      if(document.getElementById("n"+selection+cellNumber).style.visibility == "visible"){
-        document.getElementById("n"+selection+cellNumber).style.backgroundColor = "#3388dd";
-      }
-      else{
-        document.getElementById("n"+selection+cellNumber).style.backgroundColor = "#ccccee";
+    if (displayCells[i]==-2) {
+      if (document.getElementById("n"+selection+i).style.visibility == "visible") {
+        document.getElementById("n"+selection+i).style.backgroundColor = "#3388dd";
+      } else {
+        document.getElementById("n"+selection+i).style.backgroundColor = "#ccccee";
       }
     }
     //no highlight
-    else if (selection != displayCells[i]) {//here if display == " "??
+    else if (selection != displayCells[i]) {
+      //here if display == " "??
       cellElement.style.backgroundColor = "#ccccee";
       if (cellElement.style.fontSize == "125%") {
         cellElement.style.color = "#777777";
