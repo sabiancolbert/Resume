@@ -292,17 +292,14 @@ function select(selection) {
     if (displayCells[cellNumber]==-2) {
       for (i = 1; i < 10; i++) {
         if (i == selection) {
-          c("a");
           document.getElementById("n"+i+cellNumber).style.backgroundColor = "#3388dd";
         } else {
-          c("b");
           document.getElementById("n"+i+cellNumber).style.backgroundColor = "#ccccee";
         }
       }
     }
     //number highlight
     else if (selection == displayCells[cellNumber] && displayCells[cellNumber] != 0) {
-      c("c");
       cellElement.style.backgroundColor = "#3388dd";
       if (cellElement.style.fontSize == "125%") {
         cellElement.style.color = "#ccccee";
