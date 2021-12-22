@@ -22,7 +22,6 @@ function setCells() {
   c("setCells()");
   if (document.getElementById("difficultyElement").value < 81) {
     difficulty = document.getElementById("difficultyElement").value;
-    c(difficulty);
     document.getElementById("difficultyPromptElement").innerHTML = "";
     document.getElementById("gameElement").style.visibility = "visible";
     //beginner 45
@@ -31,10 +30,10 @@ function setCells() {
     //hard 30
     //expert 0
     //HERE adjust difficulty to rules
-    c("askDifficulty - difficulty = "+difficulty);
-    var attemptedNumbers = new Array(81);
+    c("setCells - difficulty = "+difficulty);
     counterElement = document.getElementById("counterElement");
     selectionElement = document.getElementById("selectionElement");
+    var attemptedNumbers = new Array(81);
     for (i = 0; i < 81; i++) {
       attemptedNumbers[i] = [0];
     }
