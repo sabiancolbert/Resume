@@ -266,7 +266,7 @@ function isDefaultCell(cell) {
   if (displayCells[start+20] == 0) {
     emptyCells.push(start+20);
   }
- // displayCells[cell] = cells[cell];
+ displayCells[cell] = cells[cell];
   /* Test Empty Cells */
   emptyCells.forEach(td => {
     if (result && !isInVertical(td, displayCells[cell]) && !isInHorizonal(td, displayCells[cell])) {
