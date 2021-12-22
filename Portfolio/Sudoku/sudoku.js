@@ -197,9 +197,8 @@ function isDefaultNumber(cell) {
   }
   if (otherNumbers.length == 8) {
     result = true;
-        c("workee")
-
   }
+  else{c("whdhduicdj")}
   return result;
 }
 
