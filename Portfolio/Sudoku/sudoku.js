@@ -301,7 +301,7 @@ function select(number) {
     selectionElement.innerHTML = number;
   } else {
     selectionElement.innerHTML = " ";
-    counterElement.innerHTML = "Erase";
+    counterElement.style.visibility = "hidden";
   }
   if (noteMode == 2) {
     switch (number) {
