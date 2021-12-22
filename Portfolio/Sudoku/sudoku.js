@@ -198,7 +198,6 @@ function isDefaultNumber(cell) {
   if (otherNumbers.length == 8) {
     result = true;
   }
-  else{c("whdhduicdj")}
   return result;
 }
 
@@ -272,6 +271,7 @@ function isDefaultCell(cell) {
   emptyCells.forEach(option => {
     if (result && !isInVertical(option, displayCells[cell]) && !isInHorizonal(option, displayCells[cell])) {
       result = false;
+      c("jejdifiden");
     }
   });
   return result;
