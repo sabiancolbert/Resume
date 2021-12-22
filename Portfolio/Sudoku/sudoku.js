@@ -146,13 +146,13 @@ function setGrid() {
   /* Unsolve */
   var tested = new Array([0]);
   var stop = 81 - Math.floor(Math.random()*5+parseInt(difficulty));
-  c(stop);
   while (stop > 0 && tested.length < 81) {
     var cellNumber = Math.floor(Math.random()*81);
     if (!tested.includes(cellNumber)) {
       tested.push(cellNumber);
       tested.push(cellNumber);
       //is this cell solvable?
+      //HERE more if conditions
       if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber)) {
         numberTotals[displayCells[cellNumber]]++;
         displayCells[cellNumber] = 0;
