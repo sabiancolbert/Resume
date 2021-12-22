@@ -290,10 +290,13 @@ function select(selection) {
     var cellElement = document.getElementById("c"+i);
     //note highlight
     if (displayCells[i]==-2) {
+      c("a");
       if (document.getElementById("n"+selection+i).style.visibility == "visible") {
+        c("b");
         document.getElementById("n"+selection+i).style.backgroundColor = "#3388dd";
       } else {
         document.getElementById("n"+selection+i).style.backgroundColor = "#ccccee";
+        c("c");
       }
     }
     //no highlight
