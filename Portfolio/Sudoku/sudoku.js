@@ -341,6 +341,7 @@ function set(cellId, direction = 0) {
   var cellNumber = cellId.substring(1, cellId.length) * 1;
   if (userCells.includes(cellNumber)) {
     /* Preliminary */
+    //HERE HERE sooooometimes erasing and undoing will send a note through as a number (cellnotemode wrong)
     var cellElement = document.getElementById(cellId);
     var cellNoteMode = 0;
     if (cellElement.innerHTML == " ") {
