@@ -497,23 +497,28 @@ function check(cellNumber, changingAutoCheck = false) {
   var result = true;
   if (changingAutoCheck) {
     autocheck=!autocheck;
-    if(autocheck){
-    document.getElementById("wrongElement").innerHTML = "0";
-    for(i=0;i<81;i++){
-      
+    if (autocheck) {
+      document.getElementById("wrongElement").innerHTML = "0";
+      for (i = 0; i < 81; i++) {
+        if(displayCells[cellNumber]>0&&displayCells[cellNumber]!=cells[cellNumber]){
+          return = false;
+          wrongList.push(cellNumber);
+      document.getElementById("c"+cellNumber).style.color = red;
+        }
+      }
+    } else {
+      document.getElementById("wrongElement").innerHTML = "";
+      for (i = 0; i < 81; i++) {
+        if(wrongList.includes(cellNumber)){
+      wrongList.splice(wrongList.indexOf(cellNumber), 1);
+      document.getElementById("c"+cellNumber).style.color = black;
+        }
+      }
     }
   }
-  else{
-    document.getElementById("wrongElement").innerHTML = "0";
-    for(i=0;i<81;i++){
-      
-    }
-  }
-  }
-  if (autocheck) {
+  else if (autocheck) {
     var adjust = 0;
     if (wrongList.includes(cellNumber)) {
-      //HERE REMOVE
       wrongList.splice(wrongList.indexOf(cellNumber), 1);
       adjust--;
     }
@@ -524,8 +529,8 @@ function check(cellNumber, changingAutoCheck = false) {
       result = false
     }
     document.getElementById("wrongElement").innerHTML = adjust + parseInt(document.getElementById("wrongElement").innerHTML);
-}
-c("check() = "+result);
+  }
+  c("check() = "+result);
   return result;
 }
 
