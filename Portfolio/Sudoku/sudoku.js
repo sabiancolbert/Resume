@@ -11,6 +11,8 @@ var currentMove = 0;
 var difficulty = 0;
 var currentCell = 0;
 var noteMode = 0;
+var autoCheck = true;
+var autoRemoveNotes = false;
 var counterElement, selectionElement;
 
 function c(c) {
@@ -490,10 +492,16 @@ function changeMove(direction) {
   }
 }
 
-function check(cellNumber) {
+//check(81, true) is autocheck button
+function check(cellNumber, addingAutoCheck=false) {
   var result = true;
-  //HERE if autocheck in settings
-  if (true) {
+  if(changingAutoCheck){
+    document.getElementById("wrongElement").innerHTML = "0";
+  }
+  if(cellNumber==81){
+    //HERE HERE HERE
+  }
+  if (autocheck || addingAutoCheck) {
     var adjust = 0;
     if (wrongList.includes(cellNumber)) {
       //HERE REMOVE
@@ -507,6 +515,11 @@ function check(cellNumber) {
       result = false
     }
     document.getElementById("wrongElement").innerHTML = adjust + parseInt(document.getElementById("wrongElement").innerHTML);
+  }
+  else{
+    //HERE 
+    //remove all reds
+    document.getElementById("wrongElement").innerHTML = "";
   }
   c("check() = "+result);
   return result;
