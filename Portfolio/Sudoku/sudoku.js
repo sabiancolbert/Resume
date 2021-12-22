@@ -154,7 +154,7 @@ function setGrid() {
       tested.push(cellNumber);
       //is this cell solvable?
       //if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber) || isVariantSolvable(cellNumber)) {
-      if (isDefaultCell(cellNumber)){
+      if (isDefaultCell(cellNumber)) {
         numberTotals[displayCells[cellNumber]]++;
         displayCells[cellNumber] = 0;
         userCells.push(cellNumber);
@@ -268,7 +268,7 @@ function isDefaultCell(cell) {
   if (displayCells[start+20] == 0) {
     emptyCells.push(start+20);
   }
- displayCells[cell] = cells[cell];
+  displayCells[cell] = cells[cell];
   /* Test Empty Cells */
   emptyCells.forEach(td => {
     if (result && !isInVertical(td, displayCells[cell]) && !isInHorizonal(td, displayCells[cell])) {
@@ -278,9 +278,7 @@ function isDefaultCell(cell) {
   return result;
 }
 
-function isVariantSolvable(cell){
-  
-}
+function isVariantSolvable(cell) {}
 /* Gameplay */
 
 function select(number) {
@@ -403,15 +401,15 @@ function set(cellId, direction = 0) {
       /* Add Note To Cell */
       else {
         c("set - add note to cell");
-//if not undo or redo
-if(direction==0){
-        if (displayCells[cellNumber] !=-2) {
-         cellElement.innerHTML = "<div class='notesContainer'><div name='h1' class='noteHolder'><p class='p1' id='n1"+cellNumber+"'>1</p></div><div name='h2' class='noteHolder'><p id='n2"+cellNumber+"'>2</p></div><div name='h3' class='noteHolder'><p class='p3' id='n3"+cellNumber+"'>3</p></div><div class='noteHolder'><p class='p4' id='n4"+cellNumber+"'>4</p></div><div class='noteHolder'><p id='n5"+cellNumber+"'>5</p></div><div class='noteHolder'><p class='p6' id='n6"+cellNumber+"'>6</p></div><div name='h7' class='noteHolder'><p class='p7' id='n7"+cellNumber+"'>7</p></div><div name='h8' class='noteHolder'><p id='n8"+cellNumber+"'>8</p></div><div name='h9' class='noteHolder'><p class='p9' id='n9"+cellNumber+"'>9</p></div></div>";
-        displayCells[cellNumber]=-2;
+        //if not undo or redo
+        if (direction == 0) {
+          if (displayCells[cellNumber] !=-2) {
+            cellElement.innerHTML = "<div class='notesContainer'><div name='h1' class='noteHolder'><p class='p1' id='n1"+cellNumber+"'>1</p></div><div name='h2' class='noteHolder'><p id='n2"+cellNumber+"'>2</p></div><div name='h3' class='noteHolder'><p class='p3' id='n3"+cellNumber+"'>3</p></div><div class='noteHolder'><p class='p4' id='n4"+cellNumber+"'>4</p></div><div class='noteHolder'><p id='n5"+cellNumber+"'>5</p></div><div class='noteHolder'><p class='p6' id='n6"+cellNumber+"'>6</p></div><div name='h7' class='noteHolder'><p class='p7' id='n7"+cellNumber+"'>7</p></div><div name='h8' class='noteHolder'><p id='n8"+cellNumber+"'>8</p></div><div name='h9' class='noteHolder'><p class='p9' id='n9"+cellNumber+"'>9</p></div></div>";
+            displayCells[cellNumber]=-2;
+          }
+          document.getElementById("n"+newHTML+cellNumber).style.visibility = "visible";
+          noteCells[cellNumber][newHTML] = newHTML;
         }
-        document.getElementById("n"+newHTML+cellNumber).style.visibility = "visible";
-        noteCells[cellNumber][newHTML] = newHTML;
-}
         cellElement.style.color = "black";
         cellElement.style.backgroundColor = "#ccccee";
         cellElement.style.fontSize = "75%";
@@ -496,18 +494,18 @@ function check(cellNumber) {
   //HERE if autocheck in settings
   if (true) {
     var adjust = 0;
-    if(wrongList.includes(cellNumber)){
+    if (wrongList.includes(cellNumber)) {
       //HERE REMOVE
-wrongList.splice(wrongList.indexOf(cellNumber), 1);
+      wrongList.splice(wrongList.indexOf(cellNumber), 1);
       adjust--;
     }
-      if (displayCells[cellNumber]!=cells[cellNumber]){
-        wrongList.push(cellNumber);
-        adjust++;
-        document.getElementById("c"+cellNumber).style.color = red;
-        result = false
-}   
-document.getElementById("wrongElement").innerHTML = adjust + parseInt(document.getElementById("wrongElement").innerHTML);
+    if (displayCells[cellNumber] != cells[cellNumber]) {
+      wrongList.push(cellNumber);
+      adjust++;
+      document.getElementById("c"+cellNumber).style.color = red;
+      result = false
+    }
+    document.getElementById("wrongElement").innerHTML = adjust + parseInt(document.getElementById("wrongElement").innerHTML);
   }
   c("check() = "+result);
   return result;
