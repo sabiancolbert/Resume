@@ -186,6 +186,7 @@ button:active {
   text-align: center;
 }
 p {
+  width:10%;
   font-weight: 600;
   visibility: hidden;
   position: relative;
