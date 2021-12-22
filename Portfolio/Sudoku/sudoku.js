@@ -290,13 +290,12 @@ function select(selection) {
     var cellElement = document.getElementById("c"+cellNumber);
     //note highlight
     if (displayCells[cellNumber]==-2) {
-      c("a");
       for (i = 1; i < 10; i++) {
-        if (i==selection) {
-          c("b");
+        if (i == selection) {
+          c("a");
           document.getElementById("n"+i+cellNumber).style.backgroundColor = "#3388dd";
         } else {
-          c("c");
+          c("b");
           document.getElementById("n"+i+cellNumber).style.backgroundColor = "#ccccee";
         }
       }
@@ -311,6 +310,7 @@ function select(selection) {
     }
     //number highlight
     else {
+      c("c");
       cellElement.style.backgroundColor = "#3388dd";
       if (cellElement.style.fontSize == "125%") {
         cellElement.style.color = "#ccccee";
