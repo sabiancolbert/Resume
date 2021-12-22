@@ -491,21 +491,19 @@ function changeMove(direction) {
   }
 }
 
-function check() {
+function check(cell) {
   var result = true;
-  //if autocheck in settings
-  if (false) {
+  //HERE if autocheck in settings
+  if (true) {
     var counter = 0;
     for (i = 0; i < 81; i++) {
-      //compare displayCells to cells
-      if (true)//HERE
-      {
+      if (displayCells[i]!=cells[i]){
         counter++;
         //element.style.color = red
         result = false
       }
-    }
-    document.getElementById("wrongElement").innerHTML = counter;
+    }//HERE HERE HERE this aall fucked up
+    document.getElementById("wrongElement").innerHTML += counter;
   }
   c("check() = "+result);
   return result;
