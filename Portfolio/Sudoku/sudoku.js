@@ -198,7 +198,6 @@ function isDefaultNumber(cell) {
   if (otherNumbers.length == 8) {
     result = true;
   }
-  result=false;
   return result;
 }
 
@@ -274,6 +273,7 @@ function isDefaultCell(cell) {
       result = false;
     }
   });
+  result=false;
   return result;
 }
 
