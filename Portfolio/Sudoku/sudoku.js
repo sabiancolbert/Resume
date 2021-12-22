@@ -297,6 +297,7 @@ function select(number) {
   }
   /* Select Number */
   if (number != 0) {
+    document.getElementById("counterHolder").style.visibility = "visible";
     counterElement.innerHTML = numberTotals[number];
     selectionElement.innerHTML = number;
   } else {
