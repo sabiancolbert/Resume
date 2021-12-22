@@ -496,8 +496,8 @@ function changeMove(direction) {
 function check(cellNumber, changingAutoCheck = false) {
   var result = true;
   if (changingAutoCheck) {
-    autocheck=!autocheck;
-    if (autocheck) {
+    autoCheck=!autoCheck;
+    if (autoCheck) {
       document.getElementById("wrongElement").innerHTML = "0";
       for (i = 0; i < 81; i++) {
         if (displayCells[cellNumber] > 0 && displayCells[cellNumber] != cells[cellNumber]) {
@@ -515,7 +515,7 @@ function check(cellNumber, changingAutoCheck = false) {
         }
       }
     }
-  } else if (autocheck) {
+  } else if (autoCheck) {
     var adjust = 0;
     if (wrongList.includes(cellNumber)) {
       wrongList.splice(wrongList.indexOf(cellNumber), 1);
