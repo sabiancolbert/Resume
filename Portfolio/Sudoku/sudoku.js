@@ -197,6 +197,8 @@ function isDefaultNumber(cell) {
   }
   if (otherNumbers.length == 8) {
     result = true;
+        c("workee")
+
   }
   return result;
 }
@@ -272,7 +274,6 @@ function isDefaultCell(cell) {
     if (result && !isInVertical(option, displayCells[cell]) && !isInHorizonal(option, displayCells[cell])) {
       result = false;
     }
-    else{c("workee")}
   });
   return result;
 }
