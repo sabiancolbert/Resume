@@ -292,11 +292,11 @@ function select(selection) {
     if (displayCells[cellNumber]==-2) {
       c("a");
       for (i = 1; i < 10; i++) {
-        if (document.getElementById("n"+i+cellNumber).style.visibility == "visible") {
-      c("b");
+        if (i==selection) {
+          c("b");
           document.getElementById("n"+i+cellNumber).style.backgroundColor = "#3388dd";
         } else {
-      c("c");
+          c("c");
           document.getElementById("n"+i+cellNumber).style.backgroundColor = "#ccccee";
         }
       }
