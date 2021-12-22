@@ -1,9 +1,10 @@
 /* Globals */
 var cells = new Array(81);
+var noteCells = new Array(81);
 var displayCells = new Array([]);
 var userCells = new Array([]);
 var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-var noteCells = new Array(81);
+var wrongList = new Array();
 var undoList = new Array();
 var redoList = new Array();
 var currentMove = 0;
@@ -152,7 +153,8 @@ function setGrid() {
       tested.push(cellNumber);
       tested.push(cellNumber);
       //is this cell solvable?
-      if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber) || isVariantSolvable(cellNumber)) {
+      //if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber) || isVariantSolvable(cellNumber)) {
+      if (isDefaultCell(cellNumber)){
         numberTotals[displayCells[cellNumber]]++;
         displayCells[cellNumber] = 0;
         userCells.push(cellNumber);
@@ -494,14 +496,18 @@ function check(cellNumber) {
   //HERE if autocheck in settings
   if (true) {
     var adjust = 0;
-    if(){
+    if(wrongList.includes(cellNumber)){
+      //HERE REMOVE
+wrongList.splice(wrongList.indexOf(cellNumber), 1);
       adjust--;
     }
-      if (displayCells[i]!=cells[i]){
+      if (displayCells[cellNumber]!=cells[cellNumber]){
+        wrongList.push(cellNumber);
         adjust++;
         document.getElementById("c"+cellNumber).style.color = red;
         result = false
-}    document.getElementById("wrongElement").innerHTML += counter;
+}   
+document.getElementById("wrongElement").innerHTML = adjust + parseInt(document.getElementById("wrongElement").innerHTML);
   }
   c("check() = "+result);
   return result;
