@@ -344,7 +344,7 @@ function set(cellId, direction = 0) {
     //HERE HERE sooooometimes erasing and undoing will send a note through as a number (cellnotemode wrong)
     var cellElement = document.getElementById(cellId);
     var cellNoteMode = 0;
-    c("HERE"+cellNumber);
+    c(cellNoteMode);
     if (cellElement.innerHTML == " ") {
       cellNoteMode==-1;
     } else if (displayCells[cellNumber]==-1) {
@@ -377,7 +377,9 @@ function set(cellId, direction = 0) {
       numberTotals[cellElement.innerHTML]++;
       if (cellElement.innerHTML == selectionElement.innerHTML) {
         counterElement.innerHTML = numberTotals[cellElement.innerHTML];
-      }}
+      }
+    }
+    c(cellNoteMode);
     /* Erase */
     if (cellNoteMode == -1) {
       c("set - erase cell");
