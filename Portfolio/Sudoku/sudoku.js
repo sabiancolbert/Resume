@@ -300,20 +300,19 @@ function select(selection) {
         }
       }
     }
-    //no highlight
-    else if (selection != displayCells[i]) {
-      //here if display == " "??
-      cellElement.style.backgroundColor = "#ccccee";
-      if (cellElement.style.fontSize == "125%") {
-        cellElement.style.color = "#777777";
-      }
-    }
     //number highlight
-    else {
+    else if (selection==displayCells[cellNumber] && selection!=" "){
       c("c");
       cellElement.style.backgroundColor = "#3388dd";
       if (cellElement.style.fontSize == "125%") {
         cellElement.style.color = "#ccccee";
+      }
+    }
+    //no highlight
+    else{
+      cellElement.style.backgroundColor = "#ccccee";
+      if (cellElement.style.fontSize == "125%") {
+        cellElement.style.color = "#777777";
       }
     }
   }
