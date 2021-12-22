@@ -152,9 +152,7 @@ function setGrid() {
       tested.push(cellNumber);
       tested.push(cellNumber);
       //is this cell solvable?
-      //HERE
-      //if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber) || isVariantSolvable(cellNumber)) {
-      if (isDefaultCell(cellNumber)){
+      if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber) || isVariantSolvable(cellNumber)) {
         numberTotals[displayCells[cellNumber]]++;
         displayCells[cellNumber] = 0;
         userCells.push(cellNumber);
@@ -450,7 +448,7 @@ if(direction==0){
         displayCells[cellNumber] = newHTML;
         cellElement.style.color = "black";
         cellElement.style.fontSize = "150%";
-        if (check()) {
+        if (check(cellNumber)) {
           autoRemoveNotes();
         }
       }
@@ -491,19 +489,19 @@ function changeMove(direction) {
   }
 }
 
-function check(cell) {
+function check(cellNumber) {
   var result = true;
   //HERE if autocheck in settings
   if (true) {
-    var counter = 0;
-    for (i = 0; i < 81; i++) {
+    var adjust = 0;
+    if(){
+      adjust--;
+    }
       if (displayCells[i]!=cells[i]){
-        counter++;
-        //element.style.color = red
+        adjust++;
+        document.getElementById("c"+cellNumber).style.color = red;
         result = false
-      }
-    }//HERE HERE HERE this aall fucked up
-    document.getElementById("wrongElement").innerHTML += counter;
+}    document.getElementById("wrongElement").innerHTML += counter;
   }
   c("check() = "+result);
   return result;
