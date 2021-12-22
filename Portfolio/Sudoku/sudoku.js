@@ -423,6 +423,7 @@ function set(cellId, direction = 0) {
             displayCells[cellNumber] = -2;
           }
           document.getElementById("n"+newHTML+cellNumber).style.visibility = "visible";
+          document.getElementById("n"+newHTML+cellNumber).style.backgroundColor = "#3388dd";
           noteCells[cellNumber][newHTML] = newHTML;
         }
         cellElement.style.color = "black";
