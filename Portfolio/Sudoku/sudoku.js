@@ -277,8 +277,6 @@ function isDefaultCell(cell) {
       result = false;
     }
   });
-  //HERE
-  result=false;
   return result;
 }
 
