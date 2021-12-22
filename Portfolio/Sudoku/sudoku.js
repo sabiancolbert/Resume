@@ -502,7 +502,7 @@ function check(cellNumber) {
     if (displayCells[cellNumber] != cells[cellNumber]) {
       wrongList.push(cellNumber);
       adjust++;
-      document.getElementById("c"+cellNumber).style.color = red;
+      document.getElementById("c"+cellNumber).style.color = "red";
       result = false
     }
     document.getElementById("wrongElement").innerHTML = adjust + parseInt(document.getElementById("wrongElement").innerHTML);
