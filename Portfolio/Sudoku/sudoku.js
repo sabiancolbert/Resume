@@ -301,7 +301,7 @@ function select(selection) {
       }
     }
     //number highlight
-    else if (selection==displayCells[cellNumber] && selection!=" "){
+    else if (selection == displayCells[cellNumber] && displayCells[cellNumber] != 0) {
       c("c");
       cellElement.style.backgroundColor = "#3388dd";
       if (cellElement.style.fontSize == "125%") {
@@ -309,7 +309,7 @@ function select(selection) {
       }
     }
     //no highlight
-    else{
+    else {
       cellElement.style.backgroundColor = "#ccccee";
       if (cellElement.style.fontSize == "125%") {
         cellElement.style.color = "#777777";
