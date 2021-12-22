@@ -400,6 +400,7 @@ function set(cellId, direction = 0) {
         displayCells[cellNumber]=-2;
         }
         //HERE HERE HERE either newbtml or cellnumber breaks 
+        c(newHTML);
         document.getElementById("n"+newHTML+cellNumber).style.visibility = "visible";
         noteCells[cellNumber][newHTML] = newHTML;
         cellElement.style.color = "black";
