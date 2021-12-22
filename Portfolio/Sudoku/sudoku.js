@@ -192,16 +192,12 @@ function isDefaultNumber(cell) {
     if (x != displayCells[cell]) {
       if (isInVertical(cell, x) || isInHorizonal(cell, x) || isInBox(cell, x)) {
         otherNumbers.push(x);
-        c(x);
       }
     }
   }
   if (otherNumbers.length == 8) {
     result = true;
   }
-  c(displayCells[cell]);
-  c(otherNumbers);
-  c(result);
   return result;
 }
 
