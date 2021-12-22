@@ -272,6 +272,7 @@ function isDefaultCell(cell) {
     if (result && !isInVertical(option, displayCells[cell]) && !isInHorizonal(option, displayCells[cell])) {
       result = false;
     }
+    else{c("workee")}
   });
   return result;
 }
