@@ -389,6 +389,7 @@ function set(cellId, direction = 0) {
       displayCells[cellNumber] = 0;
       noteCells[cellNumber] = [];
       cellElement.style.backgroundColor = "#ccccee";
+      check(cellNumber);
     }
     /* Note Number */
     else if (cellNoteMode == 2) {
