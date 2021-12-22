@@ -290,12 +290,15 @@ function select(selection) {
     var cellElement = document.getElementById("c"+cellNumber);
     //note highlight
     if (displayCells[cellNumber]==-2) {
-      for(i=1;i<10;i++){
-      if (document.getElementById("n"+i+cellNumber).style.visibility == "visible") {
-        document.getElementById("n"+i+cellNumber).style.backgroundColor = "#3388dd";
-      } else {
-        document.getElementById("n"+i+cellNumber).style.backgroundColor = "#ccccee";
-      }
+      c("a");
+      for (i = 1; i < 10; i++) {
+        if (document.getElementById("n"+i+cellNumber).style.visibility == "visible") {
+      c("b");
+          document.getElementById("n"+i+cellNumber).style.backgroundColor = "#3388dd";
+        } else {
+      c("c");
+          document.getElementById("n"+i+cellNumber).style.backgroundColor = "#ccccee";
+        }
       }
     }
     //no highlight
