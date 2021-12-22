@@ -187,7 +187,7 @@ function setGrid() {
 //is this number the only option for this cell?
 function isDefaultNumber(cell) {
   var result = false;
-  var otherNumbers = new Array([]);
+  var otherNumbers = new Array();
   for (x = 1; x < 10; x++) {
     if (x != displayCells[cell]) {
       if (isInVertical(cell, x) || isInHorizonal(cell, x) || isInBox(cell, x)) {
