@@ -54,9 +54,6 @@ td {
   font-size: 150%;
   border-radius: 20%;
 }
-td:active {
-  background-color: red;
-}
 bold {
   font-weight: 1000;
 }
