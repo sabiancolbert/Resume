@@ -432,7 +432,7 @@ function set(cellId, direction = 0) {
         cellElement.style.color = "black";
         cellElement.style.backgroundColor = "#ccccee";
         cellElement.style.fontSize = "75%";
-       // document.getElementById("n"+selection+cellNumber).backgroundColor = "#3388dd"
+        document.getElementById("n"+selection+cellNumber).backgroundColor = "#3388dd"
         if (newHTML.includes("div")) {
           cellElement.innerHTML = newHTML;
         }
