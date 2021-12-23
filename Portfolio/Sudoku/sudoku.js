@@ -376,6 +376,7 @@ function set(cellId, direction = 0) {
     if (direction ==-1) {
       newHTML = undoList[currentMove][1];
       cellNoteMode = undoList[currentMove][2];
+      //HERE HERE undo does not let notes highlight
     } else if (direction == 1) {
       newHTML = redoList[currentMove][1];
       cellNoteMode = redoList[currentMove][2];
