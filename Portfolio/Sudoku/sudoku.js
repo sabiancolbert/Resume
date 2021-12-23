@@ -293,8 +293,10 @@ function select(selection) {
       for (i = 1; i < 10; i++) {
         if (i == selection) {
           document.getElementById("n"+i+cellNumber).style.backgroundColor = "#3388dd";
+          document.getElementById("n"+i+cellNumber).style.zIndex = "1";
         } else {
           document.getElementById("n"+i+cellNumber).style.backgroundColor = "#ccccee";
+          document.getElementById("n"+i+cellNumber).style.zIndex = "0";
         }
       }
     }
