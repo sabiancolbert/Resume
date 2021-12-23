@@ -433,6 +433,7 @@ function set(cellId, direction = 0) {
         cellElement.style.backgroundColor = "#ccccee";
         cellElement.style.fontSize = "75%";
         //HERE HERE HERE selection not defined
+        c(document.getElementById("n"+document.getElementById("selectionElement").innerHTML+cellNumber));
         document.getElementById("n"+document.getElementById("selectionElement").innerHTML+cellNumber).backgroundColor = "#3388dd";
         if (newHTML.includes("div")) {
           cellElement.innerHTML = newHTML;
