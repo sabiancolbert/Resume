@@ -376,7 +376,6 @@ function set(cellId, direction = 0) {
     if (direction ==-1) {
       newHTML = undoList[currentMove][1];
       cellNoteMode = undoList[currentMove][2];
-      //HERE HERE undo does not let notes highlight
     } else if (direction == 1) {
       newHTML = redoList[currentMove][1];
       cellNoteMode = redoList[currentMove][2];
@@ -427,14 +426,14 @@ function set(cellId, direction = 0) {
             displayCells[cellNumber] = -2;
           }
           document.getElementById("n"+newHTML+cellNumber).style.visibility = "visible";
-          document.getElementById("n"+newHTML+cellNumber).style.backgroundColor = "#3388dd";
+          // document.getElementById("n"+newHTML+cellNumber).style.backgroundColor = "#3388dd";
           noteCells[cellNumber][newHTML] = newHTML;
         }
         cellElement.style.color = "black";
         cellElement.style.backgroundColor = "#ccccee";
         cellElement.style.fontSize = "75%";
+        document.getElementById("n"+selection+cellNumber).backgroundColor = "#3388dd"
         if (newHTML.includes("div")) {
-          document.getElementById("n"+selection+cellNumber).backgroundColor="#3388dd"
           cellElement.innerHTML = newHTML;
         }
       }
