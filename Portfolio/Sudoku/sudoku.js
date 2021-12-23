@@ -434,6 +434,7 @@ function set(cellId, direction = 0) {
         cellElement.style.backgroundColor = "#ccccee";
         cellElement.style.fontSize = "75%";
         if (newHTML.includes("div")) {
+          document.getElementById("n"+selection+cellNumber).backgroundColor="#3388dd"
           cellElement.innerHTML = newHTML;
         }
       }
