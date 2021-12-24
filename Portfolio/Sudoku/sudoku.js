@@ -10,7 +10,7 @@ var redoList = new Array();
 var currentMove = 0;
 var difficulty = 0;
 var currentCell = 0;
-var noteMode = 0;
+var selectionNoteMode = 0;
 var autoCheck = true;
 var autoRemoveNotes = false;
 var counterElement, selectionElement;
@@ -380,7 +380,7 @@ function set(cellId, direction = 0) {
             cellId,
             cellElement.innerHTML,
             cellNoteMode];
-         cellNoteMode = noteMode;
+         cellNoteMode = selectionNoteMode;
          //HERE this might be a problem??
          redoList.splice(currentMove, redoList.length - currentMove);
       }
@@ -560,12 +560,12 @@ function autoRemoveNotes() {
 
 function updateNoteMode() {
    c("updateNoteMode()");
-   noteMode++;
+   selectionNoteMode++;
    selectionElement.style.padding = 0;
    /* Note Mode */
    if (noteMode > 0) {
-      noteMode = -2;
-   
+      selectionNoteMode = -2;
+
       selectionElement.style.fontSize = "100%";
       switch (selectionElement.innerHTML * 1) {
          case 1:
@@ -596,8 +596,8 @@ function updateNoteMode() {
             selectionElement.style.padding = "60% 0 0 60%";
             break;
       }
-   
-      
+
+
    }
    /* Grey Note Number Mode */
    else if (noteMode == -1) {
@@ -605,8 +605,8 @@ function updateNoteMode() {
       selectionElement.style.fontSize = "225%";
    }
    /* Regular Number Mode */
-   else{
-            selectionElement.style.color = "black";   
+   else {
+      selectionElement.style.color = "black";
       selectionElement.style.fontSize = "300%";
    }
 }
