@@ -465,7 +465,7 @@ function set(cellId, direction = 0) {
             cellElement.style.color = "black";
             cellElement.style.fontSize = "150%";
             if (check(cellNumber)) {
-               autoRemoveNotes();
+               //HERE autoRemoveNotes();
             }
          }
       }
@@ -564,11 +564,11 @@ function updateNoteMode() {
    selectionNoteMode--;
    selectionElement.style.padding = 0;
    /* Regular Number Mode */
-   if (selectionNoteMode < -2){
+   if (selectionNoteMode < -2) {
       selectionNoteMode = 1;
       selectionElement.style.color = "black";
       selectionElement.style.fontSize = "300%";
-   } 
+   }
    /* Grey Note Number Mode */
    else if (selectionNoteMode >-2) {
       selectionElement.style.color = "#777777";
@@ -577,7 +577,7 @@ function updateNoteMode() {
       selectionNoteMode = -1
    }
    /* Note Mode */
-   else 
+   else
    {
       selectionElement.style.fontSize = "100%";
       switch (selectionElement.innerHTML * 1) {
