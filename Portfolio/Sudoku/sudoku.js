@@ -367,6 +367,7 @@ function set(cellId, direction = 0) {
       var cellNoteMode = displayCells[cellNumber];
       var content = selectionElement.innerHTML;
       //undo
+c(cellNoteMode);
       if (direction ==-1) {
          content = undoList[currentMove][1];
          cellNoteMode = undoList[currentMove][2];
@@ -387,8 +388,6 @@ function set(cellId, direction = 0) {
       c(undoList);
       c(redoList);
       //stuff
-c(content);
-c(cellNoteMode);
       if (content == " ") {
          cellNoteMode = 0;
       }
