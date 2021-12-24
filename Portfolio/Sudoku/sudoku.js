@@ -325,7 +325,7 @@ function select(selection) {
       selectionElement.innerHTML = " ";
       document.getElementById("counterHolder").style.visibility = "hidden";
    }
-   if (noteMode == 2) {
+   if (selectionNoteMode == 2) {
       switch (selection) {
          case 1:
             selectionElement.style.padding = "0 60% 60% 0";
@@ -563,7 +563,7 @@ function updateNoteMode() {
    selectionNoteMode++;
    selectionElement.style.padding = 0;
    /* Note Mode */
-   if (noteMode > 0) {
+   if (selectionNoteMode > 0) {
       selectionNoteMode = -2;
 
       selectionElement.style.fontSize = "100%";
@@ -600,7 +600,7 @@ function updateNoteMode() {
 
    }
    /* Grey Note Number Mode */
-   else if (noteMode == -1) {
+   else if (selectionNoteMode == -1) {
       selectionElement.style.color = "#777777";
       selectionElement.style.fontSize = "225%";
    }
