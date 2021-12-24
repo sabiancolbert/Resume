@@ -429,8 +429,8 @@ function set(cellId, direction = 0) {
                cellElement.innerHTML = content;
             }
             displayCells[cellNumber] = -2;
-            document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.backgroundColor = "#3388dd";
-            document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.zIndex = document.getElementById("n"+selectionElement.innerHTML+cellNumber).style.zIndex++;
+         select(selectionElement.innerHTML);
+            
          }
       }
       /* Regular Number */
