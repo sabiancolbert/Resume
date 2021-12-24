@@ -382,7 +382,7 @@ function set(cellId, direction = 0) {
             cellNoteMode];
          cellNoteMode = selectionNoteMode;
          //HERE this might be a problem??
-         redoList.splice(currentMove, redoList.length - currentMove);
+         //redoList.splice(currentMove, redoList.length - currentMove);
       }
       c(undoList);
       c(redoList);
