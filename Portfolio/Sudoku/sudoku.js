@@ -432,12 +432,10 @@ function set(cellId, direction = 0) {
         cellElement.style.color = "black";
         cellElement.style.backgroundColor = "#ccccee";
         cellElement.style.fontSize = "75%";
-        c("n"+document.getElementById("selectionElement").innerHTML+cellNumber);
-        document.getElementById("n"+document.getElementById("selectionElement").innerHTML+cellNumber).style.visibility = "visible";
-        document.getElementById("n"+document.getElementById("selectionElement").innerHTML+cellNumber).style.backgroundColor = "#3388dd";
         if (newHTML.includes("div")) {
           cellElement.innerHTML = newHTML;
         }
+        document.getElementById("n"+document.getElementById("selectionElement").innerHTML+cellNumber).style.backgroundColor = "#3388dd";
       }
     }
     /* Regular Number */
