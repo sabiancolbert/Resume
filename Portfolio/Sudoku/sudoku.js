@@ -500,6 +500,7 @@ function set(cellId, direction = 0) {
          cellId,
          cellElement.innerHTML,
          cellNoteMode];
+         c("set - add to redoList " + redoList[currentMove]);
    }
 }
 
