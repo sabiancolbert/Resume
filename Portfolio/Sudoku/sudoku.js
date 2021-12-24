@@ -211,7 +211,7 @@ function isDefaultNumber(cell) {
 function isDefaultCell(cell) {
    var result = true;
    var emptyCells = new Array();
-      //HERE test noteCells, use dummy numbers for next part
+   //HERE test noteCells, use dummy numbers for next part
    /* Find Empty Cells In Row */
    var temp = Math.floor(cell/9)*9;
    for (i = temp; i < temp+9; i++) {
@@ -296,7 +296,6 @@ function select(selection) {
       var cellElement = document.getElementById("c"+cellNumber);
       //note highlight
       if (displayCells[cellNumber]==-2) {
-         c("HERE");
          for (i = 1; i < 10; i++) {
             if (i == selection) {
                document.getElementById("n"+i+cellNumber).style.backgroundColor = "#3388dd";
@@ -368,7 +367,6 @@ function set(cellId, direction = 0) {
    c("set("+cellId+","+direction+")");
    var cellNumber = cellId.substring(1, cellId.length) * 1;
    if (userCells.includes(cellNumber)) {
-      //HERE HERE sooooometimes erasing and undoing will send a note through as a number (cellnotemode wrong)
       var cellElement = document.getElementById(cellId);
       var cellNoteMode = displayCells[cellNumber];
       var content = selectionElement.innerHTML;
@@ -381,17 +379,17 @@ function set(cellId, direction = 0) {
       else if (direction == 1) {
          content = redoList[currentMove][1];
          cellNoteMode = redoList[currentMove][2];
-      } else {
+      }
+      //regular
+      else {
          undoList[currentMove] = [
             cellId,
             cellElement.innerHTML,
             cellNoteMode];
          cellNoteMode = selectionNoteMode;
       }
-      c(undoList);
-      c(redoList);
-      //stuff
-      if (content == " ") {
+      //detect empty content
+      if (content == " " || content==displayCells[cellNumber]&&selectionNoteMode==cellNoteMode&&cellNoteMode>-2) {
          cellNoteMode = 0;
       }
       //counter element
@@ -403,7 +401,6 @@ function set(cellId, direction = 0) {
       }
       /* Erase */
       if (cellNoteMode == 0) {
-         //here if same number and same notemode(if notes, make sure its the only number there)
          c("set - erase cell");
          cellElement.innerHTML = " ";
          displayCells[cellNumber] = 0;
@@ -417,6 +414,13 @@ function set(cellId, direction = 0) {
             c("set - remove note from cell");
             document.getElementById("n"+content+cellNumber).style.visibility = "hidden";
             noteCells[cellNumber][content] = 0;
+            if(){
+         c("set - erase note cell");
+         cellElement.innerHTML = " ";
+         displayCells[cellNumber] = 0;
+         noteCells[cellNumber] = [];
+         cellElement.style.backgroundColor = "#ccccee";
+      }
          }
          /* Add Note To Cell */
          else {
