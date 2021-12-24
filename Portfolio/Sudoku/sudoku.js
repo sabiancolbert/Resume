@@ -10,7 +10,7 @@ var redoList = new Array();
 var currentMove = 0;
 var difficulty = 0;
 var currentCell = 0;
-var selectionNoteMode = 0;
+var selectionNoteMode = 1;
 var autoCheck = true;
 var autoRemoveNotes = false;
 var counterElement, selectionElement;
@@ -367,7 +367,6 @@ function set(cellId, direction = 0) {
       var cellNoteMode = displayCells[cellNumber];
       var content = selectionElement.innerHTML;
       //undo
-c(cellNoteMode);
       if (direction ==-1) {
          content = undoList[currentMove][1];
          cellNoteMode = undoList[currentMove][2];
