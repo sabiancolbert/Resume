@@ -325,7 +325,7 @@ function select(selection) {
       selectionElement.innerHTML = " ";
       document.getElementById("counterHolder").style.visibility = "hidden";
    }
-   if (selectionNoteMode == 2) {
+   if (selectionNoteMode == -2) {
       switch (selection) {
          case 1:
             selectionElement.style.padding = "0 60% 60% 0";
