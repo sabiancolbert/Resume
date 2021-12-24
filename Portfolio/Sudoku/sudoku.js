@@ -415,7 +415,7 @@ function set(cellId, direction = 0) {
             document.getElementById("n"+content+cellNumber).style.visibility = "hidden";
             noteCells[cellNumber][content] = 0;
             //if empty
-            if (noteCells[cellNumber][1]==0&&noteCells[cellNumber][2]==0&&noteCells[cellNumber][3]==0&&noteCells[cellNumber][4]==0&&noteCells[cellNumber][5]==0&&noteCells[cellNumber][6]==0&&noteCells[cellNumber][7]==0&&noteCells[cellNumber][8]==0&&noteCells[cellNumber][9]==0&&) {
+            if (noteCells[cellNumber][1] == 0 && noteCells[cellNumber][2] == 0 && noteCells[cellNumber][3] == 0 && noteCells[cellNumber][4] == 0 && noteCells[cellNumber][5] == 0 && noteCells[cellNumber][6] == 0 && noteCells[cellNumber][7] == 0 && noteCells[cellNumber][8] == 0 && noteCells[cellNumber][9] == 0) {
                c("set - erase note cell");
                cellElement.innerHTML = " ";
                displayCells[cellNumber] = 0;
