@@ -387,7 +387,7 @@ function set(cellId, direction = 0) {
             cellNoteMode];
          cellNoteMode = noteMode;
          //HERE this might be a problem??
-            redoList.splice(currentMove, redoList.length - currentMove);
+         redoList.splice(currentMove, redoList.length - currentMove);
       }
       //stuff
       if (content == " ") {
@@ -411,7 +411,7 @@ function set(cellId, direction = 0) {
       /* Note Number */
       else if (cellNoteMode == -2) {
          /* Remove Note From Cell */
-         if (direction==0 && noteCells[cellNumber][content] > 0) {
+         if (direction == 0 && noteCells[cellNumber][content] > 0) {
             c("set - remove note from cell");
             document.getElementById("n"+content+cellNumber).style.visibility = "hidden";
             noteCells[cellNumber][content] = 0;
@@ -430,15 +430,14 @@ function set(cellId, direction = 0) {
                }
                document.getElementById("n"+content+cellNumber).style.visibility = "visible";
                noteCells[cellNumber][content] = content;
-            }
-            else{
+            } else {
                cellElement.innerHTML = content;
             }
             document.getElementById("n"+document.getElementById("selectionElement").innerHTML+cellNumber).style.backgroundColor = "#3388dd";
          }
       }
       /* Regular Number */
-      else{
+      else {
          c("set - add number to cell");
          displayCells[cellNumber] = content;
          cellElement.innerHTML = content;
@@ -472,157 +471,156 @@ function set(cellId, direction = 0) {
             }
          }
       }
-   
-}
-      if (direction == 0) {
-         currentMove++;
-         redoList[currentMove] = [
-            cellId,
-            cellElement.innerHTML,
-            cellNoteMode];
-      }
+
+   }
+   if (direction == 0) {
+      currentMove++;
+      redoList[currentMove] = [
+         cellId,
+         cellElement.innerHTML,
+         cellNoteMode];
    }
 }
 
 function changeMove(direction) {
-   c("changeMove("+direction+")");
-   if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < redoList.length -1) {
-      currentMove += direction;
-      if (direction==-1) {
-         /* Undo  Restart */
-         if (undoList[currentMove][0] == 81) {
-            //HERE
-         }
-         /* Normal Undo */
-         else {
-            set(undoList[currentMove][0], direction);
-         }
-      } else {
-         /* Redo Restart */
-         if (redoList[currentMove][0] == 81) {
-            //HERE
-         }
-         /* Normal Redo */
-         else {
-            set(redoList[currentMove][0], direction);
-         }
-      }
-   }
+c("changeMove("+direction+")");
+if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < redoList.length -1) {
+currentMove += direction;
+if (direction==-1) {
+/* Undo  Restart */
+if (undoList[currentMove][0] == 81) {
+//HERE
+}
+/* Normal Undo */
+else {
+set(undoList[currentMove][0], direction);
+}
+} else {
+/* Redo Restart */
+if (redoList[currentMove][0] == 81) {
+//HERE
+}
+/* Normal Redo */
+else {
+set(redoList[currentMove][0], direction);
+}
+}
+}
 }
 
 //check(81, true) is autocheck button
 function check(cellNumber, changingAutoCheck = false) {
-   var result = true;
-   if (changingAutoCheck) {
-      autoCheck=!autoCheck;
-      if (autoCheck) {
-         document.getElementById("wrongElement").innerHTML = "0";
-         for (i = 0; i < 81; i++) {
-            if (displayCells[cellNumber] > 0 && displayCells[cellNumber] != cells[cellNumber]) {
-               result = false;
-               wrongList.push(cellNumber);
-               document.getElementById("c"+cellNumber).style.color = red;
-            }
-         }
-      } else {
-         document.getElementById("wrongElement").innerHTML = "";
-         for (i = 0; i < 81; i++) {
-            if (wrongList.includes(cellNumber)) {
-               wrongList.splice(wrongList.indexOf(cellNumber), 1);
-               document.getElementById("c"+cellNumber).style.color = black;
-            }
-         }
-      }
-   } else if (autoCheck) {
-      var adjust = 0;
-      if (wrongList.includes(cellNumber)) {
-         wrongList.splice(wrongList.indexOf(cellNumber), 1);
-         adjust--;
-      }
-      if (displayCells[cellNumber] != cells[cellNumber]) {
-         wrongList.push(cellNumber);
-         adjust++;
-         document.getElementById("c"+cellNumber).style.color = "red";
-         result = false
-      }
-      document.getElementById("wrongElement").innerHTML = adjust + parseInt(document.getElementById("wrongElement").innerHTML);
-   }
-   c("check() = "+result);
-   return result;
+var result = true;
+if (changingAutoCheck) {
+autoCheck=!autoCheck;
+if (autoCheck) {
+document.getElementById("wrongElement").innerHTML = "0";
+for (i = 0; i < 81; i++) {
+if (displayCells[cellNumber] > 0 && displayCells[cellNumber] != cells[cellNumber]) {
+result = false;
+wrongList.push(cellNumber);
+document.getElementById("c"+cellNumber).style.color = red;
+}
+}
+} else {
+document.getElementById("wrongElement").innerHTML = "";
+for (i = 0; i < 81; i++) {
+if (wrongList.includes(cellNumber)) {
+wrongList.splice(wrongList.indexOf(cellNumber), 1);
+document.getElementById("c"+cellNumber).style.color = black;
+}
+}
+}
+} else if (autoCheck) {
+var adjust = 0;
+if (wrongList.includes(cellNumber)) {
+wrongList.splice(wrongList.indexOf(cellNumber), 1);
+adjust--;
+}
+if (displayCells[cellNumber] != cells[cellNumber]) {
+wrongList.push(cellNumber);
+adjust++;
+document.getElementById("c"+cellNumber).style.color = "red";
+result = false
+}
+document.getElementById("wrongElement").innerHTML = adjust + parseInt(document.getElementById("wrongElement").innerHTML);
+}
+c("check() = "+result);
+return result;
 }
 
 function autoRemoveNotes() {
-   c("autoRemoveNotes() =");
-   //if autoremove notes in settings is on
-   if (true) {
-      c("true");
-      //HERE
-      //remove horizontal, vertical, and box
-   } else {
-      c("false");
-      {}
-   }
+c("autoRemoveNotes() =");
+//if autoremove notes in settings is on
+if (true) {
+c("true");
+//HERE
+//remove horizontal, vertical, and box
+} else {
+c("false");
+{}
+}
 }
 
 function updateNoteMode() {
-   c("updateNoteMode()");
-   noteMode++;
-   selectionElement.style.padding = 0;
-   /* Regular Number Mode */
-   if (noteMode > 2) {
-      noteMode = 0;
-      selectionElement.style.fontSize = "300%";
-   }
-   /* Grey Note Number Mode */
-   else if (noteMode == 1) {
-      selectionElement.style.color = "#777777";
-      selectionElement.style.fontSize = "225%";
+c("updateNoteMode()");
+noteMode++;
+selectionElement.style.padding = 0;
+/* Regular Number Mode */
+if (noteMode > 2) {
+noteMode = 0;
+selectionElement.style.fontSize = "300%";
+}
+/* Grey Note Number Mode */
+else if (noteMode == 1) {
+selectionElement.style.color = "#777777";
+selectionElement.style.fontSize = "225%";
 
-   }
-   /* Note Mode */
-   else {
-      selectionElement.style.color = "black";
-      selectionElement.style.fontSize = "100%";
-      switch (selectionElement.innerHTML * 1) {
-         case 1:
-            selectionElement.style.padding = "0 60% 60% 0";
-            break;
-         case 2:
-            selectionElement.style.padding = "0 0 60% 0";
-            break;
-         case 3:
-            selectionElement.style.padding = "0 0 60% 60%";
-            break;
-         case 4:
-            selectionElement.style.padding = "0 60% 0 0";
-            break;
-         case 5:
-            selectionElement.style.padding = "0 0 0 0";
-            break;
-         case 6:
-            selectionElement.style.padding = "0 0 0 60%";
-            break;
-         case 7:
-            selectionElement.style.padding = "60% 60% 0 0";
-            break;
-         case 8:
-            selectionElement.style.padding = "60% 0 0 0";
-            break;
-         case 9:
-            selectionElement.style.padding = "60% 0 0 60%";
-            break;
-      }
-   }
+}
+/* Note Mode */
+else {
+selectionElement.style.color = "black";
+selectionElement.style.fontSize = "100%";
+switch (selectionElement.innerHTML * 1) {
+case 1:
+selectionElement.style.padding = "0 60% 60% 0";
+break;
+case 2:
+selectionElement.style.padding = "0 0 60% 0";
+break;
+case 3:
+selectionElement.style.padding = "0 0 60% 60%";
+break;
+case 4:
+selectionElement.style.padding = "0 60% 0 0";
+break;
+case 5:
+selectionElement.style.padding = "0 0 0 0";
+break;
+case 6:
+selectionElement.style.padding = "0 0 0 60%";
+break;
+case 7:
+selectionElement.style.padding = "60% 60% 0 0";
+break;
+case 8:
+selectionElement.style.padding = "60% 0 0 0";
+break;
+case 9:
+selectionElement.style.padding = "60% 0 0 60%";
+break;
+}
+}
 }
 
 function restart() {
-   c("restart()");
+c("restart()");
 
 }
 
 function menu() {
-   c("menu()");
-   document.getElementById("menuElement").style.visibility = !document.getElementById("menuElement").style.visibility;
+c("menu()");
+document.getElementById("menuElement").style.visibility = !document.getElementById("menuElement").style.visibility;
 }
 
 /*//HERE
