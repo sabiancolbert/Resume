@@ -535,7 +535,7 @@ function check(cellNumber, changingAutoCheck = false) {
    if (changingAutoCheck) {
       autoCheck=!autoCheck;
       if (autoCheck) {
-         document.getElementById("wrongElement").innerHTML = "0";
+         document.getElementById("wrongElement").style.visibility = "visible";
          for (i = 0; i < 81; i++) {
             if (displayCells[cellNumber] > 0 && displayCells[cellNumber] != cells[cellNumber]) {
                result = false;
@@ -544,7 +544,7 @@ function check(cellNumber, changingAutoCheck = false) {
             }
          }
       } else {
-         document.getElementById("wrongElement").innerHTML = "";
+         document.getElementById("wrongElement").style.visibility = "hidden";
          for (i = 0; i < 81; i++) {
             if (wrongList.includes(cellNumber)) {
                wrongList.splice(wrongList.indexOf(cellNumber), 1);
@@ -556,7 +556,6 @@ function check(cellNumber, changingAutoCheck = false) {
       var adjust = 0;
       if (wrongList.includes(cellNumber)) {
          wrongList.splice(wrongList.indexOf(cellNumber), 1);
-         adjust--;
       }
       if (displayCells[cellNumber] != cells[cellNumber]) {
          wrongList.push(cellNumber);
@@ -566,6 +565,7 @@ function check(cellNumber, changingAutoCheck = false) {
       }
       document.getElementById("wrongElement").innerHTML = adjust + parseInt(document.getElementById("wrongElement").innerHTML);
    }
+   c(1+true);
    c("check() = "+result);
    return result;
 }
