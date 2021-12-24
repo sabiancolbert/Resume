@@ -397,7 +397,7 @@ function set(cellId, direction = 0) {
       }
       /* Erase */
       if (cellNoteMode == 0) {
-         //here if same number and same notemode
+         //here if same number and same notemode(if notes, make sure its the only number there)
          c("set - erase cell");
          cellElement.innerHTML = " ";
          displayCells[cellNumber] = 0;
@@ -411,8 +411,6 @@ function set(cellId, direction = 0) {
             c("set - remove note from cell");
             document.getElementById("n"+content+cellNumber).style.visibility = "hidden";
             noteCells[cellNumber][content] = 0;
-            //here if empty, set display cells to 0 and clear notws stuff
-
          }
          /* Add Note To Cell */
          else {
@@ -431,7 +429,7 @@ function set(cellId, direction = 0) {
                cellElement.innerHTML = content;
             }
             displayCells[cellNumber] = -2;
-            document.getElementById("n"+document.getElementById("selectionElement").innerHTML+cellNumber).style.backgroundColor = "#3388dd";
+            document.getElementById("n"+document.getElementById("selectionElement").innerHTML+cellNumber).style.backgroundColor = "red";//"#3388dd";
          }
       }
       /* Regular Number */
