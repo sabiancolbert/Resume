@@ -148,8 +148,8 @@ function setGrid() {
    c("setGrid()");
    /* Unsolve */
    var testedNumbers = new Array([0]);
-   var stopCounterCounter = 81 - Math.floor(Math.random()*5+parseInt(difficulty));
-   while (stopCounterCounter > 0 && testedNumbers.length < 81) {
+   var stopCounter = 81 - Math.floor(Math.random()*5+parseInt(difficulty));
+   while (stopCounter > 0 && testedNumbers.length < 81) {
       var cellNumber = Math.floor(Math.random()*81);
       if (!testedNumbers.includes(cellNumber)) {
          testedNumbers.push(cellNumber);
