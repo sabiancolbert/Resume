@@ -365,20 +365,25 @@ function set(cellId, direction = 0) {
       /* Preliminary */
       //HERE HERE sooooometimes erasing and undoing will send a note through as a number (cellnotemode wrong)
       var cellElement = document.getElementById(cellId);
-      var cellNoteMode = 0;         cellNoteMode==0;
-      var newHTML = "";
+      var cellNoteMode = displayCells[cellNumber];
+      var content = "";
+      //undo
       if (direction ==-1) {
-         newHTML = undoList[currentMove][1];
+         content = undoList[currentMove][1];
          cellNoteMode = undoList[currentMove][2];
-      } else if (direction == 1) {
-         newHTML = redoList[currentMove][1];
+      } 
+      //redo
+      else if (direction == 1) {
+         content = redoList[currentMove][1];
          cellNoteMode = redoList[currentMove][2];
-      } else {
+      } 
+      //regular
+      else {
          undoList[currentMove] = [
             cellId,
             cellElement.innerHTML,
             cellNoteMode];
-         newHTML = selectionElement.innerHTML;
+         content = selectionElement.innerHTML;
          cellNoteMode = noteMode;
          for (i = redoList.length; i > currentMove; i--) {
             redoList.splice(i, 1);
