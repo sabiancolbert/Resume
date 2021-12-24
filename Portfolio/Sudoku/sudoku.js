@@ -387,6 +387,8 @@ function set(cellId, direction = 0) {
       c(undoList);
       c(redoList);
       //stuff
+c(content);
+c(cellNoteMode);
       if (content == " ") {
          cellNoteMode = 0;
       }
