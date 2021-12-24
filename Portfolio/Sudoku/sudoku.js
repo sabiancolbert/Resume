@@ -545,7 +545,7 @@ function check(cellNumber, changingAutoCheck = false) {
 }
 
 function autoRemoveNotes() {
-   c("autoRemoveNotes() =");
+   c("autoRemoveNotes() =");/*
    //if autoremove notes in settings is on
    if (true) {
       c("true");
@@ -553,8 +553,7 @@ function autoRemoveNotes() {
       //remove horizontal, vertical, and box
    } else {
       c("false");
-      {}
-   }
+   }*/
 }
 
 function updateNoteMode() {
