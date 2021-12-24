@@ -404,7 +404,16 @@ function set(cellId, direction = 0) {
          c("set - erase cell");
          cellElement.innerHTML = " ";
          displayCells[cellNumber] = 0;
-         noteCells[cellNumber] = [];
+         noteCells[cellNumber] = [0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0];
          cellElement.style.backgroundColor = "#ccccee";
       }
       /* Note Number */
@@ -419,7 +428,16 @@ function set(cellId, direction = 0) {
                c("set - erase note cell");
                cellElement.innerHTML = " ";
                displayCells[cellNumber] = 0;
-               noteCells[cellNumber] = [];
+         noteCells[cellNumber] = [0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0];
             }
          }
          /* Add Note To Cell */
@@ -439,7 +457,6 @@ function set(cellId, direction = 0) {
                cellElement.innerHTML = content;
             }
             displayCells[cellNumber] = -2;
-            select(selectionElement.innerHTML);
          }
       }
       /* Regular Number */
@@ -450,9 +467,6 @@ function set(cellId, direction = 0) {
          numberTotals[cellElement.innerHTML]--;
          if (selectionElement.innerHTML == cellElement.innerHTML) {
             counterElement.innerHTML = numberTotals[cellElement.innerHTML];
-         }
-         if (content == selectionElement.innerHTML) {
-            cellElement.style.backgroundColor = "#3388dd";
          }
          noteCells[cellNumber] = [0,
             0,
@@ -478,6 +492,8 @@ function set(cellId, direction = 0) {
          }
       }
    }
+   //highlight
+               select(selectionElement.innerHTML);
    if (direction == 0) {
       currentMove++;
       redoList[currentMove] = [
