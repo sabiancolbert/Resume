@@ -564,7 +564,7 @@ function check(cellNumber, changingAutoCheck = false) {
          addOne = true;
          result = false;
       }
-      c(addOne);
+      c(0+addOne);
       c("&&&"+parseInt(document.getElementById("wrongElement").innerHTML + addOne));
       document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML + addOne);
    }
