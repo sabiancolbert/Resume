@@ -429,8 +429,7 @@ function set(cellId, direction = 0) {
                cellElement.innerHTML = content;
             }
             displayCells[cellNumber] = -2;
-         select(selectionElement.innerHTML);
-            
+            select(selectionElement.innerHTML);
          }
       }
       /* Regular Number */
