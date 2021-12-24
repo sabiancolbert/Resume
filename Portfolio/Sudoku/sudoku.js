@@ -376,10 +376,6 @@ function set(cellId, direction = 0) {
          content = redoList[currentMove][1];
          cellNoteMode = redoList[currentMove][2];
       }
-      //maybe condense above me using direction?
-      c(undoList);
-      c(redoList);
-      //regular
       else {
          undoList[currentMove] = [
             cellId,
@@ -389,6 +385,8 @@ function set(cellId, direction = 0) {
          //HERE this might be a problem??
          redoList.splice(currentMove, redoList.length - currentMove);
       }
+      c(undoList);
+      c(redoList);
       //stuff
       if (content == " ") {
          cellNoteMode = 0;
