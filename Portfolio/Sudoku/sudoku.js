@@ -398,7 +398,8 @@ function set(cellId, direction = 0) {
          }
       }
       /* Erase */
-      if (cellNoteMode == 0 ) {//here if same number and same notemode
+      if (cellNoteMode == 0) {
+         //here if same number and same notemode
          c("set - erase cell");
          cellElement.innerHTML = " ";
          displayCells[cellNumber] = 0;
@@ -563,9 +564,8 @@ function updateNoteMode() {
    selectionNoteMode++;
    selectionElement.style.padding = 0;
    /* Note Mode */
-   if (selectionNoteMode > 0) {
+   if (selectionNoteMode > 1) {
       selectionNoteMode = -2;
-
       selectionElement.style.fontSize = "100%";
       switch (selectionElement.innerHTML * 1) {
          case 1:
@@ -608,6 +608,8 @@ function updateNoteMode() {
    else {
       selectionElement.style.color = "black";
       selectionElement.style.fontSize = "300%";
+     //skip erase mode (0)
+      selectionNoteMode++;
    }
 }
 
