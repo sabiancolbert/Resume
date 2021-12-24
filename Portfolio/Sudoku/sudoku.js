@@ -463,7 +463,7 @@ function set(cellId, direction = 0) {
             cellElement.style.color = "black";
             cellElement.style.fontSize = "150%";
             if (check(cellNumber)) {
-               //HERE autoRemoveNotes();
+               autoRemoveNotes();
             }
          }
       }
