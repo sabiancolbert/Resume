@@ -307,7 +307,7 @@ function select(selection) {
          }
       }
       //number highlight
-      else if (selection == displayCells[cellNumber] && displayCells[cellNumber] != 0) {
+      else if (selection == cellElement.innerHTML && displayCells[cellNumber] != 0) {
          cellElement.style.backgroundColor = "#3388dd";
          if (cellElement.style.fontSize == "125%") {
             cellElement.style.color = "#ccccee";
@@ -428,16 +428,16 @@ function set(cellId, direction = 0) {
                c("set - erase note cell");
                cellElement.innerHTML = " ";
                displayCells[cellNumber] = 0;
-         noteCells[cellNumber] = [0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0];
+               noteCells[cellNumber] = [0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0];
             }
          }
          /* Add Note To Cell */
@@ -493,7 +493,7 @@ function set(cellId, direction = 0) {
       }
    }
    //highlight
-               select(selectionElement.innerHTML);
+   select(selectionElement.innerHTML);
    if (direction == 0) {
       currentMove++;
       redoList[currentMove] = [
