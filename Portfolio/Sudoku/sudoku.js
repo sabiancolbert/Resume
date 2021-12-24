@@ -362,91 +362,91 @@ function set(cellId, direction = 0) {
    c("set("+cellId+","+direction+")");
    var cellNumber = cellId.substring(1, cellId.length) * 1;
    if (userCells.includes(cellNumber)) {
-      /* Preliminary */
       //HERE HERE sooooometimes erasing and undoing will send a note through as a number (cellnotemode wrong)
       var cellElement = document.getElementById(cellId);
       var cellNoteMode = displayCells[cellNumber];
-      var content = "";
+      var content = selectionElement.innerHTML;
       //undo
       if (direction ==-1) {
          content = undoList[currentMove][1];
          cellNoteMode = undoList[currentMove][2];
-      } 
+      }
       //redo
       else if (direction == 1) {
          content = redoList[currentMove][1];
          cellNoteMode = redoList[currentMove][2];
-      } 
+      }
+      //maybe condense above me using direction?
+      c(undoList);
+      c(redoList);
       //regular
       else {
          undoList[currentMove] = [
             cellId,
             cellElement.innerHTML,
             cellNoteMode];
-         content = selectionElement.innerHTML;
          cellNoteMode = noteMode;
-         for (i = redoList.length; i > currentMove; i--) {
-            redoList.splice(i, 1);
-         }
+         //HERE this might be a problem??
+            redoList.splice(currentMove, redoList.length - currentMove);
       }
-      if (newHTML == " " || newHTML == "") {
+      //stuff
+      if (content == " ") {
          cellNoteMode = 0;
       }
-      if (cellElement.innerHTML - 0 > 0) {
+      //counter element
+      if (displayCells[cellNumber] > 0) {
          numberTotals[cellElement.innerHTML]++;
          if (cellElement.innerHTML == selectionElement.innerHTML) {
             counterElement.innerHTML = numberTotals[cellElement.innerHTML];
          }
       }
       /* Erase */
-      if (cellNoteMode == -1) {
+      if (cellNoteMode == 0) {
          c("set - erase cell");
          cellElement.innerHTML = " ";
          displayCells[cellNumber] = 0;
          noteCells[cellNumber] = [];
          cellElement.style.backgroundColor = "#ccccee";
-         check(cellNumber);
       }
       /* Note Number */
-      else if (cellNoteMode == 2) {
+      else if (cellNoteMode == -2) {
          /* Remove Note From Cell */
-         if (noteCells[cellNumber][newHTML] > 0) {
+         if (direction==0 && noteCells[cellNumber][content] > 0) {
             c("set - remove note from cell");
-            document.getElementById("n"+newHTML+cellNumber).style.visibility = "hidden";
-            noteCells[cellNumber][newHTML] = 0;
+            document.getElementById("n"+content+cellNumber).style.visibility = "hidden";
+            noteCells[cellNumber][content] = 0;
          }
          /* Add Note To Cell */
          else {
             c("set - add note to cell");
+            cellElement.style.color = "black";
+            cellElement.style.backgroundColor = "#ccccee";
+            cellElement.style.fontSize = "75%";
             //if not undo or redo
             if (direction == 0) {
                if (displayCells[cellNumber] !=-2) {
                   cellElement.innerHTML = "<div class='notesContainer'><div name='h1' class='noteHolder'><p class='p1' id='n1"+cellNumber+"'>1</p></div><div name='h2' class='noteHolder'><p id='n2"+cellNumber+"'>2</p></div><div name='h3' class='noteHolder'><p class='p3' id='n3"+cellNumber+"'>3</p></div><div class='noteHolder'><p class='p4' id='n4"+cellNumber+"'>4</p></div><div class='noteHolder'><p id='n5"+cellNumber+"'>5</p></div><div class='noteHolder'><p class='p6' id='n6"+cellNumber+"'>6</p></div><div name='h7' class='noteHolder'><p class='p7' id='n7"+cellNumber+"'>7</p></div><div name='h8' class='noteHolder'><p id='n8"+cellNumber+"'>8</p></div><div name='h9' class='noteHolder'><p class='p9' id='n9"+cellNumber+"'>9</p></div></div>";
                   displayCells[cellNumber] = -2;
                }
-               document.getElementById("n"+newHTML+cellNumber).style.visibility = "visible";
-               // document.getElementById("n"+newHTML+cellNumber).style.backgroundColor = "#3388dd";
-               noteCells[cellNumber][newHTML] = newHTML;
+               document.getElementById("n"+content+cellNumber).style.visibility = "visible";
+               noteCells[cellNumber][content] = content;
             }
-            cellElement.style.color = "black";
-            cellElement.style.backgroundColor = "#ccccee";
-            cellElement.style.fontSize = "75%";
-            if (newHTML.includes("div")) {
-               cellElement.innerHTML = newHTML;
+            else{
+               cellElement.innerHTML = content;
             }
             document.getElementById("n"+document.getElementById("selectionElement").innerHTML+cellNumber).style.backgroundColor = "#3388dd";
          }
       }
       /* Regular Number */
-      else {
+      else{
          c("set - add number to cell");
-         displayCells[cellNumber] = newHTML;
-         cellElement.innerHTML = newHTML;
+         displayCells[cellNumber] = content;
+         cellElement.innerHTML = content;
          numberTotals[cellElement.innerHTML]--;
          if (selectionElement.innerHTML == cellElement.innerHTML) {
             counterElement.innerHTML = numberTotals[cellElement.innerHTML];
          }
-         if (newHTML == selectionElement.innerHTML) {
+         if (content == selectionElement.innerHTML) {
             cellElement.style.backgroundColor = "#3388dd";
          }
          noteCells[cellNumber] = [0,
@@ -464,7 +464,7 @@ function set(cellId, direction = 0) {
             cellElement.style.fontSize = "125%";
             displayCells[cellNumber] = -1;
          } else {
-            displayCells[cellNumber] = newHTML;
+            displayCells[cellNumber] = content;
             cellElement.style.color = "black";
             cellElement.style.fontSize = "150%";
             if (check(cellNumber)) {
@@ -472,6 +472,8 @@ function set(cellId, direction = 0) {
             }
          }
       }
+   
+}
       if (direction == 0) {
          currentMove++;
          redoList[currentMove] = [
