@@ -290,6 +290,7 @@ function select(selection) {
     var cellElement = document.getElementById("c"+cellNumber);
     //note highlight
     if (displayCells[cellNumber]==-2) {
+      c("HERE");
       for (i = 1; i < 10; i++) {
         if (i == selection) {
           document.getElementById("n"+i+cellNumber).style.backgroundColor = "#3388dd";
