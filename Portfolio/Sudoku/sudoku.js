@@ -411,6 +411,8 @@ function set(cellId, direction = 0) {
             c("set - remove note from cell");
             document.getElementById("n"+content+cellNumber).style.visibility = "hidden";
             noteCells[cellNumber][content] = 0;
+         //here if empty, set display cells to 0 and clear notws stuff
+            
          }
          /* Add Note To Cell */
          else {
@@ -418,11 +420,11 @@ function set(cellId, direction = 0) {
             cellElement.style.color = "black";
             cellElement.style.backgroundColor = "#ccccee";
             cellElement.style.fontSize = "75%";
+                  displayCells[cellNumber] = -2;
             //if not undo or redo
             if (direction == 0) {
                if (displayCells[cellNumber] !=-2) {
                   cellElement.innerHTML = "<div class='notesContainer'><div name='h1' class='noteHolder'><p class='p1' id='n1"+cellNumber+"'>1</p></div><div name='h2' class='noteHolder'><p id='n2"+cellNumber+"'>2</p></div><div name='h3' class='noteHolder'><p class='p3' id='n3"+cellNumber+"'>3</p></div><div class='noteHolder'><p class='p4' id='n4"+cellNumber+"'>4</p></div><div class='noteHolder'><p id='n5"+cellNumber+"'>5</p></div><div class='noteHolder'><p class='p6' id='n6"+cellNumber+"'>6</p></div><div name='h7' class='noteHolder'><p class='p7' id='n7"+cellNumber+"'>7</p></div><div name='h8' class='noteHolder'><p id='n8"+cellNumber+"'>8</p></div><div name='h9' class='noteHolder'><p class='p9' id='n9"+cellNumber+"'>9</p></div></div>";
-                  displayCells[cellNumber] = -2;
                }
                document.getElementById("n"+content+cellNumber).style.visibility = "visible";
                noteCells[cellNumber][content] = content;
