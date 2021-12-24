@@ -420,7 +420,6 @@ function set(cellId, direction = 0) {
             cellElement.style.color = "black";
             cellElement.style.backgroundColor = "#ccccee";
             cellElement.style.fontSize = "75%";
-            displayCells[cellNumber] = -2;
             //if not undo or redo
             if (direction == 0) {
                if (displayCells[cellNumber] !=-2) {
@@ -431,6 +430,7 @@ function set(cellId, direction = 0) {
             } else {
                cellElement.innerHTML = content;
             }
+            displayCells[cellNumber] = -2;
             document.getElementById("n"+document.getElementById("selectionElement").innerHTML+cellNumber).style.backgroundColor = "#3388dd";
          }
       }
