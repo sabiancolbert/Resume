@@ -561,11 +561,24 @@ function autoRemoveNotes() {
 
 function updateNoteMode() {
    c("updateNoteMode()");
-   selectionNoteMode++;
+   selectionNoteMode--;
    selectionElement.style.padding = 0;
+   /* Regular Number Mode */
+   if (selectionNoteMode < -2){
+      selectionNoteMode = 1;
+      selectionElement.style.color = "black";
+      selectionElement.style.fontSize = "300%";
+   } 
+   /* Grey Note Number Mode */
+   else if (selectionNoteMode >-2) {
+      selectionElement.style.color = "#777777";
+      selectionElement.style.fontSize = "225%";
+      //skip erase mode (0)
+      selectionNoteMode = -1
+   }
    /* Note Mode */
-   if (selectionNoteMode > 1) {
-      selectionNoteMode = -2;
+   else 
+   {
       selectionElement.style.fontSize = "100%";
       switch (selectionElement.innerHTML * 1) {
          case 1:
@@ -598,18 +611,6 @@ function updateNoteMode() {
       }
 
 
-   }
-   /* Grey Note Number Mode */
-   else if (selectionNoteMode == -1) {
-      selectionElement.style.color = "#777777";
-      selectionElement.style.fontSize = "225%";
-   }
-   /* Regular Number Mode */
-   else {
-      selectionElement.style.color = "black";
-      selectionElement.style.fontSize = "300%";
-     //skip erase mode (0)
-      selectionNoteMode++;
    }
 }
 
