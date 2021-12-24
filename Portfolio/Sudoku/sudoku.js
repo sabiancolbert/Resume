@@ -375,8 +375,7 @@ function set(cellId, direction = 0) {
       else if (direction == 1) {
          content = redoList[currentMove][1];
          cellNoteMode = redoList[currentMove][2];
-      }
-      else {
+      } else {
          undoList[currentMove] = [
             cellId,
             cellElement.innerHTML,
@@ -563,20 +562,10 @@ function updateNoteMode() {
    c("updateNoteMode()");
    noteMode++;
    selectionElement.style.padding = 0;
-   /* Regular Number Mode */
-   if (noteMode > 2) {
-      noteMode = 0;
-      selectionElement.style.fontSize = "300%";
-   }
-   /* Grey Note Number Mode */
-   else if (noteMode == 1) {
-      selectionElement.style.color = "#777777";
-      selectionElement.style.fontSize = "225%";
-
-   }
    /* Note Mode */
-   else {
-      selectionElement.style.color = "black";
+   if (noteMode > 0) {
+      noteMode = -2;
+   
       selectionElement.style.fontSize = "100%";
       switch (selectionElement.innerHTML * 1) {
          case 1:
@@ -607,6 +596,18 @@ function updateNoteMode() {
             selectionElement.style.padding = "60% 0 0 60%";
             break;
       }
+   
+      
+   }
+   /* Grey Note Number Mode */
+   else if (noteMode == -1) {
+      selectionElement.style.color = "#777777";
+      selectionElement.style.fontSize = "225%";
+   }
+   /* Regular Number Mode */
+   else{
+            selectionElement.style.color = "black";   
+      selectionElement.style.fontSize = "300%";
    }
 }
 
