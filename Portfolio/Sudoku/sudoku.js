@@ -411,8 +411,8 @@ function set(cellId, direction = 0) {
             c("set - remove note from cell");
             document.getElementById("n"+content+cellNumber).style.visibility = "hidden";
             noteCells[cellNumber][content] = 0;
-         //here if empty, set display cells to 0 and clear notws stuff
-            
+            //here if empty, set display cells to 0 and clear notws stuff
+
          }
          /* Add Note To Cell */
          else {
@@ -420,7 +420,7 @@ function set(cellId, direction = 0) {
             cellElement.style.color = "black";
             cellElement.style.backgroundColor = "#ccccee";
             cellElement.style.fontSize = "75%";
-                  displayCells[cellNumber] = -2;
+            displayCells[cellNumber] = -2;
             //if not undo or redo
             if (direction == 0) {
                if (displayCells[cellNumber] !=-2) {
@@ -566,7 +566,6 @@ function updateNoteMode() {
    /* Regular Number Mode */
    if (selectionNoteMode < -2) {
       selectionNoteMode = 1;
-      selectionElement.style.color = "black";
       selectionElement.style.fontSize = "300%";
    }
    /* Grey Note Number Mode */
@@ -579,6 +578,7 @@ function updateNoteMode() {
    /* Note Mode */
    else
    {
+      selectionElement.style.color = "black";
       selectionElement.style.fontSize = "100%";
       switch (selectionElement.innerHTML * 1) {
          case 1:
