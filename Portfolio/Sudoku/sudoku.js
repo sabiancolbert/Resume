@@ -41,15 +41,15 @@ function setCells() {
          attemptedNumbers[i] = [0];
       }
       while (currentCell > -1 && currentCell < 81) {
-         var number = 0;
+         var currentNumber = 0;
          var invalid = true;
          /* Set Current Cell */
          while (invalid && attemptedNumbers[currentCell].length < 10) {
-            number = Math.floor(Math.random()*9+1);
-            if (!attemptedNumbers[currentCell].includes(number)) {
-               attemptedNumbers[currentCell].push(number);
-               if (!isInVertical(currentCell, number) && !isInHorizonal(currentCell, number) && !isInBox(currentCell, number)) {
-                  if (variantValid(currentCell, number)) {
+            currentNumber = Math.floor(Math.random()*9+1);
+            if (!attemptedNumbers[currentCell].includes(currentNumber)) {
+               attemptedNumbers[currentCell].push(currentNumber);
+               if (!isInVertical(currentCell, currentNumber) && !isInHorizonal(currentCell, currentNumber) && !isInBox(currentCell, currentNumber)) {
+                  if (variantValid(currentCell, currentNumber)) {
                      invalid = false;
                   }
                }
@@ -63,8 +63,8 @@ function setCells() {
          }
          /* Next Cell */
          else {
-            cells[currentCell] = number;
-            displayCells[currentCell] = number;
+            cells[currentCell] = currentNumber;
+            displayCells[currentCell] = currentNumber;
             currentCell++;
          }
       }
@@ -108,7 +108,7 @@ function isInHorizonal(cell, number) {
 //search for the same number in the same 3x3
 function isInBox(cell, number) {
    var result = false;
-   /* Find Stopping Cell */
+   /* Find stopCounterping Cell */
    var adjust = 0;
    var temp = cell / 3 +" ";
    if (temp.includes(".6")) {
@@ -121,9 +121,9 @@ function isInBox(cell, number) {
       temp -= 27;
    }
    temp = Math.floor(temp/9)*9;
-   var stop = cell + adjust - temp;
+   var stopCounter = cell + adjust - temp;
    /* Test Box */
-   for (i = stop + 18; i >= stop; i -= 9) {
+   for (i = stopCounter + 18; i >= stopCounter; i -= 9) {
       if (displayCells[i] == number || displayCells[i+1] == number || displayCells[i+2] == number) {
          result = true;
       }
@@ -147,23 +147,24 @@ function fail() {
 function setGrid() {
    c("setGrid()");
    /* Unsolve */
-   var tested = new Array([0]);
-   var stop = 81 - Math.floor(Math.random()*5+parseInt(difficulty));
-   while (stop > 0 && tested.length < 81) {
+   var testedNumbers = new Array([0]);
+   var stopCounterCounter = 81 - Math.floor(Math.random()*5+parseInt(difficulty));
+   while (stopCounterCounter > 0 && testedNumbers.length < 81) {
       var cellNumber = Math.floor(Math.random()*81);
-      if (!tested.includes(cellNumber)) {
-         tested.push(cellNumber);
-         tested.push(cellNumber);
+      if (!testedNumbers.includes(cellNumber)) {
+         testedNumbers.push(cellNumber);
+         testedNumbers.push(cellNumber);
          //is this cell solvable?
-         //if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber) || isVariantSolvable(cellNumber)) {
-         if (isDefaultCell(cellNumber)) {
+         if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber) || isVariantSolvable(cellNumber)) {
+            //HERE set notes
             numberTotals[displayCells[cellNumber]]++;
             displayCells[cellNumber] = 0;
             userCells.push(cellNumber);
-            stop--;
+            stopCounter--;
          }
       }
    }
+   noteCells = new Array(81);
    //HERE dont do whats under me. criss cross shouldnt be happening so fix that instead
    //HERE if there are unsolvable criss crossed cells, plug one corner in here
    /* Display Cells */
@@ -192,6 +193,7 @@ function setGrid() {
 function isDefaultNumber(cell) {
    var result = false;
    var otherNumbers = new Array();
+   //HERE test noteCells, use dummy numbers for next part
    for (x = 1; x < 10; x++) {
       if (x != displayCells[cell]) {
          if (isInVertical(cell, x) || isInHorizonal(cell, x) || isInBox(cell, x)) {
@@ -209,6 +211,7 @@ function isDefaultNumber(cell) {
 function isDefaultCell(cell) {
    var result = true;
    var emptyCells = new Array();
+      //HERE test noteCells, use dummy numbers for next part
    /* Find Empty Cells In Row */
    var temp = Math.floor(cell/9)*9;
    for (i = temp; i < temp+9; i++) {
@@ -280,7 +283,10 @@ function isDefaultCell(cell) {
    return result;
 }
 
-function isVariantSolvable(cell) {}
+function isVariantSolvable(cell) {
+   //HERE
+   return false;
+}
 /* Gameplay */
 
 function select(selection) {
@@ -545,7 +551,7 @@ function check(cellNumber, changingAutoCheck = false) {
 }
 
 function autoRemoveNotes() {
-   c("autoRemoveNotes() =");/*
+   c("autoRemoveNotes() ="); /*
    //if autoremove notes in settings is on
    if (true) {
       c("true");
