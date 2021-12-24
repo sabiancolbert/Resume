@@ -553,19 +553,18 @@ function check(cellNumber, changingAutoCheck = false) {
          }
       }
    } else if (autoCheck) {
-      var adjust = 0;
+      var addOne = false;
       if (wrongList.includes(cellNumber)) {
          wrongList.splice(wrongList.indexOf(cellNumber), 1);
       }
       if (displayCells[cellNumber] != cells[cellNumber]) {
          wrongList.push(cellNumber);
-         adjust++;
          document.getElementById("c"+cellNumber).style.color = "red";
-         result = false
+         addOne = true;
+         result = false;
       }
-      document.getElementById("wrongElement").innerHTML = adjust + parseInt(document.getElementById("wrongElement").innerHTML);
+      document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML + addOne);
    }
-   c(1+true);
    c("check() = "+result);
    return result;
 }
