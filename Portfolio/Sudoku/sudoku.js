@@ -392,7 +392,7 @@ function set(cellId, direction = 0) {
       }
     }
     if (newHTML == " " || newHTML == "") {
-      cellNoteMode=-1;
+      cellNoteMode=0;
     }
     if (cellElement.innerHTML - 0 > 0) {
       numberTotals[cellElement.innerHTML]++;
