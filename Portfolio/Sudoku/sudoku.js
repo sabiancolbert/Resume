@@ -398,7 +398,7 @@ function set(cellId, direction = 0) {
          }
       }
       /* Erase */
-      if (cellNoteMode == 0) {
+      if (cellNoteMode == 0 ) {//here if same number and same notemode
          c("set - erase cell");
          cellElement.innerHTML = " ";
          displayCells[cellNumber] = 0;
@@ -455,7 +455,7 @@ function set(cellId, direction = 0) {
             0,
             0,
             0];
-         if (cellNoteMode == 1) {
+         if (cellNoteMode == -1) {
             cellElement.style.color = "#ccccee";
             cellElement.style.fontSize = "125%";
             displayCells[cellNumber] = -1;
