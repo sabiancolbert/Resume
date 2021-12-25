@@ -82,13 +82,13 @@ bold {
   border:1vmin solid green;
 }
 #hintMiddle{
+  display:inline-block;
 margin:auto;
 width:66vmin;
   border:1vmin solid blue;
 }
 #hintRight{
   float: right;
-  display:inline-block;
   margin:2vmin;
   border:1vmin solid red;
   width:10vmin;
