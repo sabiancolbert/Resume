@@ -564,10 +564,10 @@ function check(cellNumber, changingAutoCheck = false) {
          addOne = true;
          result = false;
       }
-      c(0+addOne);
-      c("&&&"+parseInt(document.getElementById("wrongElement").innerHTML + addOne));
+      if(direction=0){
       document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML) + addOne;
    }
+}
    c("check() = "+result);
    return result;
 }
