@@ -157,18 +157,24 @@ button:active {
     background-color: #3388dd;
 }
 #restart {
-  background-size: contain;
   background: url("restart.png") no-repeat;
+  background-size: contain;
   background-color: #ccccee;
 }
 #undo {
   background: url("undo.png") no-repeat;
+  background-size: contain;
+  background-color: #ccccee;
 }
 #redo {
   background: url("redo.png") no-repeat;
+  background-size: contain;
+  background-color: #ccccee;
 }
 #menu {
   background: url("menu.png") no-repeat;
+  background-size: contain;
+  background-color: #ccccee;
 }
 #eraser {
   background: url("eraser.png") no-repeat;
