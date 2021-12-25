@@ -485,10 +485,9 @@ function set(cellId, direction = 0) {
             displayCells[cellNumber] = -1;
          } else {
             displayCells[cellNumber] = content;
-            cellElement.style.color = "black";
             cellElement.style.fontSize = "150%";
-            //HERE HERE HERE
             if(direction==0){
+            cellElement.style.color = "black";
               if(check(cellNumber)){
                //HERE autoRemoveNotes();
               }
@@ -668,4 +667,3 @@ when unselecting autocheck, unred any red numbers
 solving it on 0 only requires basic sudoku skills *sigh*
 cefcu horizontals for notes to solve it (hypothetical notes)
 */
-//HERE HERE HERE undo and erase dont do wrongElement correctly
