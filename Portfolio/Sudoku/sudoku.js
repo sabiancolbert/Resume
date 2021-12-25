@@ -614,6 +614,7 @@ function updateNoteMode() {
       selectionElement.style.fontSize = "225%";
       //skip erase mode (0)
       selectionNoteMode = -1
+      c("&&_$#++");
    }
    /* Note Mode */
    else
