@@ -150,8 +150,8 @@ button:active {
   height: 90%;
   bottom: 0;
   margin-top: 20%;
-    border:1vmin solid #3388dd;
-  border-radius: 20%;
+  border:1vmin solid #3388dd;
+  border-radius: 100%;
   background-color: #ccccee;
 }
 .metaButton:active{
