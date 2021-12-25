@@ -384,6 +384,8 @@ function set(cellId, direction = 0) {
       }
       //regular
       else {
+        redoList.push([]);
+        undoList.push([]);
          undoList[currentMove] = [
             cellId,
             cellElement.innerHTML,
