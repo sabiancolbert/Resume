@@ -393,7 +393,7 @@ function set(cellId, direction = 0) {
          cellNoteMode = selectionNoteMode;
       }
       //detect empty content
-c(cellNoteMode);
+c(selectionNoteMode);
       if (content == " " || content == cellElement.innerHTML && selectionNoteMode == cellNoteMode && cellNoteMode > -2) {
          cellNoteMode = 0;
          c("ERASEEEEE");
