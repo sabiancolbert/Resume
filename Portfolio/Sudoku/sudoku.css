@@ -153,29 +153,23 @@ button:active {
     border:1vmin solid #3388dd;
   border-radius: 20%;
   background-color: #ccccee;
+    background-size: contain;
+
 }
 .metaButton:active{
     background-color: #3388dd;
 }
 #restart {
   background: url("restart.png") no-repeat;
-  background-size: contain;
-  background-color: #3388dd;
 }
 #undo {
   background: url("undo.png") no-repeat;
-  background-size: contain;
-  background-color: #3388dd;
 }
 #redo {
   background: url("redo.png") no-repeat;
-  background-size: contain;
-  background-color: #3388dd;
 }
 #menu {
   background: url("menu.png") no-repeat;
-  background-size: contain;
-  background-color: #3388dd;
 }
 #eraser {
   background: url("eraser.png") no-repeat;
