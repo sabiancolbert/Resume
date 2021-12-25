@@ -393,7 +393,7 @@ function set(cellId, direction = 0) {
          cellNoteMode = selectionNoteMode;
       }
       //detect empty content
-      if (content == " " || content == displayCells[cellNumber] && selectionNoteMode == cellNoteMode && cellNoteMode>-2) {
+      if (content == " " || selectionElement.innerHTML == displayCells[cellNumber] && selectionNoteMode == cellNoteMode && cellNoteMode>-2) {
          cellNoteMode = 0;
       }
       //counter element
