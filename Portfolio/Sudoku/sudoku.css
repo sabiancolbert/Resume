@@ -34,10 +34,11 @@ body {
   background-color: #222222;
 }
 #hintsElement{
-  width:90%;
-  border-radius:100%;
+  width:98vmin;
+  margin: 1vmin;
+  border-radius:80%;
   border:1vmin solid #3388dd;
-  border-width:0 1vmin 0 1vmin
+  border-width:0 1vmin 0 1vmin;
 }
 /* Game Board */
 #gameElement {
