@@ -23,8 +23,10 @@ body {
 }
 #wrongElement{
   color:red;
-  background-color:#ccccee;
+  background-color:#3388dd;
   border-radius:80%;
+  margin:auto;
+  width:16%;
 }
 /* Game Board */
 #gameElement {
