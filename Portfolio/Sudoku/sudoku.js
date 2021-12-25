@@ -395,6 +395,7 @@ function set(cellId, direction = 0) {
       }
       //counter element
       if (displayCells[cellNumber] > 0) {
+        //HERE HERE HERE
          numberTotals[cellElement.innerHTML]++;
          if (cellElement.innerHTML == selectionElement.innerHTML) {
             counterElement.innerHTML = numberTotals[cellElement.innerHTML];
@@ -465,9 +466,9 @@ function set(cellId, direction = 0) {
          c("set - add number to cell");
          displayCells[cellNumber] = content;
          cellElement.innerHTML = content;
-         numberTotals[cellElement.innerHTML]--;
-         if (selectionElement.innerHTML == cellElement.innerHTML) {
-            counterElement.innerHTML = numberTotals[cellElement.innerHTML];
+         numberTotals[content]--;
+         if (content == selectionElement.innerHTML) {
+            counterElement.innerHTML = numberTotals[content];
          }
          noteCells[cellNumber] = [0,
             0,
