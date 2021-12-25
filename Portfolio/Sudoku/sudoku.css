@@ -71,7 +71,7 @@ bold {
   background-color: #222222;
 }
 #hintsElement{
-  width:98vmin;
+  margin: auto;
   margin: 1vmin;
   position: relative;
 }
