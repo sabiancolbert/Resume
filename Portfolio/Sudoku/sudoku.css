@@ -77,19 +77,19 @@ bold {
 }
 #hintLeft{
   float: left;
-  width:33vmin;
+  width:30vmin;
   border:1vmin solid green;
   
 }
 #hintMiddle{
   float: left;
   border:1vmin solid blue;
-  width:33vmin;
+  width:30vmin;
 }
 #hintRight{
   float: left;
   border:1vmin solid red;
-  width:33vmin;
+  width:30vmin;
 }
 /* Buttons */
 #buttonContainer {
