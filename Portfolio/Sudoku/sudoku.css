@@ -76,15 +76,18 @@ bold {
 }
 #hintLeft{
   float: left;
+  margin:2vmin;
   width:10vmin;
   border:1vmin solid green;
 }
 #hintMiddle{
 margin:auto;
+width:66vmin;
   border:1vmin solid blue;
 }
 #hintRight{
   float: left;
+  margin:2vmin;
   border:1vmin solid red;
   width:10vmin;
 }
