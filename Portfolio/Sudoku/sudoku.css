@@ -77,9 +77,9 @@ bold {
 #hintLeft{
   float: left;
   margin:2vmin;
-  width:10vmin;
+  width:5vmin;
   border-style: solid;
-  border-width:1vmin 1vmin 1vmin 1vmin;
+  border-width:1vmin 5vmin 1vmin 1vmin;
   border-radius:100% 0 0 100%;
   border-color: #3388dd #222222 #3388dd #3388dd;
 }
