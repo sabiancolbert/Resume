@@ -486,7 +486,8 @@ function set(cellId, direction = 0) {
             displayCells[cellNumber] = content;
             cellElement.style.color = "black";
             cellElement.style.fontSize = "150%";
-            if (check(cellNumber)) {
+            //HERE HERE HERE
+            if (direction==0 && check(cellNumber)) {
                //autoRemoveNotes();
             }
          }
