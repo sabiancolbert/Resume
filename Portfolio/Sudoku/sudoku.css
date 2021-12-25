@@ -33,6 +33,12 @@ body {
   z-index: 1;
   background-color: #222222;
 }
+#hintsElement{
+  width:90%;
+  border-radius:100%;
+  border:1vmin solid #3388dd;
+  border-width:0 1vmin 0 1vmin
+}
 /* Game Board */
 #gameElement {
   visibility: hidden;
