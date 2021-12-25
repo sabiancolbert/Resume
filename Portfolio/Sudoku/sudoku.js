@@ -10,7 +10,7 @@ var redoList = new Array();
 var currentMove = 0;
 var difficulty = 0;
 var currentCell = 0;
-var selectionNoteMode = -3;
+var selectionNoteMode = 0;
 var autoCheck = true;
 var autoRemoveNotes = false;
 var counterElement, selectionElement;
