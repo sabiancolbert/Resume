@@ -385,7 +385,8 @@ function set(cellId, direction = 0) {
          undoList[currentMove] = [
             cellId,
             cellElement.innerHTML,
-            cellNoteMode];
+            cellNoteMode,
+            cellElement.style.color];
          cellNoteMode = selectionNoteMode;
       }
       //detect empty content
@@ -492,7 +493,12 @@ function set(cellId, direction = 0) {
                //HERE autoRemoveNotes();
               }
             }
+            else if(direction==-1){
+              cellElement.style.color = undoList[currentMove][3];
+               //autoReplaceNotes();
+            }
             else{
+              cellElement.style.color = redoList[currentMove][3];
                //autoReplaceNotes();
             }
          }
@@ -505,7 +511,8 @@ function set(cellId, direction = 0) {
       redoList[currentMove] = [
          cellId,
          cellElement.innerHTML,
-         cellNoteMode];
+         cellNoteMode,
+         cellElement.style.color];
          c("set - add to redoList " + redoList[currentMove]);
    }
 }
