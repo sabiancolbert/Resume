@@ -84,7 +84,7 @@ margin:auto;
   border:1vmin solid blue;
 }
 #hintRight{
-  float: right;
+  float: left;
   border:1vmin solid red;
   width:10vmin;
 }
