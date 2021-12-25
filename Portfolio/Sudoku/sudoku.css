@@ -23,6 +23,8 @@ body {
 }
 #wrongElement{
   color:red;
+  background-color:#ccccee;
+  border-radius:80%;
 }
 /* Game Board */
 #gameElement {
