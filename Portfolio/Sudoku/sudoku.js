@@ -398,13 +398,11 @@ function set(cellId, direction = 0) {
       }
       //counter element
       if (displayCells[cellNumber] > -2) {
-        //HERE HERE HERE
          numberTotals[cellElement.innerHTML]++;
          if (cellElement.innerHTML == selectionElement.innerHTML) {
             counterElement.innerHTML = numberTotals[cellElement.innerHTML];
          }
       }
-      c(cellNoteMode);
       /* Erase */
       if (cellNoteMode == 0) {
          c("set - erase cell");
