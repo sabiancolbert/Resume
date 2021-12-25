@@ -123,6 +123,9 @@ button:active {
   bottom: 0;
   margin-top: 20%;
 }
+.mettaButton:active{
+    background-color: #1050aa;
+}
 #selectionElement {
   border:1vmin solid #3388dd;
   border-radius: 20%;
