@@ -76,19 +76,17 @@ bold {
 }
 #hintLeft{
   float: left;
-  width:30vmin;
+  width:10vmin;
   border:1vmin solid green;
-  
 }
 #hintMiddle{
-  float: left;
+margin:auto;
   border:1vmin solid blue;
-  width:30vmin;
 }
 #hintRight{
-  float: left;
+  float: right;
   border:1vmin solid red;
-  width:30vmin;
+  width:10vmin;
 }
 /* Buttons */
 #buttonContainer {
