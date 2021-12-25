@@ -152,7 +152,6 @@ button:active {
   margin-top: 20%;
   border:1vmin solid #3388dd;
   border-radius: 100%;
-  background-color: #ccccee;
 }
 .metaButton:active{
     background-color: #3388dd;
@@ -160,6 +159,7 @@ button:active {
 #restart {
   background-size: contain;
   background: url("restart.png") no-repeat;
+  background-color: #ccccee;
 }
 #undo {
   background: url("undo.png") no-repeat;
