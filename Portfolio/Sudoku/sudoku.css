@@ -86,8 +86,7 @@ bold {
 #hintMiddle{
   display:inline-block;
 margin:auto;
-width:66vmin;
-  border:1vmin solid blue;
+width:68vmin;
   height:2em;
 }
 #hintRight{
