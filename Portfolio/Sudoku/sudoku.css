@@ -5,23 +5,11 @@ body {
   text-align: center;
   color: white;
   margin: 0;
-  /*HERE set vmin to ½vmax or something?
 }
-@media screen and (orientation: landscape) {
-  /* HERE */
-}
-/*
-#portraitWarning {
-  top: 10%;
-  font-size: 300%;
-  position: absolute;
-  color: white;
-  z-index: -1;
-  left: 10%;
-}*/
 #difficultyPromptElement {
   position: fixed;
 }
+/* HERE when landscape, add border to numbers and stuff on the right*/
 /* Game Board */
 #gameElement {
   visibility: hidden;
@@ -100,24 +88,36 @@ width:68vmin;
   border-color: #3388dd #3388dd #3388dd #222222;
 }
 /* Buttons */
-#buttonContainer {
+#buttonsContainer {
   width: 100%;
 }
-.optionContainer {
+button {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: none;
+  font-size: 300%;
+  font-weight: 550;
+  background-color: #3388dd;
+}
+button:active {
+  background-color: #1050aa;
+}
+.buttonContainer {
   display: inline-block;
   position: relative;
   margin: auto;
   width: 17%;
   padding-top: 17%;
 }
-.optionHolder {
+.buttonHolder {
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   position: absolute;
 }
-.option {
+.mettaButton {
   width: 90%;
   height: 90%;
   bottom: 0;
@@ -129,7 +129,7 @@ width:68vmin;
   background-color: #ccccee;
   font-size: 300%;
 }
-#selection:active {
+#selectionElement:active {
   background-color: #3388dd;
 }
 #counterContainer {
@@ -153,57 +153,33 @@ width:68vmin;
   margin: auto;
   font-size: 90%;
 }
-button {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  border: none;
-  font-size: 300%;
-  font-weight: 550;
-  background-color: #3388dd;
-}
-button:active {
-  background-color: #1050aa;
-}
 
-#eraser {
-  background: url("eraser.png") no-repeat;
-  background-size: contain;
-  background-color: #3388dd;
-}
-#eraser:active {
-  background-color: #1050aa;
-}
 #restart {
   background: url("restart.png") no-repeat;
   background-size: contain;
   background-color: #3388dd;
-}
-#restart:active {
-  background-color: #1050aa;
 }
 #undo {
   background: url("undo.png") no-repeat;
   background-size: contain;
   background-color: #3388dd;
 }
-#undo:active {
-  background-color: #1050aa;
-}
 #redo {
   background: url("redo.png") no-repeat;
   background-size: contain;
   background-color: #3388dd;
-}
-#redo:active {
-  background-color: #1050aa;
 }
 #menu {
   background: url("menu.png") no-repeat;
   background-size: contain;
   background-color: #3388dd;
 }
-#menu:active {
+#eraser {
+  background: url("eraser.png") no-repeat;
+  background-size: contain;
+  background-color: #3388dd;
+}
+#eraser:active {
   background-color: #1050aa;
 }
 /* Menu */
