@@ -81,6 +81,7 @@ bold {
   border:1vmin solid green;
   border-width:1vmin 0 1vmin 1vmin;
   border-radius:100% 0 0 100%;
+  border-color: #3388dd #222222 #3388dd #3388dd;
 }
 #hintMiddle{
   display:inline-block;
