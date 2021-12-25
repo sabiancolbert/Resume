@@ -117,23 +117,11 @@ button:active {
   bottom: 0;
   position: absolute;
 }
-.mettaButton {
-  width: 90%;
-  height: 90%;
-  bottom: 0;
-  margin-top: 20%;
-}
-.mettaButton:active{
-    background-color: #1050aa;
-}
 #selectionElement {
   border:1vmin solid #3388dd;
   border-radius: 20%;
   background-color: #ccccee;
   font-size: 300%;
-}
-#selectionElement:active {
-  background-color: #3388dd;
 }
 #counterContainer {
   display: inline-block;
@@ -157,6 +145,15 @@ button:active {
   font-size: 90%;
 }
 
+.mettaButton {
+  width: 90%;
+  height: 90%;
+  bottom: 0;
+  margin-top: 20%;
+}
+.mettaButton:active{
+    background-color: #1050aa;
+}
 #restart {
   background: url("restart.png") no-repeat;
   background-size: contain;
