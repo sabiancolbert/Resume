@@ -80,7 +80,7 @@ bold {
   width:10vmin;
   border:1vmin solid green;
   border-width:0 0 0 1vmin;
-  border-radius:100% 50% 50% 100%;
+  border-radius:100% 0 0 100%;
 }
 #hintMiddle{
   display:inline-block;
