@@ -390,7 +390,8 @@ function set(cellId, direction = 0) {
             cellElement.innerHTML,
             cellNoteMode,
             cellElement.style.color];
-         cellNoteMode = selectionNoteMode;
+            //HERE HERE HERE is this genius or stupid?
+         cellNoteMode = selectionNoteMode + !selectionNoteMode;
       }
       //detect empty content
 c(selectionNoteMode);
@@ -605,16 +606,13 @@ function updateNoteMode() {
    selectionElement.style.padding = 0;
    /* Regular Number Mode */
    if (selectionNoteMode < -2) {
-      selectionNoteMode = 1;
+      selectionNoteMode = 0;
       selectionElement.style.fontSize = "300%";
    }
    /* Grey Note Number Mode */
-   else if (selectionNoteMode >-2) {
+   else if (selectionNoteMode == -1) {
       selectionElement.style.color = "#777777";
       selectionElement.style.fontSize = "225%";
-      //skip erase mode (0)
-      selectionNoteMode = -1
-      c("&&_$#++");
    }
    /* Note Mode */
    else
