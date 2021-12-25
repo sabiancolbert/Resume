@@ -21,25 +21,6 @@ body {
 #difficultyPromptElement {
   position: fixed;
 }
-#wrongElement{
-  color:red;
-  border:1vmin solid #3388dd;
-  border-width: 1vmin 1vmin 0 1vmin;
-  border-radius:100%;
-  width:10%;
-  margin:auto;
-  position:relative;
-  top:-2vmin;
-  z-index: 1;
-  background-color: #222222;
-}
-#hintsElement{
-  width:98vmin;
-  margin: 1vmin;
-  border-radius:10%;
-  border:1vmin solid #3388dd;
-  border-width:0 1vmin 0 1vmin;
-}
 /* Game Board */
 #gameElement {
   visibility: hidden;
@@ -75,6 +56,36 @@ td {
 }
 bold {
   font-weight: 1000;
+}
+/* Stuff */
+#wrongElement{
+  color:red;
+  border:1vmin solid #3388dd;
+  border-width: 1vmin 1vmin 0 1vmin;
+  border-radius:100%;
+  width:10%;
+  margin:auto;
+  position:relative;
+  top:-2vmin;
+  z-index: 1;
+  background-color: #222222;
+}
+#hintsElement{
+  width:98vmin;
+  margin: 1vmin;
+  border-radius:10%;
+  border:1vmin solid #3388dd;
+  border-width:0 1vmin 0 1vmin;
+}
+#hintLeft{
+  border:1vmin solid #3388dd;
+  border-width:
+}
+#hintMiddle{
+  
+}
+#hintRight{
+  
 }
 /* Buttons */
 #buttonContainer {
