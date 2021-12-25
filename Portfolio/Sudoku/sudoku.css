@@ -5,6 +5,7 @@ body {
   text-align: center;
   color: white;
   margin: 0;
+  /*HERE set vmin to ½vmax or something?
 }
 @media screen and (orientation: landscape) {
   /* HERE */
