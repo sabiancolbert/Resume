@@ -75,15 +75,18 @@ bold {
   margin: 1vmin;
 }
 #hintLeft{
+  float: left;
   width:33vmin;
   border:1vmin solid #3388dd;
   
 }
 #hintMiddle{
+  float: left;
   border:1vmin solid #3388dd;
   width:33vmin;
 }
 #hintRight{
+  float: left;
   border:1vmin solid #3388dd;
   width:33vmin;
 }
