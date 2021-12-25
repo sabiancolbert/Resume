@@ -29,7 +29,7 @@ body {
   margin:auto;
   width:10%;
   position:relative;
-  top:-1vmin;
+  top:-.5vmin;
 }
 /* Game Board */
 #gameElement {
