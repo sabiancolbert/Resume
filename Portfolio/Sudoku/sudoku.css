@@ -150,9 +150,12 @@ button:active {
   height: 90%;
   bottom: 0;
   margin-top: 20%;
+    border:1vmin solid #3388dd;
+  border-radius: 20%;
+  background-color: #ccccee;
 }
 .metaButton:active{
-    background-color: #1050aa;
+    background-color: #3388dd;
 }
 #restart {
   background: url("restart.png") no-repeat;
