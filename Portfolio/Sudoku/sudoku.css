@@ -24,12 +24,12 @@ body {
 #wrongElement{
   color:red;
   border:1vmin solid #3388dd;
-  border-width: .5vmin 1vmin 0 1vmin;
+  border-width: .9vmin 1vmin 0 1vmin;
   border-radius:100%;
   margin:auto;
   width:10%;
   position:relative;
-  top:-.5vmin;
+  top:-.9vmin;
 }
 /* Game Board */
 #gameElement {
