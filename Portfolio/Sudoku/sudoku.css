@@ -153,6 +153,7 @@ button:active {
   border:1vmin solid #3388dd;
   border-radius: 100%;
   background-color: #ccccee;
+  background-size: contain;
 }
 .metaButton:active{
     background-color: #3388dd;
