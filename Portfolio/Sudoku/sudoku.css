@@ -24,6 +24,7 @@ body {
 #wrongElement{
   color:red;
   border:1vmin solid #3388dd;
+  border-width: 90% 100% 0 100%;
   border-radius:100%;
   margin:auto;
   width:10%;
