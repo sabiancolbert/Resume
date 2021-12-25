@@ -25,8 +25,7 @@ body {
   color:red;
   border:1vmin solid #3388dd;
   border-width: .9vmin 1vmin 0 1vmin;
-  border-radius:60% 60% 100% 100%;
-  margin:auto;
+  border-radius:60% 60% 140% 140%;
   width:10%;
   position:relative;
   top:-.9vmin;
