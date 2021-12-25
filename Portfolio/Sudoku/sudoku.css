@@ -78,17 +78,17 @@ bold {
   border-width:0 1vmin 0 1vmin;
 }
 #hintLeft{
-  width:33%;
+  width:33vmin;
   border:1vmin solid #3388dd;
   
 }
 #hintMiddle{
   border:1vmin solid #3388dd;
-  width:33%;
+  width:33vmin;
 }
 #hintRight{
   border:1vmin solid #3388dd;
-  width:33%
+  width:33vmin;
 }
 /* Buttons */
 #buttonContainer {
