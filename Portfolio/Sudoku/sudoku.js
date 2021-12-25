@@ -390,14 +390,12 @@ function set(cellId, direction = 0) {
             cellElement.innerHTML,
             cellNoteMode,
             cellElement.style.color];
-            //HERE HERE HERE is this genius or stupid?
          cellNoteMode = selectionNoteMode + !selectionNoteMode;
       }
       //detect empty content
-c(selectionNoteMode);
+c("selectionNoteMode"+selectionNoteMode+"content"+content+"cellNoteMode"+cellNoteMode);
       if (content == " " || content == cellElement.innerHTML && selectionNoteMode == cellNoteMode && cellNoteMode > -2) {
          cellNoteMode = 0;
-         c("ERASEEEEE");
       }
       //counter element
       if (displayCells[cellNumber] > -2) {
