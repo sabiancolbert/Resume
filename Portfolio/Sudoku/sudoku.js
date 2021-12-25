@@ -396,6 +396,7 @@ function set(cellId, direction = 0) {
 c(content);
       if (content == " " || content == cellElement.innerHTML && selectionNoteMode == cellNoteMode && cellNoteMode > -2) {
          cellNoteMode = 0;
+         c("ERASEEEEE");
       }
       //counter element
       if (displayCells[cellNumber] > -2) {
