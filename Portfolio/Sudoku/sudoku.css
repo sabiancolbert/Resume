@@ -92,6 +92,7 @@ bold {
   margin-top: 20%;
 }
 #selectionElement {
+  border:1vmin solid #3388dd;
   border-radius: 20%;
   background-color: #ccccee;
   font-size: 300%;
@@ -107,7 +108,7 @@ bold {
   padding-top: 25%;
 }
 #counterHolder {
-  background-color: #ccccee;
+  background-color: #3388dd;
   border-radius: 100%;
   color: black;
   top: 0;
