@@ -73,6 +73,7 @@ bold {
 #hintsElement{
   margin: auto;
   position: relative;
+  display:inline-block;
 }
 #hintLeft{
   float: left;
