@@ -73,9 +73,6 @@ bold {
 #hintsElement{
   width:98vmin;
   margin: 1vmin;
-  border-radius:10%;
-  border:1vmin solid #3388dd;
-  border-width:0 1vmin 0 1vmin;
 }
 #hintLeft{
   width:33vmin;
