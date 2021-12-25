@@ -27,6 +27,7 @@ body {
   border-radius:100%;
   margin:auto;
   width:10%;
+  position:relative;
   top:-1vmin;
 }
 /* Game Board */
