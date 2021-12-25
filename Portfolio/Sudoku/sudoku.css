@@ -79,7 +79,7 @@ bold {
   margin:2vmin;
   width:10vmin;
   border:1vmin solid green;
-  border-width:1vmin 0 1vmin 1vmin;
+  border-width:0 0 0 1vmin;
   border-radius:100%;
 }
 #hintMiddle{
