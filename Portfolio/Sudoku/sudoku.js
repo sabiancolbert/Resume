@@ -370,6 +370,9 @@ function set(cellId, direction = 0) {
       var cellElement = document.getElementById(cellId);
       var cellNoteMode = displayCells[cellNumber];
       var content = selectionElement.innerHTML;
+            if (content == " " || content == cellElement.innerHTML && selectionNoteMode == cellNoteMode && cellNoteMode > -2) {
+         cellNoteMode = 0;
+      }
       //undo
       if (direction ==-1) {
          content = undoList[currentMove][1];
@@ -392,11 +395,7 @@ function set(cellId, direction = 0) {
             cellElement.style.color];
          cellNoteMode = selectionNoteMode + !selectionNoteMode;
       }
-      //detect empty content
 c("selectionNoteMode"+selectionNoteMode+"content"+content+"cellNoteMode"+cellNoteMode);
-      if (content == " " || content == cellElement.innerHTML && selectionNoteMode == cellNoteMode && cellNoteMode > -2) {
-         cellNoteMode = 0;
-      }
       //counter element
       if (displayCells[cellNumber] > -2) {
          numberTotals[cellElement.innerHTML]++;
