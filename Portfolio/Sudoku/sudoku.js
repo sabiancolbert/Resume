@@ -374,7 +374,6 @@ function set(cellId, direction = 0) {
       if (direction ==-1) {
          content = undoList[currentMove][1];
          cellNoteMode = undoList[currentMove][2];
-      c(cellNoteMode);
         
       }
       //redo
@@ -405,6 +404,7 @@ function set(cellId, direction = 0) {
             counterElement.innerHTML = numberTotals[cellElement.innerHTML];
          }
       }
+      c(cellNoteMode);
       /* Erase */
       if (cellNoteMode == 0) {
          c("set - erase cell");
