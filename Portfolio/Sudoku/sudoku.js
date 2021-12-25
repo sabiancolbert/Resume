@@ -394,7 +394,7 @@ function set(cellId, direction = 0) {
       }
       //detect empty content
 c(content);
-      if (content == " " || content == displayCells[cellNumber] && selectionNoteMode == cellNoteMode && cellNoteMode>-2) {
+      if (content == " " || content == cellElement.innerHTML && selectionNoteMode == cellNoteMode && cellNoteMode > -2) {
          cellNoteMode = 0;
       }
       //counter element
