@@ -75,7 +75,6 @@ bold {
   position: relative;
 }
 #hintLeft{
-  display:inline-block;
   float: left;
   margin:2vmin;
   width:10vmin;
