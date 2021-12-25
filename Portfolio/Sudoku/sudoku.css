@@ -21,6 +21,9 @@ body {
 #difficultyPromptElement {
   position: fixed;
 }
+#wrongElement{
+  color:red;
+}
 /* Game Board */
 #gameElement {
   visibility: hidden;
