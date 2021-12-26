@@ -135,7 +135,7 @@ button:active {
   right: 0;
   left: 0;
   bottom: 0;
-  position: relative;
+  position: absolute;
   border:1vmin solid #3388dd;
   border-width: 1vmin 1vmin 0 1vmin;
   border-radius:100%;
@@ -143,10 +143,10 @@ button:active {
   background-color: #222222;
 }
 #counterElement {
+  width: 100%;
   margin: auto;
   font-size: 90%;
 }
-
 .metaButton {
   width: 90%;
   height: 90%;
