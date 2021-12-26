@@ -130,6 +130,7 @@ button:active {
   width: 3vmin;
   padding-top: 3vmin;
   border: 1px solid red;
+  /*HERE make the game 1:2, then delete containers and holders in place of the ratio
 }
 #counterHolder {
   top: 0;
