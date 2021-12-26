@@ -127,8 +127,8 @@ button:active {
   display: inline-block;
   position: relative;
   margin: auto;
-  width: 50%;
-  padding-top: 50%;
+  width: 30%;
+  padding-top: 30%;
   border: 1px solid red;
 }
 #counterHolder {
