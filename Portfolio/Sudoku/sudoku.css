@@ -15,13 +15,15 @@ body {
 /* Game Board */
 #gameElement {
   visibility: hidden;
+  width:100%;
+  height:100%;
 }
 #gridContainer, #difficultyContainer {
   position: relative;
-  width: 98vmin;
-  padding-top: 100%;
+  width: 98%;
+  padding-top: 98%;
   background-color: #222222;
-  border: 1vmin solid #3388dd;
+  border: 1% solid #3388dd;
   border-radius: 5%;
 }
 #gridHolder, #difficultyHolder {
