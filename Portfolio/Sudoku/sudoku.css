@@ -131,8 +131,6 @@ button:active {
   padding-top: 25%;
 }
 #counterHolder {
-  background-color: #3388dd;
-  border-radius: 100%;
   color: black;
   top: 0;
   right: 0;
@@ -141,8 +139,10 @@ button:active {
   position: absolute;
 }
 #counterElement {
+  border-radius: 100%;
   margin: auto;
   font-size: 90%;
+  border: 1vmin solid #3388dd;
 }
 
 .metaButton {
