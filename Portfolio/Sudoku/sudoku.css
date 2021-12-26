@@ -128,7 +128,7 @@ button:active {
   position: relative;
   margin: auto;
   width: 3vmin;
-  padding-top: 20%;
+  padding-top: 3vmin;
   border: 1px solid red;
 }
 #counterHolder {
