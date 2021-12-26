@@ -129,6 +129,7 @@ button:active {
   margin: auto;
   width: 25%;
   padding-top: 25%;
+  border: 1px solid red;
 }
 #counterHolder {
   top: 0;
