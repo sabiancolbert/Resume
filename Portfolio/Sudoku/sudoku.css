@@ -141,7 +141,7 @@ button:active {
   border-width: 1vmin 1vmin 0 1vmin;
   border-radius:100%;
   top:-2vmin;
-  width:100%;
+  width:20%;
   background-color: #222222;
 }
 #counterElement {
