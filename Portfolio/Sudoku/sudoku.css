@@ -135,7 +135,7 @@ button:active {
   right: 0;
   left: 0;
   bottom: 0;
-  position: absolute;
+  position: relative;
   border:1vmin solid #3388dd;
   border-width: 1vmin 1vmin 0 1vmin;
   border-radius:100%;
