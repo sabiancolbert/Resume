@@ -19,6 +19,20 @@ function c(c) {
    console.log(c);
 }
 
+function sizePage(){
+  c("sizePage()");
+  if(window.innerWidth<window.innerHeight){
+  if(window.innerWidth * 2 < window.innerHeight){
+    body.style.width = window.innerWidth;
+    body.style.height = window.innerWidth *2;
+  }
+  else {
+    body.style.height = window.innerHeight;
+    body.style.width = window.innerHeight *2;
+  }
+}else{}
+}
+
 /* Game Creation */
 
 function setCells() {
