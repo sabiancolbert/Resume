@@ -26,7 +26,7 @@ function sizePage() {
   var underGridContainer = document.getElementById("underGridContainer");
   var height= window.innerHeight;
   var width = windiw.innerWidth;
-  var min =0;
+  var short =0;
   /* Portrait */
   if (window.innerWidth < window.innerHeight) {
     c("sizePage - portrait");
@@ -36,7 +36,7 @@ function sizePage() {
     } else {
       width=height/2;
     }
-      min = width;
+      short = width;
     /* Landscape */
   } else {
     c("sizePage - landscape");
@@ -44,10 +44,12 @@ function sizePage() {
     if (height * 2 < width) {
       width=height*2;
     } else {
-height=width/2;
+      height=width/2;
     }
+    short=height;
   }
-  gridContainer.style.borderWidth(.01*);
+  gridContainer.style.borderWidth(.01*short);
+  underGridContainer.style.borderWidth(.01*short);
 }
 
 /* Game Creation */
