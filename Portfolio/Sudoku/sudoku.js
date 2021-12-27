@@ -48,8 +48,8 @@ function sizePage() {
     }
     short=height;
   }
-  gridContainer.style.borderWidth(.01*short);
-  underGridContainer.style.borderWidth(.01*short);
+  gridContainer.style.borderWidth=.01*short;
+  underGridContainer.style.borderWidth=.01*short;
   body.width= width;
   body.height=height;
 }
