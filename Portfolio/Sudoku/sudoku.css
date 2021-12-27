@@ -27,7 +27,7 @@ body {
   border-radius: 5%;
 }
 #underGridContainer{
-  float: right;
+  top:0;
 }
 #gridHolder, #underGridHolder {
   position: absolute;
