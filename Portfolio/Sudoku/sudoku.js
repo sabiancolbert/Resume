@@ -38,7 +38,7 @@ function sizePage() {
   } else {
     c("sizePage - landscape");
     if (window.innerHeight * 2 < window.innerWidth) {
-      body.style.maxHeight = window.innerHeight;
+      body.style.height= window.innerHeight;
       body.style.width = window.innerHeight * 2;
       c("h=h");
     } else {
