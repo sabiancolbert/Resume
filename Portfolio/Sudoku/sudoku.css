@@ -32,10 +32,10 @@ body {
   right: 0;
   left: 0;
   bottom: 0;
+  overflow:hidden;
   padding: 1%;
 }
 #underGridHolder {
-  position:relative;
   top: -1vmin;
 }
 table {
