@@ -25,7 +25,7 @@ function sizePage() {
   /* Portrait */
   if (window.innerWidth < window.innerHeight) {
     c("sizePage - portrait");
-    
+    document.getElementById("underGridElement").style="position: relative;margin-left:0";
     if (window.innerWidth * 2 < window.innerHeight) {
       body.style.width = window.innerWidth;
       body.style.height = window.innerWidth *2;
@@ -38,7 +38,7 @@ function sizePage() {
     /* Landscape */
   } else {
     c("sizePage - landscape");
-    //HERE document.getElementById("underGridElement").
+    document.getElementById("underGridElement").style="position: absolute;margin-left:100%";
     if (window.innerHeight * 2 < window.innerWidth) {
       body.style.height = window.innerHeight;
       body.style.width = window.innerHeight * 2;
