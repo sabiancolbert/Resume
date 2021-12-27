@@ -25,7 +25,7 @@ function sizePage() {
   var gridContainer =document.getElementById("gridContainer");
   var underGridContainer = document.getElementById("underGridContainer");
   var height= window.innerHeight;
-  var width = windiw.innerWidth;
+  var width = window.innerWidth;
   var short =0;
   /* Portrait */
   if (window.innerWidth < window.innerHeight) {
