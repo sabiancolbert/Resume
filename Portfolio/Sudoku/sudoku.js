@@ -28,25 +28,27 @@ function sizePage() {
   var width = window.innerWidth;
   var short =0;
   /* Portrait */
-  if (window.innerWidth < window.innerHeight) {
+  if (width < height) {
     c("sizePage - portrait");
-    underGridContainer.style="position: relative;margin-left:0";
     if (width * 2 < height) {
       height = width *2;
     } else {
       width=height/2;
     }
-      short = width;
+    short = width;
+    
+    underGridContainer.style="position: relative;margin-left:0;left:0;top:"+ (.1*short);
+  } 
     /* Landscape */
-  } else {
+  else {
     c("sizePage - landscape");
-    underGridContainer.style="position: absolute;margin-left:100%";
     if (height * 2 < width) {
       width=height*2;
     } else {
       height=width/2;
     }
     short=height;
+    underGridContainer.style="position: absolute;margin-left:100%;top:0;left:"+(.3*short);
   }
   gridContainer.style.borderWidth=.01*short;
   underGridContainer.style.borderWidth=.01*short;
