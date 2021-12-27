@@ -50,6 +50,8 @@ function sizePage() {
   }
   gridContainer.style.borderWidth(.01*short);
   underGridContainer.style.borderWidth(.01*short);
+  body.width= width;
+  body.height=height;
 }
 
 /* Game Creation */
