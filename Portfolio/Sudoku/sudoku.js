@@ -25,6 +25,7 @@ function sizePage() {
   /* Portrait */
   if (window.innerWidth < window.innerHeight) {
     c("sizePage - portrait");
+    
     if (window.innerWidth * 2 < window.innerHeight) {
       body.style.width = window.innerWidth;
       body.style.height = window.innerWidth *2;
@@ -37,8 +38,9 @@ function sizePage() {
     /* Landscape */
   } else {
     c("sizePage - landscape");
+    //HERE document.getElementById("underGridElement").
     if (window.innerHeight * 2 < window.innerWidth) {
-      body.style.height= window.innerHeight;
+      body.style.height = window.innerHeight;
       body.style.width = window.innerHeight * 2;
       c("h=h");
     } else {
