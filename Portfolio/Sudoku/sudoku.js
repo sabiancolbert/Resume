@@ -50,6 +50,7 @@ function sizePage() {
   }
   gridContainer.style.borderWidth=.01*short;
   underGridContainer.style.borderWidth=.01*short;
+  //HERE do we need these?
   //body.style.width= width;
   //body.style.height=height;
 }
