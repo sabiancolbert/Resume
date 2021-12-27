@@ -28,9 +28,11 @@ function sizePage() {
     if (window.innerWidth * 2 < window.innerHeight) {
       body.style.width = window.innerWidth;
       body.style.height = window.innerWidth *2;
+      c("w=w");
     } else {
       body.style.height = window.innerHeight;
       body.style.width = window.innerHeight / 2;
+      c("h=h");
     }
     /* Landscape */
   } else {
@@ -38,9 +40,11 @@ function sizePage() {
     if (window.innerHeight * 2 < window.innerWidth) {
       body.style.height = window.innerHeight;
       body.style.width = window.innerHeight * 2;
+      c("h=h");
     } else {
       body.style.width = window.innerWidth;
       body.style.height = window.innerWidth / 2;
+      c("w=w");
     }
   }
 }
