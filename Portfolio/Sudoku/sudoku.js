@@ -22,33 +22,32 @@ function c(c) {
 function sizePage() {
   c("sizePage()");
   var body = document.getElementById("body");
+  var gridContainer =document.getElementById("gridContainer");
+  var underGridContainer = document.getElementById("underGridContainer");
+  var height= window.innerHeight;
+  var width = windiw.innerWidth;
+  var min =0;
   /* Portrait */
   if (window.innerWidth < window.innerHeight) {
     c("sizePage - portrait");
-    document.getElementById("underGridContainer").style="position: relative;margin-left:0";
-    if (window.innerWidth * 2 < window.innerHeight) {
-      body.style.width = window.innerWidth;
-      body.style.height = window.innerWidth *2;
-      c("w=w");
+    underGridContainer.style="position: relative;margin-left:0";
+    if (width * 2 < height) {
+      height = width *2;
     } else {
-      body.style.height = window.innerHeight;
-      body.style.width = window.innerHeight / 2;
-      c("h=h");
+      width=height/2;
     }
+      min = width;
     /* Landscape */
   } else {
     c("sizePage - landscape");
-    document.getElementById("underGridContainer").style="position: absolute;margin-left:100%";
-    if (window.innerHeight * 2 < window.innerWidth) {
-      body.style.height = window.innerHeight;
-      body.style.width = window.innerHeight * 2;
-      c("h=h");
+    underGridContainer.style="position: absolute;margin-left:100%";
+    if (height * 2 < width) {
+      width=height*2;
     } else {
-      body.style.width = window.innerWidth;
-      body.style.height = window.innerWidth / 2;
-      c("w=w");
+height=width/2;
     }
   }
+  gridContainer.style.borderWidth(.01*);
 }
 
 /* Game Creation */
