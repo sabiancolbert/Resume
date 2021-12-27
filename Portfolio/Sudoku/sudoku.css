@@ -20,8 +20,8 @@ body {
 }
 #gridContainer, #underGridContainer {
   position: relative;
-  width: 98%;
-  padding-top: 98%;
+  width: 96%;
+  padding-top: 96%;
   background-color: #222222;
   border: 1vmin solid #3388dd;
   border-radius: 5%;
@@ -32,7 +32,6 @@ body {
   right: 0;
   left: 0;
   bottom: 0;
-  overflow: hidden;
   padding: 1%;
 }
 #underGridHolder {
