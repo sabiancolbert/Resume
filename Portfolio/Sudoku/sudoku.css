@@ -1,5 +1,5 @@
 /* Misc */
-html{
+html {
   background-color: #222222;
 }
 body {
@@ -15,8 +15,8 @@ body {
 /* Game Board */
 #gameElement {
   visibility: hidden;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
 }
 #gridContainer, #difficultyContainer {
   position: relative;
@@ -51,44 +51,44 @@ bold {
   font-weight: 1000;
 }
 /* Stuff */
-#wrongElement{
-  color:red;
-  border:1vmin solid #3388dd;
+#wrongElement {
+  color: red;
+  border: 1vmin solid #3388dd;
   border-width: 1vmin 1vmin 0 1vmin;
-  border-radius:100%;
-  width:10%;
-  margin:auto;
-  position:relative;
-  top:-2vmin;
+  border-radius: 100%;
+  width: 10%;
+  margin: auto;
+  position: relative;
+  top: -2vmin;
   z-index: 1;
   background-color: #222222;
 }
-#hintsElement{
+#hintsElement {
   margin: auto;
   position: relative;
 }
-#hintLeft{
+#hintLeft {
   float: left;
-  margin:2vmin;
-  width:3vmin;
+  margin: 2vmin;
+  width: 3vmin;
   border-style: solid;
-  border-width:1vmin 5vmin 1vmin 1vmin;
-  border-radius:100% 0 0 100%;
+  border-width: 1vmin 5vmin 1vmin 1vmin;
+  border-radius: 100% 0 0 100%;
   border-color: #3388dd #222222 #3388dd #3388dd;
 }
-#hintMiddle{
-  display:inline-block;
-margin:auto;
-width:68vmin;
-  height:2em;
+#hintMiddle {
+  display: inline-block;
+  margin: auto;
+  width: 68vmin;
+  height: 2em;
 }
-#hintRight{
+#hintRight {
   float: right;
-  margin:2vmin;
-  width:3vmin;
+  margin: 2vmin;
+  width: 3vmin;
   border-style: solid;
-  border-width:1vmin 1vmin 1vmin 5vmin;
-  border-radius:0 100% 100% 0;
+  border-width: 1vmin 1vmin 1vmin 5vmin;
+  border-radius: 0 100% 100% 0;
   border-color: #3388dd #3388dd #3388dd #222222;
 }
 /* Buttons */
@@ -122,7 +122,7 @@ button:active {
   position: absolute;
 }
 #selectionElement {
-  border:1vmin solid #3388dd;
+  border: 1vmin solid #3388dd;
   border-radius: 20%;
   background-color: #ccccee;
   font-size: 300%;
@@ -135,8 +135,8 @@ button:active {
   padding-top: 3vmin;
   border: 1px solid red;
   /*HERE make the game 1:2, then delete containers and holders in place of the ratio
-}
-#counterHolder {
+*/}
+  #counterHolder {
   top: 0;
   right: 0;
   left: 0;
@@ -149,7 +149,7 @@ button:active {
   width:3vmin;
   background-color: #222222;
 }
-#counterElement {
+  #counterElement {
   margin: auto;
   font-size: 90%;
 }
@@ -164,36 +164,36 @@ button:active {
 .metaButton:active{
     background-color: #3388dd;
 }
-#restart {
+  #restart {
   background: url("restart.png") no-repeat;
   background-size: contain;
   background-color: #ccccee;
 }
-#undo {
+  #undo {
   background: url("undo.png") no-repeat;
   background-size: contain;
   background-color: #ccccee;
 }
-#redo {
+  #redo {
   background: url("redo.png") no-repeat;
   background-size: contain;
   background-color: #ccccee;
 }
-#menu {
+  #menu {
   background: url("menu.png") no-repeat;
   background-size: contain;
   background-color: #ccccee;
 }
-#eraser {
+  #eraser {
   background: url("eraser.png") no-repeat;
   background-size: contain;
   background-color: #3388dd;
 }
-#eraser:active {
+  #eraser:active {
   background-color: #1050aa;
 }
-/* Menu */
-#menuElement {
+  /* Menu */
+  #menuElement {
   visibility: hidden;
   width: 50%;
   height: 50%;
