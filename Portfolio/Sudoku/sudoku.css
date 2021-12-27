@@ -35,7 +35,8 @@ body {
   padding: 1%;
 }
 #underGridHolder {
-  margin-top: -1vmin;
+  position:relative;
+  top: -1vmin;
 }
 table {
   height: 100%;
