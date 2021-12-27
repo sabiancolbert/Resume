@@ -30,6 +30,7 @@ body {
 #underGridContainer{
   position: absolute;
   margin-left:100%;
+  top:0;
 }
 #gridHolder, #underGridHolder {
   position: absolute;
