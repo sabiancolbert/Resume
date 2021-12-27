@@ -21,16 +21,28 @@ function c(c) {
 
 function sizePage() {
   c("sizePage()");
+  var body = document.getElementById("body");
+  /* Portrait */
   if (window.innerWidth < window.innerHeight) {
-    c("sjejj");
+    c("sizePage - portrait");
     if (window.innerWidth * 2 < window.innerHeight) {
       body.style.width = window.innerWidth;
       body.style.height = window.innerWidth *2;
     } else {
       body.style.height = window.innerHeight;
-      body.style.width = window.innerHeight *2;
+      body.style.width = window.innerHeight / 2;
     }
-  } else {}
+    /* Landscape */
+  } else {
+    c("sizePage - landscape");
+    if (window.innerHeight * 2 < window.innerWidth) {
+      body.style.height = window.innerHeight;
+      body.style.width = window.innerHeight * 2;
+    } else {
+      body.style.width = window.innerWidth;
+      body.style.height = window.innerWidth / 2;
+    }
+  }
 }
 
 /* Game Creation */
