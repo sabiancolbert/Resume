@@ -27,11 +27,6 @@ body {
   border: 1vmin solid #3388dd;
   border-radius: 5%;
 }
-#underGridContainer{
-  position: absolute;
-  margin-left:100%;
-  top:0;
-}
 #gridHolder, #underGridHolder {
   position: absolute;
   top: 0;
