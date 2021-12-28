@@ -43,8 +43,8 @@ function sizePage() {
   else {
     c("sizePage - landscape");
     if (height * 2 < width) {
-      gridContainerwidth = height;
-      underGridContainerwidth = height;
+      gridContainerwidth = height/2;
+      underGridContainerwidth = height/2;
     } else {
       gridContainerwidth = width/2;
       underGridContainerwidth = width/2;
