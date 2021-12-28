@@ -48,7 +48,7 @@ function sizePage() {
       height=width/2;
     }
     short=height;
-    underGridContainer.style="top:0;margin-left:100%";
+    underGridContainer.style="top:0;margin-left:98%";
   }
   gridContainer.style.borderWidth=.01*short;
   underGridContainer.style.borderWidth=.01*short;
