@@ -37,7 +37,7 @@ function sizePage() {
     }
     short = width;
     
-    underGridContainer.style="position: absolute;margin-left:0";
+    underGridContainer.style="top:50%;margin-left:0";
   } 
     /* Landscape */
   else {
@@ -48,7 +48,7 @@ function sizePage() {
       height=width/2;
     }
     short=height;
-    underGridContainer.style="position: absolute;margin-left:100%";
+    underGridContainer.style="top:0;margin-left:100%";
   }
   gridContainer.style.borderWidth=.01*short;
   underGridContainer.style.borderWidth=.01*short;
