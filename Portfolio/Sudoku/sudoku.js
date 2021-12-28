@@ -46,8 +46,8 @@ function sizePage() {
       gridContainerwidth = height/2;
       underGridContainerwidth = height/2;
     } else {
-      gridContainerwidth = width/2;
-      underGridContainerwidth = width/2;
+      gridContainerwidth = width;
+      underGridContainerwidth = width;
     }
     short=height;
     underGridContainer.style="top:0;margin-left:99%";
