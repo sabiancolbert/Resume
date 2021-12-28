@@ -52,7 +52,7 @@ function sizePage() {
   }
   gridContainer.style.borderWidth=.01*short;
   underGridContainer.style.borderWidth=.01*short;
-  c(short);
+  c(short+"w"+width+"h"+height);
   gridContainer.style.width=short;
   underGridContainer.style.width=short;
 }
