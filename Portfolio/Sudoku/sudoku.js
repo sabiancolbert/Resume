@@ -30,10 +30,10 @@ function sizePage() {
     c("sizePage - portrait");
     if (width * 2 < height) {
       gridContainer.style.width = width;
-      undergridContainer.style.width = width;
+      underGridContainer.style.width = width;
     } else {
       gridContainer.style.width = height/2;
-      undergridContainer.style.width = height/2;
+      underGridContainer.style.width = height/2;
     }
     underGridContainer.style="top:49.9%;margin-left:0";
   } 
@@ -42,11 +42,11 @@ function sizePage() {
     c("sizePage - landscape");
     if (height * 2 < width) {
       gridContainer.style.width = height/2;
-      undergridContainer.style.width = height/2;
+      underGridContainer.style.width = height/2;
       c(height/2);
     } else {
       gridContainer.style.width = width;
-      undergridContainer.style.width = width;
+      underGridContainer.style.width = width;
     }
     underGridContainer.style="top:0;margin-left:99%";
   }
