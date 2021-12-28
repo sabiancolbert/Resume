@@ -55,6 +55,7 @@ function sizePage() {
   //HERE do we need these?
   gameElement.style.maxWidth= width;
   gameElement.style.maxHeight=height;
+  c(gameElement.style.maxHeight);
 }
 
 /* Game Creation */
