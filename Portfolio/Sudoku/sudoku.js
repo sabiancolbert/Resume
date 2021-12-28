@@ -21,8 +21,8 @@ function c(c) {
 
 function sizePage() {
   c("sizePage()");
-  var gridContainer =document.getElementById("gridContainer");
-  var underGridContainer = document.getElementById("underGridContainer");
+  var gridBox =document.getElementById("gridBox");
+  var buttonBox = document.getElementById("buttonBox");
   var height= window.innerHeight;
   var width = window.innerWidth;
   var short=0;
@@ -38,7 +38,7 @@ function sizePage() {
     c("b");
     }
       short = width;
-    underGridContainer.style="top:49.9%;margin-left:0";
+    buttonBox.style="top:49.9%;margin-left:0";
   } 
     /* Landscape */
   else {
@@ -51,14 +51,14 @@ function sizePage() {
       c("d");
     }
     short = height;
-    underGridContainer.style="top:0;margin-left:99%";
+    buttonBox.style="top:0;margin-left:99%";
   }
   /* Set Css */
   c("short"+short+"height"+height+"width"+width);
-  gridContainer.style.width = short;
-      gridContainer.style.paddingTop = short;
-      underGridContainer.style.width = short;
-      underGridContainer.style.paddingTop = short;
+  gridBox.style.width = short;
+      gridBox.style.paddingTop = short;
+      buttonBox.style.width = short;
+      buttonBox.style.paddingTop = short;
 }
 
 /* Game Creation */
