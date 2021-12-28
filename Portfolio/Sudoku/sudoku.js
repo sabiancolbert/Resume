@@ -21,36 +21,33 @@ function c(c) {
 
 function sizePage() {
   c("sizePage()");
-  var gridContainerwidth =document.getElementById("gridContainer").style.width;
-  var underGridContainerwidth = document.getElementById("underGridContainer").style.width;
+  var gridContainer =document.getElementById("gridContainer");
+  var underGridContainer = document.getElementById("underGridContainer");
   var height= window.innerHeight;
   var width = window.innerWidth;
-  var short =0;
   /* Portrait */
   if (width < height) {
     c("sizePage - portrait");
     if (width * 2 < height) {
-      gridContainerwidth = width;
-      underGridContainerwidth = width;
+      gridContainer.width = width;
+      undergridContainer.width = width;
     } else {
-      gridContainerwidth = height/2;
-      underGridContainerwidth = height/2;
+      gridContainer.width = height/2;
+      undergridContainer.width = height/2;
     }
-    short = width;
     underGridContainer.style="top:49.9%;margin-left:0";
   } 
     /* Landscape */
   else {
     c("sizePage - landscape");
     if (height * 2 < width) {
-      gridContainerwidth = height/2;
+      gridContainer.width = height/2;
+      undergridContainer.width = height/2;
       c(height/2);
-      underGridContainerwidth = height/2;
     } else {
-      gridContainerwidth = width;
-      underGridContainerwidth = width;
+      gridContainer.width = width;
+      undergridContainer.width = width;
     }
-    short=height;
     underGridContainer.style="top:0;margin-left:99%";
   }
   c(short+"w"+width+"h"+height);
