@@ -44,8 +44,10 @@ function sizePage() {
     c("sizePage - landscape");
     if (height * 2 < width) {
       width=height*2;
+      c("a");
     } else {
       height=width/2;
+      c("b");
     }
     short=height;
     underGridContainer.style="top:0;margin-left:99%";
