@@ -41,9 +41,9 @@ function sizePage() {
   else {
     c("sizePage - landscape");
     if (height * 2 < width) {
-      gridContainer.style.width = height/2;
-      underGridContainer.style.width = height/2;
-      c(height/2);
+      gridContainer.style.width = 400;//height/2;
+      underGridContainer.style.width = 400;//height/2;
+      c("h");
     } else {
       gridContainer.style.width = width;
       underGridContainer.style.width = width;
