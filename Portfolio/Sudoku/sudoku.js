@@ -21,7 +21,7 @@ function c(c) {
 
 function sizePage() {
   c("sizePage()");
-  var body = document.getElementById("body");
+  var gameElement = document.getElementById("gameElement");
   var gridContainer =document.getElementById("gridContainer");
   var underGridContainer = document.getElementById("underGridContainer");
   var height= window.innerHeight;
@@ -53,8 +53,8 @@ function sizePage() {
   gridContainer.style.borderWidth=.01*short;
   underGridContainer.style.borderWidth=.01*short;
   //HERE do we need these?
-  body.style.width= width;
-  body.style.height=height;
+  gameElement.style.width= width;
+  gameElement.style.height=height;
 }
 
 /* Game Creation */
