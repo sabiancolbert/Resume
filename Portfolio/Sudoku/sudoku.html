@@ -29,8 +29,8 @@
   </section>
   <section id="gameElement">
     <!-- Sudoku Grid -->
-    <div id="gridContainer">
-      <div id="gridHolder">
+    <div id="gridBox">
+      <!--
         <table>
           <tr>
             <td onclick="set('c0');" id="c0"></td>
@@ -178,114 +178,130 @@
             <td onclick="set('c80');" id="c80"></td>
           </tr>
         </table>
-      </div>
+      -->
+      <table>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          </tr>
+        </table>
     </div>
-    <div id="underGridContainer">
-    <div id="underGridHolder">
-    <h3 id="wrongElement">0</h3>
-    <br>
-    <div id="hintsElement">
-      <div id="hintLeft">
-        <p></p>
-      </div>
-      <div id="hintMiddle">
-        <p>ggusjj</p>
-      </div>
-      <div id="hintRight">
-        <p></p>
-      </div>
-    </div>
-    <br>
-    <br>
-    <!-- Buttons -->
-    <div id="buttonsContainer">
-      <div class="buttonContainer">
-        <div class="buttonHolder">
+    <!-- Button Box -->
+      <div id="buttonBox">
           <button onclick="menu()" class="metaButton" id="menu"></button>
-        </div>
-      </div>
-      <div class="buttonContainer">
-        <div class="buttonHolder">
           <button onclick="changeMove(-1)" class="metaButton" id="undo"></button>
-        </div>
-      </div>
-      <div class="buttonContainer" id="selectionContainer">
-        <div class="buttonHolder">
           <button onclick="updateNoteMode()" id="selectionElement"></button>
-          <div id="counterContainer">
-            <div id="counterHolder">
-              <h3 id="counterElement">
-              </h3>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="buttonContainer">
-        <div class="buttonHolder">
+              <h3 id="counterElement"></h3>
           <button onclick="changeMove(1)" class="metaButton" id="redo"></button>
-        </div>
-      </div>
-      <div class="buttonContainer">
-        <div class="buttonHolder">
           <button onclick="restart()" class="metaButton" id="restart"></button>
-        </div>
-      </div>
       <br>
       <br>
-      <!-- Numbers -->
-      <div class="buttonContainer">
-        <div class="buttonHolder">
           <button onclick="select(1)">1</button>
-        </div>
-      </div>
-      <div class="buttonContainer">
-        <div class="buttonHolder">
           <button onclick="select(2)">2</button>
-        </div>
-      </div>
-      <div class="buttonContainer">
-        <div class="buttonHolder">
           <button onclick="select(3)">3</button>
-        </div>
-      </div>
-      <div class="buttonContainer">
-        <div class="buttonHolder">
           <button onclick="select(4)">4</button>
-        </div>
-      </div>
-      <div class="buttonContainer">
-        <div class="buttonHolder">
           <button onclick="select(5)">5</button>
-        </div>
-      </div>
-      <br>
-      <div class="buttonContainer">
-        <div class="buttonHolder">
+          <br>
           <button onclick="select(6)">6</button>
-        </div>
-      </div>
-      <div class="buttonContainer">
-        <div class="buttonHolder">
           <button onclick="select(7)">7</button>
-        </div>
-      </div>
-      <div class="buttonContainer">
-        <div class="buttonHolder">
           <button onclick="select(8)">8</button>
-        </div>
-      </div>
-      <div class="buttonContainer">
-        <div class="buttonHolder">
           <button onclick="select(9)">9</button>
-        </div>
-      </div>
-      <div class="buttonContainer">
-        <div class="buttonHolder">
-          <button onclick="select('0')" id="eraser"> </button>
-        </div>
-      </div>
-    
-    </div>
+          <button onclick="select(0)" id="eraser"> </button>
     </div>
     </div>
   </section>
