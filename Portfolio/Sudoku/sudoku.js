@@ -21,9 +21,8 @@ function c(c) {
 
 function sizePage() {
   c("sizePage()");
-  var gameElement = document.getElementById("gameElement");
-  var gridContainer =document.getElementById("gridContainer");
-  var underGridContainer = document.getElementById("underGridContainer");
+  var gridContainerwidth =document.getElementById("gridContainer").style.width;
+  var underGridContainerwidth = document.getElementById("underGridContainer").style.width;
   var height= window.innerHeight;
   var width = window.innerWidth;
   var short =0;
@@ -31,23 +30,24 @@ function sizePage() {
   if (width < height) {
     c("sizePage - portrait");
     if (width * 2 < height) {
-      height = width *2;
+      gridContainerwidth = width;
+      underGridContainerwidth = width;
     } else {
-      width=height/2;
+      gridContainerwidth = height/2;
+      underGridContainerwidth = height/2;
     }
     short = width;
-    
     underGridContainer.style="top:49.9%;margin-left:0";
   } 
     /* Landscape */
   else {
     c("sizePage - landscape");
     if (height * 2 < width) {
-      width=height*2;
-      c("a");
+      gridContainerwidth = height;
+      underGridContainerwidth = height;
     } else {
-      height=width/2;
-      c("b");
+      gridContainerwidth = width/2;
+      underGridContainerwidth = width/2;
     }
     short=height;
     underGridContainer.style="top:0;margin-left:99%";
