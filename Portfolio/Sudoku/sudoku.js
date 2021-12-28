@@ -31,9 +31,12 @@ function sizePage() {
     if (width * 2 < height) {
       gridContainer.style.width = width;
       underGridContainer.style.width = width;
+      c("a");
     } else {
       gridContainer.style.width = height/2;
       underGridContainer.style.width = height/2;
+    c("b");
+      
     }
     underGridContainer.style="top:49.9%;margin-left:0";
   } 
@@ -43,8 +46,9 @@ function sizePage() {
     if (height * 2 < width) {
       gridContainer.style.width = 400;//height/2;
       underGridContainer.style.width = 400;//height/2;
-      c("h");
+      c("c");
     } else {
+      c("d");
       gridContainer.style.width = width;
       underGridContainer.style.width = width;
     }
