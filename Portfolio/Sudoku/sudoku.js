@@ -52,6 +52,7 @@ function sizePage() {
   }
   gridContainer.style.borderWidth=.01*short;
   underGridContainer.style.borderWidth=.01*short;
+  c(short);
   gridContainer.style.width=short;
   underGridContainer.style.width=short;
 }
