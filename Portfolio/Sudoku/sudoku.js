@@ -37,7 +37,7 @@ function sizePage() {
     }
     short = width;
     
-    underGridContainer.style="top:50%;margin-left:0";
+    underGridContainer.style="top:49%;margin-left:0";
   } 
     /* Landscape */
   else {
