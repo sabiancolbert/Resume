@@ -50,7 +50,6 @@ function sizePage() {
     }
     underGridContainer.style="top:0;margin-left:99%";
   }
-  c(short+"w"+width+"h"+height);
 }
 
 /* Game Creation */
