@@ -701,6 +701,7 @@ function menu() {
 }
 
 /*//HERE
+HERE HERE HERE replace "c"+# with table.child
 capitalize notes
 see if a switch() would be useful anywhere
 have a numbers page when you click the wrong answers button (number of undos, redos, restarts, total time (saved games), ingame time, etc?)
