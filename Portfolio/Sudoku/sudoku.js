@@ -25,35 +25,40 @@ function sizePage() {
   var underGridContainer = document.getElementById("underGridContainer");
   var height= window.innerHeight;
   var width = window.innerWidth;
+  var short=0;
+  c("height"+height+"width"+width);
   /* Portrait */
   if (width < height) {
     c("sizePage - portrait");
     if (width * 2 < height) {
-      gridContainer.style.width = width;
-      underGridContainer.style.width = width;
+      height=width*2;
       c("a");
     } else {
-      gridContainer.style.width = height/2;
-      underGridContainer.style.width = height/2;
+      width=height/2;
     c("b");
-      
     }
+      short = width;
     underGridContainer.style="top:49.9%;margin-left:0";
   } 
     /* Landscape */
   else {
     c("sizePage - landscape");
     if (height * 2 < width) {
-      gridContainer.style.width = 400;//height/2;
-      underGridContainer.style.width = 400;//height/2;
+      width=height*2;
       c("c");
     } else {
+      height=width/2;
       c("d");
-      gridContainer.style.width = width;
-      underGridContainer.style.width = width;
     }
+    short = height;
     underGridContainer.style="top:0;margin-left:99%";
   }
+  /* Set Css */
+  c("short"+short+"height"+height+"width"+width);
+  gridContainer.style.width = short;
+      gridContainer.style.paddingTop = short;
+      underGridContainer.style.width = short;
+      underGridContainer.style.paddingTop = short;
 }
 
 /* Game Creation */
