@@ -53,8 +53,8 @@ function sizePage() {
   gridContainer.style.borderWidth=.01*short;
   underGridContainer.style.borderWidth=.01*short;
   //HERE do we need these?
-  gameElement.style.width= width;
-  gameElement.style.height=height;
+  gameElement.style.maxWidth= width;
+  gameElement.style.maxHeight=height;
 }
 
 /* Game Creation */
