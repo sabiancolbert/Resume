@@ -12,11 +12,11 @@ body {
 /* Game Board */
 #gameElement {
   visibility: hidden;
-  position: absolute;
+  position: fixed;
 }
 table, #buttonBox {
   padding: 1vmin;
-  position: relative;
+  position: absolute;
   border: 1vmin solid #3388dd;
   border-radius: 5%;
 }
