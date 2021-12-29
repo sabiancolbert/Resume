@@ -13,6 +13,7 @@ var currentCell = 0;
 var selectionNoteMode = 0;
 var autoCheck = true;
 var autoRemoveNotes = false;
+var sizingPage = false;
 var counterElement, selectionElement;
 
 function c(c) {
@@ -20,6 +21,8 @@ function c(c) {
 }
 
 function sizePage() {
+  if(!sizingPage){
+    sizingPage=true;
   c("sizePage()");
   var gridBox =document.getElementById("gridBox");
   c(document.getElementById("gridBox"));
@@ -62,8 +65,9 @@ function sizePage() {
   gridBox.style.height = short +"px";
   buttonBox.style.width =short+"px";
   buttonBox.style.height = short+"px";
+  sizingPage = false;
+  }
 }
-
 function getCell(cellNumber){
   //cellNumber = cellNumber +1+Math.floor((cellNumber+1)/9);
   var element = document.getElementById("gridBox").rows[Math.floor(cellNumber/9)].cells[cellNumber-(9*Math.floor(cellNumber/9))];
