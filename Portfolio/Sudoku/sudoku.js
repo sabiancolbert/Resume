@@ -56,10 +56,10 @@ function sizePage() {
   }
   /* Set Css */
   c("short"+short+"height"+height+"width"+width);
-  gridBox.style.width = 400;// short;
-  gridBox.style.height =400;// short;
-      buttonBox.style.width ="400px";// short;
-      buttonBox.style.height = "400px";//short;
+  gridBox.style.width = short +"px";
+  gridBox.style.height = short +"px";
+      buttonBox.style.width =short+"px";
+      buttonBox.style.height = short+"px";
 }
 
 /* Game Creation */
