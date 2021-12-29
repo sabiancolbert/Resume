@@ -17,13 +17,13 @@ body {
 }
 table, #buttonBox{
   padding:1vmin;
-  position: foxed;
+  position: fixed;
   border: 1vmin solid #3388dd;
   border-radius:5%;
 }
 #buttonBox{
   
-  top:50%;
+  bottom:0;
 }
 td{
 color: black;
