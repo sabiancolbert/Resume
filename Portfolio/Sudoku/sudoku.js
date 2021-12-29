@@ -21,51 +21,41 @@ function c(c) {
 }
 
 function sizePage() {
-  if(!sizingPage){
-  c("sizePage()");
-    sizingPage=true;
-  var gameElement =document.getElementById("gameElement");
-  var gridBox =document.getElementById("gridBox");
-  var buttonBox = document.getElementById("buttonBox");
-  var height= window.innerHeight;
-  var width = window.innerWidth;
-  var short="0px";
-  /* Portrait */
-  if (width < height) {
-    c("sizePage - portrait");
-    if (width * 2 < height) {
-      height=width*2;
-      c("a");
-    } else {
-      width=height/2;
-    c("b");
+  if (!sizingPage) {
+    c("sizePage()");
+    sizingPage = true;
+    var gameElement = document.getElementById("gameElement");
+    var height = window.innerHeight;
+    var width = window.innerWidth;
+    /* Portrait */
+    if (width < height) {
+      c("sizePage - portrait");
+      if (width * 2 < height) {
+        height = width*2;
+        c("a");
+      } else {
+        width = height/2;
+        c("b");
+      }
     }
-      short = width +"px";
-  } 
     /* Landscape */
-  else {
-    c("sizePage - landscape");
-    if (height * 2 < width) {
-      width=height*2;
-      c("c");
-    } else {
-      height=width/2;
-      c("d");
+    else {
+      c("sizePage - landscape");
+      if (height * 2 < width) {
+        width = height*2;
+        c("c");
+      } else {
+        height = width/2;
+        c("d");
+      }
     }
-    short = height +"px";
-  }
-  /* Set Css */
- gameElement.height=height;
- gameElement.width=width;
- c(height+"&"+width);
-  gridBox.width = short;
-  gridBox.height = short;
-  buttonBox.width = short;
-  buttonBox.height = short;
-  sizingPage = false;
+    /* Set Css */
+    gameElement.height = height;
+    gameElement.width = width;
+    sizingPage = false;
   }
 }
-function getCell(cellNumber){
+function getCell(cellNumber) {
   //cellNumber = cellNumber +1+Math.floor((cellNumber+1)/9);
   var element = document.getElementById("gridBox").rows[Math.floor(cellNumber/9)].cells[cellNumber-(9*Math.floor(cellNumber/9))];
   return element;
