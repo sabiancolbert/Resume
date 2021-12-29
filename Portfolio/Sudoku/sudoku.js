@@ -36,9 +36,9 @@ function sizePage() {
     if (width < height) {
       c("sizePage - portrait");
       if (width * 2 < height) {
-        top = width+"px";
+        top = (height-width)+"px";
         right = 0;
-        bottom = width+"px";
+        bottom = (height-width)+"px";
         left = 0;
       } else {
         top = height/2+"px";
