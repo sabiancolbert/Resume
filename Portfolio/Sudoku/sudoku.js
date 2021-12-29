@@ -50,6 +50,7 @@ function sizePage() {
       }
     }
     /* Set Css */
+    c(height+"&"+width);
     gameElement.height = height;
     gameElement.width = width;
     sizingPage = false;
