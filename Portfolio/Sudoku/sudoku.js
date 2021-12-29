@@ -53,11 +53,10 @@ function sizePage() {
       if (height * 2 < width) {
         c(29499);
         top = 0;
-        right = height+"px";
+        right = (width-height)+"px";
         bottom = 0;
-        left = height+"px";
+        left = (width-height)+"px";
       } else {
-        c("jejsis");
         top = 0;
         right = width/2+"px";
         bottom = 0;
