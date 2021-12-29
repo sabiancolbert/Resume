@@ -20,12 +20,12 @@ table, #buttonBox {
   border: 1vmin solid #3388dd;
   border-radius: 5%;
   left: 0;
-  top: 0;
+  top: 50%;
   right: 0;
   bottom: 0;
 }
-#buttonBox {
-  top:50%;
+table{
+  
 }
 td {
   color: black;
