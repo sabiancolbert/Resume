@@ -13,7 +13,7 @@ body {
 #gameElement {
   visibility: hidden;
   position: absolute;
-  
+  background-color: yellow;
 }
 table, #buttonBox{
   padding:1vmin;
