@@ -13,38 +13,39 @@ body {
 #gameElement {
   visibility: hidden;
 }
-table, #buttonBox {
+#gridBox, #buttonBox {
   padding: 1vmin;
   position: fixed;
   border: 1vmin solid #3388dd;
   border-radius: 5%;
 }
-table {
+#gridBox {
   top: 0;
-  bottom:49.6%;
-    left:0;
-  right:0;
+  bottom: 49.6%;
+  left: 0;
+  right: 0;
 }
 #buttonBox {
   top: 49.6%;
-  bottom:0;
-    left:0;
-  right:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 @media (orientation:landscape) {
-  table {
-    top:0;
-  bottom:0;
-    left:0;
-  right:49.6%;
+  #gridBox {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 49.6%;
   }
   #buttonBox {
-    top:0;
-  bottom:0;
-    left:49.6%;
-  right:0;
+    top: 0;
+    bottom: 0;
+    left: 49.6%;
+    right: 0;
   }
 }
+table{}
 td {
   color: black;
   background-color: #ccccee;
