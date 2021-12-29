@@ -55,13 +55,13 @@ function sizePage() {
     short = height;
   }
   /* Set Css */
- gameElement.style.height=height;
- gameElement.style.width=width;
+ gameElement.height=height;
+ gameElement.width=width;
  c(height+"&"+width);
-  gridBox.style.width = short +"px";
-  gridBox.style.height = short +"px";
-  buttonBox.style.width =short+"px";
-  buttonBox.style.height = short+"px";
+  gridBox.width = short +"px";
+  gridBox.height = short +"px";
+  buttonBox.width =short+"px";
+  buttonBox.height = short+"px";
   sizingPage = false;
   }
 }
