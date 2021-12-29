@@ -24,19 +24,13 @@ table, #buttonBox{
 }
 #buttonBox{
   bottom:0;
-  right:0;
+  
 }
 td{
 color: black;
   background-color: #ccccee;
   font-size: 150%;
   border-radius: 20%;
-}
-td:nth-child(3){
-  margin-right:1vmin;
-}
-td:nth-child(9){
-  margin-right:0;
 }
 bold{
   font-weight: 1000;
