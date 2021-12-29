@@ -40,7 +40,6 @@ function sizePage() {
     c("b");
     }
       short = width;
-    buttonBox.style.marginTop="49.9%";
   } 
     /* Landscape */
   else {
@@ -53,7 +52,6 @@ function sizePage() {
       c("d");
     }
     short = height;
-    buttonBox.style.margin="0 0 0 49.9%";
   }
   /* Set Css */
  gameElement.style.height=height;
