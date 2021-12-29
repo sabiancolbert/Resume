@@ -375,12 +375,12 @@ function select(selection) {
   }
   /* Select Number */
   if (selection != 0) {
-    document.getElementById("counterHolder").style.visibility = "visible";
+    counterElement.style.visibility = "visible";
     counterElement.innerHTML = numberTotals[selection];
     selectionElement.innerHTML = selection;
   } else {
     selectionElement.innerHTML = " ";
-    document.getElementById("counterHolder").style.visibility = "hidden";
+    counterElement.style.visibility = "hidden";
   }
   if (selectionNoteMode == -2) {
     switch (selection) {
