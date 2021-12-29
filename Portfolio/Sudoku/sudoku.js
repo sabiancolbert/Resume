@@ -52,7 +52,7 @@ function sizePage() {
       c("d");
     }
     short = height;
-    buttonBox.style="top:0;margin-left:99%";
+    buttonBox.style="top:0;margin-left:49.9%";
   }
   /* Set Css */
   c("short"+short+"height"+height+"width"+width);
