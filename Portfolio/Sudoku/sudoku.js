@@ -57,6 +57,7 @@ function sizePage() {
   /* Set Css */
  gameElement.style.height=height;
  gameElement.style.width=width;
+ c(height+"&"+width);
   gridBox.style.width = short +"px";
   gridBox.style.height = short +"px";
   buttonBox.style.width =short+"px";
