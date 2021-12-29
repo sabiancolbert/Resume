@@ -64,6 +64,12 @@ function sizePage() {
   buttonBox.style.height = short+"px";
 }
 
+function getCell(cellNumber){
+  cellNumber = cellNumber +Math.floor((cellNumber+1)/9);
+  var element = document.getElementById("gridBox").children[cellNumber];
+  return element;
+}
+
 /* Game Creation */
 
 function setCells() {
