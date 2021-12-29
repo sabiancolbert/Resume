@@ -32,10 +32,10 @@ color: black;
   font-size: 150%;
   border-radius: 20%;
 }
-td:nth-child(3n){
+td:nth-child(3){
   margin-right:1vmin;
 }
-td:nth-child(9n){
+td:nth-child(9){
   margin-right:0;
 }
 bold{
