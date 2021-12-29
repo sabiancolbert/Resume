@@ -25,12 +25,10 @@ function sizePage() {
     sizingPage=true;
   c("sizePage()");
   var gridBox =document.getElementById("gridBox");
-  c(document.getElementById("gridBox"));
   var buttonBox = document.getElementById("buttonBox");
   var height= window.innerHeight;
   var width = window.innerWidth;
   var short=0;
-  c("height"+height+"width"+width);
   /* Portrait */
   if (width < height) {
     c("sizePage - portrait");
