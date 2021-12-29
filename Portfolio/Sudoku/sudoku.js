@@ -24,6 +24,7 @@ function sizePage() {
   if (!sizingPage) {
     c("sizePage()");
     sizingPage = true;
+    var root = document.getElementByTagName("html");
     var height = window.innerHeight;
     var width = window.innerWidth;
     var gridBox = document.getElementById("gridBox");
@@ -40,27 +41,30 @@ function sizePage() {
         right = 0;
         bottom = (height-width)+"px";
         left = 0;
+        root.style.fontSize=width/40+"px";
       } else {
         top = height/2+"px";
         right = 0;
         bottom = height/2+"px";
         left = 0;
+        root.style.fontSize=height/2/40+"px";
       }
     }
     /* Landscape */
     else {
       c("sizePage - landscape");
       if (height * 2 < width) {
-        c(29499);
         top = 0;
         right = (width-height)+"px";
         bottom = 0;
         left = (width-height)+"px";
+        root.style.fontSize = height/40+"px";
       } else {
         top = 0;
         right = width/2+"px";
         bottom = 0;
         left = width/2+"px";
+        root.style.fontSize=width/2/40+"px";
       }
     }
     /* Set Css */
