@@ -13,7 +13,7 @@ body {
 #gameElement {
   visibility: hidden;
   position: absolute;
-  background-color:red;
+  
 }
 table, #buttonBox{
   padding:1vmin;
@@ -22,7 +22,7 @@ table, #buttonBox{
   border-radius:5%;
 }
 #buttonBox{
-  
+  right:0;
   bottom:0;
 }
 td{
