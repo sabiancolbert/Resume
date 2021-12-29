@@ -22,8 +22,8 @@ function c(c) {
 
 function sizePage() {
   if(!sizingPage){
-    sizingPage=true;
   c("sizePage()");
+    sizingPage=true;
   var gridBox =document.getElementById("gridBox");
   var buttonBox = document.getElementById("buttonBox");
   var height= window.innerHeight;
@@ -40,7 +40,7 @@ function sizePage() {
     c("b");
     }
       short = width;
-    buttonBox.style.margin="49.9% 0 0 0";
+    buttonBox.style.marginTop="49.9%";
   } 
     /* Landscape */
   else {
