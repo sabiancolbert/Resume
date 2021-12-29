@@ -67,6 +67,7 @@ function sizePage() {
 function getCell(cellNumber){
   cellNumber = cellNumber +Math.floor((cellNumber+1)/9);
   var element = document.getElementById("gridBox").children[cellNumber];
+  c(document.getElementById("gridBox").children);
   c("&&&&"+cellNumber+element);
   return element;
 }
