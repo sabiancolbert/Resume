@@ -17,7 +17,7 @@ body {
 }
 table, #buttonBox{
   padding:1vmin;
-  position: absolute;
+  position: foxed;
   border: 1vmin solid #3388dd;
   border-radius:5%;
 }
