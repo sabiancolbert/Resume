@@ -17,9 +17,10 @@ body {
   position: absolute;
 }
 table, #buttonBox{
-  padding:1%;
+  padding:5%;
   position: absolute;
   border: 1vmin solid #3388dd;
+  border-radius:5%;
 }
 #buttonBox{
   bottom:0;
