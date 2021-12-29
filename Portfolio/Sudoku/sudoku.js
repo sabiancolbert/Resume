@@ -58,13 +58,13 @@ function sizePage() {
         right = (width-height)+"px";
         bottom = 0;
         left = (width-height)+"px";
-        root.style.fontSize = height/40+"px";
+        //root.style.fontSize = height/40+"px";
       } else {
         top = 0;
         right = width/2+"px";
         bottom = 0;
         left = width/2+"px";
-        root.style.fontSize = width/2/40+"px";
+        //root.style.fontSize = width/2/40+"px";
       }
     }
     /* Set Css */
