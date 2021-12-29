@@ -13,28 +13,31 @@ body {
 #gameElement {
   visibility: hidden;
   position: absolute;
-  background-color: yellow;
 }
-table, #buttonBox{
-  padding:1vmin;
+table, #buttonBox {
+  padding: 1vmin;
   position: fixed;
   border: 1vmin solid #3388dd;
-  border-radius:5%;
-}
-#buttonBox{
+  border-radius: 5%;
+  left:0;
+  top:0;
   right:0;
   bottom:0;
 }
-td{
-color: black;
+#buttonBox {
+  right: 0;
+  bottom: 0;
+}
+td {
+  color: black;
   background-color: #ccccee;
   font-size: 150%;
   border-radius: 20%;
 }
-bold{
+bold {
   font-weight: 1000;
 }
-  
+
 #selectionElement {
   border: 1vmin solid #3388dd;
   border-radius: 20%;
