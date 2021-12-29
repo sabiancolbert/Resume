@@ -21,6 +21,7 @@ table, #buttonBox{
   border: 1px solid red;
 }
 #buttonBox{
+  border: 1px solid green;
   bottom:0;
   right:0;
 }
