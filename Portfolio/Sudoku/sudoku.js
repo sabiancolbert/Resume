@@ -24,7 +24,7 @@ function sizePage() {
   if (!sizingPage) {
     c("sizePage()");
     sizingPage = true;
-    var root = document.getElementsByTagName("html")[0];
+    var root = 0;//document.getElementsByTagName("html")[0];
     var height = window.innerHeight;
     var width = window.innerWidth;
     var gridBox = document.getElementById("gridBox");
