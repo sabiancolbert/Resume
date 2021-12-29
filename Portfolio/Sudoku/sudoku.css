@@ -32,6 +32,12 @@ color: black;
   font-size: 150%;
   border-radius: 20%;
 }
+td:nth-child(3n){
+  margin-right:1vmin;
+}
+td:nth-child(9n){
+  margin-right:0;
+}
 bold{
   font-weight: 1000;
 }
