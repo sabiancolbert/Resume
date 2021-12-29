@@ -30,6 +30,9 @@ color: black;
   font-size: 150%;
   border-radius: 20%;
 }
+bold{
+  font-weight: 1000;
+}
   
 #selectionElement {
   border: 1vmin solid #3388dd;
