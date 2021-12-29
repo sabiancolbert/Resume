@@ -11,7 +11,6 @@ body {
 #difficultyPromptElement {
   position: fixed;
 }
-/* HERE when landscape, add border to numbers and stuff on the right*/
 /* Game Board */
 table, #buttonBox{
   position: absolute;
@@ -27,29 +26,6 @@ table, #buttonBox{
   border-radius: 20%;
   background-color: #ccccee;
   font-size: 300%;
-}
-#counterContainer {
-  display: inline-block;
-  position: relative;
-  margin: auto;
-  width: 3vmin;
-  padding-top: 3vmin;
-  border: 1px solid red;
-  /*HERE make the game 1:2, then delete containers and holders in place of the ratio
-*/
-}
-#counterHolder {
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  position: absolute;
-  border: 1vmin solid #3388dd;
-  border-width: 1vmin 1vmin 0 1vmin;
-  border-radius: 100%;
-  top: -2vmin;
-  width: 3vmin;
-  background-color: #222222;
 }
 #counterElement {
   margin: auto;
