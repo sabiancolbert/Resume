@@ -56,9 +56,9 @@ function sizePage() {
   /* Set Css */
   c("short"+short+"height"+height+"width"+width);
   gridBox.style.width = short;
-      gridBox.style.paddingTop = short;
+  gridBox.style.height = short;
       buttonBox.style.width = short;
-      buttonBox.style.paddingTop = short;
+      buttonBox.style.height = short;
 }
 
 /* Game Creation */
