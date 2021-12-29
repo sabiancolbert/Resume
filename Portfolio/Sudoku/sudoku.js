@@ -24,6 +24,7 @@ function sizePage() {
   if(!sizingPage){
   c("sizePage()");
     sizingPage=true;
+  var gameElement =document.getElementById("gameElement");
   var gridBox =document.getElementById("gridBox");
   var buttonBox = document.getElementById("buttonBox");
   var height= window.innerHeight;
