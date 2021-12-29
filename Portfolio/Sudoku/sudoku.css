@@ -16,6 +16,8 @@ body {
   visibility: hidden;
   position: absolute;
   background-color:red;
+  top:0;
+  left:0;
 }
 table, #buttonBox{
   padding:1vmin;
