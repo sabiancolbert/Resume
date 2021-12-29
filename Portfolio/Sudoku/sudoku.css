@@ -15,13 +15,13 @@ body {
     left: 50%;
     top: 0;
   }
-  table{
-    width:50%;
+  table {
+    width: 50%;
   }
 }
 #gameElement {
   visibility: hidden;
-  position: absolute;
+  position: fixed;
 }
 table, #buttonBox {
   padding: 1vmin;
