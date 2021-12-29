@@ -65,10 +65,9 @@ function sizePage() {
 }
 
 function getCell(cellNumber){
-  cellNumber = cellNumber +1+Math.floor((cellNumber+1)/9);
-  var element = document.getElementById("gridBox").children[cellNumber];
-  c(document.getElementById("gridBox").children);
-  c("&&&&"+cellNumber+element);
+  //cellNumber = cellNumber +1+Math.floor((cellNumber+1)/9);
+  var element = document.getElementById("gridBox").rows[Math.floor(cellNumber/9)].cells[cellNumber-(9*Math.floor(cellNumber/9))];
+  c(element);
   return element;
 }
 
