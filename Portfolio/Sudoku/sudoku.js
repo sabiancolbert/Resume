@@ -222,7 +222,7 @@ function setGrid() {
   /* Display Cells */
   for (i = 0; i < 81; i++) {
     if (displayCells[i] > 0) {
-      document.getElementById("c"+i).innerHTML = "<bold>"+displayCells[i]+"</strong>";
+      getCell(i).innerHTML = "<bold>"+displayCells[i]+"</strong>";
     }
   }
   /* Last Minute Game Prep */
