@@ -10,15 +10,6 @@ body {
   position: fixed;
 }
 /* Game Board */
-@media (orientation:landscape) {
-  #buttonBox {
-    left: 50%;
-    top: 0;
-  }
-  table {
-    width: 50%;
-  }
-}
 #gameElement {
   visibility: hidden;
   position: fixed;
@@ -38,6 +29,18 @@ table {
   top: 49.6%;
   width: 96%;
   height: 48%;
+}
+@media (orientation:landscape) {
+  table {
+    width: 50%;
+    height:100%;
+  }
+  #buttonBox {
+    left: 49.6%;
+    top: 0;
+    width:48%;
+    height:96%;
+  }
 }
 td {
   color: black;
