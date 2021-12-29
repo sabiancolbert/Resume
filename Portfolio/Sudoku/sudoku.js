@@ -22,6 +22,7 @@ function c(c) {
 function sizePage() {
   c("sizePage()");
   var gridBox =document.getElementById("gridBox");
+  c(document.getElementById("gridBox"));
   var buttonBox = document.getElementById("buttonBox");
   var height= window.innerHeight;
   var width = window.innerWidth;
