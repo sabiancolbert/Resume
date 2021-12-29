@@ -39,7 +39,7 @@ function sizePage() {
     c("b");
     }
       short = width;
-    buttonBox.style.margin:"49.9% 0 0 0";
+    buttonBox.style.margin="49.9% 0 0 0";
   } 
     /* Landscape */
   else {
@@ -52,7 +52,7 @@ function sizePage() {
       c("d");
     }
     short = height;
-    buttonBox.style.margin:"0 0 0 49.9%";
+    buttonBox.style.margin="0 0 0 49.9%";
   }
   /* Set Css */
   c("short"+short+"height"+height+"width"+width);
