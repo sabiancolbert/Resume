@@ -58,7 +58,6 @@ function sizePage() {
     buttonBox.style.margin="0 0 0 49.9%";
   }
   /* Set Css */
-  c("short"+short+"height"+height+"width"+width);
  gameElement.style.height=height;
  gameElement.style.width=width;
   gridBox.style.width = short +"px";
@@ -71,7 +70,6 @@ function sizePage() {
 function getCell(cellNumber){
   //cellNumber = cellNumber +1+Math.floor((cellNumber+1)/9);
   var element = document.getElementById("gridBox").rows[Math.floor(cellNumber/9)].cells[cellNumber-(9*Math.floor(cellNumber/9))];
-  c(element);
   return element;
 }
 
