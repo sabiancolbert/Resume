@@ -56,6 +56,8 @@ function sizePage() {
   }
   /* Set Css */
   c("short"+short+"height"+height+"width"+width);
+ gameElement.style.height=height;
+ gameElement.style.width=width;
   gridBox.style.width = short +"px";
   gridBox.style.height = short +"px";
   buttonBox.style.width =short+"px";
