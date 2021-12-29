@@ -29,7 +29,7 @@ function sizePage() {
   var buttonBox = document.getElementById("buttonBox");
   var height= window.innerHeight;
   var width = window.innerWidth;
-  var short=0;
+  var short="0px";
   /* Portrait */
   if (width < height) {
     c("sizePage - portrait");
@@ -40,7 +40,7 @@ function sizePage() {
       width=height/2;
     c("b");
     }
-      short = width;
+      short = width +"px";
   } 
     /* Landscape */
   else {
@@ -52,16 +52,16 @@ function sizePage() {
       height=width/2;
       c("d");
     }
-    short = height;
+    short = height +"px";
   }
   /* Set Css */
  gameElement.height=height;
  gameElement.width=width;
  c(height+"&"+width);
-  gridBox.width = short +"px";
-  gridBox.height = short +"px";
-  buttonBox.width = short+"px";
-  buttonBox.height = short+"px";
+  gridBox.width = short;
+  gridBox.height = short;
+  buttonBox.width = short;
+  buttonBox.height = short;
   sizingPage = false;
   }
 }
