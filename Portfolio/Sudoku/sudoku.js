@@ -50,8 +50,8 @@ function sizePage() {
       }
     }
     /* Set Css */
-    gameElement.maxHeight = height;
-    gameElement.maxWidth = width;
+    gameElement.height = height;
+    gameElement.width = width;
     sizingPage = false;
   }
 }
