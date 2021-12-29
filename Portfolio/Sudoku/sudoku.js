@@ -58,8 +58,8 @@ function sizePage() {
   c("short"+short+"height"+height+"width"+width);
   gridBox.style.width = short +"px";
   gridBox.style.height = short +"px";
-      buttonBox.style.width =short+"px";
-      buttonBox.style.height = short+"px";
+  buttonBox.style.width =short+"px";
+  buttonBox.style.height = short+"px";
 }
 
 /* Game Creation */
