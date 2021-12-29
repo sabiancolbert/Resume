@@ -345,7 +345,7 @@ function select(selection) {
   c("select("+selection+")")
   /* Set Grid Highlight */
   for (cellNumber = 0; cellNumber < 81; cellNumber++) {
-    var cellElement = document.getElementById("c"+cellNumber);
+    var cellElement = getCell(cellNumber);
     //note highlight
     if (displayCells[cellNumber]==-2) {
       for (i = 1; i < 10; i++) {
@@ -415,11 +415,10 @@ function select(selection) {
   }
 }
 
-function set(cellId, direction = 0) {
-  c("set("+cellId+","+direction+")");
-  var cellNumber = cellId.substring(1, cellId.length) * 1;
+function set(cellNumber, direction = 0) {
+  c("set("+cellNumber+","+direction+")");
   if (userCells.includes(cellNumber)) {
-    var cellElement = document.getElementById(cellId);
+    var cellElement = getCell(cellNumber);
     var cellNoteMode = displayCells[cellNumber];
     var content = selectionElement.innerHTML;
     if (content == " " || content == cellElement.innerHTML && selectionNoteMode == cellNoteMode && cellNoteMode > -2) {
@@ -441,7 +440,7 @@ function set(cellId, direction = 0) {
       redoList.push([]);
       undoList.push([]);
       undoList[currentMove] = [
-        cellId,
+        cellNumber,
         cellElement.innerHTML,
         cellNoteMode,
         cellElement.style.color];
@@ -561,7 +560,7 @@ function set(cellId, direction = 0) {
   if (direction == 0) {
     currentMove++;
     redoList[currentMove] = [
-      cellId,
+      cellNumber,
       cellElement.innerHTML,
       cellNoteMode,
       cellElement.style.color];
