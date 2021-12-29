@@ -58,7 +58,7 @@ function sizePage() {
 }
 function getCell(cellNumber) {
   //cellNumber = cellNumber +1+Math.floor((cellNumber+1)/9);
-  var element = document.getElementById("gridBox").rows[Math.floor(cellNumber/9)].cells[cellNumber-(9*Math.floor(cellNumber/9))];
+  var element = document.getElementsByTagName("table")[0].rows[Math.floor(cellNumber/9)].cells[cellNumber-(9*Math.floor(cellNumber/9))];
   return element;
 }
 
