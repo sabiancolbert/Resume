@@ -16,6 +16,10 @@ table, #buttonBox{
   position: absolute;
   border: 1px solid red;
 }
+#buttonBox{
+  bottom:0;
+  right:0;
+}
 td{
 color: black;
   background-color: #ccccee;
