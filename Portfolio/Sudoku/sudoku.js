@@ -44,9 +44,9 @@ function sizePage() {
         root.style.fontSize = width/17+"px";
       } else {
         top = height/2+"px";
-        right = 0;
+        right = height/2+"px";
         bottom = height/2+"px";
-        left = 0;
+        left = height/2+"px";
         root.style.fontSize = height/2/17+"px";
       }
     }
@@ -60,9 +60,9 @@ function sizePage() {
         left = (width-height)+"px";
         root.style.fontSize = height/17+"px";
       } else {
-        top = 0;
+        top = width/2+"px";
         right = width/2+"px";
-        bottom = 0;
+        bottom = width/2+"px";
         left = width/2+"px";
         root.style.fontSize = width/2/17+"px";
       }
