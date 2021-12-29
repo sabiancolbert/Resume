@@ -73,6 +73,7 @@ function getCell(cellNumber){
 
 function setCells() {
   c("setCells()");
+  sizePage();
   if (document.getElementById("difficultyElement").value < 81) {
     difficulty = document.getElementById("difficultyElement").value;
     document.getElementById("difficultyPromptElement").innerHTML = "";
