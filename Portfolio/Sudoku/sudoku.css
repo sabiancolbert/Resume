@@ -23,7 +23,7 @@ table, #buttonBox{
 }
 #buttonBox{
   
-  bottom;0;
+  bottom:0;
 }
 td{
 color: black;
