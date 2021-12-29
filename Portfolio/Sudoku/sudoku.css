@@ -19,7 +19,7 @@ body {
 table, #buttonBox{
   padding:1%;
   position: absolute;
-  border: 1% solid #3388dd;
+  border: 1vmin solid #3388dd;
 }
 #buttonBox{
   bottom:0;
