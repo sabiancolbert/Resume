@@ -13,8 +13,9 @@ body {
 }
 /* HERE when landscape, add border to numbers and stuff on the right*/
 /* Game Board */
-table{
+table, #buttonBox{
   position: absolute;
+  border: 1px solid red;
 }
 #gameElement {
   visibility: hidden;
