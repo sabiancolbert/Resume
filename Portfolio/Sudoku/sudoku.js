@@ -60,8 +60,8 @@ function sizePage() {
  c(height+"&"+width);
   gridBox.width = short +"px";
   gridBox.height = short +"px";
-  buttonBox.width =short+"px";
-  buttonBox.height = short+"px";
+  buttonBox.width =2*short+"px";
+  buttonBox.height = 2*short+"px";
   sizingPage = false;
   }
 }
