@@ -24,35 +24,49 @@ function sizePage() {
   if (!sizingPage) {
     c("sizePage()");
     sizingPage = true;
-    var gameElement = document.getElementById("gameElement");
     var height = window.innerHeight;
     var width = window.innerWidth;
+    var gridBox = document.getElementById("gridBox");
+    var buttonBox = document.getElementById("buttonBox");
+    var top=0;
+    var right=0;
+    var bottom=0;
+    var left =0;
     /* Portrait */
     if (width < height) {
       c("sizePage - portrait");
       if (width * 2 < height) {
-        height = width*2;
-        c("a");
+        top=width+"px";
+        right=0;
+        bottom=width+"px";
+        left=0;
       } else {
-        width = height/2;
-        c("b");
+        top=height/2+"px";
+        right=0;
+        bottom=height/2"px";
+        left=0;
       }
     }
     /* Landscape */
     else {
       c("sizePage - landscape");
       if (height * 2 < width) {
-        width = height*2;
-        c("c");
+        top=0;
+        right=height+"px";
+        bottom=0;
+        left=height+"px";
       } else {
-        height = width/2;
-        c("d");
+        top=0;
+        right=width/2+"px";
+        bottom=0;
+        left=width/2+"px";
       }
     }
     /* Set Css */
-    c(height+"&"+width);
-    gameElement.height = height;
-    gameElement.width = width;
+    gridBox.style.bottom=bottom;
+    gridBox.style.right=right;
+    buttonBox.style.top=top;
+    buttonBox.style.left=left;
     sizingPage = false;
   }
 }
