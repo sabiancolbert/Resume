@@ -21,12 +21,12 @@ body {
 }
 #gridBox {
   top: 0;
-  bottom: 49%;
+  bottom: 48%;
   left: 0;
   right: 0;
 }
 #buttonBox {
-  top: 49%;
+  bottom:48%;
   bottom: 0;
   left: 0;
   right: 0;
@@ -36,12 +36,12 @@ body {
     top: 0;
     bottom: 0;
     left: 0;
-    right: 49%;
+    right: 48%;
   }
   #buttonBox {
     top: 0;
     bottom: 0;
-    left: 49%;
+    left: 48%;
     right: 0;
   }
 }
