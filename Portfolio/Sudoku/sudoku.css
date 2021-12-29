@@ -12,6 +12,10 @@ body {
   position: fixed;
 }
 /* Game Board */
+#gameElement {
+  visibility: hidden;
+  position: absolute;
+}
 table, #buttonBox{
   position: absolute;
   border: 1px solid red;
@@ -25,10 +29,6 @@ color: black;
   background-color: #ccccee;
   font-size: 150%;
   border-radius: 20%;
-}
-#gameElement {
-  visibility: hidden;
-  position: absolute;
 }
   
 #selectionElement {
