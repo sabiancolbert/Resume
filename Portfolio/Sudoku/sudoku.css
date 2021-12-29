@@ -10,10 +10,13 @@ body {
   position: fixed;
 }
 /* Game Board */
-@media (orientation:landscape){
-  #buttonBox{
-    left:50%;
-    top:0;
+@media (orientation:landscape) {
+  #buttonBox {
+    left: 50%;
+    top: 0;
+  }
+  table{
+    width:50%;
   }
 }
 #gameElement {
@@ -31,7 +34,7 @@ table, #buttonBox {
 }
 table {
   top: 0;
-  
+
 }
 td {
   color: black;
