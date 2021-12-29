@@ -19,14 +19,13 @@ table, #buttonBox {
   position: fixed;
   border: 1vmin solid #3388dd;
   border-radius: 5%;
-  left:0;
-  top:0;
-  right:0;
-  bottom:0;
-}
-#buttonBox {
+  left: 0;
+  top: 0;
   right: 0;
   bottom: 0;
+}
+#buttonBox {
+  top:50%;
 }
 td {
   color: black;
