@@ -11,121 +11,121 @@
 <body id="body" onload="sizePage()" onresize="sizePage()">
   <section id="difficultyPromptElement">
     <!-- Difficulty -->
-        <label for="difficultyElement">Set difficulty to:</label>
-        <select onchange="setCells()" id="difficultyElement">
-          <option value="81"></option>
-          <option value="45">Beginner</option>
-          <option value="40">Easy</option>
-          <option value="35">Medium</option>
-          <option value="30">Hard</option>
-          <option value="0">Expert</option>
-          <option value="65">A</option>
-          <option value="70">B</option>
-        </select>
+    <label for="difficultyElement">Set difficulty to:</label>
+    <select onchange="setCells()" id="difficultyElement">
+      <option value="81"></option>
+      <option value="45">Beginner</option>
+      <option value="40">Easy</option>
+      <option value="35">Medium</option>
+      <option value="30">Hard</option>
+      <option value="0">Expert</option>
+      <option value="65">A</option>
+      <option value="70">B</option>
+    </select>
   </section>
   <section id="gameElement">
     <!-- Sudoku Grid -->
-      <table id="gridBox">
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </table>
+    <table id="gridBox">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
     <!-- Button Box -->
     <div id="buttonBox">
       <button onclick="menu()" class="metaButton" id="menu"></button>
@@ -148,10 +148,10 @@
       <button onclick="select(9)">9</button>
       <button onclick="select(0)" id="eraser"> </button>
     </div>
-</section>
-<section id="menuElement">
-  <!-- Menu -->
-  <!--home,save,auto save,autocheck,auto remove notes,theme,help -> controls, gameplay, strategies-->
-</section>
+  </section>
+  <section id="menuElement">
+    <!-- Menu -->
+    <!--home,save,auto save,autocheck,auto remove notes,theme,help -> controls, gameplay, strategies-->
+  </section>
 </body>
 </html>
