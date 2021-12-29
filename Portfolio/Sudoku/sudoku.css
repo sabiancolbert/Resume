@@ -17,11 +17,11 @@ body {
   position: absolute;
 }
 table, #buttonBox{
+  padding:1%;
   position: absolute;
-  border: 1px solid red;
+  border: 1% solid #3388dd;
 }
 #buttonBox{
-  border: 1px solid green;
   bottom:0;
   right:0;
 }
