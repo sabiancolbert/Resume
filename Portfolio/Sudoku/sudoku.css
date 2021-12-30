@@ -87,6 +87,7 @@ button {
   border: .2rem solid #3388dd;
   border-radius: 100%;
   bottom: 0;
+  position: relative;
 }
 .metaButton:active {
   background-color: #3388dd;
