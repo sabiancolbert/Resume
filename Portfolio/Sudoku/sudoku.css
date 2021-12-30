@@ -121,6 +121,9 @@ button {
 button:active {
   background-color: #1050aa;
 }
+#eraser:active {
+  background-color: #1050aa;
+}
 /* Menu */
 #menuElement {
   visibility: hidden;
