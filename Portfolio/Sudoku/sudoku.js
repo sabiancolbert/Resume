@@ -451,7 +451,11 @@ function set(cellNumber, direction = 0) {
         cellElement.innerHTML,
         cellNoteMode,
         cellElement.style.color];
+      if(cellElement.innerHTML == selectionElement.innerHTML && currentSelection == cellNoteMode){
+        cellNoteMode = 0;
+      }else{
       cellNoteMode = currentSelection;
+    }
     }
     //counter element
     if (displayCells[cellNumber] > -2) {
@@ -514,7 +518,7 @@ function set(cellNumber, direction = 0) {
           cellElement.innerHTML = content;
         }
         displayCells[cellNumber] = -2;
-        if (content == selectionElement.innerHTML){
+        if (content == selectionElement.innerHTML) {
           document.getElementById("n"+content+cellNumber).style.backgroundColor = "#3388dd";
         }
       }
