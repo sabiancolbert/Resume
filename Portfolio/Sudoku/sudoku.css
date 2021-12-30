@@ -134,6 +134,7 @@ button:active {
   border: .2rem solid #3388dd;
   border-radius: 20%;
   background-color: #ccccee;
+  overflow: hidden;
 }
 #restart {
   background: url("restart.png") no-repeat;
@@ -159,7 +160,7 @@ button:active {
   top: 4%;
 }
 #eraser {
-  top:8%;
+  top: 8%;
   background: url("eraser.png") no-repeat;
   background-size: contain;
   background-color: #3388dd;
