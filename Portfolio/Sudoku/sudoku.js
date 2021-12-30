@@ -455,10 +455,9 @@ function set(cellNumber, direction = 0) {
     }
     //regular
     else {
-      c("&&&"+selectionNoteMode);
+      c("djeuueuehe"+cellNoteMode);
       redoList.push([]);
       undoList.push([]);
-      c("djeuueuehe"+cellNoteMode);
       undoList[currentMove] = [
         cellNumber,
         cellElement.innerHTML,
