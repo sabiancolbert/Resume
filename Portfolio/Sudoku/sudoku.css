@@ -159,6 +159,7 @@ button:active {
   top: 4%;
 }
 #eraser {
+  top:8%;
   background: url("eraser.png") no-repeat;
   background-size: contain;
   background-color: #3388dd;
