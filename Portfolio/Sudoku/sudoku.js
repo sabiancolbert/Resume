@@ -557,7 +557,7 @@ function set(cellNumber, direction = 0) {
     }
   }
   //highlight
-  select(selectionElement.innerHTML);
+  //select(selectionElement.innerHTML);
   if (direction == 0) {
     currentMove++;
     redoList[currentMove] = [
@@ -648,14 +648,13 @@ function updateNoteMode() {
     selectionElement.style.fontSize = "200%";
   }
   /* Grey Note Number Mode */
-  else if (currentSelection >0) {
+  else if (currentSelection > 0) {
     currentSelection = -1;
     selectionElement.style.color = "#777777";
     selectionElement.style.fontSize = "150%";
   }
   /* Note Mode */
-  else if(currentSelection==-1)
-  {
+  else if (currentSelection==-1) {
     currentSelection=-2;
     selectionElement.style.color = "black";
     selectionElement.style.fontSize = "75%";
