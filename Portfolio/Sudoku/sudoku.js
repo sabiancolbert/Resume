@@ -438,13 +438,11 @@ function set(cellNumber, direction = 0) {
     var content = selectionElement.innerHTML;
     if (content == " " || content == cellElement.innerHTML && selectionNoteMode == cellNoteMode && cellNoteMode > -2) {
       cellNoteMode = 0;
-      c("jwjdduiajebeiejeh");
     }
     //undo
     if (direction ==-1) {
       content = undoList[currentMove][1];
       cellNoteMode = undoList[currentMove][2];
-
     }
     //redo
     else if (direction == 1) {
@@ -453,6 +451,7 @@ function set(cellNumber, direction = 0) {
     }
     //regular
     else {
+      c("&&&"+selectionNoteMode);
       redoList.push([]);
       undoList.push([]);
       undoList[currentMove] = [
