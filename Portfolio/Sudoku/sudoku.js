@@ -682,31 +682,31 @@ function updateNoteMode() {
     selectionElement.style.fontSize = "75%";
     switch (parseInt(selectionElement.innerHTML)) {
       case 1:
-        selectionElement.style.padding = "0 60% 60% 0";
+        selectionElement.style.padding = "0 10% 10% 0";
         break;
       case 2:
-        selectionElement.style.padding = "0 0 60% 0";
+        selectionElement.style.padding = "0 0 10% 0";
         break;
       case 3:
-        selectionElement.style.padding = "0 0 60% 60%";
+        selectionElement.style.padding = "0 0 10% 10%";
         break;
       case 4:
-        selectionElement.style.padding = "0 60% 0 0";
+        selectionElement.style.padding = "0 10% 0 0";
         break;
       case 5:
         selectionElement.style.padding = "0 0 0 0";
         break;
       case 6:
-        selectionElement.style.padding = "0 0 0 60%";
+        selectionElement.style.padding = "0 0 0 10%";
         break;
       case 7:
-        selectionElement.style.padding = "60% 60% 0 0";
+        selectionElement.style.padding = "10% 10% 0 0";
         break;
       case 8:
-        selectionElement.style.padding = "60% 0 0 0";
+        selectionElement.style.padding = "10% 0 0 0";
         break;
       case 9:
-        selectionElement.style.padding = "60% 0 0 60%";
+        selectionElement.style.padding = "10% 0 0 10%";
         break;
     }
   }
