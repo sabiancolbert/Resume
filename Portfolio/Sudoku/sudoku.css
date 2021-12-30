@@ -70,7 +70,7 @@ h3 {
   height: 7%;
 }
 #wrongElement {
-  top: -8%;
+  top: -9%;
 }
 button {
   width: 18%;
@@ -92,6 +92,7 @@ button {
   background-color: #3388dd;
 }
 #selectionElement {
+  top:10%;
   border: .2rem solid #3388dd;
   border-radius: 20%;
   background-color: #ccccee;
