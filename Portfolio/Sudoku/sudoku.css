@@ -14,7 +14,6 @@ body {
   visibility: hidden;
 }
 #gridBox, #buttonBox {
-  padding: 1vmin;
   position: fixed;
   border: 1vmin solid #3388dd;
   border-radius: 5%;
