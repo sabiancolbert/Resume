@@ -64,9 +64,9 @@ function sizePage() {
         root.style.fontSize = height/17+"px";
       } else {
         c("d");
-        top = width/2+"px";
+        top = height-(width/2)+"px";
         right = width/2+"px";
-        bottom = width/2+"px";
+        bottom = height-(width/2)+"px";
         left = width/2+"px";
         root.style.fontSize = width/2/17+"px";
       }
