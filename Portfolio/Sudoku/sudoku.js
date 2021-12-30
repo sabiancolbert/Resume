@@ -376,14 +376,14 @@ function select(selection) {
     //number highlight
     else if (selection == cellElement.innerHTML && displayCells[cellNumber] != 0) {
       cellElement.style.backgroundColor = "#3388dd";
-      if (cellElement.style.fontSize == "125%") {
+      if (cellElement.style.fontSize == "85%") {
         cellElement.style.color = "#ccccee";
       }
     }
     //no highlight
     else {
       cellElement.style.backgroundColor = "#ccccee";
-      if (cellElement.style.fontSize == "125%") {
+      if (cellElement.style.fontSize == "85%") {
         cellElement.style.color = "#777777";
       }
     }
@@ -668,18 +668,18 @@ function updateNoteMode() {
   /* Regular Number Mode */
   if (selectionNoteMode < -2) {
     selectionNoteMode = 0;
-    selectionElement.style.fontSize = "300%";
+    selectionElement.style.fontSize = "100%";
   }
   /* Grey Note Number Mode */
   else if (selectionNoteMode == -1) {
     selectionElement.style.color = "#777777";
-    selectionElement.style.fontSize = "225%";
+    selectionElement.style.fontSize = "85%";
   }
   /* Note Mode */
   else
   {
     selectionElement.style.color = "black";
-    selectionElement.style.fontSize = "100%";
+    selectionElement.style.fontSize = "50%";
     switch (selectionElement.innerHTML * 1) {
       case 1:
         selectionElement.style.padding = "0 60% 60% 0";
