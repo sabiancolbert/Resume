@@ -433,7 +433,7 @@ function set(cellNumber, direction = 0) {
   if (userCells.includes(cellNumber)) {
     var cellElement = getCell(cellNumber);
     var cellNoteMode = displayCells[cellNumber];
-    "HERE HERE "+cellNoteMode);
+    //HERE HERE HERE "+cellNoteMode);
   var content = selectionElement.innerHTML;
   //undo
   if (direction ==-1) {
