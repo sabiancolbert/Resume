@@ -668,18 +668,18 @@ function updateNoteMode() {
   /* Regular Number Mode */
   if (selectionNoteMode < -2) {
     selectionNoteMode = 0;
-    selectionElement.style.fontSize = "100%";
+    selectionElement.style.fontSize = "200%";
   }
   /* Grey Note Number Mode */
   else if (selectionNoteMode == -1) {
     selectionElement.style.color = "#777777";
-    selectionElement.style.fontSize = "85%";
+    selectionElement.style.fontSize = "175%";
   }
   /* Note Mode */
   else
   {
     selectionElement.style.color = "black";
-    selectionElement.style.fontSize = "50%";
+    selectionElement.style.fontSize = "150%";
     switch (selectionElement.innerHTML * 1) {
       case 1:
         selectionElement.style.padding = "0 60% 60% 0";
