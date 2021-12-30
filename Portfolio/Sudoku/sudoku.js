@@ -666,7 +666,6 @@ function autoRemoveNotes() {
 
 function updateNoteMode() {
   c("updateNoteMode()");
-  c(selectionNoteMode);
   selectionNoteMode--;
   selectionElement.style.padding = 0;
   /* Regular Number Mode */
@@ -679,7 +678,6 @@ function updateNoteMode() {
     selectionElement.style.color = "#777777";
     selectionElement.style.fontSize = "150%";
     //skip erase
-    c("WORKS");
     selectionNoteMode = -1;
   }
   /* Note Mode */
