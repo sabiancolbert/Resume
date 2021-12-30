@@ -557,9 +557,13 @@ function set(cellNumber, direction = 0) {
     }
   }
   //highlight
-if(content==selectionElement.innerHTML){
-  //HERE HERE HERE
-}
+  if (content == selectionElement.innerHTML) {
+    //HERE HERE HERE
+      cellElement.style.backgroundColor = "#3388dd";
+      if (cellElement.style.fontSize == "85%") {
+        cellElement.style.color = "#ccccee";
+      }
+      }
   if (direction == 0) {
     currentMove++;
     redoList[currentMove] = [
