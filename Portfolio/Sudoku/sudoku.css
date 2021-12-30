@@ -65,8 +65,8 @@ bold {
 }
 #counterElement {
   font-size: 90%;
-  width: 1rem;
-  left: 8rem;
+  width: 2rem;
+  left: 6rem;
   border: .2rem solid #3388dd;
   border-bottom: none;
   border-radius: 100%;
