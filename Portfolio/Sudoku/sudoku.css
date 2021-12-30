@@ -78,7 +78,7 @@ h3 {
   margin: auto;
   position: relative;
   top: 7%;
-  height:20%;
+  height: 20%;
 }
 #hintLeft {
   float: left;
@@ -93,7 +93,7 @@ h3 {
   display: inline-block;
   margin: auto;
   width: 50%;
-  height: 20%;
+  height: 1.2rem;
   border: 1px solid red;
 }
 #hintRight {
