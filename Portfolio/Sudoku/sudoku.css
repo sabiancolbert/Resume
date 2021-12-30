@@ -16,7 +16,7 @@ body {
 #gridBox, #buttonBox {
   padding: 1%;
   position: fixed;
-  border: medium solid #3388dd;
+  border: thick solid #3388dd;
   border-radius: 5%;
 }
 #gridBox {
