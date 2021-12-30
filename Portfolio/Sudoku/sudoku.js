@@ -666,6 +666,7 @@ function autoRemoveNotes() {
 
 function updateNoteMode() {
   c("updateNoteMode()");
+  c(selectionNoteMode);
   selectionNoteMode--;
   selectionElement.style.padding = 0;
   /* Regular Number Mode */
