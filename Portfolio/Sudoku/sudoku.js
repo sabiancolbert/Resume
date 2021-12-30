@@ -438,6 +438,7 @@ function set(cellNumber, direction = 0) {
     var content = selectionElement.innerHTML;
     if (content == " " || content == cellElement.innerHTML && selectionNoteMode == cellNoteMode && cellNoteMode > -2) {
       cellNoteMode = 0;
+      c("jwjdduiajebeiejeh");
     }
     //undo
     if (direction ==-1) {
