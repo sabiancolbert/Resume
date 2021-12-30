@@ -679,8 +679,8 @@ function updateNoteMode() {
     selectionElement.style.color = "#777777";
     selectionElement.style.fontSize = "150%";
     //skip erase
-c("WORKS");
-    cellNoteMode= -1;
+    c("WORKS");
+    selectionNoteMode = -1;
   }
   /* Note Mode */
   else
