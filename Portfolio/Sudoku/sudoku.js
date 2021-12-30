@@ -430,15 +430,8 @@ function select(selection) {
   }
 }
 
-function set(event, direction = 0) {
-c();
-try{
-  //HERE ew
-event=event.trigger
-}
-catch{
-}
-var cellNumber=event.id;
+function set(cellNumber, direction = 0) {
+  c("set - "+cellNumber+" "+direction);
   if (userCells.includes(cellNumber)) {
     var cellElement = getCell(cellNumber);
     var cellNoteMode = displayCells[cellNumber];
@@ -462,7 +455,7 @@ var cellNumber=event.id;
       redoList.push([]);
       undoList.push([]);
       undoList[currentMove] = [
-        cellElement,
+        cellNumber,
         cellElement.innerHTML,
         cellNoteMode,
         cellElement.style.color];
@@ -582,7 +575,7 @@ var cellNumber=event.id;
   if (direction == 0) {
     currentMove++;
     redoList[currentMove] = [
-      cellElement,
+      cellNumber,
       cellElement.innerHTML,
       cellNoteMode,
       cellElement.style.color];
