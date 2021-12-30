@@ -79,7 +79,7 @@ h3 {
   position: relative;
   top: 7%;
   height: 20%;
-  visibility:hidden;
+  visibility: hidden;
 }
 #hintLeft {
   float: left;
@@ -115,6 +115,9 @@ button {
   background-color: #3388dd;
   border: none;
   position: relative;
+}
+button:active {
+  background-color: #1050aa;
 }
 .metaButton {
   width: 17%;
@@ -152,13 +155,13 @@ button {
   background-size: contain;
   background-color: #ccccee;
 }
+.bottomButton{
+  top:5%;
+}
 #eraser {
   background: url("eraser.png") no-repeat;
   background-size: contain;
   background-color: #3388dd;
-}
-button:active {
-  background-color: #1050aa;
 }
 #eraser:active {
   background-color: #1050aa;
