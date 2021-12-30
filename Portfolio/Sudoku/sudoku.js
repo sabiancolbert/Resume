@@ -620,7 +620,7 @@ function check(cellNumber, changingAutoCheck = false) {
         if (displayCells[cellNumber] > 0 && displayCells[cellNumber] != cells[cellNumber]) {
           result = false;
           wrongList.push(cellNumber);
-          document.getElementById("c"+cellNumber).style.color = red;
+          document.getCell(cellNumber).style.color = red;
         }
       }
     } else {
@@ -628,7 +628,7 @@ function check(cellNumber, changingAutoCheck = false) {
       for (i = 0; i < 81; i++) {
         if (wrongList.includes(cellNumber)) {
           wrongList.splice(wrongList.indexOf(cellNumber), 1);
-          document.getElementById("c"+cellNumber).style.color = black;
+          document.getCell(cellNumber).style.color = black;
         }
       }
     }
@@ -639,7 +639,7 @@ function check(cellNumber, changingAutoCheck = false) {
     }
     if (displayCells[cellNumber] != cells[cellNumber]) {
       wrongList.push(cellNumber);
-      document.getElementById("c"+cellNumber).style.color = "red";
+      document.getCell(cellNumber).style.color = "red";
       addOne = true;
       result = false;
     }
