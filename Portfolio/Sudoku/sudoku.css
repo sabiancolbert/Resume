@@ -66,13 +66,15 @@ bold {
 #counterElement {
   margin: auto;
   font-size: 90%;
+  position: absolute;
 }
-button{
-  width:19%;
-  height:19%;
+button {
+  width: 19%;
+  height: 19%;
   border-radius: 100%;
   font-weight: 550;
-  background-color: #3388dd;}
+  background-color: #3388dd;
+}
 .metaButton {
   width: 17%;
   height: 17%;
