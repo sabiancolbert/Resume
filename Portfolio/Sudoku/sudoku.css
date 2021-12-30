@@ -70,7 +70,7 @@ bold {
   border: .2rem solid #3388dd;
   border-bottom: none;
   border-radius: 100%;
-  top: 10%;
+  top: 15%;
   position: absolute;
 }
 button {
@@ -85,6 +85,7 @@ button {
   height: 17%;
   border: .2rem solid #3388dd;
   border-radius: 100%;
+  bottom:0;
 }
 .metaButton:active {
   background-color: #3388dd;
