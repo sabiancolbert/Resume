@@ -68,6 +68,9 @@ h3 {
   background-color: #222222;
   position: absolute;
 }
+#wrongElement{
+  top:-5%;
+}
 button {
   width: 18%;
   height: 18%;
@@ -82,7 +85,6 @@ button {
   height: 17%;
   border: .2rem solid #3388dd;
   border-radius: 100%;
-
   position: relative;
 }
 .metaButton:active {
