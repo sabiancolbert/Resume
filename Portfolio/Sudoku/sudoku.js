@@ -430,7 +430,7 @@ function select(selection) {
   }
 }
 
-function set(cellNumber, direction = 0) {
+function set(event, direction = 0) {
   c("set("+cellNumber+","+direction+")");
   if (userCells.includes(cellNumber)) {
     var cellElement = getCell(cellNumber);
@@ -455,7 +455,7 @@ function set(cellNumber, direction = 0) {
       redoList.push([]);
       undoList.push([]);
       undoList[currentMove] = [
-        cellNumber,
+        cellElement,
         cellElement.innerHTML,
         cellNoteMode,
         cellElement.style.color];
@@ -575,7 +575,7 @@ function set(cellNumber, direction = 0) {
   if (direction == 0) {
     currentMove++;
     redoList[currentMove] = [
-      cellNumber,
+      cellElement,
       cellElement.innerHTML,
       cellNoteMode,
       cellElement.style.color];
