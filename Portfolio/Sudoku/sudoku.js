@@ -390,7 +390,16 @@ function select(selection) {
   }
   /* Select Number */
   if (selection != 0) {
+    if(selectionElement.fontSize == "150%"){
+      selectionNoteMode=-1;
+    }
+    else if(selectionElement.fontSize == "75%"){
+      selectionNoteMode=-2;
+      
+    }
+    else{
     selectionNoteMode = selection;
+    }
     counterElement.style.visibility = "visible";
     counterElement.innerHTML = numberTotals[selection];
     selectionElement.innerHTML = selection;
