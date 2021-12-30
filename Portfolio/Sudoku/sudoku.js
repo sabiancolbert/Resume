@@ -458,11 +458,7 @@ function set(cellNumber, direction = 0) {
         cellNumber,
         cellElement.innerHTML,
         cellNoteMode,
-        cellElement.style.color];if(selectionNoteMode==0){
-          cellNoteMode = 0;
-        }else{
-      cellNoteMode = selectionNoteMode + !selectionNoteMode;
-    }
+        cellNoteMode = selectionNoteMode + !selectionNoteMode;
       c("&&&&"+cellNoteMode +"&"+selectionNoteMode);
     }
     c("selectionNoteMode"+selectionNoteMode+"content"+content+"cellNoteMode"+cellNoteMode);
