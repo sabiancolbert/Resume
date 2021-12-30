@@ -155,8 +155,8 @@ button:active {
   background-size: contain;
   background-color: #ccccee;
 }
-.bottomButton{
-  top:5%;
+.bottomButton {
+  top: 4%;
 }
 #eraser {
   background: url("eraser.png") no-repeat;
