@@ -22,7 +22,6 @@ function c(c) {
 
 function sizePage() {
   if (!sizingPage) {
-    c("sizePage()");
     sizingPage = true;
     var root = document.getElementsByTagName("html")[0];
     var height = window.innerHeight;
@@ -35,16 +34,13 @@ function sizePage() {
     var left = 0;
     /* Portrait */
     if (width < height) {
-      c("sizePage - portrait");
       if (width * 2 < height) {
-        c("a");
         top = (height-width)+"px";
         right = 0;
         bottom = (height-width)+"px";
         left = 0;
         root.style.fontSize = width/17+"px";
       } else {
-        c("b");
         top = height/2+"px";
         right = width-(height/2)+"px";
         bottom = height/2+"px";
@@ -54,16 +50,14 @@ function sizePage() {
     }
     /* Landscape */
     else {
-      c("sizePage - landscape");
+      "sizePage - landscape");
       if (height * 2 < width) {
-        c("c");
         top = 0;
         right = (width-height)+"px";
         bottom = 0;
         left = (width-height)+"px";
         root.style.fontSize = height/17+"px";
       } else {
-        c("d");
         top = height-(width/2)+"px";
         right = width/2+"px";
         bottom = height-(width/2)+"px";
@@ -88,7 +82,6 @@ function getCell(cellNumber) {
 /* Game Creation */
 
 function setCells() {
-  c("setCells()");
   sizePage();
   if (document.getElementById("difficultyElement").value < 81) {
     difficulty = document.getElementById("difficultyElement").value;
@@ -100,7 +93,6 @@ function setCells() {
     //hard 30
     //expert 0
     //HERE adjust difficulty to rules
-    c("setCells - difficulty = "+difficulty);
     counterElement = document.getElementById("counterElement");
     selectionElement = document.getElementById("selectionElement");
     var attemptedNumbers = new Array(81);
@@ -206,13 +198,11 @@ function variantValid(cell, number) {
 
 //no possible games
 function fail() {
-  c("fail()");
   alert("No possible games! Try removing some variants.");
 }
 
 //display the "displayCells" array on the grid
 function setGrid() {
-  c("setGrid()");
   /* Unsolve */
   var testedNumbers = new Array([0]);
   var stopCounter = 81 - Math.floor(Math.random()*5+parseInt(difficulty));
@@ -357,7 +347,6 @@ function isVariantSolvable(cell) {
 /* Gameplay */
 
 function select(selection) {
-  c("select("+selection+")")
   /* Set Grid Highlight */
   for (cellNumber = 0; cellNumber < 81; cellNumber++) {
     var cellElement = getCell(cellNumber);
@@ -390,15 +379,13 @@ function select(selection) {
   }
   /* Select Number */
   if (selection != 0) {
-    if(selectionElement.fontSize == "150%"){
+    if (selectionElement.fontSize == "150%") {
       selectionNoteMode=-1;
-    }
-    else if(selectionElement.fontSize == "75%"){
+    } else if (selectionElement.fontSize == "75%") {
       selectionNoteMode=-2;
-      
-    }
-    else{
-    selectionNoteMode = selection;
+
+    } else {
+      selectionNoteMode = selection;
     }
     counterElement.style.visibility = "visible";
     counterElement.innerHTML = numberTotals[selection];
@@ -444,11 +431,10 @@ function select(selection) {
 }
 
 function set(cellNumber, direction = 0) {
-  c("set - "+cellNumber+" "+direction);
   if (userCells.includes(cellNumber)) {
     var cellElement = getCell(cellNumber);
     var cellNoteMode = displayCells[cellNumber];
-    c("HERE HERE "+cellNoteMode);
+    "HERE HERE "+cellNoteMode);
     var content = selectionElement.innerHTML;
     //undo
     if (direction ==-1) {
@@ -462,7 +448,6 @@ function set(cellNumber, direction = 0) {
     }
     //regular
     else {
-      c("djeuueuehe"+cellNoteMode);
       redoList.push([]);
       undoList.push([]);
       undoList[currentMove] = [
@@ -479,10 +464,8 @@ function set(cellNumber, direction = 0) {
         counterElement.innerHTML = numberTotals[cellElement.innerHTML];
       }
     }
-    c(cellNoteMode);
     /* Erase */
     if (cellNoteMode == 0) {
-      c("set - erase cell");
       cellElement.innerHTML = " ";
       displayCells[cellNumber] = 0;
       noteCells[cellNumber] = [0,
@@ -501,12 +484,10 @@ function set(cellNumber, direction = 0) {
     else if (cellNoteMode == -2) {
       /* Remove Note From Cell */
       if (direction == 0 && noteCells[cellNumber][content] > 0) {
-        c("set - remove note from cell");
         document.getElementById("n"+content+cellNumber).style.visibility = "hidden";
         noteCells[cellNumber][content] = 0;
         //if empty
         if (noteCells[cellNumber][1] == 0 && noteCells[cellNumber][2] == 0 && noteCells[cellNumber][3] == 0 && noteCells[cellNumber][4] == 0 && noteCells[cellNumber][5] == 0 && noteCells[cellNumber][6] == 0 && noteCells[cellNumber][7] == 0 && noteCells[cellNumber][8] == 0 && noteCells[cellNumber][9] == 0) {
-          c("set - erase note cell");
           cellElement.innerHTML = " ";
           displayCells[cellNumber] = 0;
           noteCells[cellNumber] = [0,
@@ -523,7 +504,6 @@ function set(cellNumber, direction = 0) {
       }
       /* Add Note To Cell */
       else {
-        c("set - add note to cell");
         cellElement.style.color = "black";
         cellElement.style.backgroundColor = "#ccccee";
         cellElement.style.fontSize = "50%";
@@ -542,7 +522,6 @@ function set(cellNumber, direction = 0) {
     }
     /* Regular Number */
     else {
-      c("set - add number to cell");
       displayCells[cellNumber] = content;
       cellElement.innerHTML = content;
       numberTotals[content]--;
@@ -590,13 +569,13 @@ function set(cellNumber, direction = 0) {
       cellElement.innerHTML,
       cellNoteMode,
       cellElement.style.color];
-    c("set - add to redoList " + redoList[currentMove]);
+    "set - add to redoList " + redoList[currentMove]);
   }
-  c(cellNoteMode);
+  cellNoteMode);
 }
 
 function changeMove(direction) {
-  c("changeMove("+direction+")");
+  "changeMove("+direction+")");
   if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < redoList.length -1) {
     currentMove += direction;
     if (direction==-1) {
@@ -657,25 +636,25 @@ function check(cellNumber, changingAutoCheck = false) {
     }
     document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML) + addOne;
   }
-  c("check() = "+result);
+  "check() = "+result);
   return result;
 }
 
 function autoRemoveNotes() {
-  c("autoRemoveNotes() ="); /*
+  "autoRemoveNotes() ="); /*
    //if autoremove notes in settings is on
    if (true) {
-      c("true");
+      "true");
       //HERE
       //remove horizontal, vertical, and box
    } else {
-      c("false");
+      "false");
    }*/
 }
 
 function updateNoteMode() {
-  c("updateNoteMode()");
-  c(selectionNoteMode);
+  "updateNoteMode()");
+  selectionNoteMode);
   selectionNoteMode--;
   selectionElement.style.padding = 0;
   /* Regular Number Mode */
@@ -732,12 +711,11 @@ function updateNoteMode() {
 }
 
 function restart() {
-  c("restart()");
+  "restart()");
 
 }
 
 function menu() {
-  c("menu()");
   document.getElementById("menuElement").style.visibility = !document.getElementById("menuElement").style.visibility;
 }
 
