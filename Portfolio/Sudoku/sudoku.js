@@ -468,6 +468,7 @@ function set(cellNumber, direction = 0) {
         counterElement.innerHTML = numberTotals[cellElement.innerHTML];
       }
     }
+    c(cellNoteMode);
     /* Erase */
     if (cellNoteMode == 0) {
       c("set - erase cell");
