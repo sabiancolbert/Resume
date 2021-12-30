@@ -583,6 +583,7 @@ function set(cellNumber, direction = 0) {
       cellElement.style.color];
     c("set - add to redoList " + redoList[currentMove]);
   }
+  c(cellNoteMode);
 }
 
 function changeMove(direction) {
