@@ -515,7 +515,7 @@ function set(cellNumber, direction = 0) {
         c("set - add note to cell");
         cellElement.style.color = "black";
         cellElement.style.backgroundColor = "#ccccee";
-        cellElement.style.fontSize = "75%";
+        cellElement.style.fontSize = "50%";
         //if not undo or redo
         if (direction == 0) {
           if (displayCells[cellNumber] !=-2) {
