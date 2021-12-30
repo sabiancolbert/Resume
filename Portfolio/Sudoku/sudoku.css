@@ -81,7 +81,6 @@ button {
   font-weight: 550;
   background-color: #3388dd;
   border: none;
-  bottom:0;
 }
 .metaButton {
   width: 17%;
@@ -119,7 +118,7 @@ button {
   background-size: contain;
   background-color: #3388dd;
 }
-#eraser:active {
+button:active {
   background-color: #1050aa;
 }
 /* Menu */
