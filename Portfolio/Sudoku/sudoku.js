@@ -390,10 +390,12 @@ function select(selection) {
   }
   /* Select Number */
   if (selection != 0) {
+    selectionNoteMode=selection;
     counterElement.style.visibility = "visible";
     counterElement.innerHTML = numberTotals[selection];
     selectionElement.innerHTML = selection;
   } else {
+    selectionNoteMode=0;
     selectionElement.innerHTML = " ";
     counterElement.style.visibility = "hidden";
   }
