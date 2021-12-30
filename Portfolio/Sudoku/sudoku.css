@@ -59,7 +59,7 @@ bold {
 }
 
 #selectionElement {
-  border: 1vmin solid #3388dd;
+  border: .2rem solid #3388dd;
   border-radius: 20%;
   background-color: #ccccee;
 }
@@ -67,12 +67,16 @@ bold {
   margin: auto;
   font-size: 90%;
 }
+button{
+  width:19%;
+  height:19%;
+  border-radius: 100%;
+  font-weight: 550;
+  background-color: #3388dd;}
 .metaButton {
-  width: 10%;
-  height: 10%;
-  bottom: 0;
-  margin-top: 20%;
-  border: 1vmin solid #3388dd;
+  width: 17%;
+  height: 17%;
+  border: .2rem solid #3388dd;
   border-radius: 100%;
 }
 .metaButton:active {
