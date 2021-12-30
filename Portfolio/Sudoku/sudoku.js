@@ -556,8 +556,8 @@ function set(cellNumber, direction = 0) {
       }
     }
   }
-  /* Highlight */
-  if (content == selectionElement.innerHTML) {
+  /* Highlight Numbers */
+  if (content == selectionElement.innerHTML && currentSelection > -2) {
     cellElement.style.backgroundColor = "#3388dd";
     if (cellElement.style.fontSize == "85%") {
       cellElement.style.color = "#ccccee";
