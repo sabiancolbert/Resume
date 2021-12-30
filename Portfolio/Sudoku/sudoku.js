@@ -46,9 +46,9 @@ function sizePage() {
       } else {
         c("b");
         top = height/2+"px";
-        right = height/2+"px";
+        right = 0;
         bottom = height/2+"px";
-        left = height/2+"px";
+        left = 0;
         root.style.fontSize = height/2/17+"px";
       }
     }
