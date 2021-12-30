@@ -572,85 +572,79 @@ function set(cellNumber, direction = 0) {
 }
 
 function changeMove(direction) {
-if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < redoList.length -1) {
-currentMove += direction;
-if (direction==-1) {
-/* Undo  Restart */
-if (undoList[currentMove][0] == 81) {
-//HERE
-}
-/* Normal Undo */
-else {
-set(undoList[currentMove][0], direction);
-}
-} else {
-/* Redo Restart */
-if (redoList[currentMove][0] == 81) {
-//HERE
-}
-/* Normal Redo */
-else {
-set(redoList[currentMove][0], direction);
-}
-}
-}
+  if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < redoList.length -1) {
+    currentMove += direction;
+    if (direction==-1) {
+      /* Undo  Restart */
+      if (undoList[currentMove][0] == 81) {
+        //HERE
+      }
+      /* Normal Undo */
+      else {
+        set(undoList[currentMove][0], direction);
+      }
+    } else {
+      /* Redo Restart */
+      if (redoList[currentMove][0] == 81) {
+        //HERE
+      }
+      /* Normal Redo */
+      else {
+        set(redoList[currentMove][0], direction);
+      }
+    }
+  }
 }
 
 //check(81, true) is autocheck button
 function check(cellNumber, changingAutoCheck = false) {
-var result = true;
-if (changingAutoCheck) {
-autoCheck=!autoCheck;
-if (autoCheck) {
-document.getElementById("wrongElement").style.visibility = "visible";
-for (i = 0; i < 81; i++) {
-if (displayCells[cellNumber] > 0 && displayCells[cellNumber] != cells[cellNumber]) {
-result = false;
-wrongList.push(cellNumber);
-getCell(cellNumber).style.color = red;
-}
-}
-} else {
-document.getElementById("wrongElement").style.visibility = "hidden";
-for (i = 0; i < 81; i++) {
-if (wrongList.includes(cellNumber)) {
-wrongList.splice(wrongList.indexOf(cellNumber), 1);
-getCell(cellNumber).style.color = black;
-}
-}
-}
-} else if (autoCheck) {
-var addOne = false;
-if (wrongList.includes(cellNumber)) {
-wrongList.splice(wrongList.indexOf(cellNumber), 1);
-}
-if (displayCells[cellNumber] != cells[cellNumber]) {
-wrongList.push(cellNumber);
-getCell(cellNumber).style.color = "red";
-addOne = true;
-result = false;
-}
-document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML) + addOne;
-}
-"check() = "+result);
+  var result = true;
+  if (changingAutoCheck) {
+    autoCheck=!autoCheck;
+    if (autoCheck) {
+      document.getElementById("wrongElement").style.visibility = "visible";
+      for (i = 0; i < 81; i++) {
+        if (displayCells[cellNumber] > 0 && displayCells[cellNumber] != cells[cellNumber]) {
+          result = false;
+          wrongList.push(cellNumber);
+          getCell(cellNumber).style.color = red;
+        }
+      }
+    } else {
+      document.getElementById("wrongElement").style.visibility = "hidden";
+      for (i = 0; i < 81; i++) {
+        if (wrongList.includes(cellNumber)) {
+          wrongList.splice(wrongList.indexOf(cellNumber), 1);
+          getCell(cellNumber).style.color = black;
+        }
+      }
+    }
+  } else if (autoCheck) {
+    var addOne = false;
+    if (wrongList.includes(cellNumber)) {
+      wrongList.splice(wrongList.indexOf(cellNumber), 1);
+    }
+    if (displayCells[cellNumber] != cells[cellNumber]) {
+      wrongList.push(cellNumber);
+      getCell(cellNumber).style.color = "red";
+      addOne = true;
+      result = false;
+    }
+    document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML) + addOne;
+  }
 return result;
 }
 
 function autoRemoveNotes() {
-"autoRemoveNotes() ="); /*
    //if autoremove notes in settings is on
    if (true) {
-      "true");
       //HERE
       //remove horizontal, vertical, and box
    } else {
-      "false");
-   }*/
+   }
 }
 
 function updateNoteMode() {
-"updateNoteMode()");
-selectionNoteMode);
 selectionNoteMode--;
 selectionElement.style.padding = 0;
 /* Regular Number Mode */
@@ -707,7 +701,6 @@ selectionNoteMode = 0;
 }
 
 function restart() {
-"restart()");
 
 }
 
