@@ -673,13 +673,13 @@ function updateNoteMode() {
   /* Grey Note Number Mode */
   else if (selectionNoteMode == -1) {
     selectionElement.style.color = "#777777";
-    selectionElement.style.fontSize = "175%";
+    selectionElement.style.fontSize = "150%";
   }
   /* Note Mode */
   else
   {
     selectionElement.style.color = "black";
-    selectionElement.style.fontSize = "150%";
+    selectionElement.style.fontSize = "75%";
     switch (selectionElement.innerHTML * 1) {
       case 1:
         selectionElement.style.padding = "0 60% 60% 0";
