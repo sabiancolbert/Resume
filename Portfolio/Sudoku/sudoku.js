@@ -568,12 +568,10 @@ function set(cellNumber, direction = 0) {
       cellElement.innerHTML,
       cellNoteMode,
       cellElement.style.color];
-}
-cellNoteMode);
+  }
 }
 
 function changeMove(direction) {
-"changeMove("+direction+")");
 if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < redoList.length -1) {
 currentMove += direction;
 if (direction==-1) {
