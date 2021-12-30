@@ -434,141 +434,140 @@ function set(cellNumber, direction = 0) {
     var cellElement = getCell(cellNumber);
     var cellNoteMode = displayCells[cellNumber];
     //HERE HERE HERE "+cellNoteMode);
-  var content = selectionElement.innerHTML;
-  //undo
-  if (direction ==-1) {
-    content = undoList[currentMove][1];
-    cellNoteMode = undoList[currentMove][2];
+    var content = selectionElement.innerHTML;
+    //undo
+    if (direction ==-1) {
+      content = undoList[currentMove][1];
+      cellNoteMode = undoList[currentMove][2];
+    }
+    //redo
+    else if (direction == 1) {
+      content = redoList[currentMove][1];
+      cellNoteMode = redoList[currentMove][2];
+    }
+    //regular
+    else {
+      redoList.push([]);
+      undoList.push([]);
+      undoList[currentMove] = [
+        cellNumber,
+        cellElement.innerHTML,
+        cellNoteMode,
+        cellElement.style.color];
+      cellNoteMode = selectionNoteMode;
+    }
+    //counter element
+    if (displayCells[cellNumber] > -2) {
+      numberTotals[cellElement.innerHTML]++;
+      if (cellElement.innerHTML == selectionElement.innerHTML) {
+        counterElement.innerHTML = numberTotals[cellElement.innerHTML];
+      }
+    }
+    /* Erase */
+    if (cellNoteMode == 0) {
+      cellElement.innerHTML = " ";
+      displayCells[cellNumber] = 0;
+      noteCells[cellNumber] = [0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0];
+      cellElement.style.backgroundColor = "#ccccee";
+    }
+    /* Note Number */
+    else if (cellNoteMode == -2) {
+      /* Remove Note From Cell */
+      if (direction == 0 && noteCells[cellNumber][content] > 0) {
+        document.getElementById("n"+content+cellNumber).style.visibility = "hidden";
+        noteCells[cellNumber][content] = 0;
+        //if empty
+        if (noteCells[cellNumber][1] == 0 && noteCells[cellNumber][2] == 0 && noteCells[cellNumber][3] == 0 && noteCells[cellNumber][4] == 0 && noteCells[cellNumber][5] == 0 && noteCells[cellNumber][6] == 0 && noteCells[cellNumber][7] == 0 && noteCells[cellNumber][8] == 0 && noteCells[cellNumber][9] == 0) {
+          cellElement.innerHTML = " ";
+          displayCells[cellNumber] = 0;
+          noteCells[cellNumber] = [0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0];
+        }
+      }
+      /* Add Note To Cell */
+      else {
+        cellElement.style.color = "black";
+        cellElement.style.backgroundColor = "#ccccee";
+        cellElement.style.fontSize = "50%";
+        //if not undo or redo
+        if (direction == 0) {
+          if (displayCells[cellNumber] !=-2) {
+            cellElement.innerHTML = "<div class='notesContainer'><div name='h1' class='noteHolder'><p class='p1' id='n1"+cellNumber+"'>1</p></div><div name='h2' class='noteHolder'><p id='n2"+cellNumber+"'>2</p></div><div name='h3' class='noteHolder'><p class='p3' id='n3"+cellNumber+"'>3</p></div><div class='noteHolder'><p class='p4' id='n4"+cellNumber+"'>4</p></div><div class='noteHolder'><p id='n5"+cellNumber+"'>5</p></div><div class='noteHolder'><p class='p6' id='n6"+cellNumber+"'>6</p></div><div name='h7' class='noteHolder'><p class='p7' id='n7"+cellNumber+"'>7</p></div><div name='h8' class='noteHolder'><p id='n8"+cellNumber+"'>8</p></div><div name='h9' class='noteHolder'><p class='p9' id='n9"+cellNumber+"'>9</p></div></div>";
+          }
+          document.getElementById("n"+content+cellNumber).style.visibility = "visible";
+          noteCells[cellNumber][content] = content;
+        } else {
+          cellElement.innerHTML = content;
+        }
+        displayCells[cellNumber] = -2;
+      }
+    }
+    /* Regular Number */
+    else {
+      displayCells[cellNumber] = content;
+      cellElement.innerHTML = content;
+      numberTotals[content]--;
+      if (content == selectionElement.innerHTML) {
+        counterElement.innerHTML = numberTotals[content];
+      }
+      noteCells[cellNumber] = [0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0];
+      if (cellNoteMode == -1) {
+        cellElement.style.color = "#ccccee";
+        cellElement.style.fontSize = "85%";
+        displayCells[cellNumber] = -1;
+      } else {
+        displayCells[cellNumber] = content;
+        cellElement.style.fontSize = "100%";
+        if (direction == 0) {
+          cellElement.style.color = "black";
+          if (check(cellNumber)) {
+            //HERE autoRemoveNotes();
+          }
+        } else if (direction==-1) {
+          cellElement.style.color = undoList[currentMove][3];
+          //autoReplaceNotes();
+        } else {
+          cellElement.style.color = redoList[currentMove][3];
+          //autoReplaceNotes();
+        }
+      }
+    }
   }
-  //redo
-  else if (direction == 1) {
-    content = redoList[currentMove][1];
-    cellNoteMode = redoList[currentMove][2];
-  }
-  //regular
-  else {
-    redoList.push([]);
-    undoList.push([]);
-    undoList[currentMove] = [
+  //highlight
+  select(selectionElement.innerHTML);
+  if (direction == 0) {
+    currentMove++;
+    redoList[currentMove] = [
       cellNumber,
       cellElement.innerHTML,
       cellNoteMode,
       cellElement.style.color];
-    cellNoteMode = selectionNoteMode;
-  }
-  //counter element
-  if (displayCells[cellNumber] > -2) {
-    numberTotals[cellElement.innerHTML]++;
-    if (cellElement.innerHTML == selectionElement.innerHTML) {
-      counterElement.innerHTML = numberTotals[cellElement.innerHTML];
-    }
-  }
-  /* Erase */
-  if (cellNoteMode == 0) {
-    cellElement.innerHTML = " ";
-    displayCells[cellNumber] = 0;
-    noteCells[cellNumber] = [0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0];
-    cellElement.style.backgroundColor = "#ccccee";
-  }
-  /* Note Number */
-  else if (cellNoteMode == -2) {
-    /* Remove Note From Cell */
-    if (direction == 0 && noteCells[cellNumber][content] > 0) {
-      document.getElementById("n"+content+cellNumber).style.visibility = "hidden";
-      noteCells[cellNumber][content] = 0;
-      //if empty
-      if (noteCells[cellNumber][1] == 0 && noteCells[cellNumber][2] == 0 && noteCells[cellNumber][3] == 0 && noteCells[cellNumber][4] == 0 && noteCells[cellNumber][5] == 0 && noteCells[cellNumber][6] == 0 && noteCells[cellNumber][7] == 0 && noteCells[cellNumber][8] == 0 && noteCells[cellNumber][9] == 0) {
-        cellElement.innerHTML = " ";
-        displayCells[cellNumber] = 0;
-        noteCells[cellNumber] = [0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0];
-      }
-    }
-    /* Add Note To Cell */
-    else {
-      cellElement.style.color = "black";
-      cellElement.style.backgroundColor = "#ccccee";
-      cellElement.style.fontSize = "50%";
-      //if not undo or redo
-      if (direction == 0) {
-        if (displayCells[cellNumber] !=-2) {
-          cellElement.innerHTML = "<div class='notesContainer'><div name='h1' class='noteHolder'><p class='p1' id='n1"+cellNumber+"'>1</p></div><div name='h2' class='noteHolder'><p id='n2"+cellNumber+"'>2</p></div><div name='h3' class='noteHolder'><p class='p3' id='n3"+cellNumber+"'>3</p></div><div class='noteHolder'><p class='p4' id='n4"+cellNumber+"'>4</p></div><div class='noteHolder'><p id='n5"+cellNumber+"'>5</p></div><div class='noteHolder'><p class='p6' id='n6"+cellNumber+"'>6</p></div><div name='h7' class='noteHolder'><p class='p7' id='n7"+cellNumber+"'>7</p></div><div name='h8' class='noteHolder'><p id='n8"+cellNumber+"'>8</p></div><div name='h9' class='noteHolder'><p class='p9' id='n9"+cellNumber+"'>9</p></div></div>";
-        }
-        document.getElementById("n"+content+cellNumber).style.visibility = "visible";
-        noteCells[cellNumber][content] = content;
-      } else {
-        cellElement.innerHTML = content;
-      }
-      displayCells[cellNumber] = -2;
-    }
-  }
-  /* Regular Number */
-  else {
-    displayCells[cellNumber] = content;
-    cellElement.innerHTML = content;
-    numberTotals[content]--;
-    if (content == selectionElement.innerHTML) {
-      counterElement.innerHTML = numberTotals[content];
-    }
-    noteCells[cellNumber] = [0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0];
-    if (cellNoteMode == -1) {
-      cellElement.style.color = "#ccccee";
-      cellElement.style.fontSize = "85%";
-      displayCells[cellNumber] = -1;
-    } else {
-      displayCells[cellNumber] = content;
-      cellElement.style.fontSize = "100%";
-      if (direction == 0) {
-        cellElement.style.color = "black";
-        if (check(cellNumber)) {
-          //HERE autoRemoveNotes();
-        }
-      } else if (direction==-1) {
-        cellElement.style.color = undoList[currentMove][3];
-        //autoReplaceNotes();
-      } else {
-        cellElement.style.color = redoList[currentMove][3];
-        //autoReplaceNotes();
-      }
-    }
-  }
-}
-//highlight
-select(selectionElement.innerHTML);
-if (direction == 0) {
-  currentMove++;
-  redoList[currentMove] = [
-    cellNumber,
-    cellElement.innerHTML,
-    cellNoteMode,
-    cellElement.style.color];
-  "set - add to redoList " + redoList[currentMove]);
 }
 cellNoteMode);
 }
