@@ -460,6 +460,7 @@ function set(cellNumber, direction = 0) {
         cellNoteMode,
         cellElement.style.color];
       cellNoteMode = selectionNoteMode + !selectionNoteMode;
+      c("&&&&"+cellNoteMode +"&"+selectionNoteMode);
     }
     c("selectionNoteMode"+selectionNoteMode+"content"+content+"cellNoteMode"+cellNoteMode);
     //counter element
@@ -470,7 +471,7 @@ function set(cellNumber, direction = 0) {
       }
     }
     /* Erase */
-    if (content=" ") {
+    if (cellNoteMode == 0) {
       c("set - erase cell");
       cellElement.innerHTML = " ";
       displayCells[cellNumber] = 0;
