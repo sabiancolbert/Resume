@@ -431,7 +431,14 @@ function select(selection) {
 }
 
 function set(event, direction = 0) {
-  c("set("+cellNumber+","+direction+")");
+c();
+try{
+  //HERE ew
+event=event.trigger
+}
+catch{
+}
+var cellNumber=event.id;
   if (userCells.includes(cellNumber)) {
     var cellElement = getCell(cellNumber);
     var cellNoteMode = displayCells[cellNumber];
