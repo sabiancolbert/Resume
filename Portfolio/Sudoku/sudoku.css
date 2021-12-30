@@ -114,6 +114,7 @@ button {
   font-weight: 550;
   background-color: #3388dd;
   border: none;
+  position: relative;
 }
 .metaButton {
   width: 17%;
