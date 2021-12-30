@@ -134,7 +134,6 @@ button:active {
   border: .2rem solid #3388dd;
   border-radius: 20%;
   background-color: #ccccee;
-  overflow: clip;
 }
 #restart {
   background: url("restart.png") no-repeat;
