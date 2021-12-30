@@ -57,13 +57,7 @@ td {
 bold {
   font-weight: 1000;
 }
-
-#selectionElement {
-  border: .2rem solid #3388dd;
-  border-radius: 20%;
-  background-color: #ccccee;
-}
-#counterElement {
+h3 {
   font-size: 90%;
   width: 2rem;
   left: 7.15rem;
@@ -93,6 +87,11 @@ button {
 }
 .metaButton:active {
   background-color: #3388dd;
+}
+#selectionElement {
+  border: .2rem solid #3388dd;
+  border-radius: 20%;
+  background-color: #ccccee;
 }
 #restart {
   background: url("restart.png") no-repeat;
