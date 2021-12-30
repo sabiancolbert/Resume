@@ -64,10 +64,11 @@ bold {
   background-color: #ccccee;
 }
 #counterElement {
-  margin: auto;
   font-size: 90%;
-  border:.2rem solid #3388dd;
-  border-bottom:none;
+  width:15%;
+  border: .2rem solid #3388dd;
+  border-bottom: none;
+  border-radius: 100%;
   position: absolute;
 }
 button {
