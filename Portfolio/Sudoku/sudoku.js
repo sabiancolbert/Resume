@@ -439,10 +439,8 @@ function set(cellNumber, direction = 0) {
   if (userCells.includes(cellNumber)) {
     var cellElement = getCell(cellNumber);
     var cellNoteMode = displayCells[cellNumber];
+    c("HERE HERE "+cellNoteMode);
     var content = selectionElement.innerHTML;
-    if (content == " " || content == cellElement.innerHTML && selectionNoteMode == cellNoteMode && cellNoteMode > -2) {
-      cellNoteMode = 0;
-    }
     //undo
     if (direction ==-1) {
       content = undoList[currentMove][1];
