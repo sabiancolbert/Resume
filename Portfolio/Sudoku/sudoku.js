@@ -557,7 +557,9 @@ function set(cellNumber, direction = 0) {
     }
   }
   //highlight
-  //select(selectionElement.innerHTML);
+if(content==selectionElement.innerHTML){
+  //HERE HERE HERE
+}
   if (direction == 0) {
     currentMove++;
     redoList[currentMove] = [
