@@ -10,7 +10,7 @@ var redoList = new Array();
 var currentMove = 0;
 var difficulty = 0;
 var currentCell = 0;
-var selectionNoteMode = 1;
+var currentSelection = 1;
 var autoCheck = true;
 var autoRemoveNotes = false;
 var sizingPage = false;
@@ -379,21 +379,21 @@ function select(selection) {
   /* Select Number */
   if (selection != 0) {
     if (selectionElement.fontSize == "150%") {
-      selectionNoteMode=-1;
+      currentSelection=-1;
     } else if (selectionElement.fontSize == "75%") {
-      selectionNoteMode=-2;
-
+      currentSelection=-2;
     } else {
-      selectionNoteMode = selection;
+      currentSelection = selection;
     }
     counterElement.style.visibility = "visible";
     counterElement.innerHTML = numberTotals[selection];
     selectionElement.innerHTML = selection;
   } else {
+    currentSelection = 0;
     selectionElement.innerHTML = " ";
     counterElement.style.visibility = "hidden";
   }
-  if (selectionNoteMode == -2) {
+  if (currentSelection == -2) {
     switch (selection) {
       case 1:
         selectionElement.style.padding = "0 10% 10% 0";
@@ -424,9 +424,6 @@ function select(selection) {
         break;
     }
   }
-  if (selection == 0) {
-    selectionNoteMode = 0;
-  }
 }
 
 function set(cellNumber, direction = 0) {
@@ -454,7 +451,7 @@ function set(cellNumber, direction = 0) {
         cellElement.innerHTML,
         cellNoteMode,
         cellElement.style.color];
-      cellNoteMode = selectionNoteMode;
+      cellNoteMode = currentSelection;
     }
     //counter element
     if (displayCells[cellNumber] > -2) {
@@ -632,80 +629,76 @@ function check(cellNumber, changingAutoCheck = false) {
     }
     document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML) + addOne;
   }
-return result;
+  return result;
 }
 
 function autoRemoveNotes() {
-   //if autoremove notes in settings is on
-   if (true) {
-      //HERE
-      //remove horizontal, vertical, and box
-   } else {
-   }
+  //if autoremove notes in settings is on
+  if (true) {
+    //HERE
+    //remove horizontal, vertical, and box
+  } else {}
 }
 
 function updateNoteMode() {
-selectionNoteMode--;
-selectionElement.style.padding = 0;
-/* Regular Number Mode */
-if (selectionNoteMode < -2) {
-selectionNoteMode = 1;
-selectionElement.style.fontSize = "200%";
-}
-/* Grey Note Number Mode */
-else if (selectionNoteMode > -2) {
-selectionElement.style.color = "#777777";
-selectionElement.style.fontSize = "150%";
-//skip erase
-selectionNoteMode = -1;
-}
-/* Note Mode */
-else
-{
-selectionElement.style.color = "black";
-selectionElement.style.fontSize = "75%";
-switch (parseInt(selectionElement.innerHTML)) {
-case 1:
-selectionElement.style.padding = "0 10% 10% 0";
-break;
-case 2:
-selectionElement.style.padding = "0 0 10% 0";
-break;
-case 3:
-selectionElement.style.padding = "0 0 10% 10%";
-break;
-case 4:
-selectionElement.style.padding = "0 10% 0 0";
-break;
-case 5:
-selectionElement.style.padding = "0 0 0 0";
-break;
-case 6:
-selectionElement.style.padding = "0 0 0 10%";
-break;
-case 7:
-selectionElement.style.padding = "10% 10% 0 0";
-break;
-case 8:
-selectionElement.style.padding = "10% 0 0 0";
-break;
-case 9:
-selectionElement.style.padding = "10% 0 0 10%";
-break;
-}
-}
-/* Eraser */
-if (selectionElement.innerHTML == " ") {
-selectionNoteMode = 0;
-}
+  selectionElement.style.padding = 0;
+  /* Regular Number Mode */
+  if (currentSelection == -2) {
+    currentSelection = selectionElement.innerHTML;
+    selectionElement.style.fontSize = "200%";
+  }
+  /* Grey Note Number Mode */
+  else if (currentSelection >0) {
+    currentSelection = -1;
+    selectionElement.style.color = "#777777";
+    selectionElement.style.fontSize = "150%";
+  }
+  /* Note Mode */
+  else if(currentSelection==-1)
+  {
+    currentSelection=-2;
+    selectionElement.style.color = "black";
+    selectionElement.style.fontSize = "75%";
+    switch (parseInt(selectionElement.innerHTML)) {
+      case 1:
+        selectionElement.style.padding = "0 10% 10% 0";
+        break;
+      case 2:
+        selectionElement.style.padding = "0 0 10% 0";
+        break;
+      case 3:
+        selectionElement.style.padding = "0 0 10% 10%";
+        break;
+      case 4:
+        selectionElement.style.padding = "0 10% 0 0";
+        break;
+      case 5:
+        selectionElement.style.padding = "0 0 0 0";
+        break;
+      case 6:
+        selectionElement.style.padding = "0 0 0 10%";
+        break;
+      case 7:
+        selectionElement.style.padding = "10% 10% 0 0";
+        break;
+      case 8:
+        selectionElement.style.padding = "10% 0 0 0";
+        break;
+      case 9:
+        selectionElement.style.padding = "10% 0 0 10%";
+        break;
+    }
+  }
+  /* Eraser */
+  if (selectionElement.innerHTML == " ") {
+    currentSelection = 0;
+  }
 }
 
-function restart() {
-
-}
+function restart() {}
 
 function menu() {
-document.getElementById("menuElement").style.visibility = !document.getElementById("menuElement").style.visibility;
+  document.getElementById("menuElement").style.visibility = !document.getElementById("menuElement").style.visibility;
 }
 
 /*//HERE
