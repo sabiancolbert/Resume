@@ -65,12 +65,13 @@ bold {
 }
 #counterElement {
   font-size: 90%;
-  width: 15%;
-  left: 42%;
+  width: 10%;
+  left: 45%;
   border: .2rem solid #3388dd;
   border-bottom: none;
   border-radius: 100%;
-  top: 15%;
+  top: 20%;
+  background-color: #222222;
   position: absolute;
 }
 button {
@@ -85,7 +86,7 @@ button {
   height: 17%;
   border: .2rem solid #3388dd;
   border-radius: 100%;
-  bottom:0;
+  bottom: 0;
 }
 .metaButton:active {
   background-color: #3388dd;
