@@ -67,10 +67,10 @@ h3 {
   top: 13%;
   background-color: #222222;
   position: absolute;
+  height: 5%;
 }
 #wrongElement {
   top: -5%;
-  height:5%;
 }
 button {
   width: 18%;
