@@ -65,13 +65,13 @@ h3 {
   border: .2rem solid #3388dd;
   border-bottom: none;
   border-radius: 100%;
-  top: 16%;
+  top: 32%;
   background-color: #222222;
   position: absolute;
   height: 7%;
 }
 #wrongElement {
-  top: -2.5%;
+  top: -7.5%;
   color: red;
 }
 #hintsElement {
