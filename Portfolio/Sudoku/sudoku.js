@@ -457,6 +457,7 @@ function set(cellNumber, direction = 0) {
         counterElement.innerHTML = numberTotals[cellElement.innerHTML];
       }
     }
+    c(cellNoteMode+ "sel:"+currentSelection);
     /* Erase */
     if (cellNoteMode == 0) {
       cellElement.innerHTML = " ";
