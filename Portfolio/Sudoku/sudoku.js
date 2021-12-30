@@ -470,7 +470,7 @@ function set(cellNumber, direction = 0) {
       }
     }
     /* Erase */
-    if (cellNoteMode == 0) {
+    if (content=" ") {
       c("set - erase cell");
       cellElement.innerHTML = " ";
       displayCells[cellNumber] = 0;
