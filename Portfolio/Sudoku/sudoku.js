@@ -670,7 +670,7 @@ function updateNoteMode() {
   selectionElement.style.padding = 0;
   /* Regular Number Mode */
   if (selectionNoteMode < -2) {
-    selectionNoteMode = 0;
+    selectionNoteMode = 1;
     selectionElement.style.fontSize = "200%";
   }
   /* Grey Note Number Mode */
@@ -679,7 +679,7 @@ function updateNoteMode() {
     selectionElement.style.fontSize = "150%";
   }
   /* Note Mode */
-  else
+  else 
   {
     selectionElement.style.color = "black";
     selectionElement.style.fontSize = "75%";
