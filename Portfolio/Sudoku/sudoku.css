@@ -66,6 +66,8 @@ bold {
 #counterElement {
   margin: auto;
   font-size: 90%;
+  border:.2rem solid #3388dd;
+  border-bottom:none;
   position: absolute;
 }
 button {
