@@ -674,12 +674,14 @@ function updateNoteMode() {
     selectionElement.style.fontSize = "200%";
   }
   /* Grey Note Number Mode */
-  else if (selectionNoteMode == -1) {
+  else if (selectionNoteMode >-2) {
     selectionElement.style.color = "#777777";
     selectionElement.style.fontSize = "150%";
+    //skip erase
+    cellNoteMode=-1
   }
   /* Note Mode */
-  else 
+  else
   {
     selectionElement.style.color = "black";
     selectionElement.style.fontSize = "75%";
@@ -712,6 +714,10 @@ function updateNoteMode() {
         selectionElement.style.padding = "10% 0 0 10%";
         break;
     }
+  }
+  /* Eraser */
+  if(selectionElement.innerHTML==" "){
+    selectionNoteMode=0;
   }
 }
 
