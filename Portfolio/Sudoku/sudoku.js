@@ -459,10 +459,8 @@ function set(cellNumber, direction = 0) {
         cellElement.innerHTML,
         cellNoteMode,
         cellElement.style.color];
-        cellNoteMode = selectionNoteMode + !selectionNoteMode;
-      c("&&&&"+cellNoteMode +"&"+selectionNoteMode);
+      cellNoteMode = selectionNoteMode;
     }
-    c("selectionNoteMode"+selectionNoteMode+"content"+content+"cellNoteMode"+cellNoteMode);
     //counter element
     if (displayCells[cellNumber] > -2) {
       numberTotals[cellElement.innerHTML]++;
