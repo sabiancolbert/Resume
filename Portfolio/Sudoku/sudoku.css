@@ -79,6 +79,7 @@ h3 {
   position: relative;
   top: 7%;
   height: 20%;
+  visibility:hidden;
 }
 #hintLeft {
   float: left;
