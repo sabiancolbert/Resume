@@ -81,13 +81,14 @@ button {
   font-weight: 550;
   background-color: #3388dd;
   border: none;
+  bottom:0;
 }
 .metaButton {
   width: 17%;
   height: 17%;
   border: .2rem solid #3388dd;
   border-radius: 100%;
-  bottom: 0;
+
   position: relative;
 }
 .metaButton:active {
