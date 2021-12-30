@@ -37,12 +37,14 @@ function sizePage() {
     if (width < height) {
       c("sizePage - portrait");
       if (width * 2 < height) {
+        c("a");
         top = (height-width)+"px";
         right = 0;
         bottom = (height-width)+"px";
         left = 0;
         root.style.fontSize = width/17+"px";
       } else {
+        c("b");
         top = height/2+"px";
         right = height/2+"px";
         bottom = height/2+"px";
@@ -54,12 +56,14 @@ function sizePage() {
     else {
       c("sizePage - landscape");
       if (height * 2 < width) {
+        c("c");
         top = 0;
         right = (width-height)+"px";
         bottom = 0;
         left = (width-height)+"px";
         root.style.fontSize = height/17+"px";
       } else {
+        c("d");
         top = width/2+"px";
         right = width/2+"px";
         bottom = width/2+"px";
