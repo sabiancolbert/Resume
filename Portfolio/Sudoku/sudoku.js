@@ -512,7 +512,15 @@ function set(cellNumber, direction = 0) {
           cellElement.innerHTML = content;
         }
         displayCells[cellNumber] = -2;
-        document.getElementById("n"+content+cellNumber).style.backgroundColor = "#3388dd";
+        for (i = 1; i < 10; i++) {
+        if (i == selectionElement.innerHTML) {
+          document.getElementById("n"+i+cellNumber).style.backgroundColor = "#3388dd";
+          document.getElementById("n"+i+cellNumber).style.zIndex = "1";
+        } else {
+          document.getElementById("n"+i+cellNumber).style.backgroundColor = "#ccccee";
+          document.getElementById("n"+i+cellNumber).style.zIndex = "0";
+        }
+      }
       }
     }
     /* Regular Number */
@@ -557,7 +565,7 @@ function set(cellNumber, direction = 0) {
   }
   /* Highlight Numbers */
   if (content == selectionElement.innerHTML && currentSelection > -2 && displayCells[cellNumber] != 0) {
-    //cellElement.style.backgroundColor = "#3388dd";
+    cellElement.style.backgroundColor = "#3388dd";
     if (cellElement.style.fontSize == "85%") {
       cellElement.style.color = "#ccccee";
     }
