@@ -570,8 +570,8 @@ function set(cellNumber, direction = 0) {
     }
   }
   /* Highlight Numbers */
-  if (content == selectionElement.innerHTML && currentSelection > -2 && displayCells[cellNumber] != 0) {
     c("HERE "+content);
+  if (content == selectionElement.innerHTML && currentSelection > -2 && displayCells[cellNumber] != 0) {
     cellElement.style.backgroundColor = "#3388dd";
     if (cellElement.style.fontSize == "85%") {
       cellElement.style.color = "#ccccee";
