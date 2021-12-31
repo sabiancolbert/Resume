@@ -381,6 +381,7 @@ function select(selection) {
     counterElement.style.visibility = "visible";
     counterElement.innerHTML = numberTotals[selection];
     selectionElement.innerHTML = selection;
+    currentSelection=selection;
   } else {
     currentSelection = 0;
     selectionElement.innerHTML = " ";
@@ -513,14 +514,14 @@ function set(cellNumber, direction = 0) {
         }
         displayCells[cellNumber] = -2;
         for (i = 1; i < 10; i++) {
-        if (i == selectionElement.innerHTML) {
-          document.getElementById("n"+i+cellNumber).style.backgroundColor = "#3388dd";
-          document.getElementById("n"+i+cellNumber).style.zIndex = "1";
-        } else {
-          document.getElementById("n"+i+cellNumber).style.backgroundColor = "#ccccee";
-          document.getElementById("n"+i+cellNumber).style.zIndex = "0";
+          if (i == selectionElement.innerHTML) {
+            document.getElementById("n"+i+cellNumber).style.backgroundColor = "#3388dd";
+            document.getElementById("n"+i+cellNumber).style.zIndex = "1";
+          } else {
+            document.getElementById("n"+i+cellNumber).style.backgroundColor = "#ccccee";
+            document.getElementById("n"+i+cellNumber).style.zIndex = "0";
+          }
         }
-      }
       }
     }
     /* Regular Number */
