@@ -420,6 +420,7 @@ function select(selection) {
 }
 
 function set(cellNumber, direction = 0) {
+  c("set");
   if (userCells.includes(cellNumber)) {
     var cellElement = getCell(cellNumber);
     var cellNoteMode = displayCells[cellNumber];
