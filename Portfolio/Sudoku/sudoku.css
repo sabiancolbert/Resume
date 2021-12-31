@@ -59,6 +59,7 @@ bold {
   font-weight: 1000;
 }
 tr:nth-child(3n) {
+  background-color: red;
   padding-right: .2rem;
 }
 tr:nth-child(9n) {
