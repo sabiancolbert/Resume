@@ -136,6 +136,8 @@ button:active {
   border-radius: 20%;
   background-color: #ccccee;
   vertical-align: bottom;
+  color:black;
+  color:black;
 }
 #restart {
   background: url("restart.png") no-repeat;
