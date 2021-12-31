@@ -376,6 +376,7 @@ function select(selection) {
       }
     }
   }
+  selectionElement.style.padding="0";
   /* Select Number */
   if (selection != 0) {
     counterElement.style.visibility = "visible";
