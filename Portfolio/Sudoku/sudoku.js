@@ -420,7 +420,7 @@ function select(selection) {
 }
 
 function set(cellNumber, direction = 0) {
- c("&&&&"+selectionElement.innerHTML);
+  c("&&&&"+selectionElement.innerHTML);
   if (userCells.includes(cellNumber)) {
     var cellElement = getCell(cellNumber);
     var cellNoteMode = displayCells[cellNumber];
@@ -515,8 +515,12 @@ function set(cellNumber, direction = 0) {
         displayCells[cellNumber] = -2;
         if (content == selectionElement.innerHTML) {
           document.getElementById("n"+content+cellNumber).style.backgroundColor = "#3388dd";
-          c(content+"&&&"+selectionElement.innerHTML);
         }
+        else
+{
+          document.getElementById("n"+content+cellNumber).style.backgroundColor = "#ccccee";
+  
+}
       }
     }
     /* Regular Number */
