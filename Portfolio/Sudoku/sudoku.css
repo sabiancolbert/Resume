@@ -58,12 +58,12 @@ td {
 bold {
   font-weight: 1000;
 }
-tr:nth-child(3n) {
+td:nth-child(3n) {
   background-color: red;
-  padding-right: .2rem;
+  margin-right: .2rem;
 }
-tr:nth-child(9n) {
-  padding-right: 0;
+td:nth-child(9n) {
+  margin-right: 0;
 }
 /* Button Board */
 h3 {
