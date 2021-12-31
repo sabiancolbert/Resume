@@ -376,7 +376,7 @@ function select(selection) {
       }
     }
   }
-  selectionElement.style.padding="0";
+  selectionElement.style.padding = "0";
   /* Select Number */
   if (selection != 0) {
     counterElement.style.visibility = "visible";
@@ -728,4 +728,5 @@ have a numbers page when you click the wrong answers button (number of undos, re
 when unselecting autocheck, unred any red numbers
 solving it on 0 only requires basic sudoku skills *sigh*
 cefcu horizontals for notes to solve it (hypothetical notes)
+please enable javascript screen
 */
