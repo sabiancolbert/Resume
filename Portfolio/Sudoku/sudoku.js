@@ -514,13 +514,14 @@ function set(cellNumber, direction = 0) {
         }
         displayCells[cellNumber] = -2;
         if (content == selectionElement.innerHTML) {
-          //document.getElementById("n"+content+cellNumber).style.backgroundColor = "#3388dd";
-        }
-        else
-{
+          c("content"+content+"selection"+selectionElement.innerHTML){
+          document.getElementById("n"+content+cellNumber).style.backgroundColor = "#3388dd";
+        } else
+        {
+          //HERE delete?
           document.getElementById("n"+content+cellNumber).style.backgroundColor = "#ccccee";
-  
-}
+
+        }
       }
     }
     /* Regular Number */
