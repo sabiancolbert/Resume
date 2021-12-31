@@ -511,14 +511,7 @@ function set(cellNumber, direction = 0) {
           cellElement.innerHTML = content;
         }
         displayCells[cellNumber] = -2;
-        if (content == selectionElement.innerHTML) {
-          c("content"+content+"selection"+selectionElement.innerHTML);
-          document.getElementById("n"+content+cellNumber).style.backgroundColor = "#3388dd";
-        } else {
-          //HERE delete?
-          c("IT SECOND"+content+"sel"+selectionElement.innerHTML);
-          document.getElementById("n"+content+cellNumber).style.backgroundColor = "#ccccee";
-        }
+        //document.getElementById("n"+content+cellNumber).style.backgroundColor = "#3388dd";
       }
     }
     /* Regular Number */
