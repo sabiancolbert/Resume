@@ -57,6 +57,12 @@ td {
 bold {
   font-weight: 1000;
 }
+tr:nth-child(3n){
+  margin-right:.2rem;
+}
+tr:nth-child(9n){
+  margin-right:0;
+}
 /* Button Board */
 h3 {
   font-size: 90%;
@@ -136,8 +142,7 @@ button:active {
   border-radius: 20%;
   background-color: #ccccee;
   vertical-align: bottom;
-  color:black;
-  color:black;
+  color: black;
 }
 #restart {
   background: url("restart.png") no-repeat;
