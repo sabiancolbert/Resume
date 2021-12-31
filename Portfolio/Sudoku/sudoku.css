@@ -112,9 +112,9 @@ button {
   border-radius: 100%;
   font-size: 200%;
   font-weight: 550;
-  background-color: #3388dd;
-  border: none;
+  border: .2rem solid #3388dd;
   position: relative;
+  color:#ccccee;
 }
 button:active {
   background-color: #1050aa;
