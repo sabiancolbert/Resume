@@ -114,7 +114,8 @@ button {
   font-weight: 550;
   border: .2rem solid #3388dd;
   position: relative;
-  color:#ccccee;
+  background-color: #222222;
+  color: #ccccee;
 }
 button:active {
   background-color: #1050aa;
