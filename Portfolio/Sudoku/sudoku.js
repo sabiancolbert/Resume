@@ -384,7 +384,7 @@ function select(selection) {
     if (currentSelection == 0) {
       selectionElement.style.fontSize = "200%";
       selectionElement.style.color = "black";
-    currentSelection = selection;
+      currentSelection = selection;
     }
   } else {
     currentSelection = 0;
@@ -547,7 +547,8 @@ function set(cellNumber, direction = 0) {
         0,
         0];
       if (cellNoteMode == -1) {
-        cellElement.style.color = "#ccccee";
+        c("HERE grey notes font color correct on redo?");
+        cellElement.style.color = "#777777";
         cellElement.style.fontSize = "85%";
         displayCells[cellNumber] = -1;
       } else {
