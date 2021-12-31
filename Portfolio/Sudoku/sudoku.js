@@ -511,7 +511,7 @@ function set(cellNumber, direction = 0) {
           cellElement.innerHTML = content;
         }
         displayCells[cellNumber] = -2;
-        //document.getElementById("n"+content+cellNumber).style.backgroundColor = "#3388dd";
+        document.getElementById("n"+content+cellNumber).style.backgroundColor = "#3388dd";
       }
     }
     /* Regular Number */
