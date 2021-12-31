@@ -203,6 +203,7 @@ function fail() {
 //display the "displayCells" array on the grid
 function setGrid() {
   /* Unsolve */
+  //HERE solving it on 0 only requires basic sudoku skills *sigh*
   var testedNumbers = new Array([0]);
   var stopCounter = 81 - Math.floor(Math.random()*5+parseInt(difficulty));
   while (stopCounter > 0 && testedNumbers.length < 81) {
@@ -615,6 +616,7 @@ function changeMove(direction) {
 
 //check(81, true) is autocheck button
 function check(cellNumber, changingAutoCheck = false) {
+  //HERE when unselecting autocheck, unred any red numbers
   var result = true;
   if (changingAutoCheck) {
     autoCheck=!autoCheck;
@@ -721,12 +723,7 @@ function menu() {
 }
 
 /*//HERE
-HERE HERE HERE replace "c"+# with table.child
 capitalize notes
-see if a switch() would be useful anywhere
 have a numbers page when you click the wrong answers button (number of undos, redos, restarts, total time (saved games), ingame time, etc?)
-when unselecting autocheck, unred any red numbers
-solving it on 0 only requires basic sudoku skills *sigh*
-cefcu horizontals for notes to solve it (hypothetical notes)
 please enable javascript screen
 */
