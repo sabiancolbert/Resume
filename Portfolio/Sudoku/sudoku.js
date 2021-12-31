@@ -514,10 +514,9 @@ function set(cellNumber, direction = 0) {
         if (content == selectionElement.innerHTML) {
           c("content"+content+"selection"+selectionElement.innerHTML);
           document.getElementById("n"+content+cellNumber).style.backgroundColor = "#3388dd";
-        } 
-        else{
+        } else {
           //HERE delete?
-          c("IT SECOND");
+          c("IT SECOND"+content+"sel"+selectionElement.innerHTML);
           document.getElementById("n"+content+cellNumber).style.backgroundColor = "#ccccee";
         }
       }
