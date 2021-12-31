@@ -514,206 +514,206 @@ function set(cellNumber, direction = 0) {
         }
         displayCells[cellNumber] = -2;
         if (content == selectionElement.innerHTML) {
-          c("content"+content+"selection"+selectionElement.innerHTML){
-          document.getElementById("n"+content+cellNumber).style.backgroundColor = "#3388dd";
-        } else
-        {
-          //HERE delete?
-          document.getElementById("n"+content+cellNumber).style.backgroundColor = "#ccccee";
+          c("content"+content+"selection"+selectionElement.innerHTML);
+            document.getElementById("n"+content+cellNumber).style.backgroundColor = "#3388dd";
+          } else
+          {
+            //HERE delete?
+            document.getElementById("n"+content+cellNumber).style.backgroundColor = "#ccccee";
 
-        }
-      }
-    }
-    /* Regular Number */
-    else {
-      displayCells[cellNumber] = content;
-      cellElement.innerHTML = content;
-      numberTotals[content]--;
-      if (content == selectionElement.innerHTML) {
-        counterElement.innerHTML = numberTotals[content];
-      }
-      noteCells[cellNumber] = [0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0];
-      if (cellNoteMode == -1) {
-        cellElement.style.color = "#ccccee";
-        cellElement.style.fontSize = "85%";
-        displayCells[cellNumber] = -1;
-      } else {
-        displayCells[cellNumber] = content;
-        cellElement.style.fontSize = "100%";
-        if (direction == 0) {
-          cellElement.style.color = "black";
-          if (check(cellNumber)) {
-            //HERE autoRemoveNotes();
           }
-        } else if (direction==-1) {
-          cellElement.style.color = undoList[currentMove][3];
-          //autoReplaceNotes();
+        }
+      }
+      /* Regular Number */
+      else {
+        displayCells[cellNumber] = content;
+        cellElement.innerHTML = content;
+        numberTotals[content]--;
+        if (content == selectionElement.innerHTML) {
+          counterElement.innerHTML = numberTotals[content];
+        }
+        noteCells[cellNumber] = [0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0];
+        if (cellNoteMode == -1) {
+          cellElement.style.color = "#ccccee";
+          cellElement.style.fontSize = "85%";
+          displayCells[cellNumber] = -1;
         } else {
-          cellElement.style.color = redoList[currentMove][3];
-          //autoReplaceNotes();
+          displayCells[cellNumber] = content;
+          cellElement.style.fontSize = "100%";
+          if (direction == 0) {
+            cellElement.style.color = "black";
+            if (check(cellNumber)) {
+              //HERE autoRemoveNotes();
+            }
+          } else if (direction==-1) {
+            cellElement.style.color = undoList[currentMove][3];
+            //autoReplaceNotes();
+          } else {
+            cellElement.style.color = redoList[currentMove][3];
+            //autoReplaceNotes();
+          }
+        }
+      }
+    }
+    /* Highlight Numbers */
+    if (content == selectionElement.innerHTML && currentSelection > -2 && displayCells[cellNumber] != 0) {
+      cellElement.style.backgroundColor = "#3388dd";
+      if (cellElement.style.fontSize == "85%") {
+        cellElement.style.color = "#ccccee";
+      }
+    }
+    if (direction == 0) {
+      currentMove++;
+      redoList[currentMove] = [
+        cellNumber,
+        cellElement.innerHTML,
+        cellNoteMode,
+        cellElement.style.color];
+    }
+  }
+
+  function changeMove(direction) {
+    if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < redoList.length -1) {
+      currentMove += direction;
+      if (direction==-1) {
+        /* Undo  Restart */
+        if (undoList[currentMove][0] == 81) {
+          //HERE
+        }
+        /* Normal Undo */
+        else {
+          set(undoList[currentMove][0], direction);
+        }
+      } else {
+        /* Redo Restart */
+        if (redoList[currentMove][0] == 81) {
+          //HERE
+        }
+        /* Normal Redo */
+        else {
+          set(redoList[currentMove][0], direction);
         }
       }
     }
   }
-  /* Highlight Numbers */
-  if (content == selectionElement.innerHTML && currentSelection > -2 && displayCells[cellNumber] != 0) {
-    cellElement.style.backgroundColor = "#3388dd";
-    if (cellElement.style.fontSize == "85%") {
-      cellElement.style.color = "#ccccee";
-    }
-  }
-  if (direction == 0) {
-    currentMove++;
-    redoList[currentMove] = [
-      cellNumber,
-      cellElement.innerHTML,
-      cellNoteMode,
-      cellElement.style.color];
-  }
-}
 
-function changeMove(direction) {
-  if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < redoList.length -1) {
-    currentMove += direction;
-    if (direction==-1) {
-      /* Undo  Restart */
-      if (undoList[currentMove][0] == 81) {
-        //HERE
-      }
-      /* Normal Undo */
-      else {
-        set(undoList[currentMove][0], direction);
-      }
-    } else {
-      /* Redo Restart */
-      if (redoList[currentMove][0] == 81) {
-        //HERE
-      }
-      /* Normal Redo */
-      else {
-        set(redoList[currentMove][0], direction);
-      }
-    }
-  }
-}
-
-//check(81, true) is autocheck button
-function check(cellNumber, changingAutoCheck = false) {
-  var result = true;
-  if (changingAutoCheck) {
-    autoCheck=!autoCheck;
-    if (autoCheck) {
-      document.getElementById("wrongElement").style.visibility = "visible";
-      for (i = 0; i < 81; i++) {
-        if (displayCells[cellNumber] > 0 && displayCells[cellNumber] != cells[cellNumber]) {
-          result = false;
-          wrongList.push(cellNumber);
-          getCell(cellNumber).style.color = red;
+  //check(81, true) is autocheck button
+  function check(cellNumber, changingAutoCheck = false) {
+    var result = true;
+    if (changingAutoCheck) {
+      autoCheck=!autoCheck;
+      if (autoCheck) {
+        document.getElementById("wrongElement").style.visibility = "visible";
+        for (i = 0; i < 81; i++) {
+          if (displayCells[cellNumber] > 0 && displayCells[cellNumber] != cells[cellNumber]) {
+            result = false;
+            wrongList.push(cellNumber);
+            getCell(cellNumber).style.color = red;
+          }
+        }
+      } else {
+        document.getElementById("wrongElement").style.visibility = "hidden";
+        for (i = 0; i < 81; i++) {
+          if (wrongList.includes(cellNumber)) {
+            wrongList.splice(wrongList.indexOf(cellNumber), 1);
+            getCell(cellNumber).style.color = black;
+          }
         }
       }
-    } else {
-      document.getElementById("wrongElement").style.visibility = "hidden";
-      for (i = 0; i < 81; i++) {
-        if (wrongList.includes(cellNumber)) {
-          wrongList.splice(wrongList.indexOf(cellNumber), 1);
-          getCell(cellNumber).style.color = black;
-        }
+    } else if (autoCheck) {
+      var addOne = false;
+      if (wrongList.includes(cellNumber)) {
+        wrongList.splice(wrongList.indexOf(cellNumber), 1);
+      }
+      if (displayCells[cellNumber] != cells[cellNumber]) {
+        wrongList.push(cellNumber);
+        getCell(cellNumber).style.color = "red";
+        addOne = true;
+        result = false;
+      }
+      document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML) + addOne;
+    }
+    return result;
+  }
+
+  function autoRemoveNotes() {
+    //if autoremove notes in settings is on
+    if (true) {
+      //HERE
+      //remove horizontal, vertical, and box
+    } else {}
+  }
+
+  function updateNoteMode() {
+    selectionElement.style.padding = 0;
+    /* Regular Number Mode */
+    if (currentSelection == -2) {
+      currentSelection = selectionElement.innerHTML;
+      selectionElement.style.fontSize = "200%";
+    }
+    /* Grey Note Number Mode */
+    else if (currentSelection > 0) {
+      currentSelection = -1;
+      selectionElement.style.color = "#777777";
+      selectionElement.style.fontSize = "150%";
+    }
+    /* Note Mode */
+    else if (currentSelection==-1) {
+      currentSelection=-2;
+      selectionElement.style.color = "black";
+      selectionElement.style.fontSize = "75%";
+      switch (parseInt(selectionElement.innerHTML)) {
+        case 1:
+          selectionElement.style.padding = "0 10% 10% 0";
+          break;
+        case 2:
+          selectionElement.style.padding = "0 0 10% 0";
+          break;
+        case 3:
+          selectionElement.style.padding = "0 0 10% 10%";
+          break;
+        case 4:
+          selectionElement.style.padding = "0 10% 0 0";
+          break;
+        case 5:
+          selectionElement.style.padding = "0 0 0 0";
+          break;
+        case 6:
+          selectionElement.style.padding = "0 0 0 10%";
+          break;
+        case 7:
+          selectionElement.style.padding = "10% 10% 0 0";
+          break;
+        case 8:
+          selectionElement.style.padding = "10% 0 0 0";
+          break;
+        case 9:
+          selectionElement.style.padding = "10% 0 0 10%";
+          break;
       }
     }
-  } else if (autoCheck) {
-    var addOne = false;
-    if (wrongList.includes(cellNumber)) {
-      wrongList.splice(wrongList.indexOf(cellNumber), 1);
-    }
-    if (displayCells[cellNumber] != cells[cellNumber]) {
-      wrongList.push(cellNumber);
-      getCell(cellNumber).style.color = "red";
-      addOne = true;
-      result = false;
-    }
-    document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML) + addOne;
-  }
-  return result;
-}
-
-function autoRemoveNotes() {
-  //if autoremove notes in settings is on
-  if (true) {
-    //HERE
-    //remove horizontal, vertical, and box
-  } else {}
-}
-
-function updateNoteMode() {
-  selectionElement.style.padding = 0;
-  /* Regular Number Mode */
-  if (currentSelection == -2) {
-    currentSelection = selectionElement.innerHTML;
-    selectionElement.style.fontSize = "200%";
-  }
-  /* Grey Note Number Mode */
-  else if (currentSelection > 0) {
-    currentSelection = -1;
-    selectionElement.style.color = "#777777";
-    selectionElement.style.fontSize = "150%";
-  }
-  /* Note Mode */
-  else if (currentSelection==-1) {
-    currentSelection=-2;
-    selectionElement.style.color = "black";
-    selectionElement.style.fontSize = "75%";
-    switch (parseInt(selectionElement.innerHTML)) {
-      case 1:
-        selectionElement.style.padding = "0 10% 10% 0";
-        break;
-      case 2:
-        selectionElement.style.padding = "0 0 10% 0";
-        break;
-      case 3:
-        selectionElement.style.padding = "0 0 10% 10%";
-        break;
-      case 4:
-        selectionElement.style.padding = "0 10% 0 0";
-        break;
-      case 5:
-        selectionElement.style.padding = "0 0 0 0";
-        break;
-      case 6:
-        selectionElement.style.padding = "0 0 0 10%";
-        break;
-      case 7:
-        selectionElement.style.padding = "10% 10% 0 0";
-        break;
-      case 8:
-        selectionElement.style.padding = "10% 0 0 0";
-        break;
-      case 9:
-        selectionElement.style.padding = "10% 0 0 10%";
-        break;
+    /* Eraser */
+    if (selectionElement.innerHTML == " ") {
+      currentSelection = 0;
     }
   }
-  /* Eraser */
-  if (selectionElement.innerHTML == " ") {
-    currentSelection = 0;
+
+  function restart() {}
+
+  function menu() {
+    document.getElementById("menuElement").style.visibility = !document.getElementById("menuElement").style.visibility;
   }
-}
 
-function restart() {}
-
-function menu() {
-  document.getElementById("menuElement").style.visibility = !document.getElementById("menuElement").style.visibility;
-}
-
-/*//HERE
+  /*//HERE
 HERE HERE HERE replace "c"+# with table.child
 capitalize notes
 see if a switch() would be useful anywhere
