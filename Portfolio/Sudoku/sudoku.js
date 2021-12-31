@@ -381,7 +381,11 @@ function select(selection) {
     counterElement.style.visibility = "visible";
     counterElement.innerHTML = numberTotals[selection];
     selectionElement.innerHTML = selection;
-    currentSelection=selection;
+    if(currentSelection==0){
+       selectionElement.style.fontSize = "200%";
+selectionElement.style.color="black";
+    }
+    currentSelection = selection;
   } else {
     currentSelection = 0;
     selectionElement.innerHTML = " ";
