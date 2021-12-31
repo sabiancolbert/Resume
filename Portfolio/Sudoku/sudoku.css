@@ -62,8 +62,7 @@ tr:nth-child(3n) {
   padding-right: .2rem;
 }
 tr:nth-child(9n) {
-  padding
-padding-right: 0;
+  padding-right: 0;
 }
 /* Button Board */
 h3 {
