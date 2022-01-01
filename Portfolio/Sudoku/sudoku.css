@@ -195,7 +195,9 @@ p {
   font-weight: 600;
   visibility: hidden;
 }
-.p1 {}
+.p1 {
+  margin:0 33% 0 33%;
+}
 .p2 {
   margin-left: 33%;
 }
