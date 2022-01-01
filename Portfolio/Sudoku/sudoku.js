@@ -226,7 +226,7 @@ function setGrid() {
   for (i = 0; i < 81; i++) {
     if (displayCells[i] > 0) {
       c("here"+getCell(i));
-      getCell(i).text = "<bold>"+displayCells[i]+"</strong>";
+      getCell(i).innerHTML ="1";// "<bold>"+displayCells[i]+"</strong>";
     }
   }
   /* Last Minute Game Prep */
