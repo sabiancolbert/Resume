@@ -63,8 +63,8 @@ h2:nth-of-type(3n) {
 }
 h2:nth-of-type(9n) {
   margin-right: 0;
-}
-h2:nth-of-type(27n +9) {}/*{
+}/*
+h2:nth-of-type(27n +9) {
   margin-top: .5%;
 }*/
 /* Button Board */
