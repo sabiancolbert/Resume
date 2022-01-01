@@ -45,12 +45,11 @@ body {
   }
 }
 /* Game Board */
-h2{
-  
+h2 {
+  width:11%;
+  height:11%
 }
-h2:nth-child(3n){
-  
-}
+h2:nth-child(3n) {}
 bold {
   font-weight: 1000;
 }
