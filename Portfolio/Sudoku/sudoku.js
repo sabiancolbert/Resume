@@ -79,10 +79,7 @@ function sizePage() {
 /* Game Creation */
 
 function setCells() {
-  document.getElementById("gameElement").style.visibility = "visible";
-    document.getElementById("difficultyPromptElement").innerHTML = "";
-  if (false) {
-    //document.getElementById("difficultyElement").value < 81) {
+  if (document.getElementById("difficultyElement").value < 81) {
     difficulty = document.getElementById("difficultyElement").value;
     document.getElementById("difficultyPromptElement").innerHTML = "";
     document.getElementById("gameElement").style.visibility = "visible";
