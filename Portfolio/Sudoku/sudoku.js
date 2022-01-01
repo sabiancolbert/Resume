@@ -224,9 +224,9 @@ function setGrid() {
   var dummyCell = document.createElement("H1");
   for (i = 0; i < 81; i++) {
     if (displayCells[i] > 0) {
+      //HERE HERE HERE this doesnt work
       dummyCell.innerHTML = displayCells[i];
-      c(dummyCell+"&"+dummyCell.innerHTML);
-      document.getElementById("gridBox").replaceChild(dummyCell, getCell(cellNumber));
+      gridBox.replaceChild(dummyCell, getCell(cellNumber));
     } else {
       getCell(cellNumber).innerHTML = "&nbsp";
     }
@@ -432,7 +432,6 @@ function set(cellNumber, direction = 0) {
   if (getCell(cellNumber).tagName == "H1") {
     var cellElement = getCell(cellNumber);
     var cellNoteMode = displayCells[cellNumber];
-    //HERE HERE HERE "+cellNoteMode);
     var content = selectionElement.innerHTML;
     //undo
     if (direction ==-1) {
