@@ -226,7 +226,7 @@ function setGrid() {
     if (displayCells[i] > 0) {
       dummyCell.innerHTML = displayCells[i];
       c(dummyCell+"&"+dummyCell.innerHTML);
-      gridBox.replaceChild(dummyCell, getCell(cellNumber));
+      document.getElementById("gridBox").replaceChild(dummyCell, getCell(cellNumber));
     } else {
       getCell(cellNumber).innerHTML = "&nbsp";
     }
