@@ -50,6 +50,9 @@ h2 {
   height: 9%;
   display: inline-block;
 }
+h2:nth-child(9n){
+ display:block;
+}
 h2:nth-child(3n) {}
 bold {
   font-weight: 1000;
