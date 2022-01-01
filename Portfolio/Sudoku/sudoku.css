@@ -181,6 +181,7 @@ button:active {
 /* Notes */
 .notesContainer {
   position: relative;
+  margin:1% 0 0 1%;
   width: 99%;
   height: 99%;
 }
