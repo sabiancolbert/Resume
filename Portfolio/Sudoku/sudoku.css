@@ -195,8 +195,8 @@ p {
   visibility: hidden;
 }
 .p1, .p4, .p7 {
-  top: 0;
-  left:0;
+  top: -33%;
+  left: 0;
 }
 .p3, .p6, .p9 {
   left: 33%;
