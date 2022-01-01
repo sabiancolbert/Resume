@@ -163,8 +163,8 @@ button:active {
 }
 #menu {
   background-size: contain;
-  background-color: #ccccee;
   background: url("menu.png") no-repeat;
+  background-color: #ccccee;
 }
 .bottomButton {
   top: 4%;
