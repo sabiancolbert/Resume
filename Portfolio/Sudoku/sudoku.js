@@ -444,10 +444,14 @@ function set(cellNumber, direction = 0) {
     //regular
     else {
       redoList.push([]);
+          var html = cellElement.innerHTML;
+    if(cellElement.innerHTML+"0"==0){
+      html = "&nbsp";
+    }
       undoList.push([]);
       undoList[currentMove] = [
         cellNumber,
-        cellElement.innerHTML,
+        html,
         cellNoteMode,
         cellElement.style.color];
       if (cellElement.innerHTML == selectionElement.innerHTML && currentSelection == cellNoteMode) {
@@ -579,9 +583,13 @@ function set(cellNumber, direction = 0) {
   }
   if (direction == 0) {
     currentMove++;
+    var html = cellElement.innerHTML;
+    if(cellElement.innerHTML+"0"==0){
+      html = "&nbsp";
+    }
     redoList[currentMove] = [
       cellNumber,
-      cellElement.innerHTML,
+      html,
       cellNoteMode,
       cellElement.style.color];
   }
