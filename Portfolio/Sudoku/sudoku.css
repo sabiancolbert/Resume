@@ -16,7 +16,7 @@ body {
   position: fixed;
   border: .2rem solid #3388dd;
   border-radius: 5%;
-  padding: 1%;
+  padding: 2%;
 }
 #gridBox {
   top: 0;
