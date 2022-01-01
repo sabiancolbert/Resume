@@ -52,9 +52,11 @@ h2 {
   width: 10%;
   height: 10%;
 }
-h2:nth-child(3n) {
+#gridBox h2:nth-child(3n) {
   margin-right: .5%;
-}/*
+}
+
+/*
 h2:nth-child(9n) {
   margin-right: 0;
 }
