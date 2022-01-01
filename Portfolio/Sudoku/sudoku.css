@@ -181,7 +181,7 @@ button:active {
 /* Notes */
 .notesContainer {
   position: absolute;
-  top:-33%;
+  top: -30%;
   border: 1px solid red;
   width: 100%;
   height: 100%;
