@@ -81,7 +81,6 @@ function getCell(cellNumber) {
 /* Game Creation */
 
 function setCells() {
-  sizePage();
   if (document.getElementById("difficultyElement").value < 81) {
     difficulty = document.getElementById("difficultyElement").value;
     document.getElementById("difficultyPromptElement").innerHTML = "";
