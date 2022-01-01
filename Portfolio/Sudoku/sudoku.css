@@ -52,9 +52,14 @@ h2 {
   width: 10%;
   height: 10%;
 }
-h2:nth-child(3n) {}
-#gridBox br:nth-child(3n){
-  margin-top:2%;
+h2:nth-child(3n) {
+  margin-right:.5%;
+}
+h2:nth-child(9n) {
+  margin-right:0;
+}
+#gridBox br:nth-child(3n) {
+  margin-top: .5%;
 }
 bold {
   font-weight: 1000;
