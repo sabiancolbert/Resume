@@ -196,6 +196,7 @@ function fail() {
 
 //display the "displayCells" array on the grid
 function setGrid() {
+  sizePage();
   /* Unsolve */
   //HERE solving it on 0 only requires basic sudoku skills *sigh*
   var testedNumbers = new Array([0]);
