@@ -225,7 +225,7 @@ function setGrid() {
   /* Display Cells */
   for (i = 0; i < 81; i++) {
     if (displayCells[i] > 0) {
-    c("here");
+      c("here"+getCell(i));
       getCell(i).innerHTMLL = "<bold>"+displayCells[i]+"</strong>";
     }
   }
