@@ -208,7 +208,6 @@ function setGrid() {
     var cellNumber = Math.floor(Math.random()*81);
     if (!testedNumbers.includes(cellNumber)) {
       testedNumbers.push(cellNumber);
-      testedNumbers.push(cellNumber);
       //is this cell solvable?
       if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber) || isVariantSolvable(cellNumber)) {
         //HERE set notes
@@ -225,9 +224,11 @@ function setGrid() {
   var dummyCell = document.createElement("H1");
   for (i = 0; i < 81; i++) {
     if (displayCells[i] > 0) {
-      c(dummyCell);
       dummyCell.innerHTML = displayCells[i];
       gridBox.replaceChild(dummyCell, getCell(cellNumber));
+    }
+    else{
+      getCell(cellNumber).innerHTML="&nbsp";
     }
   }
   /* Last Minute Game Prep */
