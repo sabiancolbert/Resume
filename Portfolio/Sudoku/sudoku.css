@@ -3,7 +3,7 @@ body {
   margin: 0;
   text-align: center;
   background-color: #222222;
-  color: white;
+  color: #ccccee;
   user-select: none;
 }
 #difficultyPromptElement {
@@ -123,7 +123,6 @@ button {
   font-size: 200%;
   font-weight: 550;
   background-color: #222222;
-  color: #ccccee;
 }
 button:active {
   background-color: #1050aa;
