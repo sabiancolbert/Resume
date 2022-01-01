@@ -59,8 +59,8 @@ h2:nth-of-type(3n) {
 h2:nth-of-type(9n) {
   margin-right: 0;
 }
-br:nth-of-type(3n) {
-  height: 100%;
+h2:nth-of-type(27n){
+  margin-top:.5%;
 }
 bold {
   font-weight: 1000;
