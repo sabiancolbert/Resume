@@ -49,8 +49,8 @@ h2 {
   display: inline-block;
   margin: -.5%;
   border-radius: 20%;
-  width: 11%;
-  height: 11%;
+  width: 10%;
+  height: 10%;
   color: black;
 }
 h2:nth-of-type(3n) {
@@ -59,7 +59,7 @@ h2:nth-of-type(3n) {
 h2:nth-of-type(9n) {
   margin-right: 0;
 }
-#gridBox br:nth-of-type(3n) {
+br:nth-of-type(3n) {
   margin-top: .5%;
 }
 bold {
