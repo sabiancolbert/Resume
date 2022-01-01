@@ -45,7 +45,12 @@ body {
   }
 }
 /* Game Board */
-
+h2{
+  
+}
+h2:nth-child(3n){
+  
+}
 bold {
   font-weight: 1000;
 }
@@ -165,7 +170,7 @@ button:active {
 /* Notes */
 .notesContainer {
   position: relative;
-  margin:1% 0 0 1%;
+  margin: 1% 0 0 1%;
   width: 99%;
   height: 99%;
 }
