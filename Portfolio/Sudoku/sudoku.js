@@ -511,7 +511,7 @@ function set(cellNumber, direction = 0) {
         //if not undo or redo
         if (direction == 0) {
           if (displayCells[cellNumber] !=-2) {
-            cellElement.innerHTML = "<div class='notesContainer'><p class='p1' id='n1"+cellNumber+"'>1</p><p class='p2' id='n2"+cellNumber+"'>2</p></div><p class='p3' id='n3"+cellNumber+"'>3</p><p class='p4' id='n4"+cellNumber+"'>4</p><p class='p5' id='n5"+cellNumber+"'>5</p><p class='p6' id='n6"+cellNumber+"'>6</p><p class='p7' id='n7"+cellNumber+"'>7</p><p class='p8' id='n8"+cellNumber+"'>8</p><p class='p9' id='n9"+cellNumber+"'>9</p></div>";
+            cellElement.innerHTML = "<div class='notesContainer'><p class='p1' id='n1"+cellNumber+"'>1</p><p class='p2' id='n2"+cellNumber+"'>2</p><p class='p3' id='n3"+cellNumber+"'>3</p><p class='p4' id='n4"+cellNumber+"'>4</p><p class='p5' id='n5"+cellNumber+"'>5</p><p class='p6' id='n6"+cellNumber+"'>6</p><p class='p7' id='n7"+cellNumber+"'>7</p><p class='p8' id='n8"+cellNumber+"'>8</p><p class='p9' id='n9"+cellNumber+"'>9</p></div>";
           }
           document.getElementById("n"+content+cellNumber).style.visibility = "visible";
           noteCells[cellNumber][content] = content;
