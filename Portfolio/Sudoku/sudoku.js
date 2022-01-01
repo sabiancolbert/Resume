@@ -221,8 +221,9 @@ function setGrid() {
   //HERE dont do whats under me. criss cross shouldnt be happening so fix that instead
   //HERE if there are unsolvable criss crossed cells, plug one corner in here
   /* Display Cells */
-      var dummyCell = document.createElement("H1");
+  var dummyCell = document.createElement("H1");
   for (i = 0; i < 81; i++) {
+    c(displayCells[i]);
     if (displayCells[i] > 0) {
       c+("y"+i);
       dummyCell.innerHTML = displayCells[i];
