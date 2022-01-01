@@ -52,11 +52,12 @@ h2 {
   width: 10%;
   height: 10%;
 }
-.marginCell {
+#gridBox h2:nth-of-type(3n) {
   margin-right: .5%;
 }
 
 /*
+h
 #gridBox br:nth-child(3n) {
   margin-top: .5%;
 }*/
