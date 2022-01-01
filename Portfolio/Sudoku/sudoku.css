@@ -186,7 +186,6 @@ button:active {
   border: 1px solid red;
   width: 98%;
   height: 98%;
-  text-align: center;
 }
 p {
   position: absolute;
@@ -202,6 +201,7 @@ p {
 }
 .p2 {
   top: -30%;
+  left:30%;
 }
 .p3, .p6, .p9 {
   left: 33%;
