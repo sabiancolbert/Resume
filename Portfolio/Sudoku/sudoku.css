@@ -187,12 +187,15 @@ button:active {
   text-align: center;
 }
 p {
+  position: absolute;
   border-radius: 100%;
-  width: 35%;
+  width: 33%;
+  height:33%;
   font-weight: 600;
   visibility: hidden;
 }
 .p1, .p4, .p7 {
+  top:0;
   right: 33%;
 }
 .p3, .p6, .p9 {
