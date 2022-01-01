@@ -2,7 +2,6 @@
 var cells = new Array(81);
 var noteCells = new Array(81);
 var displayCells = new Array([]);
-var userCells = new Array([]);
 var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 var wrongList = new Array();
 var undoList = new Array();
@@ -214,7 +213,6 @@ function setGrid() {
         //HERE set notes
         numberTotals[displayCells[cellNumber]]++;
         displayCells[cellNumber] = 0;
-        userCells.push(cellNumber);
         stopCounter--;
       }
     }
@@ -223,10 +221,11 @@ function setGrid() {
   //HERE dont do whats under me. criss cross shouldnt be happening so fix that instead
   //HERE if there are unsolvable criss crossed cells, plug one corner in here
   /* Display Cells */
+  var dummyCell = document.createElement("H1");
   for (i = 0; i < 81; i++) {
     if (displayCells[i] > 0) {
-      c("here"+getCell(i));
-      getCell(i).innerHTML ="1";// "<bold>"+displayCells[i]+"</strong>";
+  dummyCell.innerHTML = displayCells[i];
+      getCell(i)= dummyCell;
     }
   }
   /* Last Minute Game Prep */
@@ -427,7 +426,7 @@ function select(selection) {
 
 function set(cellNumber, direction = 0) {
   c("set" +cellNumber);
-  if (userCells.includes(cellNumber)) {
+  if (getCell(cellNumber).tagName=="h2") {
     var cellElement = getCell(cellNumber);
     var cellNoteMode = displayCells[cellNumber];
     //HERE HERE HERE "+cellNoteMode);
