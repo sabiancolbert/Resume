@@ -223,13 +223,11 @@ function setGrid() {
   /* Display Cells */
   var dummyCell = document.createElement("H1");
   for (i = 0; i < 81; i++) {
-    c(displayCells[i]);
     if (displayCells[i] > 0) {
-      c("y"+i);
       dummyCell.innerHTML = displayCells[i];
+      c(dummyCell+"&"+dummyCell.innerHTML);
       gridBox.replaceChild(dummyCell, getCell(cellNumber));
     } else {
-      c("n"+i);
       getCell(cellNumber).innerHTML = "&nbsp";
     }
   }
