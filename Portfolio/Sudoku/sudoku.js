@@ -224,8 +224,8 @@ function setGrid() {
   var dummyCell = document.createElement("H1");
   for (i = 0; i < 81; i++) {
     if (displayCells[i] > 0) {
-  dummyCell.innerHTML = displayCells[i];
-      getCell(i)= dummyCell;
+      dummyCell.innerHTML = displayCells[i];
+        document.getElementById("gridBox").children[cellNumber + Math.floor(cellNumber/9)] = dummyCell;
     }
   }
   /* Last Minute Game Prep */
@@ -426,7 +426,7 @@ function select(selection) {
 
 function set(cellNumber, direction = 0) {
   c("set" +cellNumber);
-  if (getCell(cellNumber).tagName=="h2") {
+  if (getCell(cellNumber).tagName == "h2") {
     var cellElement = getCell(cellNumber);
     var cellNoteMode = displayCells[cellNumber];
     //HERE HERE HERE "+cellNoteMode);
