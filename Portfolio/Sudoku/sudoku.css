@@ -184,8 +184,8 @@ button:active {
   top: 0;
   left: 0;
   border: 1px solid red;
-  width: 99%;
-  height: 99%;
+  width: 98%;
+  height: 98%;
 }
 p {
   position: absolute;
@@ -196,7 +196,7 @@ p {
   visibility: hidden;
 }
 .p1, .p4, .p7 {
-  top: -33%;
+  top: -30%;
   left: 0;
 }
 .p3, .p6, .p9 {
