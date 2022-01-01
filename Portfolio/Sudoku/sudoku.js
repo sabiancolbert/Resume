@@ -583,7 +583,13 @@ function set(cellNumber, direction = 0) {
   }
   if (direction == 0) {
     currentMove++;
-    var html = cellElement.innerHTML;
+    var html="";
+    try{
+    html= cellElement.innerHTML;
+    }
+    catch{
+      c(cellElement);
+    }
     if (cellElement.innerHTML+"0" == 0) {
       html = "&nbsp";
     }
