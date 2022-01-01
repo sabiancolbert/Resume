@@ -195,21 +195,21 @@ p {
 }
 .p1 {
   top: -30%;
-  left: 0;
 }
 .p2 {
   top: -30%;
   left: 30%;
 }
-.p3, .p6, .p9 {
-  left: 33%;
+.p3 {
+  top: -30%;
+  right: 30%;
 }
-div[name="h1"], div[name="h2"], div[name="h3"] {
-  bottom: 33%;
-}
-div[name="h7"], div[name="h8"], div[name="h9"] {
-  top: 33%;
-}
+.p4 {}
+.p5 {}
+.p6 {}
+.p7 {}
+.p8 {}
+.p9 {}
 /* Menu */
 #menuElement {
   width: 50%;
