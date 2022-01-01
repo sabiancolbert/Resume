@@ -80,7 +80,7 @@ function sizePage() {
 
 function setCells() {
   document.getElementById("gameElement").style.visibility = "visible";
-  document.body.removeChild(document.getElementById("difficultyPromptElement").innerHTML);
+    document.getElementById("difficultyPromptElement").innerHTML = "";
   if (false) {
     //document.getElementById("difficultyElement").value < 81) {
     difficulty = document.getElementById("difficultyElement").value;
