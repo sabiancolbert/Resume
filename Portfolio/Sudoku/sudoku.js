@@ -427,6 +427,7 @@ function select(selection) {
 function set(cellNumber, direction = 0) {
   c("set" +cellNumber);
   if (userCells.includes(cellNumber)) {
+    c("pass");
     var cellElement = getCell(cellNumber);
     var cellNoteMode = displayCells[cellNumber];
     //HERE HERE HERE "+cellNoteMode);
