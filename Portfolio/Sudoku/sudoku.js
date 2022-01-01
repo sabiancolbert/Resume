@@ -226,11 +226,11 @@ function setGrid() {
     if (displayCells[i] > 0) {
       dummyCell.innerHTML = displayCells[i];
       gridBox.replaceChild(dummyCell, getCell(cellNumber));
-    }
-    else{
-      getCell(cellNumber).innerHTML="&nbsp";
+    } else {
+      getCell(cellNumber).innerHTML = "&nbsp";
     }
   }
+  c(displayCells+gridBox);
   /* Last Minute Game Prep */
   for (i = 0; i < 81; i++) {
     noteCells[i] = [0,
