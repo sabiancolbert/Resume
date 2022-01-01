@@ -427,7 +427,7 @@ function select(selection) {
 
 function set(cellNumber, direction = 0) {
   c("set" +cellNumber);
-  if (getCell(cellNumber).tagName == "h2") {
+  if (getCell(cellNumber).tagName == "H1") {
     var cellElement = getCell(cellNumber);
     var cellNoteMode = displayCells[cellNumber];
     //HERE HERE HERE "+cellNoteMode);
