@@ -196,14 +196,16 @@ p {
   visibility: hidden;
 }
 .p1 {
-  top:-33%;
+  top: -33%;
   left: 0;
 }
 .p2 {
-  margin-bottom: 33%;
+  top:-33%;
+  left:33%;
 }
 .p3 {
-  margin: 0 0 33% 33%;
+  top:-33%;
+  left:66%;
 }
 .p4 {
   top: 2%;
