@@ -196,7 +196,7 @@ p {
   visibility: hidden;
 }
 .p1 {
-  margin-bottom: 33%;
+  top:-33%;
   left: 0;
 }
 .p2 {
