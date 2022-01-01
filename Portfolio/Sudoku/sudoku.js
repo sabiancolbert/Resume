@@ -21,6 +21,7 @@ function c(c) {
 }
 
 function getCell(cellNumber) {
+  c(cellNumber+"&"+(cellNumber + Math.floor(cellNumber/9)));
   return document.getElementById("gridBox").children[cellNumber + Math.floor(cellNumber/9)];
 }
 
@@ -444,10 +445,10 @@ function set(cellNumber, direction = 0) {
     //regular
     else {
       redoList.push([]);
-          var html = cellElement.innerHTML;
-    if(cellElement.innerHTML+"0"==0){
-      html = "&nbsp";
-    }
+      var html = cellElement.innerHTML;
+      if (cellElement.innerHTML+"0" == 0) {
+        html = "&nbsp";
+      }
       undoList.push([]);
       undoList[currentMove] = [
         cellNumber,
@@ -584,7 +585,7 @@ function set(cellNumber, direction = 0) {
   if (direction == 0) {
     currentMove++;
     var html = cellElement.innerHTML;
-    if(cellElement.innerHTML+"0"==0){
+    if (cellElement.innerHTML+"0" == 0) {
       html = "&nbsp";
     }
     redoList[currentMove] = [
