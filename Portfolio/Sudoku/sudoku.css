@@ -162,8 +162,8 @@ button:active {
   background: url("redo.png") no-repeat;
 }
 #menu {
-  background-size: contain;
   background: url("menu.png") no-repeat;
+  background-size: contain;
   background-color: #ccccee;
 }
 .bottomButton {
