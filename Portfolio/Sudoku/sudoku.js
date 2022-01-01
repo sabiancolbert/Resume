@@ -14,7 +14,7 @@ var currentSelection = 1;
 var autoCheck = true;
 var autoRemoveNotes = false;
 var sizingPage = false;
-var counterElement, selectionElement;
+var grid, counterElement, selectionElement;
 
 function c(c) {
   console.log(c);
@@ -24,9 +24,9 @@ function sizePage() {
   if (!sizingPage) {
     sizingPage = true;
     var root = document.getElementsByTagName("html")[0];
+    grid = document.getElementById("gridBox");
     var height = window.innerHeight;
     var width = window.innerWidth;
-    var gridBox = document.getElementById("gridBox");
     var buttonBox = document.getElementById("buttonBox");
     var top = 0;
     var right = 0;
@@ -65,17 +65,12 @@ function sizePage() {
       }
     }
     /* Set Css */
-    gridBox.style.bottom = bottom;
-    gridBox.style.right = right;
+    grid.style.bottom = bottom;
+    grid.style.right = right;
     buttonBox.style.top = top;
     buttonBox.style.left = left;
     sizingPage = false;
   }
-}
-function getCell(cellNumber) {
-  //cellNumber = cellNumber +1+Math.floor((cellNumber+1)/9);
-  var element = document.getElementsByTagName("table")[0].rows[Math.floor(cellNumber/9)].cells[cellNumber-(9*Math.floor(cellNumber/9))];
-  return element;
 }
 
 /* Game Creation */
@@ -226,7 +221,7 @@ function setGrid() {
   /* Display Cells */
   for (i = 0; i < 81; i++) {
     if (displayCells[i] > 0) {
-      getCell(i).innerHTML = "<bold>"+displayCells[i]+"</strong>";
+      grid.children[i].innerHTMLL = "<bold>"+displayCells[i]+"</strong>";
     }
   }
   /* Last Minute Game Prep */
@@ -348,7 +343,7 @@ function isVariantSolvable(cell) {
 function select(selection) {
   /* Set Grid Highlight */
   for (cellNumber = 0; cellNumber < 81; cellNumber++) {
-    var cellElement = getCell(cellNumber);
+    var cellElement = grid.children[cellNumber];
     //note highlight
     if (displayCells[cellNumber]==-2) {
       for (i = 1; i < 10; i++) {
@@ -428,7 +423,7 @@ function select(selection) {
 function set(cellNumber, direction = 0) {
   c("set");
   if (userCells.includes(cellNumber)) {
-    var cellElement = getCell(cellNumber);
+    var cellElement = grid.children[cellNumber];
     var cellNoteMode = displayCells[cellNumber];
     //HERE HERE HERE "+cellNoteMode);
     var content = selectionElement.innerHTML;
@@ -625,7 +620,7 @@ function check(cellNumber, changingAutoCheck = false) {
         if (displayCells[cellNumber] > 0 && displayCells[cellNumber] != cells[cellNumber]) {
           result = false;
           wrongList.push(cellNumber);
-          getCell(cellNumber).style.color = red;
+          grid.children[cellNumber].style.color = red;
         }
       }
     } else {
@@ -633,7 +628,7 @@ function check(cellNumber, changingAutoCheck = false) {
       for (i = 0; i < 81; i++) {
         if (wrongList.includes(cellNumber)) {
           wrongList.splice(wrongList.indexOf(cellNumber), 1);
-          getCell(cellNumber).style.color = black;
+          grid.children[cellNumber].style.color = black;
         }
       }
     }
@@ -644,7 +639,7 @@ function check(cellNumber, changingAutoCheck = false) {
     }
     if (displayCells[cellNumber] != cells[cellNumber]) {
       wrongList.push(cellNumber);
-      getCell(cellNumber).style.color = "red";
+      grid.children[cellNumber].style.color = "red";
       addOne = true;
       result = false;
     }
