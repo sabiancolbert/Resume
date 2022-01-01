@@ -53,6 +53,9 @@ h2 {
   height: 10%;
 }
 h2:nth-child(3n) {}
+#gridBox br:nth-child(3n){
+  margin-top:2%;
+}
 bold {
   font-weight: 1000;
 }
