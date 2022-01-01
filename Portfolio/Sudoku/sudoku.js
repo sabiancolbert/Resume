@@ -390,7 +390,7 @@ function select(selection) {
     }
   } else {
     currentSelection = 0;
-    selectionElement.innerHTML = " ";
+    selectionElement.innerHTML = "&nbsp";
     counterElement.style.visibility = "hidden";
   }
   if (currentSelection == -2) {
@@ -467,7 +467,7 @@ function set(cellNumber, direction = 0) {
     }
     /* Erase */
     if (cellNoteMode == 0) {
-      cellElement.innerHTML = " ";
+      cellElement.innerHTML = "&nbsp";
       displayCells[cellNumber] = 0;
       noteCells[cellNumber] = [0,
         0,
@@ -489,7 +489,7 @@ function set(cellNumber, direction = 0) {
         noteCells[cellNumber][content] = 0;
         //if empty
         if (noteCells[cellNumber][1] == 0 && noteCells[cellNumber][2] == 0 && noteCells[cellNumber][3] == 0 && noteCells[cellNumber][4] == 0 && noteCells[cellNumber][5] == 0 && noteCells[cellNumber][6] == 0 && noteCells[cellNumber][7] == 0 && noteCells[cellNumber][8] == 0 && noteCells[cellNumber][9] == 0) {
-          cellElement.innerHTML = " ";
+          cellElement.innerHTML = "&nbsp";
           displayCells[cellNumber] = 0;
           noteCells[cellNumber] = [0,
             0,
