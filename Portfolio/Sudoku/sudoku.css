@@ -56,6 +56,7 @@ h1, h2 {
   overflow: hidden;
 }
 h1 {
+  background-color: red;
   font-weight: 1000;
 }
 h2:nth-of-type(3n) {
@@ -63,7 +64,9 @@ h2:nth-of-type(3n) {
 }
 h2:nth-of-type(9n) {
   margin-right: 0;
-}/*
+}
+
+/*
 h2:nth-of-type(27n +9) {
   margin-top: .5%;
 }*/
