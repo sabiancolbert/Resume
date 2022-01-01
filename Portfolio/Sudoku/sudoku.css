@@ -195,9 +195,12 @@ p {
   font-weight: 600;
   visibility: hidden;
 }
-.p1, .p4, .p7 {
+.p1{
   top: -30%;
   left: 0;
+}
+.p2{
+  top:-30%;
 }
 .p3, .p6, .p9 {
   left: 33%;
