@@ -225,6 +225,7 @@ function setGrid() {
   var dummyCell = document.createElement("H1");
   for (i = 0; i < 81; i++) {
     if (displayCells[i] > 0) {
+      c(dummyCell);
       dummyCell.innerHTML = displayCells[i];
       gridBox.replaceChild(dummyCell, getCell(cellNumber));
     }
