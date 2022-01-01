@@ -182,8 +182,8 @@ button:active {
 .notesContainer {
   position: relative;
   border: 1px solid red;
-  width: 98%;
-  height: 98%;
+  width: 96%;
+  height: 96%;
 }
 p {
   position: absolute;
