@@ -187,7 +187,8 @@ button:active {
 }
 p {
   position: absolute;
-  top: 0;
+  top: 33%;
+  left:33%;
   border-radius: 100%;
   width: 33%;
   height: 33%;
