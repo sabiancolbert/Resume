@@ -21,7 +21,7 @@ function c(c) {
 }
 
 function getCell(cellNumber) {
- c(document.getElementById("gridBox").children[cellNumber + Math.floor(cellNumber/9)]);
+  document.getElementById("gridBox").children[cellNumber + Math.floor(cellNumber/9)].innerHTML="&";
   return document.getElementById("gridBox").children[cellNumber + Math.floor(cellNumber/9)];
 }
 
