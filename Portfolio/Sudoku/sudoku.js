@@ -224,8 +224,8 @@ function setGrid() {
   //HERE if there are unsolvable criss crossed cells, plug one corner in here
   /* Display Cells */
   for (i = 0; i < 81; i++) {
-    c("here");
     if (displayCells[i] > 0) {
+    c("here");
       getCell(i).innerHTMLL = "<bold>"+displayCells[i]+"</strong>";
     }
   }
