@@ -49,6 +49,7 @@ h2 {
   width: 9%;
   height: 9%;
   display: inline-block;
+  margin:0;
 }
 h2:nth-child(3n) {}
 bold {
