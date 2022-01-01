@@ -225,7 +225,7 @@ function setGrid() {
   for (i = 0; i < 81; i++) {
     c(displayCells[i]);
     if (displayCells[i] > 0) {
-      c+("y"+i);
+      c("y"+i);
       dummyCell.innerHTML = displayCells[i];
       gridBox.replaceChild(dummyCell, getCell(cellNumber));
     } else {
