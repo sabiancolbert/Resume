@@ -171,8 +171,8 @@ button:active {
 }
 #eraser {
   top: 8%;
-  background-size: contain;
   background: url("eraser.png") no-repeat;
+  background-size: contain;
   background-color: #3388dd;
 }
 #eraser:active {
@@ -181,7 +181,7 @@ button:active {
 /* Notes */
 .notesContainer {
   position: absolute;
-  border:1px solid red;
+  border: 1px solid red;
   margin-top: -4.6%;
   margin-left: 3.1%;
   width: 100%;
