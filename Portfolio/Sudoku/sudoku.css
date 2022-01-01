@@ -187,18 +187,16 @@ button:active {
 }
 p {
   position: absolute;
-  top:0;
+  top: 0;
   border-radius: 100%;
   width: 33%;
   height: 33%;
   font-weight: 600;
   visibility: hidden;
 }
-.p1 {
- 
-}
+.p1 {}
 .p2 {
-  padding-left: 33%;
+  margin-left: 33%;
 }
 .p3 {
   top: -25%;
