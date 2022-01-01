@@ -147,19 +147,19 @@ button:active {
   color: black;
 }
 #restart {
+  background: url("restart.png") no-repeat;
   background-size: contain;
   background-color: #ccccee;
-  background: url("restart.png") no-repeat;
 }
 #undo {
+  background: url("undo.png") no-repeat;
   background-size: contain;
   background-color: #ccccee;
-  background: url("undo.png") no-repeat;
 }
 #redo {
+  background: url("redo.png") no-repeat;
   background-size: contain;
   background-color: #ccccee;
-  background: url("redo.png") no-repeat;
 }
 #menu {
   background: url("menu.png") no-repeat;
