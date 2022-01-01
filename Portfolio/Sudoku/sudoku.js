@@ -13,7 +13,7 @@ var currentSelection = 1;
 var autoCheck = true;
 var autoRemoveNotes = false;
 var sizingPage = false;
-var counterElement, selectionElement;
+var gridBox, counterElement, selectionElement;
 
 function c(c) {
   console.log(c);
@@ -27,7 +27,7 @@ function sizePage() {
   if (!sizingPage) {
     sizingPage = true;
     var root = document.getElementsByTagName("html")[0];
-    var height = window.innerHeight;
+        gridBox=document.getElementById("gridBox");
     var width = window.innerWidth;
     var buttonBox = document.getElementById("buttonBox");
     var top = 0;
@@ -225,7 +225,7 @@ function setGrid() {
   for (i = 0; i < 81; i++) {
     if (displayCells[i] > 0) {
       dummyCell.innerHTML = displayCells[i];
-        document.getElementById("gridBox").children[cellNumber + Math.floor(cellNumber/9)] = dummyCell;
+      gridBox.replaceChild(dummyCell, getCell(cellNumber));
     }
   }
   /* Last Minute Game Prep */
