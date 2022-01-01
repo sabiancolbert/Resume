@@ -224,6 +224,7 @@ function setGrid() {
   //HERE if there are unsolvable criss crossed cells, plug one corner in here
   /* Display Cells */
   for (i = 0; i < 81; i++) {
+    c("here");
     if (displayCells[i] > 0) {
       getCell(i).innerHTMLL = "<bold>"+displayCells[i]+"</strong>";
     }
@@ -427,7 +428,6 @@ function select(selection) {
 function set(cellNumber, direction = 0) {
   c("set" +cellNumber);
   if (userCells.includes(cellNumber)) {
-    c("pass");
     var cellElement = getCell(cellNumber);
     var cellNoteMode = displayCells[cellNumber];
     //HERE HERE HERE "+cellNoteMode);
