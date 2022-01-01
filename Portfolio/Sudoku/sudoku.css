@@ -123,6 +123,7 @@ button {
   font-size: 200%;
   font-weight: 550;
   background-color: #222222;
+  color:#ccccee;
 }
 button:active {
   background-color: #1050aa;
