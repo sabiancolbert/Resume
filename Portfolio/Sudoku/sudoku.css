@@ -194,6 +194,7 @@ p {
 }
 .p1 {
   top: -33%;
+  left:0;
 }
 .p2 {
   top: -33%;
@@ -204,26 +205,28 @@ p {
   left: 66%;
 }
 .p4 {
-  top:0;
+  top: 0;
+  left:0;
 }
 .p5 {
-  top:0;
-  left:33%;
+  top: 0;
+  left: 33%;
 }
 .p6 {
-  top:0;
-  left:66%;
+  top: 0;
+  left: 66%;
 }
 .p7 {
-  top:33%;
+  top: 33%;
+  left:0;
 }
 .p8 {
-  top:33%;
-  left:33%;
+  top: 33%;
+  left: 33%;
 }
 .p9 {
-  top:33%;
-  left:66%;
+  top: 33%;
+  left: 66%;
 }
 /* Menu */
 #menuElement {
