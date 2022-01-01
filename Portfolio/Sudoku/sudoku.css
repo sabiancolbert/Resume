@@ -9,7 +9,6 @@ body {
 #difficultyPromptElement {
   position: fixed;
 }
-/* Game Board */
 #gameElement {
   visibility: hidden;
 }
@@ -45,23 +44,8 @@ body {
     left: 49.75%;
   }
 }
-table {
-  width: 100%;
-  height: 100%;
-}
-td {
-  position: relative;
-  border-radius: 20%;
-  background-color: #ccccee;
-  color: black;
-}
-td:nth-child(3n) {
-  margin-right: 5%;
-  background-color: red;
-}
-td:nth-child(9n) {
-  margin-right: 0;
-}
+/* Game Board */
+
 bold {
   font-weight: 1000;
 }
