@@ -225,8 +225,10 @@ function setGrid() {
   for (i = 0; i < 81; i++) {
     if (displayCells[i] > 0) {
       getCell(i).innerHTML = displayCells[i];
+      getCell(i).style.fontWeight="1000";
     } else {
       getCell(i).innerHTML = "&nbsp";
+      userCells.push(i);
     }
   }
   /* Last Minute Game Prep */
@@ -427,7 +429,7 @@ function select(selection) {
 
 function set(cellNumber, direction = 0) {
   c("set" +cellNumber);
-  if (getCell(cellNumber).tagName == "H1") {
+  if (userCells.includes(cellNumber)) {
     var cellElement = getCell(cellNumber);
     var cellNoteMode = displayCells[cellNumber];
     var content = selectionElement.innerHTML;
