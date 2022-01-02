@@ -26,6 +26,7 @@
   <section id="gameElement">
     <!-- Sudoku Grid -->
     <div id="gridBox">
+      <div class="content">
       <h2 onclick="set(0)"></h2>
       <h2 onclick="set(1)"></h2>
       <h2 onclick="set(2)"></h2>
@@ -116,8 +117,10 @@
       <h2 onclick="set(79)"></h2>
       <h2 onclick="set(80)"></h2>
     </div>
+    </div>
     <!-- Button Box -->
     <div id="buttonBox">
+      <div class="content"></div>
       <h3 id="wrongElement">0</h3>
       <div id="hintsElement">
         <div id="hintLeft"></div>
@@ -143,6 +146,7 @@
       <button onclick="select(8)" class="bottomButton">8</button>
       <button onclick="select(9)" class="bottomButton">9</button>
       <button id="eraser" onclick="select(0)"> </button>
+    </div>
     </div>
   </section>
   <section id="menuElement">
