@@ -52,7 +52,6 @@ body {
   background-color: red;
 }
 h2 {
-  position:relative;
   display: inline-block;
   margin: -.5%;
   border-radius: 20%;
