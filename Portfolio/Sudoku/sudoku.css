@@ -65,7 +65,7 @@ h1 {
 .cell:nth-of-type(9n) {
   margin-right: 0;
 }
-h2:nth-of-type(27n +9) {
+.cell:nth-of-type(27n +9) {
   margin-top: .5%;
 }
 /* Button Board */
