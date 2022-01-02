@@ -59,13 +59,13 @@ h1 {
   background-color: red;
   font-weight: 1000;
 }
-.cell:nth-of-type(3n) {
+.cell:nth-of-class(3n) {
   margin-right: .5%;
 }
-.cell:nth-of-type(9n) {
+.cell:nth-of-class(9n) {
   margin-right: 0;
 }
-.cell:nth-of-type(27n +9) {
+.cell:nth-of-class(27n +9) {
   margin-top: .5%;
 }
 /* Button Board */
