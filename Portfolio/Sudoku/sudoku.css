@@ -54,7 +54,6 @@ h2 {
   color: black;
   font-size: 100%;
   overflow: hidden;
-  justify-content: center;
 }
 h2:nth-of-type(3n) {
   margin-right: .5%;
@@ -64,6 +63,9 @@ h2:nth-of-type(9n) {
 }
 h2:nth-of-type(27n +9) {
   margin-top: .5%;
+}
+h2::first-letter{
+  vertical-align: middle;
 }
 /* Button Board */
 h3 {
