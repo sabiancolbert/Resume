@@ -52,6 +52,7 @@ h2 {
   padding-top: 1%;
   width: 10.3%;
   height: 10.3%;
+  max-height:10.3%;
   color: black;
   font-size: 100%;
   overflow: hidden;
