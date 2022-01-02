@@ -49,6 +49,7 @@ h2 {
   display: inline-block;
   margin: -.5%;
   border-radius: 20%;
+  padding-top:.2rem;
   width: 10.3%;
   height: 10.3%;
   color: black;
