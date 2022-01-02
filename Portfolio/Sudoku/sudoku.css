@@ -190,6 +190,7 @@ p {
   border-radius: 100%;
   width: 33%;
   height: 33%;
+  line-height:100%;
   font-weight: 600;
   visibility: hidden;
 }
