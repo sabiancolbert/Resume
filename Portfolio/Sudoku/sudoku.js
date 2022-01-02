@@ -1,7 +1,8 @@
 /* Globals */
 var cells = new Array(81);
 var noteCells = new Array(81);
-var displayCells = new Array([]);
+var displayCells = new Array(81);
+var userCells = new Array([]);
 var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 var wrongList = new Array();
 var undoList = new Array();
@@ -221,14 +222,11 @@ function setGrid() {
   //HERE dont do whats under me. criss cross shouldnt be happening so fix that instead
   //HERE if there are unsolvable criss crossed cells, plug one corner in here
   /* Display Cells */
-  var dummyCell = document.createElement("H1");
   for (i = 0; i < 81; i++) {
     if (displayCells[i] > 0) {
-      //HERE HERE HERE this doesnt work
-      dummyCell.innerHTML = displayCells[i];
-      gridBox.replaceChild(dummyCell, getCell(cellNumber));
+      getCell(i).innerHTML = displayCells[i];
     } else {
-      getCell(cellNumber).innerHTML = "&nbsp";
+      getCell(i).innerHTML = "&nbsp";
     }
   }
   /* Last Minute Game Prep */
