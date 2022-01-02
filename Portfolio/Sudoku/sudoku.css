@@ -9,6 +9,7 @@ body {
 #difficultyPromptElement {
   position: fixed;
 }
+/* Game Board */
 #gameElement {
   visibility: hidden;
 }
@@ -44,7 +45,6 @@ body {
     left: 49.75%;
   }
 }
-/* Game Board */
 h2 {
   display: inline-block;
   margin: -.5%;
@@ -190,7 +190,7 @@ p {
   border-radius: 100%;
   width: 33%;
   height: 33%;
-  line-height:100%;
+  line-height: 100%;
   font-weight: 600;
   visibility: hidden;
 }
