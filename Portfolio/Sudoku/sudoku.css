@@ -54,7 +54,6 @@ h2 {
   color: black;
   font-size: 100%;
   overflow: hidden;
-  display: flex;
   align-content: center;
 }
 h2:nth-of-type(3n) {
