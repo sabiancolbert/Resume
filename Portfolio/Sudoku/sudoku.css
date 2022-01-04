@@ -51,6 +51,7 @@ body {
   height: 96%;
 }
 h2 {
+  position: relative;
   display: inline-block;
   border-radius: 20%;
   width: 10.2%;
