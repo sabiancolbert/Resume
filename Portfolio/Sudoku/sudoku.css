@@ -47,9 +47,8 @@ body {
 }
 .content {
   position: absolute;
-  margin:0;
-  width: 96%;
-  height: 96%;
+  width: 95%;
+  height: 95%;
 }
 h2 {
   position: relative;
