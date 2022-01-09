@@ -432,6 +432,7 @@ function set(cellNumber, direction = 0) {
   c("set" +cellNumber);
   c(currentSelection +"&"+getCell(cellNumber).innerHTML+"&");
   if (userCells.includes(cellNumber) && (getCell(cellNumber).innerHTML!=" " || currentSelection != 0)) {
+    c("whelp");
     var cellElement = getCell(cellNumber);
     var cellNoteMode = displayCells[cellNumber];
     var content = selectionElement.innerHTML;
