@@ -1,62 +1,68 @@
 /* Globals */
-var cells = new Array(81);
-var noteCells = new Array(81);
-var displayCells = new Array(81);
-var userCells = new Array([]);
+//one extra cell for readability (82 cells instead of 81 cells so that cells[1] is the first cell instead of cells[0]~)
+var cells = new Array(82);
+//one extra for readability (10 instead of 9)
 var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-var wrongList = new Array();
-var undoList = new Array();
-var redoList = new Array();
+//for game creation
 var currentMove = 0;
 var difficulty = 0;
 var currentCell = 0;
+var gridBox = document.getElementById("gridBox");
+var selectionElement = document.getElementById("selectionElement");
+var counterElement = document.getElementById("counterElement");
+//for game play
+var wrongList = new Array();
+var redoList = new Array();
+var undoList = new Array();
 var currentSelection = 1;
-var autoCheck = true;
+var autoCheck = true; //HERE HERE false;
 var autoRemoveNotes = false;
 var sizingPage = false;
-var gridBox, counterElement, selectionElement;
+//for css themes
 var darkColor = "#3388dd";
 var lightColor = "#ccccee";
 var textColor = "black";
 var hintColor = "#777777";
+//for console logs
 const STACK_LINE_REGEX = /(\d+):(\d+)\)?$/;
 
+
+
+/* Meta */
+
 function c(...c) {
-  try{
-  var string = "failedString";
-  let err;
   try {
-    throw new Error();
-  } catch (error) {
-    err = error;
-  }
+    var string = "noPossibleGamesedString";
+    let err;
+    try {
+      throw new Error();
+    } catch (error) {
+      err = error;
+    }
 
-  try {
-    const stacks = err.stack.split('\\n');
-    const [,
-      line] = STACK_LINE_REGEX.exec(stacks[2]);
+    try {
+      const stacks = err.stack.split('\\n');
+      const [,
+        line] = STACK_LINE_REGEX.exec(stacks[2]);
 
-    string = this(`[${line}]`, ...c);
-  } catch (err) {
-    string = this(...c);
+      string = this(`[${line}]`, ...c);
+    } catch (err) {
+      string = this(...c);
+    }
+    console.log("c:"+string);
   }
-  console.log("c:"+string);
-  }
-  catch (erro){
+  catch (erro) {
     console.log(erro);
   }
 }
 
-function getCell(cellNumber) {
-  return document.getElementById("gridBox").children[0].children[cellNumber + Math.floor(cellNumber/9)];
-}
-
-function sizePage() {
+//HERE HERE make sure sizePage() is as awesome as possible
+function resizePageElememts() {
   c("sizePage()");
   if (!sizingPage) {
     sizingPage = true;
     var root = document.getElementsByTagName("html")[0];
-    gridBox = document.getElementById("gridBox");
+    //gridBox = document.getElementById("gridBox");
     var width = window.innerWidth;
     var height = window.innerHeight;
     var buttonBox = document.getElementById("buttonBox");
@@ -105,61 +111,83 @@ function sizePage() {
   }
 }
 
+
+
 /* Game Creation */
 
-function setCells() {
-  c("setCells()");
+//decide which numbers go to each cell
+function decideGridNumbers() {
+  c("decideGridNumbers()");
+  //if difficulty has been chosen
   if (document.getElementById("difficultyElement").value < 81) {
     difficulty = document.getElementById("difficultyElement").value;
-    document.getElementById("difficultyPromptElement").innerHTML = "";
-    document.getElementById("gameElement").style.visibility = "visible";
+    document.getElementById("difficultyPromptElement").remove();
+    /* Difficulty Legend */
     //beginner 45
     //easy 40
     //med 35
     //hard 30
     //expert 0
-    //HERE adjust difficulty to rules
-    counterElement = document.getElementById("counterElement");
-    selectionElement = document.getElementById("selectionElement");
+    /* Adjust Difficulty To Variants */
+    {
+      //HERE adjust difficulty to rules
+    }
+    /* Prepare For decideGridNumbers() */
+    //counterElement = document.getElementById("counterElement");
+    //selectionElement = document.getElementById("selectionElement");
     var attemptedNumbers = new Array(81);
     for (i = 0; i < 81; i++) {
-      attemptedNumbers[i] = [0];
+      attemptedNumbers[i] = [];
     }
+    /* Set Every Cell's Info (cells[0-80]) */
     while (currentCell > -1 && currentCell < 81) {
-      var currentNumber = 0;
+      var number = 0;
       var invalid = true;
-      /* Set Current Cell */
+      /* Try Each Number For Current Cell (0-80) */
+      //HERE HERE should we ever minus 9 and clear every cell to that point?
       while (invalid && attemptedNumbers[currentCell].length < 10) {
-        currentNumber = Math.floor(Math.random()*9+1);
-        if (!attemptedNumbers[currentCell].includes(currentNumber)) {
-          attemptedNumbers[currentCell].push(currentNumber);
-          if (!isInVertical(currentCell, currentNumber) && !isInHorizonal(currentCell, currentNumber) && !isInBox(currentCell, currentNumber)) {
-            if (variantValid(currentCell, currentNumber)) {
+        number = Math.floor(Math.random()*9+1);
+        if (!attemptedNumbers[currentCell].includes(number)) {
+          attemptedNumbers[currentCell].push(number);
+          if (!isInVertical(currentCell, number) && !isInHorizonal(currentCell, number) && !isInBox(currentCell, number)) {
+            if (isVariantValid(currentCell, number)) {
               invalid = false;
             }
           }
         }
       }
-      /* Previous Cell */
+      /* If No Numbers Are Valid */
       if (invalid) {
-        attemptedNumbers[currentCell] = [0];
-        displayCells[currentCell] = 0;
+        attemptedNumbers[currentCell] = [];
         currentCell--;
       }
-      /* Next Cell */
+      /* If Valid Number Is Found */
       else {
-        cells[currentCell] = currentNumber;
-        displayCells[currentCell] = currentNumber;
+        cells[currentCell] = {
+          display: number,
+          /* Legend */
+          //-2 small note
+          //-1 grey note
+          //0 empty
+          //1+ number
+          locked: false,
+          wrong: false
+        };
         currentCell++;
       }
     }
-    /* Start Or Fail Game */
+    /* Start Or noPossibleGames Game */
     if (currentCell==-1) {
-      fail();
+      noPossibleGames();
     } else {
-      setGrid();
+      displayGame();
     }
   }
+}
+
+//return cell element
+function getCellElement(cellNumber) {
+  return document.getElementById("gridBox").children[0].children[cellNumber + Math.floor(cellNumber/9)];
 }
 
 //search for the same number in the same column
@@ -190,7 +218,7 @@ function isInHorizonal(cell, number) {
   return result;
 }
 
-//search for the same number in the same 3x3
+//search for the same number in the same 3x3 box
 function isInBox(cell, number) {
   var result = false;
   /* Find stopCounterping Cell */
@@ -216,21 +244,25 @@ function isInBox(cell, number) {
   return result;
 }
 
-//check each rule the user added
-function variantValid(cell, number) {
+//search for variant rules being broken
+function isVariantValid(cell, number) {
   //HERE
   return true;
 }
 
-//no possible games
-function fail() {
-  c("fail()");
+//alert the user that there are no possible games with these variant combinations
+function noPossibleGames() {
+  c("noPossibleGames()");
   alert("No possible games! Try removing some variants.");
 }
 
-//display the "displayCells" array on the grid
-function setGrid() {
-  c("setGrid()");
+
+
+/* Game Display */
+
+//decide which cells to show and hide
+function displayGame() {
+  c("displayGame()");
   sizePage();
   /* Unsolve */
   var testedNumbers = new Array([0]);
@@ -252,10 +284,10 @@ function setGrid() {
   /* Display Cells */
   for (i = 0; i < 81; i++) {
     if (displayCells[i] > 0) {
-      getCell(i).innerHTML = displayCells[i];
-      getCell(i).style.fontWeight = "1000";
+      getCellElement(i).innerHTML = displayCells[i];
+      getCellElement(i).style.fontWeight = "1000";
     } else {
-      getCell(i).innerHTML = " ";
+      getCellElement(i).innerHTML = " ";
       userCells.push(i);
     }
   }
@@ -272,10 +304,10 @@ function setGrid() {
       0,
       0];
   }
-  select(1);
+  selectNumber(1);
 }
 
-//is this number the only option for this cell?
+//is this cells number the only option for this cell?
 function isDefaultNumber(cell) {
   var result = false;
   var otherNumbers = new Array();
@@ -293,7 +325,7 @@ function isDefaultNumber(cell) {
   return result;
 }
 
-//is this cell the only option for this number?
+//is this cell the only option for this cells number?
 function isDefaultCell(cell) {
   var result = true;
   var emptyCells = new Array();
@@ -369,18 +401,23 @@ function isDefaultCell(cell) {
   return result;
 }
 
+//can this cell be solved with variant rules?
 function isVariantSolvable(cell) {
 
   //HERE
   return false;
 }
-/* Gameplay */
 
-function select(selection) {
-  c("select("+selection+")");
+
+
+/* Game Play */
+
+//change selected number
+function selectNumber(selection) {
+  c("selectNumber("+selection+")");
   /* Set Grid HighlightColor */
   for (cellNumber = 0; cellNumber < 81; cellNumber++) {
-    var cellElement = getCell(cellNumber);
+    var cellElement = getCellElement(cellNumber);
     //note highlightColor
     if (displayCells[cellNumber]==-2) {
       for (i = 1; i < 10; i++) {
@@ -457,21 +494,21 @@ function select(selection) {
   }
 }
 
-function set(cellNumber, direction = 0) {
-  c("set(" +cellNumber+", "+direction+")");
-  if (getCell(cellNumber).innerHTML != " " || currentSelection != 0) {
+//change cell html
+function changeCell(cellNumber, moveDirection = 0) {
+  c("changeCell(" +cellNumber+", "++")");
+  if (getCellElement(cellNumber).innerHTML != " " || currentSelection != 0) {
     if (userCells.includes(cellNumber)) {
-      c("whelp");
-      var cellElement = getCell(cellNumber);
+      var cellElement = getCellElement(cellNumber);
       var cellNoteMode = displayCells[cellNumber];
       var content = selectionElement.innerHTML;
       //undo
-      if (direction ==-1) {
+      if (moveDirection ==-1) {
         content = undoList[currentMove][1];
         cellNoteMode = undoList[currentMove][2];
       }
       //redo
-      else if (direction == 1) {
+      else if (moveDirection == 1) {
         content = redoList[currentMove][1];
         cellNoteMode = redoList[currentMove][2];
       }
@@ -516,7 +553,7 @@ function set(cellNumber, direction = 0) {
       /* Note Number */
       else if (cellNoteMode == -2) {
         /* Remove Note From Cell */
-        if (direction == 0 && noteCells[cellNumber][content] > 0) {
+        if (moveDirection == 0 && noteCells[cellNumber][content] > 0) {
           document.getElementById("n"+content+cellNumber).style.visibility = "hidden";
           noteCells[cellNumber][content] = 0;
           //if empty
@@ -541,7 +578,7 @@ function set(cellNumber, direction = 0) {
           cellElement.style.backgroundColor = lightColor;
           cellElement.style.fontSize = "50%";
           //if not undo or redo
-          if (direction == 0) {
+          if (moveDirection == 0) {
             if (displayCells[cellNumber] !=-2) {
               cellElement.innerHTML = "<div class='notesContainer'><p class='p1' id='n1"+cellNumber+"'>1</p><p class='p2' id='n2"+cellNumber+"'>2</p><p class='p3' id='n3"+cellNumber+"'>3</p><p class='p4' id='n4"+cellNumber+"'>4</p><p class='p5' id='n5"+cellNumber+"'>5</p><p class='p6' id='n6"+cellNumber+"'>6</p><p class='p7' id='n7"+cellNumber+"'>7</p><p class='p8' id='n8"+cellNumber+"'>8</p><p class='p9' id='n9"+cellNumber+"'>9</p></div>";
             }
@@ -587,12 +624,12 @@ function set(cellNumber, direction = 0) {
         } else {
           displayCells[cellNumber] = content;
           cellElement.style.fontSize = "100%";
-          if (direction == 0) {
+          if (moveDirection == 0) {
             cellElement.style.color = textColor;
             if (check(cellNumber)) {
               //HERE autoRemoveNotes();
             }
-          } else if (direction==-1) {
+          } else if (moveDirection==-1) {
             cellElement.style.color = undoList[currentMove][3];
             //autoReplaceNotes();
           } else {
@@ -609,7 +646,7 @@ function set(cellNumber, direction = 0) {
         cellElement.style.color = lightColor;
       }
     }
-    if (direction == 0) {
+    if (moveDirection == 0) {
       currentMove++;
       redoList[currentMove] = [
         cellNumber,
@@ -620,6 +657,7 @@ function set(cellNumber, direction = 0) {
   }
 }
 
+//undo or redo
 function changeMove(direction) {
   c("changeMove(" + direction+")");
   if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < redoList.length -1) {
@@ -631,7 +669,7 @@ function changeMove(direction) {
       }
       /* Normal Undo */
       else {
-        set(undoList[currentMove][0], direction);
+        changeCell(undoList[currentMove][0], direction);
       }
     } else {
       /* Redo Restart */
@@ -640,13 +678,14 @@ function changeMove(direction) {
       }
       /* Normal Redo */
       else {
-        set(redoList[currentMove][0], direction);
+        changeCell(redoList[currentMove][0], direction);
       }
     }
   }
 }
 
 //check(81, true) is autocheck button
+//check answers or update autoCheck
 function check(cellNumber, changingAutoCheck = false) {
   c("check(" + cellNumber + ", " + changingAutoCheck+")");
   //HERE when unselecting autocheck, unred any red numbers
@@ -659,7 +698,7 @@ function check(cellNumber, changingAutoCheck = false) {
         if (displayCells[cellNumber] > 0 && displayCells[cellNumber] != cells[cellNumber]) {
           result = false;
           wrongList.push(cellNumber);
-          getCell(cellNumber).style.color = red;
+          getCellElement(cellNumber).style.color = red;
         }
       }
     } else {
@@ -667,7 +706,7 @@ function check(cellNumber, changingAutoCheck = false) {
       for (i = 0; i < 81; i++) {
         if (wrongList.includes(cellNumber)) {
           wrongList.splice(wrongList.indexOf(cellNumber), 1);
-          getCell(cellNumber).style.color = textColor;
+          getCellElement(cellNumber).style.color = textColor;
         }
       }
     }
@@ -678,7 +717,7 @@ function check(cellNumber, changingAutoCheck = false) {
     }
     if (displayCells[cellNumber] != cells[cellNumber]) {
       wrongList.push(cellNumber);
-      getCell(cellNumber).style.color = "red";
+      getCellElement(cellNumber).style.color = "red";
       addOne = true;
       result = false;
     }
@@ -687,6 +726,7 @@ function check(cellNumber, changingAutoCheck = false) {
   return result;
 }
 
+//remove invalid notes from grid
 function autoRemoveNotes() {
   c("autoRemoveNotes()");
   //if autoremove notes in settings is on
@@ -696,6 +736,8 @@ function autoRemoveNotes() {
   } else {}
 }
 
+//change selection note mode
+//HERE HERE HRRE fix //notes
 function updateNoteMode() {
   c("updateNoteMode()");
   selectionElement.style.padding = 0;
