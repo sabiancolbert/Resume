@@ -202,7 +202,6 @@ function fail() {
 function setGrid() {
   sizePage();
   /* Unsolve */
-  //HERE solving it on 0 only requires basic sudoku skills *sigh*
   var testedNumbers = new Array([0]);
   var stopCounter = 81 - Math.floor(Math.random()*5+parseInt(difficulty));
   while (stopCounter > 0 && testedNumbers.length < 81) {
@@ -219,8 +218,6 @@ function setGrid() {
     }
   }
   noteCells = new Array(81);
-  //HERE dont do whats under me. criss cross shouldnt be happening so fix that instead
-  //HERE if there are unsolvable criss crossed cells, plug one corner in here
   /* Display Cells */
   for (i = 0; i < 81; i++) {
     if (displayCells[i] > 0) {
@@ -549,7 +546,6 @@ function set(cellNumber, direction = 0) {
         0,
         0];
       if (cellNoteMode == -1) {
-        c("HERE grey notes font color correct on redo?");
         cellElement.style.color = "#777777";
         cellElement.style.fontSize = "85%";
         displayCells[cellNumber] = -1;
@@ -572,7 +568,6 @@ function set(cellNumber, direction = 0) {
     }
   }
   /* Highlight Numbers */
-  c("HERE "+content);
   if (content == selectionElement.innerHTML && currentSelection > -2 && displayCells[cellNumber] != 0) {
     cellElement.style.backgroundColor = "#3388dd";
     if (cellElement.style.fontSize == "85%") {
