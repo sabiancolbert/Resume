@@ -430,7 +430,7 @@ function select(selection) {
 
 function set(cellNumber, direction = 0) {
   c("set" +cellNumber);
-  if (userCells.includes(cellNumber)) {
+  if (userCells.includes(cellNumber) && (getCell(cellNumber)).innerHTML!=" " || currentSelection != 0) {
     var cellElement = getCell(cellNumber);
     var cellNoteMode = displayCells[cellNumber];
     var content = selectionElement.innerHTML;
