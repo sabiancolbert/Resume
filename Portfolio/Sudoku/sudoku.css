@@ -21,11 +21,9 @@ body {
 #gridBox {
   top: 0;
   right: 0;
-  bottom: 49.75%;
   left: 0;
 }
 #buttonBox {
-  top: 49.75%;
   right: 0;
   bottom: 0;
   left: 0;
