@@ -228,7 +228,7 @@ function setGrid() {
       getCell(i).innerHTML = displayCells[i];
       getCell(i).style.fontWeight="1000";
     } else {
-      getCell(i).innerHTML = "&nbsp";
+      getCell(i).innerHTML = " ";
       userCells.push(i);
     }
   }
@@ -431,7 +431,7 @@ function select(selection) {
 function set(cellNumber, direction = 0) {
   c("set" +cellNumber);
   c(currentSelection +"&"+getCell(cellNumber).innerHTML+"&");
-  if (userCells.includes(cellNumber) && (getCell(cellNumber).innerHTML!="&nbsp" || currentSelection != 0)) {
+  if (userCells.includes(cellNumber) && (getCell(cellNumber).innerHTML!=" " || currentSelection != 0)) {
     var cellElement = getCell(cellNumber);
     var cellNoteMode = displayCells[cellNumber];
     var content = selectionElement.innerHTML;
