@@ -170,8 +170,8 @@ function decideGridNumbers() {
           //-1 grey note
           //0 empty
           //1+ number
-          locked: false,
-          wrong: false
+          isLocked: false,
+          isWrong: false
         };
         currentCell++;
       }
