@@ -241,5 +241,5 @@ p {
   visibility: hidden;
   width:99%;
   height:99%;
-  background-color: var(--light);
+  background-color: var(--background);
 }
