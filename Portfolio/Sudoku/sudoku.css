@@ -177,6 +177,7 @@ button:active, #menu:active, #undo:active, #redo:active, #restart:active, #erase
   background: url("menu.png") no-repeat;
   background-size: contain;
   background-color: var(--light);
+  z-index: 1;
 }
 .bottomButton {
   top: 4%;
