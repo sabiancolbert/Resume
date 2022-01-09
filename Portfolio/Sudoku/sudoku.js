@@ -725,10 +725,13 @@ function menu() {
   if(document.getElementById("menuElement").style.visibility == "visible"){
   document.getElementById("menuElement").style.visibility = "hidden";
   document.getElementById("wrongElement").style.visibility = "visible";
+  document.getElementById("wrongElement").style.top = "-8%";
   }
   else{
   document.getElementById("menuElement").style.visibility = "visible";
   document.getElementById("wrongElement").style.visibility = "hidden";
+  document.getElementById("wrongElement").style.visibility = "hidden";
+  document.getElementById("wrongElement").style.top = "2%";
 }
 }
 
