@@ -722,9 +722,12 @@ function restart() {}
 
 function menu() {
   //HERE HERE HERE
-  c(document.getElementById("menuElement").style.visibility);
-  document.getElementById("menuElement").style.visibility = "visible";//!(document.getElementById("menuElement").style.visibility);
-  c(document.getElementById("menuElement").style.visibility);
+  if(document.getElementById("menuElement").style.visibility == "visible"){
+  document.getElementById("menuElement").style.visibility = "hidden";
+  }
+  else{
+  document.getElementById("menuElement").style.visibility = "visible";
+}
 }
 
 /*//HERE
