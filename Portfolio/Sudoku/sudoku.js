@@ -723,7 +723,7 @@ function restart() {}
 function menu() {
   //HERE HERE HERE
   c(document.getElementById("menuElement").style.visibility);
-  document.getElementById("menuElement").style.visibility = !(document.getElementById("menuElement").style.visibility);
+  document.getElementById("menuElement").style.visibility = "visible";//!(document.getElementById("menuElement").style.visibility);
   c(document.getElementById("menuElement").style.visibility);
 }
 
