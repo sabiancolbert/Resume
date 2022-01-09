@@ -4,7 +4,6 @@
   --dark:#3388dd;
   --light:#ccccee;
   --text:black;
-  --active:#3388dd;
 }
 body {
   margin: 0;
@@ -142,7 +141,7 @@ button {
   color: var(--light);
 }
 button:active, #menu:active, #undo:active, #redo:active, #restart:active, #eraser:active{
-  background-color: var(--active);
+  background-color: var(--dark);
 }
 .metaButton {
   position: relative;
