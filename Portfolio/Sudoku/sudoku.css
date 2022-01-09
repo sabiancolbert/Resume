@@ -88,12 +88,12 @@ h3 {
   background-color: #222222;
 }
 #wrongElement {
-  top: -7.5%;
+  top: -8%;
   color: red;
 }
 #hintsElement {
   position: relative;
-  top: 7%;
+  top: 6.5%;
   margin: auto;
   height: 20%;
   visibility: hidden;
