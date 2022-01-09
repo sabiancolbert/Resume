@@ -722,6 +722,7 @@ function restart() {}
 
 function menu() {
   document.getElementById("menuElement").style.visibility = !document.getElementById("menuElement").style.visibility;
+  c(document.getElementById("menuElement").style.visibility);
 }
 
 /*//HERE
