@@ -347,14 +347,14 @@ function isDefaultCell(cell) {
 }
 
 function isVariantSolvable(cell) {
-  
+
   //HERE
   return false;
 }
 /* Gameplay */
 
 function select(selection) {
-  c("select()");
+  c("select("+selection+")");
   /* Set Grid HighlightColor */
   for (cellNumber = 0; cellNumber < 81; cellNumber++) {
     var cellElement = getCell(cellNumber);
@@ -435,7 +435,7 @@ function select(selection) {
 }
 
 function set(cellNumber, direction = 0) {
-  c("set" +cellNumber);
+  c("set(" +cellNumber+", "+direction+")");
   if (getCell(cellNumber).innerHTML != " " || currentSelection != 0) {
     if (userCells.includes(cellNumber)) {
       c("whelp");
@@ -598,7 +598,7 @@ function set(cellNumber, direction = 0) {
 }
 
 function changeMove(direction) {
-  c("changeMove()");
+  c("changeMove(" + direction+")");
   if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < redoList.length -1) {
     currentMove += direction;
     if (direction==-1) {
@@ -625,7 +625,7 @@ function changeMove(direction) {
 
 //check(81, true) is autocheck button
 function check(cellNumber, changingAutoCheck = false) {
-  c("check()");
+  c("check(" + cellNumber + ", " + changingAutoCheck+")");
   //HERE when unselecting autocheck, unred any red numbers
   var result = true;
   if (changingAutoCheck) {
