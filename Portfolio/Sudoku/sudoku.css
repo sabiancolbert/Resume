@@ -1,9 +1,14 @@
 /* Misc */
+:root{
+  --background:#222222;
+  --dark:#3388dd;
+  --light:#ccccee;
+}
 body {
   margin: 0;
   text-align: center;
-  background-color: #222222;
-  color: #ccccee;
+  background-color: var(--background);
+  color: var(--light);
   user-select: none;
 }
 #difficultyPromptElement {
@@ -15,7 +20,7 @@ body {
 }
 #gridBox, #buttonBox {
   position: fixed;
-  border: .2rem solid #3388dd;
+  border: .2rem solid var(--dark);
   border-radius: 5%;
 }
 #gridBox {
@@ -53,7 +58,7 @@ h2 {
   border-radius: 20%;
   width: 10.15%;
   height: 10.15%;
-  background-color: #ccccee;
+  background-color: var(--light);
   top:0;
   left:0;
   left:0;
@@ -79,13 +84,13 @@ h3 {
   position: absolute;
   top: 28%;
   left: 7.15rem;
-  border: .2rem solid #3388dd;
+  border: .2rem solid var(--dark);
   border-bottom: none;
   border-radius: 100%;
   width: 2rem;
   height: 7%;
   font-size: 90%;
-  background-color: #222222;
+  background-color: var(--background);
 }
 #wrongElement {
   top: -8%;
@@ -103,7 +108,7 @@ h3 {
   border-width: .2rem 1rem .2rem .2rem;
   border-style: solid;
   border-radius: 100% 0 0 100%;
-  border-color: #3388dd #222222 #3388dd #3388dd;
+  border-color: var(--dark) var(--background) var(--dark) var(--dark);
   width: 5%;
   height: 20%;
 }
@@ -118,62 +123,62 @@ h3 {
   border-width: .2rem .2rem .2rem 1rem;
   border-style: solid;
   border-radius: 0 100% 100% 0;
-  border-color: #3388dd #3388dd #3388dd #222222;
+  border-color: var(--dark) var(--dark) var(--dark) var(--background);
   width: 5%;
   height: 20%;
 }
 /* Buttons */
 button {
   position: relative;
-  border: .2rem solid #3388dd;
+  border: .2rem solid var(--dark);
   border-radius: 100%;
   width: 18%;
   height: 18%;
   font-size: 200%;
   font-weight: 550;
-  background-color: #222222;
-  color: #ccccee;
+  background-color: var(--background);
+  color: var(--light);
 }
 button:active {
   background-color: #1050aa;
 }
 .metaButton {
   position: relative;
-  border: .2rem solid #3388dd;
+  border: .2rem solid var(--dark);
   border-radius: 100%;
   width: 17%;
   height: 17%;
 }
 .metaButton:active {
-  background-color: #3388dd;
+  background-color: var(--dark);
 }
 #selectionElement {
   top: -2.5%;
-  border: .2rem solid #3388dd;
+  border: .2rem solid var(--dark);
   border-radius: 20%;
   vertical-align: bottom;
-  background-color: #ccccee;
+  background-color: var(--light);
   color: black;
 }
 #restart {
   background: url("restart.png") no-repeat;
   background-size: contain;
-  background-color: #ccccee;
+  background-color: var(--light);
 }
 #undo {
   background: url("undo.png") no-repeat;
   background-size: contain;
-  background-color: #ccccee;
+  background-color: var(--light);
 }
 #redo {
   background: url("redo.png") no-repeat;
   background-size: contain;
-  background-color: #ccccee;
+  background-color: var(--light);
 }
 #menu {
   background: url("menu.png") no-repeat;
   background-size: contain;
-  background-color: #ccccee;
+  background-color: var(--light);
 }
 .bottomButton {
   top: 4%;
@@ -182,7 +187,7 @@ button:active {
   top: 8%;
   background: url("eraser.png") no-repeat;
   background-size: contain;
-  background-color: #3388dd;
+  background-color: var(--dark);
 }
 #eraser:active {
   background-color: #1050aa;
@@ -241,5 +246,5 @@ p {
   width: 50%;
   height: 50%;
   visibility: hidden;
-  background-color: #ccccee;
+  background-color: var(--light);
 }
