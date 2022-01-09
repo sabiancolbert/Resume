@@ -3,6 +3,7 @@
   --background:#222222;
   --dark:#3388dd;
   --light:#ccccee;
+  --active:#1050aa;
 }
 body {
   margin: 0;
@@ -108,7 +109,7 @@ h3 {
   border-width: .2rem 1rem .2rem .2rem;
   border-style: solid;
   border-radius: 100% 0 0 100%;
-  border-color: var(--dark) var(--background) var(--dark) var(--dark);
+  border-color: var(--dark);
   width: 5%;
   height: 20%;
 }
@@ -123,7 +124,7 @@ h3 {
   border-width: .2rem .2rem .2rem 1rem;
   border-style: solid;
   border-radius: 0 100% 100% 0;
-  border-color: var(--dark) var(--dark) var(--dark) var(--background);
+  border-color: var(--dark);
   width: 5%;
   height: 20%;
 }
@@ -140,7 +141,7 @@ button {
   color: var(--light);
 }
 button:active {
-  background-color: #1050aa;
+  background-color: var(--active);
 }
 .metaButton {
   position: relative;
@@ -190,7 +191,7 @@ button:active {
   background-color: var(--dark);
 }
 #eraser:active {
-  background-color: #1050aa;
+  background-color: var(--active);
 }
 /* Notes */
 .notesContainer {
