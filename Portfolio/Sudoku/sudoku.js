@@ -724,9 +724,11 @@ function menu() {
   //HERE HERE HERE
   if(document.getElementById("menuElement").style.visibility == "visible"){
   document.getElementById("menuElement").style.visibility = "hidden";
+  document.getElementById("wrongElement").style.visibility = "visible";
   }
   else{
   document.getElementById("menuElement").style.visibility = "visible";
+  document.getElementById("wrongElement").style.visibility = "hidden";
 }
 }
 
