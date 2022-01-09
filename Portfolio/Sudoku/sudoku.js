@@ -430,8 +430,9 @@ function select(selection) {
 
 function set(cellNumber, direction = 0) {
   c("set" +cellNumber);
+  if(getCell(cellNumber).innerHTML!=" " || currentSelection != 0){
   c(currentSelection +"&"+getCell(cellNumber).innerHTML+"&");
-  if (userCells.includes(cellNumber) && (getCell(cellNumber).innerHTML!=" " || currentSelection != 0)) {
+  if (userCells.includes(cellNumber)) {
     c("whelp");
     var cellElement = getCell(cellNumber);
     var cellNoteMode = displayCells[cellNumber];
@@ -588,6 +589,7 @@ function set(cellNumber, direction = 0) {
       cellNoteMode,
       cellElement.style.color];
   }
+}
 }
 
 function changeMove(direction) {
