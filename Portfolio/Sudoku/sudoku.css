@@ -185,7 +185,7 @@ button:active, #menu:active, #undo:active, #redo:active, #restart:active, #erase
   top: 8%;
   background: url("eraser.png") no-repeat;
   background-size: contain;
-  background-color: var(--dark);
+  background-color: var(--light);
 }
 /* Notes */
 .notesContainer {
