@@ -29,6 +29,7 @@ function getCell(cellNumber) {
 }
 
 function sizePage() {
+  c("sizePage()");
   if (!sizingPage) {
     sizingPage = true;
     var root = document.getElementsByTagName("html")[0];
@@ -84,6 +85,7 @@ function sizePage() {
 /* Game Creation */
 
 function setCells() {
+  c("setCells()");
   if (document.getElementById("difficultyElement").value < 81) {
     difficulty = document.getElementById("difficultyElement").value;
     document.getElementById("difficultyPromptElement").innerHTML = "";
@@ -199,11 +201,13 @@ function variantValid(cell, number) {
 
 //no possible games
 function fail() {
+  c("fail()");
   alert("No possible games! Try removing some variants.");
 }
 
 //display the "displayCells" array on the grid
 function setGrid() {
+  c("setGrid()");
   sizePage();
   /* Unsolve */
   var testedNumbers = new Array([0]);
@@ -343,12 +347,14 @@ function isDefaultCell(cell) {
 }
 
 function isVariantSolvable(cell) {
+  
   //HERE
   return false;
 }
 /* Gameplay */
 
 function select(selection) {
+  c("select()");
   /* Set Grid HighlightColor */
   for (cellNumber = 0; cellNumber < 81; cellNumber++) {
     var cellElement = getCell(cellNumber);
@@ -592,6 +598,7 @@ function set(cellNumber, direction = 0) {
 }
 
 function changeMove(direction) {
+  c("changeMove()");
   if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < redoList.length -1) {
     currentMove += direction;
     if (direction==-1) {
@@ -618,6 +625,7 @@ function changeMove(direction) {
 
 //check(81, true) is autocheck button
 function check(cellNumber, changingAutoCheck = false) {
+  c("check()");
   //HERE when unselecting autocheck, unred any red numbers
   var result = true;
   if (changingAutoCheck) {
@@ -657,6 +665,7 @@ function check(cellNumber, changingAutoCheck = false) {
 }
 
 function autoRemoveNotes() {
+  c("autoRemoveNotes()");
   //if autoremove notes in settings is on
   if (true) {
     //HERE
@@ -665,6 +674,7 @@ function autoRemoveNotes() {
 }
 
 function updateNoteMode() {
+  c("updateNoteMode()");
   selectionElement.style.padding = 0;
   /* Regular Number Mode */
   if (currentSelection == -2) {
@@ -718,9 +728,12 @@ function updateNoteMode() {
   }
 }
 
-function restart() {}
+function restart() {
+  c("restart()");
+}
 
 function menu() {
+  c("menu()");
   //HERE HERE HERE
   if (document.getElementById("menuElement").style.visibility == "visible") {
     document.getElementById("menuElement").style.visibility = "hidden";
