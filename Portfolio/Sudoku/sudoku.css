@@ -241,5 +241,6 @@ p {
   visibility: hidden;
   width:99%;
   height:99%;
+  border-radius: 5%;
   background-color: var(--background);
 }
