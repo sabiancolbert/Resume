@@ -22,6 +22,7 @@ var hintColor = "#777777";
 const STACK_LINE_REGEX = /(\d+):(\d+)\)?$/;
 
 function c(...c) {
+  try{
   var string = "failedString";
   let err;
   try {
@@ -32,13 +33,18 @@ function c(...c) {
 
   try {
     const stacks = err.stack.split('\\n');
-    const [, line] = STACK_LINE_REGEX.exec(stacks[2]);
+    const [,
+      line] = STACK_LINE_REGEX.exec(stacks[2]);
 
     string = this(`[${line}]`, ...c);
   } catch (err) {
     string = this(...c);
   }
   console.log("c:"+string);
+  }
+  catch (erro){
+    console.log(erro);
+  }
 }
 
 function getCell(cellNumber) {
