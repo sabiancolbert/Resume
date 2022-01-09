@@ -722,6 +722,7 @@ function menu() {
 }
 
 /*//HERE
+//HERE HERE HERE if erasing blank cell, do not add to undo
 capitalize notes
 have a numbers page when you click the wrong answers button (number of undos, redos, restarts, total time (saved games), ingame time, etc?)
 please enable javascript screen
