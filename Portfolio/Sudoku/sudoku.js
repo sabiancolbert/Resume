@@ -15,6 +15,11 @@ var autoCheck = true;
 var autoRemoveNotes = false;
 var sizingPage = false;
 var gridBox, counterElement, selectionElement;
+var background = "#222222";
+var dark = "#3388dd";
+var light = "#ccccee";
+var text = "black";
+var hint = "#777777";
 
 function c(c) {
   console.log(c);
@@ -352,26 +357,26 @@ function select(selection) {
     if (displayCells[cellNumber]==-2) {
       for (i = 1; i < 10; i++) {
         if (i == selection) {
-          document.getElementById("n"+i+cellNumber).style.backgroundColor = "#3388dd";
+          document.getElementById("n"+i+cellNumber).style.backgroundColor = dark;
           document.getElementById("n"+i+cellNumber).style.zIndex = "1";
         } else {
-          document.getElementById("n"+i+cellNumber).style.backgroundColor = "#ccccee";
+          document.getElementById("n"+i+cellNumber).style.backgroundColor = light;
           document.getElementById("n"+i+cellNumber).style.zIndex = "0";
         }
       }
     }
     //number highlight
     else if (selection == cellElement.innerHTML && displayCells[cellNumber] != 0) {
-      cellElement.style.backgroundColor = "#3388dd";
+      cellElement.style.backgroundColor = dark;
       if (cellElement.style.fontSize == "85%") {
-        cellElement.style.color = "#ccccee";
+        cellElement.style.color = light;
       }
     }
     //no highlight
     else {
-      cellElement.style.backgroundColor = "#ccccee";
+      cellElement.style.backgroundColor = light;
       if (cellElement.style.fontSize == "85%") {
-        cellElement.style.color = "#777777";
+        cellElement.style.color = "hint";
       }
     }
   }
@@ -383,7 +388,7 @@ function select(selection) {
     selectionElement.innerHTML = selection;
     if (currentSelection == 0) {
       selectionElement.style.fontSize = "200%";
-      selectionElement.style.color = "black";
+      selectionElement.style.color = "text";
       currentSelection = selection;
     }
   } else {
@@ -476,7 +481,7 @@ function set(cellNumber, direction = 0) {
         0,
         0,
         0];
-      cellElement.style.backgroundColor = "#ccccee";
+      cellElement.style.backgroundColor = light;
     }
     /* Note Number */
     else if (cellNoteMode == -2) {
@@ -502,8 +507,8 @@ function set(cellNumber, direction = 0) {
       }
       /* Add Note To Cell */
       else {
-        cellElement.style.color = "black";
-        cellElement.style.backgroundColor = "#ccccee";
+        cellElement.style.color = "text";
+        cellElement.style.backgroundColor = light;
         cellElement.style.fontSize = "50%";
         //if not undo or redo
         if (direction == 0) {
@@ -518,10 +523,10 @@ function set(cellNumber, direction = 0) {
         displayCells[cellNumber] = -2;
         for (i = 1; i < 10; i++) {
           if (i == selectionElement.innerHTML) {
-            document.getElementById("n"+i+cellNumber).style.backgroundColor = "#3388dd";
+            document.getElementById("n"+i+cellNumber).style.backgroundColor = dark;
             document.getElementById("n"+i+cellNumber).style.zIndex = "1";
           } else {
-            document.getElementById("n"+i+cellNumber).style.backgroundColor = "#ccccee";
+            document.getElementById("n"+i+cellNumber).style.backgroundColor = light;
             document.getElementById("n"+i+cellNumber).style.zIndex = "0";
           }
         }
@@ -546,14 +551,14 @@ function set(cellNumber, direction = 0) {
         0,
         0];
       if (cellNoteMode == -1) {
-        cellElement.style.color = "#777777";
+        cellElement.style.color = "hint";
         cellElement.style.fontSize = "85%";
         displayCells[cellNumber] = -1;
       } else {
         displayCells[cellNumber] = content;
         cellElement.style.fontSize = "100%";
         if (direction == 0) {
-          cellElement.style.color = "black";
+          cellElement.style.color = "text";
           if (check(cellNumber)) {
             //HERE autoRemoveNotes();
           }
@@ -569,9 +574,9 @@ function set(cellNumber, direction = 0) {
   }
   /* Highlight Numbers */
   if (content == selectionElement.innerHTML && currentSelection > -2 && displayCells[cellNumber] != 0) {
-    cellElement.style.backgroundColor = "#3388dd";
+    cellElement.style.backgroundColor = dark;
     if (cellElement.style.fontSize == "85%") {
-      cellElement.style.color = "#ccccee";
+      cellElement.style.color = light;
     }
   }
   if (direction == 0) {
@@ -629,7 +634,7 @@ function check(cellNumber, changingAutoCheck = false) {
       for (i = 0; i < 81; i++) {
         if (wrongList.includes(cellNumber)) {
           wrongList.splice(wrongList.indexOf(cellNumber), 1);
-          getCell(cellNumber).style.color = black;
+          getCell(cellNumber).style.color = text;
         }
       }
     }
@@ -667,13 +672,13 @@ function updateNoteMode() {
   /* Grey Note Number Mode */
   else if (currentSelection > 0) {
     currentSelection = -1;
-    selectionElement.style.color = "#777777";
+    selectionElement.style.color = "hint";
     selectionElement.style.fontSize = "150%";
   }
   /* Note Mode */
   else if (currentSelection==-1) {
     currentSelection=-2;
-    selectionElement.style.color = "black";
+    selectionElement.style.color = "text";
     selectionElement.style.fontSize = "75%";
     switch (parseInt(selectionElement.innerHTML)) {
       case 1:
