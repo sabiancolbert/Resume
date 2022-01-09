@@ -431,7 +431,6 @@ function select(selection) {
 function set(cellNumber, direction = 0) {
   c("set" +cellNumber);
   if(getCell(cellNumber).innerHTML!=" " || currentSelection != 0){
-  c(currentSelection +"&"+getCell(cellNumber).innerHTML+"&");
   if (userCells.includes(cellNumber)) {
     c("whelp");
     var cellElement = getCell(cellNumber);
@@ -726,7 +725,6 @@ function menu() {
 }
 
 /*//HERE
-//HERE HERE HERE if erasing blank cell, do not add to undo
 capitalize notes
 have a numbers page when you click the wrong answers button (number of undos, redos, restarts, total time (saved games), ingame time, etc?)
 please enable javascript screen
