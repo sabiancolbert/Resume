@@ -376,7 +376,7 @@ function select(selection) {
     else {
       cellElement.style.backgroundColor = light;
       if (cellElement.style.fontSize == "85%") {
-        cellElement.style.color = "hint";
+        cellElement.style.color = hint;
       }
     }
   }
@@ -388,7 +388,7 @@ function select(selection) {
     selectionElement.innerHTML = selection;
     if (currentSelection == 0) {
       selectionElement.style.fontSize = "200%";
-      selectionElement.style.color = "text";
+      selectionElement.style.color = text;
       currentSelection = selection;
     }
   } else {
@@ -507,7 +507,7 @@ function set(cellNumber, direction = 0) {
       }
       /* Add Note To Cell */
       else {
-        cellElement.style.color = "text";
+        cellElement.style.color = text;
         cellElement.style.backgroundColor = light;
         cellElement.style.fontSize = "50%";
         //if not undo or redo
@@ -551,14 +551,14 @@ function set(cellNumber, direction = 0) {
         0,
         0];
       if (cellNoteMode == -1) {
-        cellElement.style.color = "hint";
+        cellElement.style.color = hint;
         cellElement.style.fontSize = "85%";
         displayCells[cellNumber] = -1;
       } else {
         displayCells[cellNumber] = content;
         cellElement.style.fontSize = "100%";
         if (direction == 0) {
-          cellElement.style.color = "text";
+          cellElement.style.color = text;
           if (check(cellNumber)) {
             //HERE autoRemoveNotes();
           }
@@ -672,13 +672,13 @@ function updateNoteMode() {
   /* Grey Note Number Mode */
   else if (currentSelection > 0) {
     currentSelection = -1;
-    selectionElement.style.color = "hint";
+    selectionElement.style.color = hint;
     selectionElement.style.fontSize = "150%";
   }
   /* Note Mode */
   else if (currentSelection==-1) {
     currentSelection=-2;
-    selectionElement.style.color = "text";
+    selectionElement.style.color = text;
     selectionElement.style.fontSize = "75%";
     switch (parseInt(selectionElement.innerHTML)) {
       case 1:
