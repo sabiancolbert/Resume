@@ -3,6 +3,7 @@
   --background:#222222;
   --dark:#3388dd;
   --light:#ccccee;
+  --text:black;
   --active:#1050aa;
 }
 body {
@@ -63,7 +64,7 @@ h2 {
   top:0;
   left:0;
   left:0;
-  color: black;
+  color: var(--text);
   font-size: 100%;
   overflow: hidden;
   line-height: 175%;
@@ -159,7 +160,7 @@ button:active {
   border-radius: 20%;
   vertical-align: bottom;
   background-color: var(--light);
-  color: black;
+  color: var(--text);
 }
 #restart {
   background: url("restart.png") no-repeat;
