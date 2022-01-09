@@ -238,8 +238,6 @@ p {
 }
 /* Menu */
 #menuElement {
-  width: 50%;
-  height: 50%;
   visibility: hidden;
   background-color: var(--light);
 }
