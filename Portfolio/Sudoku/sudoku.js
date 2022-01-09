@@ -626,7 +626,7 @@ function changeCell(cellNumber, moveDirection = 0) {
           cellElement.style.fontSize = "100%";
           if (moveDirection == 0) {
             cellElement.style.color = textColor;
-            if (check(cellNumber)) {
+            if (checkAnswer(cellNumber)) {
               //HERE autoRemoveNotes();
             }
           } else if (moveDirection==-1) {
@@ -684,10 +684,10 @@ function changeMove(direction) {
   }
 }
 
-//check(81, true) is autocheck button
-//check answers or update autoCheck
-function check(cellNumber, changingAutoCheck = false) {
-  c("check(" + cellNumber + ", " + changingAutoCheck+")");
+//checkAnswer(81, true) is autocheck button
+//check cell answer or update autoCheck
+function checkAnswer(cellNumber, changingAutoCheck = false) {
+  c("checkAnswer(" + cellNumber + ", " + changingAutoCheck+")");
   //HERE when unselecting autocheck, unred any red numbers
   var result = true;
   if (changingAutoCheck) {
@@ -726,7 +726,7 @@ function check(cellNumber, changingAutoCheck = false) {
   return result;
 }
 
-//remove invalid notes from grid
+//automatically remove invalid notes from grid
 function autoRemoveNotes() {
   c("autoRemoveNotes()");
   //if autoremove notes in settings is on
@@ -736,8 +736,7 @@ function autoRemoveNotes() {
   } else {}
 }
 
-//change selection note mode
-//HERE HERE HRRE fix //notes
+//change selected note mode
 function updateNoteMode() {
   c("updateNoteMode()");
   selectionElement.style.padding = 0;
@@ -793,10 +792,12 @@ function updateNoteMode() {
   }
 }
 
+//clear all answers
 function restart() {
   c("restart()");
 }
 
+//toggle menu
 function menu() {
   c("menu()");
   //HERE HERE HERE
