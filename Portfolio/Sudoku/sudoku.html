@@ -8,11 +8,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body id="body" onresize="sizePage()">
+<body id="body" onresize="resizePageElements()">
   <section id="difficultyPromptElement">
     <!-- Difficulty -->
     <label for="difficultyElement">Set difficulty to:</label>
-    <select onchange="setCells()" id="difficultyElement">
+    <select onchange="decideGridNumbers()" id="difficultyElement">
       <option value="81"></option>
       <option value="45">Beginner</option>
       <option value="40">Easy</option>
@@ -135,23 +135,23 @@
         <button id="restart" onclick="restart()" class="metaButton"></button>
         <br>
         <br>
-        <button onclick="select(1)">1</button>
-        <button onclick="select(2)">2</button>
-        <button onclick="select(3)">3</button>
-        <button onclick="select(4)">4</button>
-        <button onclick="select(5)">5</button>
+        <button onclick="selectNumber(1)">1</button>
+        <button onclick="selectNumber(2)">2</button>
+        <button onclick="selectNumber(3)">3</button>
+        <button onclick="selectNumber(4)">4</button>
+        <button onclick="selectNumber(5)">5</button>
         <br>
-        <button onclick="select(6)" class="bottomButton">6</button>
-        <button onclick="select(7)" class="bottomButton">7</button>
-        <button onclick="select(8)" class="bottomButton">8</button>
-        <button onclick="select(9)" class="bottomButton">9</button>
-        <button id="eraser" onclick="select(0)"> </button>
+        <button onclick="selectNumber(6)" class="bottomButton">6</button>
+        <button onclick="selectNumber(7)" class="bottomButton">7</button>
+        <button onclick="selectNumber(8)" class="bottomButton">8</button>
+        <button onclick="selectNumber(9)" class="bottomButton">9</button>
+        <button id="eraser" onclick="selectNumber(0)"> </button>
       </div>
-    <div id="menuElement" class="content">
-      <p>
-        yehs
-      </p>
-    </div>
+      <div id="menuElement" class="content">
+        <p>
+          yehs
+        </p>
+      </div>
     </div>
   </section>
 
