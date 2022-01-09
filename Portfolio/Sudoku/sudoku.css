@@ -239,6 +239,6 @@ p {
 /* Menu */
 #menuElement {
   visibility: hidden;
-  width:95%;
+  width:99%;
   background-color: var(--light);
 }
