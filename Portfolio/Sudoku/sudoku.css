@@ -141,7 +141,7 @@ button {
   background-color: var(--background);
   color: var(--light);
 }
-button:active {
+button:active, #menu:active, #undo:active, #redo:active, #restart:active, #eraser:active{
   background-color: var(--active);
 }
 .metaButton {
@@ -150,9 +150,6 @@ button:active {
   border-radius: 100%;
   width: 17%;
   height: 17%;
-}
-.metaButton:active {
-  background-color: var(--dark);
 }
 #selectionElement {
   top: -2.5%;
@@ -190,9 +187,6 @@ button:active {
   background: url("eraser.png") no-repeat;
   background-size: contain;
   background-color: var(--dark);
-}
-#eraser:active {
-  background-color: var(--active);
 }
 /* Notes */
 .notesContainer {
