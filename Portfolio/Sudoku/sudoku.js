@@ -19,9 +19,26 @@ var darkColor = "#3388dd";
 var lightColor = "#ccccee";
 var textColor = "black";
 var hintColor = "#777777";
+const STACK_LINE_REGEX = /(\d+):(\d+)\)?$/;
 
-function c(c) {
-  console.log(c);
+function c(...c) {
+  var string = "failedString";
+  let err;
+  try {
+    throw new Error();
+  } catch (error) {
+    err = error;
+  }
+
+  try {
+    const stacks = err.stack.split('\\n');
+    const [, line] = STACK_LINE_REGEX.exec(stacks[2]);
+
+    string = this(`[${line}]`, ...c);
+  } catch (err) {
+    string = this(...c);
+  }
+  console.log("c:"+string);
 }
 
 function getCell(cellNumber) {
