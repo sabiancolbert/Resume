@@ -496,7 +496,7 @@ function selectNumber(selection) {
 
 //change cell html
 function changeCell(cellNumber, moveDirection = 0) {
-  c("changeCell(" +cellNumber+", "++")");
+  c("changeCell(" +cellNumber+", "+")");
   if (getCellElement(cellNumber).innerHTML != " " || currentSelection != 0) {
     if (userCells.includes(cellNumber)) {
       var cellElement = getCellElement(cellNumber);
