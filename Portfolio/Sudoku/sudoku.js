@@ -173,6 +173,7 @@ function decideGridNumbers() {
           isLocked: false,
           isWrong: false
         };
+        c(cells[currentCell]);
         currentCell++;
       }
     }
