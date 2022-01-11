@@ -194,12 +194,12 @@ function getCellElement(cellNumber) {
 function isInVertical(cell, number) {
   var result = false;
   for (i = cell-9; i > -1; i -= 9) {
-    if (displayCells[i] == number) {
+    if (cells[i].display == number) {
       result = true;
     }
   }
   for (i = cell+9; i < 81; i += 9) {
-    if (displayCells[i] == number) {
+    if (cells[i].display == number) {
       result = true;
     }
   }
@@ -211,7 +211,7 @@ function isInHorizonal(cell, number) {
   var result = false;
   var rowStart = Math.floor(cell/9)*9;
   for (i = rowStart; i < rowStart+9; i++) {
-    if (displayCells[i] == number) {
+    if (cells[i].display == number) {
       result = true;
     }
   }
@@ -237,7 +237,7 @@ function isInBox(cell, number) {
   var stopCounter = cell + adjust - temp;
   /* Test Box */
   for (i = stopCounter + 18; i >= stopCounter; i -= 9) {
-    if (displayCells[i] == number || displayCells[i+1] == number || displayCells[i+2] == number) {
+    if (cells[i].display == number || cells[i+1].display == number || cells[i+2].display == number) {
       result = true;
     }
   }
@@ -274,8 +274,8 @@ function displayGame() {
       //is this cell solvable?
       if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber) || isVariantSolvable(cellNumber)) {
         //HERE set notes
-        numberTotals[displayCells[cellNumber]]++;
-        displayCells[cellNumber] = 0;
+        numberTotals[cells[cellNumber].display]++;
+        cells[cellNumber].display = 0;
         stopCounter--;
       }
     }
@@ -283,8 +283,8 @@ function displayGame() {
   noteCells = new Array(81);
   /* Display Cells */
   for (i = 0; i < 81; i++) {
-    if (displayCells[i] > 0) {
-      getCellElement(i).innerHTML = displayCells[i];
+    if (cells[i].display > 0) {
+      getCellElement(i).innerHTML = cells[i].display;
       getCellElement(i).style.fontWeight = "1000";
     } else {
       getCellElement(i).innerHTML = " ";
@@ -313,7 +313,7 @@ function isDefaultNumber(cell) {
   var otherNumbers = new Array();
   //HERE test noteCells, use dummy numbers for next part
   for (x = 1; x < 10; x++) {
-    if (x != displayCells[cell]) {
+    if (x != cells[cell].display) {
       if (isInVertical(cell, x) || isInHorizonal(cell, x) || isInBox(cell, x)) {
         otherNumbers.push(x);
       }
@@ -333,18 +333,18 @@ function isDefaultCell(cell) {
   /* Find Empty Cells In Row */
   var temp = Math.floor(cell/9)*9;
   for (i = temp; i < temp+9; i++) {
-    if (displayCells[i] == 0) {
+    if (cells[i].display == 0) {
       emptyCells.push(i);
     }
   }
   /* Find Empty Cells In Column */
   for (i = cell-9; i > -1; i -= 9) {
-    if (displayCells[i] == 0) {
+    if (cells[i].display == 0) {
       emptyCells.push(i);
     }
   }
   for (i = cell+9; i < 81; i += 9) {
-    if (displayCells[i] == 0) {
+    if (cells[i].display == 0) {
       emptyCells.push(i);
     }
   }
@@ -363,38 +363,38 @@ function isDefaultCell(cell) {
   temp = Math.floor(temp/9)*9;
   var start = cell + adjust - temp;
   /* Find Empty Cells In Box */
-  displayCells[cell]=-1;
-  if (displayCells[start] == 0) {
+  cells[cell].display=-1;
+  if (cells[start].display == 0) {
     emptyCells.push(start);
   }
-  if (displayCells[start + 1] == 0) {
+  if (cells[start + 1].display == 0) {
     emptyCells.push(start +1);
   }
-  if (displayCells[start +2] == 0) {
+  if (cells[start +2].display == 0) {
     emptyCells.push(start+2);
   }
-  if (displayCells[start+9] == 0) {
+  if (cells[start+9].display == 0) {
     emptyCells.push(start+9);
   }
-  if (displayCells[start+10] == 0) {
+  if (cells[start+10].display == 0) {
     emptyCells.push(start+10);
   }
-  if (displayCells[start+11] == 0) {
+  if (cells[start+11].display == 0) {
     emptyCells.push(start+11);
   }
-  if (displayCells[start+18] == 0) {
+  if (cells[start+18].display == 0) {
     emptyCells.push(start+18);
   }
-  if (displayCells[start+19] == 0) {
+  if (cells[start+19].display == 0) {
     emptyCells.push(start+19);
   }
-  if (displayCells[start+20] == 0) {
+  if (cells[start+20].display == 0) {
     emptyCells.push(start+20);
   }
-  displayCells[cell] = cells[cell];
+  cells[cell].display = cells[cell];
   /* Test Empty Cells */
   emptyCells.forEach(td => {
-    if (result && !isInVertical(td, displayCells[cell]) && !isInHorizonal(td, displayCells[cell])) {
+    if (result && !isInVertical(td, cells[cell].display) && !isInHorizonal(td, cells[cell].display)) {
       result = false;
     }
   });
@@ -419,7 +419,7 @@ function selectNumber(selection) {
   for (cellNumber = 0; cellNumber < 81; cellNumber++) {
     var cellElement = getCellElement(cellNumber);
     //note highlightColor
-    if (displayCells[cellNumber]==-2) {
+    if (cells[cellNumber].display==-2) {
       for (i = 1; i < 10; i++) {
         if (i == selection) {
           document.getElementById("n"+i+cellNumber).style.backgroundColor = darkColor;
@@ -431,7 +431,7 @@ function selectNumber(selection) {
       }
     }
     //number highlightColor
-    else if (selection == cellElement.innerHTML && displayCells[cellNumber] != 0) {
+    else if (selection == cellElement.innerHTML && cells[cellNumber].display != 0) {
       cellElement.style.backgroundColor = darkColor;
       if (cellElement.style.fontSize == "85%") {
         cellElement.style.color = lightColor;
@@ -500,7 +500,7 @@ function changeCell(cellNumber, moveDirection = 0) {
   if (getCellElement(cellNumber).innerHTML != " " || currentSelection != 0) {
     if (userCells.includes(cellNumber)) {
       var cellElement = getCellElement(cellNumber);
-      var cellNoteMode = displayCells[cellNumber];
+      var cellNoteMode = cells[cellNumber].display;
       var content = selectionElement.innerHTML;
       //undo
       if (moveDirection ==-1) {
@@ -528,7 +528,7 @@ function changeCell(cellNumber, moveDirection = 0) {
         }
       }
       //counter element
-      if (displayCells[cellNumber] > -2) {
+      if (cells[cellNumber].display > -2) {
         numberTotals[cellElement.innerHTML]++;
         if (cellElement.innerHTML == selectionElement.innerHTML) {
           counterElement.innerHTML = numberTotals[cellElement.innerHTML];
@@ -537,7 +537,7 @@ function changeCell(cellNumber, moveDirection = 0) {
       /* Erase */
       if (cellNoteMode == 0) {
         cellElement.innerHTML = " ";
-        displayCells[cellNumber] = 0;
+        cells[cellNumber].display = 0;
         noteCells[cellNumber] = [0,
           0,
           0,
@@ -559,7 +559,7 @@ function changeCell(cellNumber, moveDirection = 0) {
           //if empty
           if (noteCells[cellNumber][1] == 0 && noteCells[cellNumber][2] == 0 && noteCells[cellNumber][3] == 0 && noteCells[cellNumber][4] == 0 && noteCells[cellNumber][5] == 0 && noteCells[cellNumber][6] == 0 && noteCells[cellNumber][7] == 0 && noteCells[cellNumber][8] == 0 && noteCells[cellNumber][9] == 0) {
             cellElement.innerHTML = " ";
-            displayCells[cellNumber] = 0;
+            cells[cellNumber].display = 0;
             noteCells[cellNumber] = [0,
               0,
               0,
@@ -579,7 +579,7 @@ function changeCell(cellNumber, moveDirection = 0) {
           cellElement.style.fontSize = "50%";
           //if not undo or redo
           if (moveDirection == 0) {
-            if (displayCells[cellNumber] !=-2) {
+            if (cells[cellNumber].display !=-2) {
               cellElement.innerHTML = "<div class='notesContainer'><p class='p1' id='n1"+cellNumber+"'>1</p><p class='p2' id='n2"+cellNumber+"'>2</p><p class='p3' id='n3"+cellNumber+"'>3</p><p class='p4' id='n4"+cellNumber+"'>4</p><p class='p5' id='n5"+cellNumber+"'>5</p><p class='p6' id='n6"+cellNumber+"'>6</p><p class='p7' id='n7"+cellNumber+"'>7</p><p class='p8' id='n8"+cellNumber+"'>8</p><p class='p9' id='n9"+cellNumber+"'>9</p></div>";
             }
             document.getElementById("n"+content+cellNumber).style.visibility = "visible";
@@ -587,7 +587,7 @@ function changeCell(cellNumber, moveDirection = 0) {
           } else {
             cellElement.innerHTML = content;
           }
-          displayCells[cellNumber] = -2;
+          cells[cellNumber].display = -2;
           for (i = 1; i < 10; i++) {
             if (i == selectionElement.innerHTML) {
               document.getElementById("n"+i+cellNumber).style.backgroundColor = darkColor;
@@ -601,7 +601,7 @@ function changeCell(cellNumber, moveDirection = 0) {
       }
       /* Regular Number */
       else {
-        displayCells[cellNumber] = content;
+        cells[cellNumber].display = content;
         cellElement.innerHTML = content;
         numberTotals[content]--;
         if (content == selectionElement.innerHTML) {
@@ -620,9 +620,9 @@ function changeCell(cellNumber, moveDirection = 0) {
         if (cellNoteMode == -1) {
           cellElement.style.color = hintColor;
           cellElement.style.fontSize = "85%";
-          displayCells[cellNumber] = -1;
+          cells[cellNumber].display = -1;
         } else {
-          displayCells[cellNumber] = content;
+          cells[cellNumber].display = content;
           cellElement.style.fontSize = "100%";
           if (moveDirection == 0) {
             cellElement.style.color = textColor;
@@ -640,7 +640,7 @@ function changeCell(cellNumber, moveDirection = 0) {
       }
     }
     /* HighlightColor Numbers */
-    if (content == selectionElement.innerHTML && currentSelection > -2 && displayCells[cellNumber] != 0) {
+    if (content == selectionElement.innerHTML && currentSelection > -2 && cells[cellNumber].display != 0) {
       cellElement.style.backgroundColor = darkColor;
       if (cellElement.style.fontSize == "85%") {
         cellElement.style.color = lightColor;
@@ -695,7 +695,7 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
     if (autoCheck) {
       document.getElementById("wrongElement").style.visibility = "visible";
       for (i = 0; i < 81; i++) {
-        if (displayCells[cellNumber] > 0 && displayCells[cellNumber] != cells[cellNumber]) {
+        if (cells[cellNumber].display > 0 && cells[cellNumber].display != cells[cellNumber]) {
           result = false;
           wrongList.push(cellNumber);
           getCellElement(cellNumber).style.color = red;
@@ -715,7 +715,7 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
     if (wrongList.includes(cellNumber)) {
       wrongList.splice(wrongList.indexOf(cellNumber), 1);
     }
-    if (displayCells[cellNumber] != cells[cellNumber]) {
+    if (cells[cellNumber].display != cells[cellNumber]) {
       wrongList.push(cellNumber);
       getCellElement(cellNumber).style.color = "red";
       addOne = true;
