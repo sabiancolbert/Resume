@@ -31,6 +31,8 @@ const STACK_LINE_REGEX = /(\d+):(\d+)\)?$/;
 /* Meta */
 
 function c(...c) {
+  //HERE HERE HERE
+/*
   try {
     var string = "noPossibleGamesedString";
     let err;
@@ -54,6 +56,8 @@ function c(...c) {
   catch (erro) {
     console.log(erro);
   }
+  */
+  console.log(c);
 }
 
 //HERE HERE make sure sizePage() is as awesome as possible
