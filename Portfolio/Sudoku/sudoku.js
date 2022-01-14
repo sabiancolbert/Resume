@@ -200,6 +200,7 @@ function isInVertical(cell, number) {
     }
   }
   for (i = cell+9; i < 81; i += 9) {
+    c(cells);
     if (cells[i].display == number) {
       result = true;
     }
