@@ -32,7 +32,7 @@ const STACK_LINE_REGEX = /(\d+):(\d+)\)?$/;
 
 function c(...c) {
   //HERE HERE HERE
-/*
+  /*
   try {
     var string = "noPossibleGamesedString";
     let err;
@@ -168,14 +168,14 @@ function decideGridNumbers() {
       /* If Valid Number Is Found */
       else {
         cells[currentCell] = {
-          display: number,
+          "display": number,
           /* Legend */
           //-2 small note
           //-1 grey note
           //0 empty
           //1+ number
-          isLocked: false,
-          isWrong: false
+          "isLocked": false,
+          "isWrong": false
         };
         c(cells[currentCell]);
         currentCell++;
