@@ -148,6 +148,8 @@ function decideGridNumbers() {
         "isLocked": false,
         "isWrong": false
       };
+      c(cells);
+      c(cells[currentCell]);
     }
     /* Set Every Cell's Info (cells[0-80]) */
     while (currentCell > 0 && currentCell < 82) {
