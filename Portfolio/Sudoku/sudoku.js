@@ -60,9 +60,9 @@ function c(...c) {
   console.log(c);
 }
 
-//HERE HERE make sure sizePage() is as awesome as possible
+//HERE HERE make sure resizePageElements() is as awesome as possible
 function resizePageElememts() {
-  c("sizePage()");
+  c("resizePageElements()");
   if (!sizingPage) {
     sizingPage = true;
     var root = document.getElementsByTagName("html")[0];
@@ -140,13 +140,14 @@ function decideGridNumbers() {
     //counterElement = document.getElementById("counterElement");
     //selectionElement = document.getElementById("selectionElement");
     var attemptedNumbers = new Array(81);
-    for (i = 1; i < 82; i++) {//HERE HERE everything is 1-82 instead of 0-81
+    for (i = 1; i < 82; i++) {
+      //HERE HERE everything is 1-82 instead of 0-81
       attemptedNumbers[i] = [];
-cells[currentCell] = {
-          "display": 0,
-          "isLocked": false,
-          "isWrong": false
-        };
+      cells[currentCell] = {
+        "display": 0,
+        "isLocked": false,
+        "isWrong": false
+      };
     }
     /* Set Every Cell's Info (cells[0-80]) */
     while (currentCell > 0 && currentCell < 82) {
@@ -276,7 +277,7 @@ function noPossibleGames() {
 //decide which cells to show and hide
 function displayGame() {
   c("displayGame()");
-  sizePage();
+  resizePageElements();
   /* Unsolve */
   var testedNumbers = new Array([0]);
   var stopCounter = 81 - Math.floor(Math.random()*5+parseInt(difficulty));
