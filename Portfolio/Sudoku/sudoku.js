@@ -61,7 +61,7 @@ function c(...c) {
 }
 
 //HERE HERE make sure resizePageElements() is as awesome as possible
-function resizePageElememts() {
+function resizePageElements() {
   c("resizePageElements()");
   if (!sizingPage) {
     sizingPage = true;
