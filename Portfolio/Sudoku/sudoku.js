@@ -140,11 +140,16 @@ function decideGridNumbers() {
     //counterElement = document.getElementById("counterElement");
     //selectionElement = document.getElementById("selectionElement");
     var attemptedNumbers = new Array(81);
-    for (i = 0; i < 81; i++) {
+    for (i = 1; i < 82; i++) {//HERE HERE everything is 1-82 instead of 0-81
       attemptedNumbers[i] = [];
+cells[currentCell] = {
+          "display": 0,
+          "isLocked": false,
+          "isWrong": false
+        };
     }
     /* Set Every Cell's Info (cells[0-80]) */
-    while (currentCell > -1 && currentCell < 81) {
+    while (currentCell > 0 && currentCell < 82) {
       var number = 0;
       var invalid = true;
       /* Try Each Number For Current Cell (0-80) */
@@ -167,7 +172,7 @@ function decideGridNumbers() {
       }
       /* If Valid Number Is Found */
       else {
-        cells[currentCell] = [{
+        cells[currentCell] = {
           "display": number,
           /* Legend */
           //-2 small note
@@ -176,7 +181,7 @@ function decideGridNumbers() {
           //1+ number
           "isLocked": false,
           "isWrong": false
-        }];
+        };
         c("&");
         c(cells);
         c(cells[currentCell]);
