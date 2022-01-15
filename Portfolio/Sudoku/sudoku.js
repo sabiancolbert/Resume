@@ -150,6 +150,7 @@ function decideGridNumbers() {
       };
       c(cells);
       c(cells[currentCell]);
+      c("&&");
       c("cell display: "+cells[currentCell].display);
     }
     /* Set Every Cell's Info (cells[0-80]) */
