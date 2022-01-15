@@ -167,7 +167,7 @@ function decideGridNumbers() {
       }
       /* If Valid Number Is Found */
       else {
-        cells[currentCell] = {
+        cells[currentCell] = [{
           "display": number,
           /* Legend */
           //-2 small note
@@ -176,7 +176,7 @@ function decideGridNumbers() {
           //1+ number
           "isLocked": false,
           "isWrong": false
-        };
+        }];
         c("&");
         c(cells);
         c(cells[currentCell]);
