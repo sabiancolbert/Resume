@@ -186,8 +186,6 @@ function decideGridNumbers() {
           "isLocked": false,
           "isWrong": false
         };
-        c("&");
-        c(cells[currentCell]);
         currentCell++;
       }
     }
