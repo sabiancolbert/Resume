@@ -148,7 +148,6 @@ function decideGridNumbers() {
         "isLocked": false,
         "isWrong": false
       };
-      c(cells[currentCell].display);
     }
     /* Set Every Cell's Info (cells[0-80]) */
     while (currentCell > 0 && currentCell < 82) {
@@ -184,6 +183,7 @@ function decideGridNumbers() {
           "isLocked": false,
           "isWrong": false
         };
+        c(cells[currentCell]);
         currentCell++;
       }
     }
@@ -324,7 +324,6 @@ function isDefaultNumber(cell) {
   var otherNumbers = new Array();
   //HERE test noteCells, use dummy numbers for next part
   for (x = 1; x < 10; x++) {
-    c(cells[cell]);
     if (x != cells[cell].display) {
       if (isInVertical(cell, x) || isInHorizonal(cell, x) || isInBox(cell, x)) {
         otherNumbers.push(x);
