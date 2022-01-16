@@ -30,7 +30,7 @@ const STACK_LINE_REGEX = /(\d+):(\d+)\)?$/;
 
 /* Meta */
 
-function c(...c) {
+function c(c) {
   //HERE HERE HERE
   /*
   try {
