@@ -324,6 +324,7 @@ function isDefaultNumber(cell) {
   var otherNumbers = new Array();
   //HERE test noteCells, use dummy numbers for next part
   for (x = 1; x < 10; x++) {
+    c(cells[cell]);
     if (x != cells[cell].display) {
       if (isInVertical(cell, x) || isInHorizonal(cell, x) || isInBox(cell, x)) {
         otherNumbers.push(x);
