@@ -148,7 +148,6 @@ function decideGridNumbers() {
         "isLocked": false,
         "isWrong": false
       };
-      c(cells);
       c(cells[currentCell]);
       c("&&");
       c("cell display: "+cells[currentCell].display);
@@ -188,7 +187,6 @@ function decideGridNumbers() {
           "isWrong": false
         };
         c("&");
-        c(cells);
         c(cells[currentCell]);
         currentCell++;
       }
@@ -216,7 +214,6 @@ function isInVertical(cell, number) {
     }
   }
   for (i = cell+9; i < 81; i += 9) {
-    c(cells);
     if (cells[i].display == number) {
       result = true;
     }
