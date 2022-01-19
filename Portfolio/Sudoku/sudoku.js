@@ -6,7 +6,7 @@ var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 //for game creation
 var currentMove = 0;
 var difficulty = 0;
-var currentCell = 0;
+var currentCell = 1;
 var gridBox = document.getElementById("gridBox");
 var selectionElement = document.getElementById("selectionElement");
 var counterElement = document.getElementById("counterElement");
