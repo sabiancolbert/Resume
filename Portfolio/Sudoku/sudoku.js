@@ -216,17 +216,11 @@ function isInVertical(cell, number) {
   for (i = cell-9; i > 0; i -= 9) {
     if (cells[i].display == number) {
       result = true;
-      c("v");
     }
   }
   for (i = cell+9; i < 82; i += 9) {
-    c("i="+i);
-    c(cells);
-    c(cells[0]);
-    c(cells[1]);
     if (cells[i].display == number) {
       result = true;
-      c("v");
     }
   }
   return result;
@@ -239,7 +233,6 @@ function isInHorizonal(cell, number) {
   for (i = rowStart; i < rowStart+9; i++) {
     if (cells[i].display == number) {
       result = true;
-      c("h");
     }
   }
   return result;
@@ -266,10 +259,6 @@ function isInBox(cell, number) {
   for (i = stopCounter + 18; i >= stopCounter; i -= 9) {
     if (cells[i].display == number || cells[i+1].display == number || cells[i+2].display == number) {
       result = true;
-      c("box");
-    } else {
-      c("fail");
-    }
   }
   return result;
 }
