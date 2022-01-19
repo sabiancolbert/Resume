@@ -1,6 +1,6 @@
 /* Globals */
 //one extra cell for readability (82 cells instead of 81 cells so that cells[1] is the first cell instead of cells[0]~)
-var cells = new Array();
+var cells = new Array(1);
 //one extra for readability (10 instead of 9)
 var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 //for game creation
