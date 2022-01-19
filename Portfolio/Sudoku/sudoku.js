@@ -149,6 +149,7 @@ function decideGridNumbers() {
     }
     /* Set Every Cell's Info (cells[0-80]) */
     while (currentCell > 0 && currentCell < 82) {
+      c("&&&&&");
       var number = 0;
       var invalid = true;
       /* Try Each Number For Current Cell (0-80) */
@@ -254,8 +255,9 @@ function isInBox(cell, number) {
     if (cells[i].display == number || cells[i+1].display == number || cells[i+2].display == number) {
       result = true;
       c("go");
+    } else {
+      c("fail");
     }
-    else{c("fail");}
   }
   return result;
 }
