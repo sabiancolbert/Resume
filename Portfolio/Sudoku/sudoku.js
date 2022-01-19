@@ -144,9 +144,7 @@ function decideGridNumbers() {
       //HERE HERE everything is 1-82 instead of 0-81
       attemptedNumbers[i] = [];
       cells[currentCell] = {
-        "display": 0,
-        "isLocked": false,
-        "isWrong": false
+        "display": 0
       };
     }
     /* Set Every Cell's Info (cells[0-80]) */
@@ -169,6 +167,7 @@ function decideGridNumbers() {
       /* If No Numbers Are Valid */
       if (invalid) {
         attemptedNumbers[currentCell] = [];
+        cells[currentCell]={"display":0};
         currentCell--;
       }
       /* If Valid Number Is Found */
