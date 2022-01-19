@@ -211,13 +211,13 @@ function getCellElement(cellNumber) {
 //search for the same number in the same column
 function isInVertical(cell, number) {
   var result = false;
-  for (i = cell-9; i > -1; i -= 9) {
+  for (i = cell-8; i > 0; i -= 9) {
     if (cells[i].display == number) {
       result = true;
       c("v");
     }
   }
-  for (i = cell+9; i < 81; i += 9) {
+  for (i = cell+8; i < 82; i += 9) {
     if (cells[i].display == number) {
       result = true;
       c("v");
