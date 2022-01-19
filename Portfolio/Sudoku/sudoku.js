@@ -259,579 +259,580 @@ function isInBox(cell, number) {
   for (i = stopCounter + 18; i >= stopCounter; i -= 9) {
     if (cells[i].display == number || cells[i+1].display == number || cells[i+2].display == number) {
       result = true;
+    }
+    return result;
   }
-  return result;
 }
 
-//search for variant rules being broken
-function isVariantValid(cell, number) {
-  //HERE
-  return true;
-}
+  //search for variant rules being broken
+  function isVariantValid(cell, number) {
+    //HERE
+    return true;
+  }
 
-//alert the user that there are no possible games with these variant combinations
-function noPossibleGames() {
-  c("noPossibleGames()");
-  alert("No possible games! Try removing some variants.");
-}
-
-
-
-/* Game Display */
-
-//decide which cells to show and hide
-function displayGame() {
-  c("displayGame()");
-  resizePageElements();
-  /* Unsolve */
-  var testedNumbers = new Array([0]);
-  var stopCounter = 81 - Math.floor(Math.random()*5+parseInt(difficulty));
-  while (stopCounter > 0 && testedNumbers.length < 81) {
-    var cellNumber = Math.floor(Math.random()*81);
-    if (!testedNumbers.includes(cellNumber)) {
-      testedNumbers.push(cellNumber);
-      //is this cell solvable?
-      if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber) || isVariantSolvable(cellNumber)) {
-        //HERE set notes
-        numberTotals[cells[cellNumber].display]++;
-        cells[cellNumber].display = 0;
-        stopCounter--;
-      }
-    }
+  //alert the user that there are no possible games with these variant combinations
+  function noPossibleGames() {
+    c("noPossibleGames()");
+    alert("No possible games! Try removing some variants.");
   }
-  noteCells = new Array(81);
-  /* Display Cells */
-  for (i = 0; i < 81; i++) {
-    if (cells[i].display > 0) {
-      getCellElement(i).innerHTML = cells[i].display;
-      getCellElement(i).style.fontWeight = "1000";
-    } else {
-      getCellElement(i).innerHTML = " ";
-      userCells.push(i);
-    }
-  }
-  /* Last Minute Game Prep */
-  for (i = 0; i < 81; i++) {
-    noteCells[i] = [0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0];
-  }
-  selectNumber(1);
-}
-
-//is this cells number the only option for this cell?
-function isDefaultNumber(cell) {
-  var result = false;
-  var otherNumbers = new Array();
-  //HERE test noteCells, use dummy numbers for next part
-  for (x = 1; x < 10; x++) {
-    if (x != cells[cell].display) {
-      if (isInVertical(cell, x) || isInHorizonal(cell, x) || isInBox(cell, x)) {
-        otherNumbers.push(x);
-      }
-    }
-  }
-  if (otherNumbers.length == 8) {
-    result = true;
-  }
-  return result;
-}
-
-//is this cell the only option for this cells number?
-function isDefaultCell(cell) {
-  var result = true;
-  var emptyCells = new Array();
-  //HERE test noteCells, use dummy numbers for next part
-  /* Find Empty Cells In Row */
-  var temp = Math.floor(cell/9)*9;
-  for (i = temp; i < temp+9; i++) {
-    if (cells[i].display == 0) {
-      emptyCells.push(i);
-    }
-  }
-  /* Find Empty Cells In Column */
-  for (i = cell-9; i > -1; i -= 9) {
-    if (cells[i].display == 0) {
-      emptyCells.push(i);
-    }
-  }
-  for (i = cell+9; i < 81; i += 9) {
-    if (cells[i].display == 0) {
-      emptyCells.push(i);
-    }
-  }
-  /* Find Box */
-  var adjust = 0;
-  temp = cell / 3 +" ";
-  if (temp.includes(".6")) {
-    adjust = -2;
-  } else if (temp.includes(".3")) {
-    adjust = -1;
-  }
-  temp = cell;
-  while (temp > 26) {
-    temp -= 27;
-  }
-  temp = Math.floor(temp/9)*9;
-  var start = cell + adjust - temp;
-  /* Find Empty Cells In Box */
-  cells[cell].display=-1;
-  if (cells[start].display == 0) {
-    emptyCells.push(start);
-  }
-  if (cells[start + 1].display == 0) {
-    emptyCells.push(start +1);
-  }
-  if (cells[start +2].display == 0) {
-    emptyCells.push(start+2);
-  }
-  if (cells[start+9].display == 0) {
-    emptyCells.push(start+9);
-  }
-  if (cells[start+10].display == 0) {
-    emptyCells.push(start+10);
-  }
-  if (cells[start+11].display == 0) {
-    emptyCells.push(start+11);
-  }
-  if (cells[start+18].display == 0) {
-    emptyCells.push(start+18);
-  }
-  if (cells[start+19].display == 0) {
-    emptyCells.push(start+19);
-  }
-  if (cells[start+20].display == 0) {
-    emptyCells.push(start+20);
-  }
-  cells[cell].display = cells[cell];
-  /* Test Empty Cells */
-  emptyCells.forEach(td => {
-    if (result && !isInVertical(td, cells[cell].display) && !isInHorizonal(td, cells[cell].display)) {
-      result = false;
-    }
-  });
-  return result;
-}
-
-//can this cell be solved with variant rules?
-function isVariantSolvable(cell) {
-
-  //HERE
-  return false;
-}
 
 
 
-/* Game Play */
+  /* Game Display */
 
-//change selected number
-function selectNumber(selection) {
-  c("selectNumber("+selection+")");
-  /* Set Grid HighlightColor */
-  for (cellNumber = 0; cellNumber < 81; cellNumber++) {
-    var cellElement = getCellElement(cellNumber);
-    //note highlightColor
-    if (cells[cellNumber].display==-2) {
-      for (i = 1; i < 10; i++) {
-        if (i == selection) {
-          document.getElementById("n"+i+cellNumber).style.backgroundColor = darkColor;
-          document.getElementById("n"+i+cellNumber).style.zIndex = "1";
-        } else {
-          document.getElementById("n"+i+cellNumber).style.backgroundColor = lightColor;
-          document.getElementById("n"+i+cellNumber).style.zIndex = "0";
+  //decide which cells to show and hide
+  function displayGame() {
+    c("displayGame()");
+    resizePageElements();
+    /* Unsolve */
+    var testedNumbers = new Array([0]);
+    var stopCounter = 81 - Math.floor(Math.random()*5+parseInt(difficulty));
+    while (stopCounter > 0 && testedNumbers.length < 81) {
+      var cellNumber = Math.floor(Math.random()*81);
+      if (!testedNumbers.includes(cellNumber)) {
+        testedNumbers.push(cellNumber);
+        //is this cell solvable?
+        if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber) || isVariantSolvable(cellNumber)) {
+          //HERE set notes
+          numberTotals[cells[cellNumber].display]++;
+          cells[cellNumber].display = 0;
+          stopCounter--;
         }
       }
     }
-    //number highlightColor
-    else if (selection == cellElement.innerHTML && cells[cellNumber].display != 0) {
-      cellElement.style.backgroundColor = darkColor;
-      if (cellElement.style.fontSize == "85%") {
-        cellElement.style.color = lightColor;
+    noteCells = new Array(81);
+    /* Display Cells */
+    for (i = 0; i < 81; i++) {
+      if (cells[i].display > 0) {
+        getCellElement(i).innerHTML = cells[i].display;
+        getCellElement(i).style.fontWeight = "1000";
+      } else {
+        getCellElement(i).innerHTML = " ";
+        userCells.push(i);
       }
     }
-    //no highlightColor
-    else {
-      cellElement.style.backgroundColor = lightColor;
-      if (cellElement.style.fontSize == "85%") {
-        cellElement.style.color = hintColor;
-      }
+    /* Last Minute Game Prep */
+    for (i = 0; i < 81; i++) {
+      noteCells[i] = [0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0];
     }
+    selectNumber(1);
   }
-  selectionElement.style.padding = "0";
-  /* Select Number */
-  if (selection != 0) {
-    counterElement.style.visibility = "visible";
-    counterElement.innerHTML = numberTotals[selection];
-    selectionElement.innerHTML = selection;
-    if (currentSelection == 0) {
-      selectionElement.style.fontSize = "200%";
-      selectionElement.style.color = textColor;
-      currentSelection = selection;
-    }
-  } else {
-    currentSelection = 0;
-    selectionElement.innerHTML = " ";
-    counterElement.style.visibility = "hidden";
-  }
-  if (currentSelection == -2) {
-    switch (selection) {
-      case 1:
-        selectionElement.style.padding = "0 10% 10% 0";
-        break;
-      case 2:
-        selectionElement.style.padding = "0 0 10% 0";
-        break;
-      case 3:
-        selectionElement.style.padding = "0 0 10% 10%";
-        break;
-      case 4:
-        selectionElement.style.padding = "0 10% 0 0";
-        break;
-      case 5:
-        selectionElement.style.padding = "0 0 0 0";
-        break;
-      case 6:
-        selectionElement.style.padding = "0 0 0 10%";
-        break;
-      case 7:
-        selectionElement.style.padding = "10% 10% 0 0";
-        break;
-      case 8:
-        selectionElement.style.padding = "10% 0 0 0";
-        break;
-      case 9:
-        selectionElement.style.padding = "10% 0 0 10%";
-        break;
-    }
-  }
-}
 
-//change cell html
-function changeCell(cellNumber, moveDirection = 0) {
-  c("changeCell(" +cellNumber+", "+")");
-  if (getCellElement(cellNumber).innerHTML != " " || currentSelection != 0) {
-    if (userCells.includes(cellNumber)) {
+  //is this cells number the only option for this cell?
+  function isDefaultNumber(cell) {
+    var result = false;
+    var otherNumbers = new Array();
+    //HERE test noteCells, use dummy numbers for next part
+    for (x = 1; x < 10; x++) {
+      if (x != cells[cell].display) {
+        if (isInVertical(cell, x) || isInHorizonal(cell, x) || isInBox(cell, x)) {
+          otherNumbers.push(x);
+        }
+      }
+    }
+    if (otherNumbers.length == 8) {
+      result = true;
+    }
+    return result;
+  }
+
+  //is this cell the only option for this cells number?
+  function isDefaultCell(cell) {
+    var result = true;
+    var emptyCells = new Array();
+    //HERE test noteCells, use dummy numbers for next part
+    /* Find Empty Cells In Row */
+    var temp = Math.floor(cell/9)*9;
+    for (i = temp; i < temp+9; i++) {
+      if (cells[i].display == 0) {
+        emptyCells.push(i);
+      }
+    }
+    /* Find Empty Cells In Column */
+    for (i = cell-9; i > -1; i -= 9) {
+      if (cells[i].display == 0) {
+        emptyCells.push(i);
+      }
+    }
+    for (i = cell+9; i < 81; i += 9) {
+      if (cells[i].display == 0) {
+        emptyCells.push(i);
+      }
+    }
+    /* Find Box */
+    var adjust = 0;
+    temp = cell / 3 +" ";
+    if (temp.includes(".6")) {
+      adjust = -2;
+    } else if (temp.includes(".3")) {
+      adjust = -1;
+    }
+    temp = cell;
+    while (temp > 26) {
+      temp -= 27;
+    }
+    temp = Math.floor(temp/9)*9;
+    var start = cell + adjust - temp;
+    /* Find Empty Cells In Box */
+    cells[cell].display=-1;
+    if (cells[start].display == 0) {
+      emptyCells.push(start);
+    }
+    if (cells[start + 1].display == 0) {
+      emptyCells.push(start +1);
+    }
+    if (cells[start +2].display == 0) {
+      emptyCells.push(start+2);
+    }
+    if (cells[start+9].display == 0) {
+      emptyCells.push(start+9);
+    }
+    if (cells[start+10].display == 0) {
+      emptyCells.push(start+10);
+    }
+    if (cells[start+11].display == 0) {
+      emptyCells.push(start+11);
+    }
+    if (cells[start+18].display == 0) {
+      emptyCells.push(start+18);
+    }
+    if (cells[start+19].display == 0) {
+      emptyCells.push(start+19);
+    }
+    if (cells[start+20].display == 0) {
+      emptyCells.push(start+20);
+    }
+    cells[cell].display = cells[cell];
+    /* Test Empty Cells */
+    emptyCells.forEach(td => {
+      if (result && !isInVertical(td, cells[cell].display) && !isInHorizonal(td, cells[cell].display)) {
+        result = false;
+      }
+    });
+    return result;
+  }
+
+  //can this cell be solved with variant rules?
+  function isVariantSolvable(cell) {
+
+    //HERE
+    return false;
+  }
+
+
+
+  /* Game Play */
+
+  //change selected number
+  function selectNumber(selection) {
+    c("selectNumber("+selection+")");
+    /* Set Grid HighlightColor */
+    for (cellNumber = 0; cellNumber < 81; cellNumber++) {
       var cellElement = getCellElement(cellNumber);
-      var cellNoteMode = cells[cellNumber].display;
-      var content = selectionElement.innerHTML;
-      //undo
-      if (moveDirection ==-1) {
-        content = undoList[currentMove][1];
-        cellNoteMode = undoList[currentMove][2];
+      //note highlightColor
+      if (cells[cellNumber].display==-2) {
+        for (i = 1; i < 10; i++) {
+          if (i == selection) {
+            document.getElementById("n"+i+cellNumber).style.backgroundColor = darkColor;
+            document.getElementById("n"+i+cellNumber).style.zIndex = "1";
+          } else {
+            document.getElementById("n"+i+cellNumber).style.backgroundColor = lightColor;
+            document.getElementById("n"+i+cellNumber).style.zIndex = "0";
+          }
+        }
       }
-      //redo
-      else if (moveDirection == 1) {
-        content = redoList[currentMove][1];
-        cellNoteMode = redoList[currentMove][2];
+      //number highlightColor
+      else if (selection == cellElement.innerHTML && cells[cellNumber].display != 0) {
+        cellElement.style.backgroundColor = darkColor;
+        if (cellElement.style.fontSize == "85%") {
+          cellElement.style.color = lightColor;
+        }
       }
-      //regular
+      //no highlightColor
       else {
-        redoList.push([]);
-        undoList.push([]);
-        undoList[currentMove] = [
+        cellElement.style.backgroundColor = lightColor;
+        if (cellElement.style.fontSize == "85%") {
+          cellElement.style.color = hintColor;
+        }
+      }
+    }
+    selectionElement.style.padding = "0";
+    /* Select Number */
+    if (selection != 0) {
+      counterElement.style.visibility = "visible";
+      counterElement.innerHTML = numberTotals[selection];
+      selectionElement.innerHTML = selection;
+      if (currentSelection == 0) {
+        selectionElement.style.fontSize = "200%";
+        selectionElement.style.color = textColor;
+        currentSelection = selection;
+      }
+    } else {
+      currentSelection = 0;
+      selectionElement.innerHTML = " ";
+      counterElement.style.visibility = "hidden";
+    }
+    if (currentSelection == -2) {
+      switch (selection) {
+        case 1:
+          selectionElement.style.padding = "0 10% 10% 0";
+          break;
+        case 2:
+          selectionElement.style.padding = "0 0 10% 0";
+          break;
+        case 3:
+          selectionElement.style.padding = "0 0 10% 10%";
+          break;
+        case 4:
+          selectionElement.style.padding = "0 10% 0 0";
+          break;
+        case 5:
+          selectionElement.style.padding = "0 0 0 0";
+          break;
+        case 6:
+          selectionElement.style.padding = "0 0 0 10%";
+          break;
+        case 7:
+          selectionElement.style.padding = "10% 10% 0 0";
+          break;
+        case 8:
+          selectionElement.style.padding = "10% 0 0 0";
+          break;
+        case 9:
+          selectionElement.style.padding = "10% 0 0 10%";
+          break;
+      }
+    }
+  }
+
+  //change cell html
+  function changeCell(cellNumber, moveDirection = 0) {
+    c("changeCell(" +cellNumber+", "+")");
+    if (getCellElement(cellNumber).innerHTML != " " || currentSelection != 0) {
+      if (userCells.includes(cellNumber)) {
+        var cellElement = getCellElement(cellNumber);
+        var cellNoteMode = cells[cellNumber].display;
+        var content = selectionElement.innerHTML;
+        //undo
+        if (moveDirection ==-1) {
+          content = undoList[currentMove][1];
+          cellNoteMode = undoList[currentMove][2];
+        }
+        //redo
+        else if (moveDirection == 1) {
+          content = redoList[currentMove][1];
+          cellNoteMode = redoList[currentMove][2];
+        }
+        //regular
+        else {
+          redoList.push([]);
+          undoList.push([]);
+          undoList[currentMove] = [
+            cellNumber,
+            cellElement.innerHTML,
+            cellNoteMode,
+            cellElement.style.color];
+          if (cellElement.innerHTML == selectionElement.innerHTML && currentSelection == cellNoteMode) {
+            cellNoteMode = 0;
+          } else {
+            cellNoteMode = currentSelection;
+          }
+        }
+        //counter element
+        if (cells[cellNumber].display > -2) {
+          numberTotals[cellElement.innerHTML]++;
+          if (cellElement.innerHTML == selectionElement.innerHTML) {
+            counterElement.innerHTML = numberTotals[cellElement.innerHTML];
+          }
+        }
+        /* Erase */
+        if (cellNoteMode == 0) {
+          cellElement.innerHTML = " ";
+          cells[cellNumber].display = 0;
+          noteCells[cellNumber] = [0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0];
+          cellElement.style.backgroundColor = lightColor;
+        }
+        /* Note Number */
+        else if (cellNoteMode == -2) {
+          /* Remove Note From Cell */
+          if (moveDirection == 0 && noteCells[cellNumber][content] > 0) {
+            document.getElementById("n"+content+cellNumber).style.visibility = "hidden";
+            noteCells[cellNumber][content] = 0;
+            //if empty
+            if (noteCells[cellNumber][1] == 0 && noteCells[cellNumber][2] == 0 && noteCells[cellNumber][3] == 0 && noteCells[cellNumber][4] == 0 && noteCells[cellNumber][5] == 0 && noteCells[cellNumber][6] == 0 && noteCells[cellNumber][7] == 0 && noteCells[cellNumber][8] == 0 && noteCells[cellNumber][9] == 0) {
+              cellElement.innerHTML = " ";
+              cells[cellNumber].display = 0;
+              noteCells[cellNumber] = [0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0];
+            }
+          }
+          /* Add Note To Cell */
+          else {
+            cellElement.style.color = textColor;
+            cellElement.style.backgroundColor = lightColor;
+            cellElement.style.fontSize = "50%";
+            //if not undo or redo
+            if (moveDirection == 0) {
+              if (cells[cellNumber].display !=-2) {
+                cellElement.innerHTML = "<div class='notesContainer'><p class='p1' id='n1"+cellNumber+"'>1</p><p class='p2' id='n2"+cellNumber+"'>2</p><p class='p3' id='n3"+cellNumber+"'>3</p><p class='p4' id='n4"+cellNumber+"'>4</p><p class='p5' id='n5"+cellNumber+"'>5</p><p class='p6' id='n6"+cellNumber+"'>6</p><p class='p7' id='n7"+cellNumber+"'>7</p><p class='p8' id='n8"+cellNumber+"'>8</p><p class='p9' id='n9"+cellNumber+"'>9</p></div>";
+              }
+              document.getElementById("n"+content+cellNumber).style.visibility = "visible";
+              noteCells[cellNumber][content] = content;
+            } else {
+              cellElement.innerHTML = content;
+            }
+            cells[cellNumber].display = -2;
+            for (i = 1; i < 10; i++) {
+              if (i == selectionElement.innerHTML) {
+                document.getElementById("n"+i+cellNumber).style.backgroundColor = darkColor;
+                document.getElementById("n"+i+cellNumber).style.zIndex = "1";
+              } else {
+                document.getElementById("n"+i+cellNumber).style.backgroundColor = lightColor;
+                document.getElementById("n"+i+cellNumber).style.zIndex = "0";
+              }
+            }
+          }
+        }
+        /* Regular Number */
+        else {
+          cells[cellNumber].display = content;
+          cellElement.innerHTML = content;
+          numberTotals[content]--;
+          if (content == selectionElement.innerHTML) {
+            counterElement.innerHTML = numberTotals[content];
+          }
+          noteCells[cellNumber] = [0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0];
+          if (cellNoteMode == -1) {
+            cellElement.style.color = hintColor;
+            cellElement.style.fontSize = "85%";
+            cells[cellNumber].display = -1;
+          } else {
+            cells[cellNumber].display = content;
+            cellElement.style.fontSize = "100%";
+            if (moveDirection == 0) {
+              cellElement.style.color = textColor;
+              if (checkAnswer(cellNumber)) {
+                //HERE autoRemoveNotes();
+              }
+            } else if (moveDirection==-1) {
+              cellElement.style.color = undoList[currentMove][3];
+              //autoReplaceNotes();
+            } else {
+              cellElement.style.color = redoList[currentMove][3];
+              //autoReplaceNotes();
+            }
+          }
+        }
+      }
+      /* HighlightColor Numbers */
+      if (content == selectionElement.innerHTML && currentSelection > -2 && cells[cellNumber].display != 0) {
+        cellElement.style.backgroundColor = darkColor;
+        if (cellElement.style.fontSize == "85%") {
+          cellElement.style.color = lightColor;
+        }
+      }
+      if (moveDirection == 0) {
+        currentMove++;
+        redoList[currentMove] = [
           cellNumber,
           cellElement.innerHTML,
           cellNoteMode,
           cellElement.style.color];
-        if (cellElement.innerHTML == selectionElement.innerHTML && currentSelection == cellNoteMode) {
-          cellNoteMode = 0;
-        } else {
-          cellNoteMode = currentSelection;
-        }
       }
-      //counter element
-      if (cells[cellNumber].display > -2) {
-        numberTotals[cellElement.innerHTML]++;
-        if (cellElement.innerHTML == selectionElement.innerHTML) {
-          counterElement.innerHTML = numberTotals[cellElement.innerHTML];
+    }
+  }
+
+  //undo or redo
+  function changeMove(direction) {
+    c("changeMove(" + direction+")");
+    if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < redoList.length -1) {
+      currentMove += direction;
+      if (direction==-1) {
+        /* Undo  Restart */
+        if (undoList[currentMove][0] == 81) {
+          //HERE
         }
-      }
-      /* Erase */
-      if (cellNoteMode == 0) {
-        cellElement.innerHTML = " ";
-        cells[cellNumber].display = 0;
-        noteCells[cellNumber] = [0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0];
-        cellElement.style.backgroundColor = lightColor;
-      }
-      /* Note Number */
-      else if (cellNoteMode == -2) {
-        /* Remove Note From Cell */
-        if (moveDirection == 0 && noteCells[cellNumber][content] > 0) {
-          document.getElementById("n"+content+cellNumber).style.visibility = "hidden";
-          noteCells[cellNumber][content] = 0;
-          //if empty
-          if (noteCells[cellNumber][1] == 0 && noteCells[cellNumber][2] == 0 && noteCells[cellNumber][3] == 0 && noteCells[cellNumber][4] == 0 && noteCells[cellNumber][5] == 0 && noteCells[cellNumber][6] == 0 && noteCells[cellNumber][7] == 0 && noteCells[cellNumber][8] == 0 && noteCells[cellNumber][9] == 0) {
-            cellElement.innerHTML = " ";
-            cells[cellNumber].display = 0;
-            noteCells[cellNumber] = [0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0];
-          }
-        }
-        /* Add Note To Cell */
+        /* Normal Undo */
         else {
-          cellElement.style.color = textColor;
-          cellElement.style.backgroundColor = lightColor;
-          cellElement.style.fontSize = "50%";
-          //if not undo or redo
-          if (moveDirection == 0) {
-            if (cells[cellNumber].display !=-2) {
-              cellElement.innerHTML = "<div class='notesContainer'><p class='p1' id='n1"+cellNumber+"'>1</p><p class='p2' id='n2"+cellNumber+"'>2</p><p class='p3' id='n3"+cellNumber+"'>3</p><p class='p4' id='n4"+cellNumber+"'>4</p><p class='p5' id='n5"+cellNumber+"'>5</p><p class='p6' id='n6"+cellNumber+"'>6</p><p class='p7' id='n7"+cellNumber+"'>7</p><p class='p8' id='n8"+cellNumber+"'>8</p><p class='p9' id='n9"+cellNumber+"'>9</p></div>";
-            }
-            document.getElementById("n"+content+cellNumber).style.visibility = "visible";
-            noteCells[cellNumber][content] = content;
-          } else {
-            cellElement.innerHTML = content;
-          }
-          cells[cellNumber].display = -2;
-          for (i = 1; i < 10; i++) {
-            if (i == selectionElement.innerHTML) {
-              document.getElementById("n"+i+cellNumber).style.backgroundColor = darkColor;
-              document.getElementById("n"+i+cellNumber).style.zIndex = "1";
-            } else {
-              document.getElementById("n"+i+cellNumber).style.backgroundColor = lightColor;
-              document.getElementById("n"+i+cellNumber).style.zIndex = "0";
-            }
-          }
+          changeCell(undoList[currentMove][0], direction);
         }
-      }
-      /* Regular Number */
-      else {
-        cells[cellNumber].display = content;
-        cellElement.innerHTML = content;
-        numberTotals[content]--;
-        if (content == selectionElement.innerHTML) {
-          counterElement.innerHTML = numberTotals[content];
+      } else {
+        /* Redo Restart */
+        if (redoList[currentMove][0] == 81) {
+          //HERE
         }
-        noteCells[cellNumber] = [0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0];
-        if (cellNoteMode == -1) {
-          cellElement.style.color = hintColor;
-          cellElement.style.fontSize = "85%";
-          cells[cellNumber].display = -1;
-        } else {
-          cells[cellNumber].display = content;
-          cellElement.style.fontSize = "100%";
-          if (moveDirection == 0) {
-            cellElement.style.color = textColor;
-            if (checkAnswer(cellNumber)) {
-              //HERE autoRemoveNotes();
-            }
-          } else if (moveDirection==-1) {
-            cellElement.style.color = undoList[currentMove][3];
-            //autoReplaceNotes();
-          } else {
-            cellElement.style.color = redoList[currentMove][3];
-            //autoReplaceNotes();
-          }
+        /* Normal Redo */
+        else {
+          changeCell(redoList[currentMove][0], direction);
         }
-      }
-    }
-    /* HighlightColor Numbers */
-    if (content == selectionElement.innerHTML && currentSelection > -2 && cells[cellNumber].display != 0) {
-      cellElement.style.backgroundColor = darkColor;
-      if (cellElement.style.fontSize == "85%") {
-        cellElement.style.color = lightColor;
-      }
-    }
-    if (moveDirection == 0) {
-      currentMove++;
-      redoList[currentMove] = [
-        cellNumber,
-        cellElement.innerHTML,
-        cellNoteMode,
-        cellElement.style.color];
-    }
-  }
-}
-
-//undo or redo
-function changeMove(direction) {
-  c("changeMove(" + direction+")");
-  if (direction == -1 && currentMove > 0 || direction == 1 && currentMove < redoList.length -1) {
-    currentMove += direction;
-    if (direction==-1) {
-      /* Undo  Restart */
-      if (undoList[currentMove][0] == 81) {
-        //HERE
-      }
-      /* Normal Undo */
-      else {
-        changeCell(undoList[currentMove][0], direction);
-      }
-    } else {
-      /* Redo Restart */
-      if (redoList[currentMove][0] == 81) {
-        //HERE
-      }
-      /* Normal Redo */
-      else {
-        changeCell(redoList[currentMove][0], direction);
       }
     }
   }
-}
 
-//checkAnswer(81, true) is autocheck button
-//check cell answer or update autoCheck
-function checkAnswer(cellNumber, changingAutoCheck = false) {
-  c("checkAnswer(" + cellNumber + ", " + changingAutoCheck+")");
-  //HERE when unselecting autocheck, unred any red numbers
-  var result = true;
-  if (changingAutoCheck) {
-    autoCheck=!autoCheck;
-    if (autoCheck) {
+  //checkAnswer(81, true) is autocheck button
+  //check cell answer or update autoCheck
+  function checkAnswer(cellNumber, changingAutoCheck = false) {
+    c("checkAnswer(" + cellNumber + ", " + changingAutoCheck+")");
+    //HERE when unselecting autocheck, unred any red numbers
+    var result = true;
+    if (changingAutoCheck) {
+      autoCheck=!autoCheck;
+      if (autoCheck) {
+        document.getElementById("wrongElement").style.visibility = "visible";
+        for (i = 0; i < 81; i++) {
+          if (cells[cellNumber].display > 0 && cells[cellNumber].display != cells[cellNumber]) {
+            result = false;
+            wrongList.push(cellNumber);
+            getCellElement(cellNumber).style.color = red;
+          }
+        }
+      } else {
+        document.getElementById("wrongElement").style.visibility = "hidden";
+        for (i = 0; i < 81; i++) {
+          if (wrongList.includes(cellNumber)) {
+            wrongList.splice(wrongList.indexOf(cellNumber), 1);
+            getCellElement(cellNumber).style.color = textColor;
+          }
+        }
+      }
+    } else if (autoCheck) {
+      var addOne = false;
+      if (wrongList.includes(cellNumber)) {
+        wrongList.splice(wrongList.indexOf(cellNumber), 1);
+      }
+      if (cells[cellNumber].display != cells[cellNumber]) {
+        wrongList.push(cellNumber);
+        getCellElement(cellNumber).style.color = "red";
+        addOne = true;
+        result = false;
+      }
+      document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML) + addOne;
+    }
+    return result;
+  }
+
+  //automatically remove invalid notes from grid
+  function autoRemoveNotes() {
+    c("autoRemoveNotes()");
+    //if autoremove notes in settings is on
+    if (true) {
+      //HERE
+      //remove horizontal, vertical, and box
+    } else {}
+  }
+
+  //change selected note mode
+  function updateNoteMode() {
+    c("updateNoteMode()");
+    selectionElement.style.padding = 0;
+    /* Regular Number Mode */
+    if (currentSelection == -2) {
+      currentSelection = selectionElement.innerHTML;
+      selectionElement.style.fontSize = "200%";
+    }
+    /* Grey Note Number Mode */
+    else if (currentSelection > 0) {
+      currentSelection = -1;
+      selectionElement.style.color = hintColor;
+      selectionElement.style.fontSize = "150%";
+    }
+    /* Note Mode */
+    else if (currentSelection==-1) {
+      currentSelection=-2;
+      selectionElement.style.color = textColor;
+      selectionElement.style.fontSize = "75%";
+      switch (parseInt(selectionElement.innerHTML)) {
+        case 1:
+          selectionElement.style.padding = "0 10% 10% 0";
+          break;
+        case 2:
+          selectionElement.style.padding = "0 0 10% 0";
+          break;
+        case 3:
+          selectionElement.style.padding = "0 0 10% 10%";
+          break;
+        case 4:
+          selectionElement.style.padding = "0 10% 0 0";
+          break;
+        case 5:
+          selectionElement.style.padding = "0 0 0 0";
+          break;
+        case 6:
+          selectionElement.style.padding = "0 0 0 10%";
+          break;
+        case 7:
+          selectionElement.style.padding = "10% 10% 0 0";
+          break;
+        case 8:
+          selectionElement.style.padding = "10% 0 0 0";
+          break;
+        case 9:
+          selectionElement.style.padding = "10% 0 0 10%";
+          break;
+      }
+    }
+    /* Eraser */
+    if (selectionElement.innerHTML == " ") {
+      currentSelection = 0;
+    }
+  }
+
+  //clear all answers
+  function restart() {
+    c("restart()");
+  }
+
+  //toggle menu
+  function menu() {
+    c("menu()");
+    //HERE HERE HERE
+    if (document.getElementById("menuElement").style.visibility == "visible") {
+      document.getElementById("menuElement").style.visibility = "hidden";
+      document.getElementById("menuElement").style.top = "-8%";
       document.getElementById("wrongElement").style.visibility = "visible";
-      for (i = 0; i < 81; i++) {
-        if (cells[cellNumber].display > 0 && cells[cellNumber].display != cells[cellNumber]) {
-          result = false;
-          wrongList.push(cellNumber);
-          getCellElement(cellNumber).style.color = red;
-        }
-      }
     } else {
+      document.getElementById("menuElement").style.visibility = "visible";
+      document.getElementById("menuElement").style.top = "2%";
       document.getElementById("wrongElement").style.visibility = "hidden";
-      for (i = 0; i < 81; i++) {
-        if (wrongList.includes(cellNumber)) {
-          wrongList.splice(wrongList.indexOf(cellNumber), 1);
-          getCellElement(cellNumber).style.color = textColor;
-        }
-      }
-    }
-  } else if (autoCheck) {
-    var addOne = false;
-    if (wrongList.includes(cellNumber)) {
-      wrongList.splice(wrongList.indexOf(cellNumber), 1);
-    }
-    if (cells[cellNumber].display != cells[cellNumber]) {
-      wrongList.push(cellNumber);
-      getCellElement(cellNumber).style.color = "red";
-      addOne = true;
-      result = false;
-    }
-    document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML) + addOne;
-  }
-  return result;
-}
-
-//automatically remove invalid notes from grid
-function autoRemoveNotes() {
-  c("autoRemoveNotes()");
-  //if autoremove notes in settings is on
-  if (true) {
-    //HERE
-    //remove horizontal, vertical, and box
-  } else {}
-}
-
-//change selected note mode
-function updateNoteMode() {
-  c("updateNoteMode()");
-  selectionElement.style.padding = 0;
-  /* Regular Number Mode */
-  if (currentSelection == -2) {
-    currentSelection = selectionElement.innerHTML;
-    selectionElement.style.fontSize = "200%";
-  }
-  /* Grey Note Number Mode */
-  else if (currentSelection > 0) {
-    currentSelection = -1;
-    selectionElement.style.color = hintColor;
-    selectionElement.style.fontSize = "150%";
-  }
-  /* Note Mode */
-  else if (currentSelection==-1) {
-    currentSelection=-2;
-    selectionElement.style.color = textColor;
-    selectionElement.style.fontSize = "75%";
-    switch (parseInt(selectionElement.innerHTML)) {
-      case 1:
-        selectionElement.style.padding = "0 10% 10% 0";
-        break;
-      case 2:
-        selectionElement.style.padding = "0 0 10% 0";
-        break;
-      case 3:
-        selectionElement.style.padding = "0 0 10% 10%";
-        break;
-      case 4:
-        selectionElement.style.padding = "0 10% 0 0";
-        break;
-      case 5:
-        selectionElement.style.padding = "0 0 0 0";
-        break;
-      case 6:
-        selectionElement.style.padding = "0 0 0 10%";
-        break;
-      case 7:
-        selectionElement.style.padding = "10% 10% 0 0";
-        break;
-      case 8:
-        selectionElement.style.padding = "10% 0 0 0";
-        break;
-      case 9:
-        selectionElement.style.padding = "10% 0 0 10%";
-        break;
     }
   }
-  /* Eraser */
-  if (selectionElement.innerHTML == " ") {
-    currentSelection = 0;
-  }
-}
 
-//clear all answers
-function restart() {
-  c("restart()");
-}
-
-//toggle menu
-function menu() {
-  c("menu()");
-  //HERE HERE HERE
-  if (document.getElementById("menuElement").style.visibility == "visible") {
-    document.getElementById("menuElement").style.visibility = "hidden";
-    document.getElementById("menuElement").style.top = "-8%";
-    document.getElementById("wrongElement").style.visibility = "visible";
-  } else {
-    document.getElementById("menuElement").style.visibility = "visible";
-    document.getElementById("menuElement").style.top = "2%";
-    document.getElementById("wrongElement").style.visibility = "hidden";
-  }
-}
-
-/*//HERE
+  /*//HERE
 capitalize notes
 have a numbers page when you click the wrong answers button (number of undos, redos, restarts, total time (saved games), ingame time, etc?)
 please enable javascript screen
