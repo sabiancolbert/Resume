@@ -146,6 +146,8 @@ function decideGridNumbers() {
       cells[currentCell] = {
         "display": 0
       };
+      c("ALL CELLS 0")
+      c(cells);
     }
     /* Set Every Cell's Info (cells[0-80]) */
     while (currentCell > 0 && currentCell < 82) {
