@@ -187,6 +187,9 @@ function decideGridNumbers() {
         currentCell++;
       }
     }
+    c("&"+cells[0]);
+    c(cells[0][0]);
+    c(cells[0].display);
     /* Start Or noPossibleGames Game */
     if (currentCell==-1) {
       noPossibleGames();
