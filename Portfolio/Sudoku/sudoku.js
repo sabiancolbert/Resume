@@ -140,7 +140,7 @@ function decideGridNumbers() {
     //counterElement = document.getElementById("counterElement");
     //selectionElement = document.getElementById("selectionElement");
     var attemptedNumbers = new Array(81);
-    for (i = 1; i < 82; i++) {
+    /*for (i = 1; i < 82; i++) {
       //HERE HERE everything is 1-82 instead of 0-81
       attemptedNumbers[i] = [];
       cells[currentCell] = {
@@ -148,7 +148,7 @@ function decideGridNumbers() {
       };
     }
     c("ALL CELLS 0")
-    c(cells);
+    c(cells);*/
     /* Set Every Cell's Info (cells[0-80]) */
     while (currentCell > 0 && currentCell < 82) {
       var number = 0;
