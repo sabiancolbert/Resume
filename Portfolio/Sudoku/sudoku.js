@@ -158,10 +158,11 @@ function decideGridNumbers() {
         if (!attemptedNumbers[currentCell].includes(number)) {
           c("a");
           attemptedNumbers[currentCell].push(number);
+          c(cells[currentCell]);
           if (!isInVertical(currentCell, number) && !isInHorizonal(currentCell, number) && !isInBox(currentCell, number)) {
-          c("b");
+            c("b");
             if (isVariantValid(currentCell, number)) {
-          c("c");
+              c("c");
               invalid = false;
             }
           }
