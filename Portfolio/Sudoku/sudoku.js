@@ -211,18 +211,16 @@ function getCellElement(cellNumber) {
 //search for the same number in the same column
 function isInVertical(cell, number) {
   var result = false;
-  if (number == 0) {
-    number = 10;
-  }
-  c(number +"&");
   for (i = cell-9; i > -1; i -= 9) {
     if (cells[i].display == number) {
       result = true;
+      c("v");
     }
   }
   for (i = cell+9; i < 81; i += 9) {
     if (cells[i].display == number) {
       result = true;
+      c("v");
     }
   }
   return result;
@@ -231,13 +229,11 @@ function isInVertical(cell, number) {
 //search for the same number in the same row
 function isInHorizonal(cell, number) {
   var result = false;
-  if (number == 0) {
-    number = 10;
-  }
   var rowStart = Math.floor(cell/9)*9;
   for (i = rowStart; i < rowStart+9; i++) {
     if (cells[i].display == number) {
       result = true;
+      c("h");
     }
   }
   return result;
@@ -246,9 +242,6 @@ function isInHorizonal(cell, number) {
 //search for the same number in the same 3x3 box
 function isInBox(cell, number) {
   var result = false;
-  if (number == 0) {
-    number = 10;
-  }
   /* Find stopCounterping Cell */
   var adjust = 0;
   var temp = cell / 3 +" ";
@@ -267,7 +260,7 @@ function isInBox(cell, number) {
   for (i = stopCounter + 18; i >= stopCounter; i -= 9) {
     if (cells[i].display == number || cells[i+1].display == number || cells[i+2].display == number) {
       result = true;
-      c("go");
+      c("box");
     } else {
       c("fail");
     }
