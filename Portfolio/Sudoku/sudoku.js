@@ -1,6 +1,6 @@
 /* Globals */
 //one extra cell for readability (82 cells instead of 81 cells so that cells[1] is the first cell instead of cells[0]~)
-var cells = new Array(82);
+var cells = new Array([]);
 //one extra for readability (10 instead of 9)
 var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 //for game creation
@@ -147,8 +147,8 @@ function decideGridNumbers() {
         "display": 0
       };
     }
-      c("ALL CELLS 0")
-      c(cells);
+    c("ALL CELLS 0")
+    c(cells);
     /* Set Every Cell's Info (cells[0-80]) */
     while (currentCell > 0 && currentCell < 82) {
       var number = 0;
