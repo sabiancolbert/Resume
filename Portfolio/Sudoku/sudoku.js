@@ -167,7 +167,9 @@ function decideGridNumbers() {
       /* If No Numbers Are Valid */
       if (invalid) {
         attemptedNumbers[currentCell] = [];
-        cells[currentCell]={"display":0};
+        cells[currentCell] = {
+          "display": 0
+        };
         currentCell--;
       }
       /* If Valid Number Is Found */
@@ -186,9 +188,8 @@ function decideGridNumbers() {
         currentCell++;
       }
     }
-    c(cells[0]);
-    c(cells[0][0]);
-    c(cells[0].display);
+    c(cells[80]);
+    c(cells[80].display);
     /* Start Or noPossibleGames Game */
     if (currentCell==-1) {
       noPossibleGames();
