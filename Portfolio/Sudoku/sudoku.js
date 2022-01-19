@@ -253,7 +253,9 @@ function isInBox(cell, number) {
   for (i = stopCounter + 18; i >= stopCounter; i -= 9) {
     if (cells[i].display == number || cells[i+1].display == number || cells[i+2].display == number) {
       result = true;
+      c("go");
     }
+    else{c("fail");}
   }
   return result;
 }
