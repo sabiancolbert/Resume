@@ -148,7 +148,6 @@ function decideGridNumbers() {
       };
     }
     /* Set Every Cell's Info (cells[0-80]) */
-    c(currentCell +"&&");
     while (currentCell > 0 && currentCell < 82) {
       var number = 0;
       var invalid = true;
