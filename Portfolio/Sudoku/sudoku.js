@@ -229,7 +229,7 @@ function isInVertical(cell, number) {
 //search for the same number in the same row
 function isInHorizonal(cell, number) {
   var result = false;
-  var rowStart = Math.floor(cell/9)*9;
+  var rowStart = Math.floor(cell/9) * 9 + 1;
   for (i = rowStart; i < rowStart+9; i++) {
     c(i);
     if (cells[i].display == number) {
@@ -254,7 +254,7 @@ function isInBox(cell, number) {
   while (temp > 26) {
     temp -= 27;
   }
-  temp = Math.floor(temp/9)*9;
+  temp = Math.floor(temp/9)*9 +1;
   var stopCounter = cell + adjust - temp;
   /* Test Box */
   for (i = stopCounter + 18; i >= stopCounter; i -= 9) {
