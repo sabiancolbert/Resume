@@ -156,9 +156,12 @@ function decideGridNumbers() {
       while (invalid && attemptedNumbers[currentCell].length < 10) {
         number = Math.floor(Math.random()*9+1);
         if (!attemptedNumbers[currentCell].includes(number)) {
+          c("a");
           attemptedNumbers[currentCell].push(number);
           if (!isInVertical(currentCell, number) && !isInHorizonal(currentCell, number) && !isInBox(currentCell, number)) {
+          c("b");
             if (isVariantValid(currentCell, number)) {
+          c("c");
               invalid = false;
             }
           }
