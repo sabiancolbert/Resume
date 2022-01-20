@@ -256,8 +256,9 @@ function isInBox(cell, number) {
   temp = Math.floor(temp/9)*9 + 1;
   var stopCounter = cell + adjust - temp;
   /* Test Box */
+  c("stop"+stopCounter);
   for (i = stopCounter + 18; i >= stopCounter; i -= 9) {
-    c(i);
+    c("i"+i);
     if (cells[i].display == number || cells[i+1].display == number || cells[i+2].display == number) {
       result = true;
     }
