@@ -230,14 +230,14 @@ function isInVertical(cell, number) {
 function isInHorizonal(cell, number) {
   var result = false;
   c("cell"+cell);
-  var rowStart = Math.floor(cell/9) * 9;
-  c("row"+rowStart);
+  var rowStart = Math.floor(cell/9) * 9 + 1;
+  c("row"+rowStart);/*
   for (i = rowStart; i < rowStart+9; i++) {
     c(i);
     if (cells[i].display == number) {
       result = true;
     }
-  }
+  }*/
   return result;
 }
 
