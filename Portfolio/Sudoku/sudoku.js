@@ -162,11 +162,11 @@ function decideGridNumbers() {
           attemptedNumbers[currentCell].push(number);
           c(cells[currentCell]);
           if (!isInVertical(currentCell, number) && !isInHorizonal(currentCell, number) && !isInBox(currentCell, number)) {
-            c("b");
+            /*c("b");
             if (isVariantValid(currentCell, number)) {
               c("c");
               invalid = false;
-            }
+            }*/
           }
         }
       }
@@ -229,15 +229,13 @@ function isInVertical(cell, number) {
 //search for the same number in the same row
 function isInHorizonal(cell, number) {
   var result = false;
-  c("cell"+cell);
   var rowStart = Math.floor(cell/9) * 9 + 1;
-  c("row"+rowStart);/*
   for (i = rowStart; i < rowStart+9; i++) {
     c(i);
     if (cells[i].display == number) {
       result = true;
     }
-  }*/
+  }
   return result;
 }
 
@@ -256,7 +254,7 @@ function isInBox(cell, number) {
   while (temp > 26) {
     temp -= 27;
   }
-  temp = Math.floor(temp/9)*9;
+  temp = Math.floor(temp/9)*9 + 1;
   var stopCounter = cell + adjust - temp;
   /* Test Box */
   for (i = stopCounter + 18; i >= stopCounter; i -= 9) {
