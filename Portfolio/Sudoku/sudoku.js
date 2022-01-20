@@ -32,6 +32,7 @@ const STACK_LINE_REGEX = /(\d+):(\d+)\)?$/;
 
 function c(c) {
   //HERE HERE HERE
+  console.log(c);
   /*
   try {
     var string = "noPossibleGamesedString";
@@ -57,7 +58,6 @@ function c(c) {
     console.log(erro);
   }
   */
-  console.log(c);
 }
 
 //HERE HERE make sure resizePageElements() is as awesome as possible
