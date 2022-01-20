@@ -231,7 +231,6 @@ function isInHorizonal(cell, number) {
   var result = false;
   var rowStart = Math.floor(cell/9) * 9 + 1;
   for (i = rowStart; i < rowStart+9; i++) {
-    c(i);
     if (cells[i].display == number) {
       result = true;
     }
@@ -258,11 +257,12 @@ function isInBox(cell, number) {
   var stopCounter = cell + adjust - temp;
   /* Test Box */
   for (i = stopCounter + 18; i >= stopCounter; i -= 9) {
+    c(i);
     if (cells[i].display == number || cells[i+1].display == number || cells[i+2].display == number) {
       result = true;
     }
   }
-    return result;
+  return result;
 }
 
 //search for variant rules being broken
