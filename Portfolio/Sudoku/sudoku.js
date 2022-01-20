@@ -241,7 +241,7 @@ function isInHorizonal(cell, number) {
 //search for the same number in the same 3x3 box
 function isInBox(cell, number) {
   var result = false;
-  /* Find  Box *//*
+  /* Find  Box */
   var adjust = 0;
   var temp = cell / 3 +" ";
   if (temp.includes(".6")) {
@@ -255,12 +255,12 @@ function isInBox(cell, number) {
   }
   temp = Math.floor(temp/9)*9;
   var stopCounter = cell + adjust - temp +1;
-  /* Test Box *//*
+  /* Test Box */
   for (i = stopCounter + 18; i >= stopCounter; i -= 9) {
     if (cells[i].display == number || cells[i+1].display == number || cells[i+2].display == number) {
       result = true;
     }
-  }*/
+  }
   return result;
 }
 
