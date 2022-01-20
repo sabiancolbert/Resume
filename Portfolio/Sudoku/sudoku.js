@@ -141,7 +141,6 @@ function decideGridNumbers() {
     //selectionElement = document.getElementById("selectionElement");
     var attemptedNumbers = new Array(81);
     for (i = 1; i < 82; i++) {
-      //HERE HERE everything is 1-82 instead of 0-81
       attemptedNumbers[i] = [];
       cells[i] = {
         "display": 0
@@ -154,7 +153,6 @@ function decideGridNumbers() {
       var number = 0;
       var invalid = true;
       /* Try Each Number For Current Cell (0-80) */
-      //HERE HERE should we ever minus 9 and clear every cell to that point?
       while (invalid && attemptedNumbers[currentCell].length < 10) {
         number = Math.floor(Math.random()*9+1);
         if (!attemptedNumbers[currentCell].includes(number)) {
