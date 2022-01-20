@@ -229,8 +229,8 @@ function isInVertical(cell, number) {
 //search for the same number in the same row
 function isInHorizonal(cell, number) {
   var result = false;
+  c("cell"+cell);
   var rowStart = Math.floor(cell/9) * 9;
-  rowStart++;
   c("row"+rowStart);
   for (i = rowStart; i < rowStart+9; i++) {
     c(i);
