@@ -222,6 +222,7 @@ function isInVertical(cell, number) {
 function isInHorizonal(cell, number) {
   var result = false;
   var rowStart = Math.floor(cell / 9) * 9 + 1;
+  c(rowStart);
   for (i = rowStart; i < rowStart + 9; i++) {
     if (cells[i].display == number) {
       result = true;
