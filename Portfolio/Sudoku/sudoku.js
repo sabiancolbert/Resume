@@ -374,7 +374,7 @@ function isDefaultCell(cell) {
     temp -= 27;
   }
   temp = Math.floor(temp / 9) * 9;
-  var start = cell + adjust - temp;
+  var start = cell + adjust - temp +1;
   /* Find Empty Cells In Box */
   cells[cell].display = -1;
   if (cells[start].display == 0) {
