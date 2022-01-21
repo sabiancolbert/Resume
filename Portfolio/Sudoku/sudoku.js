@@ -151,9 +151,12 @@ function decideGridNumbers() {
       var number = 0;
       var invalid = true;
       /* Try Each Number For Current Cell (0-80) */
-      while (invalid && attemptedNumbers[currentCell].length < 10) {
+      c(currentCell);
+      while (invalid && attemptedNumbers[currentCell].length < 9) {
         number = Math.floor(Math.random() * 9 + 1);
         if (!attemptedNumbers[currentCell].includes(number)) {
+          c("dsfsdf");
+          invalid=false;
           attemptedNumbers[currentCell].push(number);
           if (!isInVertical(currentCell, number) && !isInHorizonal(currentCell, number) && !isInBox(currentCell, number)) {
             if (isVariantValid(currentCell, number)) {
@@ -162,13 +165,13 @@ function decideGridNumbers() {
           }
         }
       }
+      c(attemptedNumbers[currentCell]);
       /* If No Numbers Are Valid */
       if (invalid) {
         attemptedNumbers[currentCell] = [];
         cells[currentCell] = {
           "display": 0
         };
-      c("-"+currentCell);
         currentCell--;
       }
       /* If Valid Number Is Found */
@@ -183,7 +186,6 @@ function decideGridNumbers() {
           "isLocked": false,
           "isWrong": false
         };
-      c("+"+currentCell);
         currentCell++;
       }
     }
