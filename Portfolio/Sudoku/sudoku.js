@@ -223,7 +223,7 @@ function isInHorizonal(cell, number) {
   var result = false;
   var rowStart = Math.floor(cell / 9) * 9 +1;
   c("rowstart"+rowStart);
-  for (i = rowStart; i < rowStart + 8; i++) {
+  for (i = rowStart; i < rowStart + 8; i++) {//HERE +9 instead of +8
     if (cells[i].display == number) {
       result = true;
     }
