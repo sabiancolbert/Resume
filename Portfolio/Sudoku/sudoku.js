@@ -155,8 +155,7 @@ function decideGridNumbers() {
       while (invalid && attemptedNumbers[currentCell].length < 9) {
         number = Math.floor(Math.random() * 9 + 1);
         if (!attemptedNumbers[currentCell].includes(number)) {
-          c("dsfsdf");
-          invalid=false;
+          invalid = false; //HERE HERE HERE
           attemptedNumbers[currentCell].push(number);
           if (!isInVertical(currentCell, number) && !isInHorizonal(currentCell, number) && !isInBox(currentCell, number)) {
             if (isVariantValid(currentCell, number)) {
@@ -165,7 +164,6 @@ function decideGridNumbers() {
           }
         }
       }
-      c(attemptedNumbers[currentCell]);
       /* If No Numbers Are Valid */
       if (invalid) {
         attemptedNumbers[currentCell] = [];
@@ -189,7 +187,7 @@ function decideGridNumbers() {
         currentCell++;
       }
     }
-    c(cells[80]);
+    c(cells);
     /* Start Or noPossibleGames Game */
     if (currentCell == -1) {
       noPossibleGames();
@@ -747,7 +745,7 @@ function autoRemoveNotes() {
   if (true) {
     //HERE
     //remove horizontal, vertical, and box
-  } else { }
+  } else {}
 }
 
 //change selected note mode
