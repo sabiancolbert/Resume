@@ -168,6 +168,7 @@ function decideGridNumbers() {
         cells[currentCell] = {
           "display": 0
         };
+      c("-"+currentCell);
         currentCell--;
       }
       /* If Valid Number Is Found */
@@ -182,9 +183,9 @@ function decideGridNumbers() {
           "isLocked": false,
           "isWrong": false
         };
+      c("+"+currentCell);
         currentCell++;
       }
-      c(currentCell);
     }
     c(cells[80]);
     /* Start Or noPossibleGames Game */
