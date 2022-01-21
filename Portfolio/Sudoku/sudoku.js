@@ -139,7 +139,7 @@ function decideGridNumbers() {
     /* Prepare For decideGridNumbers() */
     //counterElement = document.getElementById("counterElement");
     //selectionElement = document.getElementById("selectionElement");
-    var attemptedNumbers = new Array(81);
+    var attemptedNumbers = new Array(82);
     for (i = 1; i < 82; i++) {
       attemptedNumbers[i] = [];
       cells[i] = {
@@ -222,7 +222,7 @@ function isInVertical(cell, number) {
 function isInHorizonal(cell, number) {
   var result = false;
   var rowStart = Math.floor(cell / 9) * 9 + 1;
-  c(rowStart);
+  c("rowstart"+rowStart);
   for (i = rowStart; i < rowStart + 9; i++) {
     if (cells[i].display == number) {
       result = true;
@@ -279,9 +279,9 @@ function displayGame() {
   resizePageElements();
   /* Unsolve */
   var testedNumbers = new Array([0]);
-  var stopCounter = 81 - Math.floor(Math.random() * 5 + parseInt(difficulty));
-  while (stopCounter > 0 && testedNumbers.length < 81) {
-    var cellNumber = Math.floor(Math.random() * 81);
+  var stopCounter = 82 - Math.floor(Math.random() * 5 + parseInt(difficulty));
+  while (stopCounter > 1 && testedNumbers.length < 82) {
+    var cellNumber = Math.floor(Math.random() * 82);
     if (!testedNumbers.includes(cellNumber)) {
       testedNumbers.push(cellNumber);
       //is this cell solvable?
@@ -293,9 +293,9 @@ function displayGame() {
       }
     }
   }
-  noteCells = new Array(81);
+  noteCells = new Array(82);
   /* Display Cells */
-  for (i = 0; i < 81; i++) {
+  for (i = 1; i < 82; i++) {
     if (cells[i].display > 0) {
       getCellElement(i).innerHTML = cells[i].display;
       getCellElement(i).style.fontWeight = "1000";
@@ -305,7 +305,7 @@ function displayGame() {
     }
   }
   /* Last Minute Game Prep */
-  for (i = 0; i < 81; i++) {
+  for (i = 1; i < 82; i++) {
     noteCells[i] = [0,
       0,
       0,
@@ -352,12 +352,12 @@ function isDefaultCell(cell) {
   }
   /* Find Empty Cells In Column */
   c(cell-9);
-  for (i = cell - 9; i > -1; i -= 9) {
+  for (i = cell - 9; i > 0; i -= 9) {
     if (cells[i].display == 0) {
       emptyCells.push(i);
     }
   }
-  for (i = cell + 9; i < 81; i += 9) {
+  for (i = cell + 9; i < 82; i += 9) {
     if (cells[i].display == 0) {
       emptyCells.push(i);
     }
@@ -430,7 +430,7 @@ function isVariantSolvable(cell) {
 function selectNumber(selection) {
   c("selectNumber(" + selection + ")");
   /* Set Grid HighlightColor */
-  for (cellNumber = 0; cellNumber < 81; cellNumber++) {
+  for (cellNumber = 1; cellNumber < 82; cellNumber++) {
     var cellElement = getCellElement(cellNumber);
     //note highlightColor
     if (cells[cellNumber].display == -2) {
@@ -678,7 +678,7 @@ function changeMove(direction) {
     currentMove += direction;
     if (direction == -1) {
       /* Undo  Restart */
-      if (undoList[currentMove][0] == 81) {
+      if (undoList[currentMove][0] == 82) {
         //HERE
       }
       /* Normal Undo */
@@ -687,7 +687,7 @@ function changeMove(direction) {
       }
     } else {
       /* Redo Restart */
-      if (redoList[currentMove][0] == 81) {
+      if (redoList[currentMove][0] == 82) {
         //HERE
       }
       /* Normal Redo */
@@ -698,7 +698,7 @@ function changeMove(direction) {
   }
 }
 
-//checkAnswer(81, true) is autocheck button
+//checkAnswer(82, true) is autocheck button
 //check cell answer or update autoCheck
 function checkAnswer(cellNumber, changingAutoCheck = false) {
   c("checkAnswer(" + cellNumber + ", " + changingAutoCheck + ")");
@@ -708,7 +708,7 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
     autoCheck = !autoCheck;
     if (autoCheck) {
       document.getElementById("wrongElement").style.visibility = "visible";
-      for (i = 0; i < 81; i++) {
+      for (i = 1; i < 82; i++) {
         if (cells[cellNumber].display > 0 && cells[cellNumber].display != cells[cellNumber]) {
           result = false;
           wrongList.push(cellNumber);
@@ -717,7 +717,7 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
       }
     } else {
       document.getElementById("wrongElement").style.visibility = "hidden";
-      for (i = 0; i < 81; i++) {
+      for (i = 1; i < 82; i++) {
         if (wrongList.includes(cellNumber)) {
           wrongList.splice(wrongList.indexOf(cellNumber), 1);
           getCellElement(cellNumber).style.color = textColor;
