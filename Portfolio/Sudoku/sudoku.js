@@ -351,7 +351,7 @@ function isDefaultCell(cell) {
     }
   }
   /* Find Empty Cells In Column */
-  c(cell-9);
+  c( "defaultcell"+cell-9);
   for (i = cell - 9; i > 0; i -= 9) {
     if (cells[i].display == 0) {
       emptyCells.push(i);
