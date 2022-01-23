@@ -223,7 +223,9 @@ function isInHorizonal(cell, number) {
   var result = false;
   var rowStart = Math.floor(cell / 9) * 9 +1;
   c("rowstart"+rowStart);
-  for (i = rowStart; i < rowStart + 8; i++) {//HERE +9 instead of +8
+  for (i = rowStart; i < rowStart + 9; i++) {
+    //HERE +9 instead of +8
+    //HERE HERE HERE throws maybe 0's and 82's
     if (cells[i].display == number) {
       result = true;
     }
@@ -351,7 +353,7 @@ function isDefaultCell(cell) {
     }
   }
   /* Find Empty Cells In Column */
-  c( "defaultcell"+cell-9);
+  c("defaultcell"+cell-9);
   for (i = cell - 9; i > 0; i -= 9) {
     if (cells[i].display == 0) {
       emptyCells.push(i);
