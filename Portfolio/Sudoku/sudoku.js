@@ -202,19 +202,19 @@ function isInHorizonal(cell, number) {
 function isInBox(cell, number) {
   var result = false;
   /* Find  Box */
-  var adjust = 0;
+  var adjust = 1;
   var temp = cell / 3 + " ";
   if (temp.includes(".6")) {
-    adjust = -2;
+    adjust = 3;
   } else if (temp.includes(".3")) {
-    adjust = -1;
+    adjust = 2;
   }
-  temp = cell - 1;
-  while (temp > 26) {
+  temp = cell;
+  while (temp > 27) {
     temp -= 27;
   }
   temp = Math.floor(temp / 9) * 9;
-  var stopCounter = cell + adjust - temp +1;
+  var stopCounter = cell - adjustX - adjustY;
   /* Test Box */
   for (i = stopCounter + 18; i >= stopCounter; i -= 9) {
     c(i, "box");
@@ -256,7 +256,7 @@ function displayGame() {
       testedNumbers.push(cellNumber);
       //is this cell solvable?
       c(cellNumber, "dis");
-      if (isDefaultNumber(cellNumber -1) || isDefaultCell(cellNumber-1) || isVariantSolvable(cellNumber-1)) {
+      if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber) || isVariantSolvable(cellNumber)) {
         //HERE set notes
         numberTotals[cells[cellNumber].display]++;
         cells[cellNumber].display = 0;
