@@ -28,11 +28,10 @@ var hintColor = "#777777";
 /* Meta */
 
 function c(c, location = 0) {
-  if(location){
-console.log(location + " " + c);
-  }
-  else{
-  console.log(c);
+  if (location) {
+    console.log(location + " " + c);
+  } else {
+    console.log(c);
   }
 }
 
@@ -127,7 +126,7 @@ function decideGridNumbers() {
         //1+ number
         "isLocked": false,
         "isWrong": false,
-        "element":document.getElementById("gridBox").children[0].children[i + Math.floor(i / 9)]
+        "element": document.getElementById("gridBox").children[0].children[i + Math.floor(i / 9)]
       };
     }
     /* Set Every Cell's Info (cells[0-80]) */
@@ -188,10 +187,10 @@ function isInVertical(cell, number) {
 function isInHorizonal(cell, number) {
   var result = false;
   var rowStart = Math.floor(cell / 9) * 9 +1;
+    c(cell, "row");
   for (i = rowStart; i < rowStart + 9; i++) {
     //HERE +9 instead of +8
     //HERE HERE HERE throws maybe 0's and 82's
-    c(i, "row");
     if (cells[i].display == number) {
       result = true;
     }
