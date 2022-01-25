@@ -209,7 +209,7 @@ function isInBox(cell, number) {
   } else if (temp.includes(".3")) {
     adjust = -1;
   }
-  temp = cell-1;
+  temp = cell;
   while (temp > 26) {
     temp -= 27;
   }
