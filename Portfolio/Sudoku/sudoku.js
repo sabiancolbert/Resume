@@ -139,7 +139,7 @@ function decideGridNumbers() {
         if (!attemptedNumbers[currentCell].includes(number)) {
           invalid = false; //HERE HERE HERE
           attemptedNumbers[currentCell].push(number);
-          if (!isInVertical(currentCell, number) && !isInHorizonal(currentCell, number) && !isInBox(currentCell, number)) {
+          if (!isInVertical(currentCell+1, number) && !isInHorizonal(currentCell+1, number) && !isInBox(currentCell+1, number)) {
             if (isVariantValid(currentCell, number)) {
               invalid = false;
             }
