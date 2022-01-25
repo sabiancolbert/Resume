@@ -186,7 +186,7 @@ function isInVertical(cell, number) {
 //search for the same number in the same row
 function isInHorizonal(cell, number) {
   var result = false;
-  var rowStart = Math.floor((cell-1) / 9) * 9 +1;
+  var rowStart = Math.floor((cell) / 9) * 9;
   c(cell +" "+rowStart, "row");
   for (i = rowStart; i < rowStart + 9; i++) {
     //HERE +9 instead of +8
@@ -202,18 +202,18 @@ function isInHorizonal(cell, number) {
 function isInBox(cell, number) {
   var result = false;
   /* Find  Box */
-  var adjust = 1;
-  var temp = cell / 3 + " ";
-  if (temp.includes(".6")) {
-    adjust = 3;
-  } else if (temp.includes(".3")) {
-    adjust = 2;
+  var adjustX = 1;
+  var adjustY = cell / 3 + " ";
+  if (adjustY.includes(".6")) {
+    adjustX = 3;
+  } else if (adjustY.includes(".3")) {
+    adjustX = 2;
   }
-  temp = cell;
-  while (temp > 27) {
-    temp -= 27;
+  adjustY = cell;
+  while (adjustY > 28) {
+    adjustY -= 27;
   }
-  temp = Math.floor(temp / 9) * 9;
+  adjustY = Math.floor(adjustY / 9) * 9;
   var stopCounter = cell - adjustX - adjustY;
   /* Test Box */
   for (i = stopCounter + 18; i >= stopCounter; i -= 9) {
