@@ -191,6 +191,7 @@ function isInHorizonal(cell, number) {
   for (i = rowStart; i < rowStart + 9; i++) {
     //HERE +9 instead of +8
     //HERE HERE HERE throws maybe 0's and 82's
+    c(i, "row");
     if (cells[i].display == number) {
       result = true;
     }
