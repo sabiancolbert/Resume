@@ -211,8 +211,8 @@ function isInBox(cell, number) {
   } else {
     -1
   }
-  c(adjustX+","+cell,"adj");
-  while (adjustY > 28) {
+  c(adjustX+","+cell, "adj");
+  while (adjustY > 26) {
     adjustY -= 27;
   }
   adjustY = Math.floor(adjustY / 9) * 9;
@@ -344,7 +344,7 @@ function isDefaultCell(cell) {
   } else {
     adjustX = 0;
   }
-  while (adjustY > 28) {
+  while (adjustY > 26) {
     adjustY -= 27;
   }
   adjustY = Math.floor(adjustY-1 / 9) * 9+1;
