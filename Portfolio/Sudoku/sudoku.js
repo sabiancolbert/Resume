@@ -23,41 +23,17 @@ var darkColor = "#3388dd";
 var lightColor = "#ccccee";
 var textColor = "black";
 var hintColor = "#777777";
-//for console logs
-const STACK_LINE_REGEX = /(\d+):(\d+)\)?$/;
-
 
 
 /* Meta */
 
-function c(c) {
-  //HERE HERE HERE
+function c(c, location = 0) {
+  if(location){
+console.log(location + " " + c);
+  }
+  else{
   console.log(c);
-  /*
-  try {
-    var string = "noPossibleGamesedString";
-    let err;
-    try {
-      throw new Error();
-    } catch (error) {
-      err = error;
-    }
-
-    try {
-      const stacks = err.stack.split('\\n');
-      const [,
-        line] = STACK_LINE_REGEX.exec(stacks[2]);
-
-      string = this(`[${line}]`, ...c);
-    } catch (err) {
-      string = this(...c);
-    }
-    console.log("c:"+string);
   }
-  catch (erro) {
-    console.log(erro);
-  }
-  */
 }
 
 //HERE HERE make sure resizePageElements() is as awesome as possible
@@ -143,7 +119,15 @@ function decideGridNumbers() {
     for (i = 1; i < 82; i++) {
       attemptedNumbers[i] = [];
       cells[i] = {
-        "display": 0
+        "display": number,
+        /* Legend */
+        //-2 small note
+        //-1 grey note
+        //0 empty
+        //1+ number
+        "isLocked": false,
+        "isWrong": false,
+        "element":document.getElementById("gridBox").children[0].children[i + Math.floor(i / 9)]
       };
     }
     /* Set Every Cell's Info (cells[0-80]) */
@@ -151,7 +135,6 @@ function decideGridNumbers() {
       var number = 0;
       var invalid = true;
       /* Try Each Number For Current Cell (0-80) */
-      c(currentCell);
       while (invalid && attemptedNumbers[currentCell].length < 9) {
         number = Math.floor(Math.random() * 9 + 1);
         if (!attemptedNumbers[currentCell].includes(number)) {
@@ -167,27 +150,15 @@ function decideGridNumbers() {
       /* If No Numbers Are Valid */
       if (invalid) {
         attemptedNumbers[currentCell] = [];
-        cells[currentCell] = {
-          "display": 0
-        };
+        cells[currentCell].display = 0;
         currentCell--;
       }
       /* If Valid Number Is Found */
       else {
-        cells[currentCell] = {
-          "display": number,
-          /* Legend */
-          //-2 small note
-          //-1 grey note
-          //0 empty
-          //1+ number
-          "isLocked": false,
-          "isWrong": false
-        };
+        cells[currentCell].display = number;
         currentCell++;
       }
     }
-    c(cells);
     /* Start Or noPossibleGames Game */
     if (currentCell == -1) {
       noPossibleGames();
@@ -195,11 +166,6 @@ function decideGridNumbers() {
       displayGame();
     }
   }
-}
-
-//return cell element
-function getCellElement(cellNumber) {
-  return document.getElementById("gridBox").children[0].children[cellNumber + Math.floor(cellNumber / 9)];
 }
 
 //search for the same number in the same column
@@ -222,7 +188,6 @@ function isInVertical(cell, number) {
 function isInHorizonal(cell, number) {
   var result = false;
   var rowStart = Math.floor(cell / 9) * 9 +1;
-  c("rowstart"+rowStart);
   for (i = rowStart; i < rowStart + 9; i++) {
     //HERE +9 instead of +8
     //HERE HERE HERE throws maybe 0's and 82's
@@ -279,14 +244,17 @@ function noPossibleGames() {
 function displayGame() {
   c("displayGame()");
   resizePageElements();
+  //HERE HERE fix the amount of resizepageleemnts()
+  //HERE HERE HERE change cell number to currentCekk
   /* Unsolve */
   var testedNumbers = new Array([0]);
   var stopCounter = 82 - Math.floor(Math.random() * 5 + parseInt(difficulty));
   while (stopCounter > 1 && testedNumbers.length < 82) {
-    var cellNumber = Math.floor(Math.random() * 82);
+    var cellNumber = Math.floor(Math.random() * 81) + 1;
     if (!testedNumbers.includes(cellNumber)) {
       testedNumbers.push(cellNumber);
       //is this cell solvable?
+      c(cellNumber, "dis");
       if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber) || isVariantSolvable(cellNumber)) {
         //HERE set notes
         numberTotals[cells[cellNumber].display]++;
@@ -299,10 +267,10 @@ function displayGame() {
   /* Display Cells */
   for (i = 1; i < 82; i++) {
     if (cells[i].display > 0) {
-      getCellElement(i).innerHTML = cells[i].display;
-      getCellElement(i).style.fontWeight = "1000";
+      cells[i].element.innerHTML = cells[i].display;
+      cells[i].element.style.fontWeight = "1000";
     } else {
-      getCellElement(i).innerHTML = " ";
+      cells[i].element.innerHTML = " ";
       userCells.push(i);
     }
   }
@@ -353,7 +321,6 @@ function isDefaultCell(cell) {
     }
   }
   /* Find Empty Cells In Column */
-  c("defaultcell"+cell-9);
   for (i = cell - 9; i > 0; i -= 9) {
     if (cells[i].display == 0) {
       emptyCells.push(i);
@@ -433,7 +400,7 @@ function selectNumber(selection) {
   c("selectNumber(" + selection + ")");
   /* Set Grid HighlightColor */
   for (cellNumber = 1; cellNumber < 82; cellNumber++) {
-    var cellElement = getCellElement(cellNumber);
+    var cellElement = cells[cellNumber].element;
     //note highlightColor
     if (cells[cellNumber].display == -2) {
       for (i = 1; i < 10; i++) {
@@ -513,9 +480,9 @@ function selectNumber(selection) {
 //change cell html
 function changeCell(cellNumber, moveDirection = 0) {
   c("changeCell(" + cellNumber + ", " + ")");
-  if (getCellElement(cellNumber).innerHTML != " " || currentSelection != 0) {
+  if (cell[cellNumber].element.innerHTML != " " || currentSelection != 0) {
     if (userCells.includes(cellNumber)) {
-      var cellElement = getCellElement(cellNumber);
+      var cellElement = cell[cellNumber].element;
       var cellNoteMode = cells[cellNumber].display;
       var content = selectionElement.innerHTML;
       //undo
@@ -714,7 +681,7 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
         if (cells[cellNumber].display > 0 && cells[cellNumber].display != cells[cellNumber]) {
           result = false;
           wrongList.push(cellNumber);
-          getCellElement(cellNumber).style.color = red;
+          cell[cellNumber].element.style.color = red;
         }
       }
     } else {
@@ -722,7 +689,7 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
       for (i = 1; i < 82; i++) {
         if (wrongList.includes(cellNumber)) {
           wrongList.splice(wrongList.indexOf(cellNumber), 1);
-          getCellElement(cellNumber).style.color = textColor;
+          cell[cellNumber].element.style.color = textColor;
         }
       }
     }
@@ -733,7 +700,7 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
     }
     if (cells[cellNumber].display != cells[cellNumber]) {
       wrongList.push(cellNumber);
-      getCellElement(cellNumber).style.color = "red";
+      cell[cellNumber].element.style.color = "red";
       addOne = true;
       result = false;
     }
