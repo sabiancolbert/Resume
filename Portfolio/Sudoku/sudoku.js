@@ -213,7 +213,7 @@ function isInBox(cell, number) {
   while (temp > 26) {
     temp -= 27;
   }
-  temp = Math.floor(temp / 9) * 9;
+  temp = Math.floor((temp-1) / 9) * 9;
   var stopCounter = cell + adjust - temp + 1;
   /* Test Box */
   for (i = stopCounter + 18; i >= stopCounter; i -= 9) {
