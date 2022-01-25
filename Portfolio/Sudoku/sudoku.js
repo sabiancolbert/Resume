@@ -139,7 +139,7 @@ function decideGridNumbers() {
         if (!attemptedNumbers[currentCell].includes(number)) {
           invalid = false; //HERE HERE HERE
           attemptedNumbers[currentCell].push(number);
-          if (!isInVertical(currentCell+1, number) && !isInHorizonal(currentCell+1, number) && !isInBox(currentCell+1, number)) {
+          if (!isInVertical(currentCell, number) && !isInHorizonal(currentCell, number) && !isInBox(currentCell, number)) {
             if (isVariantValid(currentCell, number)) {
               invalid = false;
             }
@@ -202,12 +202,12 @@ function isInHorizonal(cell, number) {
 function isInBox(cell, number) {
   var result = false;
   /* Find  Box */
-  var adjustX = 0;
+  var adjustX = -1;
   var adjustY = cell / 3 + " ";
   if (adjustY.includes(".6")) {
-    adjustX = 2;
-  } else if (adjustY.includes(".3")) {
     adjustX = 1;
+  } else if (adjustY.includes(".3")) {
+    adjustX = 0;
   }
   adjustY = cell;
   while (adjustY > 28) {
