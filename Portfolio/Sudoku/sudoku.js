@@ -208,8 +208,7 @@ function isInBox(cell, number) {
     adjustX = 1;
   } else if (adjustY.includes(".3")) {
     adjustX = 0;
-  }
-  else{
+  } else {
     -1
   }
   while (adjustY > 28) {
@@ -341,9 +340,8 @@ function isDefaultCell(cell) {
     adjustX = -2;
   } else if (temp.includes(".3")) {
     adjustX = -1;
-  }
-  else{
-    adjustX=0;
+  } else {
+    adjustX = 0;
   }
   while (adjustY > 28) {
     adjustY -= 27;
@@ -351,7 +349,7 @@ function isDefaultCell(cell) {
   adjustY = Math.floor(adjustY-1 / 9) * 9+1;
   /* Find Empty Cells In Box */
   var start = cell - adjustX - adjustY +1;
-  c(start+" c"+cell+" x"+adjustX+x" y"+adjustY, "def");
+  c(start+" c"+cell+" x"+adjustX+" y"+adjustY, "def");
   if (cells[start].display == 0) {
     emptyCells.push(start);
   }
