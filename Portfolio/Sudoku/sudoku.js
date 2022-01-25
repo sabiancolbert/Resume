@@ -118,7 +118,7 @@ function decideGridNumbers() {
     for (i = 1; i < 82; i++) {
       attemptedNumbers[i] = [];
       cells[i] = {
-        "display": number,
+        "display": 0,
         /* Legend */
         //-2 small note
         //-1 grey note
