@@ -88,6 +88,8 @@ function resizePageElements() {
     buttonBox.style.left = left;
     sizingPage = false;
   }
+  //HERE
+  decideGridNumbers();
 }
 
 
@@ -98,8 +100,10 @@ function resizePageElements() {
 function decideGridNumbers() {
   c("decideGridNumbers()");
   //if difficulty has been chosen
-  if (document.getElementById("difficultyElement").value < 81) {
-    difficulty = document.getElementById("difficultyElement").value;
+  //HERE
+  /*if (document.getElementById("difficultyElement").value < 81) {
+    difficulty = document.getElementById("difficultyElement").value;*/
+    if(true){
     document.getElementById("difficultyPromptElement").remove();
     /* Difficulty Legend */
     //beginner 45
@@ -209,7 +213,7 @@ function isInBox(cell, number) {
   } else {
     adjustX = -1;
   }
-  while (adjustY > 26) {
+  while (adjustY > 27) {
     adjustY -= 27;
   }
   adjustY = Math.floor(adjustY / 9) * 9;
@@ -313,7 +317,7 @@ function isDefaultCell(cell) {
   var emptyCells = new Array();
   //HERE test noteCells, use dummy numbers for next part
   /* Find Empty Cells In Row */
-  var adjustX = Math.floor(cell-1 / 9) * 9+1;
+  var adjustX = Math.floor((cell-1) / 9) * 9+1;
   //HERE HERE HERE HERE
   c("adjx" +adjustX, "def");
   for (i = adjustX; i < adjustX + 9; i++) {
@@ -335,18 +339,25 @@ function isDefaultCell(cell) {
   }
   /* Find Box */
   var adjustY = cell;
+  c("342 cell:"+cell);
   adjustX = cell / 3 + " ";
   if (adjustX.includes(".6")) {
     adjustX = -2;
-  } else if (temp.includes(".3")) {
+  } else if (adjustX.includes(".3")) {
     adjustX = -1;
   } else {
     adjustX = 0;
   }
+  c("350 adjustX:" + adjustX);
+  //here here
+  adjustY = 27;
   while (adjustY > 26) {
+    c("a adjustY:"+adjustY);
     adjustY -= 27;
   }
-  adjustY = Math.floor(adjustY-1 / 9) * 9+1;
+  c("b adjustY:"+adjustY);
+  adjustY = Math.floor(adjustY / 9) * 9;
+  c("b adjustY:"+ adjustY);
   /* Find Empty Cells In Box */
   var start = cell - adjustX - adjustY +1;
   c(start+" c"+cell+" x"+adjustX+" y"+adjustY, "def");
