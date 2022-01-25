@@ -314,7 +314,7 @@ function isDefaultCell(cell) {
   var emptyCells = new Array();
   //HERE test noteCells, use dummy numbers for next part
   /* Find Empty Cells In Row */
-  var adjustX = Math.floor(cell-1 / 9) * 9 + 1;
+  var adjustX = Math.floor(cell-1 / 9) * 9+1;
   for (i = adjustX; i < adjustX + 9; i++) {
     if (cells[i].display == 0) {
       emptyCells.push(i);
