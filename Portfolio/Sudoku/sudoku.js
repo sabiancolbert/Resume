@@ -316,6 +316,7 @@ function isDefaultCell(cell) {
   /* Find Empty Cells In Row */
   var adjustX = Math.floor(cell-1 / 9) * 9+1;
   for (i = adjustX; i < adjustX + 9; i++) {
+    c("i"+i, "def");
     if (cells[i].display == 0) {
       emptyCells.push(i);
     }
