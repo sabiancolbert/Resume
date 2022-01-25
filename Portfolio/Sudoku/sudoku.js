@@ -211,6 +211,7 @@ function isInBox(cell, number) {
   } else {
     -1
   }
+  c(adjustX+","+cell,"adj");
   while (adjustY > 28) {
     adjustY -= 27;
   }
