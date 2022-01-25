@@ -189,8 +189,6 @@ function isInHorizonal(cell, number) {
   var rowStart = Math.floor((cell-1) / 9) * 9+1;
   c(cell +" "+rowStart, "row");
   for (i = rowStart; i < rowStart + 9; i++) {
-    //HERE +9 instead of +8
-    //HERE HERE HERE throws maybe 0's and 82's
     if (cells[i].display == number) {
       result = true;
     }
@@ -246,9 +244,7 @@ function noPossibleGames() {
 //decide which cells to show and hide
 function displayGame() {
   c("displayGame()");
-  resizePageElements();
-  //HERE HERE fix the amount of resizepageleemnts()
-  //HERE HERE HERE change cell number to currentCekk
+  //HERE change cell number to currentCekk
   /* Unsolve */
   var testedNumbers = new Array([0]);
   var stopCounter = 82 - Math.floor(Math.random() * 5 + parseInt(difficulty));
@@ -313,6 +309,7 @@ function isDefaultNumber(cell) {
 
 //is this cell the only option for this cells number?
 function isDefaultCell(cell) {
+  //HERE HERE HERE HERE
   var result = true;
   var emptyCells = new Array();
   //HERE test noteCells, use dummy numbers for next part
@@ -787,7 +784,7 @@ function restart() {
 //toggle menu
 function menu() {
   c("menu()");
-  //HERE HERE HERE
+  //HERE HERE
   if (document.getElementById("menuElement").style.visibility == "visible") {
     document.getElementById("menuElement").style.visibility = "hidden";
     document.getElementById("menuElement").style.top = "-8%";
