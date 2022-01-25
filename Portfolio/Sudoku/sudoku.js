@@ -211,7 +211,6 @@ function isInBox(cell, number) {
   } else {
     -1
   }
-  c(adjustX+","+cell, "adj");
   while (adjustY > 26) {
     adjustY -= 27;
   }
@@ -219,7 +218,6 @@ function isInBox(cell, number) {
   var stopCounter = cell - adjustX - adjustY;
   /* Test Box */
   c(stopCounter+" c"+cell+" x"+adjustX+" y"+adjustY, "box");
-
   for (i = stopCounter + 18; i >= stopCounter; i -= 9) {
     c(i, "box");
     if (cells[i].display == number || cells[i + 1].display == number || cells[i + 2].display == number) {
