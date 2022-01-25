@@ -209,12 +209,12 @@ function isInBox(cell, number) {
   } else if (temp.includes(".3")) {
     adjust = -1;
   }
-  temp = cell;
+  temp = cell - 1;
   while (temp > 26) {
     temp -= 27;
   }
-  temp = Math.floor(temp / 9) * 9;
-  var stopCounter = cell + adjust - temp;
+  temp = Math.floor(temp / 9) * 9 ;
+  var stopCounter = cell + adjust - temp +1;
   /* Test Box */
   c(cell+" "+temp, "box");
   c(cells);
