@@ -206,7 +206,7 @@ function isInBox(cell, number) {
   var adjustX = cell / 3 + " ";
   if (adjustX.includes(".6")) {
     adjustX = 1;
-  } else if (adjustY.includes(".3")) {
+  } else if (adjustX.includes(".3")) {
     adjustX = 0;
   } else {
     -1
