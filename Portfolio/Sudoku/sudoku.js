@@ -213,13 +213,11 @@ function isInBox(cell, number) {
   while (temp > 26) {
     temp -= 27;
   }
-  temp = Math.floor(temp / 9) * 9 ;
+  temp = Math.floor(temp / 9) * 9;
   var stopCounter = cell + adjust - temp +1;
   /* Test Box */
-  c(cell+" "+temp, "box");
-  c(cells);
   for (i = stopCounter + 18; i >= stopCounter; i -= 9) {
-    c(i);
+    c(i, "box");
     if (cells[i].display == number || cells[i + 1].display == number || cells[i + 2].display == number) {
       result = true;
     }
