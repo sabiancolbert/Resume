@@ -202,12 +202,12 @@ function isInHorizonal(cell, number) {
 function isInBox(cell, number) {
   var result = false;
   /* Find  Box */
-  var adjustX = 1;
+  var adjustX = 0;
   var adjustY = cell / 3 + " ";
   if (adjustY.includes(".6")) {
-    adjustX = 3;
-  } else if (adjustY.includes(".3")) {
     adjustX = 2;
+  } else if (adjustY.includes(".3")) {
+    adjustX = 1;
   }
   adjustY = cell;
   while (adjustY > 28) {
