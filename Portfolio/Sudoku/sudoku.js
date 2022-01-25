@@ -202,14 +202,16 @@ function isInHorizonal(cell, number) {
 function isInBox(cell, number) {
   var result = false;
   /* Find  Box */
-  var adjustX = -1;
-  var adjustY = cell / 3 + " ";
-  if (adjustY.includes(".6")) {
+  var adjustY = cell;
+  var adjustX = cell / 3 + " ";
+  if (adjustX.includes(".6")) {
     adjustX = 1;
   } else if (adjustY.includes(".3")) {
     adjustX = 0;
   }
-  adjustY = cell;
+  else{
+    -1
+  }
   while (adjustY > 28) {
     adjustY -= 27;
   }
@@ -315,8 +317,8 @@ function isDefaultCell(cell) {
   var emptyCells = new Array();
   //HERE test noteCells, use dummy numbers for next part
   /* Find Empty Cells In Row */
-  var temp = Math.floor(cell / 9) * 9 + 1;
-  for (i = temp; i < temp + 9; i++) {
+  var adjustX = Math.floor(cell-1 / 9) * 9 + 1;
+  for (i = adjustX; i < adjustX + 9; i++) {
     if (cells[i].display == 0) {
       emptyCells.push(i);
     }
@@ -333,21 +335,23 @@ function isDefaultCell(cell) {
     }
   }
   /* Find Box */
-  var adjust = 0;
-  temp = cell / 3 + " ";
-  if (temp.includes(".6")) {
-    adjust = -2;
+  var adjustY = cell;
+  adjustX = cell / 3 + " ";
+  if (adjustX.includes(".6")) {
+    adjustX = -2;
   } else if (temp.includes(".3")) {
-    adjust = -1;
+    adjustX = -1;
   }
-  temp = cell;
-  while (temp > 26) {
-    temp -= 27;
+  else{
+    adjustX=0;
   }
-  temp = Math.floor(temp / 9) * 9;
-  var start = cell + adjust - temp +1;
+  while (adjustY > 28) {
+    adjustY -= 27;
+  }
+  adjustY = Math.floor(adjustY-1 / 9) * 9+1;
   /* Find Empty Cells In Box */
-  cells[cell].display = -1;
+  var start = cell - adjustX - adjustY +1;
+  c(start+" c"+cell+" x"+adjustX+x" y"+adjustY, "def");
   if (cells[start].display == 0) {
     emptyCells.push(start);
   }
