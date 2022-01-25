@@ -219,6 +219,7 @@ function isInBox(cell, number) {
   c(cell+" "+temp, "box");
   c(cells);
   for (i = stopCounter + 18; i >= stopCounter; i -= 9) {
+    c(i);
     if (cells[i].display == number || cells[i + 1].display == number || cells[i + 2].display == number) {
       result = true;
     }
