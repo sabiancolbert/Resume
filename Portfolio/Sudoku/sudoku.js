@@ -309,13 +309,13 @@ function isDefaultNumber(cell) {
 
 //is this cell the only option for this cells number?
 function isDefaultCell(cell) {
-  //HERE HERE HERE HERE
   var result = true;
   var emptyCells = new Array();
   //HERE test noteCells, use dummy numbers for next part
   /* Find Empty Cells In Row */
   var adjustX = Math.floor(cell-1 / 9) * 9+1;
-  c("adjx" +adjustX);
+  //HERE HERE HERE HERE
+  c("adjx" +adjustX, "def");
   for (i = adjustX; i < adjustX + 9; i++) {
     c("i"+i, "def");
     if (cells[i].display == 0) {
