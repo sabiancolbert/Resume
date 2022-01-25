@@ -209,7 +209,7 @@ function isInBox(cell, number) {
   } else if (adjustX.includes(".3")) {
     adjustX = 0;
   } else {
-    -1
+    adjustX = -1;
   }
   while (adjustY > 26) {
     adjustY -= 27;
