@@ -338,7 +338,6 @@ function isDefaultCell(cell) {
     }
   }
   /* Find Box */
-  //HERE HERE HERE x and y are all fd up
   var adjustY = cell;
   c("342 cell:"+cell);
   adjustX = cell / 3 + " ";
@@ -350,6 +349,7 @@ function isDefaultCell(cell) {
     adjustX = 2;
   }
   c("350 adjustX:" + adjustX);
+  //HERE HERE HERE y is all fd up
   while (adjustY > 26) {
     c("a adjustY:"+adjustY);
     adjustY -= 27;
