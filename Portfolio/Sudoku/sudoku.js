@@ -349,13 +349,13 @@ function isDefaultCell(cell) {
     adjustX = 0;
   }
   c("350 adjustX:" + adjustX);
-//HERE HERE
+  //HERE HERE
   while (adjustY > 26) {
     c("a adjustY:"+adjustY);
     adjustY -= 27;
   }
   c("b adjustY:"+adjustY);
-  adjustY = Math.floor(adjustY / 9) * 9 +1;
+  adjustY = Math.floor(adjustY / 9) * 9 -1;
   c("b adjustY:"+ adjustY);
   /* Find Empty Cells In Box */
   var start = cell - adjustX - adjustY;
