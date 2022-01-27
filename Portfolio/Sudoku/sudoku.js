@@ -342,11 +342,11 @@ function isDefaultCell(cell) {
   c("342 cell:"+cell);
   adjustX = cell / 3 + " ";
   if (adjustX.includes(".6")) {
-    adjustX = -2;
+    adjustX = 0;
   } else if (adjustX.includes(".3")) {
     adjustX = -1;
   } else {
-    adjustX = 0;
+    adjustX = -2;
   }
   c("350 adjustX:" + adjustX);
   //HERE HERE
@@ -355,7 +355,7 @@ function isDefaultCell(cell) {
     adjustY -= 27;
   }
   c("b adjustY:"+adjustY);
-  adjustY = Math.floor(adjustY / 9) * 9 -1;
+  adjustY = Math.floor(adjustY / 9) * 9;
   c("b adjustY:"+ adjustY);
   /* Find Empty Cells In Box */
   var start = cell - adjustX - adjustY;
