@@ -350,7 +350,6 @@ function isDefaultCell(cell) {
   }
   c("350 adjustX:" + adjustX);
   //here here adjust y needs to be higher
-  adjustY = 27;
   while (adjustY > 26) {
     c("a adjustY:"+adjustY);
     adjustY -= 27;
