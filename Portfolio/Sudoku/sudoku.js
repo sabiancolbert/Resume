@@ -359,7 +359,7 @@ function isDefaultCell(cell) {
   adjustY = Math.floor(adjustY / 9) * 9;
   c("b adjustY:"+ adjustY);
   /* Find Empty Cells In Box */
-  var start = cell - adjustX - adjustY +1;
+  var start = cell - adjustX - adjustY;
   c(start+" c"+cell+" x"+adjustX+" y"+adjustY, "def");
   if (cells[start].display == 0) {
     emptyCells.push(start);
