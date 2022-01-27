@@ -342,9 +342,9 @@ function isDefaultCell(cell) {
   c("342 cell:"+cell);
   adjustX = cell / 3 + " ";
   if (adjustX.includes(".6")) {
-    adjustX = 0;
-  } else if (adjustX.includes(".3")) {
     adjustX = 1;
+  } else if (adjustX.includes(".3")) {
+    adjustX = 0;
   } else {
     adjustX = 2;
   }
