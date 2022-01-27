@@ -344,9 +344,9 @@ function isDefaultCell(cell) {
   if (adjustX.includes(".6")) {
     adjustX = 0;
   } else if (adjustX.includes(".3")) {
-    adjustX = -1;
+    adjustX = 1;
   } else {
-    adjustX = -2;
+    adjustX = 2;
   }
   c("350 adjustX:" + adjustX);
   //HERE HERE
