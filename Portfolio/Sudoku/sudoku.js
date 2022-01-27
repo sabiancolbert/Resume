@@ -103,7 +103,7 @@ function decideGridNumbers() {
   //HERE
   /*if (document.getElementById("difficultyElement").value < 81) {
     difficulty = document.getElementById("difficultyElement").value;*/
-    if(true){
+  if (true) {
     document.getElementById("difficultyPromptElement").remove();
     /* Difficulty Legend */
     //beginner 45
@@ -349,7 +349,7 @@ function isDefaultCell(cell) {
     adjustX = 0;
   }
   c("350 adjustX:" + adjustX);
-  //here here
+  //here here adjust y needs to be higher
   adjustY = 27;
   while (adjustY > 26) {
     c("a adjustY:"+adjustY);
