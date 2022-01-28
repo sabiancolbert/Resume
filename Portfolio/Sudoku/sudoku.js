@@ -128,7 +128,7 @@ function decideGridNumbers() {
         //-1 grey note
         //0 empty
         //1+ number
-        "isLocked": false,
+        "isLocked": true,
         "isWrong": false,
         "element": document.getElementById("gridBox").children[0].children[i + Math.floor(i / 9)]
       };
@@ -274,7 +274,7 @@ function displayGame() {
       cells[i].element.style.fontWeight = "1000";
     } else {
       cells[i].element.innerHTML = " ";
-      userCells.push(i);
+      cells[i].isLocked=false;
     }
   }
   /* Last Minute Game Prep */
