@@ -350,12 +350,12 @@ function isDefaultCell(cell) {
   }
   c("350 adjustX:" + adjustX);
   //HERE HERE HERE y is all fd up
-  while (adjustY > 26) {
+  while (adjustY > 27) {
     c("a adjustY:"+adjustY);
     adjustY -= 27;
   }
   c("b adjustY:"+adjustY);
-  adjustY = Math.floor(adjustY / 9) * 9;
+  adjustY = Math.floor((adjustY-1) / 9) * 9;
   c("b adjustY:"+ adjustY);
   /* Find Empty Cells In Box */
   var start = cell - adjustX - adjustY;
