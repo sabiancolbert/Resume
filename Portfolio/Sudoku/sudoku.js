@@ -7,9 +7,9 @@ var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 var currentMove = 0;
 var difficulty = 0;
 var currentCell = 1;
-var gridBox = document.getElementById("gridBox");
-var selectionElement = document.getElementById("selectionElement");
-var counterElement = document.getElementById("counterElement");
+var gridBox;
+var selectionElement;
+var counterElement;
 //for game play
 var wrongList = new Array();
 var redoList = new Array();
@@ -45,6 +45,7 @@ function resizePageElements() {
     var width = window.innerWidth;
     var height = window.innerHeight;
     var buttonBox = document.getElementById("buttonBox");
+    gridBox =  document.getElementById("gridBox");
     var top = 0;
     var right = 0;
     var bottom = 0;
@@ -82,14 +83,12 @@ function resizePageElements() {
       }
     }
     /* Set Css */
-    document.getElementById("gridBox").style.bottom = bottom;
-    document.getElementById("gridBox").style.right = right;
+    gridBox.style.bottom = bottom;
+    gridBox.style.right = right;
     buttonBox.style.top = top;
     buttonBox.style.left = left;
     sizingPage = false;
   }
-  //HERE
-  decideGridNumbers();
 }
 
 
@@ -99,11 +98,9 @@ function resizePageElements() {
 //decide which numbers go to each cell
 function decideGridNumbers() {
   c("decideGridNumbers()");
-  //if difficulty has been chosen
-  //HERE
-  /*if (document.getElementById("difficultyElement").value < 81) {
-    difficulty = document.getElementById("difficultyElement").value;*/
-  if (true) {
+  if (document.getElementById("difficultyElement").value < 81) {
+    difficulty = document.getElementById("difficultyElement").value;
+    c(document.getElementById("difficultyPromptElement"));
     document.getElementById("difficultyPromptElement").remove();
     /* Difficulty Legend */
     //beginner 45
@@ -129,8 +126,7 @@ function decideGridNumbers() {
         //0 empty
         //1+ number
         "isLocked": true,
-        "isWrong": false,
-        "element": document.getElementById("gridBox").children[0].children[i + Math.floor(i / 9)]
+        "isWrong": false
       };
     }
     /* Set Every Cell's Info (cells[0-80]) */
@@ -191,7 +187,7 @@ function isInVertical(cell, number) {
 function isInHorizonal(cell, number) {
   var result = false;
   var rowStart = Math.floor((cell-1) / 9) * 9+1;
-  c(cell +" "+rowStart, "row");
+  c(cell +" "+rowStart, "isinh");
   for (i = rowStart; i < rowStart + 9; i++) {
     if (cells[i].display == number) {
       result = true;
@@ -219,9 +215,9 @@ function isInBox(cell, number) {
   adjustY = Math.floor(adjustY / 9) * 9;
   var stopCounter = cell - adjustX - adjustY;
   /* Test Box */
-  c(stopCounter+" c"+cell+" x"+adjustX+" y"+adjustY, "box");
+  c(stopCounter+" c"+cell+" x"+adjustX+" y"+adjustY, "isinb");
   for (i = stopCounter + 18; i >= stopCounter; i -= 9) {
-    c(i, "box");
+    c(i, "isinb");
     if (cells[i].display == number || cells[i + 1].display == number || cells[i + 2].display == number) {
       result = true;
     }
@@ -244,6 +240,13 @@ function noPossibleGames() {
 
 
 /* Game Display */
+
+//return html element
+function getCell(cellNumber){
+  //1-81 to 0-80 for html
+  cellNumber--;
+  return document.getElementById("gridBox").children[0].children[cellNumber + Math.floor(cellNumber / 9)];
+}
 
 //decide which cells to show and hide
 function displayGame() {
@@ -268,12 +271,13 @@ function displayGame() {
   }
   noteCells = new Array(82);
   /* Display Cells */
+  c(cells);
   for (i = 1; i < 82; i++) {
     if (cells[i].display > 0) {
-      cells[i].element.innerHTML = cells[i].display;
-      cells[i].element.style.fontWeight = "1000";
+      getCell(i).innerHTML = cells[i].display;
+      getCell(i).style.fontWeight = "1000";
     } else {
-      cells[i].element.innerHTML = " ";
+      getCell(i).innerHTML = " ";
       cells[i].isLocked=false;
     }
   }
@@ -290,6 +294,9 @@ function displayGame() {
       0,
       0];
   }
+  selectionElement = document.getElementById("selectionElement");
+  counterElement = document.getElementById("counterElement");
+  document.getElementById("gameElement").style.visibility = "visible";
   selectNumber(1);
 }
 
@@ -318,7 +325,6 @@ function isDefaultCell(cell) {
   //HERE test noteCells, use dummy numbers for next part
   /* Find Empty Cells In Row */
   var adjustX = Math.floor((cell-1) / 9) * 9+1;
-  //HERE HERE HERE HERE
   c("adjx" +adjustX, "def");
   for (i = adjustX; i < adjustX + 9; i++) {
     c("i"+i, "def");
@@ -339,7 +345,7 @@ function isDefaultCell(cell) {
   }
   /* Find Box */
   var adjustY = cell;
-  c("342 cell:"+cell);
+  c("351 cell:"+cell);
   adjustX = cell / 3 + " ";
   if (adjustX.includes(".6")) {
     adjustX = 1;
@@ -348,18 +354,14 @@ function isDefaultCell(cell) {
   } else {
     adjustX = 2;
   }
-  c("350 adjustX:" + adjustX);
+  c("360 adjustX:" + adjustX);
   //HERE HERE HERE y is all fd up
   while (adjustY > 27) {
-    c("a adjustY:"+adjustY);
     adjustY -= 27;
   }
-  c("b adjustY:"+adjustY);
   adjustY = Math.floor((adjustY-1) / 9) * 9;
-  c("b adjustY:"+ adjustY);
   /* Find Empty Cells In Box */
   var start = cell - adjustX - adjustY;
-  c(start+" c"+cell+" x"+adjustX+" y"+adjustY, "def");
   if (cells[start].display == 0) {
     emptyCells.push(start);
   }
@@ -387,7 +389,6 @@ function isDefaultCell(cell) {
   if (cells[start + 20].display == 0) {
     emptyCells.push(start + 20);
   }
-  cells[cell].display = cells[cell];
   /* Test Empty Cells */
   emptyCells.forEach(td => {
     if (result && !isInVertical(td, cells[cell].display) && !isInHorizonal(td, cells[cell].display)) {
@@ -407,13 +408,12 @@ function isVariantSolvable(cell) {
 
 
 /* Game Play */
-
+//their relationship is making them desperate
 //change selected number
 function selectNumber(selection) {
   c("selectNumber(" + selection + ")");
   /* Set Grid HighlightColor */
   for (cellNumber = 1; cellNumber < 82; cellNumber++) {
-    var cellElement = cells[cellNumber].element;
     //note highlightColor
     if (cells[cellNumber].display == -2) {
       for (i = 1; i < 10; i++) {
@@ -427,17 +427,17 @@ function selectNumber(selection) {
       }
     }
     //number highlightColor
-    else if (selection == cellElement.innerHTML && cells[cellNumber].display != 0) {
-      cellElement.style.backgroundColor = darkColor;
-      if (cellElement.style.fontSize == "85%") {
-        cellElement.style.color = lightColor;
+    else if (selection == getCell(cellNumber).innerHTML && cells[cellNumber].display != 0) {
+      getCell(cellNumber).style.backgroundColor = darkColor;
+      if (getCell(cellNumber).style.fontSize == "85%") {
+        getCell(cellNumber).style.color = lightColor;
       }
     }
     //no highlightColor
     else {
-      cellElement.style.backgroundColor = lightColor;
-      if (cellElement.style.fontSize == "85%") {
-        cellElement.style.color = hintColor;
+      getCell(cellNumber).style.backgroundColor = lightColor;
+      if (getCell(cellNumber).style.fontSize == "85%") {
+        getCell(cellNumber).style.color = hintColor;
       }
     }
   }
@@ -493,9 +493,8 @@ function selectNumber(selection) {
 //change cell html
 function changeCell(cellNumber, moveDirection = 0) {
   c("changeCell(" + cellNumber + ", " + ")");
-  if (cell[cellNumber].element.innerHTML != " " || currentSelection != 0) {
+  if (getCell(cellNumber).innerHTML != " " || currentSelection != 0) {
     if (userCells.includes(cellNumber)) {
-      var cellElement = cell[cellNumber].element;
       var cellNoteMode = cells[cellNumber].display;
       var content = selectionElement.innerHTML;
       //undo
@@ -514,10 +513,10 @@ function changeCell(cellNumber, moveDirection = 0) {
         undoList.push([]);
         undoList[currentMove] = [
           cellNumber,
-          cellElement.innerHTML,
+          getCell(cellNumber).innerHTML,
           cellNoteMode,
-          cellElement.style.color];
-        if (cellElement.innerHTML == selectionElement.innerHTML && currentSelection == cellNoteMode) {
+          getCell(cellNumber).style.color];
+        if (getCell(cellNumber).innerHTML == selectionElement.innerHTML && currentSelection == cellNoteMode) {
           cellNoteMode = 0;
         } else {
           cellNoteMode = currentSelection;
@@ -525,14 +524,14 @@ function changeCell(cellNumber, moveDirection = 0) {
       }
       //counter element
       if (cells[cellNumber].display > -2) {
-        numberTotals[cellElement.innerHTML]++;
-        if (cellElement.innerHTML == selectionElement.innerHTML) {
-          counterElement.innerHTML = numberTotals[cellElement.innerHTML];
+        numberTotals[getCell(cellNumber).innerHTML]++;
+        if (getCell(cellNumber).innerHTML == selectionElement.innerHTML) {
+          counterElement.innerHTML = numberTotals[getCell(cellNumber).innerHTML];
         }
       }
       /* Erase */
       if (cellNoteMode == 0) {
-        cellElement.innerHTML = " ";
+        getCell(cellNumber).innerHTML = " ";
         cells[cellNumber].display = 0;
         noteCells[cellNumber] = [0,
           0,
@@ -544,7 +543,7 @@ function changeCell(cellNumber, moveDirection = 0) {
           0,
           0,
           0];
-        cellElement.style.backgroundColor = lightColor;
+        getCell(cellNumber).style.backgroundColor = lightColor;
       }
       /* Note Number */
       else if (cellNoteMode == -2) {
@@ -554,7 +553,7 @@ function changeCell(cellNumber, moveDirection = 0) {
           noteCells[cellNumber][content] = 0;
           //if empty
           if (noteCells[cellNumber][1] == 0 && noteCells[cellNumber][2] == 0 && noteCells[cellNumber][3] == 0 && noteCells[cellNumber][4] == 0 && noteCells[cellNumber][5] == 0 && noteCells[cellNumber][6] == 0 && noteCells[cellNumber][7] == 0 && noteCells[cellNumber][8] == 0 && noteCells[cellNumber][9] == 0) {
-            cellElement.innerHTML = " ";
+            getCell(cellNumber).innerHTML = " ";
             cells[cellNumber].display = 0;
             noteCells[cellNumber] = [0,
               0,
@@ -570,18 +569,18 @@ function changeCell(cellNumber, moveDirection = 0) {
         }
         /* Add Note To Cell */
         else {
-          cellElement.style.color = textColor;
-          cellElement.style.backgroundColor = lightColor;
-          cellElement.style.fontSize = "50%";
+          getCell(cellNumber).style.color = textColor;
+          getCell(cellNumber).style.backgroundColor = lightColor;
+          getCell(cellNumber).style.fontSize = "50%";
           //if not undo or redo
           if (moveDirection == 0) {
             if (cells[cellNumber].display != -2) {
-              cellElement.innerHTML = "<div class='notesContainer'><p class='p1' id='n1" + cellNumber + "'>1</p><p class='p2' id='n2" + cellNumber + "'>2</p><p class='p3' id='n3" + cellNumber + "'>3</p><p class='p4' id='n4" + cellNumber + "'>4</p><p class='p5' id='n5" + cellNumber + "'>5</p><p class='p6' id='n6" + cellNumber + "'>6</p><p class='p7' id='n7" + cellNumber + "'>7</p><p class='p8' id='n8" + cellNumber + "'>8</p><p class='p9' id='n9" + cellNumber + "'>9</p></div>";
+              getCell(cellNumber).innerHTML = "<div class='notesContainer'><p class='p1' id='n1" + cellNumber + "'>1</p><p class='p2' id='n2" + cellNumber + "'>2</p><p class='p3' id='n3" + cellNumber + "'>3</p><p class='p4' id='n4" + cellNumber + "'>4</p><p class='p5' id='n5" + cellNumber + "'>5</p><p class='p6' id='n6" + cellNumber + "'>6</p><p class='p7' id='n7" + cellNumber + "'>7</p><p class='p8' id='n8" + cellNumber + "'>8</p><p class='p9' id='n9" + cellNumber + "'>9</p></div>";
             }
             document.getElementById("n" + content + cellNumber).style.visibility = "visible";
             noteCells[cellNumber][content] = content;
           } else {
-            cellElement.innerHTML = content;
+            getCell(cellNumber).innerHTML = content;
           }
           cells[cellNumber].display = -2;
           for (i = 1; i < 10; i++) {
@@ -598,7 +597,7 @@ function changeCell(cellNumber, moveDirection = 0) {
       /* Regular Number */
       else {
         cells[cellNumber].display = content;
-        cellElement.innerHTML = content;
+        getCell(cellNumber).innerHTML = content;
         numberTotals[content]--;
         if (content == selectionElement.innerHTML) {
           counterElement.innerHTML = numberTotals[content];
@@ -614,22 +613,22 @@ function changeCell(cellNumber, moveDirection = 0) {
           0,
           0];
         if (cellNoteMode == -1) {
-          cellElement.style.color = hintColor;
-          cellElement.style.fontSize = "85%";
+          getCell(cellNumber).style.color = hintColor;
+          getCell(cellNumber).style.fontSize = "85%";
           cells[cellNumber].display = -1;
         } else {
           cells[cellNumber].display = content;
-          cellElement.style.fontSize = "100%";
+          getCell(cellNumber).style.fontSize = "100%";
           if (moveDirection == 0) {
-            cellElement.style.color = textColor;
+            getCell(cellNumber).style.color = textColor;
             if (checkAnswer(cellNumber)) {
               //HERE autoRemoveNotes();
             }
           } else if (moveDirection == -1) {
-            cellElement.style.color = undoList[currentMove][3];
+            getCell(cellNumber).style.color = undoList[currentMove][3];
             //autoReplaceNotes();
           } else {
-            cellElement.style.color = redoList[currentMove][3];
+            getCell(cellNumber).style.color = redoList[currentMove][3];
             //autoReplaceNotes();
           }
         }
@@ -637,18 +636,18 @@ function changeCell(cellNumber, moveDirection = 0) {
     }
     /* HighlightColor Numbers */
     if (content == selectionElement.innerHTML && currentSelection > -2 && cells[cellNumber].display != 0) {
-      cellElement.style.backgroundColor = darkColor;
-      if (cellElement.style.fontSize == "85%") {
-        cellElement.style.color = lightColor;
+      getCell(cellNumber).style.backgroundColor = darkColor;
+      if (getCell(cellNumber).style.fontSize == "85%") {
+        getCell(cellNumber).style.color = lightColor;
       }
     }
     if (moveDirection == 0) {
       currentMove++;
       redoList[currentMove] = [
         cellNumber,
-        cellElement.innerHTML,
+        getCell(cellNumber).innerHTML,
         cellNoteMode,
-        cellElement.style.color];
+        getCell(cellNumber).style.color];
     }
   }
 }
@@ -694,7 +693,7 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
         if (cells[cellNumber].display > 0 && cells[cellNumber].display != cells[cellNumber]) {
           result = false;
           wrongList.push(cellNumber);
-          cell[cellNumber].element.style.color = red;
+          getCell(cellNumber).style.color = red;
         }
       }
     } else {
@@ -702,7 +701,7 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
       for (i = 1; i < 82; i++) {
         if (wrongList.includes(cellNumber)) {
           wrongList.splice(wrongList.indexOf(cellNumber), 1);
-          cell[cellNumber].element.style.color = textColor;
+          getCell(cellNumber).style.color = textColor;
         }
       }
     }
@@ -713,7 +712,7 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
     }
     if (cells[cellNumber].display != cells[cellNumber]) {
       wrongList.push(cellNumber);
-      cell[cellNumber].element.style.color = "red";
+      getCell(cellNumber).style.color = "red";
       addOne = true;
       result = false;
     }
