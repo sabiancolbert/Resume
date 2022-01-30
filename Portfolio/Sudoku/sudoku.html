@@ -5,13 +5,13 @@
   <script type="text/javascript" src="sudoku.js"></script>
   <link rel="stylesheet" type="text/css" href="sudoku.css">
   <link rel="icon" type="image/ico" href="Resources/favicon.ico" />
-  <meta charset="UTF-8">
+  <meta charchangeCell="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body id="body" onload="resizePageElements()" onresize="resizePageElements()">
   <section id="difficultyPromptElement">
     <!-- Difficulty -->
-    <label for="difficultyElement">Set difficulty to:</label>
+    <label for="difficultyElement">changeCell difficulty to:</label>
     <select onchange="decideGridNumbers()" id="difficultyElement">
       <option value="81"></option>
       <option value="45">Beginner</option>
@@ -27,95 +27,95 @@
     <!-- Sudoku Grid -->
     <div id="gridBox">
       <div class="content">
-        <h2 onclick="set(1)"></h2>
-        <h2 onclick="set(2)"></h2>
-        <h2 onclick="set(3)"></h2>
-        <h2 onclick="set(4)"></h2>
-        <h2 onclick="set(5)"></h2>
-        <h2 onclick="set(6)"></h2>
-        <h2 onclick="set(7)"></h2>
-        <h2 onclick="set(8)"></h2>
-        <h2 onclick="set(9)"></h2>
+        <h2 onclick="changeCell(1)"></h2>
+        <h2 onclick="changeCell(2)"></h2>
+        <h2 onclick="changeCell(3)"></h2>
+        <h2 onclick="changeCell(4)"></h2>
+        <h2 onclick="changeCell(5)"></h2>
+        <h2 onclick="changeCell(6)"></h2>
+        <h2 onclick="changeCell(7)"></h2>
+        <h2 onclick="changeCell(8)"></h2>
+        <h2 onclick="changeCell(9)"></h2>
         <br>
-        <h2 onclick="set(10)"></h2>
-        <h2 onclick="set(11)"></h2>
-        <h2 onclick="set(12)"></h2>
-        <h2 onclick="set(13)"></h2>
-        <h2 onclick="set(14)"></h2>
-        <h2 onclick="set(15)"></h2>
-        <h2 onclick="set(16)"></h2>
-        <h2 onclick="set(17)"></h2>
-        <h2 onclick="set(18)"></h2>
+        <h2 onclick="changeCell(10)"></h2>
+        <h2 onclick="changeCell(11)"></h2>
+        <h2 onclick="changeCell(12)"></h2>
+        <h2 onclick="changeCell(13)"></h2>
+        <h2 onclick="changeCell(14)"></h2>
+        <h2 onclick="changeCell(15)"></h2>
+        <h2 onclick="changeCell(16)"></h2>
+        <h2 onclick="changeCell(17)"></h2>
+        <h2 onclick="changeCell(18)"></h2>
         <br>
-        <h2 onclick="set(19)"></h2>
-        <h2 onclick="set(20)"></h2>
-        <h2 onclick="set(21)"></h2>
-        <h2 onclick="set(22)"></h2>
-        <h2 onclick="set(23)"></h2>
-        <h2 onclick="set(24)"></h2>
-        <h2 onclick="set(25)"></h2>
-        <h2 onclick="set(26)"></h2>
-        <h2 onclick="set(27)"></h2>
+        <h2 onclick="changeCell(19)"></h2>
+        <h2 onclick="changeCell(20)"></h2>
+        <h2 onclick="changeCell(21)"></h2>
+        <h2 onclick="changeCell(22)"></h2>
+        <h2 onclick="changeCell(23)"></h2>
+        <h2 onclick="changeCell(24)"></h2>
+        <h2 onclick="changeCell(25)"></h2>
+        <h2 onclick="changeCell(26)"></h2>
+        <h2 onclick="changeCell(27)"></h2>
         <br>
-        <h2 onclick="set(28)"></h2>
-        <h2 onclick="set(29)"></h2>
-        <h2 onclick="set(30)"></h2>
-        <h2 onclick="set(31)"></h2>
-        <h2 onclick="set(32)"></h2>
-        <h2 onclick="set(33)"></h2>
-        <h2 onclick="set(34)"></h2>
-        <h2 onclick="set(35)"></h2>
-        <h2 onclick="set(36)"></h2>
+        <h2 onclick="changeCell(28)"></h2>
+        <h2 onclick="changeCell(29)"></h2>
+        <h2 onclick="changeCell(30)"></h2>
+        <h2 onclick="changeCell(31)"></h2>
+        <h2 onclick="changeCell(32)"></h2>
+        <h2 onclick="changeCell(33)"></h2>
+        <h2 onclick="changeCell(34)"></h2>
+        <h2 onclick="changeCell(35)"></h2>
+        <h2 onclick="changeCell(36)"></h2>
         <br>
-        <h2 onclick="set(37)"></h2>
-        <h2 onclick="set(38)"></h2>
-        <h2 onclick="set(39)"></h2>
-        <h2 onclick="set(40)"></h2>
-        <h2 onclick="set(41)"></h2>
-        <h2 onclick="set(42)"></h2>
-        <h2 onclick="set(43)"></h2>
-        <h2 onclick="set(44)"></h2>
-        <h2 onclick="set(45)"></h2>
+        <h2 onclick="changeCell(37)"></h2>
+        <h2 onclick="changeCell(38)"></h2>
+        <h2 onclick="changeCell(39)"></h2>
+        <h2 onclick="changeCell(40)"></h2>
+        <h2 onclick="changeCell(41)"></h2>
+        <h2 onclick="changeCell(42)"></h2>
+        <h2 onclick="changeCell(43)"></h2>
+        <h2 onclick="changeCell(44)"></h2>
+        <h2 onclick="changeCell(45)"></h2>
         <br>
-        <h2 onclick="set(46)"></h2>
-        <h2 onclick="set(47)"></h2>
-        <h2 onclick="set(48)"></h2>
-        <h2 onclick="set(49)"></h2>
-        <h2 onclick="set(50)"></h2>
-        <h2 onclick="set(51)"></h2>
-        <h2 onclick="set(52)"></h2>
-        <h2 onclick="set(53)"></h2>
-        <h2 onclick="set(54)"></h2>
+        <h2 onclick="changeCell(46)"></h2>
+        <h2 onclick="changeCell(47)"></h2>
+        <h2 onclick="changeCell(48)"></h2>
+        <h2 onclick="changeCell(49)"></h2>
+        <h2 onclick="changeCell(50)"></h2>
+        <h2 onclick="changeCell(51)"></h2>
+        <h2 onclick="changeCell(52)"></h2>
+        <h2 onclick="changeCell(53)"></h2>
+        <h2 onclick="changeCell(54)"></h2>
         <br>
-        <h2 onclick="set(55)"></h2>
-        <h2 onclick="set(56)"></h2>
-        <h2 onclick="set(57)"></h2>
-        <h2 onclick="set(58)"></h2>
-        <h2 onclick="set(59)"></h2>
-        <h2 onclick="set(60)"></h2>
-        <h2 onclick="set(61)"></h2>
-        <h2 onclick="set(62)"></h2>
-        <h2 onclick="set(63)"></h2>
+        <h2 onclick="changeCell(55)"></h2>
+        <h2 onclick="changeCell(56)"></h2>
+        <h2 onclick="changeCell(57)"></h2>
+        <h2 onclick="changeCell(58)"></h2>
+        <h2 onclick="changeCell(59)"></h2>
+        <h2 onclick="changeCell(60)"></h2>
+        <h2 onclick="changeCell(61)"></h2>
+        <h2 onclick="changeCell(62)"></h2>
+        <h2 onclick="changeCell(63)"></h2>
         <br>
-        <h2 onclick="set(64)"></h2>
-        <h2 onclick="set(65)"></h2>
-        <h2 onclick="set(66)"></h2>
-        <h2 onclick="set(67)"></h2>
-        <h2 onclick="set(68)"></h2>
-        <h2 onclick="set(69)"></h2>
-        <h2 onclick="set(70)"></h2>
-        <h2 onclick="set(71)"></h2>
-        <h2 onclick="set(72)"></h2>
+        <h2 onclick="changeCell(64)"></h2>
+        <h2 onclick="changeCell(65)"></h2>
+        <h2 onclick="changeCell(66)"></h2>
+        <h2 onclick="changeCell(67)"></h2>
+        <h2 onclick="changeCell(68)"></h2>
+        <h2 onclick="changeCell(69)"></h2>
+        <h2 onclick="changeCell(70)"></h2>
+        <h2 onclick="changeCell(71)"></h2>
+        <h2 onclick="changeCell(72)"></h2>
         <br>
-        <h2 onclick="set(73)"></h2>
-        <h2 onclick="set(74)"></h2>
-        <h2 onclick="set(75)"></h2>
-        <h2 onclick="set(76)"></h2>
-        <h2 onclick="set(77)"></h2>
-        <h2 onclick="set(78)"></h2>
-        <h2 onclick="set(79)"></h2>
-        <h2 onclick="set(80)"></h2>
-        <h2 onclick="set(81)"></h2>
+        <h2 onclick="changeCell(73)"></h2>
+        <h2 onclick="changeCell(74)"></h2>
+        <h2 onclick="changeCell(75)"></h2>
+        <h2 onclick="changeCell(76)"></h2>
+        <h2 onclick="changeCell(77)"></h2>
+        <h2 onclick="changeCell(78)"></h2>
+        <h2 onclick="changeCell(79)"></h2>
+        <h2 onclick="changeCell(80)"></h2>
+        <h2 onclick="changeCell(81)"></h2>
       </div>
     </div>
     <!-- Button Box -->

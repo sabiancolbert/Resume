@@ -276,6 +276,8 @@ function displayGame() {
     if (cells[i].display > 0) {
       getCell(i).innerHTML = cells[i].display;
       getCell(i).style.fontWeight = "1000";
+      cells[i].isLocked = true;
+      numberTotals[cells[i].display]++//here here here here here here finish this (sdaface);
     } else {
       getCell(i).innerHTML = " ";
       cells[i].isLocked=false;
@@ -494,7 +496,7 @@ function selectNumber(selection) {
 function changeCell(cellNumber, moveDirection = 0) {
   c("changeCell(" + cellNumber + ", " + ")");
   if (getCell(cellNumber).innerHTML != " " || currentSelection != 0) {
-    if (userCells.includes(cellNumber)) {
+    if (!cells[cellNumber].isLocked) {
       var cellNoteMode = cells[cellNumber].display;
       var content = selectionElement.innerHTML;
       //undo
@@ -522,8 +524,9 @@ function changeCell(cellNumber, moveDirection = 0) {
           cellNoteMode = currentSelection;
         }
       }
+      //here here here here here counter element not correct
       //counter element
-      if (cells[cellNumber].display > -2) {
+      if (cells[cellNumber].display > -2 && cells[cellNumber].display !=0) {
         numberTotals[getCell(cellNumber).innerHTML]++;
         if (getCell(cellNumber).innerHTML == selectionElement.innerHTML) {
           counterElement.innerHTML = numberTotals[getCell(cellNumber).innerHTML];
