@@ -266,14 +266,14 @@ function displayGame() {
         //HERE set notes
         cells[cellNumber].display = 0;
         getCell(cellNumber).innerHTML = " ";
-        numberTotals[cells[cellNumber].display]--;
-      cells[cellNumber].isLocked = false;
+        numberTotals[cells[cellNumber].display]++;
+        cells[cellNumber].isLocked = false;
         stopCounter--;
+      } else {
+        getCell(cellNumber).innerHTML = cells[cellNumber].display;
+        getCell(cellNumber).style.fontWeight = "1000";
+        numberTotals[cells[cellNumber].display]--;
       }
-      else{
-      getCell(cellNumber).innerHTML = cells[cellNumber].display;
-      getCell(cellNumber).style.fontWeight = "1000";
-      numberTotals[cells[cellNumber].display]++;      }
     }
   }
   /* Last Minute Game Prep */
