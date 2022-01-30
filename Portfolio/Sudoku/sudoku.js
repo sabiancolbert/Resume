@@ -45,7 +45,7 @@ function resizePageElements() {
     var width = window.innerWidth;
     var height = window.innerHeight;
     var buttonBox = document.getElementById("buttonBox");
-    gridBox =  document.getElementById("gridBox");
+    gridBox = document.getElementById("gridBox");
     var top = 0;
     var right = 0;
     var bottom = 0;
@@ -242,7 +242,7 @@ function noPossibleGames() {
 /* Game Display */
 
 //return html element
-function getCell(cellNumber){
+function getCell(cellNumber) {
   //1-81 to 0-80 for html
   cellNumber--;
   return document.getElementById("gridBox").children[0].children[cellNumber + Math.floor(cellNumber / 9)];
@@ -265,21 +265,15 @@ function displayGame() {
       if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber) || isVariantSolvable(cellNumber)) {
         //HERE set notes
         cells[cellNumber].display = 0;
+        getCell(cellNumber).innerHTML = " ";
+        numberTotals[cells[cellNumber].display]--;
+      cells[cellNumber].isLocked = false;
         stopCounter--;
       }
-    }
-  }
-  /* Display Cells */
-  for (i = 1; i < 82; i++) {
-    if (cells[i].display > 0) {
-      getCell(i).innerHTML = cells[i].display;
-      getCell(i).style.fontWeight = "1000";
-      cells[i].isLocked = true;
-      numberTotals[cells[i].display]++//here here here here here here finish this (sdaface);
-    } else {
-      getCell(i).innerHTML = " ";
-      cells[i].isLocked=false;
-      numberTotals[cells[i].display]--//here here here here here here finish this (sdaface);
+      else{
+      getCell(cellNumber).innerHTML = cells[cellNumber].display;
+      getCell(cellNumber).style.fontWeight = "1000";
+      numberTotals[cells[cellNumber].display]++;      }
     }
   }
   /* Last Minute Game Prep */
@@ -525,7 +519,7 @@ function changeCell(cellNumber, moveDirection = 0) {
       }
       //here here here here here counter element not correct
       //counter element
-      if (cells[cellNumber].display > -2 && cells[cellNumber].display !=0) {
+      if (cells[cellNumber].display > -2 && cells[cellNumber].display != 0) {
         numberTotals[getCell(cellNumber).innerHTML]++;
         if (getCell(cellNumber).innerHTML == selectionElement.innerHTML) {
           counterElement.innerHTML = numberTotals[getCell(cellNumber).innerHTML];
