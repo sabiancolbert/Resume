@@ -255,23 +255,21 @@ function displayGame() {
   /* Unsolve */
   var testedNumbers = new Array([0]);
   var stopCounter = 82 - Math.floor(Math.random() * 5 + parseInt(difficulty));
+  //HERE
+  noteCells = new Array(82);
   while (stopCounter > 1 && testedNumbers.length < 82) {
     var cellNumber = Math.floor(Math.random() * 81) + 1;
     if (!testedNumbers.includes(cellNumber)) {
       testedNumbers.push(cellNumber);
       //is this cell solvable?
-      c(cellNumber, "dis");
       if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber) || isVariantSolvable(cellNumber)) {
         //HERE set notes
-        numberTotals[cells[cellNumber].display]++;
         cells[cellNumber].display = 0;
         stopCounter--;
       }
     }
   }
-  noteCells = new Array(82);
   /* Display Cells */
-  c(cells);
   for (i = 1; i < 82; i++) {
     if (cells[i].display > 0) {
       getCell(i).innerHTML = cells[i].display;
@@ -281,6 +279,7 @@ function displayGame() {
     } else {
       getCell(i).innerHTML = " ";
       cells[i].isLocked=false;
+      numberTotals[cells[i].display]--//here here here here here here finish this (sdaface);
     }
   }
   /* Last Minute Game Prep */
