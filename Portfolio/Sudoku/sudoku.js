@@ -688,6 +688,7 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
       document.getElementById("wrongElement").style.visibility = "visible";
       for (i = 1; i < 82; i++) {
         if (cells[cellNumber].display > 0 && cells[cellNumber].display != //HERE HERE HERE HERE HERE) {
+        if (cells[cellNumber].display > 0 && cells[cellNumber].display != //HERE HERE HERE HERE HERE) {
           result = false;
           wrongList.push(cellNumber);
           getCell(cellNumber).style.color = red;
