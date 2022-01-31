@@ -688,34 +688,33 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
       document.getElementById("wrongElement").style.visibility = "visible";
       for (i = 1; i < 82; i++) {
         if (cells[cellNumber].display > 0 && cells[cellNumber].display != //HERE HERE HERE HERE HERE) {
-        if (cells[cellNumber].display > 0 && cells[cellNumber].display != //HERE HERE HERE HERE HERE) {
-          result = false;
-          wrongList.push(cellNumber);
-          getCell(cellNumber).style.color = red;
+            result = false;
+            wrongList.push(cellNumber);
+            getCell(cellNumber).style.color = red;
+          }
+        }
+      } else {
+        document.getElementById("wrongElement").style.visibility = "hidden";
+        for (i = 1; i < 82; i++) {
+          if (wrongList.includes(cellNumber)) {
+            wrongList.splice(wrongList.indexOf(cellNumber), 1);
+            getCell(cellNumber).style.color = textColor;
+          }
         }
       }
-    } else {
-      document.getElementById("wrongElement").style.visibility = "hidden";
-      for (i = 1; i < 82; i++) {
-        if (wrongList.includes(cellNumber)) {
-          wrongList.splice(wrongList.indexOf(cellNumber), 1);
-          getCell(cellNumber).style.color = textColor;
-        }
+    } else if (autoCheck) {
+      var addOne = false;
+      if (wrongList.includes(cellNumber)) {
+        wrongList.splice(wrongList.indexOf(cellNumber), 1);
       }
+      if (cells[cellNumber].display != cells[cellNumber]) {
+        wrongList.push(cellNumber);
+        getCell(cellNumber).style.color = "red";
+        addOne = true;
+        result = false;
+      }
+      document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML) + addOne;
     }
-  } else if (autoCheck) {
-    var addOne = false;
-    if (wrongList.includes(cellNumber)) {
-      wrongList.splice(wrongList.indexOf(cellNumber), 1);
-    }
-    if (cells[cellNumber].display != cells[cellNumber]) {
-      wrongList.push(cellNumber);
-      getCell(cellNumber).style.color = "red";
-      addOne = true;
-      result = false;
-    }
-    document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML) + addOne;
-  }
   return result;
 }
 
