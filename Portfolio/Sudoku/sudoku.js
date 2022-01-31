@@ -646,7 +646,7 @@ function changeCell(cellNumber, moveDirection = 0) {
         getCell(cellNumber).style.color];
     }
   }
-c("END cellNumber: "+cellNumber+" moveDirection: "+moveDirection+ " cell.display: "+cells[cellNumber].display+" cell.isLocked: "+cells[cellNumber].isLocked+ " cell.sWrong: "+cells[cellNumber].isWrong);
+  c("END cellNumber: "+cellNumber+" moveDirection: "+moveDirection+ " cell.display: "+cells[cellNumber].display+" cell.isLocked: "+cells[cellNumber].isLocked+ " cell.sWrong: "+cells[cellNumber].isWrong);
 }
 
 //undo or redo
@@ -687,7 +687,7 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
     if (autoCheck) {
       document.getElementById("wrongElement").style.visibility = "visible";
       for (i = 1; i < 82; i++) {
-        if (cells[cellNumber].display > 0 && cells[cellNumber].display != cells[cellNumber]) {
+        if (cells[cellNumber].display > 0 && cells[cellNumber].display != //HERE HERE HERE HERE HERE) {
           result = false;
           wrongList.push(cellNumber);
           getCell(cellNumber).style.color = red;
