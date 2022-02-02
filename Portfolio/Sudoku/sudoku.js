@@ -2,7 +2,7 @@
 //one extra cell for readability (82 cells instead of 81 cells so that cells[1] is the first cell instead of cells[0]~)
 var cells = new Array(1);
 //one extra for readability (10 instead of 9)
-var numberTotals = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+var numberTotals = new Array(0, 9, 9, 9, 9, 9, 9, 9, 9, 9);
 //for game creation
 var currentMove = 0;
 var difficulty = 0;
@@ -45,7 +45,7 @@ function resizePageElements() {
     var width = window.innerWidth;
     var height = window.innerHeight;
     var buttonBox = document.getElementById("buttonBox");
-    gridBox =  document.getElementById("gridBox");
+    gridBox = document.getElementById("gridBox");
     var top = 0;
     var right = 0;
     var bottom = 0;
@@ -242,7 +242,7 @@ function noPossibleGames() {
 /* Game Display */
 
 //return html element
-function getCell(cellNumber){
+function getCell(cellNumber) {
   //1-81 to 0-80 for html
   cellNumber--;
   return document.getElementById("gridBox").children[0].children[cellNumber + Math.floor(cellNumber / 9)];
@@ -255,6 +255,8 @@ function displayGame() {
   /* Unsolve */
   var testedNumbers = new Array([0]);
   var stopCounter = 82 - Math.floor(Math.random() * 5 + parseInt(difficulty));
+  //HERE
+  noteCells = new Array(82);
   while (stopCounter > 1 && testedNumbers.length < 82) {
     var cellNumber = Math.floor(Math.random() * 81) + 1;
     if (!testedNumbers.includes(cellNumber)) {
@@ -262,24 +264,16 @@ function displayGame() {
       //is this cell solvable?
       if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber) || isVariantSolvable(cellNumber)) {
         //HERE set notes
-        numberTotals[cells[cellNumber].display]++;
         cells[cellNumber].display = 0;
+        getCell(cellNumber).innerHTML = " ";
+        numberTotals[cells[cellNumber].display]++;
+        cells[cellNumber].isLocked = false;
         stopCounter--;
+      } else {
+        getCell(cellNumber).innerHTML = cells[cellNumber].display;
+        getCell(cellNumber).style.fontWeight = "1000";
+        numberTotals[cells[cellNumber].display]--;
       }
-    }
-  }
-  noteCells = new Array(82);
-  /* Display Cells */
-  c(cells);
-  for (i = 1; i < 82; i++) {
-    if (cells[i].display > 0) {
-      getCell(i).innerHTML = cells[i].display;
-      getCell(i).style.fontWeight = "1000";
-      cells[i].isLocked = true;
-      numberTotals[cells[i].display]++//here here here here here here finish this (sdaface);
-    } else {
-      getCell(i).innerHTML = " ";
-      cells[i].isLocked=false;
     }
   }
   /* Last Minute Game Prep */
@@ -486,10 +480,10 @@ function selectNumber(selection) {
     }
   }
 }
-
 //change cell html
 function changeCell(cellNumber, moveDirection = 0) {
   c("changeCell(" + cellNumber + ", " + ")");
+  c("START cellNumber: "+cellNumber+" moveDirection: "+moveDirection+ " cell.display: "+cells[cellNumber].display+" cell.isLocked: "+cells[cellNumber].isLocked+ " cell.sWrong: "+cells[cellNumber].isWrong);
   if (getCell(cellNumber).innerHTML != " " || currentSelection != 0) {
     if (!cells[cellNumber].isLocked) {
       var cellNoteMode = cells[cellNumber].display;
@@ -521,7 +515,7 @@ function changeCell(cellNumber, moveDirection = 0) {
       }
       //here here here here here counter element not correct
       //counter element
-      if (cells[cellNumber].display > -2 && cells[cellNumber].display !=0) {
+      if (cells[cellNumber].display > -2 && cells[cellNumber].display != 0) {
         numberTotals[getCell(cellNumber).innerHTML]++;
         if (getCell(cellNumber).innerHTML == selectionElement.innerHTML) {
           counterElement.innerHTML = numberTotals[getCell(cellNumber).innerHTML];
@@ -648,6 +642,7 @@ function changeCell(cellNumber, moveDirection = 0) {
         getCell(cellNumber).style.color];
     }
   }
+  c("END cellNumber: "+cellNumber+" moveDirection: "+moveDirection+ " cell.display: "+cells[cellNumber].display+" cell.isLocked: "+cells[cellNumber].isLocked+ " cell.sWrong: "+cells[cellNumber].isWrong);
 }
 
 //undo or redo
@@ -688,21 +683,35 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
     if (autoCheck) {
       document.getElementById("wrongElement").style.visibility = "visible";
       for (i = 1; i < 82; i++) {
-        if (cells[cellNumber].display > 0 && cells[cellNumber].display != cells[cellNumber]) {
-          result = false;
-          wrongList.push(cellNumber);
-          getCell(cellNumber).style.color = red;
+        if (cells[cellNumber].display > 0 && cells[cellNumber].display != //HERE HERE HERE HERE HERE) {
+            result = false;
+            wrongList.push(cellNumber);
+            getCell(cellNumber).style.color = red;
+          }
+        }
+      } else {
+        document.getElementById("wrongElement").style.visibility = "hidden";
+        for (i = 1; i < 82; i++) {
+          if (wrongList.includes(cellNumber)) {
+            wrongList.splice(wrongList.indexOf(cellNumber), 1);
+            getCell(cellNumber).style.color = textColor;
+          }
         }
       }
-    } else {
-      document.getElementById("wrongElement").style.visibility = "hidden";
-      for (i = 1; i < 82; i++) {
-        if (wrongList.includes(cellNumber)) {
-          wrongList.splice(wrongList.indexOf(cellNumber), 1);
-          getCell(cellNumber).style.color = textColor;
-        }
+    } else if (autoCheck) {
+      var addOne = false;
+      if (wrongList.includes(cellNumber)) {
+        wrongList.splice(wrongList.indexOf(cellNumber), 1);
       }
+      if (cells[cellNumber].display != cells[cellNumber]) {
+        wrongList.push(cellNumber);
+        getCell(cellNumber).style.color = "red";
+        addOne = true;
+        result = false;
+      }
+      document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML) + addOne;
     }
+<<<<<<< HEAD
   } else if (autoCheck) {
     var addOne = false;
     if (wrongList.includes(cellNumber)) {
@@ -716,6 +725,8 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
     }
     document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML) + addOne;
   }
+=======
+>>>>>>> c3551f5fa80e8610b777d50f03fa06234379fcb7
   return result;
 }
 
