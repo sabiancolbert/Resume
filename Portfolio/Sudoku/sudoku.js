@@ -125,6 +125,7 @@ function decideGridNumbers() {
         //-1 grey note
         //0 empty
         //1+ number
+        "answer":0,
         "isLocked": true,
         "isWrong": false
       };
@@ -137,7 +138,6 @@ function decideGridNumbers() {
       while (invalid && attemptedNumbers[currentCell].length < 9) {
         number = Math.floor(Math.random() * 9 + 1);
         if (!attemptedNumbers[currentCell].includes(number)) {
-          invalid = false; //HERE HERE HERE
           attemptedNumbers[currentCell].push(number);
           if (!isInVertical(currentCell, number) && !isInHorizonal(currentCell, number) && !isInBox(currentCell, number)) {
             if (isVariantValid(currentCell, number)) {
@@ -155,6 +155,7 @@ function decideGridNumbers() {
       /* If Valid Number Is Found */
       else {
         cells[currentCell].display = number;
+        cells[currentCell].answer = number;
         currentCell++;
       }
     }
@@ -187,7 +188,7 @@ function isInVertical(cell, number) {
 function isInHorizonal(cell, number) {
   var result = false;
   var rowStart = Math.floor((cell-1) / 9) * 9+1;
-  c(cell +" "+rowStart, "isinh");
+  //c(cell +" "+rowStart, "isinh");
   for (i = rowStart; i < rowStart + 9; i++) {
     if (cells[i].display == number) {
       result = true;
@@ -217,7 +218,6 @@ function isInBox(cell, number) {
   /* Test Box */
   c(stopCounter+" c"+cell+" x"+adjustX+" y"+adjustY, "isinb");
   for (i = stopCounter + 18; i >= stopCounter; i -= 9) {
-    c(i, "isinb");
     if (cells[i].display == number || cells[i + 1].display == number || cells[i + 2].display == number) {
       result = true;
     }
@@ -260,7 +260,6 @@ function displayGame() {
     if (!testedNumbers.includes(cellNumber)) {
       testedNumbers.push(cellNumber);
       //is this cell solvable?
-      c(cellNumber, "dis");
       if (isDefaultNumber(cellNumber) || isDefaultCell(cellNumber) || isVariantSolvable(cellNumber)) {
         //HERE set notes
         numberTotals[cells[cellNumber].display]++;
@@ -327,9 +326,7 @@ function isDefaultCell(cell) {
   //HERE test noteCells, use dummy numbers for next part
   /* Find Empty Cells In Row */
   var adjustX = Math.floor((cell-1) / 9) * 9+1;
-  c("adjx" +adjustX, "def");
   for (i = adjustX; i < adjustX + 9; i++) {
-    c("i"+i, "def");
     if (cells[i].display == 0) {
       emptyCells.push(i);
     }
@@ -347,7 +344,6 @@ function isDefaultCell(cell) {
   }
   /* Find Box */
   var adjustY = cell;
-  c("351 cell:"+cell);
   adjustX = cell / 3 + " ";
   if (adjustX.includes(".6")) {
     adjustX = 1;
@@ -356,7 +352,6 @@ function isDefaultCell(cell) {
   } else {
     adjustX = 2;
   }
-  c("360 adjustX:" + adjustX);
   //HERE HERE HERE y is all fd up
   while (adjustY > 27) {
     adjustY -= 27;
@@ -713,7 +708,7 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
     if (wrongList.includes(cellNumber)) {
       wrongList.splice(wrongList.indexOf(cellNumber), 1);
     }
-    if (cells[cellNumber].display != cells[cellNumber]) {
+    if (cells[cellNumber].display != cells[cellNumber].answer) {
       wrongList.push(cellNumber);
       getCell(cellNumber).style.color = "red";
       addOne = true;
