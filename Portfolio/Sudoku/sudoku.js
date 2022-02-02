@@ -125,7 +125,7 @@ function decideGridNumbers() {
         //-1 grey note
         //0 empty
         //1+ number
-        "answer":0,
+        "answer": 0,
         "isLocked": true,
         "isWrong": false
       };
@@ -187,7 +187,7 @@ function isInVertical(cell, number) {
 //search for the same number in the same row
 function isInHorizonal(cell, number) {
   var result = false;
-  var rowStart = Math.floor((cell-1) / 9) * 9+1;
+  var rowStart = Math.floor((cell - 1) / 9) * 9 + 1;
   //c(cell +" "+rowStart, "isinh");
   for (i = rowStart; i < rowStart + 9; i++) {
     if (cells[i].display == number) {
@@ -216,7 +216,7 @@ function isInBox(cell, number) {
   adjustY = Math.floor(adjustY / 9) * 9;
   var stopCounter = cell - adjustX - adjustY;
   /* Test Box */
-  c(stopCounter+" c"+cell+" x"+adjustX+" y"+adjustY, "isinb");
+  c(stopCounter + " c" + cell + " x" + adjustX + " y" + adjustY, "isinb");
   for (i = stopCounter + 18; i >= stopCounter; i -= 9) {
     if (cells[i].display == number || cells[i + 1].display == number || cells[i + 2].display == number) {
       result = true;
@@ -319,7 +319,7 @@ function isDefaultCell(cell) {
   var emptyCells = new Array();
   //HERE test noteCells, use dummy numbers for next part
   /* Find Empty Cells In Row */
-  var adjustX = Math.floor((cell-1) / 9) * 9+1;
+  var adjustX = Math.floor((cell - 1) / 9) * 9 + 1;
   for (i = adjustX; i < adjustX + 9; i++) {
     if (cells[i].display == 0) {
       emptyCells.push(i);
@@ -350,7 +350,7 @@ function isDefaultCell(cell) {
   while (adjustY > 27) {
     adjustY -= 27;
   }
-  adjustY = Math.floor((adjustY-1) / 9) * 9;
+  adjustY = Math.floor((adjustY - 1) / 9) * 9;
   /* Find Empty Cells In Box */
   var start = cell - adjustX - adjustY;
   if (cells[start].display == 0) {
@@ -483,7 +483,7 @@ function selectNumber(selection) {
 //change cell html
 function changeCell(cellNumber, moveDirection = 0) {
   c("changeCell(" + cellNumber + ", " + ")");
-  c("START cellNumber: "+cellNumber+" moveDirection: "+moveDirection+ " cell.display: "+cells[cellNumber].display+" cell.isLocked: "+cells[cellNumber].isLocked+ " cell.sWrong: "+cells[cellNumber].isWrong);
+  c("START cellNumber: " + cellNumber + " moveDirection: " + moveDirection + " cell.display: " + cells[cellNumber].display + " cell.isLocked: " + cells[cellNumber].isLocked + " cell.sWrong: " + cells[cellNumber].isWrong);
   if (getCell(cellNumber).innerHTML != " " || currentSelection != 0) {
     if (!cells[cellNumber].isLocked) {
       var cellNoteMode = cells[cellNumber].display;
@@ -642,7 +642,7 @@ function changeCell(cellNumber, moveDirection = 0) {
         getCell(cellNumber).style.color];
     }
   }
-  c("END cellNumber: "+cellNumber+" moveDirection: "+moveDirection+ " cell.display: "+cells[cellNumber].display+" cell.isLocked: "+cells[cellNumber].isLocked+ " cell.sWrong: "+cells[cellNumber].isWrong);
+  c("END cellNumber: " + cellNumber + " moveDirection: " + moveDirection + " cell.display: " + cells[cellNumber].display + " cell.isLocked: " + cells[cellNumber].isLocked + " cell.sWrong: " + cells[cellNumber].isWrong);
 }
 
 //undo or redo
@@ -683,40 +683,27 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
     if (autoCheck) {
       document.getElementById("wrongElement").style.visibility = "visible";
       for (i = 1; i < 82; i++) {
-        if (cells[cellNumber].display > 0 && cells[cellNumber].display != //HERE HERE HERE HERE HERE) {
-            result = false;
-            wrongList.push(cellNumber);
-            getCell(cellNumber).style.color = red;
-          }
-        }
-      } else {
-        document.getElementById("wrongElement").style.visibility = "hidden";
-        for (i = 1; i < 82; i++) {
-          if (wrongList.includes(cellNumber)) {
-            wrongList.splice(wrongList.indexOf(cellNumber), 1);
-            getCell(cellNumber).style.color = textColor;
-          }
+        if (cells[cellNumber].display != cells[cellNumber].answer) {
+          result = false;
+          wrongList.push(cellNumber);
+          getCell(cellNumber).style.color = red;
         }
       }
-    } else if (autoCheck) {
-      var addOne = false;
-      if (wrongList.includes(cellNumber)) {
-        wrongList.splice(wrongList.indexOf(cellNumber), 1);
+    } else {
+      document.getElementById("wrongElement").style.visibility = "hidden";
+      for (i = 1; i < 82; i++) {
+        if (wrongList.includes(cellNumber)) {
+          wrongList.splice(wrongList.indexOf(cellNumber), 1);
+          getCell(cellNumber).style.color = textColor;
+        }
       }
-      if (cells[cellNumber].display != cells[cellNumber]) {
-        wrongList.push(cellNumber);
-        getCell(cellNumber).style.color = "red";
-        addOne = true;
-        result = false;
-      }
-      document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML) + addOne;
     }
   } else if (autoCheck) {
     var addOne = false;
     if (wrongList.includes(cellNumber)) {
       wrongList.splice(wrongList.indexOf(cellNumber), 1);
     }
-    if (cells[cellNumber].display != cells[cellNumber].answer) {
+    if (cells[cellNumber].display != cells[cellNumber]) {
       wrongList.push(cellNumber);
       getCell(cellNumber).style.color = "red";
       addOne = true;
@@ -724,7 +711,20 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
     }
     document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML) + addOne;
   }
-  return result;
+} else if (autoCheck) {
+  var addOne = false;
+  if (wrongList.includes(cellNumber)) {
+    wrongList.splice(wrongList.indexOf(cellNumber), 1);
+  }
+  if (cells[cellNumber].display != cells[cellNumber].answer) {
+    wrongList.push(cellNumber);
+    getCell(cellNumber).style.color = "red";
+    addOne = true;
+    result = false;
+  }
+  document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML) + addOne;
+}
+return result;
 }
 
 //automatically remove invalid notes from grid
@@ -734,7 +734,7 @@ function autoRemoveNotes() {
   if (true) {
     //HERE
     //remove horizontal, vertical, and box
-  } else {}
+  } else { }
 }
 
 //change selected note mode
