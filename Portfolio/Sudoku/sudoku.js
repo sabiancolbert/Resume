@@ -711,7 +711,6 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
       }
       document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML) + addOne;
     }
-<<<<<<< HEAD
   } else if (autoCheck) {
     var addOne = false;
     if (wrongList.includes(cellNumber)) {
@@ -725,8 +724,6 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
     }
     document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML) + addOne;
   }
-=======
->>>>>>> c3551f5fa80e8610b777d50f03fa06234379fcb7
   return result;
 }
 
