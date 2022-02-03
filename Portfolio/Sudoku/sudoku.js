@@ -698,20 +698,7 @@ function checkAnswer(cellNumber, changingAutoCheck = false) {
         }
       }
     }
-  } else if (autoCheck) {
-    var addOne = false;
-    if (wrongList.includes(cellNumber)) {
-      wrongList.splice(wrongList.indexOf(cellNumber), 1);
-    }
-    if (cells[cellNumber].display != cells[cellNumber]) {
-      wrongList.push(cellNumber);
-      getCell(cellNumber).style.color = "red";
-      addOne = true;
-      result = false;
-    }
-    document.getElementById("wrongElement").innerHTML = parseInt(document.getElementById("wrongElement").innerHTML) + addOne;
-  }
-} else if (autoCheck) {
+}  else if (autoCheck) {
   var addOne = false;
   if (wrongList.includes(cellNumber)) {
     wrongList.splice(wrongList.indexOf(cellNumber), 1);
