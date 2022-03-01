@@ -42,12 +42,12 @@ function onload() {
 		}
 		//set suffix
 		{
-			x += "";
-			if (x.substring(x.length - 1, x.length) == 1) {
+			x +="";
+if(x==21||x==31) {
 				x += "st";
-			} else if (x.substring(x.length - 1, x.length) == 2) {
+			} else if (x==22||x==32) {
 				x += "nd";
-			} else if (x.substring(x.length - 1, x.length) == 3) {
+			} else if (x== 23||x==33) {
 				x += "rd";
 			} else {
 				x += "th";
