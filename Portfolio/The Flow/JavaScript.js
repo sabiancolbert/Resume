@@ -1,6 +1,7 @@
 function c(c){
   console.log(c +" ");
 }
+var sizingPage=false;
 
 function resize() {
   c("resize()");
