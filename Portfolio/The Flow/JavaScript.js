@@ -2,11 +2,10 @@
 function resize() {
   if (!sizingPage) {
     sizingPage = true;
-    //gridBox = document.getElementById("gridBox");
+    var words = document.getElementById("words");
+    var buttons = document.getElementById("buttons");
     var width = window.innerWidth;
     var height = window.innerHeight;
-    var buttonBox = document.getElementById("buttonBox");
-    gridBox = document.getElementById("gridBox");
     var top = 0;
     var right = 0;
     var bottom = 0;
@@ -40,10 +39,10 @@ function resize() {
       }
     }
     /* Set Css */
-    gridBox.style.bottom = bottom;
-    gridBox.style.right = right;
-    buttonBox.style.top = top;
-    buttonBox.style.left = left;
+    buttons.style.bottom = bottom;
+    buttons.style.right = right;
+    words.style.top = top;
+    words.style.left = left;
     sizingPage = false;
   }
 }
