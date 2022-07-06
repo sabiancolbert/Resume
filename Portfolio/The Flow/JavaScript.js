@@ -45,10 +45,10 @@ function resize() {
       }
     }
     /* Set Css */
-    buttons.style.bottom = bottom;
-    buttons.style.right = right;
-    words.style.top = top;
-    words.style.left = left;
+    buttons.style.top = top;
+    buttons.style.left = left;
+    words.style.bottom = bottom;
+    words.style.right = right;
     sizingPage = false;
   }
 }
