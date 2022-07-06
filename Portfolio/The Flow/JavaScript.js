@@ -3,7 +3,7 @@ function c(c){
 }
 
 function resize() {
-  c("resize()")!
+  c("resize()");
   if (!sizingPage) {
     c("sizing");
     sizingPage = true;
