@@ -1,9 +1,7 @@
 
-function resizePageElements() {
-  c("resizePageElements()");
+function resize() {
   if (!sizingPage) {
     sizingPage = true;
-    var root = document.getElementsByTagName("html")[0];
     //gridBox = document.getElementById("gridBox");
     var width = window.innerWidth;
     var height = window.innerHeight;
@@ -20,13 +18,11 @@ function resizePageElements() {
         right = 0;
         bottom = (height - width) + "px";
         left = 0;
-        root.style.fontSize = width / 17 + "px";
       } else {
         top = height / 2 + "px";
         right = width - (height / 2) + "px";
         bottom = height / 2 + "px";
         left = width - (height / 2) + "px";
-        root.style.fontSize = height / 2 / 17 + "px";
       }
     }
     /* Landscape */
@@ -36,13 +32,11 @@ function resizePageElements() {
         right = (width - height) + "px";
         bottom = 0;
         left = (width - height) + "px";
-        root.style.fontSize = height / 17 + "px";
       } else {
         top = height - (width / 2) + "px";
         right = width / 2 + "px";
         bottom = height - (width / 2) + "px";
         left = width / 2 + "px";
-        root.style.fontSize = width / 2 / 17 + "px";
       }
     }
     /* Set Css */
