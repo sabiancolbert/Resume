@@ -1,6 +1,11 @@
+function c(c){
+  console.log(c +" ");
+}
 
 function resize() {
+  c("resize()")!
   if (!sizingPage) {
+    c("sizing");
     sizingPage = true;
     var words = document.getElementById("words");
     var buttons = document.getElementById("buttons");
