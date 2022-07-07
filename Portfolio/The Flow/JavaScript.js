@@ -20,7 +20,7 @@ function resize() {
     if (width < height) {
       words.style.bottom = "100vw";
       words.style.right = 0;
-      buttons.style.top = "calc(100vmax - 100vw)";
+      buttons.style.top = "calc(100vmh - 100vw)";
       buttons.style.left = 0;
     }
     /* Landscape */
@@ -28,7 +28,7 @@ function resize() {
       words.style.bottom = 0;
       words.style.right = "vh100";
       buttons.style.top = 0;
-      buttons.style.left = "calc(100vmax-100vh)";
+      buttons.style.left = "calc(100vw-100vh)";
     }
     sizingPage = false;
   }
