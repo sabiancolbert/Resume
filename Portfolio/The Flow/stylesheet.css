@@ -15,6 +15,7 @@ section {
 #buttons {
   bottom: 0;
   right: 0;
+  background-image:url("Resources/background.png");
 }
 article {
   position: relative;
