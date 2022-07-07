@@ -35,11 +35,9 @@ div {
   margin: auto;
 }
 img {
-  position:relative;
   margin: 0;
   width: 14%;
   border-radius: 100%;
-  position: relative;
   margin: 0 1%;
   background-size: cover;
 }
