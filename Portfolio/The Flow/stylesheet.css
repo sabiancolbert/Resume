@@ -1,19 +1,16 @@
 body {
   position: relative;
   height: 100vh;
-  padding: 5px;
   background-image: linear-gradient(45deg, #530053, 65%,blue);
 }
 section {
   position: fixed;
 }
 #words {
-  border: 5px solid black;
-  border-radius: 10%;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
 }
-#buttons{
-  bottom:0;
-  right:0;
+#buttons {
+  bottom: 0;
+  right: 0;
 }
