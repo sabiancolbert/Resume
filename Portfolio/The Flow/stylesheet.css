@@ -1,5 +1,6 @@
 body{
- maegin:0; 
+ margin:2vmin;
+ background:gradient(blue, purple);
 }
 section{
   position:fixed;
