@@ -18,9 +18,9 @@ function resize() {
     var left = 0;
     /* Portrait */
     if (width < height) {
-      words.style.bottom = "70%";
+      words.style.bottom = "500%";
       words.style.right = 0;
-      buttons.style.top = "30%";
+      buttons.style.top = "50%";
       buttons.style.left = 0;
     }
     /* Landscape */
