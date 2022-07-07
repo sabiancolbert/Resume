@@ -6,6 +6,7 @@ body {
 section {
   position: fixed;
   padding: 10px;
+  border: 1px solid red;
 }
 #words {
   top: 0;
@@ -17,10 +18,8 @@ section {
 }
 article {
   position: relative;
-  border: 1px solid red;
 }
-#titleBox {
-}
+#titleBox {}
 #buttonBox {}
 #infoBox {
   border-top: 1px solid black;
