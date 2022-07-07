@@ -27,7 +27,7 @@ article {
   border-radius: 100%;
 }
 div {
-  position: absolute;
+  position: relative;
   margin: auto;
 }
 img {
