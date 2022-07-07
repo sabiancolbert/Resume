@@ -18,19 +18,17 @@ function resize() {
     var left = 0;
     /* Portrait */
     if (width < height) {
-      words.style.bottom = "40%";
+      words.style.bottom = "100vw";
       words.style.right = 0;
-      buttons.style.top = "60%";
+      buttons.style.top = "calc(100vmax - 100vw)";
       buttons.style.left = 0;
-      document.getElementById("body").style.height = "40%";
     }
     /* Landscape */
     else {
       words.style.bottom = 0;
-      words.style.right = "40%";
+      words.style.right = "vh100";
       buttons.style.top = 0;
-      buttons.style.left = "60%";
-      document.getElementById("body").style.height = "100vmin";
+      buttons.style.left = "calc(100vmax-100vh)";
     }
     sizingPage = false;
   }
