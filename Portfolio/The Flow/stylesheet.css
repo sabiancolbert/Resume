@@ -20,6 +20,7 @@ section {
   right: 0;
 }
 article {
+  border:1px solid red;
 }
 #titleBox {
   text-align: center;
