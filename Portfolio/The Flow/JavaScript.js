@@ -19,28 +19,28 @@ function resize() {
     /* Portrait */
     if (width < height) {
       if (width * 2 < height) {
-        top = (height - width) + "px";
+        top = height / 2 + "px";
         right = 0;
-        bottom = (height - width) + "px";
+        bottom = height / 2 + "px";
         left = 0;
       } else {
         top = height / 2 + "px";
-        right = width - (height / 2) + "px";
+        right = width / 2 + "px";
         bottom = height / 2 + "px";
-        left = width - (height / 2) + "px";
+        left = width / 2 + "px";
       }
     }
     /* Landscape */
     else {
       if (height * 2 < width) {
         top = 0;
-        right = (width - height) + "px";
-        bottom = 0;
-        left = (width - height) + "px";
-      } else {
-        top = height - (width / 2) + "px";
         right = width / 2 + "px";
-        bottom = height - (width / 2) + "px";
+        bottom = 0;
+        left = width / 2 + "px";
+      } else {
+        top = height / 2 + "px";
+        right = width / 2 + "px";
+        bottom = height / 2 + "px";
         left = width / 2 + "px";
       }
     }
