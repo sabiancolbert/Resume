@@ -48,7 +48,7 @@ function resize() {
     buttons.style.top = "50%";
     buttons.style.left = "0";
     words.style.bottom = "50%";
-    words.style.right = right;
+    words.style.right = "0";
     sizingPage = false;
   }
 }
