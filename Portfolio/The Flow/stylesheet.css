@@ -1,6 +1,6 @@
 body{
  margin:2vmin;
-background-image: linear-gradient(90deg, purple, blue);
+background-image: linear-gradient(to bottom right, purple, blue);
 }
 section{
   position:fixed;
