@@ -19,7 +19,9 @@ section {
 article {
   position: relative;
 }
-#titleBox {text-align:center}
+#wordBox {
+  text-align: center
+}
 #buttonBox {}
 #infoBox {
   border-top: 1px solid black;
