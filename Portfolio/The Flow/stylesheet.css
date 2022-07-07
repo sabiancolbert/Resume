@@ -46,7 +46,8 @@ img {
 }
 #body {
   width: inherit;
+  height:100%;
   border-radius: 0;
   position: absolute;
-  bottom:0;
+  bottom: 0;
 }
