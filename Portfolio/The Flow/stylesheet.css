@@ -22,7 +22,6 @@ section {
   position: absolute;
 }
 article {
-  border: 1px solid red;
 }
 #titleBox {
   text-align: center;
@@ -30,14 +29,13 @@ article {
 #buttonBox {
   text-align: center;
   margin: 0;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
   border-radius: 10%;
 }
 #infoBox {
   padding: 15px 5px 5px;
   overflow: scroll;
-  bottom: 0;
-  position: absolute;
+  max-height:50%;
 }
 div {
   margin: 0;
