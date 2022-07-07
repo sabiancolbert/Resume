@@ -45,4 +45,5 @@ img {
   width: 50%;
   background-size: cover;
   border-radius: 0;
+  position: relative;
 }
