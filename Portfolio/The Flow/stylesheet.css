@@ -18,6 +18,7 @@ section {
 #buttons {
   bottom: 0;
   right: 0;
+  position: absolute;
 }
 article {
   border: 1px solid red;
@@ -49,5 +50,4 @@ img {
   height: 100%;
   border-radius: 0;
   position: absolute;
-  right:0;
 }
