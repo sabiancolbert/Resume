@@ -38,7 +38,7 @@ div {
 }
 img {
   margin: 0;
-  width: 14%;
+  width: 14vmin;
   border-radius: 100%;
   margin: 0 1%;
   background-size: cover;
