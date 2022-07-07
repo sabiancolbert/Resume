@@ -29,6 +29,7 @@ article {
 div {
   position: relative;
   margin: auto;
+  float: right;
 }
 img {
   width: 10%;
