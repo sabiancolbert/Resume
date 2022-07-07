@@ -34,8 +34,8 @@ article {}
 #infoBox {
   padding: 15px 5px 5px;
   overflow: scroll;
-  margin-top:15px;
-  max-height: 50%;
+  margin-top: 10px;
+  max-height: 15vh;
 }
 div {
   margin: 0;
