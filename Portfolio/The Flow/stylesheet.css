@@ -41,8 +41,8 @@ img {
   margin: 0 1%;
   background-size: cover;
 }
-#body{
-  width:100%;
-  background-size:contain;
-  border-radius:0;
+#body {
+  width: calc(height /2);
+  background-size: contain;
+  border-radius: 0;
 }
