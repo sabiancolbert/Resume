@@ -32,5 +32,5 @@ img {
   width: calc(100% / 6);
   border-radius: 100%;
   position: relative;
-  margin: 50%;
+ margin:auto;
 }
