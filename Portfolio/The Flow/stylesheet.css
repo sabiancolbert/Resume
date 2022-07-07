@@ -4,8 +4,6 @@ body{
 }
 section{
   position:fixed;
-  border: 1px solid black;
-  background-color: red;
 }
 #words{
   top:0;
