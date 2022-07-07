@@ -22,6 +22,7 @@ function resize() {
       words.style.right = 0;
       buttons.style.top = "60%";
       buttons.style.left = 0;
+      
     }
     /* Landscape */
     else {
