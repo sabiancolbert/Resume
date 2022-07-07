@@ -1,7 +1,6 @@
 body{
  margin:2vmin;
-background-image: linear-gradient(to bottom right, purple, blue);
-background-size:cover;
+background-image: linear-gradient(to top right, purple, blue);
 }
 section{
   position:fixed;
