@@ -21,8 +21,7 @@ section {
   right: 0;
   position: absolute;
 }
-article {
-}
+article {}
 #titleBox {
   text-align: center;
 }
@@ -35,7 +34,8 @@ article {
 #infoBox {
   padding: 15px 5px 5px;
   overflow: scroll;
-  max-height:50%;
+  margin-top:15px;
+  max-height: 50%;
 }
 div {
   margin: 0;
