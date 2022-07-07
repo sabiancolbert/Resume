@@ -25,5 +25,5 @@ article {
 #infoBox {
   border-top: 1px solid black;
   border-radius: 100%;
-  height: 100%;
 }
+div{border:1px solid green}
