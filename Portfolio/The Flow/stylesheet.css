@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 2vmin;
   background-image: linear-gradient(to bottom right, purple, blue);
-  height: 100%;
+  bottom:0;
 }
 section {
   position: fixed;
