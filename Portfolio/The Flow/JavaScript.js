@@ -45,9 +45,9 @@ function resize() {
       }
     }
     /* Set Css */
-    buttons.style.top = top;
-    buttons.style.left = left;
-    words.style.bottom = bottom;
+    buttons.style.top = "50%";
+    buttons.style.left = "0";
+    words.style.bottom = "50%";
     words.style.right = right;
     sizingPage = false;
   }
