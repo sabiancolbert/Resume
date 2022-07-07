@@ -36,7 +36,8 @@ article {
 #infoBox {
   padding: 15px 5px 5px;
   overflow: scroll;
-bottom:0;
+  bottom: 0;
+  position: absolute;
 }
 div {
   margin: 0;
