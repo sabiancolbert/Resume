@@ -19,8 +19,8 @@ section {
 article {
   position: relative;
 }
-#wordBox { 
-  text-align:center;
+#wordBox {
+  text-align: center;
 }
 #buttonBox {}
 #infoBox {
@@ -31,5 +31,6 @@ div {}
 img {
   width: calc(100% / 6);
   border-radius: 100%;
-  position:relative;
+  position: relative;
+  margin:100%;
 }
