@@ -26,9 +26,9 @@ function resize() {
     /* Landscape */
     else {
       words.style.bottom = 0;
-      words.style.right = "30%";
+      words.style.right = "40%";
       buttons.style.top = 0;
-      buttons.style.left = "70%";
+      buttons.style.left = "60%";
     }
     sizingPage = false;
   }
