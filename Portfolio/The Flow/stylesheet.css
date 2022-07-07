@@ -27,7 +27,7 @@ article {
   margin: 0;
 }
 #infoBox {
-  border-top: 2px solid black;
+  border-top: 1px solid black;
   padding: 15px 5px 5px;
   border-radius: 100%;
 }
