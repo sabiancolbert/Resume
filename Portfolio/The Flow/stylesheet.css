@@ -43,6 +43,6 @@ img {
 }
 #body {
   width: calc(height /2);
-  background-size: contain;
+  background-size: cover;
   border-radius: 0;
 }
