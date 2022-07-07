@@ -22,16 +22,16 @@ function resize() {
       words.style.right = 0;
       buttons.style.top = "calc(100vh - 100vw)";
       buttons.style.left = 0;
-      document.getElementById("body").style.left="25vw";
+      document.getElementById("body").style.left = "25vw";
     }
     /* Landscape */
     else {
       words.style.bottom = 0;
-      words.style.right = "100vw";
+      words.style.right = "100vh";
       buttons.style.top = 0;
       buttons.style.left = "calc(100vw-100vh)";
-      document.getElementById("body").style.left="25vh";
-      }
+      document.getElementById("body").style.left = "25vh";
+    }
     sizingPage = false;
   }
 }
