@@ -29,4 +29,5 @@ div {}
 img {
   width: calc(100% / 6);
   margin: auto;
+  border-radius :100%;
 }
