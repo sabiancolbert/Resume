@@ -33,6 +33,7 @@ article {
 }
 div {
   margin: auto;
+  position: absolute;
 }
 img {
   margin: 0;
