@@ -1,7 +1,7 @@
-function c(c){
+function c(c) {
   console.log(c +" ");
 }
-var sizingPage=false;
+var sizingPage = false;
 
 function resize() {
   c("resize()");
@@ -18,17 +18,17 @@ function resize() {
     var left = 0;
     /* Portrait */
     if (width < height) {
-      words.style.bottom="60%";
-      words.style.right=0;
-      buttons.style.top="40%";
-      buttons.style.left=0;
+      words.style.bottom = "60%";
+      words.style.right = 0;
+      buttons.style.top = "40%";
+      buttons.style.left = 0;
     }
     /* Landscape */
     else {
-      words.style.bottom=0;
-      words.style.right="40%";
-      buttons.style.top=0;
-      buttons.style.left="60%";
+      words.style.bottom = 0;
+      words.style.right = "30%";
+      buttons.style.top = 0;
+      buttons.style.left = "70%";
     }
     sizingPage = false;
   }
