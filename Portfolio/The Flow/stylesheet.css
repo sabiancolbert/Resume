@@ -28,7 +28,7 @@ article {
 }
 #infoBox {
   border-top: 2px solid black;
-  padding:5px;
+  padding: 15px 5px 5px;
   border-radius: 100%;
 }
 div {
