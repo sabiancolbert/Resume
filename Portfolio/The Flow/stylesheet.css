@@ -26,7 +26,10 @@ article {
   border-top: 1px solid black;
   border-radius: 100%;
 }
-div {margin:auto}
+div {
+  position: absolute;
+  margin: auto;
+}
 img {
   width: 10%;
   margin: auto;
