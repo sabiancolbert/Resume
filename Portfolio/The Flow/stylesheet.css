@@ -18,6 +18,7 @@ section {
 #buttons {
   bottom: 0;
   right: 0;
+  position: absolute;
 }
 article {
   position: relative;
@@ -46,7 +47,7 @@ img {
 }
 #body {
   width: inherit;
-  height: 100vmin;
+  height: 100%;
   border-radius: 0;
   position: relative;
 }
