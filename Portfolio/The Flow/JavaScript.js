@@ -22,7 +22,8 @@ function resize() {
       words.style.right = 0;
       buttons.style.top = "60%";
       buttons.style.left = 0;
-      
+      buttons.style.height="40%";
+
     }
     /* Landscape */
     else {
@@ -30,6 +31,7 @@ function resize() {
       words.style.right = "40%";
       buttons.style.top = 0;
       buttons.style.left = "60%";
+      buttons.style.height="100vmin";
     }
     sizingPage = false;
   }
