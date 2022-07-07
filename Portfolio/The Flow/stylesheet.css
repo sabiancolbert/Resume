@@ -46,5 +46,6 @@ img {
   background-size: cover;
   border-radius: 0;
   position: absolute;
-  bottom:0;
+  margin:auto;
+  bottom: 0;
 }
