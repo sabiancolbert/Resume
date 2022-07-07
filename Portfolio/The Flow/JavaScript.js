@@ -27,7 +27,7 @@ function resize() {
     /* Landscape */
     else {
       words.style.bottom = 0;
-      words.style.right = "vh100";
+      words.style.right = "100vw";
       buttons.style.top = 0;
       buttons.style.left = "calc(100vw-100vh)";
       document.getElementById("body").style.left="25vh";
