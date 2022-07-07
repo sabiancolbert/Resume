@@ -34,7 +34,7 @@ div {
   margin: 0;
 }
 img {
-  width: calc(100% / 6);
+  width: 15%;
   border-radius: 100%;
   position: relative;
 }
