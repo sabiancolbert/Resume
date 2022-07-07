@@ -14,13 +14,14 @@ section {
   bottom: 0;
   right: 0;
 }
-article{
-  position:relative;
+article {
+  position: relative;
 }
 #titleBox {}
 #buttonBox {
-  border-bottom: 1px solid black;
-  border-radius: 100%;
 
 }
-#infoBox {}
+#infoBox {
+  border-top: 1px solid black;
+  border-radius: 100%;
+  }
