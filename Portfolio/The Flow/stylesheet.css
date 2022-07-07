@@ -23,7 +23,7 @@ article {
   text-align: center;
 }
 #buttonBox {
-  text-align:center;
+  text-align: center;
   margin: 0;
   border-bottom: 1px solid black;
   border-radius: 10%;
@@ -39,4 +39,5 @@ img {
   width: 14%;
   border-radius: 100%;
   position: relative;
+  margin:0 3%;
 }
