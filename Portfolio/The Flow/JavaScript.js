@@ -18,17 +18,17 @@ function resize() {
     var left = 0;
     /* Portrait */
     if (width < height) {
-      words.style.bottom="50%";
+      words.style.bottom="60%";
       words.style.right=0;
-      buttons.style.top="50%";
+      buttons.style.top="40%";
       buttons.style.left=0;
     }
     /* Landscape */
     else {
       words.style.bottom=0;
-      words.style.right="50%";
+      words.style.right="40%";
       buttons.style.top=0;
-      buttons.style.left="50%";
+      buttons.style.left="60%";
     }
     sizingPage = false;
   }
