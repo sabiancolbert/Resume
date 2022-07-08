@@ -29,11 +29,13 @@ article {}
   margin: 0;
   border-bottom: 2px solid black;
   border-radius: 10%;
+  border:1px solid purple;
 }
 #infoBox {
   padding: 15px 5px 5px;
   overflow: scroll;
   margin-top: 7px;
+  border:1px solid green;
 }
 div {
   margin: 0;
@@ -50,4 +52,5 @@ img {
   height: 100%;
   border-radius: 0;
   position: absolute;
+  border: 1px solid black
 }
