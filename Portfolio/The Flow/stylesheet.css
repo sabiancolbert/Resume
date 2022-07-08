@@ -12,14 +12,15 @@ section {
   padding: 10px;
 }
 #words {
+  border: 1px solid yellow;
   top: 0;
   left: 0;
 }
 #buttons {
   bottom: 0;
+  border: 1px solid purple;
   right: 0;
   position: absolute;
-  border: 1px solid purple;
 }
 article {}
 #titleBox {
