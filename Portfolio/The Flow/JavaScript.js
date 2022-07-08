@@ -34,7 +34,7 @@ function resize() {
       buttons.style.top = 0;
       buttons.style.left = "calc(100vw-100vh)";
       body.style.right = "25vh";
-      info.style.maxHeight = "55vh";
+      info.style.maxHeight = "65vh";
     }
     sizingPage = false;
   }
