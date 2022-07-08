@@ -37,13 +37,9 @@ article {}
   overflow: scroll;
   margin-top: 7px;
   border: 1px solid green;
-  bottom:0;
 }
-div {
-  margin: 0;
-}
+div {}
 img {
-  margin: 0;
   width: 14vmin;
   border-radius: 100%;
   margin: 0 1%;
