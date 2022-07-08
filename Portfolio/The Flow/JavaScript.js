@@ -24,7 +24,7 @@ function resize() {
       words.style.right = 0;
       buttons.style.top = "calc(100vh - 100vw)";
       buttons.style.left = 0;
-      body.style.right = "25vw";
+      bodyimg.style.right = "25vw";
       info.style.maxHeight = "calc(100vh - 135vw)";
     }
     /* Landscape */
@@ -33,7 +33,7 @@ function resize() {
       words.style.right = "100vh";
       buttons.style.top = 0;
       buttons.style.left = "calc(100vw-100vh)";
-      body.style.right = "25vh";
+      bodyimg.style.right = "25vh";
       info.style.maxHeight = "65vh";
     }
     sizingPage = false;
