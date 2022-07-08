@@ -27,8 +27,8 @@ function resize() {
       buttons.style.left = 0;
       bodyimg.style.right = "25vw";
       info.style.maxHeight = "calc(100vh - 135vw)";
-   //   body.style.minHeight = "200vmin";
-     // body.style.minWidth = null;
+      body.style.minHeight = "200vmin";
+      body.style.minWidth = null;
     }
     /* Landscape */
     else {
@@ -38,8 +38,8 @@ function resize() {
       buttons.style.left = "calc(100vw-100vh)";
       bodyimg.style.right = "25vh";
       info.style.maxHeight = "65vh";
-     // body.style.minHeight = null;
-      //body.style.minWidth = "200vh";
+      body.style.minHeight = null;
+      body.style.minWidth = "200vh";
     }
     sizingPage = false;
   }
