@@ -21,7 +21,9 @@ section {
   right: 0;
   position: absolute;
 }
-article {}
+article {
+  position: absolute ;
+}
 #titleBox {
   text-align: center;
 }
