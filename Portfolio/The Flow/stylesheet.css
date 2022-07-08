@@ -37,13 +37,14 @@ article {}
   overflow: scroll;
   margin-top: 7px;
   border: 1px solid green;
-  height:70%;
+  height: 70%;
 }
 div {}
 img {
   border-radius: 100%;
   margin: 0 1%;
   background-size: cover;
+  height:100%;
 }
 #bodyimg {
   width: inherit;
