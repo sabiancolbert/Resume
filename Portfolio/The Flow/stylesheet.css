@@ -22,7 +22,7 @@ section {
   position: absolute;
 }
 article {
-  position: absolute ;
+  position: absolute;
 }
 #titleBox {
   text-align: center;
@@ -38,6 +38,7 @@ article {
   overflow: scroll;
   margin-top: 10px;
   max-height: 23vh;
+  bottom:0;
 }
 div {
   margin: 0;
