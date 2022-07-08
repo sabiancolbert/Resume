@@ -25,7 +25,7 @@ function resize() {
       buttons.style.top = "calc(100vh - 100vw)";
       buttons.style.left = 0;
       body.style.right = "25vw";
-      info.style.maxHeight="calc(100vh - 130vw)";
+      info.style.maxHeight = "calc(100vh - 135vw)";
     }
     /* Landscape */
     else {
@@ -34,7 +34,7 @@ function resize() {
       buttons.style.top = 0;
       buttons.style.left = "calc(100vw-100vh)";
       body.style.right = "25vh";
-      info.style.maxHeight="70vh";
+      info.style.maxHeight = "65vh";
     }
     sizingPage = false;
   }
