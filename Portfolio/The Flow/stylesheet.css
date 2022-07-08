@@ -54,3 +54,7 @@ img {
   position: absolute;
   border: 1px solid black
 }
+
+strong{
+  color:red;
+}
