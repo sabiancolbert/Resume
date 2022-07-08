@@ -10,6 +10,8 @@ function resize() {
     sizingPage = true;
     var words = document.getElementById("words");
     var buttons = document.getElementById("buttons");
+    var bodyimg = document.getElementById("body");
+    var info = document.getElementById("infoBox");
     var width = window.innerWidth;
     var height = window.innerHeight;
     var top = 0;
@@ -22,7 +24,8 @@ function resize() {
       words.style.right = 0;
       buttons.style.top = "calc(100vh - 100vw)";
       buttons.style.left = 0;
-      document.getElementById("body").style.right = "25vw";
+      body.style.right = "25vw";
+      info.style.maxHeight="calc(100vh - 130vw)";
     }
     /* Landscape */
     else {
@@ -30,7 +33,8 @@ function resize() {
       words.style.right = "100vh";
       buttons.style.top = 0;
       buttons.style.left = "calc(100vw-100vh)";
-      document.getElementById("body").style.right = "25vh";
+      body.style.right = "25vh";
+      info.style.maxHeight="70vh";
     }
     sizingPage = false;
   }
