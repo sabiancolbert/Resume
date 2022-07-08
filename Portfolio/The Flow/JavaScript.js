@@ -21,11 +21,11 @@ function resize() {
     var left = 0;
     /* Portrait */
     if (width < height) {
-      words.style.bottom = "100vw";
+      words.style.bottom = "50%";
       words.style.right = 0;
       buttons.style.top = "50%";
       buttons.style.left = 0;
-      bodyimg.style.right = "25vw";
+      bodyimg.style.right = "70%";
       info.style.maxHeight = "70%";
       body.style.minHeight = "200vmin";
       body.style.minWidth = null;
