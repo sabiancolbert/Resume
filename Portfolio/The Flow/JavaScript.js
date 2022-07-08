@@ -25,15 +25,13 @@ function resize() {
       words.style.right = 0;
       buttons.style.top = "60%";
       buttons.style.left = 0;
-      bodyimg.style.right = "70%";
     }
     /* Landscape */
     else {
       words.style.bottom = 0;
-      words.style.right = "100vh";
+      words.style.right = "40%";
       buttons.style.top = 0;
-      buttons.style.left = "calc(100vw-100vh)";
-      bodyimg.style.right = "25vh";
+      buttons.style.left = "60%";
       info.style.maxHeight = "65vh";
     }
     sizingPage = false;
