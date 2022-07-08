@@ -38,10 +38,11 @@ article {
   overflow: scroll;
   margin-top: 10px;
   max-height: 23vh;
-  bottom:0;
+  bottom: 0;
 }
 div {
   margin: 0;
+  position:relative;
 }
 img {
   margin: 0;
