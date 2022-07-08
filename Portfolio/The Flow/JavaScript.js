@@ -26,7 +26,7 @@ function resize() {
       buttons.style.top = "60%";
       buttons.style.left = 0;
       bodyimg.style.right = "25vw";
-      info.style.maxHeight = "calc(100vh - 135vw)";
+      info.style.maxHeight = "30%";
       body.style.minHeight = "200vmin";
       body.style.minWidth = null;
     }
