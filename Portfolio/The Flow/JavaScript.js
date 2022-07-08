@@ -23,7 +23,7 @@ function resize() {
     if (width < height) {
       words.style.bottom = "100vw";
       words.style.right = 0;
-      buttons.style.top = "calc(100vh - 100vw)";
+      buttons.style.top = "60%";
       buttons.style.left = 0;
       bodyimg.style.right = "25vw";
       info.style.maxHeight = "calc(100vh - 135vw)";
