@@ -37,6 +37,7 @@ article {}
   overflow: scroll;
   margin-top: 7px;
   border: 1px solid green;
+  max-height:70%;
 }
 div {}
 img {
