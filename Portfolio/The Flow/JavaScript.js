@@ -27,7 +27,7 @@ function resize() {
       buttons.style.left = 0;
       bodyimg.style.right = "25vw";
       info.style.maxHeight = "calc(100vh - 135vw)";
-      body.style.minHeight = "200vw";
+      body.style.minHeight = "200vmin";
       body.style.minWidth = null;
     }
     /* Landscape */
