@@ -35,12 +35,10 @@ article {}
   padding: 15px 5px 5px;
   overflow: scroll;
   margin-top: 10px;
-  max-height: 23vh;
-  bottom: 0;
 }
 div {
   margin: 0;
-  border:1px solid red;
+  border: 1px solid red;
 }
 img {
   margin: 0;
