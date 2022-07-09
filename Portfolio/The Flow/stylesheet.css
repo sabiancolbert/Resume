@@ -34,7 +34,6 @@ article {}
   border-radius: 10%;
 }
 #infoBox {
-  padding: 15px 5px 50px;
   overflow: scroll;
   margin-top: 7px;
   border: 1px solid green;
