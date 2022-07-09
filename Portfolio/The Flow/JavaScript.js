@@ -12,6 +12,9 @@ function resize() {
     var buttons = document.getElementById("buttons");
     var bodyimg = document.getElementById("bodyimg");
     var info = document.getElementById("infoBox");
+    var buttonBox = document.getElementById("buttonBox");
+    var body = document.getElementById("body");
+    var body = document.getElementById("body");
     var body = document.getElementById("body");
     var width = window.innerWidth;
     var height = window.innerHeight;
@@ -25,6 +28,7 @@ function resize() {
       words.style.right = 0;
       buttons.style.top = "60%";
       buttons.style.left = 0;
+      buttonBox.style.height = "10%";
     }
     /* Landscape */
     else {
@@ -32,7 +36,6 @@ function resize() {
       words.style.right = "40%";
       buttons.style.top = 0;
       buttons.style.left = "60%";
-      info.style.maxHeight = "65vh";
     }
     sizingPage = false;
   }
