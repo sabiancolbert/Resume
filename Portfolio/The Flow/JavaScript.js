@@ -28,7 +28,7 @@ function resize() {
       words.style.right = 0;
       buttons.style.top = "60%";
       buttons.style.left = 0;
-      buttonBox.style.height = "10%";
+      buttonBox.style.height = "50vw";
     }
     /* Landscape */
     else {
