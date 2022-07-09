@@ -27,13 +27,14 @@ article {}
   text-align: center;
 }
 #buttonBox {
+  padding-bottom:10%;
   text-align: center;
   margin: 0;
   border-bottom: 2px solid black;
   border-radius: 10%;
 }
 #infoBox {
-  padding: 15px 5px 100%;
+  padding: 15px 5px 50px;
   overflow: scroll;
   margin-top: 7px;
   border: 1px solid green;
