@@ -20,7 +20,7 @@ section {
   bottom: 0;
   right: 0;
   position: absolute;
-  text-align:center;
+  text-align: center;
 }
 article {}
 #titleBox {
@@ -47,7 +47,7 @@ img {
 }
 #bodyimg {
   width: inherit;
-  height: 100%;
+  height: 40%;
   border-radius: 0;
   position: relative;
 }
