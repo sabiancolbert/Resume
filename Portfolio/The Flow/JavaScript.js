@@ -1,4 +1,4 @@
-function c(c) {
+ function c(c) {
   console.log(c +" ");
 }
 var sizingPage = false;
