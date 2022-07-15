@@ -47,7 +47,6 @@ img {
   height: 100%;
 }
 #bodyimg {
-  width: inherit;
   height: 40%;
   border-radius: 0;
   position: relative;
