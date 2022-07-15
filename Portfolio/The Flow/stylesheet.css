@@ -21,7 +21,7 @@ section {
   right: 0;
   position: absolute;
   text-align: center;
-  border:1px solid green;
+  border: 1px solid green;
 }
 article {}
 #titleBox {
@@ -47,10 +47,10 @@ img {
   height: 100%;
 }
 #bodyimg {
-  height: 40%;
+  height: 20%;
   border-radius: 0;
   position: relative;
-  border:1px solid black;
+  border: 1px solid black;
 }
 
 strong {
