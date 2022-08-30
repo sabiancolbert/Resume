@@ -1,6 +1,10 @@
 AVAILABILITY
 Employed#
 noHours#
+
 DESCRIPTION
 I am a " + "DATE AGE" + " year old bartender with a strong work ethic and a passion for progress.#
-EMPLOYMENT (business # position # dates # phone # address # supervisor # duties)
+
+EMPLOYMENT (business_position_dates_phone_address_supervisor_duties_duties#)
+Tequila's Mexican Bar & Grill_Host_Sep 2021 - Nov 2021_(309) 694-2685_370 W Washington St, Peoria, IL 61611_Hector (309) 472-6350_Seat customers_Take online, phone and Door Dash orders_Stock waiter station_Close cash for waiters and store#
+Act
