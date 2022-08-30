@@ -6,6 +6,12 @@ DESCRIPTION
 I am a " + "DATE AGE" + " year old bartender with a strong work ethic and a passion for progress.#
 
 EMPLOYMENT (business_position_dates_phone_address_supervisor_duties_duties#)
+Braum's
+Amigo's Auto Repair_Maintenance__(309) 671-9981_1013 N Orange St, Peoria IL 61606_Rudy Sanchez (309) 868-0868_Auto Repair_Plumbing_Electrical_Computers_Cameras_Stock_Organisation_Cleaning#
 Tequila's Mexican Bar & Grill_Host_Sep 2021 - Nov 2021_(309) 694-2685_370 W Washington St, Peoria, IL 61611_Hector (309) 472-6350_Seat customers_Take online, phone and Door Dash orders_Stock waiter station_Close cash for waiters and store#
 Action Link_Intel Advisor_Nov 2020 - Dec 2020_(888) 737-8757_6421 W 3rd St, Oklahoma City, OK 73128_Kayt Cogley (480) 352-6414_Sell Intel products_Train and inform peers about Intel and Intel products_Report store events and deatils to intel#
 Braum's_Customer Service_Oct 2020 - Nov 2020_(405) 324-0772_111 S Mustang Rd, Yukon OK 73099_Wyatt Smith (405) 627-6118_Open store_Manage safe and tills_Order shipments_Log shipments_Assign employee positions_Manage the floor_Manage phone calls and customer complaints_Assist customers#
+Conduent_Technical Support_Jan 2019 - Aug 2019_(844) 663-2638_100 N Mustang Rd, Yukon, OK 73099_Dennis Wouters_(405) 650-2277_Phones_Tablets_Computers_Smart Watches_Wireless headphones#
+Cactus Drilling_Yard Hand_Nov 2018 - Jan 2019_(405) 577-5347_8300 SW 15th St, Oklahoma City, OK 73128_Danny Phillips (405) 831-0070_Assemble rig pump parts_Assemble rig pumps_Operate forklift trucks_Yark upkeep#
+Braum's_Customer Service_Aug 2016 - Nov 2018_(405) 324-0772_111 S Mustang Rd, Yukon, OK 73099_Dillon Harris (405) 476-4781_Take order_Make orders_Assist customers#
+#
