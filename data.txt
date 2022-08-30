@@ -1,1 +1,6 @@
-
+AVAILABILITY
+Employed#
+noHours#
+DESCRIPTION
+I am a " + "DATE AGE" + " year old bartender with a strong work ethic and a passion for progress.#
+EMPLOYMENT (business # position # dates # phone # address # supervisor # duties)
