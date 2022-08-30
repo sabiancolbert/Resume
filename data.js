@@ -1,1 +1,3 @@
-y
+function onload(){
+  console.log("hiii");
+}
