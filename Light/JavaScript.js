@@ -142,7 +142,7 @@ document.getElementById("body").addEventListener('touchstart', event =>  {
 	mouse = false;
 	console.log("mousing"+mouse);
 });
-document.getElementById("name").innerHTML="HDhDH";
+//document.getElementById("name").innerHTML="HDhDH";
 	
 /* set menu button position */
 function setButton() {
