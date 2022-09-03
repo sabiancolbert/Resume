@@ -9,7 +9,7 @@ function onload() {
 	//set menu button
 	setButton();
 
-
+}
 
 
 /* determine and set title */
