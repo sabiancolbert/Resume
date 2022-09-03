@@ -1,4 +1,4 @@
-function onload(){
+function onload2(){
   console.log("hiii");
 }/*
 	//set age for summary page
