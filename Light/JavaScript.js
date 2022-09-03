@@ -8,7 +8,7 @@ function onload() {
 
 	//set menu button
 	setButton();
-
+console.log("trying");
 onload2();
 }
 
