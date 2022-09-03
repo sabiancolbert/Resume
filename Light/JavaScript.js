@@ -9,6 +9,7 @@ function onload() {
 	//set menu button
 	setButton();
 
+onload2();
 }
 
 
