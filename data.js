@@ -1,8 +1,8 @@
 function onload(){
   console.log("hiii");
-}/*
+}
 	//set age for summary page
-	if (document.getElementById("pageAge").innerHTML == " ") {
+	{
 		var date = new Date();
 		var age = date.getFullYear() - 2001;
 		if (date.getMonth() > 4 && date.getDate() > 1) {
@@ -77,4 +77,3 @@ if(x==21||x==31) {
 		availability.innerText = x;
 	}
 }
-*/
