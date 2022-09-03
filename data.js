@@ -1,6 +1,6 @@
 function onload(){
   console.log("hiii");
-}
+}/*
 	//set age for summary page
 	if (document.getElementById("pageAge").innerHTML == " ") {
 		var date = new Date();
@@ -77,3 +77,4 @@ if(x==21||x==31) {
 		availability.innerText = x;
 	}
 }
+*/
