@@ -62,7 +62,7 @@ function theme() {
 	window.location.replace("/themes.html");
 }
 
-//determine menu button position
+/*/determine menu button position
 document.getElementById("nav").addEventListener('touchstart', event =>  {
   console.log("herryuiooo");
 //	mouse = false;
