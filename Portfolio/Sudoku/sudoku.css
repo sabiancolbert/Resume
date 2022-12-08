@@ -16,9 +16,6 @@ body {
   position: fixed;
 }
 /* Game Board */
-#gameElement {
-  visibility: hidden;
-}
 #gridBox, #buttonBox {
   position: fixed;
   border: .2rem solid var(--dark);
