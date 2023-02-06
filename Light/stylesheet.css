@@ -144,7 +144,6 @@ article {
 /* body item boxes */
 article div {
 	position: relative;
-	/*top: -32px;*/
 	padding-right: 32px;
 	background-color: #eeeeff;
 }
@@ -158,7 +157,6 @@ h2 {
 	background-color: #5050ff;
 	line-height: 0;
 	font-size: 80px;
-	color: #303020;
 }
 
 /* body item labels */
