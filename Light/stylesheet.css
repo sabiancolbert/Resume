@@ -144,7 +144,7 @@ article {
 /* body item boxes */
 article div {
 	position: relative;
-	top: -32px;
+	/*top: -32px;*/
 	padding-right: 32px;
 	background-color: #eeeeff;
 }
