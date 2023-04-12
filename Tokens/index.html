@@ -5,38 +5,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/ico" href="/Resources/favicon.ico" />
-<script>
-var jaxTokens = 2;
-var kaiTokens = 2;
-var jax = document.getElementById("jax");
-var kai = document.getElementById("kai");
-
-function updateTokens(){
-jax.innerHTML = jaxTokens + " Tokens";
-kai.innerHTML = kaiTokens + " Tokens";
-}
-
-function jaxUp(){
-jaxTokens+=1;
-updateTokens();
-}
-
-function jaxDown(){
-jaxTokens-=1;
-updateTokens();
-}
-
-function kaiUp(){
-kaiTokens+=1;
-updateTokens();
-}
-
-function kaiDown(){
-kaiTokens-=1;
-updateTokens();
-}
-
-</script>
 <style>
 
 body{
@@ -83,7 +51,7 @@ Jax
 </strong>
 <br>
 <label id="jax">
-Error
+JavaScript Error
 <!--java inserts tokens-->
 </label>
 <br>
@@ -101,7 +69,7 @@ Kai
 </strong>
 <br>
 <label id="kai">
-Error
+JavaScript Error
 <!--java inserts tokens-->
 </label>
 <br>
@@ -127,5 +95,39 @@ Treat:5
 Toy:10
 <!------------------------>
 </div>
+
+<script>
+var jaxTokens = 2;
+var kaiTokens = 2;
+var jax = document.getElementById("jax");
+var kai = document.getElementById("kai");
+
+function updateTokens(){
+jax.innerHTML = jaxTokens + " Tokens";
+kai.innerHTML = kaiTokens + " Tokens";
+}
+
+function jaxUp(){
+jaxTokens+=1;
+updateTokens();
+}
+
+function jaxDown(){
+jaxTokens-=1;
+updateTokens();
+}
+
+function kaiUp(){
+kaiTokens+=1;
+updateTokens();
+}
+
+function kaiDown(){
+kaiTokens-=1;
+updateTokens();
+}
+
+</script>
+
 </body>
 </html>
