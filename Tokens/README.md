@@ -1,52 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tokens</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/ico" href="/Resources/favicon.ico" />
-<style>
-
-body{
-color:white;
-text-align:center;
-background-color: black;
-font-size:50px;
-}
-
-div{
-border:5px solid white;
-border-radius:50px;
-}
-
-.container{
-background-image: linear-gradient(to bottom right, purple, blue);
-}
-
-#jaxBox{
-border-color:white;
-margin:30px 30px 0 30px;
-}
-
-#kaiBox{
-border-color: white;
-margin:0 30px 30px 30px;
-}
-
-button{
-font-size:50px;
-font-weight:bold;
-color: white;
-border:5px solid white;
-border-radius:50px;
-background-color:transparent;
-height:70px;
-width:70px;
-margin:15px 30px 30px;
-padding:0;
-}
-
-</style>
+<title>Tokens</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/ico" href="/Resources/favicon.ico" />
+<link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body onLoad="updateTokens()">
