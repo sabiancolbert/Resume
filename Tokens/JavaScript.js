@@ -8,6 +8,8 @@ var kaiTokens =
 var jax = document.getElementById("jax");
 var kai = document.getElementById("kai");
 
+const fs = require(“fs”);
+
 function updateTokens(){/*
 jax.innerHTML = jaxTokens + " Tokens";
 kai.innerHTML = kaiTokens + " Tokens";
@@ -39,11 +41,11 @@ updateTokens();
 
 
 
-const fs = require(“fs”).promises;
-const path = require(“path”);
 
 function getTokens() {
-return JSON.parse(await fs.readFile("tokens.txt"));
+fs.readFile("tokens.txt", function(err, buf) {
+  return buf;
+});
   }
 
 
