@@ -3,6 +3,7 @@ import { port } from './config/index.js';
 import loader from './loaders/index.js';
 
 const app = express();
+const fs = require(“fs”);
 
 loader(app);
 
@@ -13,5 +14,18 @@ app.listen(port, err => {
   }
   console.log(`Server is running on ${port}`);
 });
+function getTokens() {
+fs.readFile("/tokens.txt", function(err, buf) {
+  return buf;
+});
+  }
+
+function updateFile(jax, kai){
+var data = jax + "," + kai;
+fs.writeFile("/tokens.txt", data, (err) => {
+  if (err) console.log(err);
+});
+}
+
 
 export default app
