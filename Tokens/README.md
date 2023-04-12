@@ -1,4 +1,4 @@
-<html>
+<!--<html>
 <head>
 <title>Tokens</title>
 <meta charset="UTF-8">
@@ -6,7 +6,7 @@
 <link rel="icon" type="image/ico" href="/Resources/favicon.ico" />
 <link rel="stylesheet" href="stylesheet.css">
 </head>
-
+-->
 <body onLoad="updateTokens()">
 <div class="container">
 <div id="jaxBox">
@@ -58,4 +58,6 @@ Toy:10
 </div>
 <script src="JavaScript.js"></script>
 </body>
+<!--
 </html>
+-->
