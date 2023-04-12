@@ -1,4 +1,4 @@
-//const fs = require(“fs”);
+const fs = require(“fs”);
 
 var jaxTokens =
 02
@@ -13,14 +13,14 @@ var kai = document.getElementById("kai");
 
 function updateTokens(){
 
-jax.innerHTML = jaxTokens + " Tokens";
-kai.innerHTML = kaiTokens + " Tokens";
+//jax.innerHTML = jaxTokens + " Tokens";
+//kai.innerHTML = kaiTokens + " Tokens";
 
-//jax.innerHTML ="nada";
-//kai.innerHTML = getTokens();
+jax.innerHTML ="nada";
+kai.innerHTML = getTokens();
 
 }
-/*
+
 function getTokens() {
 fs.readFile("tokens.txt", function(err, buf) {
   return buf;
@@ -33,7 +33,7 @@ fs.writeFile("tokens.txt", data, (err) => {
   if (err) console.log(err);
 });
 }
-*/
+
 function jaxUp(){
 jaxTokens+=1;
 updateTokens();
