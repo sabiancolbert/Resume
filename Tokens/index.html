@@ -11,27 +11,27 @@ var kaiTokens = 2;
 var jax = document.getElementById("jax");
 var kai = document.getElementById("kai");
 
-updateTokens(){
-jax.innerHTML = jaxTokens;
-kai.innerHTML = kaiTokens;
+function updateTokens(){
+jax.innerHTML = jaxTokens + " Tokens";
+kai.innerHTML = kaiTokens + " Tokens";
 }
 
-jaxUp(){
+function jaxUp(){
 jaxTokens+=1;
 updateTokens();
 }
 
-jaxDown(){
+function jaxDown(){
 jaxTokens-=1;
 updateTokens();
 }
 
-kaiUp(){
+function kaiUp(){
 kaiTokens+=1;
 updateTokens();
 }
 
-kaiDown(){
+function kaiDown(){
 kaiTokens-=1;
 updateTokens();
 }
@@ -83,6 +83,7 @@ Jax
 </strong>
 <br>
 <label id="jax">
+Error
 <!--java inserts tokens-->
 </label>
 <br>
@@ -100,6 +101,7 @@ Kai
 </strong>
 <br>
 <label id="kai">
+Error
 <!--java inserts tokens-->
 </label>
 <br>
@@ -116,7 +118,7 @@ Kai
 <div
 class="container">
 <strong>
-Shop:
+Shop
 </strong>
 <br>
 <!--------Prices--------->
