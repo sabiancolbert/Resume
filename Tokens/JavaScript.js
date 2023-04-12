@@ -18,6 +18,13 @@ jax.innerHTML ="nada";
 kai.innerHTML = getTokens();
 }
 
+function updateFile(){
+var data = jaxTokens + "," + kaiTokens;
+fs.writeFile("tokens.txt", data, (err) => {
+  if (err) console.log(err);
+});
+}
+
 function jaxUp(){
 jaxTokens+=1;
 updateTokens();
@@ -50,9 +57,8 @@ fs.readFile("tokens.txt", function(err, buf) {
 
 
 
-
 /*
-function getTokens() {
+function getTokensssss() {
   var result = null;
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.open("GET", "tokens.txt", false);
