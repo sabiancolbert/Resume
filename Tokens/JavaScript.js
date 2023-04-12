@@ -1,10 +1,10 @@
-//const fs = require(“fs”);
+const fs = require(“fs”);
 
 var jaxTokens =
-2
+02
 ;
 var kaiTokens =
-2
+02
 ;
 
 var jax = document.getElementById("jax");
