@@ -13,7 +13,7 @@ var kai = document.getElementById("kai");
 
 function updateTokens(){
 
-jax.innerHTML = jaxTokens + " Tokens";
+jax.innerHTML = jaxTokens + " Tokenss";
 kai.innerHTML = kaiTokens + " Tokens";
 
 //jax.innerHTML ="nada";
