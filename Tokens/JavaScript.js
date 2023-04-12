@@ -1,7 +1,7 @@
 const fs = require(“fs”);
 
 var jaxTokens =
-2
+5
 ;
 var kaiTokens =
 2
@@ -12,7 +12,7 @@ var kai = document.getElementById("kai");
 
 
 function updateTokens(){
-jax.innerHTML = jaxTokens + " Tokensgh";
+jax.innerHTML = jaxTokens + " Tokens";
 kai.innerHTML = kaiTokens + " Tokens";
 /*
 jax.innerHTML ="nada";
