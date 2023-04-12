@@ -12,23 +12,28 @@ var jax = getElementById("jax");
 var kai = getElementById("kai");
 
 updateTokens(){
-
+jax.innerHTML = jaxTokens;
+kai.innerHTML = kaiTokens;
 }
 
 jaxUp(){
-
+jaxTokens+=1;
+updateTokens();
 }
 
 jaxDown(){
-
+jaxTokens-=1;
+updateTokens();
 }
 
 kaiUp(){
-
+kaiTokens+=1;
+updateTokens();
 }
 
 kaiDown(){
-
+kaiTokens-=1;
+updateTokens();
 }
 
 </script>
