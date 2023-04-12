@@ -16,15 +16,15 @@ jax.innerHTML = jaxTokens + " Tokens";
 kai.innerHTML = kaiTokens + " Tokens";
 */
 jax.innerHTML ="nada";
-kai.innerHTML = getTokens();
+//kai.innerHTML = getTokens();
 }
 
-function updateFile(){
+/*function updateFile(){
 var data = jaxTokens + "," + kaiTokens;
 fs.writeFile("tokens.txt", data, (err) => {
   if (err) console.log(err);
 });
-}
+}*/
 
 function jaxUp(){
 jaxTokens+=1;
@@ -49,12 +49,12 @@ updateTokens();
 
 
 
-
+/*
 function getTokens() {
 fs.readFile("tokens.txt", function(err, buf) {
   return buf;
 });
-  }
+  }*/
 
 
 
