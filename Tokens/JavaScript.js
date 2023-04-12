@@ -1,12 +1,12 @@
 //const fs = require(“fs”);
-/*
+
 var jaxTokens =
 2
 ;
 var kaiTokens =
 2
 ;
-*/
+
 var jax = document.getElementById("jax");
 var kai = document.getElementById("kai");
 
