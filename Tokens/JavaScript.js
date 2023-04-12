@@ -1,22 +1,23 @@
 //const fs = require(“fs”);
-
+/*
 var jaxTokens =
 2
 ;
 var kaiTokens =
 2
 ;
-
+*/
 var jax = document.getElementById("jax");
 var kai = document.getElementById("kai");
 
 
-function updateTokens(){/*
+function updateTokens(){
 jax.innerHTML = jaxTokens + " Tokens";
 kai.innerHTML = kaiTokens + " Tokens";
-*/
+/*
 jax.innerHTML ="nada";
 //kai.innerHTML = getTokens();
+*/
 }
 
 /*function updateFile(){
@@ -24,7 +25,7 @@ var data = jaxTokens + "," + kaiTokens;
 fs.writeFile("tokens.txt", data, (err) => {
   if (err) console.log(err);
 });
-}*/
+}
 
 function jaxUp(){
 jaxTokens+=1;
@@ -54,7 +55,8 @@ function getTokens() {
 fs.readFile("tokens.txt", function(err, buf) {
   return buf;
 });
-  }*/
+  }
+*/
 
 
 
