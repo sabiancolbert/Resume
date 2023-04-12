@@ -56,6 +56,5 @@ Treat:5
 Toy:10
 <!------------------------>
 </div>
-<script src="JavaScript.js"></script>
 </body>
 </html>
