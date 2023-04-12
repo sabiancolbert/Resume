@@ -5,6 +5,33 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/ico" href="/Resources/favicon.ico" />
+<script>
+var jaxTokens = 2;
+var kaiTokens = 2;
+var jax = getElementById("jax");
+var kai = getElementById("kai");
+
+updateTokens(){
+
+}
+
+jaxUp(){
+
+}
+
+jaxDown(){
+
+}
+
+kaiUp(){
+
+}
+
+kaiDown(){
+
+}
+
+</script>
 <style>
 
 body{
@@ -23,12 +50,12 @@ border-radius:50px;
 background-image: linear-gradient(to bottom right, purple, blue);
 }
 
-#jax{
+#jaxBox{
 border-color:white;
 margin:30px 30px 0 30px;
 }
 
-#kai{
+#kaiBox{
 border-color: white;
 margin:0 30px 30px 30px;
 }
@@ -43,41 +70,42 @@ border-radius:50px;
 </style>
 </head>
 
-<body>
+<body onLoad="updateTokens()">
 <div class="container">
-<div id="jax">
+<div id="jaxBox">
 <strong>
 Jax
 </strong>
 <br>
-<label id="jaxTokens">
+<label id="jax">
 <!----------Jax----------> 
          2 Tokens
 <!------------------------>
 </label>
-<button>
+<br>
+<button onclick="jaxDown()">
 -
 </button>
-<button>
+<button onclick="jaxUp()">
 +
 </button>
 </div>
 <br>
-<div id="kai">
+<div id="kaiBox">
 <strong>
 Kai
 </strong>
 <br>
-<label id="kaiTokens">
+<label id="kai">
 <!----------Kai---------->
           2 Tokens
 <!----------------------->
 </label>
-
-<button>
+<br>
+<button onclick="kaiDown()">
 -
 </button>
-<button>
+<button onclick="kaiUp()">
 +
 </button>
 
