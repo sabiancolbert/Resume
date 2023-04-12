@@ -8,8 +8,8 @@
 <script>
 var jaxTokens = 2;
 var kaiTokens = 2;
-var jax = getElementById("jax");
-var kai = getElementById("kai");
+var jax = document.getElementById("jax");
+var kai = document.getElementById("kai");
 
 updateTokens(){
 jax.innerHTML = jaxTokens;
@@ -83,9 +83,7 @@ Jax
 </strong>
 <br>
 <label id="jax">
-<!----------Jax----------> 
-         2 Tokens
-<!------------------------>
+<!--java inserts tokens-->
 </label>
 <br>
 <button onclick="jaxDown()">
@@ -102,9 +100,7 @@ Kai
 </strong>
 <br>
 <label id="kai">
-<!----------Kai---------->
-          2 Tokens
-<!----------------------->
+<!--java inserts tokens-->
 </label>
 <br>
 <button onclick="kaiDown()">
