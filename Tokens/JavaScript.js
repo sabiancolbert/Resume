@@ -1,7 +1,7 @@
 const fs = require(“fs”);
 
 var jaxTokens =
-8
+2
 ;
 var kaiTokens =
 2
@@ -20,7 +20,7 @@ jax.innerHTML ="nada";
 */
 }
 
-/*function updateFile(){
+function updateFile(){
 var data = jaxTokens + "," + kaiTokens;
 fs.writeFile("tokens.txt", data, (err) => {
   if (err) console.log(err);
@@ -50,13 +50,13 @@ updateTokens();
 
 
 
-/*
+
 function getTokens() {
 fs.readFile("tokens.txt", function(err, buf) {
   return buf;
 });
   }
-*/
+
 
 
 
