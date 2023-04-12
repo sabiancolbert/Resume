@@ -12,7 +12,7 @@ function updateTokens(){/*
 jax.innerHTML = jaxTokens + " Tokens";
 kai.innerHTML = kaiTokens + " Tokens";
 */
-jax.innerHTML ="Nope";
+jax.innerHTML ="nada";
 kai.innerHTML = getTokens();
 }
 
@@ -36,6 +36,20 @@ kaiTokens-=1;
 updateTokens();
 }
 
+
+
+
+const fs = require(“fs”).promises;
+const path = require(“path”);
+
+function getTokens() {
+return JSON.parse(await fs.readFile("tokens.txt"));
+  }
+
+
+
+
+/*
 function getTokens() {
   var result = null;
   var xmlhttp = new XMLHttpRequest();
@@ -46,3 +60,4 @@ function getTokens() {
   }
   return result;
 }
+*/
