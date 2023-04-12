@@ -34,10 +34,8 @@ margin:0 30px 30px 30px;
 }
 
 button{
-
 border:5px solid white;
 border-radius:50px;
-
 }
 
 </style>
@@ -79,7 +77,6 @@ JavaScript Error
 <button onclick="kaiUp()">
 +
 </button>
-
 </div>
 </div>
 <br>
@@ -95,39 +92,6 @@ Treat:5
 Toy:10
 <!------------------------>
 </div>
-
-<script>
-var jaxTokens = 2;
-var kaiTokens = 2;
-var jax = document.getElementById("jax");
-var kai = document.getElementById("kai");
-
-function updateTokens(){
-jax.innerHTML = jaxTokens + " Tokens";
-kai.innerHTML = kaiTokens + " Tokens";
-}
-
-function jaxUp(){
-jaxTokens+=1;
-updateTokens();
-}
-
-function jaxDown(){
-jaxTokens-=1;
-updateTokens();
-}
-
-function kaiUp(){
-kaiTokens+=1;
-updateTokens();
-}
-
-function kaiDown(){
-kaiTokens-=1;
-updateTokens();
-}
-
-</script>
-
+<script src="JavaScript.js"></script>
 </body>
 </html>
