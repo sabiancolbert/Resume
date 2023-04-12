@@ -20,6 +20,12 @@ kai.innerHTML = kaiTokens + " Tokens";
 //kai.innerHTML = getTokens();
 
 }
+/*
+function getTokens() {
+fs.readFile("tokens.txt", function(err, buf) {
+  return buf;
+});
+  }
 
 function updateFile(){
 var data = jaxTokens + "," + kaiTokens;
@@ -27,7 +33,7 @@ fs.writeFile("tokens.txt", data, (err) => {
   if (err) console.log(err);
 });
 }
-
+*/
 function jaxUp(){
 jaxTokens+=1;
 updateTokens();
@@ -47,16 +53,6 @@ function kaiDown(){
 kaiTokens-=1;
 updateTokens();
 }
-
-
-
-
-
-function getTokens() {
-fs.readFile("tokens.txt", function(err, buf) {
-  return buf;
-});
-  }
 
 
 
