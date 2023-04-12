@@ -1,7 +1,7 @@
-//const fs = require(“fs”);
+const fs = require(“fs”);
 
 var jaxTokens =
-5
+8
 ;
 var kaiTokens =
 2
