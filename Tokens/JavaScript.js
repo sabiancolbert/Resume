@@ -11,33 +11,31 @@ const xhr = new XMLHttpRequest();
 xhr.open("GET", "tokens.txt");
 xhr.send();
 xhr.responseType = "json";
+
+kai.innerHTML = "nipe";
+
 xhr.onload = () => {
-  if (xhr.readyState == 4 && xhr.status == 200) {
-    const data = xhr.response;
-    console.log(data);
-jax.innerHTML = data;
-  } else {
-    console.log(`Error: ${xhr.status}`);
-  }
+  jax.innerHTML = xhr.response;
+kai.innerHTML = "hi";
 };
 }
 
 
-function jaxUp(int x){
+function jaxUp(x){
 jaxTokens+=x;
 jax.innerHTML = jaxTokens;
 }
 
-function kaiUp(int x){
+function kaiUp(x){
 kaiTokens+=x;
 kai.innerHTML = kaiTokens;
 }
-function jaxDown(int x){
+function jaxDown(x){
 jaxTokens-=x;
 jax.innerHTML = jaxTokens;
 }
 
-function kaiDown(int x){
+function kaiDown(x){
 kaiTokens-=x;
 kai.innerHTML = kaiTokens;
 }
