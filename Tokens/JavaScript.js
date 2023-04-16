@@ -7,17 +7,27 @@ var kai = document.getElementById("kai");
 
 
 function updateTokens(){
-const xhr = new XMLHttpRequest();
-xhr.open("GET", "tokens.txt");
-xhr.send();
-xhr.responseType = "json";
 
-kai.innerHTML = "nipe";
 
-xhr.onload = () => {
-  jax.innerHTML = xhr.response;
-kai.innerHTML = "hi";
-};
+
+
+
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      jax.getinnerHTML =
+      this.responseText;
+      kai.innerHTML=this.responseText;
+    }
+  };
+  xhttp.open("GET", "tokens.txt", true);
+  xhttp.send();
+
+
+
+
+
 }
 
 
