@@ -8,9 +8,6 @@ font-size:50px;
 div{
 border:5px solid white;
 border-radius:50px;
-}
-
-.container{
 background-image: linear-gradient(to bottom right, purple, blue);
 }
 
