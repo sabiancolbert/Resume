@@ -17,9 +17,9 @@ function updateTokens(){
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       jaxTokens =
-      this.responseText.split("|")[2];
+      this.responseText.split("-")[2];
       kaiTokens=
-      this.responseText.split("|")[4];
+      this.responseText.split("-")[4];
       jax.innerHTML = jaxTokens;
       kai.innerHTML = kaiTokens;
     }
