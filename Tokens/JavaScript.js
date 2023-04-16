@@ -1,3 +1,6 @@
+var jaxTokens = 20;
+var kaiTokens = 20;
+
 var jax = document.getElementById("jax");
 
 var kai = document.getElementById("kai");
@@ -21,4 +24,12 @@ var data = "File Error";
     jax.innerHTML=rawFile[1];
 kai.innerHTML=data[3];
 }
+function jaxDown(){
+jaxTokens-=1;
+jax.innerHTML = jaxTokens;
+}
 
+function kaiDown(){
+kaiTokens-=1;
+kai.innerHTML = kaiTokens;
+}
