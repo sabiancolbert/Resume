@@ -20,8 +20,8 @@ function updateTokens(){
       parseInt(this.responseText.split("-")[2]);
       kaiTokens=
       parseInt(this.responseText.split("-")[4]);
-      jax.innerHTML = jaxTokens;
-      kai.innerHTML = kaiTokens;
+      jax.innerHTML = jaxTokens + " Tokens";
+      kai.innerHTML = kaiTokens + " Tokens";
     }
   };
   xhttp.open("GET", "tokens.txt", true);
@@ -36,19 +36,19 @@ function updateTokens(){
 
 function jaxUp(x){
 jaxTokens+=x;
-jax.innerHTML = jaxTokens;
+jax.innerHTML = jaxTokens + " Tokens";
 }
 
 function kaiUp(x){
 kaiTokens+=x;
-kai.innerHTML = kaiTokens;
+kai.innerHTML = kaiTokens + " Tokens";
 }
 function jaxDown(x){
 jaxTokens-=x;
-jax.innerHTML = jaxTokens;
+jax.innerHTML = jaxTokens  + " Tokens";
 }
 
 function kaiDown(x){
 kaiTokens-=x;
-kai.innerHTML = kaiTokens;
+kai.innerHTML = kaiTokens  + " Tokens";
 }
