@@ -7,42 +7,80 @@
 <link rel="stylesheet" href="stylesheet.css">
 </head>
 
+<!-- Body -->
+
 <body onLoad="updateTokens()">
 <div class="container">
+
+<!-- Jax's Stuff -->
+
 <div id="jaxBox">
 <strong>
 Jax
 </strong>
 <br>
 <label id="jax">
-20
+JavaScript Error
 <!--java inserts tokens-->
 </label>
 <br>
-<button onclick="jaxDown()">
--
+<button onclick="jaxDown(1)">
+-1
 </button>
-<button onclick="jaxUp()">
-+
+<button onclick="jaxUp(1)">
++1
+</button>
+<br>
+<button onclick="jaxDown(5)">
+-5
+</button>
+<button onclick="jaxUp(5)">
++5
+</button>
+<br>
+<button onclick="jaxDown(10)">
+-10
+</button>
+<button onclick="jaxUp(10)">
++10
 </button>
 </div>
 <br>
+
+<!-- Kai's Stuff -->
+
 <div id="kaiBox">
 <strong>
 Kai
 </strong>
 <br>
 <label id="kai">
-20
+JavaScript Error
 <!--java inserts tokens-->
 </label>
 <br>
-<button onclick="kaiDown()">
--
+
+<button onclick="kaiDown(1)">
+-1
 </button>
-<button onclick="kaiUp()">
-+
+<button onclick="kaiUp(1)">
++1
 </button>
+<br>
+<button onclick="kaiDown(5)">
+-5
+</button>
+<button onclick="kaiUp(5)">
++5
+</button>
+<br>
+<button onclick="kaiDown(10)">
+-10
+</button>
+<button onclick="kaiUp(10)">
++10
+</button>
+
 </div>
 </div>
 <br>
