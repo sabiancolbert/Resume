@@ -3,7 +3,7 @@ var jax = document.getElementById("jax");
 var kai = document.getElementById("kai");
 
 
-function onLoad(){
+function updateTokens(){
 var rawFile = new XMLHttpRequest();
     rawFile.open("GET", "tokens.txt", false);
 var data = "File Error";
