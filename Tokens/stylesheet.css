@@ -13,12 +13,12 @@ background-image: linear-gradient(to bottom right, purple, blue);
 
 #jaxBox{
 border-color:white;
-margin:30px 30px 0 30px;
+margin:10px 10px 0 10px;
 }
 
 #kaiBox{
 border-color: white;
-margin:0 30px 30px 30px;
+margin:0 10px 10px 10px;
 }
 
 
@@ -29,8 +29,8 @@ color: white;
 border:5px solid white;
 border-radius:50px;
 background-color:transparent;
-height:70px;
-width:70px;
-margin:15px 30px 30px;
+height:80px;
+width:200px;
+margin:5px 10px;
 padding:0;
 }
