@@ -1,5 +1,5 @@
-var jaxTokens = 30;
-var kaiTokens = 30;
+var jaxTokens = 0;
+var kaiTokens = 0;
 
 var jax = document.getElementById("jax");
 
@@ -16,9 +16,12 @@ function updateTokens(){
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      jax.innerHTML =
-      this.responseText[1];
-      kai.innerHTML=this.responseText[3];
+      jaxTokens =
+      this.responseText.split(",")[1];
+      kaiTokens=
+      this.responseText.split(",")[3];
+      jax.innerHTML = jaxTokens;
+      kai.innerHTML = kaiTokens;
     }
   };
   xhttp.open("GET", "tokens.txt", true);
