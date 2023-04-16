@@ -16,9 +16,9 @@ function updateTokens(){
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      jax.getinnerHTML =
-      this.responseText;
-      kai.innerHTML=this.responseText;
+      jax.innerHTML =
+      this.responseText[1];
+      kai.innerHTML=this.responseText[3];
     }
   };
   xhttp.open("GET", "tokens.txt", true);
