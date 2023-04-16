@@ -24,12 +24,23 @@ var data = "File Error";
     jax.innerHTML=rawFile[1];
 kai.innerHTML=data[3];
 }
-function jaxDown(){
-jaxTokens-=1;
+
+
+function jaxUp(int x){
+jaxTokens+=x;
 jax.innerHTML = jaxTokens;
 }
 
-function kaiDown(){
-kaiTokens-=1;
+function kaiUp(int x){
+kaiTokens+=x;
+kai.innerHTML = kaiTokens;
+}
+function jaxDown(int x){
+jaxTokens-=x;
+jax.innerHTML = jaxTokens;
+}
+
+function kaiDown(int x){
+kaiTokens-=x;
 kai.innerHTML = kaiTokens;
 }
