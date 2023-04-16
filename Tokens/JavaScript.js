@@ -1,17 +1,23 @@
+var jax = document.getElementById("jax");
+
+var kai = document.getElementById("kai");
+
 
 function onLoad(){
 var rawFile = new XMLHttpRequest();
     rawFile.open("GET", "tokens.txt", false);
+var data = "File Error";
     rawFile.onreadystatechange = function ()
     {
         if(rawFile.readyState === 4)
         {
             if(rawFile.status === 200 || rawFile.status == 0)
             {
-                var allText = rawFile.responseText;
-                alert(allText);
+                data = rawFile.responseText;
+                alert(data);
             }
         }
     }
-    rawFile.send(null);
+    jax.innerHTML=rawFile[1];
+kai.innerHTML=data[3];
 }
