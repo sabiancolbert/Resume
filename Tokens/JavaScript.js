@@ -1,5 +1,5 @@
-var jaxTokens = 20;
-var kaiTokens = 20;
+var jaxTokens = 30;
+var kaiTokens = 30;
 
 var jax = document.getElementById("jax");
 
