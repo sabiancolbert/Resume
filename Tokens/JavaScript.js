@@ -7,22 +7,19 @@ var kai = document.getElementById("kai");
 
 
 function updateTokens(){
-var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", "tokens.txt", false);
-var data = "File Error";
-    rawFile.onreadystatechange = function ()
-    {
-        if(rawFile.readyState === 4)
-        {
-            if(rawFile.status === 200 || rawFile.status == 0)
-            {
-                data = rawFile.responseText;
-                alert(data);
-            }
-        }
-    }
-    jax.innerHTML=rawFile[1];
-kai.innerHTML=data[3];
+const xhr = new XMLHttpRequest();
+xhr.open("GET", "tokens.txt");
+xhr.send();
+xhr.responseType = "json";
+xhr.onload = () => {
+  if (xhr.readyState == 4 && xhr.status == 200) {
+    const data = xhr.response;
+    console.log(data);
+jax.innerHTML = data;
+  } else {
+    console.log(`Error: ${xhr.status}`);
+  }
+};
 }
 
 
