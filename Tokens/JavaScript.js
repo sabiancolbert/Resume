@@ -1,18 +1,9 @@
 var jaxTokens = 0;
 var kaiTokens = 0;
-
 var jax = document.getElementById("jax");
-
 var kai = document.getElementById("kai");
 
-
 function updateTokens(){
-
-
-
-
-
-
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -26,13 +17,7 @@ function updateTokens(){
   };
   xhttp.open("GET", "tokens.txt", true);
   xhttp.send();
-
-
-
-
-
 }
-
 
 function jaxUp(x){
 jaxTokens+=x;
