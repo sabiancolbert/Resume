@@ -16,6 +16,7 @@ background-image: linear-gradient(to bottom right, purple, blue);
 
 button{
 font-size:30px;
+font-weight:bold;
 color: white;
 border:5px solid white;
 border-radius:50px;
