@@ -81,15 +81,17 @@
 <h1>NET</h1>
 <h1 id="net">#</h1>
 	<script>
-		
+	function doc(id){
+return document.getElementById(id);
+	}
 	function calc(){
-		var pay0 = 0;
-		var pay2 = 0;
-		var pay3 = 0;
-		var pay5 = 0;
-		var payo =0;
-		
+		var pay0 = doc("base") * doc("pay0");
+		var pay2 = doc("base") + 2 * doc("pay2");
+		var pay3 = doc("base") + 3 * doc("pay3");
+		var pay5 = doc("base") + 5 * doc("pay5");
+		var payo = doc("base") * doc("over") * doc("payo");
 		var gross = pay0 + pay2 + pay3 + pay5 + payo;
+		var postTax = gross * 1;
 		document.getElementById("net").innerHTML="wkd";
 	}
 	</script>
