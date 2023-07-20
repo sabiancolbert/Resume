@@ -9,7 +9,9 @@
 	
 }</style>
 	<script>
-		
+	function static void calc(){
+		document.getElementById("net").innerHTML="wkd";
+	}
 	</script>
 </head>
 
@@ -19,12 +21,12 @@
 	<div style="float:left">
 	<label>Base Pay</label>
 	<br>
-<input type="number" id="base" value="1">
+<input type="number" id="base" value="1" onchange="calc()">
  </div>
 	<div style="float:right">
 <label>Overtime Multiplier</label>
 		<br>
-		<input type="number" id="over" value="2">
+		<input type="number" id="over" value="2" onchange="calc()">
 	</div>
 </article>
 	 
@@ -35,22 +37,22 @@
 	<div style="float:left">
   <label>Base</label>
 		<br>
-		<input type="number" id="pay0">
+		<input type="number" id="pay0" onchange="calc()">
 	</div>
 	<div style="float:right">
   <label>+2</label>
 		<br>
-		<input type="number" id="pay2">
+		<input type="number" id="pay2" onchange="calc()">
 	</div>
 	<div style="float:left">
   <label>+3</label>
 		<br>
-		 <input type="number" id="pay3">
+		 <input type="number" id="pay3" onchange="calc()">
 	</div>
 	<div style="float:right">
   <label>+5</label>
 		<br>
-		<input type="number" id="pay5">
+		<input type="number" id="pay5" onchange="calc()">
 	</div>
 </article>
 	<article>
@@ -58,29 +60,29 @@
 	<div style="float:left">
   <label>Savings</label>
 		<br>
-		<input type="number" id="savi">
+		<input type="number" id="savi" onchange="calc()">
 	</div>
 	<div style="float:right">
   <label>401k</label>
 		<br>
-		<input type="number" id="reti">
+		<input type="number" id="reti" onchange="calc()">
 	</div>
 	<div style="float:left">
   <label>Benifits</label>
 		<br>
-		<input type="number" id="beni">
+		<input type="number" id="beni" onchange="calc()">
 	</div>
 	<div style="float:right">
   <label>Other</label>
 		<br>
-		<input type="number" id="othe">
+		<input type="number" id="othe" onchange="calc()">
 	</div>
 	</article>
   
   
   
 <h1>NET</h1>
-<h1>#</h1>
+<h1 id="net">#</h1>
 
 </body>
 </html>
