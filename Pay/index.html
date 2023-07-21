@@ -82,26 +82,26 @@
 <h1 id="net">#</h1>
 	<script>
 	function doc(id){
-return document.getElementById(id);
+return document.getElementById(id).value;
 	}
 	function calc(){
 		
 	
 	
 		var payo = 0;
-		if(doc("pay0").innerHTML + doc("pay2").innerHTML + doc("pay3").innerHTML + doc("pay5").innerHTML > 40){
-                payo = doc("pay0").innerHTML + doc("pay2").innerHTML + doc("pay3").innerHTML + doc("pay5").innerHTML - 40;
+		if(doc("pay0") + doc("pay2") + doc("pay3") + doc("pay5") > 40){
+                payo = doc("pay0") + doc("pay2") + doc("pay3") + doc("pay5") - 40;
 		}
-		var pay0 = doc("base").innerHTML * doc("pay0").innerHTML;
-		var pay2 = doc("base").innerHTML + 2 * doc("pay2").innerHTML;
-		var pay3 = doc("base").innerHTML + 3 * doc("pay3").innerHTML;
-		var pay5 = doc("base").innerHTML + 5 * doc("pay5").innerHTML;
-		payo = payo * doc("base").innerHTML * doc("over").innerHTML - (payo * doc("base").innerHTML);
+		var pay0 = doc("base") * doc("pay0";
+		var pay2 = doc("base") + 2 * doc("pay2");
+		var pay3 = doc("base") + 3 * doc("pay3");
+		var pay5 = doc("base") + 5 * doc("pay5");
+		payo = payo * doc("base") * doc("over") - (payo * doc("base"));
 		var gross = pay0 + pay2 + pay3 + pay5 + payo;
 		var postTax = gross * 1;
-	        var savi = gross * doc("savi").innerHTML * .01;
-		var reti = gross * doc("reti").innerHTML * .01;
-		var net = postTax - savi - reti - doc("beni").innerHTML - doc("othe").innerHTML;
+	        var savi = gross * doc("savi") * .01;
+		var reti = gross * doc("reti") * .01;
+		var net = postTax - savi - reti - doc("beni") - doc("othe");
 		doc("net").innerHTML = net;
 		doc("net").innerHTML = "dd"+ pay0 +"dn"+ pay2 +"ed"+ pay3 + "en"+pay5 +"ov"+ payo +"g"+ gross +"p"+ postTax +"s"+ savi +"r"+ beni + "r"+ reti + "o" + othe + "n" + net;
 	}
