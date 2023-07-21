@@ -22,7 +22,7 @@
 	<div style="float:right">
 <label>Overtime Multiplier</label>
 		<br>
-		<input type="number" id="over" value="2" onchange="calc()">
+		<input type="number" id="over" value="23" onchange="calc()">
 	</div>
 </article>
 	 <br>
@@ -85,7 +85,7 @@
 return document.getElementById(id).innerHTML;
 	}
 	function calc(){
-		document.getElementById("net").innerHTML = "calc";
+		doc("net").innerHTML = "calc";
 		var payo = 0;
 		if(doc("pay0") + doc("pay2") + doc("pay3") + doc("pay5") > 40){
                 payo = doc("pay0") + doc("pay2") + doc("pay3") + doc("pay5") - 40;
