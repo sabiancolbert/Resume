@@ -17,7 +17,7 @@
 	<div style="float:left">
 	<label>Base Pay</label>
 	<br>
-<input type="number" id="base" value="615" onchange="calc()"\>
+<input type="number" id="base" value="6615" onchange="calc()"\>
  </div>
 	<div style="float:right">
 <label>Overtime Multiplier</label>
@@ -100,7 +100,7 @@ return document.getElementById(id);
 		var reti = gross * doc("reti") * .01;
 		var net = postTax - savi - reti - doc("beni") - doc("othe");
 		doc("net").innerHTML = net;
-		document.getElementById("net").innerHTML = yes;
+		document.getElementById("net").innerHTML = "yes";
 	}
 	</script>
 
