@@ -83,7 +83,7 @@
 <h1 id="net">#</h1>
 	<script>
 	function doc(id){
-return document.getElementById(id);
+return document.getElementById(id).value;
 	}
 	function calc(){
 		
@@ -93,7 +93,7 @@ return document.getElementById(id);
 		if(doc("pay0") + doc("pay2") + doc("pay3") + doc("pay5") > 40){
                 payo = doc("pay0") + doc("pay2") + doc("pay3") + doc("pay5") - 40;
 		}
-		var pay0 = doc("base") * doc("pay0";
+		var pay0 = doc("base") * doc("pay0");
 		var pay2 = doc("base") + 2 * doc("pay2");
 		var pay3 = doc("base") + 3 * doc("pay3");
 		var pay5 = doc("base") + 5 * doc("pay5");
