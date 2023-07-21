@@ -85,14 +85,19 @@
 return document.getElementById(id);
 	}
 	function calc(){
+		// fix payo
 		var pay0 = doc("base") * doc("pay0");
 		var pay2 = doc("base") + 2 * doc("pay2");
 		var pay3 = doc("base") + 3 * doc("pay3");
 		var pay5 = doc("base") + 5 * doc("pay5");
 		var payo = doc("base") * doc("over") * doc("payo");
+		//fix payo
 		var gross = pay0 + pay2 + pay3 + pay5 + payo;
+	        var savi = gross * doc("savi");
+		var reti = gross * doc("reti");
 		var postTax = gross * 1;
-		document.getElementById("net").innerHTML="wkd";
+		var net = postTax - savi - reti - doc("beni") - doc("othe");
+		doc("net") = net;
 	}
 	</script>
 
