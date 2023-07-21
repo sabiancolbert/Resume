@@ -17,7 +17,7 @@
 	<div style="float:left">
 	<label>Base Pay</label>
 	<br>
-<input type="number" id="base" value="15" onchange="calc()"\>
+<input type="number" id="base" value="6" onchange="calc()"\>
  </div>
 	<div style="float:right">
 <label>Overtime Multiplier</label>
@@ -85,6 +85,7 @@
 return document.getElementById(id).innerHTML;
 	}
 	function calc(){
+		document.getElementById("net").innerHTML = "calc";
 		var payo = 0;
 		if(doc("pay0") + doc("pay2") + doc("pay3") + doc("pay5") > 40){
                 payo = doc("pay0") + doc("pay2") + doc("pay3") + doc("pay5") - 40;
