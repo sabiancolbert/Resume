@@ -66,7 +66,7 @@
 		<input type="number" id="beni" onchange="calc()">
 	</div>
 		<div style="float:left">
-  <label>401k %</label>
+  <label>457B %</label>
 		<br>
 		<input type="number" id="reti" onchange="calc()">
 	</div>
@@ -99,10 +99,11 @@ return Number(document.getElementById(id).value);
 		var pay5 = (doc("base") + 5) * doc("pay5");
 		payo = payo * doc("base") * doc("over") - (payo * doc("base"));
 		var gross = pay0 + pay2 + pay3 + pay5 + payo;
+		var reti = gross * doc("reti") * .01;
+		gross -= reti;
 		var postTax = gross * 1;
 	        var savi = gross * doc("savi") * .01;
-		var reti = gross * doc("reti") * .01;
-		var net = postTax - savi - reti - doc("beni") - doc("othe");
+		var net = postTax - savi - doc("beni") - doc("othe");
 		
 		document.getElementById("net").innerHTML = net;
 		document.getElementById("net").innerHTML = net + " weekday "+ pay0 +" weeknight "+ pay2 +" wkend day "+ pay3 + " wkend night "+pay5 +" over "+ payo +" gros "+ gross +" postTax "+ postTax +" savi "+ savi + " reti "+ reti;
