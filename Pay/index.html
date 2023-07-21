@@ -129,7 +129,7 @@ return Number(document.getElementById(id).value);
 		var reti = gross * doc("reti") * .01;
 		gross = gross - reti - doc("bene");;
 		var postTax = gross * 1;
-	        var savi = gross * doc("savi") * .01;
+	        var savi = postTax * doc("savi") * .01;
 		var net = postTax - savi - doc("othe");
 		
 		document.getElementById("net").innerHTML = net;
