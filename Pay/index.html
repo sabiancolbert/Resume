@@ -82,12 +82,11 @@
 <h1 id="net">#</h1>
 	<script>
 	function doc(id){
-return document.getElementById(id).innerHTML;
+return document.getElementById(id);
 	}
 	function calc(){
-		document.getElementById("net").innerHTML = " one";
-		doc("net") = "calc";
-		
+		doc("net").innerHTML= "calc";
+	
 	
 		var payo = 0;
 		if(doc("pay0") + doc("pay2") + doc("pay3") + doc("pay5") > 40){
@@ -104,7 +103,7 @@ return document.getElementById(id).innerHTML;
 		var reti = gross * doc("reti") * .01;
 		var net = postTax - savi - reti - doc("beni") - doc("othe");
 		doc("net").innerHTML = net;
-		doc("net").innerHTML = "a" + pay0 + pay2 + pay3 + pay5 + payo + gross + postTax + savi + beni + reti + othe + net;
+		//doc("net").innerHTML = "a" + pay0 + pay2 + pay3 + pay5 + payo + gross + postTax + savi + beni + reti + othe + net;
 	}
 	</script>
 
