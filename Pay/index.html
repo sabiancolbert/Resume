@@ -94,9 +94,9 @@ return Number(document.getElementById(id).value);
                 payo = doc("pay0") + doc("pay2") + doc("pay3") + doc("pay5") - 40;
 		}
 		var pay0 = doc("base") * doc("pay0");
-		var pay2 = doc("base") + 2 * doc("pay2");
-		var pay3 = doc("base") + 3 * doc("pay3");
-		var pay5 = doc("base") + 5 * doc("pay5");
+		var pay2 = (doc("base") + 2) * doc("pay2");
+		var pay3 = (doc("base") + 3) * doc("pay3");
+		var pay5 = (doc("base") + 5) * doc("pay5");
 		payo = payo * doc("base") * doc("over") - (payo * doc("base"));
 		var gross = pay0 + pay2 + pay3 + pay5 + payo;
 		var postTax = gross * 1;
