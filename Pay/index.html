@@ -130,8 +130,8 @@ return Number(document.getElementById(id).value);
 		payo = payo * doc("base") * doc("over") - (payo * doc("base"));
 		var gross = pay0 + pay2 + pay3 + pay5 + payo;
 		var reti = gross * doc("reti") * .01;
-		gross = gross - reti - doc("bene");;
-		var postTax = gross * 1;
+		gross = gross - reti - doc("bene");
+		var postTax = gross - (gross * 0.1015);
 	        var savi = postTax * doc("savi") * .01;
 		var net = postTax - savi - doc("othe");
 		
