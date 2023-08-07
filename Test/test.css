@@ -6,7 +6,12 @@ body{
 hr{
     width:80%;
 }
+.wrapper{
+    display: inline-block;
+    width:50%;
+}
 img{
+    object-fit:contain;
     width:90%;
     display: block;
   margin-left: auto;
