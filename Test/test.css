@@ -7,8 +7,11 @@ hr{
     width:80%;
 }
 .wrapper{
-    display: inline-block;
     width:50%;
+}
+a{
+    display:inline-block;
+    width:100%;
 }
 img{
     object-fit:contain;
