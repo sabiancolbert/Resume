@@ -18,7 +18,7 @@ a{
     margin:25px 0;
 }
 img{
-    position: absolute;
+    
     object-fit:contain;
     width:40%;
     display: block;
