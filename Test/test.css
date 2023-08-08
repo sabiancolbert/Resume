@@ -13,8 +13,9 @@ section{
 }
 article{
 display:inline-block;
-    width:100%;
+    width:98%;
     padding-top:100%;
+    border:1px solid red;
 }
 a{
     display: block;
@@ -23,6 +24,7 @@ a{
     margin-top:auto;
     margin-bottom:auto;
     margin:25px 0;
+    border:1px solid green;
 }
 img{
     
