@@ -9,10 +9,11 @@ hr{
     width:80%;
 }
 section{
+    margin:auto;
     width:min(40vw, 40vh);
 }
 article{
-margin:auto;
+
     width:100%;
     padding-top:100%;
     
