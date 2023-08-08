@@ -37,10 +37,10 @@ position:absolute;
 img{
 
 
-    object-fit: cover;
+    object-fit: contain;
     position:relative;
    
-    width:100%;
+
     
     
 }
