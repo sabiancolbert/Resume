@@ -36,9 +36,9 @@ position:absolute;
 }
 img{
     /*margin:auto;*/
-    height:90%;
     width:90%;
+    object-fit: cover;
     position:relative;
-    /*width:40%;*/
+    
     
 }
