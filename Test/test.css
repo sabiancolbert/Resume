@@ -20,7 +20,7 @@ article{
 
    width:min(40vw, 40vh);
      padding-top:100%;
-
+position:relative;
     border:1px solid red;
    
 }
