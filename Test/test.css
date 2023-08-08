@@ -11,10 +11,11 @@ hr{
 .sectionHold{
     
     width:50%;
-    text-align:center;
     
+    text-align:center;
 }
 section{
+    position:relative;
 margin:auto;
 }
 article{
