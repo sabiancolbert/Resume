@@ -12,23 +12,12 @@ hr{
 section{
     width:50%;
 }
-article{
-margin:0 auto;
-   width:40vmin;
-     padding-top:100%;
-    height:0;
-position:relative;
-    border:1px solid red;
-   
-}
+
 a{
      
-     top: 0;
-  left:0;
-  width: 100%;
-  height: 100%;
-  
-position:absolute;
+     margin:auto;
+    width:40vmin;
+    height:40vmin;
     border:1px solid green;
 }
 img{
