@@ -12,8 +12,8 @@ section{
     width:50%;
 }
 article{
-
-    width:98%;
+margin:auto;
+    width:calc(50vh * 50vw);
     padding-top:100%;
     
     border:1px solid red;
