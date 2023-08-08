@@ -13,7 +13,7 @@ section{
 }
 article{
 margin:auto;
-    width:min(90vw, 90vh);
+    width:min(40vw, 40vh);
     padding-top:100%;
     
     border:1px solid red;
