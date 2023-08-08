@@ -10,6 +10,7 @@ hr{
 }
 section{
     margin:auto;
+    display:inline-block;
     width:min(40vw, 40vh);
 }
 article{
