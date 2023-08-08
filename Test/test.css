@@ -12,14 +12,15 @@ hr{
     
     width:50%;
     
-    text-align:center;
+    
 }
-section{
-    position:relative;
-margin:auto;
+section{/*
+    width:40vmin;
+    margin:auto;*/
+    width:100%;
 }
 article{
-
+margin:0 auto;
    width:40vmin;
      padding-top:100%;
 position:relative;
