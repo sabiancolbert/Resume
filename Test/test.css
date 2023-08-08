@@ -26,12 +26,13 @@ a{
     margin-top:auto;
     margin-bottom:auto;
     */
- 
+/* position: absolute;*/
     border:1px solid green;
 }
 img{
     /*margin:auto;*/
-    object-fit:contain;
+    height:90%;
+    width:90%
     /*width:40%;*/
     
 }
