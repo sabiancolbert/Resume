@@ -8,16 +8,9 @@ body{
 hr{
     width:80%;
 }
-.sectionHold{
-    
+
+section{
     width:50%;
-    
-    
-}
-section{/*
-    width:40vmin;
-    margin:auto;*/
-    width:100%;
 }
 article{
 margin:0 auto;
