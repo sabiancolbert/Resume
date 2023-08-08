@@ -13,7 +13,7 @@ section{
 }
 article{
 margin:auto;
-    width:calc(25vw + 25vh);
+    width:min(90vw, 90vh);
     padding-top:100%;
     
     border:1px solid red;
