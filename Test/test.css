@@ -17,7 +17,7 @@ article{
 margin:auto;
    width:min(40vw, 40vh);
     border:1px solid red;
-   
+   position: relative;
 }
 a{
      width:100%;
