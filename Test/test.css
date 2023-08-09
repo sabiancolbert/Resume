@@ -11,11 +11,12 @@ hr{
 
 section{
     width:50%;
+    
 }
 
 a{
      
-     margin:auto;
+     margin:0 auto;
     width:40vmin;
     height:40vmin;
     border:1px solid green;
