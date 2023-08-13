@@ -22,7 +22,7 @@ position:relative;
 border:1px solid red;
 }
 a{
-     
+     position: relative;
      margin:0 auto;
     width:40vmin;
     height:40vmin;
