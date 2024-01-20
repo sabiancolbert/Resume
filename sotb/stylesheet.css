@@ -8,4 +8,10 @@ background-image: linear-gradient(to bottom right, black, #000022, #000055, blue
 button{
 border-radius:100%;
   border:1px solid green;
+  width:20%vmin;
+}
+button:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
