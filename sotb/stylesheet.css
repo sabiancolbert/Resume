@@ -1,5 +1,4 @@
 body{
-  height:100%;
 background-image: linear-gradient(to bottom right, black, #000022, #000055, blue);
   background-attachment: fixed;
   color:white;
@@ -7,11 +6,13 @@ background-image: linear-gradient(to bottom right, black, #000022, #000055, blue
 
 button{
 border-radius:100%;
-  border:1px solid green;
-  width:20%vmin;
+  border:1px solid white;
+  background-color:transparent;
+  width:40%vmin;
 }
 button:after {
   content: "";
   display: block;
   padding-bottom: 100%;
+  text-align:center;
 }
