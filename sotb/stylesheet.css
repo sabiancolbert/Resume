@@ -1,6 +1,6 @@
 body{
   height:100%;
-background-image: linear-gradient(to bottom right, black, black, blue);
+background-image: linear-gradient(to bottom right, black, #000088, #0000cc, blue);
   background-attachment: fixed;
   color:white;
 }
