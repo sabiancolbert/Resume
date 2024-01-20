@@ -1,11 +1,12 @@
 body{
 background-image: linear-gradient(to bottom right, black, #000022, #000055, blue);
   background-attachment: fixed;
-  color:green;
+  color:yellow;
 }
 section{
 width:80%vmin;
   border:1px solid red;
+  position:absolute;
 }
 
 article{
