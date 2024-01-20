@@ -1,7 +1,8 @@
 body{
   height:100%;
-background-image: linear-gradient(to bottom right, black, blue, purple);
+background-image: linear-gradient(to bottom right, black, black, blue);
   background-attachment: fixed;
+  color:white;
 }
 
 button{
