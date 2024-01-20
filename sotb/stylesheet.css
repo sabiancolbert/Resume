@@ -8,15 +8,12 @@ button{
 border-radius:100%;
   border:1px solid white;
   background-color:transparent;
-  width:40%vmin;
+  height:40%vmin;
   position:fixed;
-  text-align:center;
-  color:green;
+  color:white;
 }
 button:after {
   content: "";
   display: block;
   padding-bottom: 100%;
-  text-align:center;
-  color:white;
 }
