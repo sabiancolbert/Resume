@@ -4,9 +4,8 @@ background-image: linear-gradient(to bottom right, black, #000022, #000055, blue
   color:yellow;
 }
 section{
-width:80%vmin;
+width:40%vmin;
   border:1px solid red;
-  position:absolute;
 }
 
 article{
