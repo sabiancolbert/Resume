@@ -1,7 +1,16 @@
 body{
 background-image: linear-gradient(to bottom right, black, #000022, #000055, blue);
   background-attachment: fixed;
-  color:red;
+  color:green;
+}
+section{
+width:80%vmin;
+  border:1px solid red;
+}
+
+article{
+padding-top:100%;
+  display:block;
 }
 
 button{
