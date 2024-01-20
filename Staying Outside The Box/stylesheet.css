@@ -1,0 +1,8 @@
+body{
+background-image: linear-gradient(to bottom right, black, blue, purple);
+}
+
+button{
+border-radius:100%;
+  border:1px solid white;
+}
