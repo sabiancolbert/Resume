@@ -1,7 +1,7 @@
 body{
 background-image: linear-gradient(to bottom right, black, #000022, #000055, blue);
   background-attachment: fixed;
-  color:white;
+  color:red;
 }
 
 button{
@@ -9,6 +9,9 @@ border-radius:100%;
   border:1px solid white;
   background-color:transparent;
   width:40%vmin;
+  position:fixed;
+  text-align:center;
+  color:green;
 }
 button:after {
   content: "";
