@@ -7,32 +7,15 @@ body{
   padding:0;
   color:red;
 }
-/*
-section{
-width:40%vmin;
-  border:1px solid blue;
-}
 
-article{
-  position: relative;
-padding-top:10%;
-  display:block;
-  border:1px solid green;
-  width:10px;
-}*/
 
 section{
   border:1px solid yellow;
   width:82vmin;
   height:82vmin;
   margin:4vmin auto;
-  
-}/*
-section:after {
-  content: "";
-  display: block;
-  padding-top: 82vmin;
-}*/
+  position:fixed;
+}
 
 button{
 border-radius:100%;
