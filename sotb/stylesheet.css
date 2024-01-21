@@ -4,6 +4,7 @@ background-image: linear-gradient(to bottom right, black, #000022, #000055, blue
 }
 
 body{
+  padding:0;
   color:purple;
 }
 /*
@@ -21,10 +22,11 @@ padding-top:10%;
 }*/
 
 section{
-  border:1px solid blue;
+  border:1px solid yellow;
   width:82vmin;
   height:82vmin;
-  margin:auto;
+  margin:9vmin auto;
+  
 }/*
 section:after {
   content: "";
