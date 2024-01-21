@@ -5,7 +5,7 @@ background-image: linear-gradient(to bottom right, black, #000022, #000055, blue
 
 body{
   padding:0;
-  color:purple;
+  color:red;
 }
 /*
 section{
@@ -41,6 +41,7 @@ border-radius:100%;
   width:30vmin;
   height:30vmin;
   color:white;
+  position:fixed;
 }
 
 #aboutButton{
