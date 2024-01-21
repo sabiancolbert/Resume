@@ -18,17 +18,14 @@ padding-top:10%;
 }*/
 
 section{
-  border:1px solid green;
+  border:1px solid purple;
   width:90vmin;
-  padding:0;
   position:fixed;
 }
 section:after {
   content: "";
   display: block;
-  padding:0;
   padding-top: 75vmin;
-  margin:0;
 }
 
 button{
