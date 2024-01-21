@@ -41,14 +41,23 @@ border-radius:100%;
   width:30vmin;
   height:30vmin;
   color:white;
-}/*
-button:after {
-  content: "";
-  display: block;
-  padding-bottom:30vmin;
-}*/
+}
 
-#about{
+#aboutButton{
 width:10vmin;
   height:10vmin;
+}
+
+#podButton{
+
+}
+
+#storyButton{
+right:0;
+  top:5vmin;
+}
+
+#loungeButton{
+bottom:0;
+  right:10vmin;
 }
