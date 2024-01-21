@@ -21,9 +21,9 @@ padding-top:10%;
 }*/
 
 section{
-  border:1px solid red;
+  border:1px solid green;
   width:82vmin;
-  margin:auto auto;
+  margin:calc(2/(100vh-82vmin)) auto;
 }
 section:after {
   content: "";
@@ -35,12 +35,11 @@ button{
 border-radius:100%;
   border:1px solid white;
   background-color:transparent;
-  width:10%vmin;
-  position:fixed;
+  width:40vmin;
   color:white;
 }
 button:after {
   content: "";
   display: block;
-  padding-bottom: 100%;
+  padding-bottom:40vmin;
 }
