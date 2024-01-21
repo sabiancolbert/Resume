@@ -1,11 +1,10 @@
 html{
 background-image: linear-gradient(to bottom right, black, #000022, #000055, blue);
+  background-attachment: fixed;
 }
 
 body{
-  background-attachment: fixed;
   color:purple;
-  overflow:hidden;
 }
 /*
 section{
@@ -29,7 +28,7 @@ section{
 section:after {
   content: "";
   display: block;
-  padding-top: 84vmin;
+  padding-top: 82vmin;
 }
 
 button{
