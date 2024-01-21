@@ -12,8 +12,8 @@ body{
 section{
   width:82vmin;
   height:82vmin;
-  margin:calc(50vh - 41vmin)px calc(50vw - 41vmin)px;
-border:1px solid blue;
+  margin:calc(50vh - 41vmin) calc(50vw - 41vmin);
+border:1px solid yellow;
   position: fixed;
   /*
   position:fixed
