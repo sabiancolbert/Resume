@@ -5,7 +5,7 @@ background-image: linear-gradient(to bottom right, black, #000022, #000055, blue
 }
 section{
 width:40%vmin;
-  border:1px solid yellow;
+  border:1px solid blue;
 }
 
 article{
@@ -13,7 +13,7 @@ article{
 padding-top:10%;
   display:block;
   border:1px solid green;
-  width:100%;
+  width:10px;
 }
 
 button{
