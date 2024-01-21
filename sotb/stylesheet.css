@@ -19,8 +19,8 @@ padding-top:10%;
 }*/
 
 section{
-  border:1px solid red;
-  width:90vmin;
+  border:1px solid yellow;
+  width:84vmin;
   position:fixed;
 }
 section:after {
