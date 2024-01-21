@@ -19,7 +19,7 @@ padding-top:10%;
 
 section{
   border:1px solid blue;
-  height:50px;
+  width:100vmin;
   position:fixed;
 }
 section:after {
@@ -32,7 +32,7 @@ button{
 border-radius:100%;
   border:1px solid white;
   background-color:transparent;
-  height:40%vmin;
+  width:10%vmin;
   position:fixed;
   color:white;
 }
