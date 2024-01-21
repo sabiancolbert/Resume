@@ -5,11 +5,11 @@ background-image: linear-gradient(to bottom right, black, #000022, #000055, blue
 }
 section{
 width:40%vmin;
-  border:1px solid yellow;
+  border:1px solid red;
 }
 
 article{
-padding-top:50%;
+padding-top:10%;
   display:block;
 }
 
