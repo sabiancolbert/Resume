@@ -1,7 +1,8 @@
 body{
 background-image: linear-gradient(to bottom right, black, #000022, #000055, blue);
   background-attachment: fixed;
-  color:red;
+  color:green;
+  overflow:hidden;
 }
 /*
 section{
