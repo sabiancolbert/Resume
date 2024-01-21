@@ -21,9 +21,10 @@ padding-top:10%;
 }*/
 
 section{
-  border:1px solid yellow;
+  border:1px solid red;
   width:82vmin;
   position:fixed;
+  margin:auto;
 }
 section:after {
   content: "";
