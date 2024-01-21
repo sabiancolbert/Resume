@@ -13,7 +13,10 @@ section{
   width:82vmin;
   height:82vmin;
   margin:4vmin auto;
-  
+border:1px solid red;
+  /*
+  position:fixed
+  margin:4vmin calc(vw-82vmin)*/
 }
 
 button{
