@@ -39,10 +39,11 @@ width:10vmin;
 
 #storyButton{
 float:right;
-  margin-top:10vmin;
+  margin-bottom:-30vmin;
+  margin-right:30vmin;
 }
 
 #loungeButton{
-margin-bottom:-10vmin;
+margin-bottom:-30vmin;
   float:right;
 }
