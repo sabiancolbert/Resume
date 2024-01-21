@@ -5,7 +5,7 @@ background-image: linear-gradient(to bottom right, black, #000022, #000055, blue
 
 body{
   padding:0;
-  color:green;
+  color:red;
 }
 
 
@@ -34,7 +34,7 @@ width:10vmin;
 }
 
 #podButton{
-margin-top:7vmin;
+margin-top:-30vmin;
   margin-left:7vmin;
 }
 
