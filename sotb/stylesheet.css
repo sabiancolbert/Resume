@@ -12,8 +12,9 @@ body{
 section{
   width:82vmin;
   height:82vmin;
-  margin:calc(50vh - 41vmin)px auto;
-border:1px solid red;
+  margin:calc(50vh - 41vmin)px calc(50vw - 41vmin)px;
+border:1px solid blue;
+  position: fixed;
   /*
   position:fixed
   margin:4vmin calc(vw-82vmin)*/
