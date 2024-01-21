@@ -20,14 +20,14 @@ padding-top:10%;
 section{
   border:1px solid red;
   width:100vmin;
-  height:100vmin;
+  
   position:fixed;
-}/*
+}
 section:after {
   content: "";
   display: block;
-  padding-top: 100%;
-}*/
+  padding-top: 100vw;
+}
 
 button{
 border-radius:100%;
