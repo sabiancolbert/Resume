@@ -34,17 +34,18 @@ width:10vmin;
 }
 
 #podButton{
-
+margin-top:40vmin;
 }
 
 #loungeButton{
 margin-top:5vmin;
-  margin-right:10vmin;
+  margin-right:5vmin;
   float:right;
 }
 
 #storyButton{
 float:right;
   margin-right:17vmin;
+  margin-top:20vmin;
 }
 
