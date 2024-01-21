@@ -1,8 +1,9 @@
 body{
 background-image: linear-gradient(to bottom right, black, #000022, #000055, blue);
   background-attachment: fixed;
-  color:red;
+  color:blue;
 }
+/*
 section{
 width:40%vmin;
   border:1px solid blue;
@@ -14,6 +15,15 @@ padding-top:10%;
   display:block;
   border:1px solid green;
   width:10px;
+}*/
+
+section{
+height:30px;
+}
+section:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
 
 button{
