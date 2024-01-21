@@ -25,7 +25,7 @@ section{
 section:after {
   content: "";
   display: block;
-  padding-top: 75vmin;
+  padding-top: 80vmin;
 }
 
 button{
