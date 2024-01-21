@@ -18,7 +18,7 @@ padding-top:10%;
 }*/
 
 section{
-  border:1px solid red;
+  border:1px solid blue;
   width:100vmin;
   
   position:fixed;
@@ -26,7 +26,7 @@ section{
 section:after {
   content: "";
   display: block;
-  padding-top: 100vw;
+  padding-top: 10px;
 }
 
 button{
