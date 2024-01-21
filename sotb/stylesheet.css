@@ -5,12 +5,14 @@ background-image: linear-gradient(to bottom right, black, #000022, #000055, blue
 }
 section{
 max-width:40%vmin;
-  border:1px solid purple;
+  border:1px solid red;
 }
 
 article{
 padding-top:10%;
   display:block;
+  border:1px solid green;
+  width:100%;
 }
 
 button{
