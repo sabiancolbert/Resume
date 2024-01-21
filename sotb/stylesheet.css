@@ -1,7 +1,7 @@
 body{
 background-image: linear-gradient(to bottom right, black, #000022, #000055, blue);
   background-attachment: fixed;
-  color:blue;
+  color:red;
 }
 /*
 section{
@@ -18,7 +18,9 @@ padding-top:10%;
 }*/
 
 section{
-height:30px;
+  
+  height:50px;
+  position:fixed;
 }
 section:after {
   content: "";
