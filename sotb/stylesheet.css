@@ -30,7 +30,7 @@ border-radius:100%;
 #aboutButton{
 width:10vmin;
   height:10vmin;
-  margin-top:10vmin;
+  margin-top:30vmin;
 }
 
 #podButton{
@@ -45,6 +45,6 @@ margin-top:7vmin;
 
 #storyButton{
 margin-left:22vmin;
-  margin-top:10vmin;
+  margin-top:0vmin;
 }
 
