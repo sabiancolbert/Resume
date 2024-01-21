@@ -38,12 +38,13 @@ margin-top:8vmin;
 }
 
 #loungeButton{
-  margin-top:17vmin;
+  margin-top:18vmin;
+  margin-right:1vmin;
   float:right;
 }
 
 #storyButton{
-margin-left:15vmin;
+margin-left:20vmin;
   margin-top:13vmin;
 }
 
