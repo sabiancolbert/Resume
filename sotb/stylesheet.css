@@ -21,15 +21,16 @@ padding-top:10%;
 }*/
 
 section{
-  border:1px solid red;
+  border:1px solid blue;
   width:82vmin;
+  height:82vmin;
   margin:auto;
-}
+}/*
 section:after {
   content: "";
   display: block;
   padding-top: 82vmin;
-}
+}*/
 
 button{
 border-radius:100%;
