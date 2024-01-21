@@ -21,9 +21,8 @@ padding-top:10%;
 }*/
 
 section{
-  border:1px solid red;
+  border:1px solid green;
   width:82vmin;
-  position:fixed;
   margin:auto;
 }
 section:after {
