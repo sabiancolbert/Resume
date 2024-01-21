@@ -9,6 +9,7 @@ max-width:40%vmin;
 }
 
 article{
+  position: relative;
 padding-top:10%;
   display:block;
   border:1px solid green;
