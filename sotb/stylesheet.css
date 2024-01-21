@@ -1,7 +1,10 @@
-body{
+html{
 background-image: linear-gradient(to bottom right, black, #000022, #000055, blue);
+}
+
+body{
   background-attachment: fixed;
-  color:green;
+  color:purple;
   overflow:hidden;
 }
 /*
@@ -20,7 +23,7 @@ padding-top:10%;
 
 section{
   border:1px solid yellow;
-  width:84vmin;
+  width:82vmin;
   position:fixed;
 }
 section:after {
