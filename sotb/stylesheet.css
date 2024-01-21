@@ -30,7 +30,8 @@ border-radius:100%;
 #aboutButton{
 width:10vmin;
   height:10vmin;
-  margin-top:30vmin;
+  position:fixed;
+  top:0;
 }
 
 #podButton{
