@@ -19,7 +19,7 @@ section{
 }
 
 button{
-  position:fixed;
+  position:absolute;
   padding:0;/*to fix eagles picture*/
   background-color:transparent;
   color:white;
