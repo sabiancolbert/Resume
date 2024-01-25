@@ -30,6 +30,7 @@ button{
 }
 
 #aboutButton{
+  position:fixed;
   top:calc(50vh - 5vmin);
   left:calc(50vw - 5vmin);
   height:10vmin;
