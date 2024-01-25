@@ -10,47 +10,45 @@ body{
 
 
 section{
-  width:82vmin;
-  height:82vmin;
-  margin:calc(50vh - 41vmin) calc(50vw - 41vmin);
-border:1px solid blue;
   position: fixed;
-  /*
-  position:fixed
-  margin:4vmin calc(vw-82vmin)*/
+  border:1px solid red;
+  top:calc(50vh - 41vmin) 
+  left:calc(50vw - 41vmin);
+  height:82vmin;
+  width:82vmin;
 }
 
 button{
-border-radius:100%;
-  border:.8vmin solid white;
+  position:fixed;
+  padding:0;/*to fix eagles picture*/
   background-color:transparent;
-  width:30vmin;
-  height:30vmin;
   color:white;
   font-size:6vmin;
+  border-radius:100%;
+  border:.8vmin solid white;
+  height:30vmin;
+  width:30vmin;
 }
 
 #aboutButton{
-width:10vmin;
-  height:10vmin;
-  position:fixed;
   top:calc(50vh - 5vmin);
-  margin-left:-10vmin;
+  left:calc(50vw - 5vmin);
+  height:10vmin;
+  width:10vmin;
 }
 
 #podButton{
-margin-top:7vmin;
-  margin-left:7vmin;
+  top:6vmin;
+  left:6vmin;
 }
 
 #loungeButton{
-  margin-top:21vmin;
-  margin-right:2vmin;
-  float:right;
+  top:18vmin;
+  right:0;
 }
 
 #storyButton{
-margin-left:15vmin;
-  margin-top:11vmin;
+  bottom:0;
+  left:18vmin;
 }
 
