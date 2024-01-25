@@ -11,9 +11,8 @@ body{
 
 section{
   position: fixed;
-  border:1px solid red;
-  top:calc(50vh - 41vmin) 
-  left:calc(50vw - 41vmin);
+  border:1px solid green;
+  margin:calc(50vh - 41vmin) calc(50vw - 41vmin);
   height:82vmin;
   width:82vmin;
 }
