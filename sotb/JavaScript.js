@@ -1,28 +1,21 @@
 var podMode = 0;
 var podRunning = false;
 
-(function () {
-    var old = console.log;
-    var logger = document.getElementById('log');
-    console.log = function () {
-      for (var i = 0; i < arguments.length; i++) {
-        if (typeof arguments[i] == 'object') {
-            logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(arguments[i], undefined, 2) : arguments[i]) + '<br />';
-        } else {
-            logger.innerHTML += arguments[i] + '<br />';
-        }
-      }
-    }
-})();
+var test = document.getElemendById("test");
+
+
 
 function expandPod(){
+    test.innerHTML = 1;
 podMode = -1;
   if(!podRunning){
+    test.innerHTML = 2;
     animatePod();
   }
 }
 
 function animatePod() {
+    test.innerHTML = 3;
   podRunning = true;
   let id = null;
   const pod = document.getElementById("podButton");
@@ -30,11 +23,14 @@ function animatePod() {
   let podSize = pod.style.width.split('v')[0];
   clearMode(id);
   id = setMode(frame, 10);
+    test.innerHTML = 4;
   function frame() {
     if (podPos <= 0.1 || podPos >= 4.5) {
+    test.innerHTML = 6;
       podRunning = false;
       clearMode(id);
     } else {
+    test.innerHTML = 5;
       podPos += podMode * .45;
       podPos += podMode * .45;
       pod.style.top = podPos + "vmin"; 
