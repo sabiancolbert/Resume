@@ -151,11 +151,10 @@ article div {
 /* body groups */
 h4 {
 	position: relative;
-	top: 25px;
+	top: 20px;
 	width:50%;
-	margin-bottom:60px;
+	margin-bottom:70px;
 	font-size: 70px;
-	/*line-height: 0;*/
 	border-bottom: 3px solid #B4B4B4;
 }
 
