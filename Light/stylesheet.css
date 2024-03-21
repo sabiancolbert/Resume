@@ -148,6 +148,15 @@ article div {
 	background-color: #eeeeff;
 }
 
+/* body groups */
+h4 {
+	position: relative;
+	top: 32px;
+	margin-bottom:15px;
+	font-size: 70px;
+	line-height: 0;
+}
+
 /* body item letters */
 h2 {
 	position: relative;
