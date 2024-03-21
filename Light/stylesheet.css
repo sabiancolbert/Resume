@@ -152,6 +152,7 @@ article div {
 h4 {
 	position: relative;
 	top: 25px;
+	width:33%;
 	margin-bottom:30px;
 	font-size: 70px;
 	/*line-height: 0;*/
