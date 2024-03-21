@@ -152,9 +152,10 @@ article div {
 h4 {
 	position: relative;
 	top: 32px;
-	margin-bottom:15px;
+	margin-bottom:25px;
 	font-size: 70px;
 	line-height: 0;
+	border-bottom: 3px solid black
 }
 
 /* body item letters */
