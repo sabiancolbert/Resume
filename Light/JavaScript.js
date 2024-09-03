@@ -158,9 +158,24 @@ function toggleMenu(open, setbutton = true) {
 
 /* documents page */
 
-var emsShown= false;
+var mainShown = false;
+var emsShown = false;
 var psychShown = false;
 var techShown = false;
+var miscShown = false;
+
+function main(){
+   if (mainShown) {
+	   document.getElementById("main").hidden = true;
+	   mainShown = false;
+	   document.getElementById("mainLabel").innerHTML = "▼ Main";
+   } 
+   else{
+	   document.getElementById("main").hidden = false;
+	   mainShown = true;
+	   document.getElementById("mainLabel").innerHTML = "▲ Main";
+   }
+}
 
 function ems(){
    if (emsShown) {
@@ -198,5 +213,18 @@ function tech(){
 	   document.getElementById("tech").hidden = false;
 	   techShown = true;
 	   document.getElementById("techLabel").innerHTML = "▲ Tech";
+   }
+}
+
+function misc(){
+   if (miscShown) {
+	   document.getElementById("misc").hidden = true;
+	   miscShown = false;
+	   document.getElementById("miscLabel").innerHTML = "▼ Misc";
+   } 
+   else{
+	   document.getElementById("misc").hidden = false;
+	   miscShown = true;
+	   document.getElementById("miscLabel").innerHTML = "▲ Misc";
    }
 }
