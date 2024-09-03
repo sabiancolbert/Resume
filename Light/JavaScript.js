@@ -171,32 +171,32 @@ function ems(){
    else{
 	   document.getElementById("ems").hidden = false;
 	   emsShown = true;
-	   document.getElementById("emsLabel").innerHTML = "^ EMS";
+	   document.getElementById("emsLabel").innerHTML = "▲ EMS";
    }
 }
 
 function psych(){
-   if (psych) {
-	   document.getElementById("psych").style.hidden = true;
-	   psych = false;
-	   document.getElementById("psychLabel").innerHTML = "v Psychology";
+   if (psychShown) {
+	   document.getElementById("psych").hidden = true;
+	   psychShown = false;
+	   document.getElementById("psychLabel").innerHTML = "▼ Psychology";
    } 
    else{
-	   document.getElementById("psych").style.hidden = false;
-	   psych = true;
-	   document.getElementById("psychLabel").innerHTML = "^ Psychology";
+	   document.getElementById("psych").hidden = false;
+	   psychShown = true;
+	   document.getElementById("psychLabel").innerHTML = "▲ Psychology";
    }
 }
 
 function tech(){
-   if (tech) {
-	   document.getElementById("tech").style.hidden = true;
-	   tech = false;
-	   document.getElementById("techLabel").innerHTML = "v Technology";
+   if (techShown) {
+	   document.getElementById("tech").hidden = true;
+	   techShown = false;
+	   document.getElementById("techLabel").innerHTML = "▼ Technology";
    } 
    else{
-	   document.getElementById("tech").style.hidden = false;
-	   tech = true;
-	   document.getElementById("techLabel").innerHTML = "^ Technology";
+	   document.getElementById("tech").hidden = false;
+	   techShown = true;
+	   document.getElementById("techLabel").innerHTML = "▲ Technology";
    }
 }
