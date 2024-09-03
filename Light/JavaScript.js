@@ -153,3 +153,44 @@ function toggleMenu(open, setbutton = true) {
 		}
 	}
 }
+
+
+
+/* documents page */
+
+bool ems = false;
+bool psych = false;
+bool tech = false;
+
+function ems(){
+   if (ems) {
+	   document.getElementById("ems").hidden = true;
+	   ems = false;
+   } 
+   else{
+	   document.getElementById("ems").hidden = false;
+	   ems = true;
+   }
+}
+
+function psych(){
+   if (psych) {
+	   document.getElementById("psych").hidden = true;
+	   psych = false;
+   } 
+   else{
+	   document.getElementById("psych").hidden = false;
+	   psych = true;
+   }
+}
+
+function tech(){
+   if (tech) {
+	   document.getElementById("tech").hidden = true;
+	   tech = false;
+   } 
+   else{
+	   document.getElementById("tech").hidden = false;
+	   tech = true;
+   }
+}
