@@ -158,19 +158,19 @@ function toggleMenu(open, setbutton = true) {
 
 /* documents page */
 
-var ems = false;
-var psych = false;
-var tech = false;
+var emsShown= false;
+var psychShown = false;
+var techShown = false;
 
 function ems(){
-   if (ems) {
-	   document.getElementById("ems").style.hidden = true;
-	   ems = false;
+   if (emsShown) {
+	   ems.hidden = true;
+	   emsShown = false;
 	   document.getElementById("emsLabel").innerHTML = "v EMS";
    } 
    else{
-	   document.getElementById("ems").style.hidden = false;
-	   ems = true;
+	   ems.hidden = false;
+	   emsShown = true;
 	   document.getElementById("emsLabel").innerHTML = "^ EMS";
    }
 }
