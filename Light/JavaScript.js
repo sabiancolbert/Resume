@@ -179,12 +179,12 @@ function psych(){
    if (psychShown) {
 	   document.getElementById("psych").hidden = true;
 	   psychShown = false;
-	   document.getElementById("psychLabel").innerHTML = "▼ Psychology";
+	   document.getElementById("psychLabel").innerHTML = "▼ Psych";
    } 
    else{
 	   document.getElementById("psych").hidden = false;
 	   psychShown = true;
-	   document.getElementById("psychLabel").innerHTML = "▲ Psychology";
+	   document.getElementById("psychLabel").innerHTML = "▲ Psych";
    }
 }
 
@@ -192,11 +192,11 @@ function tech(){
    if (techShown) {
 	   document.getElementById("tech").hidden = true;
 	   techShown = false;
-	   document.getElementById("techLabel").innerHTML = "▼ Technology";
+	   document.getElementById("techLabel").innerHTML = "▼ Tech";
    } 
    else{
 	   document.getElementById("tech").hidden = false;
 	   techShown = true;
-	   document.getElementById("techLabel").innerHTML = "▲ Technology";
+	   document.getElementById("techLabel").innerHTML = "▲ Tech";
    }
 }
