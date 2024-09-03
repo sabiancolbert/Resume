@@ -164,33 +164,39 @@ var tech = false;
 
 function ems(){
    if (ems) {
-	   document.getElementById("ems").hidden = true;
+	   document.getElementById("ems").style.hidden = true;
 	   ems = false;
+	   document.getElementById("ems").innerHTML = "v EMS";
    } 
    else{
-	   document.getElementById("ems").hidden = false;
+	   document.getElementById("ems").style.hidden = false;
 	   ems = true;
+	   document.getElementById("ems").innerHTML = "^ EMS";
    }
 }
 
 function psych(){
    if (psych) {
-	   document.getElementById("psych").hidden = true;
+	   document.getElementById("psych").style.hidden = true;
 	   psych = false;
+	   document.getElementById("psych").innerHTML = "v Psychology";
    } 
    else{
-	   document.getElementById("psych").hidden = false;
+	   document.getElementById("psych").style.hidden = false;
 	   psych = true;
+	   document.getElementById("psych").innerHTML = "^ Psychology";
    }
 }
 
 function tech(){
    if (tech) {
-	   document.getElementById("tech").hidden = true;
+	   document.getElementById("tech").style.hidden = true;
 	   tech = false;
+	   document.getElementById("tech").innerHTML = "v Technology";
    } 
    else{
-	   document.getElementById("tech").hidden = false;
+	   document.getElementById("tech").style.hidden = false;
 	   tech = true;
+	   document.getElementById("tech").innerHTML = "^ Technology";
    }
 }
