@@ -158,9 +158,9 @@ function toggleMenu(open, setbutton = true) {
 
 /* documents page */
 
-bool ems = false;
-bool psych = false;
-bool tech = false;
+var ems = false;
+var psych = false;
+var tech = false;
 
 function ems(){
    if (ems) {
