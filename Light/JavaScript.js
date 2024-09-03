@@ -166,12 +166,12 @@ function ems(){
    if (ems) {
 	   document.getElementById("ems").style.hidden = true;
 	   ems = false;
-	   document.getElementById("ems").innerHTML = "v EMS";
+	   document.getElementById("emsLabel").innerHTML = "v EMS";
    } 
    else{
 	   document.getElementById("ems").style.hidden = false;
 	   ems = true;
-	   document.getElementById("ems").innerHTML = "^ EMS";
+	   document.getElementById("emsLabel").innerHTML = "^ EMS";
    }
 }
 
@@ -179,12 +179,12 @@ function psych(){
    if (psych) {
 	   document.getElementById("psych").style.hidden = true;
 	   psych = false;
-	   document.getElementById("psych").innerHTML = "v Psychology";
+	   document.getElementById("psychLabel").innerHTML = "v Psychology";
    } 
    else{
 	   document.getElementById("psych").style.hidden = false;
 	   psych = true;
-	   document.getElementById("psych").innerHTML = "^ Psychology";
+	   document.getElementById("psychLabel").innerHTML = "^ Psychology";
    }
 }
 
@@ -192,11 +192,11 @@ function tech(){
    if (tech) {
 	   document.getElementById("tech").style.hidden = true;
 	   tech = false;
-	   document.getElementById("tech").innerHTML = "v Technology";
+	   document.getElementById("techLabel").innerHTML = "v Technology";
    } 
    else{
 	   document.getElementById("tech").style.hidden = false;
 	   tech = true;
-	   document.getElementById("tech").innerHTML = "^ Technology";
+	   document.getElementById("techLabel").innerHTML = "^ Technology";
    }
 }
