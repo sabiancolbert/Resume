@@ -164,12 +164,12 @@ var techShown = false;
 
 function ems(){
    if (emsShown) {
-	   ems.hidden = true;
+	   document.getElementById("ems").hidden = true;
 	   emsShown = false;
-	   document.getElementById("emsLabel").innerHTML = "v EMS";
+	   document.getElementById("emsLabel").innerHTML = "▼ EMS";
    } 
    else{
-	   ems.hidden = false;
+	   document.getElementById("ems").hidden = false;
 	   emsShown = true;
 	   document.getElementById("emsLabel").innerHTML = "^ EMS";
    }
