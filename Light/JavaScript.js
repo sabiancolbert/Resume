@@ -154,84 +154,13 @@ function toggleMenu(open, setbutton = true) {
 	}
 }
 
-
-
-/* documents page */
-
-var mainShown = false;
-var emsShown = false;
-var psychShown = false;
-var techShown = false;
-var miscShown = false;
-
-function main(){
-   if (mainShown) {
-	   document.getElementById("main").hidden = true;
-	   mainShown = false;
-	   document.getElementById("mainLabel").innerHTML = "Main ▼";
-   } 
-   else{
-	   document.getElementById("main").hidden = false;
-	   mainShown = true;
-	   document.getElementById("mainLabel").innerHTML = "Main ▲";
-   }
-}
-
-function ems(){
-   if (emsShown) {
-	   document.getElementById("ems").hidden = true;
-	   emsShown = false;
-	   document.getElementById("emsLabel").innerHTML = "EMS ▼";
-   } 
-   else{
-	   document.getElementById("ems").hidden = false;
-	   emsShown = true;
-	   document.getElementById("emsLabel").innerHTML = "EMS ▲";
-   }
-}
-
-function psych(){
-   if (psychShown) {
-	   document.getElementById("psych").hidden = true;
-	   psychShown = false;
-	   document.getElementById("psychLabel").innerHTML = "Psych ▼";
-   } 
-   else{
-	   document.getElementById("psych").hidden = false;
-	   psychShown = true;
-	   document.getElementById("psychLabel").innerHTML = "Psych ▲";
-   }
-}
-
-function tech(){
-   if (techShown) {
-	   document.getElementById("tech").hidden = true;
-	   techShown = false;
-	   document.getElementById("techLabel").innerHTML = "Tech ▼";
-   } 
-   else{
-	   document.getElementById("tech").hidden = false;
-	   techShown = true;
-	   document.getElementById("techLabel").innerHTML = "Tech ▲";
-   }
-}
-
-function misc(){
-   if (miscShown) {
-	   document.getElementById("misc").hidden = true;
-	   miscShown = false;
-	   document.getElementById("miscLabel").innerHTML = "Misc ▼";
-   } 
-   else{
-	   document.getElementById("misc").hidden = false;
-	   miscShown = true;
-	   document.getElementById("miscLabel").innerHTML = "Misc ▲";
-   }
-}
 /* drop downs */
-function drop(label){
+function drop(label, text = false){
 	var section = document.getElementById(label);
 	var sectionLabel = document.getElementById(label + "Label");
+	if(!text){
+		text = label;
+	}
 	
 	section.hidden = !section.hidden;
 	if(section.hidden){
