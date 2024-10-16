@@ -164,9 +164,9 @@ function drop(label, text = false){
 	
 	section.hidden = !section.hidden;
 	if(section.hidden){
-		sectionLabel.innerHTML = text + " ▼"
+		sectionLabel.innerHTML = text + "▼"
 	}
 	else{
-		sectionLabel.innerHTML = text + " ▲"
+		sectionLabel.innerHTML = text + "▲"
 	}
 }
