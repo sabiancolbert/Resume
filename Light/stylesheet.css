@@ -134,7 +134,7 @@ section {
 /* section boxes */
 article {
 	position: relative;
-	padding: 16px;
+	padding: 16px 16px 0;
 	width: 100%;
 	text-align: center;
 	overflow: hidden;
@@ -144,7 +144,7 @@ article {
 /* body item boxes */
 article div {
 	position: relative;
-	padding-right: 32px;
+	padding: 0 32px 16px 0;
 	background-color: #eeeeff;
 }
 
