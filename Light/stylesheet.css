@@ -137,11 +137,8 @@ article {
 	padding: 16px 16px 0;
 	width: 100%;
 	text-align: center;
-	display: inline-block;
-	word-break: break-word;
 	overflow: hidden;
-	overflow-wrap: break-word;
-	
+	hyphens: auto;
 }
 
 /* body item boxes */
