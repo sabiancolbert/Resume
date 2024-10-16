@@ -228,3 +228,16 @@ function misc(){
 	   document.getElementById("miscLabel").innerHTML = "Misc ▲";
    }
 }
+/* drop downs */
+function drop(label){
+	var section = document.getElementById(label);
+	var sectionLabel = document.getElementById(label + "Label");
+	
+	section.hidden = !section.hidden;
+	if(section.hidden){
+		sectionLabel.innerHTML = section + " ▼"
+	}
+	else{
+		sectionLabel.innerHTML = section + " ▲"
+	}
+}
