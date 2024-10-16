@@ -39,7 +39,7 @@
 	<section onmouseover="toggleMenu(false)">
 <!-- emt -->
 		<article>
-			<h2>E</h2>
+			<h2 onclick="drop('EMT', 'MT')">E</h2>
 			<h3 onclick="drop('EMT', 'MT')" id="EMTLabel">MT ▼</h3>
 			<hr>
 			<div hidden="true" id="EMT">
@@ -61,10 +61,10 @@
 		</article>
 		<!-- BLS Instructor -->
 		<article>
-			<h2>B</h2>
-			<h3>LS Instructor</h3>
+			<h2 onclick="drop('Instructor', 'LS Instructor')">B</h2>
+			<h3 onclick="drop('Instructor', 'LS Instructor')" id="InstructorLabel">LS Instructor ▼</h3>
 			<hr>
-			<div>
+			<div hidden="true" id="Instructor">
 				<label><strong>Rc Health Services: </strong>December 2023 - March 2024</label>
 				<br>
 				<label><strong>Phone: </strong>(405) 740-1421</label>
@@ -83,10 +83,10 @@
 		
 		<!-- logistics -->
 		<article>
-			<h2>L</h2>
-			<h3>ogistics Technician</h3>
+			<h2 onclick="drop('Logistics', 'ogistics Technician')">L</h2>
+			<h3 onclick="drop('Logistics', 'ogistics Technician')" id="LogisticsLabel">ogistics Technician ▼</h3>
 			<hr>
-			<div>
+			<div hidden="true" id="Logistics">
 				<label><strong>EMSA: </strong>July 2023 - March 2024</label>
 				<br>
 				<label><strong>Phone: </strong>(405) 297-7100</label>
